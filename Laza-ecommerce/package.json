@@ -1,0 +1,85 @@
+{
+  "name": "react-training",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "author": "quang.pham<quang.pham@asnet.com.vn>",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "test": "jest --watchAll",
+    "lint": "eslint --fix --ext .ts,.tsx,.js",
+    "prettier": "prettier --write src**/*.{js,ts,tsx}",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)?$",
+    "transformIgnorePatterns": [
+      "node_modules/(?!@react-native|react-native)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/__mocks__/globalMock.js"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
+  },
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.0.5",
+    "@react-navigation/drawer": "^6.1.8",
+    "@react-navigation/native": "^6.0.2",
+    "@react-navigation/native-stack": "^6.1.0",
+    "@react-navigation/stack": "^6.2.1",
+    "babel-loader": "^8.2.5",
+    "expo": "~44.0.0",
+    "expo-status-bar": "~1.2.0",
+    "jest-expo": "^44.0.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-gesture-handler": "~2.1.0",
+    "react-native-reanimated": "~2.3.1",
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-screens": "~3.10.1",
+    "react-native-svg": "12.1.1",
+    "react-native-vector-icons": "^9.1.0",
+    "react-native-web": "0.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-syntax-jsx": "^7.16.7",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-flow": "^7.16.7",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-native": "^9.1.0",
+    "@types/jest": "^27.4.1",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.64.12",
+    "@types/react-native-vector-icons": "^6.4.10",
+    "@types/react-test-renderer": "17.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "7.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "prettier": "^2.6.2",
+    "react-test-renderer": "17.0.2",
+    "typescript": "~4.3.5"
+  },
+  "private": true
+}
