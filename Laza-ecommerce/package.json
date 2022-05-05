@@ -10,24 +10,10 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --watchAll",
+    "coverage": "jest --coverage --no-cache",
     "lint": "eslint --fix --ext .ts,.tsx,.js",
     "prettier": "prettier --write src**/*.{js,ts,tsx}",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
-  },
-  "jest": {
-    "preset": "jest-expo",
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)?$",
-    "transformIgnorePatterns": [
-      "node_modules/(?!@react-native|react-native)"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/__mocks__/globalMock.js"
-    ],
-    "collectCoverage": true,
-    "coverageReporters": [
-      "json",
-      "html"
-    ]
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.0.5",
@@ -81,5 +67,17 @@
     "react-test-renderer": "17.0.2",
     "typescript": "~4.3.5"
   },
-  "private": true
+  "private": true,
+  "jest": {
+    "preset": "jest-expo",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)?$",
+    "transformIgnorePatterns": [
+      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+    ],
+    "collectCoverage": true,
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
+  }
 }
