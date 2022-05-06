@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     textTransform: 'none',
     fontFamily: Fonts.fontFamily.Inter_600SemiBold,
     fontSize: Fonts.size.sm,
-    lineHeight: Metrics.height.custom,
+    lineHeight: Fonts.lineHeight.lg,
   },
   icon: {
     width: Metrics.icons.custom,
