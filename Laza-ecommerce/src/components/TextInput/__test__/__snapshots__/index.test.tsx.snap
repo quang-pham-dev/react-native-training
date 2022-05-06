@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput Component should render correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    autoCorrect={false}
+    onChangeText={[MockFunction]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "borderBottomColor": "#E7E8EA",
+          "borderBottomWidth": 1,
+          "color": "#1D1E20",
+          "flex": 1,
+          "lineHeight": 16,
+          "paddingVertical": 15,
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value=""
+  />
+</View>
+`;
