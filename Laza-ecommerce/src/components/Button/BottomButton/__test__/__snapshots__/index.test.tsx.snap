@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bottom Button Component should render correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 12,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+          "fontFamily": "Inter_600SemiBold",
+          "fontSize": 17,
+          "lineHeight": 22,
+          "textTransform": "none",
+        },
+      ]
+    }
+  >
+    Create an Account
+  </Text>
+</View>
+`;
+
+exports[`Bottom Button Component should render disabled button correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "opacity": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 12,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+          "fontFamily": "Inter_600SemiBold",
+          "fontSize": 17,
+          "lineHeight": 22,
+          "textTransform": "none",
+        },
+      ]
+    }
+  >
+    Google
+  </Text>
+</View>
+`;

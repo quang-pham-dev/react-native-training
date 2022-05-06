@@ -28,6 +28,7 @@ const Metrics = {
     xl: 20,
     xxl: 30,
     default: 8,
+    custom: 45,
   },
 
   borderRadius: {
