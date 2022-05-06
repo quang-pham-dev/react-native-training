@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingIndicator Component should render color LoadingIndicator correctly 1`] = `
+<ActivityIndicator
+  animating={true}
+  color="red"
+  hidesWhenStopped={true}
+  size="small"
+  style={
+    Object {
+      "margin": 13,
+    }
+  }
+/>
+`;
+
+exports[`LoadingIndicator Component should render correctly 1`] = `
+<ActivityIndicator
+  animating={true}
+  color="#FFC107"
+  hidesWhenStopped={true}
+  size="large"
+  style={
+    Object {
+      "margin": 13,
+    }
+  }
+/>
+`;
