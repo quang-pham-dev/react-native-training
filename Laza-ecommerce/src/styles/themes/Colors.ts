@@ -23,9 +23,8 @@ const Colors = {
   tintColor: '#e91e63',
   shadowGray: 'rgba(0, 0, 0, 0.15)',
   // backgroundColor
-  primaryBackground: '#8F959E',
-  secondaryBackground: '#fff',
-  Background: '#F5F6FA',
+  primaryBackground: '#fff',
+  secondaryBackground: '#F5F6FA',
 };
 
 export default Colors;
