@@ -17,6 +17,7 @@
     "server": "json-server --watch server/data/db.json"
   },
   "dependencies": {
+    "@expo-google-fonts/inter": "^0.2.2",
     "@react-navigation/bottom-tabs": "^6.0.5",
     "@react-navigation/drawer": "^6.1.8",
     "@react-navigation/native": "^6.0.2",
