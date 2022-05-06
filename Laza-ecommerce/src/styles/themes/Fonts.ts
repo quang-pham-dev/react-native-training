@@ -2,7 +2,7 @@ const size = {
   xxs: 12,
   xs: 14,
   base: 16,
-  custom: 15,
+  standard: 15,
   sm: 17,
   default: 18,
   lg: 28,
