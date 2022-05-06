@@ -13,7 +13,8 @@
     "coverage": "jest --coverage --no-cache",
     "lint": "eslint --fix --ext .ts,.tsx,.js",
     "prettier": "prettier --write src**/*.{js,ts,tsx}",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "server": "json-server --watch server/data/db.json"
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.0.5",
