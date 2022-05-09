@@ -8,6 +8,10 @@ const IMAGES = {
   iconCart: require('@assets/images/icons/cart.png'),
   iconSearch: require('@assets/images/icons/search.png'),
   iconVoice: require('@assets/images/icons/voice.png'),
+  iconHome: require('@assets/images/icons/home.png'),
+  iconHeart: require('@assets/images/icons/heart.png'),
+  iconBag: require('@assets/images/icons/bag.png'),
+  iconWallet: require('@assets/images/icons/wallet.png'),
 };
 
 export default IMAGES;
