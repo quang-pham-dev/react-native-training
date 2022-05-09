@@ -5,21 +5,7 @@ import { titleProps } from 'types/Title';
 // Styles
 import styles from './styles';
 
-const Title = ({
-  titleName,
-  fontSize,
-  children,
-  fontFamily,
-  color,
-  lineHeight,
-  ...props
-}: titleProps) => {
-  const titleStyles = {
-    fontSize: fontSize,
-    fontFamily: fontFamily,
-    color,
-    ...(lineHeight && { lineHeight }),
-  };
+const Title = ({ titleName, children, titleStyles, ...props }: titleProps) => {
   return (
     <Text style={[styles.title, titleStyles]} {...props}>
       {titleName}
