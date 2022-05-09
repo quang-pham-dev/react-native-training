@@ -1,62 +1,52 @@
 const Metrics = {
   margin: {
-    xm: 15,
-    md: 13,
-    sm: 10,
     xsm: 5,
+    xs: 8,
+    sm: 10,
+    md: 13,
+    xm: 15,
     lg: 20,
     xl: 25,
     xxl: 30,
-    base: 8,
-    customXxl: 45,
-  },
-
-  height: {
-    sm: 10,
-    md: 20,
-    custom: 22,
-    lg: 50,
-    xl: 60,
-    xxl: 75,
+    xxxl: 45,
   },
 
   padding: {
-    xs: 5,
+    xsm: 5,
+    xs: 8,
     sm: 10,
     md: 12,
-    base: 15,
-    xl: 20,
-    xxl: 25,
-    lg: 30,
-    default: 8,
-    custom: 45,
+    xm: 15,
+    lg: 20,
+    xl: 25,
+    xxl: 30,
   },
 
   borderRadius: {
-    roundedFull: 100,
-    'rounded-xsm': 2,
     roundedSmall: 4,
-    roundedBase: 30,
     roundedMedium: 10,
+    roundedBase: 30,
+    roundedFull: 100,
   },
 
   icons: {
     small: 10,
     medium: 16,
+    standard: 20,
     custom: 22,
     semiLarge: 45,
-    large: 56,
+    large: 54,
   },
 
   images: {
     widthFull: '100%',
     avatarSmall: 24,
+    iconSmall: 25,
     avatarMedium: 40,
     avatarLarge: 60,
     imageMedium: 400,
     imageSmall: 200,
     imageHeightSmall: 125,
-    iconSmall: 25,
   },
 };
 
