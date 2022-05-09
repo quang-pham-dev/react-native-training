@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Get Started Screen should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "marginTop": 45,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginLeft": 20,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {},
+              Array [
+                Object {
+                  "height": 45,
+                  "width": 45,
+                },
+              ],
+            ]
+          }
+        />
+      </View>
+    </View>
+    <Text
+      color="#1D1E20"
+      fontFamily="Inter_600SemiBold"
+      fontSize={28}
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "textTransform": "none",
+          },
+          Object {
+            "alignSelf": "center",
+            "color": "#1D1E20",
+            "fontFamily": "Inter_600SemiBold",
+            "fontSize": 28,
+            "paddingTop": 15,
+          },
+        ]
+      }
+    >
+      Let’s Get Started
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 2,
+        "justifyContent": "center",
+        "paddingHorizontal": 20,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#4267B2",
+          "borderRadius": 10,
+          "color": "#fff",
+          "flexDirection": "row",
+          "fontSize": 28,
+          "justifyContent": "center",
+          "marginBottom": 10,
+          "opacity": 1,
+          "paddingVertical": 15,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {},
+            Array [
+              Object {
+                "height": 22,
+                "width": 22,
+              },
+            ],
+          ]
+        }
+      />
+      <Text
+        style={
+          Array [
+            Array [
+              Object {
+                "color": "#fff",
+                "fontFamily": "Inter_600SemiBold",
+                "fontSize": 17,
+                "lineHeight": 22,
+              },
+            ],
+          ]
+        }
+      >
+        Facebook
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#1DA1F2",
+          "borderRadius": 10,
+          "color": "#fff",
+          "flexDirection": "row",
+          "fontSize": 28,
+          "justifyContent": "center",
+          "marginBottom": 10,
+          "opacity": 1,
+          "paddingVertical": 15,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {},
+            Array [
+              Object {
+                "height": 22,
+                "width": 22,
+              },
+            ],
+          ]
+        }
+      />
+      <Text
+        style={
+          Array [
+            Array [
+              Object {
+                "color": "#fff",
+                "fontFamily": "Inter_600SemiBold",
+                "fontSize": 17,
+                "lineHeight": 22,
+              },
+            ],
+          ]
+        }
+      >
+        Twitter
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#EA4335",
+          "borderRadius": 10,
+          "color": "#fff",
+          "flexDirection": "row",
+          "fontSize": 28,
+          "justifyContent": "center",
+          "marginBottom": 10,
+          "opacity": 1,
+          "paddingVertical": 15,
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {},
+            Array [
+              Object {
+                "height": 22,
+                "width": 22,
+              },
+            ],
+          ]
+        }
+      />
+      <Text
+        style={
+          Array [
+            Array [
+              Object {
+                "color": "#fff",
+                "fontFamily": "Inter_600SemiBold",
+                "fontSize": 17,
+                "lineHeight": 22,
+              },
+            ],
+          ]
+        }
+      >
+        Google
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "fontSize": 15,
+          "justifyContent": "center",
+          "marginBottom": 25,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "alignSelf": "center",
+            "color": "#8F959E",
+            "fontFamily": "Inter_400Regular",
+          }
+        }
+      >
+        Already have an account? 
+      </Text>
+      <Text
+        accessibilityRole="link"
+        href="/SignIn"
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#1D1E20",
+            "fontFamily": "Inter_500Medium",
+          }
+        }
+      >
+        Signin
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#3D93F8",
+          "height": 75,
+          "opacity": 1,
+          "paddingTop": 15,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Array [
+              Object {
+                "color": "#fff",
+                "fontFamily": "Inter_600SemiBold",
+                "fontSize": 17,
+                "lineHeight": 22,
+              },
+            ],
+          ]
+        }
+      >
+        Create an Account
+      </Text>
+    </View>
+  </View>
+</View>
+`;

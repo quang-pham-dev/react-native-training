@@ -2,7 +2,8 @@ import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 // Components
-import DraffScreen from 'screens/Draff';
+import GetStartedScreen from 'screens/GetStarted';
+import SignInScreen from 'screens/SignIn';
 // Constants
 import Screens from 'constants/Screens';
 
@@ -13,15 +14,15 @@ export default function AuthStackNavigator() {
     <NavigationContainer>
       <AuthStack.Navigator>
         <AuthStack.Screen
-          name={Screens.Login.name}
-          component={DraffScreen}
+          name={Screens.GetStarted.name}
+          component={GetStartedScreen}
           options={{
             headerShown: false,
           }}
         />
         <AuthStack.Screen
-          name={Screens.GetStarted.name}
-          component={DraffScreen}
+          name={Screens.SignIn.name}
+          component={SignInScreen}
           options={{
             headerShown: false,
           }}
