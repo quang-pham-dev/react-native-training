@@ -13,9 +13,6 @@ exports[`Button Component should render correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "alignItems": "center",
-      "flexDirection": "row",
-      "justifyContent": "center",
       "opacity": 1,
     }
   }
@@ -23,9 +20,6 @@ exports[`Button Component should render correctly 1`] = `
   <Text
     style={
       Array [
-        Object {
-          "color": "#fff",
-        },
         undefined,
       ]
     }
@@ -48,9 +42,6 @@ exports[`Button Component should render icon button correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "alignItems": "center",
-      "flexDirection": "row",
-      "justifyContent": "center",
       "opacity": 1,
     }
   }
@@ -67,9 +58,6 @@ exports[`Button Component should render icon button correctly 1`] = `
   <Text
     style={
       Array [
-        Object {
-          "color": "#fff",
-        },
         undefined,
       ]
     }
