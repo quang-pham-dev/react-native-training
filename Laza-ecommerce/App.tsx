@@ -2,35 +2,22 @@
 import * as React from 'react';
 import RootNavigation from 'navigation/RootNavigator';
 import 'react-native-gesture-handler';
-import {
-  useFonts,
-  Inter_100Thin,
-  Inter_200ExtraLight,
-  Inter_300Light,
-  Inter_400Regular,
-  Inter_500Medium,
-  Inter_600SemiBold,
-  Inter_700Bold,
-  Inter_800ExtraBold,
-  Inter_900Black,
-} from '@expo-google-fonts/inter';
-import LoadingIndicator from 'components/Indicator';
+import AppLoading from 'expo-app-loading';
+// Hooks
+import useFonts from 'hooks/useFonts';
+// Stack navigator
 
 export default function App() {
-  let [fontsLoaded] = useFonts({
-    Inter_100Thin,
-    Inter_200ExtraLight,
-    Inter_300Light,
-    Inter_400Regular,
-    Inter_500Medium,
-    Inter_600SemiBold,
-    Inter_700Bold,
-    Inter_800ExtraBold,
-    Inter_900Black,
-  });
-
+  const [fontsLoaded, SetFontsLoaded] = React.useState(false);
+  //
+  // Load fonts
+  const LoadFonts = async () => {
+    await useFonts();
+  };
   if (!fontsLoaded) {
-    return <LoadingIndicator loadingSize={'large'} />;
+    return (
+      <AppLoading startAsync={LoadFonts} onFinish={() => SetFontsLoaded(true)} onError={() => {}} />
+    );
   }
   return (
     <>
