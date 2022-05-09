@@ -1,7 +1,6 @@
 import { StyleSheet } from 'react-native';
+// Theme
 import { Metrics, Colors, Fonts } from 'styles/themes';
-
-// Colors
 
 const styles = StyleSheet.create({
   inputContainer: {
@@ -13,7 +12,7 @@ const styles = StyleSheet.create({
     flex: 1,
     color: Colors.textBlack,
     lineHeight: Fonts.lineHeight.base,
-    paddingVertical: Metrics.padding.base,
+    paddingVertical: Metrics.padding.xm,
     borderBottomWidth: 1,
     borderBottomColor: Colors.borderGray,
   },
