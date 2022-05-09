@@ -5,12 +5,30 @@ import { labelTextProps } from 'types/Label';
 // Styles
 import styles from './styles';
 
-const Label = ({ labelName, labelStyles, hasBorder, labelWrapperStyles }: labelTextProps) => (
-  <View
-    style={[styles.labelContainer, hasBorder && styles.labelContainerBorder, labelWrapperStyles]}
-  >
-    <Text style={[styles.labelText, labelStyles]}>{labelName}</Text>
-  </View>
-);
+const Label = ({
+  children,
+  labelName,
+  fontSize,
+  fontFamily,
+  color,
+  labelWrapperStyles,
+  lineHeight,
+  ...props
+}: labelTextProps) => {
+  const labelStyles = {
+    fontSize: fontSize,
+    fontFamily: fontFamily,
+    color,
+    ...(lineHeight && { lineHeight }),
+  };
+  return (
+    <View style={labelWrapperStyles}>
+      <Text style={[styles.labelText, labelStyles]} {...props}>
+        {labelName}
+        {children}
+      </Text>
+    </View>
+  );
+};
 
 export default memo(Label);

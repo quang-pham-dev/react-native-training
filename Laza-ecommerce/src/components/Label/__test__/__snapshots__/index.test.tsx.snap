@@ -1,20 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label Component should render correctly 1`] = `
-<View
-  style={
-    Array [
-      Object {
-        "backgroundColor": "#fff",
-        "borderRadius": 30,
-        "paddingHorizontal": 15,
-        "paddingVertical": 10,
-      },
-      undefined,
-      undefined,
-    ]
-  }
->
+<View>
   <Text
     style={
       Array [
@@ -22,7 +9,12 @@ exports[`Label Component should render correctly 1`] = `
           "color": "#1D1E20",
           "fontSize": 17,
         },
-        undefined,
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter_400Regular",
+          "fontSize": 17,
+          "lineHeight": 15,
+        },
       ]
     }
   >
