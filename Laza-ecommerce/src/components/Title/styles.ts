@@ -1,11 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Fonts } from 'styles/themes';
-
 // Themes
+import { Colors } from 'styles/themes';
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: Fonts.size.xs,
     textTransform: 'none',
     color: Colors.black,
   },

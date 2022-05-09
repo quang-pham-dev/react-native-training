@@ -1,7 +1,9 @@
-import { StyleProp, TextStyle } from 'react-native';
-
 export type titleProps = {
-  titleName: string;
-  titleStyles?: StyleProp<TextStyle>;
+  children?: React.ReactNode;
+  fontSize: number;
+  fontFamily: string;
+  color: string;
+  lineHeight?: number;
+  titleName?: string;
   type?: string;
 };
