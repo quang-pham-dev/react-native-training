@@ -1,25 +1,14 @@
-import { ImageSourcePropType, ViewStyle } from 'react-native';
+import { ImageSourcePropType, StyleProp, TextStyle, ViewStyle } from 'react-native';
 
-export type SocialButtonProps = {
+export type ButtonProps = {
   onPress?: () => void;
+  buttonStyles?: ViewStyle[];
+  text?: string;
+  textStyles?: StyleProp<TextStyle>;
   icon?: ImageSourcePropType;
-  title: string;
-  buttonStyles?: ViewStyle[];
+  iconStyles?: ViewStyle[];
+  type?: string;
+  disabled?: boolean;
+  color?: string;
   children?: JSX.Element | JSX.Element[];
-  disabled?: boolean;
-};
-
-export type BottomButtonProps = {
-  onPress?: () => void;
-  title: string;
-  buttonStyles?: ViewStyle[];
-  children?: JSX.Element | JSX.Element[];
-  disabled?: boolean;
-};
-
-export type GoBackButtonProps = {
-  onPress?: () => void;
-  icon: ImageSourcePropType;
-  buttonStyles?: ViewStyle[];
-  disabled?: boolean;
 };
