@@ -3,18 +3,22 @@ import { StyleSheet } from 'react-native';
 import { Metrics, Colors, Fonts } from 'styles/themes';
 
 const styles = StyleSheet.create({
-  inputContainer: {
+  inputWrap: {
     width: '100%',
-    flexDirection: 'row',
   },
-
+  label: {
+    alignSelf: 'flex-start',
+    fontSize: Fonts.size.small,
+    lineHeight: Fonts.lineHeight.xs,
+    fontFamily: Fonts.fontFamily.Inter_400Regular,
+    color: Colors.textGray,
+  },
   input: {
-    flex: 1,
-    color: Colors.textBlack,
+    width: '100%',
+    fontFamily: Fonts.fontFamily.Inter_500Medium,
+    fontSize: Fonts.size.normal,
     lineHeight: Fonts.lineHeight.base,
     paddingVertical: Metrics.padding.xm,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.borderGray,
   },
 });
 

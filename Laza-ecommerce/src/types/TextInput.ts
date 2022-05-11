@@ -1,12 +1,16 @@
-import { StyleProp, TextStyle } from 'react-native';
+import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 export type TextInputProps = {
-  value?: string;
+  testID?: string;
+  value: string;
+  label?: string;
+  labelStyle?: StyleProp<TextStyle>;
   autoFocus?: boolean;
-  textInputStyles?: StyleProp<TextStyle>;
+  placeholder?: string;
+  textInputStyles?: StyleProp<ViewStyle>;
   secureTextEntry?: boolean;
   icon?: JSX.IntrinsicAttributes;
   iconPosition?: 'left' | 'right';
-  onChangeText: ((text: string) => void) | undefined;
-  placeholder?: string;
+  onBlur?: () => void;
+  onChangeText: (value: string) => void | undefined;
 };

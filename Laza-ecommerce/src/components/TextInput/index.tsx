@@ -1,31 +1,35 @@
-import React, { memo } from 'react';
-import { TextInput, View } from 'react-native';
+import React from 'react';
+import { Text, TextInput, View } from 'react-native';
 // Types
 import { TextInputProps } from 'types/TextInput';
 // Styles
 import styles from './styles';
 
 const Input = ({
+  label,
+  labelStyle,
   value,
-  autoFocus,
-  textInputStyles = {},
   placeholder,
+  textInputStyles = {},
   secureTextEntry,
-  onChangeText,
+  onChangeText = () => {},
+  onBlur = () => {},
+  ...props
 }: TextInputProps) => {
   return (
-    <View style={[styles.inputContainer]}>
+    <View style={styles.inputWrap}>
+      {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
       <TextInput
-        style={[styles.input, textInputStyles]}
-        placeholder={placeholder}
+        {...props}
         value={value}
         onChangeText={onChangeText}
-        autoFocus={autoFocus}
-        autoCorrect={false}
+        onBlur={onBlur}
+        placeholder={placeholder}
+        style={[styles.input, textInputStyles]}
         secureTextEntry={secureTextEntry}
       />
     </View>
   );
 };
 
-export default memo(Input);
+export default Input;

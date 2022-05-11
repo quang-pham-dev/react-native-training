@@ -3,34 +3,109 @@
 exports[`TextInput Component should render correctly 1`] = `
 <View
   style={
-    Array [
-      Object {
-        "flexDirection": "row",
-        "width": "100%",
-      },
-    ]
+    Object {
+      "width": "100%",
+    }
   }
 >
   <TextInput
     allowFontScaling={true}
-    autoCorrect={false}
+    onBlur={[Function]}
     onChangeText={[MockFunction]}
     rejectResponderTermination={true}
     style={
       Array [
         Object {
-          "borderBottomColor": "#E7E8EA",
-          "borderBottomWidth": 1,
-          "color": "#1D1E20",
-          "flex": 1,
+          "fontFamily": "Inter_500Medium",
+          "fontSize": 15,
           "lineHeight": 16,
           "paddingVertical": 15,
+          "width": "100%",
         },
         Object {},
       ]
     }
     underlineColorAndroid="transparent"
-    value=""
+    value="username"
+  />
+</View>
+`;
+
+exports[`TextInput Component should render placeholder 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    onBlur={[Function]}
+    onChangeText={[MockFunction]}
+    placeholder="Enter your password"
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "fontFamily": "Inter_500Medium",
+          "fontSize": 15,
+          "lineHeight": 16,
+          "paddingVertical": 15,
+          "width": "100%",
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="Password"
+  />
+</View>
+`;
+
+exports[`TextInput Component should render with label 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "alignSelf": "flex-start",
+          "color": "#8F959E",
+          "fontFamily": "Inter_400Regular",
+          "fontSize": 13,
+          "lineHeight": 14,
+        },
+        undefined,
+      ]
+    }
+  >
+    Username
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    onBlur={[Function]}
+    onChangeText={[MockFunction]}
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "fontFamily": "Inter_500Medium",
+          "fontSize": 15,
+          "lineHeight": 16,
+          "paddingVertical": 15,
+          "width": "100%",
+        },
+        Object {},
+      ]
+    }
+    underlineColorAndroid="transparent"
+    value="username"
   />
 </View>
 `;
