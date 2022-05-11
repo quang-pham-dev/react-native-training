@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     flex: 2,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: Metrics.margin.lg,
+    paddingHorizontal: Metrics.padding.lg,
   },
 
   socialButton: {
@@ -100,10 +100,8 @@ const styles = StyleSheet.create({
   },
 
   textBottomButton: {
-    fontSize: Fonts.size.default,
     fontFamily: Fonts.fontFamily.Inter_500Medium,
     lineHeight: Fonts.lineHeight.sm,
-    color: Colors.white,
   },
 
   bottomButton: {

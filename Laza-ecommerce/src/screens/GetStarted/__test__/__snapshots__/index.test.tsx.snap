@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Get Started Screen should render correctly 1`] = `
+exports[`GetStarted Screen should render correctly 1`] = `
 <View
   style={
     Object {
@@ -58,9 +58,6 @@ exports[`Get Started Screen should render correctly 1`] = `
       </View>
     </View>
     <Text
-      color="#1D1E20"
-      fontFamily="Inter_600SemiBold"
-      fontSize={28}
       style={
         Array [
           Object {
@@ -288,19 +285,33 @@ exports[`Get Started Screen should render correctly 1`] = `
       >
         Already have an account? 
       </Text>
-      <Text
-        accessibilityRole="link"
-        href="/SignIn"
-        onPress={[Function]}
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
         style={
           Object {
-            "color": "#1D1E20",
-            "fontFamily": "Inter_500Medium",
+            "opacity": 1,
           }
         }
       >
-        Signin
-      </Text>
+        <Text
+          style={
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_500Medium",
+            }
+          }
+        >
+          Signin
+        </Text>
+      </View>
     </View>
     <View
       accessible={true}
@@ -332,6 +343,10 @@ exports[`Get Started Screen should render correctly 1`] = `
                 "fontFamily": "Inter_600SemiBold",
                 "fontSize": 17,
                 "lineHeight": 22,
+              },
+              Object {
+                "fontFamily": "Inter_500Medium",
+                "lineHeight": 18,
               },
             ],
           ]

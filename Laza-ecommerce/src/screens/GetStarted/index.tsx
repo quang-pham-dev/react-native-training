@@ -1,27 +1,35 @@
+import React from 'react';
+import { StackScreenProps } from '@react-navigation/stack';
+import { Text, TouchableOpacity, View } from 'react-native';
+// Components
 import Button from 'components/Button';
 import Title from 'components/Title';
-import React from 'react';
-import { Text, View } from 'react-native';
-import { Link } from '@react-navigation/native';
 // Themes
-import { Colors, Fonts, IMAGES } from 'styles/themes';
+import { IMAGES } from 'styles/themes';
+import { AuthStackParams } from 'types/Navigation';
 // Styles
 import styles from './styles';
 
-function GetStartedScreen() {
+function GetStartedScreen({ navigation }: StackScreenProps<AuthStackParams, 'SignUp'>) {
+  const handlePressBack = () => {
+    navigation.goBack();
+  };
+
+  const handlePressNavigateToSignIn = () => {
+    navigation.navigate('SignIn');
+  };
+
+  const handlePressCreateAnAccount = () => {
+    navigation.navigate('SignUp');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.iconBackWrapper}>
-          <Button icon={IMAGES.iconBack} iconStyles={[styles.iconBack]} />
+          <Button icon={IMAGES.iconBack} iconStyles={[styles.iconBack]} onPress={handlePressBack} />
         </View>
-        <Title
-          titleStyles={styles.headerTitle}
-          titleName='Let’s Get Started'
-          fontSize={Fonts.size.h5}
-          fontFamily={Fonts.fontFamily.Inter_600SemiBold}
-          color={Colors.textBlack}
-        ></Title>
+        <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started'></Title>
       </View>
       <View style={styles.main}>
         <Button
@@ -53,15 +61,15 @@ function GetStartedScreen() {
       <View style={styles.footer}>
         <View style={styles.footerTextWrapper}>
           <Text style={styles.AlreadyText}>Already have an account? </Text>
-          <Link style={styles.SignIn} to={{ screen: 'SignIn' }}>
-            Signin
-          </Link>
+          <TouchableOpacity onPress={handlePressNavigateToSignIn}>
+            <Text style={styles.SignIn}>Signin</Text>
+          </TouchableOpacity>
         </View>
         <Button
           text={'Create an Account'}
           buttonStyles={[styles.bottomButton, styles.createAnAccountButton]}
-          textStyles={[styles.text]}
-          onPress={() => {}}
+          textStyles={[styles.text, styles.textBottomButton]}
+          onPress={handlePressCreateAnAccount}
         />
       </View>
       {/* end footer */}
