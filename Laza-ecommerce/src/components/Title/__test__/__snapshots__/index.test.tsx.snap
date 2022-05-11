@@ -2,9 +2,6 @@
 
 exports[`Title Component should render  correctly 1`] = `
 <Text
-  color="#1D1E20"
-  fontFamily="Inter_500Medium"
-  fontSize={28}
   style={
     Array [
       Object {

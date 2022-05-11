@@ -5,13 +5,8 @@ import { titleProps } from 'types/Title';
 // Styles
 import styles from './styles';
 
-const Title = ({ titleName, children, titleStyles, ...props }: titleProps) => {
-  return (
-    <Text style={[styles.title, titleStyles]} {...props}>
-      {titleName}
-      {children}
-    </Text>
-  );
+const Title = ({ titleName, titleStyles }: titleProps) => {
+  return <Text style={[styles.title, titleStyles]}>{titleName}</Text>;
 };
 
 export default memo(Title);
