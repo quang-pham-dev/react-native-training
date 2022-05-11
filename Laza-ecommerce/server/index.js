@@ -5,8 +5,8 @@ const jwt = require('jsonwebtoken');
 const queryString = require('query-string');
 
 const server = jsonServer.create();
-const router = jsonServer.router('db.json');
-const userDB = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'));
+const router = jsonServer.router('./server/db.json');
+const userDB = JSON.parse(fs.readFileSync('./server/users.json', 'UTF-8'));
 const middleware = jsonServer.defaults();
 
 server.use(bodyParser.urlencoded({ extended: true }));
@@ -28,8 +28,12 @@ function verifyToken(token) {
 }
 
 // Check if the user exists in database
-function existUser({ email, password }) {
-  return userDB.users.find(user => user.email === email && user.password === password);
+function existUser({ username, password }) {
+  const result = userDB.users.find(
+    user => user.username == username && user.password == password,
+  );
+  console.log(result);
+  return result;
 }
 
 // Register New User
@@ -84,22 +88,26 @@ server.post('/auth/register', (req, res) => {
 server.post('/auth/login', (req, res) => {
   console.log('login endpoint called; request body:');
   console.log(req.body);
-  const { email, password } = req.body;
-  const user = existUser({ email, password });
+  const { username, password } = req.body;
+  console.log('username: ', username);
+  console.log('password: ', password);
+  const user = existUser({ username, password });
+  console.log('user', user);
   if (!user) {
     const status = 401;
-    const message = 'Incorrect email or password';
+    const message = 'Incorrect username or password';
     res.status(status).json({ status, message });
     return;
   }
-  const access_token = createToken({ email, password });
-  console.log('Access Token:' + access_token);
+  const access_token = createToken({ username, password });
+  console.log('access_token:' + access_token);
+  console.log('user:' + JSON.stringify(user));
   res.status(200).json({
     access_token,
-    data: {
+    user: {
       id: user.id,
       avatar: user.avatar,
-      name: user.name,
+      username: user.username,
       gender: user.gender,
       email: user.email,
       phone: user.phone,
@@ -186,7 +194,10 @@ router.render = (req, res) => {
 };
 
 // Use default router
-server.use('/api', router);
-server.listen(8080 | 3000, () => {
-  console.log('JSON Server is running');
+
+const port = 3000;
+
+server.use(router);
+server.listen(port | 3000, () => {
+  console.log(`JSON Server is running at ${port}`);
 });

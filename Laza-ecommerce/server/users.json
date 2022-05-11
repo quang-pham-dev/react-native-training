@@ -3,18 +3,18 @@
     {
       "id": "621c4188dece66a40dad2951",
       "avatar": "https://picsum.photos/200",
-      "name": "Admin",
+      "username": "quangpham",
       "gender": "male",
       "email": "admin@admin.com",
       "phone": "+84 (919) 507231",
       "address": "199 Bergen Street, Bowie, Oregon, 7933",
       "role": "admin",
-      "password": "admin"
+      "password": "123456"
     },
     {
       "id": "621c41883112f1c216433dcf",
       "avatar": "https://picsum.photos/200",
-      "name": "Mcintyre Morrison",
+      "username": "Mcintyre Morrison",
       "gender": "male",
       "email": "test1@email.com",
       "phone": "+84 (838) 539391",
@@ -25,7 +25,7 @@
     {
       "id": "621c4188f3063079e8800351",
       "avatar": "https://picsum.photos/200",
-      "name": "Pate Sheppard",
+      "username": "Pate Sheppard",
       "gender": "male",
       "email": "patesheppard@entogrok.com",
       "phone": "+84 (880) 599217",
@@ -36,7 +36,7 @@
     {
       "id": "621c4188e8365653f9326450",
       "avatar": "https://picsum.photos/200",
-      "name": "Frost Spence",
+      "username": "Frost Spence",
       "gender": "male",
       "email": "frostspence@entogrok.com",
       "phone": "+84 (859) 508289",
@@ -47,7 +47,7 @@
     {
       "id": "621c418897260d9a4a9b66f5",
       "avatar": "https://picsum.photos/200",
-      "name": "Alvarado Greer",
+      "username": "Alvarado Greer",
       "gender": "male",
       "email": "alvaradogreer@entogrok.com",
       "phone": "+84 (914) 488248",

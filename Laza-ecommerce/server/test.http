@@ -1,8 +1,13 @@
 # Auth
 
 # @name login
-POST http://localhost:8080/api/auth/login
+POST http://127.0.0.1:3000/test HTTP/1.1
+content-type: application/json
 
+{
+    "email": "admin@admin.com",
+    "password": "admin"
+}
 ###
 
 # @name listAllProducts
