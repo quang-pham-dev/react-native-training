@@ -1,16 +1,16 @@
 import React from 'react';
-import { StackScreenProps } from '@react-navigation/stack';
 import { Text, TouchableOpacity, View } from 'react-native';
 // Components
 import Button from 'components/Button';
 import Title from 'components/Title';
 // Themes
 import { IMAGES } from 'styles/themes';
-import { AuthStackParams } from 'types/Navigation';
 // Styles
 import styles from './styles';
+// Types
+import { GetStartedScreenProps } from 'types/screens/GetStarted';
 
-function GetStartedScreen({ navigation }: StackScreenProps<AuthStackParams, 'SignUp'>) {
+function GetStartedScreen({ navigation }: GetStartedScreenProps) {
   // handle navigate to SignIn screen
   const handlePressNavigateToSignIn = () => {
     navigation.navigate('SignIn');
