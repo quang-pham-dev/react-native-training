@@ -11,23 +11,16 @@ import { AuthStackParams } from 'types/Navigation';
 import styles from './styles';
 
 function GetStartedScreen({ navigation }: StackScreenProps<AuthStackParams, 'SignUp'>) {
-  const handlePressBack = () => {
-    navigation.goBack();
-  };
-
+  // handle navigate to SignIn screen
   const handlePressNavigateToSignIn = () => {
     navigation.navigate('SignIn');
-  };
-
-  const handlePressCreateAnAccount = () => {
-    navigation.navigate('SignUp');
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.iconBackWrapper}>
-          <Button icon={IMAGES.iconBack} iconStyles={[styles.iconBack]} onPress={handlePressBack} />
+          <Button icon={IMAGES.iconBack} iconStyles={[styles.iconBack]} onPress={() => {}} />
         </View>
         <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started'></Title>
       </View>
@@ -69,7 +62,7 @@ function GetStartedScreen({ navigation }: StackScreenProps<AuthStackParams, 'Sig
           text={'Create an Account'}
           buttonStyles={[styles.bottomButton, styles.createAnAccountButton]}
           textStyles={[styles.text, styles.textBottomButton]}
-          onPress={handlePressCreateAnAccount}
+          onPress={() => {}}
         />
       </View>
       {/* end footer */}
