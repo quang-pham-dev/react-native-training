@@ -1,14 +1,27 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-// BottomTabNavigator is the main navigation component
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
+// Constants
+import Screens from 'constants/Screens';
+// Screens
+import HomeScreen from 'screens/Home';
+import DraffScreen from 'screens/Draff';
 import BottomTabNavigator from 'navigation/BottomTabNavigator';
-// import AppDrawerNavigator from 'navigation/AppDrawerNavigator';
 
-export default function AppStack() {
+const AppStack = createStackNavigator();
+
+export default function AppStackNavigator() {
   return (
-    <NavigationContainer>
-      {/* <AppDrawerNavigator /> */}
-      <BottomTabNavigator />
-    </NavigationContainer>
+    <AppStack.Navigator
+      initialRouteName={Screens.Root.name}
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <AppStack.Screen name={Screens.Root.name} component={BottomTabNavigator} />
+      <AppStack.Screen name={Screens.Home.name} component={HomeScreen} />
+      <AppStack.Screen name={Screens.WishList.name} component={DraffScreen} />
+      <AppStack.Screen name={Screens.Bag.name} component={DraffScreen} />
+      <AppStack.Screen name={Screens.Wallet.name} component={DraffScreen} />
+    </AppStack.Navigator>
   );
 }

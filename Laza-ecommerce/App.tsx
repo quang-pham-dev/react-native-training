@@ -1,27 +1,55 @@
 // Root Navigation of the app
-import * as React from 'react';
+import React from 'react';
 import 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import AppLoading from 'expo-app-loading';
+import * as SplashScreen from 'expo-splash-screen';
 // Hooks
 import useFonts from 'hooks/useFonts';
-// Stack navigator
-import AuthStack from 'navigation/AuthStackNavigator';
-import AppStack from 'navigation/AppStackNavigator';
+// Navigation
+import RootNavigator from 'navigation';
+// Context Provider
+import { AuthProvider } from 'context/AuthContext';
 
 export default function App() {
-  const [fontsLoaded, SetFontsLoaded] = React.useState(false);
-  //
-  const isAuthenticated = true;
-  // Load fonts
-  const LoadFonts = async () => {
-    await useFonts();
-  };
-  if (!fontsLoaded) {
+  const [appIsReady, setAppIsReady] = React.useState(false);
+  // check Current User
+
+  React.useEffect(() => {
+    loadResourcesAndDataAsync();
+  }, []);
+
+  // Load All resource async
+  async function loadResourcesAndDataAsync() {
+    try {
+      await SplashScreen.preventAutoHideAsync();
+
+      // Load fonts
+      await useFonts();
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    } catch (e) {
+      console.warn(e);
+    } finally {
+      setAppIsReady(true);
+
+      await SplashScreen.hideAsync();
+    }
+  }
+  if (!appIsReady) {
     return (
-      <AppLoading startAsync={LoadFonts} onFinish={() => SetFontsLoaded(true)} onError={() => {}} />
+      <AppLoading
+        startAsync={loadResourcesAndDataAsync}
+        onFinish={() => setAppIsReady(true)}
+        onError={() => {}}
+      />
     );
   }
 
-  return <SafeAreaProvider>{isAuthenticated ? <AppStack /> : <AuthStack />}</SafeAreaProvider>;
+  return (
+    <AuthProvider>
+      <SafeAreaProvider>
+        <RootNavigator />
+      </SafeAreaProvider>
+    </AuthProvider>
+  );
 }
