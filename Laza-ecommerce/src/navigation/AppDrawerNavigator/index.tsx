@@ -4,9 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import AppStackNavigator from 'navigation/AppStackNavigator';
 // Screens
 import SideMenu from 'screens/SideMenu';
-// constants
-// import Screens from '@constants/Screens';
-// styles
+
 import { Colors } from 'styles/themes';
 
 const Drawer = createDrawerNavigator();
