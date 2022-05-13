@@ -1,7 +1,6 @@
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 export type labelTextProps = {
-  children?: React.ReactNode;
   fontSize?: number;
   labelName?: string;
   fontFamily?: string;

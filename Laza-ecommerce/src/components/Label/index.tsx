@@ -6,7 +6,6 @@ import { labelTextProps } from 'types/Label';
 import styles from './styles';
 
 const Label = ({
-  children,
   labelName,
   fontSize,
   fontFamily,
@@ -25,7 +24,6 @@ const Label = ({
     <View style={labelWrapperStyles}>
       <Text style={[styles.labelText, labelStyles]} {...props}>
         {labelName}
-        {children}
       </Text>
     </View>
   );
