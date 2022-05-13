@@ -11,6 +11,7 @@ const Colors = {
   textGray: '#8F959E',
   textRed: '#EA4335',
   textWhite: '#FEFEFE',
+  textLogout: '#FF5757',
   // border
   borderGray: '#E7E8EA',
   //

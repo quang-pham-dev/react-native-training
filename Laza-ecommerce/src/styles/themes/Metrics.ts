@@ -23,7 +23,7 @@ const Metrics = {
   },
 
   borderRadius: {
-    roundedSmall: 4,
+    roundedSmall: 5,
     roundedMedium: 10,
     roundedBase: 30,
     roundedFull: 100,
@@ -35,7 +35,7 @@ const Metrics = {
     standard: 20,
     custom: 22,
     semiLarge: 45,
-    large: 54,
+    large: 50,
   },
 
   images: {
