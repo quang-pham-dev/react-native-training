@@ -31,7 +31,6 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
         text: 'OK',
         onPress: () => {
           signOut();
-          navigation.navigate(Screens.SignIn.name);
           navigation.toggleDrawer();
         },
       },
@@ -91,14 +90,16 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
             <Image style={styles.icons} source={IMAGES.iconSun} />
             <Text style={styles.text}>Dark Mode</Text>
           </View>
-          <Switch
-            style={styles.darkModeSwitch}
-            trackColor={{ false: '#767577', true: '#34C759' }}
-            thumbColor={isEnabled ? 'white' : '#f4f3f4'}
-            ios_backgroundColor='#3e3e3e'
-            onValueChange={toggleSwitch}
-            value={isEnabled}
-          />
+          <View style={styles.switchWrapper}>
+            <Switch
+              style={styles.darkModeSwitch}
+              trackColor={{ false: '#767577', true: '#34C759' }}
+              thumbColor={isEnabled ? 'white' : '#f4f3f4'}
+              ios_backgroundColor='#3e3e3e'
+              onValueChange={toggleSwitch}
+              value={isEnabled}
+            />
+          </View>
         </View>
         <TouchableOpacity style={[styles.boxWrapper]} onPress={() => {}}>
           <Image style={styles.icons} source={IMAGES.iconInfo} />

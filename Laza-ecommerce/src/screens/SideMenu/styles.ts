@@ -96,14 +96,18 @@ const styles = StyleSheet.create({
   darkModeWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    marginBottom: Metrics.margin.xl,
   },
 
   darkMode: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: Metrics.margin.xl,
   },
+
+  switchWrapper: {
+    alignItems: 'center',
+  },
+
   darkModeSwitch: {
     transform: [{ scaleX: 0.6 }, { scaleY: 0.6 }],
   },
