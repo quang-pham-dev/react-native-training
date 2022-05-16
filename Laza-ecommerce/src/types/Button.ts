@@ -1,6 +1,7 @@
 import { ImageSourcePropType, StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 export type ButtonProps = {
+  testID?: string;
   onPress?: () => void;
   buttonStyles?: ViewStyle[];
   text?: string;
