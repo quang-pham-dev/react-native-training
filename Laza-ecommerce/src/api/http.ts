@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { get } from 'utils/localStorage';
 
 const http = axios.create({
@@ -21,6 +21,19 @@ http.interceptors.request.use(
     return config;
   },
   error => {
+    return Promise.reject(error);
+  },
+);
+
+// Add a response interceptor
+http.interceptors.response.use(
+  function (response: AxiosResponse) {
+    // Do something with response data
+    console.log('response', response);
+    return response;
+  },
+  function (error) {
+    // Do something with response error
     return Promise.reject(error);
   },
 );
