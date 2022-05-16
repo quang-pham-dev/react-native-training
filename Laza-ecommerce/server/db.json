@@ -1,80 +1,50 @@
 {
-  "Brand": [
+  "brands": [
     {
       "id": 0,
       "name": "Nike",
-      "logo_url": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400"
+      "logo_url": "https://toppng.com/uploads/preview/ike-logo-png-hd-nike-logo-png-image-free-download-nike-logo-sv-11562865034fkhqkcoas6.png"
     },
     {
       "id": 1,
       "name": "Adidas",
-      "logo_url": "https://images.unsplash.com/photo-1533777324565-a040eb52facd?ixlib=rb-1.2.1&ix'id'=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+      "logo_url": "https://www.pikpng.com/pngl/m/42-429866_adidas-logo-png-images-free-download-rh-pngimg.png"
     },
     {
       "id": 2,
       "name": "Fila",
-      "logo_url": "https://thumbor.thedailymeal.com/uApUTn9cQ26YS5WGzx7u_er1LSs=/870x565/https://www.thedailymeal.com/sites/default/files/slideshows/2045750/2227218/01_Taco_shutterstock.jpg"
+      "logo_url": "https://toppng.com/uploads/preview/fila-logo-vector-download-free-11574216707jcmvfu58fy.png"
     },
     {
       "id": 3,
       "name": "Puma",
-      "logo_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/190226-buffalo-chicken-pizza-370-1552084943.jpg"
+      "logo_url": "https://banner2.cleanpng.com/20180613/gsj/kisspng-tracksuit-puma-logo-brand-clothing-puma-logo-5b20dc6b232426.487874081528880235144.jpg"
     },
     {
       "id": 4,
       "name": "Guci",
-      "logo_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/still-life-of-three-fresh-smoothies-in-front-of-royalty-free-image-561093647-1544042068.jpg?crop=0.715xw:0.534xh;0.0945xw,0.451xh&resize=768:*"
+      "logo_url": ""
     }
   ],
 
   "newArraivalProducts": [
     {
       "id": 0,
-      "brand": 0,
-      "productName": "Nike",
-      "productPrice": "100",
-      "productImage": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
-      "productDescription": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
-      "productReviews": [
+      "brandId": 0,
+      "name": "Nike",
+      "price": "100",
+      "type": "shoes",
+      "title": "Nike Sportswear Club Fleece",
+      "source": "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
+      "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+      "reviews": [
         {
           "id": 0,
           "reviewer": {
             "id": 2,
             "name": "John Doe",
             "date": "13, Sep, 2020",
-            "image": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400"
-          },
-          "rating": "4.5",
-          "content": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila."
-        },
-        {
-          "id": 1,
-          "reviewer": {
-            "id": 2,
-            "name": "John Duck",
-            "date": "13, Sep, 2019",
-            "image": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400"
-          },
-          "rating": "4.5",
-          "content": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila."
-        }
-      ]
-    },
-    {
-      "id": 0,
-      "brand": 0,
-      "productName": "Nike",
-      "productPrice": "100",
-      "productImage": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
-      "productDescription": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
-      "productReviews": [
-        {
-          "id": 0,
-          "reviewer": {
-            "id": 2,
-            "name": "John Doe",
-            "date": "13, Sep, 2020",
-            "image": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400"
+            "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80"
           },
           "rating": "4.5",
           "content": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila."
@@ -94,12 +64,48 @@
     },
     {
       "id": 1,
-      "brand": 0,
-      "productName": "Nike",
-      "productPrice": "100",
-      "productImage": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
-      "productDescription": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
-      "productReviews": [
+      "brandId": 0,
+      "name": "Nike",
+      "price": "100",
+      "type": "shoes",
+      "title": "Nike Sportswear Club Fleece",
+      "source": "https://images.unsplash.com/photo-1611824204322-24963b44d68b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+      "reviews": [
+        {
+          "id": 0,
+          "reviewer": {
+            "id": 2,
+            "name": "John Doe",
+            "date": "13, Sep, 2020",
+            "image": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400"
+          },
+          "rating": "4.5",
+          "content": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila."
+        },
+        {
+          "id": 1,
+          "reviewer": {
+            "id": 2,
+            "name": "John Duck",
+            "date": "13, Sep, 2019",
+            "image": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400"
+          },
+          "rating": "4.5",
+          "content": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "brandId": 0,
+      "name": "Nike",
+      "price": "100",
+      "type": "shoes",
+      "title": "Nike Sportswear Club Fleece",
+      "source": "https://images.unsplash.com/photo-1638656749922-9158fd414393?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+      "reviews": [
         {
           "id": 0,
           "reviewer": {
@@ -126,12 +132,14 @@
     },
     {
       "id": 3,
-      "brand": 1,
-      "productName": "Adidas",
-      "productPrice": "100",
-      "productImage": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
-      "productDescription": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
-      "productReviews": [
+      "brandId": 1,
+      "name": "Adidas",
+      "price": "100",
+      "type": "shoes",
+      "title": "Adidas Sportswear Club Fleece",
+      "source": "https://images.unsplash.com/photo-1612722432474-b971cdcea546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+      "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+      "reviews": [
         {
           "id": 0,
           "reviewer": {
@@ -158,12 +166,14 @@
     },
     {
       "id": 4,
-      "brand": 3,
-      "productName": "Fila",
-      "productPrice": "100",
-      "productImage": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
-      "productDescription": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
-      "productReviews": [
+      "brandId": 3,
+      "name": "Fila",
+      "price": "100",
+      "type": "shoes",
+      "title": "Fila Sportswear Club Fleece",
+      "source": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+      "reviews": [
         {
           "id": 0,
           "reviewer": {
@@ -190,12 +200,14 @@
     },
     {
       "id": 5,
-      "brand": 3,
-      "productName": "Fila",
-      "productPrice": "100",
-      "productImage": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
-      "productDescription": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
-      "productReviews": [
+      "brandId": 3,
+      "name": "Fila",
+      "price": "100",
+      "type": "shoes",
+      "title": "Fila Sportswear Club Fleece",
+      "source": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=708&q=80",
+      "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+      "reviews": [
         {
           "id": 0,
           "reviewer": {
@@ -222,12 +234,14 @@
     },
     {
       "id": 6,
-      "brand": 0,
-      "productName": "Puma",
-      "productPrice": "100",
-      "productImage": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
-      "productDescription": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
-      "productReviews": [
+      "brandId": 0,
+      "name": "Puma",
+      "price": "100",
+      "type": "shoes",
+      "title": "Puma Sportswear Club Fleece",
+      "source": "https://images.unsplash.com/photo-1551803091-e20673f15770?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+      "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+      "reviews": [
         {
           "id": 0,
           "reviewer": {
