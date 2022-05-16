@@ -30,7 +30,7 @@ const Metrics = {
   },
 
   icons: {
-    small: 10,
+    small: 11,
     medium: 16,
     standard: 20,
     custom: 22,

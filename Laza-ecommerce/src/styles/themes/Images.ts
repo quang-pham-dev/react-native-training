@@ -22,11 +22,15 @@ const IMAGES = {
   iconBagDrawer: require('@assets/images/icons/bagDrawer.png'),
   iconHeartDrawer: require('@assets/images/icons/heartDrawer.png'),
   iconWalletDrawer: require('@assets/images/icons/walletDrawer.png'),
+  iconClock: require('@assets/images/icons/clock.png'),
+  reviewerAvatar: require('@assets/images/icons/reviewer.png'),
+  ratingStart: require('@assets/images/icons/startRate.png'),
   // products
   product1: require('@assets/images/products/l1.png'),
   product2: require('@assets/images/products/l2.png'),
   product3: require('@assets/images/products/l3.png'),
   product4: require('@assets/images/products/l4.png'),
+  productDetail1: require('@assets/images/products/detailProduct1.png'),
   // Brands
   adidas: require('@assets/images/brands/adidas.png'),
   nike: require('@assets/images/brands/nike.png'),

@@ -20,7 +20,7 @@ const Colors = {
   google: '#EA4335',
   scaleGray: '#FCFCFC',
   lightBlue: '#097ade',
-  lightGray: '#efefef',
+  lightGray: '#F2F2F2',
   tintColor: '#e91e63',
   shadowGray: 'rgba(0, 0, 0, 0.15)',
   // backgroundColor
