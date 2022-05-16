@@ -11,7 +11,9 @@ const RootNavigator: React.FC = () => {
   const { isAuthenticated } = useAuth();
 
   return (
-    <NavigationContainer>{isAuthenticated ? <AppDrawerNavigator /> : <AuthNavigator />}</NavigationContainer>
+    <NavigationContainer>
+      {isAuthenticated ? <AppDrawerNavigator /> : <AuthNavigator />}
+    </NavigationContainer>
   );
 };
 export default RootNavigator;

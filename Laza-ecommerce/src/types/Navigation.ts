@@ -6,5 +6,5 @@ export type AuthStackParams = {
 
 export type HomeStackParams = {
   Home: undefined;
-  toggleDrawer: undefined;
+  ProductDetail: undefined;
 };

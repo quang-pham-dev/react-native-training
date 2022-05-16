@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, ImageSourcePropType, TouchableOpacity, StyleSheet, View, Text } from 'react-native';
+import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // Components
 import DraffScreen from 'screens/Draff';
@@ -9,43 +9,13 @@ import Screens from 'constants/Screens';
 // Themes
 import { Colors, IMAGES } from 'styles/themes';
 
-interface Props {
-  source?: ImageSourcePropType;
-  onPress: () => void;
-  badge?: boolean;
-  badgeCount?: number;
-}
-
-const MenuButton = ({
-  source = IMAGES.iconMenu,
-  onPress,
-  badge = false,
-  badgeCount = 0,
-}: Props) => {
-  return (
-    <TouchableOpacity style={styles.headerButtonContainer} onPress={onPress}>
-      <Image style={styles.headerButtonImage} source={source} />
-      {badge ? (
-        <View style={styles.badge}>
-          <Text style={{ fontSize: 10 }}>{badgeCount}</Text>
-        </View>
-      ) : null}
-    </TouchableOpacity>
-  );
-};
-
-const styles = StyleSheet.create({
-  headerButtonContainer: {},
-  headerButtonImage: {},
-  badge: {},
-});
-
 /**
  * A bottom tab navigator displays tab buttons on the bottom of the display t switch screens.
  */
 const BottomTab = createBottomTabNavigator();
 
 function BottomTabNavigator() {
+
   return (
     <BottomTab.Navigator
       initialRouteName='Home' // The initial route to display. If not initialRouteName, the first screen will be the root screen.

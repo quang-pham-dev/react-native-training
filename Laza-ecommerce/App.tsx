@@ -1,4 +1,3 @@
-// Root Navigation of the app
 import React from 'react';
 import 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -9,11 +8,10 @@ import useFonts from 'hooks/useFonts';
 // Navigation
 import RootNavigator from 'navigation';
 // Context Provider
-import { AuthProvider } from 'context/AuthContext';
+import AuthProvider from 'context/AuthContext';
 
 export default function App() {
   const [appIsReady, setAppIsReady] = React.useState(false);
-  // check Current User
 
   React.useEffect(() => {
     loadResourcesAndDataAsync();
@@ -26,12 +24,11 @@ export default function App() {
 
       // Load fonts
       await useFonts();
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 2000));
     } catch (e) {
       console.warn(e);
     } finally {
       setAppIsReady(true);
-
       await SplashScreen.hideAsync();
     }
   }

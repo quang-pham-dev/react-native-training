@@ -1,89 +1,94 @@
-import React, { createContext, useEffect, useState } from 'react';
-// Services
-import { authService } from 'api/auth.api';
-// Types
-import { User } from 'types/User';
-import { AuthContextValue } from 'types/Auth';
-// Utilities
-import { get, remove, set } from 'utils/localStorage';
+import React, { createContext, useEffect, useMemo, useReducer } from 'react';
 import { Alert } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+// API
+import { authService } from 'api';
+// Constants
+import { AuthData } from 'constants/Common';
+// Context Reducer
+import { authReducer } from './Reducers/AuthReducer';
+// Context initial state
+import { AuthState, InitialAuthState } from './State/AuthState';
+// Types
+import { INITIALIZE, SIGN_IN, SIGN_OUT } from 'types/Actions';
 
-export const AuthContext = createContext<AuthContextValue>({
-  currentUser: undefined,
-  signIn: () => Promise.resolve(),
-  signOut: () => Promise.resolve(),
-  isLoading: false,
-  isAuthenticated: false,
-});
+export const AuthenticationContext = createContext<AuthState>(InitialAuthState);
 
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  console.log('AuthProvider render');
-  const [currentUser, setCurrentUser] = useState<User>();
-  const [isLoading, setIsLoading] = useState(true);
+const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+  const [state, dispatch] = useReducer(authReducer, InitialAuthState);
 
   useEffect(() => {
-    // load data from localStorage
     loadStorageData();
   }, []);
 
-  async function loadStorageData(): Promise<void> {
+  // load data from local Storage device.
+  const loadStorageData = async () => {
     try {
-      //Try get the data from Async Storage
-      const data = await get('data');
-      if (data) {
-        //If there are data, it's converted to an Object and the state is updated.
-        const { user } = JSON.parse(data);
-        setCurrentUser(user);
+      const authData = await AsyncStorage.getItem(AuthData);
+      if (authData) {
+        const { user } = JSON.parse(authData);
+        const { access_token } = JSON.parse(authData);
+        dispatch({
+          type: INITIALIZE,
+          payload: { user, access_token },
+        });
       }
     } catch (error) {
-      setIsLoading(false);
-      console.log(error);
-    } finally {
-      setIsLoading(false);
+      Alert.alert('Error', '' + error.message);
     }
-  }
+  };
 
-  // handle sign in
-  async function signIn(email: string, password: string): Promise<void> {
-    try {
-      const response = await authService.signIn(email, password);
-      const { user } = response.data;
-      // set the current user
-      if (response.data.user) {
-        setCurrentUser(user);
-      }
-      // set the current user and access_token in Async Storage
-      set('data', JSON.stringify(response.data));
-    } catch (error) {
-      console.log(error);
-      Alert.alert(error.message);
-    }
-  }
-  // handle sign out
-  async function signOut() {
-    await authService.signOut();
-    // set the current user to
-    setCurrentUser(undefined);
-    // remove the (current user & token) from Async Storage
-    remove('data');
-  }
+  const authContextValue = useMemo(
+    () => ({
+      signIn: async (username: string, password: string) => {
+        try {
+          const response = await authService.signIn(username, password);
+          const { user } = response.data;
+          const { access_token } = response.data;
+          if (user && access_token) {
+            dispatch({
+              type: SIGN_IN,
+              payload: { user, access_token },
+            });
+          }
+          // set the current user and access_token in Local Storage
+          AsyncStorage.setItem(AuthData, JSON.stringify(response.data));
+          AsyncStorage.setItem('access_token', JSON.stringify(access_token));
+        } catch (errors) {
+          Alert.alert('Error', errors.response.data.message);
+        }
+      },
+
+      signOut: async () => {
+        try {
+          authService.signOut();
+          dispatch({ type: SIGN_OUT });
+          // remove the (current user & token) from Local Storage
+          AsyncStorage.removeItem(AuthData);
+        } catch (errors) {
+          AsyncStorage.removeItem(AuthData);
+          Alert.alert('Error', errors.response.data.message);
+        }
+      },
+    }),
+    [],
+  );
 
   // provider value
   const value = {
-    currentUser,
-    isLoading,
-    signIn,
-    signOut,
-    isAuthenticated: Boolean(currentUser),
+    ...state,
+    ...authContextValue,
   };
 
   return (
-    <AuthContext.Provider
+    <AuthenticationContext.Provider
       value={{
         ...value,
       }}
     >
       {children}
-    </AuthContext.Provider>
+    </AuthenticationContext.Provider>
   );
 };
+
+export default AuthProvider;

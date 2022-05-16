@@ -2,10 +2,10 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 // Constants
 import Screens from 'constants/Screens';
-// Screens
-import HomeScreen from 'screens/Home';
-import DraffScreen from 'screens/Draff';
-import BottomTabNavigator from 'navigation/BottomTabNavigator';
+// Navigator
+import BottomTabNavigator from 'navigation/AppStackNavigator/BottomTabNavigator';
+import ProductDetail from 'screens/ProductDetail';
+import BrandDetailScreen from 'screens/BrandDetail';
 
 const AppStack = createStackNavigator();
 
@@ -18,10 +18,8 @@ export default function AppStackNavigator() {
       }}
     >
       <AppStack.Screen name={Screens.Root.name} component={BottomTabNavigator} />
-      <AppStack.Screen name={Screens.Home.name} component={HomeScreen} />
-      <AppStack.Screen name={Screens.WishList.name} component={DraffScreen} />
-      <AppStack.Screen name={Screens.Bag.name} component={DraffScreen} />
-      <AppStack.Screen name={Screens.Wallet.name} component={DraffScreen} />
+      <AppStack.Screen name={Screens.ProductDetail.name} component={ProductDetail} />
+      <AppStack.Screen name={Screens.BrandDetail.name} component={BrandDetailScreen} />
     </AppStack.Navigator>
   );
 }

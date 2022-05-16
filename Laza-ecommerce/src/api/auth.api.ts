@@ -1,3 +1,4 @@
+import { AuthData } from 'constants/Common';
 import { UserResponse } from 'types/User';
 import { remove } from 'utils/localStorage';
 import http from './http';
@@ -7,7 +8,7 @@ const signIn = (username: string, password: string): Promise<UserResponse> => {
 };
 const signOut = (): Promise<void> => {
   //   return http.post('auth/signOut');
-  return remove('data');
+  return remove(AuthData);
 };
 
 export const authService = {
