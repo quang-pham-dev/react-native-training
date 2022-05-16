@@ -370,6 +370,7 @@ exports[`SignIn Screen should render correctly 1`] = `
                 "width": "100%",
               }
             }
+            testID="loginButton"
           >
             <Text
               style={

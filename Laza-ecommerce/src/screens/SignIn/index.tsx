@@ -43,7 +43,7 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
     handleSubmit,
     formState: { errors },
   } = useForm<LoginBody>({
-    mode: 'onTouched',
+    mode: 'onChange',
     defaultValues: loginFormInit,
     resolver: yupResolver(loginSchema),
   });
@@ -106,7 +106,7 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
               name='username'
             />
             {errors.username && (
-              <Text testID='usernameInputError' style={styles.errorMessage}>
+              <Text testID='usernameInputError' accessibilityRole='text' style={styles.errorMessage}>
                 {errors.username?.message}
               </Text>
             )}
@@ -162,6 +162,7 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
               </Text>
             </View>
             <Button
+              testID='loginButton'
               text='Login'
               buttonStyles={[styles.bottomButton, styles.loginButton]}
               textStyles={[styles.textBottomButton]}
