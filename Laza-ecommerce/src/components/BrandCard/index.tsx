@@ -21,14 +21,14 @@ const BrandCard = ({
     >
       <View style={[styles.brandCardWrapper]}>
         <View style={styles.brandLogoWrapper}>
-          <Image style={styles.brandLogo} source={brand.logo_url} />
+          <Image style={styles.brandLogo} source={{ uri: brand.logo_url }} />
         </View>
         <Label
           lineHeight={16.5}
           fontSize={Fonts.size.normal}
           fontFamily={Fonts.fontFamily.Inter_500Medium}
           color={Colors.textBlack}
-          labelName={brand.brandName}
+          labelName={brand.name}
         ></Label>
       </View>
     </TouchableOpacity>

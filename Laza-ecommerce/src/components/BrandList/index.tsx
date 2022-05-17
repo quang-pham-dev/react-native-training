@@ -1,5 +1,5 @@
-import React from 'react';
-import { FlatList, View } from 'react-native';
+import React, { memo } from 'react';
+import { FlatList, View, Text } from 'react-native';
 // Components
 import BrandCard from 'components/BrandCard';
 import Label from 'components/Label';
@@ -15,6 +15,8 @@ const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: Brand
   const renderBrandCard = ({ item }: { item: BrandCardListProps }) => (
     <BrandCard brand={item} handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen} />
   );
+
+  const renderEmptyList = () => <Text>Empty Brand.</Text>;
 
   return (
     <View style={styles.container}>
@@ -41,9 +43,10 @@ const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: Brand
         keyExtractor={brand => brand.id}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
+        ListEmptyComponent={renderEmptyList}
       />
     </View>
   );
 };
 
-export default BrandsCardList;
+export default memo(BrandsCardList);

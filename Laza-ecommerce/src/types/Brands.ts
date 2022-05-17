@@ -1,9 +1,9 @@
-import { StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
+import { StyleProp, TextStyle } from 'react-native';
 
 export type BrandProps = {
   id: string;
-  brandName: string;
-  logo_url: ImageSourcePropType;
+  name: string;
+  logo_url: string;
 };
 
 export type BrandCardProps = {

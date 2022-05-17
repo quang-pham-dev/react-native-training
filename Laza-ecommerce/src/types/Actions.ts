@@ -1,3 +1,4 @@
+// Auth
 export const INITIALIZE = 'INITIALIZE';
 export interface InitialAction {
   type: typeof INITIALIZE;
@@ -16,15 +17,11 @@ export interface SignOutAction {
 
 export type AuthAction = InitialAction | SignInAction | SignOutAction;
 
-export const FETCHING = 'FETCHING';
-export interface FetchingAction {
-  type: typeof FETCHING;
-  payload?: any;
-}
-export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-export interface FetchSuccessAction {
-  type: typeof FETCH_SUCCESS;
+// Products
+export const FETCH_PRODUCT = 'FETCH_PRODUCT';
+export interface FetchProductAction {
+  type: typeof FETCH_PRODUCT;
   payload?: any;
 }
 
-export type BrandAction = FetchingAction | FetchSuccessAction;
+export type ProductAction = FetchProductAction;

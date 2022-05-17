@@ -2,20 +2,20 @@ import { Platform, StyleSheet } from 'react-native';
 import { Colors, Fonts, Metrics } from 'styles/themes';
 
 const styles = StyleSheet.create({
-  homeContainer: {
+  Container: {
     flex: 1,
     backgroundColor: Colors.primaryBackground,
   },
+
   homeMain: {
     flex: 1,
     paddingHorizontal: Metrics.margin.lg,
   },
   header: {
-    flex: 2,
-    marginTop: Platform.OS === 'android' ? Metrics.margin.xxxl : 0,
+    marginTop: Platform.OS === 'android' ? Metrics.margin.lg : 0,
   },
   body: {
-    flex: 5,
+    flex: 1,
   },
   headerTitleWrapper: {
     flexDirection: 'row',

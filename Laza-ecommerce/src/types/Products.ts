@@ -1,4 +1,4 @@
-import { StyleProp, TextStyle, ViewStyle, ImageSourcePropType } from 'react-native';
+import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 import { BrandProps } from './Brands';
 
 export interface ProductsModel {
@@ -25,17 +25,16 @@ export interface ReviewerProps {
   date: string;
   avatar: string;
 }
-// ============================================================
 export type ProductProps = {
   id: string;
   brandId: string;
-  productPrice: number;
-  productTitle?: string;
-  productName: string;
-  productType: string;
-  source: ImageSourcePropType;
-  productDescription?: string;
-  productReviews?: ProductsReviewsProps[];
+  price: number;
+  title?: string;
+  name: string;
+  type: string;
+  source: string;
+  description?: string;
+  reviews?: ProductsReviewsProps[];
   like?: boolean;
 };
 
@@ -51,6 +50,7 @@ export interface ProductsListProps {
   productsData: ProductProps[];
   handleLikeProduct: (item: ProductProps) => void;
   handleNavigationProductDetailScreen: (id: string) => void;
+  handleRefreshing?: () => void;
 }
 
 export interface ProductsCardListProps extends ProductProps {

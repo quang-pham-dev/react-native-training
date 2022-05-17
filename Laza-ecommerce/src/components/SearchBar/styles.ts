@@ -4,7 +4,6 @@ import { Colors, Metrics } from 'styles/themes';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: Metrics.margin.lg,
@@ -33,7 +32,8 @@ const styles = StyleSheet.create({
   },
   input: {
     alignItems: 'flex-start',
-    paddingLeft: Metrics.margin.md,
+    paddingLeft: Metrics.padding.md,
+    paddingRight: 50,
   },
   iconVoiceWrapper: {
     marginLeft: Metrics.margin.sm,

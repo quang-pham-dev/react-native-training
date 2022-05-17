@@ -5,7 +5,7 @@ export type labelTextProps = {
   labelName?: string;
   fontFamily?: string;
   color?: string;
-  lineHeight: number;
+  lineHeight?: number;
   labelStyles?: StyleProp<TextStyle>;
   labelWrapperStyles?: StyleProp<ViewStyle>;
   labelType?: string;

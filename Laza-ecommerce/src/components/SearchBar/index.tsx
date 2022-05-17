@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Image, TextInput, TouchableOpacity, View } from 'react-native';
 // Theme
 import { IMAGES } from 'styles/themes';
@@ -37,4 +37,4 @@ const SearchBar = ({
   </View>
 );
 
-export default SearchBar;
+export default memo(SearchBar);
