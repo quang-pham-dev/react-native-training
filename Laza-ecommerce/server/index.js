@@ -15,7 +15,7 @@ server.use(middleware);
 
 const SECRET_KEY = 'SecretKey@321';
 
-const expiresIn = '1h';
+const expiresIn = '1d';
 
 // Create a token from a payload
 function createToken(payload) {
@@ -89,10 +89,7 @@ server.post('/auth/login', (req, res) => {
   console.log('login endpoint called; request body:');
   console.log(req.body);
   const { username, password } = req.body;
-  console.log('username: ', username);
-  console.log('password: ', password);
   const user = existUser({ username, password });
-  console.log('user', user);
   if (!user) {
     const status = 401;
     const message = 'Incorrect username or password';
@@ -166,15 +163,11 @@ server.use((req, res, next) => {
 
 // In this example, returned resources will be wrapped in a body property
 router.render = (req, res) => {
-  console.log(req.query);
 
   const headers = res.getHeaders();
 
   const totalCountHeader = headers['x-total-count'];
-  console.log(headers);
-  console.log(totalCountHeader);
   if (req.method === 'GET' && totalCountHeader) {
-    console.log(req);
 
     const queryParams = queryString.parse(req._parsedUrl.query);
     const response = {
