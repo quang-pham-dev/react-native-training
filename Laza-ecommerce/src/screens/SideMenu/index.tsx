@@ -1,22 +1,28 @@
-import React, { useState } from 'react';
+import React, { memo, useContext, useState } from 'react';
 import { Alert, Image, Switch, Text, TouchableOpacity, View } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 // Components
 import Button from 'components/Button';
 // Screens
 import Screens from 'constants/Screens';
-// Hooks
-import useAuth from 'hooks/useAuth';
+// Theme
 import { IMAGES } from 'styles/themes';
 // Styles
 import styles from './styles';
 // Types
 import { SideMenuPros } from 'types/Menu';
+import { SIGN_OUT } from 'types/Actions';
+// API
+import { authService } from 'api';
+// Context
+import { AppContext } from 'context/AppContext';
+// Constants
+import { AuthData } from 'constants/Common';
 
 const SideMenu = ({ navigation }: SideMenuPros) => {
-  const { signOut, currentUser } = useAuth();
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-
+  const { authState, authDispatch } = useContext(AppContext);
   // TODO get Order from API Because feature is not developed yet
   const orderCount = 3;
 
@@ -29,9 +35,17 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
       },
       {
         text: 'OK',
-        onPress: () => {
-          signOut();
+        onPress: async () => {
           navigation.toggleDrawer();
+          try {
+            await authService.signOut();
+            await AsyncStorage.removeItem(AuthData);
+            authDispatch({
+              type: SIGN_OUT,
+            });
+          } catch (error) {
+            Alert.alert('Error', error.message);
+          }
         },
       },
     ]);
@@ -71,7 +85,9 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
           <View style={styles.profile}>
             <Image style={styles.avatar} source={IMAGES.iconAvatar} />
             <View style={styles.profileInfoWrapper}>
-              {currentUser ? <Text style={styles.accountName}>{currentUser.username}</Text> : null}
+              {authState?.currentUser?.username ? (
+                <Text style={styles.accountName}>{authState?.currentUser?.username}</Text>
+              ) : null}
               <View style={styles.verifiedWrapper}>
                 <Text style={styles.verifiedText}>Verified Profile</Text>
                 <Image style={styles.iconBadge} source={IMAGES.iconBadge} />
@@ -128,4 +144,4 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
   );
 };
 
-export default SideMenu;
+export default memo(SideMenu);

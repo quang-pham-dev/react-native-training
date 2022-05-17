@@ -4,8 +4,10 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import AppStackNavigator from 'navigation/AppStackNavigator';
 // Screens
 import SideMenu from 'screens/SideMenu';
-
+// Theme
 import { Colors } from 'styles/themes';
+// Constants
+import Screens from 'constants/Screens';
 
 const Drawer = createDrawerNavigator();
 
@@ -17,12 +19,12 @@ function AppDrawerNavigator() {
         drawerPosition: 'left',
         drawerStyle: {
           backgroundColor: Colors.primaryBackground,
-          width: 300,
+          width: '80%',
         },
       }}
       drawerContent={({ navigation }) => <SideMenu navigation={navigation} />}
     >
-      <Drawer.Screen name={'App'} component={AppStackNavigator} />
+      <Drawer.Screen name={Screens.App.name} component={AppStackNavigator} />
     </Drawer.Navigator>
   );
 }

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { KeyboardAvoidingView, ScrollView, Switch, Text, View } from 'react-native';
+import React, { memo, useContext, useState } from 'react';
+import { Alert, KeyboardAvoidingView, ScrollView, Switch, Text, View } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 // Lib
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import * as Yup from 'yup';
@@ -8,15 +9,20 @@ import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 import Button from 'components/Button';
 import Title from 'components/Title';
 import TextInput from 'components/TextInput';
-// Hooks
-import useAuth from 'hooks/useAuth';
 // Themes
 import { IMAGES } from 'styles/themes';
 // Styles
 import { styles } from './styles';
 // Types
 import { LoginBody } from 'types/Auth';
+import { SIGN_IN } from 'types/Actions';
 import { SignInScreenProps } from 'types/Screens';
+// Context
+import { AppContext } from 'context/AppContext';
+// Api
+import { authService } from 'api';
+// Constants
+import { AuthData } from 'constants/Common';
 
 // initial values
 const loginFormInit: LoginBody = {
@@ -35,7 +41,7 @@ const loginSchema = Yup.object({
 const SignInScreen = ({ navigation }: SignInScreenProps) => {
   const [isEnabled, setIsEnabled] = useState(true);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-  const { signIn } = useAuth();
+  const { authDispatch } = useContext(AppContext);
 
   const {
     control,
@@ -52,11 +58,21 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
   const handOnSubmit: SubmitHandler<LoginBody> = async (loginInfo: LoginBody) => {
     const { username, password } = loginInfo;
     try {
-      await signIn(username, password);
+      const response = await authService.signIn(username, password);
+      const data = JSON.stringify(response.data);
+      await AsyncStorage.setItem(AuthData, data);
+      const { user } = response.data;
+      const { access_token } = response.data;
+      if (user && access_token) {
+        authDispatch({
+          type: SIGN_IN,
+          payload: { user, access_token },
+        });
+      }
     } catch (error) {
       // reset form
       reset(loginFormInit);
-      console.log(error);
+      Alert.alert('Error', error.message);
     }
   };
 
@@ -106,7 +122,11 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
               name='username'
             />
             {errors.username && (
-              <Text testID='usernameInputError' accessibilityRole='text' style={styles.errorMessage}>
+              <Text
+                testID='usernameInputError'
+                accessibilityRole='text'
+                style={styles.errorMessage}
+              >
                 {errors.username?.message}
               </Text>
             )}
@@ -176,4 +196,4 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
   );
 };
 
-export default SignInScreen;
+export default memo(SignInScreen);
