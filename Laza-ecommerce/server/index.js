@@ -29,9 +29,7 @@ function verifyToken(token) {
 
 // Check if the user exists in database
 function existUser({ username, password }) {
-  const result = userDB.users.find(
-    user => user.username == username && user.password == password,
-  );
+  const result = userDB.users.find(user => user.username == username && user.password == password);
   console.log(result);
   return result;
 }
@@ -115,31 +113,8 @@ server.post('/auth/login', (req, res) => {
 });
 
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
-  if (
-    req.headers.authorization === undefined ||
-    req.headers.authorization.split(' ')[0] !== 'Bearer'
-  ) {
-    const status = 401;
-    const message = 'Error in authorization format';
-    res.status(status).json({ status, message });
-    return;
-  }
-  try {
-    let verifyTokenResult;
-    verifyTokenResult = verifyToken(req.headers.authorization.split(' ')[1]);
-
-    if (verifyTokenResult instanceof Error) {
-      const status = 401;
-      const message = 'Access token not provided';
-      res.status(status).json({ status, message });
-      return;
-    }
-    next();
-  } catch (err) {
-    const status = 401;
-    const message = 'Error access_token is revoked';
-    res.status(status).json({ status, message });
-  }
+//   console.log('============headers', req.headers.authorization);
+  return next();
 });
 
 // Add custom routes before JSON Server router
@@ -163,12 +138,10 @@ server.use((req, res, next) => {
 
 // In this example, returned resources will be wrapped in a body property
 router.render = (req, res) => {
-
   const headers = res.getHeaders();
 
   const totalCountHeader = headers['x-total-count'];
   if (req.method === 'GET' && totalCountHeader) {
-
     const queryParams = queryString.parse(req._parsedUrl.query);
     const response = {
       data: res.locals.data,
@@ -181,9 +154,7 @@ router.render = (req, res) => {
     return res.jsonp(response);
   }
 
-  res.jsonp({
-    body: res.locals.data,
-  });
+  res.jsonp(res.locals.data);
 };
 
 // Use default router
