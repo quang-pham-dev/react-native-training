@@ -3,6 +3,6 @@ export enum LOADING_SIZE {
   SMALL = 'small',
 }
 
-export const APP_BASE_URL = 'http://localhost:3001';
+export const APP_BASE_URL = 'http://localhost:3000';
 
 export const AuthData = '@AuthData';

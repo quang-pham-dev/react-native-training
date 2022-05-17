@@ -1,5 +1,6 @@
-import React, { memo, useContext, useState } from 'react';
-import { KeyboardAvoidingView, View } from 'react-native';
+/* eslint-disable indent */
+import React, { memo, useContext, useEffect, useState } from 'react';
+import { Alert, KeyboardAvoidingView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 // Components
 import BrandsCardList from 'components/BrandList';
@@ -7,43 +8,62 @@ import Header from 'components/Layout/Header';
 import SearchBar from 'components/SearchBar';
 import ProductsList from 'components/ProductsList';
 import Title from 'components/Title';
-import LoadingIndicator from 'components/Indicator';
-// Hooks
-import useAxios from 'hooks/useAxios';
 // Styles
 import styles from './styles';
 // Types
 import { HomeScreenProps } from 'types/Screens';
 import { ProductProps } from 'types/Products';
+import { FETCH_BRANDS, FETCH_PRODUCTS } from 'types/Actions';
 // Constants
-import { APP_BASE_URL } from 'constants/Common';
 import Screens from 'constants/Screens';
 import { AppContext } from 'context/AppContext';
+// Api
+import { productsService } from 'api/products.api';
+import { brandsService } from 'api/brands.api';
 
 const HomeScreen = ({ navigation }: HomeScreenProps) => {
   // Get Current User
-  const { authState } = useContext(AppContext);
+  const { authState, productState, brandState, productDispatch, brandDispatch } =
+    useContext(AppContext);
   const { currentUser } = authState;
+  const { brands: brandsData } = brandState;
   // State for search bar
   const [searchValue, setSearchValue] = useState('');
 
-  // fetchBrands()
-  const { data: brandsData, loading: fetchingBrand } = useAxios({
-    method: 'GET',
-    url: `${APP_BASE_URL}/brands`,
-  });
+  useEffect(() => {
+    fetchBrands();
+    fetchProducts();
+  }, []);
 
-  // fetchProducts();
-  const { data: productsData, loading: fetchingProduct } = useAxios({
-    method: 'GET',
-    url: `${APP_BASE_URL}/newArraivalProducts`,
-  });
+  const fetchProducts = async () => {
+    try {
+      const { data } = await productsService.fetchProducts();
+      productDispatch({
+        type: FETCH_PRODUCTS,
+        payload: data,
+      });
+    } catch (error) {
+      Alert.alert('Error', error.message);
+    }
+  };
+
+  const fetchBrands = async () => {
+    try {
+      const { data } = await brandsService.fetchBrands();
+      brandDispatch({
+        type: FETCH_BRANDS,
+        payload: data,
+      });
+    } catch (error) {
+      Alert.alert('Error', error.message);
+    }
+  };
 
   const masterData = searchValue
-    ? productsData.filter((product: ProductProps) =>
-      product.name.toLowerCase().includes(searchValue.toLowerCase()),
-    )
-    : productsData;
+    ? productState.products.filter((product: ProductProps) =>
+        product.name.toLowerCase().includes(searchValue.toLowerCase()),
+      )
+    : productState.products;
 
   // handle action navigate to Brand Detail Screen
   const handleNavigationBrandDetailScreen = (id: string) => {
@@ -80,24 +100,16 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
           />
         </View>
         <View style={styles.body}>
-          {fetchingBrand && brandsData ? (
-            <LoadingIndicator />
-          ) : (
-            <BrandsCardList
-              brandsData={brandsData}
-              handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen}
-            />
-          )}
+          <BrandsCardList
+            brandsData={brandsData}
+            handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen}
+          />
 
-          {fetchingProduct && masterData ? (
-            <LoadingIndicator />
-          ) : (
-            <ProductsList
-              productsData={masterData}
-              handleLikeProduct={handleLikeProduct}
-              handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
-            />
-          )}
+          <ProductsList
+            productsData={masterData}
+            handleLikeProduct={handleLikeProduct}
+            handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
+          />
         </View>
       </KeyboardAvoidingView>
     </SafeAreaView>

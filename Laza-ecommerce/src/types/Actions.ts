@@ -17,11 +17,20 @@ export interface SignOutAction {
 
 export type AuthAction = InitialAction | SignInAction | SignOutAction;
 
-// Products
-export const FETCH_PRODUCT = 'FETCH_PRODUCT';
-export interface FetchProductAction {
-  type: typeof FETCH_PRODUCT;
+//  Brands
+export const FETCH_BRANDS = 'FETCH_BRANDS';
+export interface FetchBrandsAction {
+  type: typeof FETCH_BRANDS;
   payload?: any;
 }
 
-export type ProductAction = FetchProductAction;
+export type BrandsAction = FetchBrandsAction;
+
+// Products
+export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
+export interface FetchProductsAction {
+  type: typeof FETCH_PRODUCTS;
+  payload?: any;
+}
+
+export type ProductsAction = FetchProductsAction;

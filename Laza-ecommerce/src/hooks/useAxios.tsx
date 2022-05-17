@@ -8,6 +8,12 @@ type useAxiosProps = {
   body?: string; // post, put, patch
 };
 
+export interface IResponse<T> {
+    data: T;
+    loading: boolean;
+    error: any
+}
+
 const useAxios = ({ url, method, body }: useAxiosProps) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -21,13 +27,9 @@ const useAxios = ({ url, method, body }: useAxiosProps) => {
           method,
           url,
           data: body,
-          headers: {
-            'Content-Type': 'application/json',
-          },
         });
-        const data = await resp?.data;
 
-        setData(data);
+        setData(resp.data ? resp.data : resp);
         setLoading(false);
       } catch (error) {
         setError(error);
