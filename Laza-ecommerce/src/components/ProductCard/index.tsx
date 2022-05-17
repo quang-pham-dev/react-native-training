@@ -21,7 +21,7 @@ const ProductCard = ({
       style={[styles.productCardContainer, productCardStyles]}
     >
       <View style={styles.imageWrapper}>
-        <ImageBackground style={styles.image} source={product.source} />
+        <ImageBackground style={styles.image} source={{ uri: product.source }} />
         <Pressable onPress={handleLikeProduct} style={styles.iconHeartWrapper}>
           <Image
             style={styles.iconHeart}
@@ -29,9 +29,9 @@ const ProductCard = ({
           />
         </Pressable>
       </View>
-      <Title titleStyles={styles.productTitle} titleName={product.productTitle} />
-      <Title titleStyles={styles.productType} titleName={product.productType} />
-      <Text style={styles.price}>{`$ ${product.productPrice || 0}`}</Text>
+      <Title titleStyles={styles.productTitle} titleName={product.title} />
+      <Title titleStyles={styles.productType} titleName={product.type} />
+      <Text style={styles.price}>{`$ ${product.price || 0}`}</Text>
     </Pressable>
   );
 };

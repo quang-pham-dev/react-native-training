@@ -5,7 +5,6 @@ import { Fonts, Metrics, Colors } from 'styles/themes';
 const styles = StyleSheet.create({
   productCardContainer: {
     width: 160,
-    height: 257,
   },
 
   imageWrapper: {
@@ -20,7 +19,6 @@ const styles = StyleSheet.create({
     height: 203,
     alignItems: 'flex-end',
     resizeMode: 'contain',
-    position: 'relative',
   },
 
   iconHeartWrapper: {

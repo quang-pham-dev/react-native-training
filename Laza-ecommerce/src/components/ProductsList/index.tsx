@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { FlatList, View } from 'react-native';
 // Components
 import Label from 'components/Label';
@@ -25,6 +25,16 @@ const ProductsList = ({
     />
   );
 
+  // handle render when empty list
+  const renderEmptyList = () => (
+    <Label
+      labelName='No Products!'
+      fontSize={17}
+      fontFamily={Fonts.fontFamily.Inter_400Regular}
+      color={Colors.textBlack}
+    />
+  );
+
   return (
     <View style={styles.container}>
       <View style={styles.productTitle}>
@@ -44,17 +54,15 @@ const ProductsList = ({
         />
       </View>
       <FlatList
-        nestedScrollEnabled
         numColumns={2}
         columnWrapperStyle={styles.columnWrapper}
         data={productsData}
         renderItem={renderProductCard}
         keyExtractor={product => product.id}
         showsVerticalScrollIndicator={false}
-        horizontal={false}
+        ListEmptyComponent={renderEmptyList}
       />
     </View>
   );
 };
-
-export default ProductsList;
+export default memo(ProductsList);
