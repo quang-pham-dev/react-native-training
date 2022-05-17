@@ -1,5 +1,5 @@
 import { LOADING_SIZE } from 'constants/Common';
-import React from 'react';
+import React, { memo } from 'react';
 import { ActivityIndicator } from 'react-native';
 // Types for props
 import { LoadingIndicatorProps } from 'types/Indicator';
@@ -14,4 +14,4 @@ const LoadingIndicator = ({
   <ActivityIndicator style={styles.loading} size={loadingSize} color={color} />
 );
 
-export default LoadingIndicator;
+export default memo(LoadingIndicator);

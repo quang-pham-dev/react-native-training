@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Text, TextInput, View } from 'react-native';
 // Types
 import { TextInputProps } from 'types/TextInput';
@@ -32,4 +32,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default memo(Input);

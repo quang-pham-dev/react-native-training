@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Image, Text, TouchableOpacity } from 'react-native';
 // Types
 import { ButtonProps } from 'types/Button';
@@ -31,4 +31,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default memo(Button);
