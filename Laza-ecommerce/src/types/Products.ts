@@ -1,30 +1,17 @@
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
-import { BrandProps } from './Brands';
-
-export interface ProductsModel {
-  id: string;
-  brandId: BrandProps['id'];
-  productName: string;
-  productPrice: number;
-  productImage: string;
-  productDescription: string;
-  productReviews: ProductsReviewsProps;
-  likes: boolean;
-}
-
-export interface ProductsReviewsProps {
-  id: string;
-  reviewer: ReviewerProps;
-  rating: string;
-  content: string;
-}
 
 export interface ReviewerProps {
   id: string;
   name: string;
   date: string;
-  avatar: string;
+  image: string;
 }
+
+export interface ImageReviewerProps {
+  id: string;
+  image: string;
+}
+
 export type ProductProps = {
   id: string;
   brandId: string;
@@ -34,25 +21,29 @@ export type ProductProps = {
   type: string;
   source: string;
   description?: string;
-  reviews?: ProductsReviewsProps[];
+  reviewer?: ReviewerProps;
   like?: boolean;
+  imageReview?: ImageReviewerProps[];
+  rating?: string;
+  comment: string;
 };
 
 export interface ProductCardProps {
-  product: ProductProps;
+  product: ProductsCardListProps;
   handleNavigationProductDetailScreen: (id: string) => void;
   handleLikeProduct: () => void;
   handleNavigationDetailScreen?: () => void;
   productCardStyles?: ViewStyle;
 }
 
+export interface ProductsCardListProps extends ProductProps {
+  productCardListStyles?: StyleProp<TextStyle>;
+}
+
 export interface ProductsListProps {
-  productsData: ProductProps[];
+  productsData: ProductsCardListProps[];
+  productCardStyles?: ViewStyle;
   handleLikeProduct: (item: ProductProps) => void;
   handleNavigationProductDetailScreen: (id: string) => void;
   handleRefreshing?: () => void;
-}
-
-export interface ProductsCardListProps extends ProductProps {
-  brandCardListStyles?: StyleProp<TextStyle>;
 }
