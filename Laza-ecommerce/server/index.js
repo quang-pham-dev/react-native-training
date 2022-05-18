@@ -113,7 +113,7 @@ server.post('/auth/login', (req, res) => {
 });
 
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
-//   console.log('============headers', req.headers.authorization);
+  console.log('============headers', req.headers.authorization);
   return next();
 });
 
