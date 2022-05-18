@@ -8,6 +8,7 @@ const handlers = {
     return {
       ...state,
       isInitialized: true,
+      isFirstTime: false,
       currentUser: user,
       isAuthenticated: Boolean(user),
     };

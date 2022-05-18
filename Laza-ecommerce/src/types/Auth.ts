@@ -11,8 +11,3 @@ export interface AuthContextValue {
   isLoading: boolean;
   isAuthenticated: boolean;
 }
-
-export interface LoginBody {
-  username: string;
-  password: string;
-}

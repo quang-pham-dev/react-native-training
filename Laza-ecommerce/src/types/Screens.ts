@@ -1,4 +1,4 @@
-import { LoginBody } from 'types/Auth';
+import { UserSignIn } from 'types/User';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { AuthStackParams, HomeStackParams } from 'types/Navigation';
 import { ProductProps } from './Products';
@@ -11,7 +11,7 @@ export interface GetStartedScreenProps {
 
 export interface SignInScreenProps {
   navigation: AuthNavigationProp;
-  onSubmit?: (data: LoginBody) => void;
+  onSubmit?: (data: UserSignIn) => void;
 }
 
 export type AppNavigationProp = NativeStackNavigationProp<HomeStackParams>;
@@ -33,9 +33,18 @@ export interface ProductDetailProps {
     goBack: () => void;
   };
   route: {
-    params: {
-      id: string;
-    };
+    params: string;
+  };
+  productData: ProductProps;
+}
+
+export interface BrandDetailProps {
+  navigation: {
+    navigate: (value: string, params: string) => void;
+    goBack: () => void;
+  };
+  route: {
+    params: string;
   };
   productData: ProductProps;
 }

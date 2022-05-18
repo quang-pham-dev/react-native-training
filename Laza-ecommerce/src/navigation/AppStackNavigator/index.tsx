@@ -18,8 +18,8 @@ export default function AppStackNavigator() {
       }}
     >
       <AppStack.Screen name={Screens.Root.name} component={BottomTabNavigator} />
-      <AppStack.Screen name={Screens.ProductDetail.name} component={ProductDetail} />
       <AppStack.Screen name={Screens.BrandDetail.name} component={BrandDetailScreen} />
+      <AppStack.Screen name={Screens.ProductDetail.name} component={ProductDetail} />
     </AppStack.Navigator>
   );
 }

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Button, Text, View, StyleSheet, Alert } from 'react-native';
 import { authService } from 'api';
-import { AuthData } from 'constants/Common';
+import { AUTH_DATA } from 'constants/Common';
 import { SIGN_OUT } from 'types/Actions';
 import { AppContext } from 'context/AppContext';
 
@@ -12,7 +12,7 @@ const DraffScreen = () => {
   const handlePressSignOut = async () => {
     try {
       await authService.signOut();
-      await AsyncStorage.removeItem(AuthData);
+      await AsyncStorage.removeItem(AUTH_DATA);
       authDispatch({
         type: SIGN_OUT,
       });

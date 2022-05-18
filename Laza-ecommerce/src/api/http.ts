@@ -1,10 +1,9 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { AuthData } from 'constants/Common';
+import { APP_BASE_URL, AUTH_DATA } from 'constants/Common';
 
 const http = axios.create({
-  //Change to http://10.0.2.2 for android and http://localhost for iOS
-  baseURL: 'http://localhost:3000',
+  baseURL: APP_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -12,7 +11,7 @@ const http = axios.create({
 
 http.interceptors.request.use(
   async (config: AxiosRequestConfig) => {
-    const authData = await AsyncStorage.getItem(AuthData);
+    const authData = await AsyncStorage.getItem(AUTH_DATA);
     const access_token = authData ? JSON.parse(authData).access_token : null;
     if (access_token) {
       const masterHeaders = {

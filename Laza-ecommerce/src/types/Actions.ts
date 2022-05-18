@@ -33,4 +33,18 @@ export interface FetchProductsAction {
   payload?: any;
 }
 
-export type ProductsAction = FetchProductsAction;
+export const FETCH_PRODUCTS_BY_ID = 'FETCH_PRODUCTS_BY_ID';
+export interface FetchProductsByIdAction {
+  type: typeof FETCH_PRODUCTS_BY_ID;
+  payload?: any;
+}
+export const FETCH_PRODUCTS_BY_BRAND_ID = 'FETCH_PRODUCTS_BY_BRAND_ID';
+export interface FetchProductsByBrandIdAction {
+  type: typeof FETCH_PRODUCTS_BY_BRAND_ID;
+  payload?: any;
+}
+
+export type ProductsAction =
+  | FetchProductsAction
+  | FetchProductsByIdAction
+  | FetchProductsByBrandIdAction;

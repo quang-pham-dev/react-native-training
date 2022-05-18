@@ -1,9 +1,9 @@
 import { User } from 'types/User';
 
 export interface AuthState {
+  isFirstTime: boolean;
   isAuthenticated: boolean;
   currentUser: User | undefined;
-  isLoggedIn: boolean;
   isLoading: boolean;
   error: string | null;
   signIn(emailAddress: string, password: string): Promise<void>;
@@ -11,8 +11,8 @@ export interface AuthState {
 }
 
 export const InitialAuthState: AuthState = {
+  isFirstTime: false,
   isAuthenticated: false,
-  isLoggedIn: false,
   error: null,
   isLoading: false,
   currentUser: undefined,

@@ -4,14 +4,14 @@ export interface BrandsState {
   brands: BrandProps[];
   isLoading: boolean;
   error: string | null;
-  FetchAll(): Promise<void>;
-  FetchById(id: string): Promise<void>;
+  FetchAllBrands(): Promise<void>;
+  FetchBrandById(id: string): Promise<void>;
 }
 
 export const InitialBrandsState: BrandsState = {
-  error: null,
-  isLoading: false,
-  FetchAll: () => Promise.resolve(),
-  FetchById: () => Promise.resolve(),
   brands: [],
+  isLoading: false,
+  error: null,
+  FetchAllBrands: () => Promise.resolve(),
+  FetchBrandById: () => Promise.resolve(),
 };

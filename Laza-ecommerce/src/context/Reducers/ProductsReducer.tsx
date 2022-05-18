@@ -9,6 +9,18 @@ const handlers = {
       products: action.payload,
     };
   },
+  FETCH_PRODUCTS_BY_ID: (state: ProductsState, action: ProductsAction) => {
+    return {
+      ...state,
+      productsById: action.payload,
+    };
+  },
+  FETCH_PRODUCTS_BY_BRAND_ID: (state: ProductsState, action: ProductsAction) => {
+    return {
+      ...state,
+      productsByBrandId: action.payload,
+    };
+  },
 };
 export const productReducer = (state: ProductsState, action: ProductsAction) =>
   handlers[action.type] ? handlers[action.type](state, action) : state;

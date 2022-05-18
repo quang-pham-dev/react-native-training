@@ -4,14 +4,16 @@ export interface ProductsState {
   products: ProductProps[];
   isLoading: boolean;
   error: string | null;
-  FetchAll(): Promise<void>;
-  FetchById(id: string): Promise<void>;
+  FetchAllProducts(): Promise<void>;
+  FetchProductById(id: string): Promise<void>;
+  FetchProductByBrandId(id: string): Promise<void>;
 }
 
 export const InitialProductsState: ProductsState = {
-  error: null,
-  isLoading: false,
-  FetchAll: () => Promise.resolve(),
-  FetchById: () => Promise.resolve(),
   products: [],
+  isLoading: false,
+  error: null,
+  FetchAllProducts: () => Promise.resolve(),
+  FetchProductById: () => Promise.resolve(),
+  FetchProductByBrandId: () => Promise.resolve(),
 };
