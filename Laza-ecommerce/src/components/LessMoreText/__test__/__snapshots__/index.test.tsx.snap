@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Read more Component should render correctly 1`] = `
+<Text
+  onTextLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "fontFamily": "Inter_600SemiBold",
+        "fontSize": 15,
+        "lineHeight": 22,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
