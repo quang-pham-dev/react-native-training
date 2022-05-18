@@ -3,7 +3,7 @@ import { StyleProp, TextStyle } from 'react-native';
 export type BrandProps = {
   id: string;
   name: string;
-  logo_url: string;
+  logoUrl: string;
 };
 
 export type BrandCardProps = {
