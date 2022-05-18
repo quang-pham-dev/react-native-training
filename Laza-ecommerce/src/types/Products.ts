@@ -29,6 +29,7 @@ export type ProductProps = {
 };
 
 export interface ProductCardProps {
+  testID?: string;
   product: ProductsCardListProps;
   handleNavigationProductDetailScreen: (id: string) => void;
   handleLikeProduct: () => void;

@@ -18,6 +18,7 @@ const ProductsList = ({
   // handle render Card component
   const renderProductCard = ({ item }: { item: ProductsCardListProps }) => (
     <ProductCard
+      testID='productCardList'
       productCardStyles={styles.productCard}
       product={item}
       handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
@@ -29,7 +30,7 @@ const ProductsList = ({
   const renderEmptyList = () => (
     <Label
       labelName='No Products!'
-      fontSize={17}
+      fontSize={Fonts.size.default}
       fontFamily={Fonts.fontFamily.Inter_400Regular}
       color={Colors.textBlack}
     />
@@ -37,22 +38,6 @@ const ProductsList = ({
 
   return (
     <View style={styles.container}>
-      <View style={styles.productTitle}>
-        <Label
-          labelName='New Arraival'
-          fontSize={17}
-          lineHeight={18}
-          fontFamily={Fonts.fontFamily.Inter_500Medium}
-          color={Colors.textBlack}
-        />
-        <Label
-          labelName='View All'
-          fontSize={13}
-          lineHeight={14}
-          fontFamily={Fonts.fontFamily.Inter_400Regular}
-          color={Colors.textGray}
-        />
-      </View>
       <FlatList
         numColumns={2}
         columnWrapperStyle={styles.columnWrapper}

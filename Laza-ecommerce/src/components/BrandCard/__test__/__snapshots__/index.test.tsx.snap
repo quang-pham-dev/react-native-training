@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand Card Component Should render correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "justifyContent": "center",
+      "opacity": 1,
+    }
+  }
+  testID="brandCard"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F5F6FA",
+          "borderRadius": 10,
+          "flexDirection": "row",
+          "height": 50,
+          "marginRight": 10,
+          "paddingRight": 10,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 10,
+          "height": 40,
+          "marginLeft": 5,
+          "marginRight": 10,
+          "marginVertical": 5,
+          "padding": 8,
+          "width": 40,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://www.nike.com/a/content/dam/one_tap/one_tap_home/2019/07/nike-logo-white.png",
+          }
+        }
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1D1E20",
+              "fontSize": 17,
+            },
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 15,
+              "lineHeight": 16.5,
+            },
+          ]
+        }
+      >
+        Nike
+      </Text>
+    </View>
+  </View>
+</View>
+`;

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
+import React, { memo } from 'react';
+import { TouchableOpacity, View } from 'react-native';
 // Components
 import Button from 'components/Button';
 import Title from 'components/Title';
@@ -8,7 +8,7 @@ import { IMAGES } from 'styles/themes';
 // Styles
 import styles from './styles';
 // Types
-import { GetStartedScreenProps } from 'types/screens/GetStarted';
+import { GetStartedScreenProps } from 'types/Screens';
 
 function GetStartedScreen({ navigation }: GetStartedScreenProps) {
   // handle navigate to SignIn screen
@@ -53,9 +53,9 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
       {/* end main */}
       <View style={styles.footer}>
         <View style={styles.footerTextWrapper}>
-          <Text style={styles.AlreadyText}>Already have an account? </Text>
+          <Title titleStyles={styles.alreadyText} titleName='Already have an account? ' />
           <TouchableOpacity onPress={handlePressNavigateToSignIn}>
-            <Text style={styles.SignIn}>Signin</Text>
+            <Title titleStyles={styles.signIn} titleName='Signin' />
           </TouchableOpacity>
         </View>
         <Button
@@ -70,4 +70,4 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
   );
 }
 
-export default GetStartedScreen;
+export default memo(GetStartedScreen);

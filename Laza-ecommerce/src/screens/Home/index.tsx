@@ -20,6 +20,8 @@ import { AppContext } from 'context/AppContext';
 // Api
 import { productsService } from 'api/products.api';
 import { brandsService } from 'api/brands.api';
+import Label from 'components/Label';
+import { Colors, Fonts } from 'styles/themes';
 
 const HomeScreen = ({ navigation }: HomeScreenProps) => {
   // Get Current User
@@ -27,14 +29,17 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
     useContext(AppContext);
   const { currentUser } = authState;
   const { brands: brandsData } = brandState;
+  const { products } = productState;
+
   // State for search bar
   const [searchValue, setSearchValue] = useState('');
 
   useEffect(() => {
     fetchBrands();
     fetchProducts();
-  }, []);
+  }, [productDispatch, brandDispatch]);
 
+  // Fetch Products from API
   const fetchProducts = async () => {
     try {
       const { data } = await productsService.fetchProducts();
@@ -47,6 +52,7 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
     }
   };
 
+  // Fetch Brands from API
   const fetchBrands = async () => {
     try {
       const { data } = await brandsService.fetchBrands();
@@ -59,11 +65,12 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
     }
   };
 
+  // master Data
   const masterData = searchValue
-    ? productState.products.filter((product: ProductProps) =>
+    ? products.filter((product: ProductProps) =>
         product.name.toLowerCase().includes(searchValue.toLowerCase()),
       )
-    : productState.products;
+    : products;
 
   // handle action navigate to Brand Detail Screen
   const handleNavigationBrandDetailScreen = (id: string) => {
@@ -75,6 +82,7 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
     navigation.navigate(Screens.ProductDetail.name, id);
   };
 
+  // handle action Like Product
   const handleLikeProduct = () => {};
 
   // handle action search
@@ -104,12 +112,29 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
             brandsData={brandsData}
             handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen}
           />
-
-          <ProductsList
-            productsData={masterData}
-            handleLikeProduct={handleLikeProduct}
-            handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
-          />
+          <View>
+            <View style={styles.productTitle}>
+              <Label
+                labelName='New Arraival'
+                fontSize={Fonts.size.default}
+                lineHeight={Fonts.lineHeight.sm}
+                fontFamily={Fonts.fontFamily.Inter_500Medium}
+                color={Colors.textBlack}
+              />
+              <Label
+                labelName='View All'
+                fontSize={Fonts.size.small}
+                lineHeight={Fonts.lineHeight.xs}
+                fontFamily={Fonts.fontFamily.Inter_400Regular}
+                color={Colors.textGray}
+              />
+            </View>
+            <ProductsList
+              productsData={masterData}
+              handleLikeProduct={handleLikeProduct}
+              handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
+            />
+          </View>
         </View>
       </KeyboardAvoidingView>
     </SafeAreaView>

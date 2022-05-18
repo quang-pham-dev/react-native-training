@@ -17,7 +17,7 @@ import { authService } from 'api';
 // Context
 import { AppContext } from 'context/AppContext';
 // Constants
-import { AuthData } from 'constants/Common';
+import { AUTH_DATA } from 'constants/Common';
 
 const SideMenu = ({ navigation }: SideMenuPros) => {
   const [isEnabled, setIsEnabled] = useState(false);
@@ -39,7 +39,7 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
           navigation.toggleDrawer();
           try {
             await authService.signOut();
-            await AsyncStorage.removeItem(AuthData);
+            await AsyncStorage.removeItem(AUTH_DATA);
             authDispatch({
               type: SIGN_OUT,
             });

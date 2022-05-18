@@ -276,11 +276,17 @@ exports[`GetStarted Screen should render correctly 1`] = `
     >
       <Text
         style={
-          Object {
-            "alignSelf": "center",
-            "color": "#8F959E",
-            "fontFamily": "Inter_400Regular",
-          }
+          Array [
+            Object {
+              "color": "#000",
+              "textTransform": "none",
+            },
+            Object {
+              "alignSelf": "center",
+              "color": "#8F959E",
+              "fontFamily": "Inter_400Regular",
+            },
+          ]
         }
       >
         Already have an account? 
@@ -303,10 +309,16 @@ exports[`GetStarted Screen should render correctly 1`] = `
       >
         <Text
           style={
-            Object {
-              "color": "#1D1E20",
-              "fontFamily": "Inter_500Medium",
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "textTransform": "none",
+              },
+              Object {
+                "color": "#1D1E20",
+                "fontFamily": "Inter_500Medium",
+              },
+            ]
           }
         >
           Signin

@@ -1,0 +1,465 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Card List Component Should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginBottom": 70,
+      "marginTop": 15,
+    }
+  }
+>
+  <RCTScrollView
+    ListEmptyComponent={[Function]}
+    data={
+      Array [
+        Object {
+          "brandId": "1",
+          "comment": "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,adipisicing elit. Quisquam, quia.",
+          "description": "Nike is a multinaelichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "0",
+          "imageReview": Array [
+            Object {
+              "id": "0",
+              "image": "https://images.unsplash.com/photo-1499852848443-3004d6dc4cfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+            },
+            Object {
+              "id": "1",
+              "image": "https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            },
+            Object {
+              "id": "2",
+              "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+            },
+            Object {
+              "id": "3",
+              "image": "https://images.unsplash.com/photo-1518656306295-aa28b28b2504?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+            },
+            Object {
+              "id": "4",
+              "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            },
+            Object {
+              "id": "5",
+              "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+            },
+          ],
+          "like": true,
+          "name": "Nike",
+          "price": 100,
+          "rating": "4.5",
+          "reviewer": Object {
+            "date": "13, Sep, 2020",
+            "id": "2",
+            "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            "name": "John Doe",
+          },
+          "source": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+          "title": "Nike Sportswear Club Fleece",
+          "type": "shoes",
+        },
+        Object {
+          "brandId": "1",
+          "comment": "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,adipisicing elit. Quisquam, quia.",
+          "description": "Nike is a multinaelichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "0",
+          "imageReview": Array [
+            Object {
+              "id": "0",
+              "image": "https://images.unsplash.com/photo-1499852848443-3004d6dc4cfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+            },
+            Object {
+              "id": "1",
+              "image": "https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+            },
+            Object {
+              "id": "2",
+              "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+            },
+            Object {
+              "id": "3",
+              "image": "https://images.unsplash.com/photo-1518656306295-aa28b28b2504?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+            },
+            Object {
+              "id": "4",
+              "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            },
+            Object {
+              "id": "5",
+              "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+            },
+          ],
+          "like": true,
+          "name": "Nike",
+          "price": 100,
+          "rating": "4.5",
+          "reviewer": Object {
+            "date": "13, Sep, 2020",
+            "id": "2",
+            "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            "name": "John Doe",
+          },
+          "source": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+          "title": "Nike Sportswear Club Fleece",
+          "type": "shoes",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "width": 160,
+                },
+                Object {
+                  "marginBottom": 15,
+                },
+              ]
+            }
+            testID="productCard"
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F5F6FA",
+                  "borderRadius": 15,
+                  "overflow": "hidden",
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "height": 203,
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 203,
+                        "width": "100%",
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 15,
+                      "marginRight": 14,
+                      "marginTop": 17,
+                      "resizeMode": "contain",
+                      "width": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "textTransform": "none",
+                  },
+                  Object {
+                    "color": "#1D1E20",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 11,
+                    "marginTop": 5,
+                  },
+                ]
+              }
+            >
+              Nike Sportswear Club Fleece
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "textTransform": "none",
+                  },
+                  Object {
+                    "color": "#1D1E20",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 11,
+                    "marginBottom": 5,
+                  },
+                ]
+              }
+            >
+              shoes
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_600SemiBold",
+                  "fontSize": 13,
+                  "marginTop": 5,
+                }
+              }
+            >
+              $ 100
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "width": 160,
+                },
+                Object {
+                  "marginBottom": 15,
+                },
+              ]
+            }
+            testID="productCard"
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#F5F6FA",
+                  "borderRadius": 15,
+                  "overflow": "hidden",
+                  "width": "100%",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "height": 203,
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 203,
+                        "width": "100%",
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 15,
+                      "marginRight": 14,
+                      "marginTop": 17,
+                      "resizeMode": "contain",
+                      "width": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "textTransform": "none",
+                  },
+                  Object {
+                    "color": "#1D1E20",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 11,
+                    "marginTop": 5,
+                  },
+                ]
+              }
+            >
+              Nike Sportswear Club Fleece
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "textTransform": "none",
+                  },
+                  Object {
+                    "color": "#1D1E20",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 11,
+                    "marginBottom": 5,
+                  },
+                ]
+              }
+            >
+              shoes
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_600SemiBold",
+                  "fontSize": 13,
+                  "marginTop": 5,
+                }
+              }
+            >
+              $ 100
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

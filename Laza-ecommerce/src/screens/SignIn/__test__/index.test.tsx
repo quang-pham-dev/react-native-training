@@ -1,9 +1,9 @@
 import React from 'react';
 import { act, fireEvent, render, waitFor } from '@testing-library/react-native';
 import SignInScreen from 'screens/SignIn';
-import { LoginBody } from 'types/Auth';
+import { UserSignIn } from 'types/User';
 
-const mockLogin = jest.fn((data: LoginBody) => {
+const mockLogin = jest.fn((data: UserSignIn) => {
   return Promise.resolve({ data });
 });
 

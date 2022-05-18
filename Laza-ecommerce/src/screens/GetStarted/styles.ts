@@ -88,13 +88,13 @@ const styles = StyleSheet.create({
     marginBottom: Metrics.margin.xl,
   },
 
-  AlreadyText: {
+  alreadyText: {
     alignSelf: 'center',
     color: Colors.textGray,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
   },
 
-  SignIn: {
+  signIn: {
     color: Colors.textBlack,
     fontFamily: Fonts.fontFamily.Inter_500Medium,
   },

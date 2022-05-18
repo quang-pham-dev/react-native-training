@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Card Component Should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "width": 160,
+      },
+      undefined,
+    ]
+  }
+  testID="productCard"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F5F6FA",
+        "borderRadius": 15,
+        "overflow": "hidden",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessibilityIgnoresInvertColors={true}
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "height": 203,
+          "resizeMode": "contain",
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            Object {
+              "height": 203,
+              "width": "100%",
+            },
+            undefined,
+          ]
+        }
+      />
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "zIndex": 1,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "height": 15,
+            "marginRight": 14,
+            "marginTop": 17,
+            "resizeMode": "contain",
+            "width": 16,
+          }
+        }
+      />
+    </View>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "textTransform": "none",
+        },
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter_500Medium",
+          "fontSize": 11,
+          "marginTop": 5,
+        },
+      ]
+    }
+  >
+    Nike Sportswear Club Fleece
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "textTransform": "none",
+        },
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter_500Medium",
+          "fontSize": 11,
+          "marginBottom": 5,
+        },
+      ]
+    }
+  >
+    shoes
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter_600SemiBold",
+        "fontSize": 13,
+        "marginTop": 5,
+      }
+    }
+  >
+    $ 100
+  </Text>
+</View>
+`;

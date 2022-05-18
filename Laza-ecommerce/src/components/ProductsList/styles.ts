@@ -5,12 +5,7 @@ const styles = StyleSheet.create({
     marginTop: Metrics.margin.xm,
     marginBottom: Platform.OS === 'android' ? 100 : 70,
   },
-  productTitle: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: Metrics.margin.xm,
-  },
+
   productCard: {
     marginBottom: Metrics.margin.xm,
   },

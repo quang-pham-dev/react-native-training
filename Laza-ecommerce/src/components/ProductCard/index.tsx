@@ -9,7 +9,7 @@ import { ProductCardProps } from 'types/Products';
 // Styles
 import styles from './styles';
 
-const ProductCard = ({
+const ProductCardList = ({
   product,
   handleNavigationProductDetailScreen,
   handleLikeProduct,
@@ -17,6 +17,7 @@ const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <Pressable
+      testID='productCard'
       onPress={() => handleNavigationProductDetailScreen(product.id)}
       style={[styles.productCardContainer, productCardStyles]}
     >
@@ -25,7 +26,7 @@ const ProductCard = ({
         <Pressable onPress={handleLikeProduct} style={styles.iconHeartWrapper}>
           <Image
             style={styles.iconHeart}
-            source={product.like ? IMAGES.iconHeart : IMAGES.iconHeart}
+            source={product.like ? IMAGES.iconHeartLiked : IMAGES.iconHeart}
           />
         </Pressable>
       </View>
@@ -36,4 +37,4 @@ const ProductCard = ({
   );
 };
 
-export default memo(ProductCard);
+export default memo(ProductCardList);

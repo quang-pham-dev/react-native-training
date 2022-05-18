@@ -42,6 +42,12 @@ const styles = StyleSheet.create({
     color: Colors.textGray,
     marginTop: Metrics.margin.xsm,
   },
+  productTitle: {
+    marginTop: Metrics.margin.xm,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
 });
 
 export default styles;

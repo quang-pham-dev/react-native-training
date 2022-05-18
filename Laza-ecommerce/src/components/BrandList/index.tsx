@@ -23,15 +23,15 @@ const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: Brand
       <View style={styles.brandTitle}>
         <Label
           labelName='Choose Brand'
-          fontSize={17}
-          lineHeight={18}
+          fontSize={Fonts.size.default}
+          lineHeight={Fonts.lineHeight.sm}
           fontFamily={Fonts.fontFamily.Inter_500Medium}
           color={Colors.textBlack}
         />
         <Label
           labelName='View All'
-          fontSize={13}
-          lineHeight={14}
+          fontSize={Fonts.size.small}
+          lineHeight={Fonts.lineHeight.xs}
           fontFamily={Fonts.fontFamily.Inter_400Regular}
           color={Colors.textGray}
         />

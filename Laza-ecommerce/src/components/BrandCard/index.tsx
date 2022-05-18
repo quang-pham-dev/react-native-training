@@ -16,12 +16,13 @@ const BrandCard = ({
 }: BrandCardProps) => {
   return (
     <TouchableOpacity
+      testID='brandCard'
       onPress={() => handleNavigationBrandDetailScreen(brand.id)}
       style={[styles.brandCardContainer, brandCardStyles]}
     >
       <View style={[styles.brandCardWrapper]}>
         <View style={styles.brandLogoWrapper}>
-          <Image style={styles.brandLogo} source={{ uri: brand.logo_url }} />
+          <Image style={styles.brandLogo} source={{ uri: brand.logoUrl }} />
         </View>
         <Label
           lineHeight={16.5}

@@ -1,5 +1,5 @@
 import React, { memo, useContext, useState } from 'react';
-import { Alert, KeyboardAvoidingView, ScrollView, Switch, Text, View } from 'react-native';
+import { KeyboardAvoidingView, ScrollView, Switch, Text, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // Lib
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
@@ -14,7 +14,7 @@ import { IMAGES } from 'styles/themes';
 // Styles
 import { styles } from './styles';
 // Types
-import { LoginBody } from 'types/Auth';
+import { UserSignIn } from 'types/User';
 import { SIGN_IN } from 'types/Actions';
 import { SignInScreenProps } from 'types/Screens';
 // Context
@@ -22,10 +22,10 @@ import { AppContext } from 'context/AppContext';
 // Api
 import { authService } from 'api';
 // Constants
-import { AuthData } from 'constants/Common';
+import { AUTH_DATA } from 'constants/Common';
 
 // initial values
-const loginFormInit: LoginBody = {
+const loginFormInit: UserSignIn = {
   username: '',
   password: '',
 };
@@ -48,31 +48,33 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
     reset,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginBody>({
+  } = useForm<UserSignIn>({
     mode: 'onChange',
     defaultValues: loginFormInit,
     resolver: yupResolver(loginSchema),
   });
 
   // handle action call api SignIn when user press Login button
-  const handOnSubmit: SubmitHandler<LoginBody> = async (loginInfo: LoginBody) => {
+  const handOnSubmit: SubmitHandler<UserSignIn> = async (loginInfo: UserSignIn) => {
     const { username, password } = loginInfo;
     try {
       const response = await authService.signIn(username, password);
       const data = JSON.stringify(response.data);
-      await AsyncStorage.setItem(AuthData, data);
+      await AsyncStorage.setItem(AUTH_DATA, data);
       const { user } = response.data;
       const { access_token } = response.data;
       if (user && access_token) {
         authDispatch({
           type: SIGN_IN,
-          payload: { user, access_token },
+          payload: {
+            user,
+            access_token,
+          },
         });
       }
     } catch (error) {
       // reset form
       reset(loginFormInit);
-      Alert.alert('Error', error.message);
     }
   };
 

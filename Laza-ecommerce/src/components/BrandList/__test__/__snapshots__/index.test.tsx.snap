@@ -1,0 +1,602 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand Card List Component Should render correctly 1`] = `
+<View
+  style={Object {}}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "paddingBottom": 15,
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1D1E20",
+              "fontSize": 17,
+            },
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 18,
+            },
+          ]
+        }
+      >
+        Choose Brand
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#1D1E20",
+              "fontSize": 17,
+            },
+            Object {
+              "color": "#8F959E",
+              "fontFamily": "Inter_400Regular",
+              "fontSize": 13,
+              "lineHeight": 14,
+            },
+          ]
+        }
+      >
+        View All
+      </Text>
+    </View>
+  </View>
+  <RCTScrollView
+    ListEmptyComponent={[Function]}
+    data={
+      Array [
+        Object {
+          "id": "0",
+          "logoUrl": "https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png",
+          "name": "Adidas",
+        },
+        Object {
+          "id": "1",
+          "logoUrl": "https://www.nike.com/images/t_PDP_1280_v1/b_white/f_auto/j_pdp_white/k_P/w_80/0f0f0f/0f0f0f_nike_logo_white.png",
+          "name": "Nike",
+        },
+        Object {
+          "id": "2",
+          "logoUrl": "https://www.fila.com/on/demandware.static/-/Sites-fila-US-Library/default/dwf9f9f9f/images/logo.png",
+          "name": "Fila",
+        },
+        Object {
+          "id": "3",
+          "logoUrl": "https://www.puma.com/on/demandware.static/-/Sites-puma-US-Library/default/dwf9f9f9f/images/logo.png",
+          "name": "Puma",
+        },
+        Object {
+          "id": "4",
+          "logoUrl": "https://www.gucci.com/on/demandware.static/-/Sites-gucci-US-Library/default/dwf9f9f9f/images/logo.png",
+          "name": "Guci",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    nestedScrollEnabled={true}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID="brandCard"
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#F5F6FA",
+                  "borderRadius": 10,
+                  "flexDirection": "row",
+                  "height": 50,
+                  "marginRight": 10,
+                  "paddingRight": 10,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "padding": 8,
+                  "width": 40,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png",
+                  }
+                }
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <View>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1D1E20",
+                      "fontSize": 17,
+                    },
+                    Object {
+                      "color": "#1D1E20",
+                      "fontFamily": "Inter_500Medium",
+                      "fontSize": 15,
+                      "lineHeight": 16.5,
+                    },
+                  ]
+                }
+              >
+                Adidas
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID="brandCard"
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#F5F6FA",
+                  "borderRadius": 10,
+                  "flexDirection": "row",
+                  "height": 50,
+                  "marginRight": 10,
+                  "paddingRight": 10,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "padding": 8,
+                  "width": 40,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://www.nike.com/images/t_PDP_1280_v1/b_white/f_auto/j_pdp_white/k_P/w_80/0f0f0f/0f0f0f_nike_logo_white.png",
+                  }
+                }
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <View>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1D1E20",
+                      "fontSize": 17,
+                    },
+                    Object {
+                      "color": "#1D1E20",
+                      "fontFamily": "Inter_500Medium",
+                      "fontSize": 15,
+                      "lineHeight": 16.5,
+                    },
+                  ]
+                }
+              >
+                Nike
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID="brandCard"
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#F5F6FA",
+                  "borderRadius": 10,
+                  "flexDirection": "row",
+                  "height": 50,
+                  "marginRight": 10,
+                  "paddingRight": 10,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "padding": 8,
+                  "width": 40,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://www.fila.com/on/demandware.static/-/Sites-fila-US-Library/default/dwf9f9f9f/images/logo.png",
+                  }
+                }
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <View>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1D1E20",
+                      "fontSize": 17,
+                    },
+                    Object {
+                      "color": "#1D1E20",
+                      "fontFamily": "Inter_500Medium",
+                      "fontSize": 15,
+                      "lineHeight": 16.5,
+                    },
+                  ]
+                }
+              >
+                Fila
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID="brandCard"
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#F5F6FA",
+                  "borderRadius": 10,
+                  "flexDirection": "row",
+                  "height": 50,
+                  "marginRight": 10,
+                  "paddingRight": 10,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "padding": 8,
+                  "width": 40,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://www.puma.com/on/demandware.static/-/Sites-puma-US-Library/default/dwf9f9f9f/images/logo.png",
+                  }
+                }
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <View>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1D1E20",
+                      "fontSize": 17,
+                    },
+                    Object {
+                      "color": "#1D1E20",
+                      "fontFamily": "Inter_500Medium",
+                      "fontSize": 15,
+                      "lineHeight": 16.5,
+                    },
+                  ]
+                }
+              >
+                Puma
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID="brandCard"
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#F5F6FA",
+                  "borderRadius": 10,
+                  "flexDirection": "row",
+                  "height": 50,
+                  "marginRight": 10,
+                  "paddingRight": 10,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "padding": 8,
+                  "width": 40,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://www.gucci.com/on/demandware.static/-/Sites-gucci-US-Library/default/dwf9f9f9f/images/logo.png",
+                  }
+                }
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <View>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#1D1E20",
+                      "fontSize": 17,
+                    },
+                    Object {
+                      "color": "#1D1E20",
+                      "fontFamily": "Inter_500Medium",
+                      "fontSize": 15,
+                      "lineHeight": 16.5,
+                    },
+                  ]
+                }
+              >
+                Guci
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
