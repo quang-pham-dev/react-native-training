@@ -1,4 +1,4 @@
 import { brandsData } from './brands';
-import { productsData } from './products';
+import { product, products } from './products';
 
-export { brandsData, productsData };
+export { brandsData, product, products };
