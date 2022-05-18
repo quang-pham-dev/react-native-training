@@ -12,6 +12,7 @@ const IMAGES = {
   iconVoice: require('@assets/images/icons/voice.png'),
   iconHome: require('@assets/images/icons/home.png'),
   iconHeart: require('@assets/images/icons/heart.png'),
+  iconHeartLiked: require('@assets/images/icons/heartLiked.png'),
   iconBag: require('@assets/images/icons/bag.png'),
   iconWallet: require('@assets/images/icons/wallet.png'),
   iconSun: require('@assets/images/icons/sun.png'),
