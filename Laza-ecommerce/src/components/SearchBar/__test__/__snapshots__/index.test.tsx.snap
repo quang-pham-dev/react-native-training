@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Bar Component Should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "marginVertical": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#F5F6FA",
+          "borderRadius": 10,
+          "flex": 1,
+          "flexDirection": "row",
+          "height": 50,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignSelf": "center",
+            "height": 20,
+            "justifyContent": "center",
+            "marginLeft": 15,
+            "opacity": 1,
+            "width": 20,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCorrect={false}
+        onChangeText={[MockFunction]}
+        placeholder="Search.."
+        rejectResponderTermination={true}
+        style={
+          Array [
+            Object {
+              "alignItems": "flex-start",
+              "paddingLeft": 12,
+              "paddingRight": 50,
+            },
+            Object {},
+          ]
+        }
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "marginLeft": 10,
+          "opacity": 1,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Object {
+            "alignSelf": "center",
+            "height": 50,
+            "width": 50,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
