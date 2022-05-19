@@ -96,22 +96,12 @@ describe('SignIn Screen', () => {
     expect(button).toBeTruthy();
   });
 
-  test('on submit login successfully', async () => {
-    const { getByTestId } = tree;
-    const username = getByTestId('usernameInput');
-    fireEvent.changeText(username, 'Quangpham');
-    const password = getByTestId('passwordInput');
-    fireEvent.changeText(password, '123456');
-    const button = getByTestId('loginButton');
-
-    expect(username.props.value).toEqual('Quangpham');
-    expect(password.props.value).toEqual('123456');
-
-    // use fireEvent.press call Button submit
+  test('should go to Home Screen when press loginButton', async () => {
+    const { getByTestId, getByText } = tree;
+    const loginButton = getByTestId('loginButton');
     await waitFor(async () => {
-      fireEvent.press(button);
+      fireEvent.press(loginButton);
     });
-
-    expect(mockLogin).toBeTruthy();
+    waitFor(() => expect(getByText('Hello')));
   });
 });
