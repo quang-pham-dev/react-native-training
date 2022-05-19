@@ -2,6 +2,8 @@ import React from 'react';
 import { act, fireEvent, render, waitFor } from '@testing-library/react-native';
 import SignInScreen from 'screens/SignIn';
 import { UserSignIn } from 'types/User';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { AUTH_DATA } from 'constants/Common';
 
 const mockLogin = jest.fn((data: UserSignIn) => {
   return Promise.resolve({ data });
@@ -87,6 +89,13 @@ describe('SignIn Screen', () => {
     // use toEqual check value TextInput
     expect(getByTestId('usernameInput').props.value).toEqual('Quangpham');
     expect(getByTestId('passwordInput').props.value).toEqual('123456');
+  });
+
+  //check with mock async storage value
+  test('checks if Async Storage is used', async () => {
+    await AsyncStorage.getItem(AUTH_DATA);
+
+    expect(AsyncStorage.getItem).toBeCalledWith(AUTH_DATA);
   });
 
   test('should have a login button', async () => {
