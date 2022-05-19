@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 
   actionsWrapper: {
     position: 'absolute',
-    marginTop: Platform.OS === 'android' ? Metrics.margin.lg : 45,
+    marginTop: Platform.OS === 'android' ? 40 : 45,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

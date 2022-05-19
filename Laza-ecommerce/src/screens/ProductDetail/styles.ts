@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   actionsWrapper: {
     position: 'absolute',
     width: '100%',
-    marginTop: Platform.OS === 'android' ? Metrics.margin.lg : 45,
+    marginTop: Platform.OS === 'android' ? 40 : 45,
     zIndex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',

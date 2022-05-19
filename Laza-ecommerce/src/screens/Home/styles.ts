@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
 
   homeMain: {
     flex: 1,
-    paddingHorizontal: Metrics.margin.lg,
+    paddingHorizontal: Metrics.padding.lg,
   },
   header: {
     marginTop: Platform.OS === 'android' ? Metrics.margin.lg : 0,
