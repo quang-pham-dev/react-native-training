@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // Components
-import DraffScreen from 'screens/Draff';
+import DummyScreen from 'screens/Dummy';
 import HomeScreen from 'screens/Home';
 // constants
 import Screens from 'constants/Screens';
@@ -15,7 +15,6 @@ import { Colors, IMAGES } from 'styles/themes';
 const BottomTab = createBottomTabNavigator();
 
 function BottomTabNavigator() {
-
   return (
     <BottomTab.Navigator
       initialRouteName='Home' // The initial route to display. If not initialRouteName, the first screen will be the root screen.
@@ -51,7 +50,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name={Screens.WishList.name}
-        component={DraffScreen}
+        component={DummyScreen}
         options={{
           tabBarLabel: Screens.WishList.label,
           tabBarIcon: ({ size, color }) => {
@@ -67,7 +66,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name={Screens.Bag.name}
-        component={DraffScreen}
+        component={DummyScreen}
         options={{
           tabBarLabel: Screens.Bag.label,
           tabBarIcon: ({ size, color }) => {
@@ -83,7 +82,7 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name={Screens.Wallet.name}
-        component={DraffScreen}
+        component={DummyScreen}
         options={{
           tabBarLabel: Screens.Wallet.label,
           tabBarIcon: ({ size, color }) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Constants
 import Screens from 'constants/Screens';
 // Navigator
@@ -7,7 +7,7 @@ import BottomTabNavigator from 'navigation/AppStackNavigator/BottomTabNavigator'
 import ProductDetail from 'screens/ProductDetail';
 import BrandDetailScreen from 'screens/BrandDetail';
 
-const AppStack = createStackNavigator();
+const AppStack = createNativeStackNavigator();
 
 export default function AppStackNavigator() {
   return (
