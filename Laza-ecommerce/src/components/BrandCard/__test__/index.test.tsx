@@ -1,6 +1,7 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
 import BrandCard from 'components/BrandCard';
+import renderer from 'react-test-renderer';
+import { TouchableOpacity } from 'react-native';
 
 const brandData = {
   id: '1',
@@ -11,11 +12,17 @@ const brandData = {
 describe('Brand Card Component', () => {
   const navigate = jest.fn();
 
-  const component = render(
+  const component = renderer.create(
     <BrandCard brand={brandData} handleNavigationBrandDetailScreen={navigate} />,
   );
   test('Should render correctly', () => {
     const result = component.toJSON();
     expect(result).toMatchSnapshot();
+  });
+
+  test('should call function handleNavigationBrandDetailScreen', () => {
+    const press = component.root.findAllByType(TouchableOpacity)[0];
+    press.props.onPress();
+    expect(navigate).toHaveBeenCalled();
   });
 });

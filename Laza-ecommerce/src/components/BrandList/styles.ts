@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { Metrics } from 'styles/themes';
 const styles = StyleSheet.create({
-  container: {
-  },
+  container: {},
   brandTitle: {
     flexDirection: 'row',
     justifyContent: 'space-between',

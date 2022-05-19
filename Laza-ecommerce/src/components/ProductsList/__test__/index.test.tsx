@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, waitFor } from '@testing-library/react-native';
+import { render } from '@testing-library/react-native';
 import ProductsList from 'components/ProductsList';
 import { products } from '__mocks__/dataMock/products';
 
@@ -29,14 +29,5 @@ describe('Product Card List Component', () => {
     const { getByText } = component;
     const label = getByText('No Products!');
     expect(label).toBeTruthy();
-  });
-
-  test('Should navigate is called', async () => {
-    const { getByTestId } = component;
-    const button = getByTestId('productCardList');
-    await waitFor(async () => {
-      fireEvent.press(button);
-    });
-    expect(navigate).toBeCalledWith(products[0].id);
   });
 });
