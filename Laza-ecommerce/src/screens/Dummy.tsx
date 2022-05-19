@@ -6,7 +6,7 @@ import { AUTH_DATA } from 'constants/Common';
 import { SIGN_OUT } from 'types/Actions';
 import { AppContext } from 'context/AppContext';
 
-const DraffScreen = () => {
+const DummyScreen = () => {
   const { authDispatch } = useContext(AppContext);
 
   const handlePressSignOut = async () => {
@@ -23,13 +23,13 @@ const DraffScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text>DraffScreen</Text>
+      <Text>Dummy Screen</Text>
       <Button title='LogOut' onPress={handlePressSignOut} />
     </View>
   );
 };
 
-export default DraffScreen;
+export default DummyScreen;
 
 const styles = StyleSheet.create({
   container: {
