@@ -8,7 +8,7 @@ import { InitialAuthState } from './State/AuthState';
 import { InitialBrandsState } from './State/BrandsState';
 import { InitialProductsState } from './State/ProductsState';
 
-export const AppContext = createContext<any>({});
+export const AppContext = createContext<any>([{}, () => {}]);
 
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [authState, authDispatch] = useReducer(authReducer, InitialAuthState);
