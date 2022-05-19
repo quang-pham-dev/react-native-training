@@ -6,6 +6,8 @@ import AppDrawerNavigator from './AppDrawerNavigator';
 import AuthNavigator from './AuthStackNavigator';
 // Context
 import { AppContext } from 'context/AppContext';
+// Components
+import LoadingIndicator from 'components/Indicator';
 // Types
 import { INITIALIZE } from 'types/Actions';
 // Constants
@@ -33,12 +35,12 @@ const RootNavigator: React.FC = () => {
   return (
     <>
       {authState?.isAuthenticated && (
-        <NavigationContainer>
+        <NavigationContainer fallback={<LoadingIndicator loadingSize={'large'} />}>
           <AppDrawerNavigator />
         </NavigationContainer>
       )}
       {!authState.isAuthenticated && (
-        <NavigationContainer>
+        <NavigationContainer fallback={<LoadingIndicator loadingSize={'large'} />}>
           <AuthNavigator />
         </NavigationContainer>
       )}
