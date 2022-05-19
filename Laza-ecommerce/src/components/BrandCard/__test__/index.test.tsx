@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react-native';
+import { render } from '@testing-library/react-native';
 import BrandCard from 'components/BrandCard';
 
 const brandData = {
@@ -17,13 +17,5 @@ describe('Brand Card Component', () => {
   test('Should render correctly', () => {
     const result = component.toJSON();
     expect(result).toMatchSnapshot();
-  });
-
-  test('Should navigate is called', () => {
-    const { getByTestId } = component;
-
-    const button = getByTestId('brandCard');
-    fireEvent.press(button);
-    expect(navigate).toHaveBeenCalledTimes(1);
   });
 });
