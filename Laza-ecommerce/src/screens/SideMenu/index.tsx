@@ -1,8 +1,9 @@
 import React, { memo, useContext, useState } from 'react';
-import { Alert, Image, Switch, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Image, Switch, TouchableOpacity, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 // Components
 import Button from 'components/Button';
+import Title from 'components/Title';
 // Screens
 import Screens from 'constants/Screens';
 // Theme
@@ -24,7 +25,7 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   const { authState, authDispatch } = useContext(AppContext);
   // TODO get Order from API Because feature is not developed yet
-  const orderCount = 3;
+  const orderCount = 3 | 0;
 
   // handel action sign out
   const handlePressLogout = () => {
@@ -83,20 +84,27 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
         </View>
         <View style={[styles.infoWrapper]}>
           <View style={styles.profile}>
-            <Image style={styles.avatar} source={IMAGES.iconAvatar} />
+            {authState?.currentUser?.avatar ? (
+              <Image style={styles.avatar} source={{ uri: authState?.currentUser?.avatar }} />
+            ) : (
+              <Image style={styles.avatar} source={IMAGES.iconAvatar} />
+            )}
             <View style={styles.profileInfoWrapper}>
               {authState?.currentUser?.username ? (
-                <Text style={styles.accountName}>{authState?.currentUser?.username}</Text>
+                <Title
+                  titleStyles={styles.accountName}
+                  titleName={authState?.currentUser?.username}
+                />
               ) : null}
               <View style={styles.verifiedWrapper}>
-                <Text style={styles.verifiedText}>Verified Profile</Text>
+                <Title titleName='Verified Profile' titleStyles={styles.verifiedText} />
                 <Image style={styles.iconBadge} source={IMAGES.iconBadge} />
               </View>
             </View>
           </View>
           <View style={styles.orderInfo}>
             {/* // TODO : get order info from store or current state */}
-            <Text style={styles.textOrder}>{orderCount} Orders</Text>
+            <Title titleName={`${orderCount} Orders`} titleStyles={styles.textOrder} />
           </View>
         </View>
       </View>
@@ -104,7 +112,7 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
         <View style={[styles.darkModeWrapper]}>
           <View style={[styles.darkMode]}>
             <Image style={styles.icons} source={IMAGES.iconSun} />
-            <Text style={styles.text}>Dark Mode</Text>
+            <Title titleName='Dark Mode' titleStyles={styles.text} />
           </View>
           <View style={styles.switchWrapper}>
             <Switch
@@ -117,27 +125,47 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
             />
           </View>
         </View>
-        <TouchableOpacity style={[styles.boxWrapper]} onPress={() => {}}>
+        <TouchableOpacity
+          style={[styles.boxWrapper]}
+          onPress={() => {}}
+          testID='AccountInformation'
+        >
           <Image style={styles.icons} source={IMAGES.iconInfo} />
-          <Text style={styles.text}>Account Information</Text>
+          <Title titleName='Account Information' titleStyles={styles.text} />
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.boxWrapper]} onPress={handleNavigateToBagScreen}>
+        <TouchableOpacity
+          style={[styles.boxWrapper]}
+          onPress={handleNavigateToBagScreen}
+          testID='Side-menu-Bag'
+        >
           <Image style={styles.icons} source={IMAGES.iconBagDrawer} />
-          <Text style={styles.text}>Order</Text>
+          <Title titleName='Order' titleStyles={styles.text} />
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.boxWrapper]} onPress={handleNavigateToWalletScreen}>
-          <Image style={styles.icons} source={IMAGES.iconWalletDrawer} />
-          <Text style={styles.text}>My Cards</Text>
+        <TouchableOpacity
+          style={[styles.boxWrapper]}
+          onPress={handleNavigateToWalletScreen}
+          testID='Side-menu-Wallet'
+        >
+          <Image style={styles.icons} source={IMAGES.iconWalletDrawer} testID='Side-menu-Cards' />
+          <Title titleName='My Cards' titleStyles={styles.text} />
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.boxWrapper]} onPress={handleNavigateToWishlistScreen}>
+        <TouchableOpacity
+          style={[styles.boxWrapper]}
+          onPress={handleNavigateToWishlistScreen}
+          testID='Side-menu-Wishlist'
+        >
           <Image style={styles.icons} source={IMAGES.iconHeartDrawer} />
-          <Text style={styles.text}>Wishlist</Text>
+          <Title titleName='Wishlist' titleStyles={styles.text} />
         </TouchableOpacity>
       </View>
       <View style={styles.footer}>
-        <TouchableOpacity style={[styles.boxWrapper]} onPress={handlePressLogout}>
+        <TouchableOpacity
+          style={[styles.boxWrapper]}
+          onPress={handlePressLogout}
+          testID='Side-menu-Logout'
+        >
           <Image style={styles.icons} source={IMAGES.iconLogout} />
-          <Text style={styles.logoutText}>Logout</Text>
+          <Title titleName='Logout' titleStyles={styles.logoutText} />
         </TouchableOpacity>
       </View>
     </View>
