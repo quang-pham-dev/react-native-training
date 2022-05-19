@@ -14,5 +14,5 @@ const fetchProductByBrandId = (id: string) => {
 export const productsService = {
   fetchProducts,
   fetchProductById,
-  fetchProductByBrandId
+  fetchProductByBrandId,
 };

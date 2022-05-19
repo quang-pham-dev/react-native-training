@@ -9,9 +9,9 @@ type useAxiosProps = {
 };
 
 export interface IResponse<T> {
-    data: T;
-    loading: boolean;
-    error: any
+  data: T;
+  loading: boolean;
+  error: any;
 }
 
 const useAxios = ({ url, method, body }: useAxiosProps) => {

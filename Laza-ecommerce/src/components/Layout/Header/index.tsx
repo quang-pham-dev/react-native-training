@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { Image, Pressable, View } from 'react-native';
 // Themes
 import { IMAGES } from 'styles/themes';
+// Types
 import { HeaderProps } from 'types/Screens';
 // Styles
 import styles from './styles';

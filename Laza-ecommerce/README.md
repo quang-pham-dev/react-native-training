@@ -27,7 +27,7 @@
 - React Native v0.68.0
 - Typescript v4.3.5
 - Details: [Here][1]
-  
+
   [1]: https://gitlab.asoft-python.com/quang.pham/react-training/-/blob/feature/react-native-practice-one/package.json
 
 ## Platform
