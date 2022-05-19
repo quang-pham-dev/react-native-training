@@ -1,6 +1,7 @@
 import React, { memo, useContext, useState } from 'react';
 import { Alert, Image, Switch, TouchableOpacity, View } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { DrawerActions } from '@react-navigation/native';
 // Components
 import Button from 'components/Button';
 import Title from 'components/Title';
@@ -52,9 +53,9 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
     ]);
   };
 
-  // Toggle menu open or close
-  const handleToggleMenu = () => {
-    navigation.toggleDrawer();
+  // handle Close menu
+  const handleCloseMenu = () => {
+    navigation.dispatch(DrawerActions.closeDrawer());
   };
 
   // handle action navigate to Bag screen
@@ -77,9 +78,10 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
       <View style={styles.header}>
         <View style={styles.iconMenuWrapper}>
           <Button
+            testID='Side-menu-toggle'
             icon={IMAGES.iconMenuOpen}
             iconStyles={[styles.iconMenu]}
-            onPress={handleToggleMenu}
+            onPress={handleCloseMenu}
           />
         </View>
         <View style={[styles.infoWrapper]}>

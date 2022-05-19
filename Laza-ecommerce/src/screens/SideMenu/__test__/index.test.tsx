@@ -14,7 +14,7 @@ describe('Side menu', () => {
   test('should render correctly', () => {
     expect(tree).toMatchSnapshot();
   });
-  test('should navigate to handleNavigateToBagScreen', () => {
+  test('should navigated to handleNavigateToBagScreen', () => {
     const { getByTestId } = tree;
     const Press = getByTestId('Side-menu-Bag');
     fireEvent(Press, 'press');
@@ -22,7 +22,7 @@ describe('Side menu', () => {
     expect(navigationMock.navigate).toHaveBeenCalledWith(Screens.Bag.name);
   });
 
-  test('should call function handleNavigateToWalletScreen', () => {
+  test('should navigated to handleNavigateToWalletScreen', () => {
     const { getByTestId } = tree;
     const Press = getByTestId('Side-menu-Wallet');
     fireEvent(Press, 'press');
@@ -30,11 +30,29 @@ describe('Side menu', () => {
     expect(navigationMock.navigate).toHaveBeenCalledWith(Screens.Wallet.name);
   });
 
-  test('should call function handleNavigateToWishlistScreen', () => {
+  test('should navigated to handleNavigateToWishlistScreen', () => {
     const { getByTestId } = tree;
     const Press = getByTestId('Side-menu-Wishlist');
     fireEvent(Press, 'press');
 
     expect(navigationMock.navigate).toHaveBeenCalledWith(Screens.WishList.name);
+  });
+
+  test('should called function handleToggleMenu', () => {
+    const { getByTestId } = tree;
+    const Press = getByTestId('Side-menu-toggle');
+
+    fireEvent(Press, 'press');
+
+    expect(navigationMock.dispatch).toHaveBeenCalled();
+  });
+
+  test('should called function LogOut', () => {
+    const { getByTestId } = tree;
+    const Press = getByTestId('Side-menu-toggle');
+
+    fireEvent(Press, 'press');
+
+    expect(navigationMock.dispatch).toHaveBeenCalled();
   });
 });
