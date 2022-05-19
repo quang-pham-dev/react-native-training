@@ -5,15 +5,17 @@ import Button from 'components/Button';
 import Title from 'components/Title';
 // Themes
 import { IMAGES } from 'styles/themes';
-// Styles
-import styles from './styles';
 // Types
 import { GetStartedScreenProps } from 'types/Screens';
+// Constants
+import Screens from 'constants/Screens';
+// Styles
+import styles from './styles';
 
 function GetStartedScreen({ navigation }: GetStartedScreenProps) {
   // handle navigate to SignIn screen
   const handlePressNavigateToSignIn = () => {
-    navigation.navigate('SignIn');
+    navigation.navigate(Screens.SignIn.name);
   };
 
   return (
@@ -54,7 +56,7 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
       <View style={styles.footer}>
         <View style={styles.footerTextWrapper}>
           <Title titleStyles={styles.alreadyText} titleName='Already have an account? ' />
-          <TouchableOpacity onPress={handlePressNavigateToSignIn}>
+          <TouchableOpacity onPress={handlePressNavigateToSignIn} testID='LinkToSignIn'>
             <Title titleStyles={styles.signIn} titleName='Signin' />
           </TouchableOpacity>
         </View>

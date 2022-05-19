@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GetStarted Screen should render correctly 1`] = `
+exports[`GetStarted Screen should renders correctly 1`] = `
 <View
   style={
     Object {
@@ -306,6 +306,7 @@ exports[`GetStarted Screen should render correctly 1`] = `
             "opacity": 1,
           }
         }
+        testID="LinkToSignIn"
       >
         <Text
           style={

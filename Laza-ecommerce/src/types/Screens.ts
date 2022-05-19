@@ -6,7 +6,9 @@ import { ProductProps } from './Products';
 export type AuthNavigationProp = NativeStackNavigationProp<AuthStackParams>;
 
 export interface GetStartedScreenProps {
-  navigation: AuthNavigationProp;
+  navigation: {
+    navigate: (value: string) => void;
+  };
 }
 
 export interface SignInScreenProps {
