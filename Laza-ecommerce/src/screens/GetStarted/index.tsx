@@ -28,6 +28,7 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
       </View>
       <View style={styles.main}>
         <Button
+          testID='buttonFacebook'
           text={'Facebook'}
           icon={IMAGES.iconFacebook}
           buttonStyles={[styles.socialButton, styles.facebookButton]}
@@ -36,6 +37,7 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
           onPress={() => {}}
         />
         <Button
+          testID='buttonTwitter'
           text={'Twitter'}
           icon={IMAGES.iconTwitter}
           buttonStyles={[styles.socialButton, styles.twitterButton]}
@@ -44,6 +46,7 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
           onPress={() => {}}
         />
         <Button
+          testID='buttonGoogle'
           text={'Google'}
           icon={IMAGES.iconGoogle}
           buttonStyles={[styles.socialButton, styles.googleButton]}

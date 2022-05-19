@@ -27,6 +27,13 @@ describe('GetStarted Screen', () => {
     expect(getByText('Let’s Get Started')).toBeTruthy();
   });
 
+  test('should render 3 social button', () => {
+    const { getByTestId } = tree;
+    expect(getByTestId('buttonFacebook')).toBeTruthy();
+    expect(getByTestId('buttonTwitter')).toBeTruthy();
+    expect(getByTestId('buttonGoogle')).toBeTruthy();
+  });
+
   test('should navigate to SignIn Screen', () => {
     const { getByTestId } = tree;
     const link = getByTestId('LinkToSignIn');

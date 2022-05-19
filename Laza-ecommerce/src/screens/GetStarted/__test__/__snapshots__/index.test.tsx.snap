@@ -111,6 +111,7 @@ exports[`GetStarted Screen should renders correctly 1`] = `
           "width": "100%",
         }
       }
+      testID="buttonFacebook"
     >
       <Image
         source={1}
@@ -167,6 +168,7 @@ exports[`GetStarted Screen should renders correctly 1`] = `
           "width": "100%",
         }
       }
+      testID="buttonTwitter"
     >
       <Image
         source={1}
@@ -223,6 +225,7 @@ exports[`GetStarted Screen should renders correctly 1`] = `
           "width": "100%",
         }
       }
+      testID="buttonGoogle"
     >
       <Image
         source={1}
