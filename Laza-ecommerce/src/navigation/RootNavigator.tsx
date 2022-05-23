@@ -7,7 +7,7 @@ import AppDrawerStack from './stacks/AppDrawerStack';
 
 // Context
 import { AppContext } from 'context/AppContext';
-import { INITIALIZE, INITIALIZE_FAILED, INITIALIZE_SUCCESS } from 'context/actions/auth.action';
+import { INITIALIZE, INITIALIZE_FAILED, INITIALIZE_SUCCESS } from 'context/actions/auth.actions';
 
 // Components
 import LoadingIndicator from 'components/LoadingIndicator';

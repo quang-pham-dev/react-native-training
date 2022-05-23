@@ -75,11 +75,8 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
       <ScrollView style={styles.mainContainer} showsVerticalScrollIndicator={false}>
         <View style={styles.headerContainer}>
           <View style={styles.headerImageWrapper}>
-            {productState?.productById && (
-              <ImageBackground
-                style={styles.image}
-                source={{ uri: productState?.productById[0].source }}
-              />
+            {productById && (
+              <ImageBackground style={styles.image} source={{ uri: productById[0].source }} />
             )}
           </View>
         </View>
@@ -87,26 +84,17 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
         <View style={styles.contentContainer}>
           <View style={styles.productInfoContainer}>
             <View style={styles.productInfoWrapper}>
-              {productState?.productById && (
+              {productById && (
                 <>
-                  <Title
-                    titleName={productState?.productById[0].title}
-                    titleStyles={styles.textTitle}
-                  />
-                  <Title
-                    titleName={productState?.productById[0].type}
-                    titleStyles={styles.textValue}
-                  />
+                  <Title titleName={productById[0].title} titleStyles={styles.textTitle} />
+                  <Title titleName={productById[0].type} titleStyles={styles.textValue} />
                 </>
               )}
             </View>
             <View style={styles.productInfoWrapper}>
               <Title titleName='Price' titleStyles={styles.textTitle} />
-              {productState?.productById && (
-                <Title
-                  titleName={`$${productState?.productById[0].price}`}
-                  titleStyles={styles.textValue}
-                />
+              {productById && (
+                <Title titleName={`$${productById[0].price}`} titleStyles={styles.textValue} />
               )}
             </View>
           </View>
@@ -116,8 +104,8 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
             style={styles.productImageReview}
             horizontal
             showsHorizontalScrollIndicator={false}>
-            {productState?.productById &&
-              productState?.productById[0]?.imageReview?.map((item: any) => (
+            {productById &&
+              productById[0]?.imageReview?.map((item: any) => (
                 <Pressable style={styles.productImageReviewWrapper} key={item.id}>
                   <Image
                     style={styles.imagePreview}
@@ -132,9 +120,9 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
 
           <View style={styles.descriptionContainer}>
             <Title titleName='Description' titleStyles={styles.textDescriptionTitle} />
-            {productState?.productById && (
+            {productById && (
               <MoreLessText styleShowMoreText={styles.textContent} numberOfLines={3}>
-                {productState?.productById[0].description}
+                {productById[0].description}
               </MoreLessText>
             )}
           </View>
@@ -148,35 +136,31 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
               <View style={styles.reviewItem}>
                 <View style={styles.reviewItemWrapper}>
                   <View style={styles.reviewerInfoWrapper}>
-                    {productState?.productById && (
+                    {productById && (
                       <Image
                         style={styles.imageAvatar}
-                        source={{ uri: productState?.productById[0]?.reviewer?.image }}
+                        source={{ uri: productById[0]?.reviewer?.image }}
                       />
                     )}
                     <View style={styles.reviewerItemInfo}>
-                      {productState?.productById && (
+                      {productById && (
                         <Title
-                          titleName={productState?.productById[0]?.reviewer?.name}
+                          titleName={productById[0]?.reviewer?.name}
                           titleStyles={styles.textName}
                         />
                       )}
                       <View style={styles.reviewTime}>
                         <Image style={styles.imageClock} source={IMAGES.iconClock} />
-                        {productState?.productById && (
-                          <Text style={styles.textDate}>
-                            {productState?.productById[0]?.reviewer?.date}
-                          </Text>
+                        {productById && (
+                          <Text style={styles.textDate}>{productById[0]?.reviewer?.date}</Text>
                         )}
                       </View>
                     </View>
                   </View>
                   <View style={styles.reviewItemRating}>
                     <View style={styles.ratingTextWrapper}>
-                      {productState?.productById && (
-                        <Text style={styles.ratingTextPoint}>
-                          {productState?.productById[0].rating}
-                        </Text>
+                      {productById && (
+                        <Text style={styles.ratingTextPoint}>{productById[0].rating}</Text>
                       )}
                       <Text style={styles.ratingText}>rating</Text>
                     </View>
@@ -184,9 +168,9 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
                   </View>
                 </View>
                 <View style={styles.reviewItemContent}>
-                  {productState?.productById && (
+                  {productById && (
                     <MoreLessText styleShowMoreText={styles.textContent} numberOfLines={3}>
-                      {productState?.productById[0].comment}
+                      {productById[0].comment}
                     </MoreLessText>
                   )}
                 </View>
@@ -197,18 +181,15 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
           <View style={styles.totalPriceContainer}>
             <View style={styles.totalPriceWrapper}>
               <View style={styles.textTotalWrapper}>
-                {productState?.productById && (
+                {productById && (
                   <>
                     <Title titleName='Total Price' titleStyles={styles.textTotalPrice} />
                     <Title titleName='with VAT,SD' titleStyles={styles.textVAT} />
                   </>
                 )}
               </View>
-              {productState?.productById && (
-                <Title
-                  titleName={`$${productState?.productById[0].price}`}
-                  titleStyles={styles.textPrice}
-                />
+              {productById && (
+                <Title titleName={`$${productById[0].price}`} titleStyles={styles.textPrice} />
               )}
             </View>
           </View>

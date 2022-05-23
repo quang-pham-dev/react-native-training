@@ -3,7 +3,7 @@ import { Button, Text, View, StyleSheet, Alert } from 'react-native';
 
 // Context
 import { AppContext } from 'context/AppContext';
-import { SIGN_OUT, SIGN_OUT_SUCCESS, SIGN_OUT_FAILED } from 'context/actions/auth.action';
+import { SIGN_OUT, SIGN_OUT_SUCCESS, SIGN_OUT_FAILED } from 'context/actions/auth.actions';
 
 // API
 import { authService } from 'api';

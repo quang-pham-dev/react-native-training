@@ -12,7 +12,7 @@ import TextInput from 'components/TextInput';
 
 // Context
 import { AppContext } from 'context/AppContext';
-import { SIGN_IN_SUCCESS, SIGN_IN_FAILED } from 'context/actions/auth.action';
+import { SIGN_IN_SUCCESS, SIGN_IN_FAILED } from 'context/actions/auth.actions';
 
 // API
 import { authService } from 'api';

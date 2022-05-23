@@ -7,7 +7,7 @@ import {
   GET_BRAND_FAILED,
   GET_BRAND_SUCCESS,
   RESET_STATE,
-} from 'context/actions/brands.action';
+} from 'context/actions/brands.actions';
 import { BrandsState, InitialBrandsState } from 'context/state/brands.state';
 
 const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAction) => {

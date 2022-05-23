@@ -10,7 +10,7 @@ import {
   SIGN_OUT,
   SIGN_OUT_SUCCESS,
   RESET_STATE,
-} from 'context/actions/auth.action';
+} from 'context/actions/auth.actions';
 import { AuthState, InitialAuthState } from 'context/state/auth.state';
 
 const authenticationReducer = (state: AuthState = InitialAuthState, action: AuthAction) => {
