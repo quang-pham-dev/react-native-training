@@ -4,6 +4,10 @@ import { FlatList, View, Text } from 'react-native';
 // Components
 import BrandCard from 'components/BrandCard';
 import Label from 'components/Label';
+import Title from 'components/Title';
+
+// Constants
+import { BRANDS_EMPTY_RESULT } from 'constants/Brands';
 
 // Types
 import { IBrandCardListProps, IBrandsListProps } from 'types/models/Brands';
@@ -21,7 +25,7 @@ const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: IBran
     <BrandCard brand={item} handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen} />
   );
 
-  const renderEmptyList = () => <Text>Empty Brand.</Text>;
+  const renderEmptyList = () => <Title titleName={BRANDS_EMPTY_RESULT} />;
 
   return (
     <View style={styles.container}>
