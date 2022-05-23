@@ -12,9 +12,8 @@
     "test": "jest",
     "coverage": "jest --coverage --no-cache",
     "lint": "eslint --fix --ext .ts,.tsx,.js",
-    "prettier": "prettier --write src**/*.{js,ts,tsx}",
+    "prettier": "prettier --write ./**/*.{js,ts,tsx}",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "data": "json-server --watch server/db.json --port 3001",
     "server": "nodemon server/index.js"
   },
   "dependencies": {

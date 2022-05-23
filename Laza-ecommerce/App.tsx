@@ -3,10 +3,13 @@ import 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import AppLoading from 'expo-app-loading';
 import * as SplashScreen from 'expo-splash-screen';
+
 // Hooks
 import useFonts from 'hooks/useFonts';
+
 // Navigation
-import RootNavigator from 'navigation';
+import RootNavigator from 'navigation/RootNavigator';
+
 // Context Provider
 import AppProvider from 'context/AppContext';
 

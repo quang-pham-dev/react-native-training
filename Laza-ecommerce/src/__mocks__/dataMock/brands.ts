@@ -1,5 +1,12 @@
 /* A data array. */
-export const brandsData = [
+export const brand = {
+  id: '0',
+  name: 'Adidas',
+  logoUrl:
+    'https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png',
+};
+
+export const brands = [
   {
     id: '0',
     name: 'Adidas',

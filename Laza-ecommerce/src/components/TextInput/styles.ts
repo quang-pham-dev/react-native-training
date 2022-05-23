@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native';
-// Theme
-import { Metrics, Colors, Fonts } from 'styles/themes';
+
+// Themes
+import Fonts from 'themes/Fonts';
+import Metrics from 'themes/Metrics';
+import Colors from 'themes/Colors';
 
 const styles = StyleSheet.create({
   inputWrap: {

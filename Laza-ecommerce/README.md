@@ -28,11 +28,12 @@
 - Typescript v4.3.5
 - Details: [Here][1]
 
-  [1]: https://gitlab.asoft-python.com/quang.pham/react-training/-/blob/feature/react-native-practice-one/package.json
+  [1]: https://gitlab.asoft-python.com/quang.pham/react-training/-/blob/feature/react-native-practice-one/Laza-ecommerce/package.json
 
 ## Platform
 
-- Android.
+- Android pixel 5.
+- iOS iPhone 12.
 
 ## Code Editor
 

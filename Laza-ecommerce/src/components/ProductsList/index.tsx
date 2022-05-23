@@ -1,12 +1,17 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { FlatList, View } from 'react-native';
+
 // Components
 import Label from 'components/Label';
 import ProductCard from 'components/ProductCard';
-// Theme
-import { Colors, Fonts } from 'styles/themes';
-// Type
-import { ProductsCardListProps, ProductsListProps } from 'types/Products';
+
+// Types
+import { Product, IProductsCardListProps, IProductsListProps } from 'types/models/Products';
+
+// Themes
+import Fonts from 'themes/Fonts';
+import Colors from 'themes/Colors';
+
 // Styles
 import styles from './styles';
 
@@ -14,16 +19,12 @@ const ProductsList = ({
   handleNavigationProductDetailScreen,
   productsData,
   handleLikeProduct,
-}: ProductsListProps) => {
-  // handle render Card component
-  const renderProductCard = ({ item }: { item: ProductsCardListProps }) => (
-    <ProductCard
-      testID='productCardList'
-      productCardStyles={styles.productCard}
-      product={item}
-      handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
-      handleLikeProduct={() => handleLikeProduct(item)}
-    />
+}: IProductsListProps) => {
+  const handleNavigationProductDetailPress = useCallback(
+    (id: string) => {
+      handleNavigationProductDetailScreen(id);
+    },
+    [handleNavigationProductDetailScreen],
   );
 
   // handle render when empty list
@@ -34,6 +35,20 @@ const ProductsList = ({
       fontFamily={Fonts.fontFamily.Inter_400Regular}
       color={Colors.textBlack}
     />
+  );
+
+  // handle render Card component
+  const renderProductCard = useCallback(
+    ({ item }: { item: IProductsCardListProps }) => (
+      <ProductCard
+        testID='productCardList'
+        productCardStyles={styles.productCard}
+        product={item}
+        handleNavigationProductDetailScreen={handleNavigationProductDetailPress}
+        handleLikeProduct={() => handleLikeProduct(item)}
+      />
+    ),
+    [handleNavigationProductDetailPress, handleLikeProduct],
   );
 
   return (

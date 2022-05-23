@@ -1,11 +1,15 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { Image, ImageBackground, Pressable, Text, View } from 'react-native';
+
 // Components
 import Title from 'components/Title';
-// Theme
-import { IMAGES } from 'styles/themes';
+
 // Types
-import { ProductCardProps } from 'types/Products';
+import { IProductCardProps } from 'types/models/Products';
+
+// Themes
+import IMAGES from 'themes/Images';
+
 // Styles
 import styles from './styles';
 
@@ -14,13 +18,16 @@ const ProductCardList = ({
   handleNavigationProductDetailScreen,
   handleLikeProduct,
   productCardStyles,
-}: ProductCardProps) => {
+}: IProductCardProps) => {
+  const handleNavigationProductDetailScreenPress = useCallback(() => {
+    handleNavigationProductDetailScreen(product.id);
+  }, [product.id, handleNavigationProductDetailScreen]);
+
   return (
     <Pressable
       testID='productCard'
-      onPress={() => handleNavigationProductDetailScreen(product.id)}
-      style={[styles.productCardContainer, productCardStyles]}
-    >
+      onPress={handleNavigationProductDetailScreenPress}
+      style={[styles.productCardContainer, productCardStyles]}>
       <View style={styles.imageWrapper}>
         <ImageBackground style={styles.image} source={{ uri: product.source }} />
         <Pressable onPress={handleLikeProduct} style={styles.iconHeartWrapper}>

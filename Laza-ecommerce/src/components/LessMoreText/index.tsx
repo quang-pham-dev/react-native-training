@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
-import { StyleProp, Text, TextStyle, View } from 'react-native';
+import React, { useCallback, useState } from 'react';
+import { Text, View } from 'react-native';
+
+// Types
+import { IMoreLessTextProps } from 'types/components/LessMore';
+
 // Styles
 import styles from './styles';
 
-type MoreLessTextProps = {
-  children?: React.ReactNode;
-  numberOfLines: number;
-  styleShowMoreText?: StyleProp<TextStyle>;
-};
-
-export function MoreLessText({ children, numberOfLines, styleShowMoreText }: MoreLessTextProps) {
+const MoreLessText = ({ children, numberOfLines, styleShowMoreText }: IMoreLessTextProps) => {
   const [isTruncatedText, setIsTruncatedText] = useState(false);
   const [showMore, setShowMore] = useState(true);
+
+  const handleShowMore = useCallback(() => {
+    setShowMore(!showMore);
+  }, [showMore]);
 
   return isTruncatedText ? (
     <View style={[styles.showMoreContainer]}>
       <Text
         style={[styles.readMoreText, styleShowMoreText]}
-        numberOfLines={showMore ? numberOfLines : 0}
-      >
+        numberOfLines={showMore ? numberOfLines : 0}>
         {children}
       </Text>
-      <Text style={styles.readMoreText} onPress={() => setShowMore(!showMore)}>
+      <Text style={styles.readMoreText} onPress={handleShowMore}>
         {showMore ? 'Read More' : 'Less'}
       </Text>
     </View>
@@ -31,9 +32,10 @@ export function MoreLessText({ children, numberOfLines, styleShowMoreText }: Mor
       onTextLayout={event => {
         const { lines } = event.nativeEvent;
         setIsTruncatedText(lines?.length > numberOfLines);
-      }}
-    >
+      }}>
       {children}
     </Text>
   );
-}
+};
+
+export default MoreLessText;

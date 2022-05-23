@@ -1,5 +1,8 @@
 import { StyleSheet } from 'react-native';
-import { Metrics } from 'styles/themes';
+
+// Themes
+import Metrics from 'themes/Metrics';
+
 const styles = StyleSheet.create({
   container: {},
   brandTitle: {

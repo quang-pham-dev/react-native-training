@@ -1,19 +1,27 @@
 import React, { createContext, useMemo, useReducer } from 'react';
+
 // Context Reducer
-import { authReducer } from './Reducers/AuthReducer';
-import { brandsReducer } from './Reducers/BrandsReducer';
-import { productReducer } from './Reducers/ProductsReducer';
+import authenticationReducer from './reducers/auth.reducer';
+import productsReducer from './reducers/products.reducer';
+import brandsReducer from './reducers/brands.reducer';
+
 // Context initial state
-import { InitialAuthState } from './State/AuthState';
-import { InitialBrandsState } from './State/BrandsState';
-import { InitialProductsState } from './State/ProductsState';
+import { InitialBrandsState } from 'context/state/brands.state';
+import { InitialProductsState } from 'context/state/products.state';
+import { InitialAuthState } from 'context/state/auth.state';
 
-export const AppContext = createContext<any>([{}, () => {}]);
+interface IAppProviderProps {
+  children: React.ReactNode;
+}
 
-const AppProvider = ({ children }: { children: React.ReactNode }) => {
-  const [authState, authDispatch] = useReducer(authReducer, InitialAuthState);
-  const [productState, productDispatch] = useReducer(productReducer, InitialProductsState);
-  const [brandState, brandDispatch] = useReducer(brandsReducer, InitialBrandsState);
+export const AppContext = createContext({} as any);
+
+const AppProvider = ({ children }: IAppProviderProps) => {
+  const [authState, authDispatch] = useReducer<any>(authenticationReducer, InitialAuthState);
+  const [productState, productDispatch] = useReducer<any>(productsReducer, InitialProductsState);
+  const [brandState, brandDispatch] = useReducer<any>(brandsReducer, InitialBrandsState);
+
+  console.log('AppProvider:>> ', authState);
 
   const appContextValue = useMemo(
     () => ({

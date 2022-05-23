@@ -1,7 +1,8 @@
 import React from 'react';
-import BrandCard from 'components/BrandCard';
 import renderer from 'react-test-renderer';
 import { TouchableOpacity } from 'react-native';
+
+import BrandCard from 'components/BrandCard';
 
 const brandData = {
   id: '1',

@@ -1,19 +1,22 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { Image, Pressable, View } from 'react-native';
-// Themes
-import { IMAGES } from 'styles/themes';
+
 // Types
-import { HeaderProps } from 'types/Screens';
+import { IHeaderProps } from 'types/screens/Layout';
+
+// Themes
+import IMAGES from 'themes/Images';
+
 // Styles
 import styles from './styles';
+import { DrawerActions } from '@react-navigation/native';
 
-const Header = ({ navigation }: HeaderProps) => {
+const Header = ({ navigation }: IHeaderProps) => {
   // Toggle menu open
-  const handleToggleMenu = () => {
-    navigation.toggleDrawer();
-  };
+  const handleToggleMenu = useCallback(() => {
+    navigation.dispatch(DrawerActions.openDrawer());
+  }, [navigation]);
 
-  // TODO feature currently not developed yet
   const handlePressCart = () => {};
 
   return (

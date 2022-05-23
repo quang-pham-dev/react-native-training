@@ -1,6 +1,9 @@
-import { Fonts, Metrics } from '@styles/themes/index';
 import { StyleSheet } from 'react-native';
-import { Colors } from 'styles/themes';
+
+// Themes
+import Colors from 'themes/Colors';
+import Fonts from 'themes/Fonts';
+import Metrics from 'themes/Metrics';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,7 +13,7 @@ const styles = StyleSheet.create({
 
   header: {
     flex: 1,
-    marginTop: Metrics.margin.xxxl,
+    marginTop: 45,
   },
 
   iconBackWrapper: {

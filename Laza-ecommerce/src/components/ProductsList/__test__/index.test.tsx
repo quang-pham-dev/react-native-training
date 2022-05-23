@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
+
 import ProductsList from 'components/ProductsList';
 import { products } from '__mocks__/dataMock/products';
 

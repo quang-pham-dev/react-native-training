@@ -1,5 +1,9 @@
 import { StyleSheet } from 'react-native';
-import { Colors, Metrics } from 'styles/themes';
+
+// Themes
+import Colors from 'themes/Colors';
+import Metrics from 'themes/Metrics';
+
 const styles = StyleSheet.create({
   brandCardContainer: {
     justifyContent: 'center',
@@ -27,7 +31,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     resizeMode: 'contain',
-    backgroundColor: Colors.transparent,
   },
 });
 

@@ -1,7 +1,9 @@
 import React, { memo } from 'react';
 import { Image, Text, TouchableOpacity } from 'react-native';
+
 // Types
-import { ButtonProps } from 'types/Button';
+import { IButtonProps } from 'types/components/Button';
+
 // Styles
 import styles from './styles';
 
@@ -14,16 +16,13 @@ const Button = ({
   iconStyles,
   disabled,
   children,
-  ...props
-}: ButtonProps) => {
+}: IButtonProps) => {
   return (
     <TouchableOpacity
       style={[buttonStyles]}
-      {...props}
       onPress={onPress}
       disabled={disabled}
-      activeOpacity={0.8}
-    >
+      activeOpacity={0.8}>
       {icon && <Image style={[styles.icon, iconStyles]} source={icon} />}
       {text && <Text style={[textStyles]}>{text}</Text>}
       {children}

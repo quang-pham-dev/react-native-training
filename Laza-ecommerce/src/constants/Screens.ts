@@ -1,14 +1,29 @@
-export default {
-  Root: { name: 'Root' },
-  App: { name: 'App' },
-  Auth: { name: 'Auth' },
-  Home: { name: 'Home', label: 'HOME' },
-  SignIn: { name: 'SignIn', label: 'SIGN IN' },
-  SignUp: { name: 'SignUp', label: 'SIGN UP' },
-  GetStarted: { name: 'GetStarted', label: 'GET STARTED' },
-  WishList: { name: 'WishList', label: 'WISHLIST' },
-  Bag: { name: 'Bag', label: 'BAG' },
-  Wallet: { name: 'Wallet', label: 'WALLET' },
-  ProductDetail: { name: 'ProductDetail', label: 'PRODUCT DETAIL' },
-  BrandDetail: { name: 'BrandDetail', label: 'BRAND DETAIL' },
+export const SCREENS_ROUTES = {
+  STACK: {
+    AUTH: { name: 'AuthStack' },
+    APP: { name: 'AppStack' },
+    HOME: { name: 'HomeStack' },
+    BAGS: { name: 'BagsStack' },
+    WALLET: { name: 'WalletStack' },
+    WISHLIST: { name: 'WishListStack' },
+  },
+
+  AUTH: {
+    SIGN_IN: { name: 'SignIn', label: 'SIGN IN' },
+    SIGN_UP: { name: 'SignUp', label: 'SIGN UP' },
+    GET_STARTED: { name: 'GetStarted', label: 'GET STARTED' },
+  },
+
+  APP: {
+    HOME: { name: 'Home', label: 'HOME' },
+    DRAWER_MENU: { name: 'DrawerMenu', label: 'MENU' },
+    WISHLIST: { name: 'WishList', label: 'WISHLIST' },
+    BAGS: { name: 'Bag', label: 'BAG' },
+    WALLET: { name: 'Wallet', label: 'WALLET' },
+    PRODUCT_DETAIL: { name: 'ProductDetail', label: 'PRODUCT DETAIL' },
+    BRAND_DETAIL: { name: 'BrandDetail', label: 'BRAND DETAIL' },
+  },
+
+  APP_NAVIGATOR: { name: 'AppNavigator' },
+  AUTH_NAVIGATOR: { name: 'AuthNavigator' },
 };

@@ -1,7 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import Label from 'components/Label';
-import { Colors, Fonts } from 'styles/themes';
+import Colors from 'themes/Colors';
+import Fonts from 'themes/Fonts';
 
 describe('Label Component', () => {
   test('should render correctly', () => {

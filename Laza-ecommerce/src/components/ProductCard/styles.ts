@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native';
+
 // Themes
-import { Fonts, Metrics, Colors } from 'styles/themes';
+import Colors from 'themes/Colors';
+import Fonts from 'themes/Fonts';
+import Metrics from 'themes/Metrics';
 
 const styles = StyleSheet.create({
   productCardContainer: {

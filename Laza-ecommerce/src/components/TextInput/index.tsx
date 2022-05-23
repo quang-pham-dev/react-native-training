@@ -1,7 +1,9 @@
 import React, { memo } from 'react';
 import { Text, TextInput, View } from 'react-native';
+
 // Types
-import { TextInputProps } from 'types/TextInput';
+import { ITextInputProps } from 'types/components/TextInput';
+
 // Styles
 import styles from './styles';
 
@@ -14,13 +16,11 @@ const Input = ({
   secureTextEntry,
   onChangeText = () => {},
   onBlur = () => {},
-  ...props
-}: TextInputProps) => {
+}: ITextInputProps) => {
   return (
     <View style={styles.inputWrap}>
       {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
       <TextInput
-        {...props}
         value={value}
         onChangeText={onChangeText}
         onBlur={onBlur}

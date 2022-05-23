@@ -1,13 +1,20 @@
-import { AUTH_DATA } from 'constants/Common';
-import { UserResponse } from 'types/User';
+// utils
 import { remove } from 'utils/localStorage';
-import http from './http';
 
-const signIn = (username: string, password: string): Promise<UserResponse> => {
-  return http.post('auth/login', { username, password });
+// API
+import http from 'api/http';
+
+// Constants
+import { AUTH_DATA, ENDPOINTS } from 'constants/Common';
+
+// sign in with username and password
+const signIn = async (username: string, password: string) => {
+  return await http.post(ENDPOINTS.AUTH.LOGIN, { username, password });
 };
-const signOut = (): Promise<void> => {
-  return remove(AUTH_DATA);
+
+// Sign Out
+const signOut = async () => {
+  return await remove(AUTH_DATA);
 };
 
 export const authService = {

@@ -1,7 +1,9 @@
 import React, { memo } from 'react';
 import { Text, View } from 'react-native';
+
 // Types
-import { labelTextProps } from 'types/Label';
+import { ILabelTextProps } from 'types/components/Label';
+
 // Styles
 import styles from './styles';
 
@@ -12,8 +14,7 @@ const Label = ({
   color,
   labelWrapperStyles,
   lineHeight,
-  ...props
-}: labelTextProps) => {
+}: ILabelTextProps) => {
   const labelStyles = {
     fontSize: fontSize,
     fontFamily: fontFamily,
@@ -22,9 +23,7 @@ const Label = ({
   };
   return (
     <View style={labelWrapperStyles}>
-      <Text style={[styles.labelText, labelStyles]} {...props}>
-        {labelName}
-      </Text>
+      <Text style={[styles.labelText, labelStyles]}>{labelName}</Text>
     </View>
   );
 };

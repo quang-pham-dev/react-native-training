@@ -93,7 +93,6 @@ exports[`Brand Card List Component Should render correctly 1`] = `
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
-    nestedScrollEnabled={true}
     onContentSizeChange={[Function]}
     onEndReachedThreshold={2}
     onLayout={[Function]}
@@ -177,7 +176,6 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
                 style={
                   Object {
-                    "backgroundColor": "transparent",
                     "height": "100%",
                     "resizeMode": "contain",
                     "width": "100%",
@@ -274,7 +272,6 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
                 style={
                   Object {
-                    "backgroundColor": "transparent",
                     "height": "100%",
                     "resizeMode": "contain",
                     "width": "100%",
@@ -371,7 +368,6 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
                 style={
                   Object {
-                    "backgroundColor": "transparent",
                     "height": "100%",
                     "resizeMode": "contain",
                     "width": "100%",
@@ -468,7 +464,6 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
                 style={
                   Object {
-                    "backgroundColor": "transparent",
                     "height": "100%",
                     "resizeMode": "contain",
                     "width": "100%",
@@ -565,7 +560,6 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
                 style={
                   Object {
-                    "backgroundColor": "transparent",
                     "height": "100%",
                     "resizeMode": "contain",
                     "width": "100%",

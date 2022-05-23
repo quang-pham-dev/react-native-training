@@ -39,7 +39,6 @@ exports[`Side menu should render correctly 1`] = `
             "opacity": 1,
           }
         }
-        testID="Side-menu-toggle"
       >
         <Image
           source={1}

@@ -1,18 +1,23 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { FlatList, View, Text } from 'react-native';
+
 // Components
 import BrandCard from 'components/BrandCard';
 import Label from 'components/Label';
-// Type
-import { BrandCardListProps, BrandsListProps } from 'types/Brands';
-// Theme
-import { Colors, Fonts } from 'styles/themes';
+
+// Types
+import { IBrandCardListProps, IBrandsListProps } from 'types/models/Brands';
+
+// Themes
+import Fonts from 'themes/Fonts';
+import Colors from 'themes/Colors';
+
 // Styles
 import styles from './styles';
 
-const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: BrandsListProps) => {
+const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: IBrandsListProps) => {
   // handle render Card component
-  const renderBrandCard = ({ item }: { item: BrandCardListProps }) => (
+  const renderBrandCard = ({ item }: { item: IBrandCardListProps }) => (
     <BrandCard brand={item} handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen} />
   );
 
@@ -37,7 +42,6 @@ const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: Brand
         />
       </View>
       <FlatList
-        nestedScrollEnabled
         data={brandsData}
         renderItem={renderBrandCard}
         keyExtractor={brand => brand.id}

@@ -1,6 +1,6 @@
 import React from 'react';
 import BrandsCardList from 'components/BrandList';
-import { brandsData } from '__mocks__/dataMock';
+import { brands } from '__mocks__/dataMock';
 import renderer from 'react-test-renderer';
 import { TouchableOpacity } from 'react-native';
 
@@ -8,7 +8,7 @@ describe('Brand Card List Component', () => {
   const navigate = jest.fn();
 
   const component = renderer.create(
-    <BrandsCardList handleNavigationBrandDetailScreen={navigate} brandsData={brandsData} />,
+    <BrandsCardList handleNavigationBrandDetailScreen={navigate} brandsData={brands} />,
   );
   test('Should render correctly', () => {
     const result = component.toJSON();

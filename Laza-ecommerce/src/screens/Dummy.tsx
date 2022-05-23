@@ -1,29 +1,39 @@
 import React, { useContext } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Button, Text, View, StyleSheet, Alert } from 'react-native';
-import { authService } from 'api';
-import { AUTH_DATA } from 'constants/Common';
-import { SIGN_OUT } from 'types/Actions';
+
+// Context
 import { AppContext } from 'context/AppContext';
+import { SIGN_OUT, SIGN_OUT_SUCCESS, SIGN_OUT_FAILED } from 'context/actions/auth.action';
+
+// API
+import { authService } from 'api';
+
+// Constants
+import { AUTH_DATA } from 'constants/Common';
+
+// Utils
+import { remove } from 'utils/localStorage';
 
 const DummyScreen = () => {
   const { authDispatch } = useContext(AppContext);
 
   const handlePressSignOut = async () => {
+    authDispatch({ type: SIGN_OUT });
     try {
       await authService.signOut();
-      await AsyncStorage.removeItem(AUTH_DATA);
+      await remove(AUTH_DATA);
       authDispatch({
-        type: SIGN_OUT,
+        type: SIGN_OUT_SUCCESS,
       });
     } catch (error) {
+      authDispatch({ type: SIGN_OUT_FAILED, payload: error });
       Alert.alert('Error', error.message);
     }
   };
 
   return (
     <View style={styles.container}>
-      <Text>Dummy Screen</Text>
+      <Text>APP VERSION NOT YET DEVELOPED</Text>
       <Button title='LogOut' onPress={handlePressSignOut} />
     </View>
   );

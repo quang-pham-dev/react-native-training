@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { IMAGES } from 'styles/themes';
+
+import IMAGES from 'themes/Images';
 import Button from 'components/Button';
 
 describe('Button Component', () => {

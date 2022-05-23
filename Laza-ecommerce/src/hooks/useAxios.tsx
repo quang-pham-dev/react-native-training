@@ -1,5 +1,7 @@
-import { http } from 'api';
 import { useEffect, useState } from 'react';
+
+// API
+import { http } from 'api';
 
 type useAxiosProps = {
   method: string;

@@ -1,24 +1,22 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react-native';
+
 import GetStartedScreen from 'screens/GetStarted';
+import { navigationMock } from 'utils/testMock';
+import { SCREENS_ROUTES } from 'constants/Screens';
 
 describe('GetStarted Screen', () => {
-  let navigation: any;
   let tree: any;
 
   beforeEach(() => {
-    navigation = {
-      navigate: jest.fn(),
-      goBack: jest.fn(),
-    };
-    tree = render(<GetStartedScreen navigation={navigation} />);
+    tree = render(<GetStartedScreen navigation={navigationMock} />);
   });
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  it('should renders correctly', () => {
+  test('should renders correctly', () => {
     expect(tree).toMatchSnapshot();
   });
 
@@ -28,16 +26,21 @@ describe('GetStarted Screen', () => {
   });
 
   test('should render 3 social button', () => {
-    const { getByTestId } = tree;
-    expect(getByTestId('buttonFacebook')).toBeTruthy();
-    expect(getByTestId('buttonTwitter')).toBeTruthy();
-    expect(getByTestId('buttonGoogle')).toBeTruthy();
+    const { getByText } = tree;
+
+    const facebookButton = getByText('Facebook');
+    const twitterButton = getByText('Twitter');
+    const googleButton = getByText('Google');
+
+    expect(facebookButton).toBeTruthy();
+    expect(twitterButton).toBeTruthy();
+    expect(googleButton).toBeTruthy();
   });
 
   test('should navigate to SignIn Screen', () => {
     const { getByTestId } = tree;
     const link = getByTestId('LinkToSignIn');
     fireEvent(link, 'press');
-    expect(navigation.navigate).toHaveBeenCalledWith('SignIn');
+    expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.AUTH.SIGN_IN.name);
   });
 });

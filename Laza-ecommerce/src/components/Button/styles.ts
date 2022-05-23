@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native';
-import { Colors } from 'styles/themes';
+
+// Themes
+import Colors from 'themes/Colors';
 
 const styles = StyleSheet.create({
   icon: {},

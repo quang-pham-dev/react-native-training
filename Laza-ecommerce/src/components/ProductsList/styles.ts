@@ -1,5 +1,7 @@
 import { StyleSheet, Platform } from 'react-native';
-import { Metrics } from 'styles/themes';
+
+import Metrics from 'themes/Metrics';
+
 const styles = StyleSheet.create({
   container: {
     marginTop: Metrics.margin.xm,

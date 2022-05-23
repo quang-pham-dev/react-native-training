@@ -63,7 +63,7 @@ exports[`Search Bar Component Should render correctly 1`] = `
       <TextInput
         allowFontScaling={true}
         autoCorrect={false}
-        onChangeText={[MockFunction]}
+        onChangeText={[Function]}
         placeholder="Search.."
         rejectResponderTermination={true}
         style={

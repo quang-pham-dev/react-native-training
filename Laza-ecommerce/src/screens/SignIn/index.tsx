@@ -1,83 +1,21 @@
-import React, { memo, useContext, useState } from 'react';
+import React from 'react';
 import { KeyboardAvoidingView, ScrollView, Switch, Text, View } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-// Lib
-import { useForm, Controller, SubmitHandler } from 'react-hook-form';
-import * as Yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
+
 // Components
 import Button from 'components/Button';
 import Title from 'components/Title';
-import TextInput from 'components/TextInput';
+import LoginForm from 'components/LoginForm';
+
+// Types
+import { ISignInScreenProps } from 'types/screens/SignIn';
+
 // Themes
-import { IMAGES } from 'styles/themes';
+import IMAGES from 'themes/Images';
+
 // Styles
 import { styles } from './styles';
-// Types
-import { UserSignIn } from 'types/User';
-import { SIGN_IN } from 'types/Actions';
-import { SignInScreenProps } from 'types/Screens';
-// Context
-import { AppContext } from 'context/AppContext';
-// Api
-import { authService } from 'api';
-// Constants
-import { AUTH_DATA } from 'constants/Common';
 
-// initial values
-const loginFormInit: UserSignIn = {
-  username: '',
-  password: '',
-};
-
-// validation schema
-const loginSchema = Yup.object({
-  username: Yup.string().required('Username is required'),
-  password: Yup.string()
-    .required('Password is required')
-    .min(6, 'Password must be at least 6 characters'),
-}).required();
-
-const SignInScreen = ({ navigation }: SignInScreenProps) => {
-  const [isEnabled, setIsEnabled] = useState(true);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-  const { authDispatch } = useContext(AppContext);
-
-  const {
-    control,
-    reset,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<UserSignIn>({
-    mode: 'onChange',
-    defaultValues: loginFormInit,
-    resolver: yupResolver(loginSchema),
-  });
-
-  // handle action call api SignIn when user press Login button
-  const handOnSubmit: SubmitHandler<UserSignIn> = async (loginInfo: UserSignIn) => {
-    const { username, password } = loginInfo;
-    try {
-      const response = await authService.signIn(username, password);
-      const data = JSON.stringify(response.data);
-      await AsyncStorage.setItem(AUTH_DATA, data);
-      const { user } = response.data;
-      const { access_token } = response.data;
-      if (user && access_token) {
-        authDispatch({
-          type: SIGN_IN,
-          payload: {
-            user,
-            access_token,
-          },
-        });
-      }
-    } catch (error) {
-      // reset form
-      reset(loginFormInit);
-    }
-  };
-
+const SignInScreen = ({ navigation }: ISignInScreenProps) => {
   // handle action when press goBack
   const handlePressBack = () => {
     navigation.goBack();
@@ -98,104 +36,17 @@ const SignInScreen = ({ navigation }: SignInScreenProps) => {
             <Title titleStyles={styles.headerTitle} titleName='Welcome'></Title>
             <Title
               titleStyles={styles.headerSubTitle}
-              titleName='Please enter your data to continue'
-            ></Title>
+              titleName='Please enter your data to continue'></Title>
           </View>
           {/* end header */}
 
-          <View style={styles.main}>
-            {/* Username */}
-            <Controller
-              control={control}
-              rules={{
-                required: true,
-              }}
-              render={({ field: { onChange, value } }) => (
-                <TextInput
-                  onChangeText={value => onChange(value)}
-                  value={value}
-                  textInputStyles={styles.input}
-                  label='Username'
-                  labelStyle={styles.inputTitle}
-                  placeholder='Enter your username'
-                  testID='usernameInput'
-                />
-              )}
-              name='username'
-            />
-            {errors.username && (
-              <Text
-                testID='usernameInputError'
-                accessibilityRole='text'
-                style={styles.errorMessage}
-              >
-                {errors.username?.message}
-              </Text>
-            )}
-
-            {/* Password */}
-            <Controller
-              control={control}
-              rules={{
-                required: true,
-              }}
-              render={({ field: { onChange, value } }) => (
-                <TextInput
-                  onChangeText={value => onChange(value)}
-                  value={value}
-                  textInputStyles={styles.input}
-                  label='Password'
-                  labelStyle={styles.inputTitle}
-                  secureTextEntry
-                  placeholder='Enter your password'
-                  testID='passwordInput'
-                />
-              )}
-              name='password'
-            />
-            {errors.password && (
-              <Text testID='passwordInputError' style={styles.errorMessage}>
-                {errors.password?.message}
-              </Text>
-            )}
-
-            <View style={styles.forgotPasswordWrap}>
-              <Text style={styles.forgotPassword}>Forgot password?</Text>
-            </View>
-            <View style={styles.rememberMeWrap}>
-              <Text style={styles.rememberMeText}>Remember me</Text>
-              <Switch
-                style={styles.rememberMeSwitch}
-                trackColor={{ false: '#767577', true: '#34C759' }}
-                thumbColor={isEnabled ? 'white' : '#f4f3f4'}
-                ios_backgroundColor='#3e3e3e'
-                onValueChange={toggleSwitch}
-                value={isEnabled}
-              />
-            </View>
-          </View>
-
-          {/* end main */}
-          <View style={styles.footer}>
-            <View style={styles.footerTextWrapper}>
-              <Text style={styles.condition}>
-                By connecting your account confirm that you agree with our
-                <Text style={styles.Term}> Term and Condition</Text>
-              </Text>
-            </View>
-            <Button
-              testID='loginButton'
-              text='Login'
-              buttonStyles={[styles.bottomButton, styles.loginButton]}
-              textStyles={[styles.textBottomButton]}
-              onPress={handleSubmit(handOnSubmit)}
-            />
-          </View>
-          {/* end footer */}
+          {/* Form */}
+          <LoginForm />
+          {/* end Form */}
         </View>
       </KeyboardAvoidingView>
     </ScrollView>
   );
 };
 
-export default memo(SignInScreen);
+export default SignInScreen;

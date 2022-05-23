@@ -1,22 +1,31 @@
-import { render } from '@testing-library/react-native';
 import React from 'react';
+import { cleanup, render } from '@testing-library/react-native';
+
 import HomeScreen from 'screens/Home';
+import { navigationMock } from 'utils/testMock';
 
 describe('Home Screen', () => {
-  let navigation: any;
-
+  let tree: any;
   beforeEach(() => {
-    navigation = {
-      navigate: jest.fn(),
-      toggleDrawer: jest.fn(),
-    };
-  });
-  afterEach(() => {
-    jest.clearAllMocks();
+    tree = render(<HomeScreen navigation={navigationMock} />);
   });
 
-  test('should render correctly', () => {
-    const component = render(<HomeScreen navigation={navigation} />);
-    expect(component).toMatchSnapshot();
+  afterEach(() => {
+    jest.resetAllMocks();
+    cleanup();
+  });
+
+  test('Should renders correctly', () => {
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('Should render a Hello text', () => {
+    const { getByText } = tree;
+    expect(getByText('Hello')).toBeTruthy();
+  });
+
+  test('Should render a Welcome to Laza. text', () => {
+    const { getByText } = tree;
+    expect(getByText('Welcome to Laza.')).toBeTruthy();
   });
 });

@@ -164,7 +164,6 @@ exports[`SignIn Screen should render correctly 1`] = `
                   },
                 ]
               }
-              testID="usernameInput"
               underlineColorAndroid="transparent"
               value=""
             />
@@ -219,7 +218,6 @@ exports[`SignIn Screen should render correctly 1`] = `
                   },
                 ]
               }
-              testID="passwordInput"
               underlineColorAndroid="transparent"
               value=""
             />
@@ -370,7 +368,6 @@ exports[`SignIn Screen should render correctly 1`] = `
                 "width": "100%",
               }
             }
-            testID="loginButton"
           >
             <Text
               style={

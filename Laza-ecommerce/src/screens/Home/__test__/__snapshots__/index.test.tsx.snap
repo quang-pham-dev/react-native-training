@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Screen Should renders correctly 1`] = `
+<RNCSafeAreaView
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "flex": 1,
+        "paddingHorizontal": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "marginTop": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 45,
+                "width": 45,
+              }
+            }
+          />
+        </View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 45,
+                "width": 45,
+              }
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginTop": 15,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+                "textTransform": "none",
+              },
+              Object {
+                "color": "#1D1E20",
+                "fontFamily": "Inter_600SemiBold",
+                "fontSize": 28,
+                "lineHeight": 30,
+              },
+            ]
+          }
+        >
+          Hello
+        </Text>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "textTransform": "none",
+            },
+            Object {
+              "color": "#8F959E",
+              "fontFamily": "Inter_400Regular",
+              "fontSize": 15,
+              "marginTop": 5,
+            },
+          ]
+        }
+      >
+        Welcome to Laza.
+      </Text>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginVertical": 20,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#F5F6FA",
+                "borderRadius": 10,
+                "flex": 1,
+                "flexDirection": "row",
+                "height": 50,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "height": 20,
+                  "justifyContent": "center",
+                  "marginLeft": 15,
+                  "opacity": 1,
+                  "width": 20,
+                }
+              }
+            >
+              <Image
+                source={1}
+                style={
+                  Object {
+                    "height": "100%",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <TextInput
+              allowFontScaling={true}
+              autoCorrect={false}
+              onChangeText={[Function]}
+              onSubmitEditing={[Function]}
+              placeholder="Search.."
+              rejectResponderTermination={true}
+              style={
+                Array [
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingLeft": 12,
+                    "paddingRight": 50,
+                  },
+                  Object {},
+                ]
+              }
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "marginLeft": 10,
+                "opacity": 1,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "height": 50,
+                  "width": 50,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={Object {}}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingBottom": 15,
+            }
+          }
+        >
+          <View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#1D1E20",
+                    "fontSize": 17,
+                  },
+                  Object {
+                    "color": "#1D1E20",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 18,
+                  },
+                ]
+              }
+            >
+              Choose Brand
+            </Text>
+          </View>
+          <View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#1D1E20",
+                    "fontSize": 17,
+                  },
+                  Object {
+                    "color": "#8F959E",
+                    "fontFamily": "Inter_400Regular",
+                    "fontSize": 13,
+                    "lineHeight": 14,
+                  },
+                ]
+              }
+            >
+              View All
+            </Text>
+          </View>
+        </View>
+        <RCTScrollView
+          ListEmptyComponent={[Function]}
+          disableVirtualization={false}
+          getItem={[Function]}
+          getItemCount={[Function]}
+          horizontal={true}
+          initialNumToRender={10}
+          keyExtractor={[Function]}
+          maxToRenderPerBatch={10}
+          onContentSizeChange={[Function]}
+          onEndReachedThreshold={2}
+          onLayout={[Function]}
+          onMomentumScrollEnd={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEventThrottle={50}
+          showsHorizontalScrollIndicator={false}
+          stickyHeaderIndices={Array []}
+          updateCellsBatchingPeriod={50}
+          viewabilityConfigCallbackPairs={Array []}
+          windowSize={21}
+        >
+          <View>
+            <Text>
+              Empty Brand.
+            </Text>
+          </View>
+        </RCTScrollView>
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginTop": 15,
+            }
+          }
+        >
+          <View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#1D1E20",
+                    "fontSize": 17,
+                  },
+                  Object {
+                    "color": "#1D1E20",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 18,
+                  },
+                ]
+              }
+            >
+              New Arraival
+            </Text>
+          </View>
+          <View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#1D1E20",
+                    "fontSize": 17,
+                  },
+                  Object {
+                    "color": "#8F959E",
+                    "fontFamily": "Inter_400Regular",
+                    "fontSize": 13,
+                    "lineHeight": 14,
+                  },
+                ]
+              }
+            >
+              View All
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginBottom": 70,
+              "marginTop": 15,
+            }
+          }
+        >
+          <RCTScrollView
+            ListEmptyComponent={[Function]}
+            disableVirtualization={false}
+            getItem={[Function]}
+            getItemCount={[Function]}
+            horizontal={false}
+            initialNumToRender={10}
+            keyExtractor={[Function]}
+            maxToRenderPerBatch={10}
+            onContentSizeChange={[Function]}
+            onEndReachedThreshold={2}
+            onLayout={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={false}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            showsVerticalScrollIndicator={false}
+            stickyHeaderIndices={Array []}
+            updateCellsBatchingPeriod={50}
+            viewabilityConfigCallbackPairs={Array []}
+            windowSize={21}
+          >
+            <View>
+              <View>
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#1D1E20",
+                        "fontSize": 17,
+                      },
+                      Object {
+                        "color": "#1D1E20",
+                        "fontFamily": "Inter_400Regular",
+                        "fontSize": 17,
+                      },
+                    ]
+                  }
+                >
+                  No Products!
+                </Text>
+              </View>
+            </View>
+          </RCTScrollView>
+        </View>
+      </View>
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;

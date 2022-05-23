@@ -1,11 +1,16 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { Image, TouchableOpacity, View } from 'react-native';
+
 // Components
 import Label from 'components/Label';
-// Type
-import { BrandCardProps } from 'types/Brands';
-// Theme
-import { Colors, Fonts } from 'styles/themes';
+
+// Types
+import { IBrandCardProps } from 'types/models/Brands';
+
+// Themes
+import Fonts from 'themes/Fonts';
+import Colors from 'themes/Colors';
+
 // Styles
 import styles from './styles';
 
@@ -13,13 +18,15 @@ const BrandCard = ({
   brand,
   handleNavigationBrandDetailScreen,
   brandCardStyles,
-}: BrandCardProps) => {
+}: IBrandCardProps) => {
+  const handleNavigationBrandDetailScreenPress = useCallback(() => {
+    handleNavigationBrandDetailScreen(brand.id);
+  }, [brand.id, handleNavigationBrandDetailScreen]);
   return (
     <TouchableOpacity
       testID='brandCard'
-      onPress={() => handleNavigationBrandDetailScreen(brand.id)}
-      style={[styles.brandCardContainer, brandCardStyles]}
-    >
+      onPress={handleNavigationBrandDetailScreenPress}
+      style={[styles.brandCardContainer, brandCardStyles]}>
       <View style={[styles.brandCardWrapper]}>
         <View style={styles.brandLogoWrapper}>
           <Image style={styles.brandLogo} source={{ uri: brand.logoUrl }} />
@@ -29,8 +36,7 @@ const BrandCard = ({
           fontSize={Fonts.size.normal}
           fontFamily={Fonts.fontFamily.Inter_500Medium}
           color={Colors.textBlack}
-          labelName={brand.name}
-        ></Label>
+          labelName={brand.name}></Label>
       </View>
     </TouchableOpacity>
   );

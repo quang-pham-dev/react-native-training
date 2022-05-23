@@ -1,9 +1,13 @@
 import React from 'react';
-import { PRODUCTS_SIZE } from 'constants/Products';
 import { View, ScrollView, Pressable, Text } from 'react-native';
+
+// Constants
+import { PRODUCTS_SIZE } from 'constants/Products';
+
+// Styles
 import styles from './styles';
 
-export function ProductSize() {
+const ProductSize = () => {
   return (
     <View style={styles.sizeContainer}>
       <View style={styles.textSizeWrapper}>
@@ -19,4 +23,6 @@ export function ProductSize() {
       </ScrollView>
     </View>
   );
-}
+};
+
+export default ProductSize;

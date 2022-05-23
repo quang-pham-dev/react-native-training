@@ -1,22 +1,27 @@
-import React, { memo } from 'react';
+import React, { useCallback } from 'react';
 import { TouchableOpacity, View } from 'react-native';
+
 // Components
 import Button from 'components/Button';
 import Title from 'components/Title';
-// Themes
-import { IMAGES } from 'styles/themes';
-// Types
-import { GetStartedScreenProps } from 'types/Screens';
+
 // Constants
-import Screens from 'constants/Screens';
+import { SCREENS_ROUTES } from 'constants/Screens';
+
+// Types
+import { IGetStartedScreenProps } from 'types/screens/GetStarted';
+
+// Themes
+import IMAGES from 'themes/Images';
+
 // Styles
 import styles from './styles';
 
-function GetStartedScreen({ navigation }: GetStartedScreenProps) {
+function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
   // handle navigate to SignIn screen
-  const handlePressNavigateToSignIn = () => {
-    navigation.navigate(Screens.SignIn.name);
-  };
+  const handlePressNavigateToSignIn = useCallback(() => {
+    navigation.navigate(SCREENS_ROUTES.AUTH.SIGN_IN.name);
+  }, [navigation]);
 
   return (
     <View style={styles.container}>
@@ -28,7 +33,7 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
       </View>
       <View style={styles.main}>
         <Button
-          testID='buttonFacebook'
+          testID='facebookButton'
           text={'Facebook'}
           icon={IMAGES.iconFacebook}
           buttonStyles={[styles.socialButton, styles.facebookButton]}
@@ -37,7 +42,7 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
           onPress={() => {}}
         />
         <Button
-          testID='buttonTwitter'
+          testID='TwitterButton'
           text={'Twitter'}
           icon={IMAGES.iconTwitter}
           buttonStyles={[styles.socialButton, styles.twitterButton]}
@@ -46,7 +51,7 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
           onPress={() => {}}
         />
         <Button
-          testID='buttonGoogle'
+          testID='GoogleButton'
           text={'Google'}
           icon={IMAGES.iconGoogle}
           buttonStyles={[styles.socialButton, styles.googleButton]}
@@ -75,4 +80,4 @@ function GetStartedScreen({ navigation }: GetStartedScreenProps) {
   );
 }
 
-export default memo(GetStartedScreen);
+export default GetStartedScreen;

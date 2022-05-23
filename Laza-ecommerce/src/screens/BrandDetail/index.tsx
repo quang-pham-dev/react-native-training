@@ -1,27 +1,38 @@
-import React, { memo, useContext, useEffect } from 'react';
+import React, { useCallback, useContext, useEffect, useMemo } from 'react';
 import { Alert, Image, Pressable, View, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+
 // Components
 import ProductsList from 'components/ProductsList';
 import Title from 'components/Title';
+import LoadingIndicator from 'components/LoadingIndicator';
+
 // Context
 import { AppContext } from 'context/AppContext';
+import {
+  GET_PRODUCTS_BY_BRAND_ID_FAILED,
+  GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
+} from 'context/actions/products.actions';
+
 // API
 import { productsService } from 'api/products.api';
-import Screens from 'constants/Screens';
+
+// Constants
+import { SCREENS_ROUTES } from 'constants/Screens';
+
 // Types
-import { FETCH_PRODUCTS_BY_BRAND_ID } from 'types/Actions';
-import { BrandProps } from 'types/Brands';
-import { BrandDetailProps } from 'types/Screens';
+import { Brand } from 'types/models/Brands';
+import { IBrandDetailProps } from 'types/screens/BrandDetail';
+
 // Theme
-import { IMAGES } from 'styles/themes';
+import IMAGES from 'themes/Images';
+
 // Styles
 import styles from './styles';
 
-const BrandDetailScreen = ({ navigation, route }: BrandDetailProps) => {
+const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   const id = route.params;
   const { productState, productDispatch, brandState } = useContext(AppContext);
-  const { productsByBrandId } = productState;
 
   // handle back button
   const handlePressBack = () => {
@@ -29,30 +40,42 @@ const BrandDetailScreen = ({ navigation, route }: BrandDetailProps) => {
   };
 
   useEffect(() => {
-    const fetchProductsByBrandId = async () => {
-      try {
-        const { data } = await productsService.fetchProductByBrandId(id);
-        productDispatch({
-          type: FETCH_PRODUCTS_BY_BRAND_ID,
-          payload: data,
-        });
-      } catch (error) {
-        Alert.alert('Error', error.message);
-      }
-    };
     fetchProductsByBrandId();
   }, [id, productDispatch]);
 
+  const fetchProductsByBrandId = async () => {
+    try {
+      const { data } = await productsService.getProductByBrandId(id);
+      productDispatch({
+        type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
+        payload: data,
+      });
+    } catch (error) {
+      productDispatch({
+        type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
+        payload: error,
+      });
+
+      Alert.alert('Error', error.message);
+    }
+  };
+
   // get current brand
-  const currentBrand = brandState.brands.filter((brand: BrandProps) => brand.id === id);
+  const currentBrand = useMemo(
+    () => brandState?.brands?.filter((brand: Brand) => brand.id === id),
+    [brandState, id],
+  );
 
   // handle like product
   const handleLikeProduct = () => {};
 
   // handle action navigate to Product Detail Screen
-  const handleNavigationProductDetailScreen = (id: string) => {
-    navigation.navigate(Screens.ProductDetail.name, id);
-  };
+  const handleNavigationProductDetailScreen = useCallback(
+    (id: string) => {
+      navigation.navigate(SCREENS_ROUTES.APP.PRODUCT_DETAIL.name, id);
+    },
+    [navigation, id],
+  );
 
   return (
     <View style={styles.container}>
@@ -76,9 +99,9 @@ const BrandDetailScreen = ({ navigation, route }: BrandDetailProps) => {
       <View style={styles.contentContainer}>
         <View style={styles.contentHeader}>
           <View>
-            {productsByBrandId && (
+            {productState?.productsByBrandId && (
               <Title
-                titleName={`${productsByBrandId.length | 0} Items`}
+                titleName={`${productState?.productsByBrandId.length | 0} Items`}
                 titleStyles={styles.totalCount}
               />
             )}
@@ -93,8 +116,9 @@ const BrandDetailScreen = ({ navigation, route }: BrandDetailProps) => {
         </View>
 
         {/* List Product */}
+        {productState?.isProcessing && <LoadingIndicator />}
         <ProductsList
-          productsData={productsByBrandId}
+          productsData={productState?.productsByBrandId}
           handleLikeProduct={handleLikeProduct}
           handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
         />
@@ -103,4 +127,4 @@ const BrandDetailScreen = ({ navigation, route }: BrandDetailProps) => {
   );
 };
 
-export default memo(BrandDetailScreen);
+export default BrandDetailScreen;

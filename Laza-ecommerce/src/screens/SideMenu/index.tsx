@@ -1,35 +1,46 @@
-import React, { memo, useContext, useState } from 'react';
+import React, { memo, useCallback, useContext, useState } from 'react';
 import { Alert, Image, Switch, TouchableOpacity, View } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { DrawerActions } from '@react-navigation/native';
+
+// Screens
+import { SCREENS_ROUTES } from 'constants/Screens';
+
 // Components
 import Button from 'components/Button';
 import Title from 'components/Title';
-// Screens
-import Screens from 'constants/Screens';
-// Theme
-import { IMAGES } from 'styles/themes';
-// Styles
-import styles from './styles';
-// Types
-import { SideMenuPros } from 'types/Menu';
-import { SIGN_OUT } from 'types/Actions';
-// API
-import { authService } from 'api';
+
 // Context
 import { AppContext } from 'context/AppContext';
+import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'context/actions/auth.action';
+
+// API
+import { authService } from 'api';
+
 // Constants
 import { AUTH_DATA } from 'constants/Common';
 
-const SideMenu = ({ navigation }: SideMenuPros) => {
+// Types
+import { ISideMenuPros } from 'types/screens/Layout';
+
+// Themes
+import IMAGES from 'themes/Images';
+
+// Styles
+import styles from './styles';
+
+// Utils
+import { remove } from 'utils/localStorage';
+
+const SideMenu = ({ navigation }: ISideMenuPros) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   const { authState, authDispatch } = useContext(AppContext);
-  // TODO get Order from API Because feature is not developed yet
+
   const orderCount = 3 | 0;
 
   // handel action sign out
-  const handlePressLogout = () => {
+
+  const handlePressLogout = useCallback(() => {
     Alert.alert('Logout!', 'Are you sure you want to logout?', [
       {
         text: 'Cancel',
@@ -39,39 +50,42 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
         text: 'OK',
         onPress: async () => {
           navigation.toggleDrawer();
+
+          authDispatch({ type: SIGN_OUT });
           try {
             await authService.signOut();
-            await AsyncStorage.removeItem(AUTH_DATA);
+            await remove(AUTH_DATA);
             authDispatch({
-              type: SIGN_OUT,
+              type: SIGN_OUT_SUCCESS,
             });
           } catch (error) {
+            authDispatch({ type: SIGN_OUT_FAILED, payload: error });
             Alert.alert('Error', error.message);
           }
         },
       },
     ]);
-  };
+  }, []);
 
   // handle Close menu
-  const handleCloseMenu = () => {
+  const handleCloseMenu = useCallback(() => {
     navigation.dispatch(DrawerActions.closeDrawer());
-  };
+  }, [navigation]);
 
   // handle action navigate to Bag screen
-  const handleNavigateToBagScreen = () => {
-    navigation.navigate(Screens.Bag.name);
-  };
+  const handleNavigateToBagScreen = useCallback(() => {
+    navigation.navigate(SCREENS_ROUTES.STACK.BAGS.name);
+  }, [navigation]);
 
   // handle action navigate to WishList screen
-  const handleNavigateToWishlistScreen = () => {
-    navigation.navigate(Screens.WishList.name);
-  };
+  const handleNavigateToWishlistScreen = useCallback(() => {
+    navigation.navigate(SCREENS_ROUTES.STACK.WISHLIST.name);
+  }, [navigation]);
 
   // handle action navigate to Wallet screen
-  const handleNavigateToWalletScreen = () => {
-    navigation.navigate(Screens.Wallet.name);
-  };
+  const handleNavigateToWalletScreen = useCallback(() => {
+    navigation.navigate(SCREENS_ROUTES.STACK.WALLET.name);
+  }, [navigation]);
 
   return (
     <View style={styles.container}>
@@ -105,7 +119,6 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
             </View>
           </View>
           <View style={styles.orderInfo}>
-            {/* // TODO : get order info from store or current state */}
             <Title titleName={`${orderCount} Orders`} titleStyles={styles.textOrder} />
           </View>
         </View>
@@ -130,32 +143,28 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
         <TouchableOpacity
           style={[styles.boxWrapper]}
           onPress={() => {}}
-          testID='AccountInformation'
-        >
+          testID='AccountInformation'>
           <Image style={styles.icons} source={IMAGES.iconInfo} />
           <Title titleName='Account Information' titleStyles={styles.text} />
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.boxWrapper]}
           onPress={handleNavigateToBagScreen}
-          testID='Side-menu-Bag'
-        >
+          testID='Side-menu-Bag'>
           <Image style={styles.icons} source={IMAGES.iconBagDrawer} />
           <Title titleName='Order' titleStyles={styles.text} />
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.boxWrapper]}
           onPress={handleNavigateToWalletScreen}
-          testID='Side-menu-Wallet'
-        >
+          testID='Side-menu-Wallet'>
           <Image style={styles.icons} source={IMAGES.iconWalletDrawer} testID='Side-menu-Cards' />
           <Title titleName='My Cards' titleStyles={styles.text} />
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.boxWrapper]}
           onPress={handleNavigateToWishlistScreen}
-          testID='Side-menu-Wishlist'
-        >
+          testID='Side-menu-Wishlist'>
           <Image style={styles.icons} source={IMAGES.iconHeartDrawer} />
           <Title titleName='Wishlist' titleStyles={styles.text} />
         </TouchableOpacity>
@@ -164,8 +173,7 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
         <TouchableOpacity
           style={[styles.boxWrapper]}
           onPress={handlePressLogout}
-          testID='Side-menu-Logout'
-        >
+          testID='Side-menu-Logout'>
           <Image style={styles.icons} source={IMAGES.iconLogout} />
           <Title titleName='Logout' titleStyles={styles.logoutText} />
         </TouchableOpacity>
@@ -174,4 +182,4 @@ const SideMenu = ({ navigation }: SideMenuPros) => {
   );
 };
 
-export default memo(SideMenu);
+export default SideMenu;

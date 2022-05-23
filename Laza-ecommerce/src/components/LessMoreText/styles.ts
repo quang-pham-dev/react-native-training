@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
-import { Fonts } from 'styles/themes';
+
+import Fonts from 'themes/Fonts';
 
 const styles = StyleSheet.create({
   showMoreContainer: {},

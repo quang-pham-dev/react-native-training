@@ -1,5 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
+
 import ProductCard from 'components/ProductCard';
 import { product } from '__mocks__/dataMock/products';
 import { Pressable } from 'react-native';

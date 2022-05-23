@@ -1,86 +1,114 @@
 /* eslint-disable indent */
-import React, { memo, useContext, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { Alert, KeyboardAvoidingView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+
 // Components
 import BrandsCardList from 'components/BrandList';
 import Header from 'components/Layout/Header';
 import SearchBar from 'components/SearchBar';
 import ProductsList from 'components/ProductsList';
 import Title from 'components/Title';
-// Styles
-import styles from './styles';
-// Types
-import { HomeScreenProps } from 'types/Screens';
-import { ProductProps } from 'types/Products';
-import { FETCH_BRANDS, FETCH_PRODUCTS } from 'types/Actions';
-// Constants
-import Screens from 'constants/Screens';
+import Label from 'components/Label';
+import LoadingIndicator from 'components/LoadingIndicator';
+
+// Context
 import { AppContext } from 'context/AppContext';
-// Api
+import { GET_PRODUCTS_FAILED, GET_PRODUCTS_SUCCESS } from 'context/actions/products.actions';
+import { GET_BRANDS_FAILED, GET_BRANDS_SUCCESS } from 'context/actions/brands.action';
+
+// API
 import { productsService } from 'api/products.api';
 import { brandsService } from 'api/brands.api';
-import Label from 'components/Label';
-import { Colors, Fonts } from 'styles/themes';
 
-const HomeScreen = ({ navigation }: HomeScreenProps) => {
-  // Get Current User
+// Types
+import { IHomeScreenProps } from 'types/screens/Home';
+import { Product } from 'types/models/Products';
+
+// Constants
+import { SCREENS_ROUTES } from 'constants/Screens';
+
+// Theme
+import Fonts from 'themes/Fonts';
+import Colors from 'themes/Colors';
+
+// Styles
+import styles from './styles';
+
+const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const { authState, productState, brandState, productDispatch, brandDispatch } =
     useContext(AppContext);
-  const { currentUser } = authState;
-  const { brands: brandsData } = brandState;
-  const { products } = productState;
 
   // State for search bar
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState<string>('');
 
   useEffect(() => {
-    fetchBrands();
-    fetchProducts();
+    getProducts();
+    getBrands();
   }, [productDispatch, brandDispatch]);
 
-  // Fetch Products from API
-  const fetchProducts = async () => {
+  // GET PRODUCTS
+  const getProducts = async () => {
     try {
-      const { data } = await productsService.fetchProducts();
+      const { data } = await productsService.getProducts();
       productDispatch({
-        type: FETCH_PRODUCTS,
+        type: GET_PRODUCTS_SUCCESS,
         payload: data,
       });
     } catch (error) {
+      productDispatch({
+        type: GET_PRODUCTS_FAILED,
+        payload: error,
+      });
+
       Alert.alert('Error', error.message);
     }
   };
 
-  // Fetch Brands from API
-  const fetchBrands = async () => {
+  // GET BRANDS
+  const getBrands = async () => {
     try {
       const { data } = await brandsService.fetchBrands();
       brandDispatch({
-        type: FETCH_BRANDS,
+        type: GET_BRANDS_SUCCESS,
         payload: data,
       });
     } catch (error) {
+      brandDispatch({
+        type: GET_BRANDS_FAILED,
+        payload: error,
+      });
+
       Alert.alert('Error', error.message);
     }
   };
 
-  // master Data
-  const masterData = searchValue
-    ? products.filter((product: ProductProps) =>
-        product.name.toLowerCase().includes(searchValue.toLowerCase()),
-      )
-    : products;
+  // master Data  render Product List
+  const masterData = useMemo(
+    () =>
+      searchValue
+        ? productState?.products.filter((product: Product) =>
+            product.name.toLowerCase().includes(searchValue.toLowerCase()),
+          )
+        : productState?.products,
+    [searchValue, productState?.products],
+  );
 
   // handle action navigate to Brand Detail Screen
-  const handleNavigationBrandDetailScreen = (id: string) => {
-    navigation.navigate(Screens.BrandDetail.name, id);
-  };
+  const handleNavigationBrandDetailScreen = useCallback(
+    (id: string) => {
+      navigation.navigate(SCREENS_ROUTES.APP.BRAND_DETAIL.name, id);
+    },
+    [navigation],
+  );
 
   // handle action navigate to Product Detail Screen
-  const handleNavigationProductDetailScreen = (id: string) => {
-    navigation.navigate(Screens.ProductDetail.name, id);
-  };
+  const handleNavigationProductDetailScreen = useCallback(
+    (id: string) => {
+      navigation.navigate(SCREENS_ROUTES.APP.PRODUCT_DETAIL.name, id);
+    },
+    [navigation],
+  );
 
   // handle action Like Product
   const handleLikeProduct = () => {};
@@ -95,21 +123,25 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
           <Header navigation={navigation} />
           {/* end header layout */}
           <View style={styles.headerTitleWrapper}>
-            <Title titleName='Hello' titleStyles={styles.headerTitle}></Title>
-            {currentUser?.username ? (
-              <Title titleName={currentUser?.username} titleStyles={styles.userNameTitle}></Title>
+            <Title titleName='Hello' titleStyles={styles.headerTitle} />
+            {authState?.currentUser?.username ? (
+              <Title
+                titleName={authState?.currentUser?.username}
+                titleStyles={styles.userNameTitle}
+              />
             ) : null}
           </View>
           <Title titleName='Welcome to Laza.' titleStyles={styles.subTitle}></Title>
           <SearchBar
-            onChangeText={text => setSearchValue(text)}
+            onChangeText={(text: string) => setSearchValue(text)}
             onSubmitEditing={onSubmitEditing}
             value={searchValue}
           />
         </View>
         <View style={styles.body}>
+          {brandState?.isProcessing && <LoadingIndicator />}
           <BrandsCardList
-            brandsData={brandsData}
+            brandsData={brandState?.brands}
             handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen}
           />
           <View>
@@ -129,6 +161,7 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
                 color={Colors.textGray}
               />
             </View>
+            {productState?.isProcessing && <LoadingIndicator />}
             <ProductsList
               productsData={masterData}
               handleLikeProduct={handleLikeProduct}
@@ -141,4 +174,4 @@ const HomeScreen = ({ navigation }: HomeScreenProps) => {
   );
 };
 
-export default memo(HomeScreen);
+export default HomeScreen;

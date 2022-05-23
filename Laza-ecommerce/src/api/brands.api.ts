@@ -1,11 +1,17 @@
-import http from './http';
+// API
+import http from 'api/http';
 
-const fetchBrands = () => {
-  return http.get('brands');
+// Constants
+import { ENDPOINTS } from 'constants/Common';
+
+// get all brands
+const fetchBrands = async () => {
+  return await http.get(ENDPOINTS.BRAND.GET_BRANDS);
 };
 
-const fetchBrandById = (id: string) => {
-  return http.get(`brands?id=${id}`);
+// get brand by id
+const fetchBrandById = async (id: string) => {
+  return await http.get(`${ENDPOINTS.BRAND.GET_BRANDS}?id=${id}`);
 };
 export const brandsService = {
   fetchBrands,

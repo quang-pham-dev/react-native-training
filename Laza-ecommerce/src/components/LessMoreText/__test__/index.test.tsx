@@ -1,6 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { MoreLessText } from 'components/LessMoreText';
+
+import MoreLessText from 'components/LessMoreText';
 
 describe('Read more Component', () => {
   test('should render correctly', () => {
