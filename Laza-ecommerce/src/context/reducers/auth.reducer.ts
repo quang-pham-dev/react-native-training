@@ -35,6 +35,7 @@ const authenticationReducer = (state: AuthState = InitialAuthState, action: Auth
         isLoading: false,
         type: action.type,
         isInitialized: true,
+        isProcessing: false,
         isAuthenticated: Boolean(action.payload?.access_token),
         currentUser: action.payload?.user,
         isSignout: false,

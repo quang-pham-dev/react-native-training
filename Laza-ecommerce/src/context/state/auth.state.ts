@@ -16,7 +16,7 @@ export const InitialAuthState: AuthState = {
   isFirstTime: false,
   isAuthenticated: false,
   error: null,
-  isProcessing: true,
+  isProcessing: false,
   currentUser: undefined,
   signIn: () => Promise.resolve(),
   signOut: () => Promise.resolve(),
