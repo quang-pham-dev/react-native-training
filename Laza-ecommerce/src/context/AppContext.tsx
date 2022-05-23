@@ -21,8 +21,6 @@ const AppProvider = ({ children }: IAppProviderProps) => {
   const [productState, productDispatch] = useReducer<any>(productsReducer, InitialProductsState);
   const [brandState, brandDispatch] = useReducer<any>(brandsReducer, InitialBrandsState);
 
-  console.log('AppProvider:>> ', authState);
-
   const appContextValue = useMemo(
     () => ({
       authState,

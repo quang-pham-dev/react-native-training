@@ -2,15 +2,14 @@ import React, { memo, useCallback } from 'react';
 import { FlatList, View } from 'react-native';
 
 // Components
-import Label from 'components/Label';
 import ProductCard from 'components/ProductCard';
+import Title from 'components/Title';
+
+// Constants
+import { PRODUCTS_EMPTY_RESULT } from 'constants/Products';
 
 // Types
-import { Product, IProductsCardListProps, IProductsListProps } from 'types/models/Products';
-
-// Themes
-import Fonts from 'themes/Fonts';
-import Colors from 'themes/Colors';
+import { IProductsCardListProps, IProductsListProps } from 'types/models/Products';
 
 // Styles
 import styles from './styles';
@@ -28,14 +27,7 @@ const ProductsList = ({
   );
 
   // handle render when empty list
-  const renderEmptyList = () => (
-    <Label
-      labelName='No Products!'
-      fontSize={Fonts.size.default}
-      fontFamily={Fonts.fontFamily.Inter_400Regular}
-      color={Colors.textBlack}
-    />
-  );
+  const renderEmptyList = () => <Title titleName={PRODUCTS_EMPTY_RESULT} />;
 
   // handle render Card component
   const renderProductCard = useCallback(

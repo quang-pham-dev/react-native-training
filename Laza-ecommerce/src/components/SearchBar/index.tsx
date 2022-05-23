@@ -19,8 +19,6 @@ const SearchBar = ({
 }: ISearchBarProps) => {
   const [valueState, setValueState] = React.useState(value);
 
-  console.log('SearchBar', valueState);
-
   const onChangeTextHandler = useCallback(
     (text: string) => {
       setValueState(text);
