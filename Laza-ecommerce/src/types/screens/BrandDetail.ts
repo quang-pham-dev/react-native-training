@@ -1,4 +1,4 @@
-import { Product } from 'types/models/Products';
+import { IProduct } from 'types/models/Products';
 
 export interface IBrandDetailProps {
   navigation: {
@@ -8,5 +8,5 @@ export interface IBrandDetailProps {
   route: {
     params: string;
   };
-  productData: Product;
+  productData: IProduct;
 }

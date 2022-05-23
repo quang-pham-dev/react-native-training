@@ -1,10 +1,10 @@
-import { Product } from 'types/models/Products';
+import { IProduct } from 'types/models/Products';
 
 export interface ProductsState {
   isLoading: boolean;
   isProcessing: boolean;
   error: string | null;
-  products: Product[];
+  products: IProduct[];
   getProducts(): Promise<void>;
   getProduct(id: string): Promise<void>;
   getProductsByBrandId(id: string): Promise<void>;

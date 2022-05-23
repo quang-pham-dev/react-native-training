@@ -15,7 +15,7 @@ import LoadingIndicator from 'components/LoadingIndicator';
 // Context
 import { AppContext } from 'context/AppContext';
 import { GET_PRODUCTS_FAILED, GET_PRODUCTS_SUCCESS } from 'context/actions/products.actions';
-import { GET_BRANDS_FAILED, GET_BRANDS_SUCCESS } from 'context/actions/brands.action';
+import { GET_BRANDS_FAILED, GET_BRANDS_SUCCESS } from 'context/actions/brands.actions';
 
 // API
 import { productsService } from 'api/products.api';
@@ -23,7 +23,7 @@ import { brandsService } from 'api/brands.api';
 
 // Types
 import { IHomeScreenProps } from 'types/screens/Home';
-import { Product } from 'types/models/Products';
+import { IProduct } from 'types/models/Products';
 
 // Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
@@ -87,7 +87,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const masterData = useMemo(
     () =>
       searchValue
-        ? productState?.products.filter((product: Product) =>
+        ? productState?.products.filter((product: IProduct) =>
             product.name.toLowerCase().includes(searchValue.toLowerCase()),
           )
         : productState?.products,
@@ -145,6 +145,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
             handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen}
           />
           <View>
+            {productState?.isProcessing && <LoadingIndicator />}
             <View style={styles.productTitle}>
               <Label
                 labelName='New Arraival'
@@ -161,7 +162,6 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
                 color={Colors.textGray}
               />
             </View>
-            {productState?.isProcessing && <LoadingIndicator />}
             <ProductsList
               productsData={masterData}
               handleLikeProduct={handleLikeProduct}

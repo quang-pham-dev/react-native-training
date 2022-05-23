@@ -1,4 +1,4 @@
-import { Product } from 'types/models/Products';
+import { IProduct } from 'types/models/Products';
 
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const GET_PRODUCTS_SUCCESS = 'GET_PRODUCTS_SUCCESS';
@@ -15,7 +15,7 @@ export const GET_PRODUCTS_BY_BRAND_ID_FAILED = 'GET_PRODUCTS_BY_BRAND_ID_FAILED'
 export const RESET_STATE = 'RESET_STATE';
 
 export interface ProductsAction {
-  payload?: Product[];
+  payload?: IProduct[];
   type: string;
   error?: string;
 }

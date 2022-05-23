@@ -1,6 +1,6 @@
-import { Product } from 'types/models/Products';
+import { IProduct } from 'types/models/Products';
 
-export const product: Product = {
+export const product: IProduct = {
   id: '0',
   brandId: '1',
   name: 'Nike',
@@ -56,7 +56,7 @@ export const product: Product = {
     'lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,adipisicing elit. Quisquam, quia.',
 };
 
-export const products: Product[] = [
+export const products: IProduct[] = [
   {
     id: '0',
     brandId: '1',

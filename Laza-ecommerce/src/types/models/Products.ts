@@ -1,6 +1,6 @@
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
-export interface Product {
+export interface IProduct {
   id: string;
   brandId: string;
   price: number;
@@ -37,14 +37,14 @@ export interface IProductCardProps {
   productCardStyles?: ViewStyle;
 }
 
-export interface IProductsCardListProps extends Product {
+export interface IProductsCardListProps extends IProduct {
   productCardListStyles?: StyleProp<TextStyle>;
 }
 
 export interface IProductsListProps {
   productsData: IProductsCardListProps[];
   productCardStyles?: ViewStyle;
-  handleLikeProduct: (item: Product) => void;
+  handleLikeProduct: (item: IProduct) => void;
   handleNavigationProductDetailScreen: (id: string) => void;
   handleRefreshing?: () => void;
 }
