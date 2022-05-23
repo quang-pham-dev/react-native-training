@@ -41,6 +41,6 @@ describe('GetStarted Screen', () => {
     const { getByTestId } = tree;
     const link = getByTestId('LinkToSignIn');
     fireEvent(link, 'press');
-    expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.AUTH.SIGN_IN.name);
+    expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name);
   });
 });

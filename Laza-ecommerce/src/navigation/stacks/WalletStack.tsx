@@ -10,9 +10,9 @@ import { SCREENS_ROUTES } from 'constants/Screens';
 const Stack = createNativeStackNavigator();
 
 const WalletStack = () => (
-  <Stack.Navigator initialRouteName={SCREENS_ROUTES.APP.WALLET.name}>
+  <Stack.Navigator initialRouteName={SCREENS_ROUTES.WALLET_STACK.WALLET_SCREEN.name}>
     <Stack.Screen
-      name={SCREENS_ROUTES.APP.WALLET.name}
+      name={SCREENS_ROUTES.WALLET_STACK.WALLET_SCREEN.name}
       component={DummyScreen}
       options={{ headerShown: false }}
     />

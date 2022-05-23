@@ -20,7 +20,7 @@ import styles from './styles';
 function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
   // handle navigate to SignIn screen
   const handlePressNavigateToSignIn = useCallback(() => {
-    navigation.navigate(SCREENS_ROUTES.AUTH.SIGN_IN.name);
+    navigation.navigate(SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name);
   }, [navigation]);
 
   return (

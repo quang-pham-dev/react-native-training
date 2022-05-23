@@ -21,7 +21,7 @@ import IMAGES from 'themes/Images';
 
 const BottomTab = createBottomTabNavigator();
 
-const AppNavigator = () => {
+const AppStackNavigator = () => {
   return (
     <BottomTab.Navigator
       initialRouteName={SCREENS_ROUTES.STACK.HOME.name}
@@ -120,7 +120,7 @@ function AppDrawerStack() {
         },
       }}
       drawerContent={({ navigation }) => <SideMenu navigation={navigation} />}>
-      <Drawer.Screen name={SCREENS_ROUTES.APP_NAVIGATOR.name} component={AppNavigator} />
+      <Drawer.Screen name={SCREENS_ROUTES.APP_NAVIGATOR.name} component={AppStackNavigator} />
     </Drawer.Navigator>
   );
 }

@@ -13,18 +13,18 @@ const Stack = createNativeStackNavigator();
 
 const HomeStack = () => (
   <Stack.Navigator
-    initialRouteName={SCREENS_ROUTES.APP.HOME.name}
+    initialRouteName={SCREENS_ROUTES.HOME_STACK.HOME_SCREEN.name}
     screenOptions={{
       headerShown: false,
     }}>
     <Stack.Screen
-      name={SCREENS_ROUTES.APP.HOME.name}
+      name={SCREENS_ROUTES.HOME_STACK.HOME_SCREEN.name}
       component={HomeScreen}
       options={{ headerShown: false }}
     />
 
     <Stack.Screen
-      name={SCREENS_ROUTES.APP.PRODUCT_DETAIL.name}
+      name={SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name}
       component={ProductDetail}
       options={{
         headerShown: false,
@@ -32,7 +32,7 @@ const HomeStack = () => (
     />
 
     <Stack.Screen
-      name={SCREENS_ROUTES.APP.BRAND_DETAIL.name}
+      name={SCREENS_ROUTES.HOME_STACK.BRAND_DETAI_SCREENL.name}
       component={BrandDetail}
       options={{
         headerShown: false,

@@ -10,9 +10,9 @@ import { SCREENS_ROUTES } from 'constants/Screens';
 const Stack = createNativeStackNavigator();
 
 const WishListStack = () => (
-  <Stack.Navigator initialRouteName={SCREENS_ROUTES.APP.WISHLIST.name}>
+  <Stack.Navigator initialRouteName={SCREENS_ROUTES.WISHLIST_STACK.WISHLIST_SCREEN.name}>
     <Stack.Screen
-      name={SCREENS_ROUTES.APP.WISHLIST.name}
+      name={SCREENS_ROUTES.WISHLIST_STACK.WISHLIST_SCREEN.name}
       component={DummyScreen}
       options={{ headerShown: false }}
     />

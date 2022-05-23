@@ -13,9 +13,12 @@ const Stack = createNativeStackNavigator();
 const AuthStack = () => (
   <Stack.Navigator
     screenOptions={{ headerShown: false }}
-    initialRouteName={SCREENS_ROUTES.AUTH.GET_STARTED.name}>
-    <Stack.Screen name={SCREENS_ROUTES.AUTH.SIGN_IN.name} component={SignInScreen} />
-    <Stack.Screen name={SCREENS_ROUTES.AUTH.GET_STARTED.name} component={GetStartedScreen} />
+    initialRouteName={SCREENS_ROUTES.AUTH_STACK.GET_STARTED_SCREEN.name}>
+    <Stack.Screen name={SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name} component={SignInScreen} />
+    <Stack.Screen
+      name={SCREENS_ROUTES.AUTH_STACK.GET_STARTED_SCREEN.name}
+      component={GetStartedScreen}
+    />
   </Stack.Navigator>
 );
 

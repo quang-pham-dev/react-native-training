@@ -10,9 +10,9 @@ import { SCREENS_ROUTES } from 'constants/Screens';
 const Stack = createNativeStackNavigator();
 
 const BagsStack = () => (
-  <Stack.Navigator initialRouteName={SCREENS_ROUTES.APP.BAGS.name}>
+  <Stack.Navigator initialRouteName={SCREENS_ROUTES.BAGS_STACK.BAGS_SCREEN.name}>
     <Stack.Screen
-      name={SCREENS_ROUTES.APP.BAGS.name}
+      name={SCREENS_ROUTES.BAGS_STACK.BAGS_SCREEN.name}
       component={DummyScreen}
       options={{ headerShown: false }}
     />

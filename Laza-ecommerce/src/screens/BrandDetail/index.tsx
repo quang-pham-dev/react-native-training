@@ -72,7 +72,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   // handle action navigate to Product Detail Screen
   const handleNavigationProductDetailScreen = useCallback(
     (id: string) => {
-      navigation.navigate(SCREENS_ROUTES.APP.PRODUCT_DETAIL.name, id);
+      navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);
     },
     [navigation, id],
   );
