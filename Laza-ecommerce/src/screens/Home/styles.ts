@@ -46,11 +46,17 @@ const styles = StyleSheet.create({
     color: Colors.textGray,
     marginTop: Metrics.margin.xsm,
   },
+  titleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
   productTitle: {
     marginTop: Metrics.margin.xm,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+  },
+  brandTitle: {
+    paddingBottom: Metrics.padding.xm,
   },
 });
 

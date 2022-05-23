@@ -9,10 +9,11 @@ import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 // Components
 import Button from 'components/Button';
 import TextInput from 'components/TextInput';
+import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
 import { AppContext } from 'context/AppContext';
-import { SIGN_IN_SUCCESS, SIGN_IN_FAILED } from 'context/actions/auth.actions';
+import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'context/actions/auth.actions';
 
 // API
 import { authService } from 'api';
@@ -25,6 +26,7 @@ import { set } from 'utils/localStorage';
 
 // Types
 import { IUserSignIn } from 'types/models/User';
+import { LOADING_SIZE } from 'types/common/Enums';
 
 // Styles
 import { styles } from './styles';
@@ -46,7 +48,7 @@ const loginSchema = Yup.object({
 const LoginForm = () => {
   const [isEnabled, setIsEnabled] = useState(true);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-  const { authDispatch } = useContext(AppContext);
+  const { authState, authDispatch } = useContext(AppContext);
 
   const {
     control,
@@ -61,6 +63,7 @@ const LoginForm = () => {
 
   // handle action call api SignIn when user press Login button
   const handOnSubmit: SubmitHandler<IUserSignIn> = async (loginInfo: IUserSignIn) => {
+    authDispatch({ type: SIGN_IN });
     const { username, password } = loginInfo;
     try {
       const response = await authService.signIn(username, password);
@@ -88,6 +91,7 @@ const LoginForm = () => {
 
   return (
     <>
+      {authState?.isProcessing && <LoadingIndicator loadingSize={LOADING_SIZE.LARGE} />}
       <View style={styles.main}>
         {/* Username */}
         <Controller
@@ -162,6 +166,7 @@ const LoginForm = () => {
             <Text style={styles.Term}> Term and Condition</Text>
           </Text>
         </View>
+
         <Button
           testID='loginButton'
           text='Login'

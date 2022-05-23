@@ -29,22 +29,6 @@ const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: IBran
 
   return (
     <View style={styles.container}>
-      <View style={styles.brandTitle}>
-        <Label
-          labelName='Choose Brand'
-          fontSize={Fonts.size.default}
-          lineHeight={Fonts.lineHeight.sm}
-          fontFamily={Fonts.fontFamily.Inter_500Medium}
-          color={Colors.textBlack}
-        />
-        <Label
-          labelName='View All'
-          fontSize={Fonts.size.small}
-          lineHeight={Fonts.lineHeight.xs}
-          fontFamily={Fonts.fontFamily.Inter_400Regular}
-          color={Colors.textGray}
-        />
-      </View>
       <FlatList
         data={brandsData}
         renderItem={renderBrandCard}

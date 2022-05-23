@@ -10,6 +10,7 @@ import LoadingIndicator from 'components/LoadingIndicator';
 // Context
 import { AppContext } from 'context/AppContext';
 import {
+  GET_PRODUCTS_BY_BRAND_ID,
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
   GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
 } from 'context/actions/products.actions';
@@ -22,6 +23,7 @@ import { SCREENS_ROUTES } from 'constants/Screens';
 
 // Types
 import { Brand } from 'types/models/Brands';
+import { LOADING_SIZE } from 'types/common/Enums';
 import { IBrandDetailProps } from 'types/screens/BrandDetail';
 
 // Theme
@@ -44,6 +46,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   }, [id, productDispatch]);
 
   const fetchProductsByBrandId = async () => {
+    productDispatch({ type: GET_PRODUCTS_BY_BRAND_ID });
     try {
       const { data } = await productsService.getProductByBrandId(id);
       productDispatch({
@@ -97,31 +100,35 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
         </View>
       </View>
       <View style={styles.contentContainer}>
-        <View style={styles.contentHeader}>
-          <View>
-            {productState?.productsByBrandId && (
-              <Title
-                titleName={`${productState?.productsByBrandId.length | 0} Items`}
-                titleStyles={styles.totalCount}
-              />
-            )}
-            <Title titleName='Available in stock' titleStyles={styles.titleContent} />
-          </View>
-          <View style={styles.sortWrapper}>
-            <TouchableOpacity onPress={() => {}}>
-              <MaterialIcons name='sort' size={24} color='black' />
-            </TouchableOpacity>
-            <Title titleName='Sort' titleStyles={styles.sortText} />
-          </View>
-        </View>
+        {productState?.isProcessing ? (
+          <LoadingIndicator loadingSize={LOADING_SIZE.LARGE} />
+        ) : (
+          <>
+            <View style={styles.contentHeader}>
+              <View>
+                {productState?.productsByBrandId && (
+                  <Title
+                    titleName={`${productState?.productsByBrandId?.length | 0} Items`}
+                    titleStyles={styles.totalCount}
+                  />
+                )}
+                <Title titleName='Available in stock' titleStyles={styles.titleContent} />
+              </View>
+              <View style={styles.sortWrapper}>
+                <TouchableOpacity onPress={() => {}}>
+                  <MaterialIcons name='sort' size={24} color='black' />
+                </TouchableOpacity>
+                <Title titleName='Sort' titleStyles={styles.sortText} />
+              </View>
+            </View>
 
-        {/* List Product */}
-        {productState?.isProcessing && <LoadingIndicator />}
-        <ProductsList
-          productsData={productState?.productsByBrandId}
-          handleLikeProduct={handleLikeProduct}
-          handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
-        />
+            <ProductsList
+              productsData={productState?.productsByBrandId}
+              handleLikeProduct={handleLikeProduct}
+              handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
+            />
+          </>
+        )}
       </View>
     </View>
   );

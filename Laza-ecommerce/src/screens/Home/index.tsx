@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { Alert, KeyboardAvoidingView, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -14,7 +13,11 @@ import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
 import { AppContext } from 'context/AppContext';
-import { GET_PRODUCTS_FAILED, GET_PRODUCTS_SUCCESS } from 'context/actions/products.actions';
+import {
+  GET_PRODUCTS,
+  GET_PRODUCTS_FAILED,
+  GET_PRODUCTS_SUCCESS,
+} from 'context/actions/products.actions';
 import { GET_BRANDS_FAILED, GET_BRANDS_SUCCESS } from 'context/actions/brands.actions';
 
 // API
@@ -24,6 +27,7 @@ import { brandsService } from 'api/brands.api';
 // Types
 import { IHomeScreenProps } from 'types/screens/Home';
 import { IProduct } from 'types/models/Products';
+import { LOADING_SIZE } from 'types/common/Enums';
 
 // Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
@@ -49,6 +53,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
   // GET PRODUCTS
   const getProducts = async () => {
+    productDispatch({ type: GET_PRODUCTS });
     try {
       const { data } = await productsService.getProducts();
       productDispatch({
@@ -139,16 +144,10 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           />
         </View>
         <View style={styles.body}>
-          {brandState?.isProcessing && <LoadingIndicator />}
-          <BrandsCardList
-            brandsData={brandState?.brands}
-            handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen}
-          />
-          <View>
-            {productState?.isProcessing && <LoadingIndicator />}
-            <View style={styles.productTitle}>
+          <>
+            <View style={[styles.brandTitle, styles.titleRow]}>
               <Label
-                labelName='New Arraival'
+                labelName='Choose Brand'
                 fontSize={Fonts.size.default}
                 lineHeight={Fonts.lineHeight.sm}
                 fontFamily={Fonts.fontFamily.Inter_500Medium}
@@ -162,11 +161,37 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
                 color={Colors.textGray}
               />
             </View>
-            <ProductsList
-              productsData={masterData}
-              handleLikeProduct={handleLikeProduct}
-              handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
+            {brandState?.isProcessing && <LoadingIndicator loadingSize={LOADING_SIZE.SMALL} />}
+            <BrandsCardList
+              brandsData={brandState?.brands}
+              handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen}
             />
+          </>
+          <View>
+            <>
+              <View style={[styles.productTitle, styles.titleRow]}>
+                <Label
+                  labelName='New Arraival'
+                  fontSize={Fonts.size.default}
+                  lineHeight={Fonts.lineHeight.sm}
+                  fontFamily={Fonts.fontFamily.Inter_500Medium}
+                  color={Colors.textBlack}
+                />
+                <Label
+                  labelName='View All'
+                  fontSize={Fonts.size.small}
+                  lineHeight={Fonts.lineHeight.xs}
+                  fontFamily={Fonts.fontFamily.Inter_400Regular}
+                  color={Colors.textGray}
+                />
+              </View>
+              {productState?.isProcessing && <LoadingIndicator loadingSize={LOADING_SIZE.SMALL} />}
+              <ProductsList
+                productsData={masterData}
+                handleLikeProduct={handleLikeProduct}
+                handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
+              />
+            </>
           </View>
         </View>
       </KeyboardAvoidingView>
