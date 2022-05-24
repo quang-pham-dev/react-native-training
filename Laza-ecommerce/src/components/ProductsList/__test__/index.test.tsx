@@ -3,6 +3,7 @@ import { render } from '@testing-library/react-native';
 
 import ProductsList from 'components/ProductsList';
 import { products } from '__mocks__/dataMock/products';
+import { PRODUCTS_EMPTY_RESULT } from 'constants/Products';
 
 describe('Product Card List Component', () => {
   const navigate = jest.fn();
@@ -19,7 +20,7 @@ describe('Product Card List Component', () => {
     expect(result).toMatchSnapshot();
   });
 
-  test('Should render No Products! text when productsData is empty', () => {
+  test('Should render No products found text when productsData is empty', () => {
     const component = render(
       <ProductsList
         handleNavigationProductDetailScreen={navigate}
@@ -28,7 +29,7 @@ describe('Product Card List Component', () => {
       />,
     );
     const { getByText } = component;
-    const label = getByText('No Products!');
+    const label = getByText(PRODUCTS_EMPTY_RESULT);
     expect(label).toBeTruthy();
   });
 });
