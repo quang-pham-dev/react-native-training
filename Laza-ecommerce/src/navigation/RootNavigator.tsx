@@ -28,10 +28,11 @@ const RootStack = createNativeStackNavigator();
 const RootNavigator: React.FC = () => {
   // get status authenticated from context
   const { authState, authDispatch } = useContext(AppContext);
-  const { isAuthenticated } = authState || {};
+  const { isAuthenticated, isProcessing } = authState || {};
 
   // check authenticated state
   const getAuth = async () => {
+    authDispatch({ type: INITIALIZE });
     try {
       // get auth data from local storage
       const authData = await get(AUTH_DATA);
@@ -63,7 +64,7 @@ const RootNavigator: React.FC = () => {
   };
 
   return (
-    <NavigationContainer fallback={<LoadingIndicator loadingSize={LOADING_SIZE.LARGE} />}>
+    <NavigationContainer fallback={<LoadingIndicator size={LOADING_SIZE.LARGE} />}>
       <RootStack.Navigator screenOptions={{ headerShown: false }}>
         {renderStack()}
       </RootStack.Navigator>
