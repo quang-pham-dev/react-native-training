@@ -100,35 +100,36 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
         </View>
       </View>
       <View style={styles.contentContainer}>
-        {productState?.isProcessing ? (
-          <LoadingIndicator loadingSize={LOADING_SIZE.LARGE} />
-        ) : (
-          <>
-            <View style={styles.contentHeader}>
-              <View>
-                {productState?.productsByBrandId && (
-                  <Title
-                    titleName={`${productState?.productsByBrandId?.length | 0} Items`}
-                    titleStyles={styles.totalCount}
-                  />
-                )}
-                <Title titleName='Available in stock' titleStyles={styles.titleContent} />
-              </View>
-              <View style={styles.sortWrapper}>
-                <TouchableOpacity onPress={() => {}}>
-                  <MaterialIcons name='sort' size={24} color='black' />
-                </TouchableOpacity>
-                <Title titleName='Sort' titleStyles={styles.sortText} />
-              </View>
+        <>
+          <View style={styles.contentHeader}>
+            <View>
+              {productState?.isProcessing ? (
+                <Title titleName={'0 Items'} titleStyles={styles.totalCount} />
+              ) : (
+                <Title
+                  titleName={`${productState?.productsByBrandId?.length | 0} Items`}
+                  titleStyles={styles.totalCount}
+                />
+              )}
+              <Title titleName='Available in stock' titleStyles={styles.titleContent} />
             </View>
-
+            <View style={styles.sortWrapper}>
+              <TouchableOpacity onPress={() => {}}>
+                <MaterialIcons name='sort' size={24} color='black' />
+              </TouchableOpacity>
+              <Title titleName='Sort' titleStyles={styles.sortText} />
+            </View>
+          </View>
+          {productState?.isProcessing ? (
+            <LoadingIndicator size={LOADING_SIZE.LARGE} />
+          ) : (
             <ProductsList
               productsData={productState?.productsByBrandId}
               handleLikeProduct={handleLikeProduct}
               handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
             />
-          </>
-        )}
+          )}
+        </>
       </View>
     </View>
   );

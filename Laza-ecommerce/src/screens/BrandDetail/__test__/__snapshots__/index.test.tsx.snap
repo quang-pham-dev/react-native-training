@@ -131,6 +131,24 @@ exports[`Brand detail Screen should render correctly 1`] = `
                 "textTransform": "none",
               },
               Object {
+                "color": "#1D1E20",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 18,
+              },
+            ]
+          }
+        >
+          0 Items
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+                "textTransform": "none",
+              },
+              Object {
                 "color": "#8F959E",
                 "fontFamily": "Inter_400Regular",
                 "fontSize": 15,
@@ -224,25 +242,19 @@ exports[`Brand detail Screen should render correctly 1`] = `
         windowSize={21}
       >
         <View>
-          <View>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#1D1E20",
-                    "fontSize": 17,
-                  },
-                  Object {
-                    "color": "#1D1E20",
-                    "fontFamily": "Inter_400Regular",
-                    "fontSize": 17,
-                  },
-                ]
-              }
-            >
-              No Products!
-            </Text>
-          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "textTransform": "none",
+                },
+                undefined,
+              ]
+            }
+          >
+            No products found
+          </Text>
         </View>
       </RCTScrollView>
     </View>
