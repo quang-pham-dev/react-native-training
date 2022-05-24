@@ -12,10 +12,6 @@ import { BRANDS_EMPTY_RESULT } from 'constants/Brands';
 // Types
 import { IBrandCardListProps, IBrandsListProps } from 'types/models/Brands';
 
-// Themes
-import Fonts from 'themes/Fonts';
-import Colors from 'themes/Colors';
-
 // Styles
 import styles from './styles';
 

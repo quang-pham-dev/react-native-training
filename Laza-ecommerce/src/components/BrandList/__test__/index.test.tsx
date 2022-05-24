@@ -3,6 +3,8 @@ import BrandsCardList from 'components/BrandList';
 import { brands } from '__mocks__/dataMock';
 import renderer from 'react-test-renderer';
 import { TouchableOpacity } from 'react-native';
+import { render } from '@testing-library/react-native';
+import { BRANDS_EMPTY_RESULT } from 'constants/Brands';
 
 describe('Brand Card List Component', () => {
   const navigate = jest.fn();
@@ -19,5 +21,14 @@ describe('Brand Card List Component', () => {
     const press = component.root.findAllByType(TouchableOpacity)[0];
     press.props.onPress();
     expect(navigate).toHaveBeenCalled();
+  });
+
+  test('Should render No Brand found text when brandsData is empty', () => {
+    const component = render(
+      <BrandsCardList handleNavigationBrandDetailScreen={navigate} brandsData={[]} />,
+    );
+    const { getByText } = component;
+    const label = getByText(BRANDS_EMPTY_RESULT);
+    expect(label).toBeTruthy();
   });
 });
