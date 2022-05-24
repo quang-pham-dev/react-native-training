@@ -53,7 +53,6 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
       return {
         ...state,
         type: action.type,
-        isLoading: false,
         error: action.error,
       };
 

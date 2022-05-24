@@ -40,7 +40,6 @@ const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAc
       return {
         ...state,
         type: action.type,
-        isLoading: false,
         error: action.error,
       };
 

@@ -20,6 +20,7 @@ const authenticationReducer = (state: AuthState = InitialAuthState, action: Auth
         ...state,
         isInitialized: false,
         isProcessing: false,
+        isLoading: false,
       };
 
     case SIGN_IN:
@@ -27,6 +28,7 @@ const authenticationReducer = (state: AuthState = InitialAuthState, action: Auth
       return {
         ...state,
         isProcessing: true,
+        isLoading: true,
       };
 
     case INITIALIZE_SUCCESS:
