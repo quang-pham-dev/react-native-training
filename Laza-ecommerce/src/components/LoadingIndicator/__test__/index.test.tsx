@@ -5,12 +5,12 @@ import renderer from 'react-test-renderer';
 
 describe('LoadingIndicator Component', () => {
   test('should render correctly', () => {
-    const tree = renderer.create(<LoadingIndicator loadingSize='large' />).toJSON();
+    const tree = renderer.create(<LoadingIndicator size='large' />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   test('should render color LoadingIndicator correctly', () => {
-    const tree = renderer.create(<LoadingIndicator loadingSize='small' color='red' />).toJSON();
+    const tree = renderer.create(<LoadingIndicator size='small' color='red' />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

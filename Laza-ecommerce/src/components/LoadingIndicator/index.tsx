@@ -12,10 +12,10 @@ import Colors from 'themes/Colors';
 import styles from './styles';
 
 const LoadingIndicator = ({
-  loadingSize = LOADING_SIZE.LARGE,
+  size = LOADING_SIZE.LARGE,
   color = Colors.secondaryColor,
 }: ILoadingIndicatorProps) => (
-  <ActivityIndicator style={styles.loading} size={loadingSize} color={color} />
+  <ActivityIndicator style={styles.loading} size={size} color={color} />
 );
 
 export default memo(LoadingIndicator);
