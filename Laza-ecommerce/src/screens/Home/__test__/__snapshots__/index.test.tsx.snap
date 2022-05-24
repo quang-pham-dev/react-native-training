@@ -260,59 +260,63 @@ exports[`Home Screen Should renders correctly 1`] = `
       }
     >
       <View
-        style={Object {}}
-      >
-        <View
-          style={
+        style={
+          Array [
+            Object {
+              "paddingBottom": 15,
+            },
             Object {
               "alignItems": "center",
               "flexDirection": "row",
               "justifyContent": "space-between",
-              "paddingBottom": 15,
+            },
+          ]
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontSize": 17,
+                },
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 17,
+                  "lineHeight": 18,
+                },
+              ]
             }
-          }
-        >
-          <View>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#1D1E20",
-                    "fontSize": 17,
-                  },
-                  Object {
-                    "color": "#1D1E20",
-                    "fontFamily": "Inter_500Medium",
-                    "fontSize": 17,
-                    "lineHeight": 18,
-                  },
-                ]
-              }
-            >
-              Choose Brand
-            </Text>
-          </View>
-          <View>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#1D1E20",
-                    "fontSize": 17,
-                  },
-                  Object {
-                    "color": "#8F959E",
-                    "fontFamily": "Inter_400Regular",
-                    "fontSize": 13,
-                    "lineHeight": 14,
-                  },
-                ]
-              }
-            >
-              View All
-            </Text>
-          </View>
+          >
+            Choose Brand
+          </Text>
         </View>
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontSize": 17,
+                },
+                Object {
+                  "color": "#8F959E",
+                  "fontFamily": "Inter_400Regular",
+                  "fontSize": 13,
+                  "lineHeight": 14,
+                },
+              ]
+            }
+          >
+            View All
+          </Text>
+        </View>
+      </View>
+      <View
+        style={Object {}}
+      >
         <RCTScrollView
           ListEmptyComponent={[Function]}
           disableVirtualization={false}
@@ -339,8 +343,18 @@ exports[`Home Screen Should renders correctly 1`] = `
           windowSize={21}
         >
           <View>
-            <Text>
-              Empty Brand.
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "textTransform": "none",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              No Brand found
             </Text>
           </View>
         </RCTScrollView>
@@ -348,12 +362,16 @@ exports[`Home Screen Should renders correctly 1`] = `
       <View>
         <View
           style={
-            Object {
-              "alignItems": "center",
-              "flexDirection": "row",
-              "justifyContent": "space-between",
-              "marginTop": 15,
-            }
+            Array [
+              Object {
+                "marginTop": 15,
+              },
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              },
+            ]
           }
         >
           <View>
@@ -431,25 +449,19 @@ exports[`Home Screen Should renders correctly 1`] = `
             windowSize={21}
           >
             <View>
-              <View>
-                <Text
-                  style={
-                    Array [
-                      Object {
-                        "color": "#1D1E20",
-                        "fontSize": 17,
-                      },
-                      Object {
-                        "color": "#1D1E20",
-                        "fontFamily": "Inter_400Regular",
-                        "fontSize": 17,
-                      },
-                    ]
-                  }
-                >
-                  No Products!
-                </Text>
-              </View>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#000",
+                      "textTransform": "none",
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                No products found
+              </Text>
             </View>
           </RCTScrollView>
         </View>
