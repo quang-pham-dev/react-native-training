@@ -20,7 +20,7 @@ export const SCREENS_ROUTES = {
     HOME_SCREEN: { name: 'Home', label: 'HOME' },
     DRAWER_MENU: { name: 'DrawerMenu', label: 'MENU' },
     PRODUCT_DETAIL_SCREEN: { name: 'ProductDetail', label: 'PRODUCT DETAIL' },
-    BRAND_DETAI_SCREENL: { name: 'BrandDetail', label: 'BRAND DETAIL' },
+    BRAND_DETAIL_SCREEN: { name: 'BrandDetail', label: 'BRAND DETAIL' },
   },
 
   // routes for the bags stack

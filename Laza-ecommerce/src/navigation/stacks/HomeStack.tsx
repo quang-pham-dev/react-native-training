@@ -32,7 +32,7 @@ const HomeStack = () => (
     />
 
     <Stack.Screen
-      name={SCREENS_ROUTES.HOME_STACK.BRAND_DETAI_SCREENL.name}
+      name={SCREENS_ROUTES.HOME_STACK.BRAND_DETAIL_SCREEN.name}
       component={BrandDetail}
       options={{
         headerShown: false,

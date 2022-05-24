@@ -102,7 +102,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   // handle action navigate to Brand Detail Screen
   const handleNavigationBrandDetailScreen = useCallback(
     (id: string) => {
-      navigation.navigate(SCREENS_ROUTES.HOME_STACK.BRAND_DETAI_SCREENL.name, id);
+      navigation.navigate(SCREENS_ROUTES.HOME_STACK.BRAND_DETAIL_SCREEN.name, id);
     },
     [navigation],
   );
@@ -161,7 +161,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
                 color={Colors.textGray}
               />
             </View>
-            {brandState?.isProcessing && <LoadingIndicator loadingSize={LOADING_SIZE.SMALL} />}
+            {brandState?.isProcessing && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
             <BrandsCardList
               brandsData={brandState?.brands}
               handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen}
@@ -185,7 +185,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
                   color={Colors.textGray}
                 />
               </View>
-              {productState?.isProcessing && <LoadingIndicator loadingSize={LOADING_SIZE.SMALL} />}
+              {productState?.isProcessing && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
               <ProductsList
                 productsData={masterData}
                 handleLikeProduct={handleLikeProduct}
