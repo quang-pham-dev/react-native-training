@@ -4,5 +4,6 @@ export interface IGetStartedScreenProps {
   navigation: {
     navigate: (value: string) => void;
     dispatch: (value: StackActionType) => void;
+    goBack: () => void;
   };
 }

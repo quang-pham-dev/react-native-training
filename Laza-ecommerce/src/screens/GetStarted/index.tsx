@@ -23,11 +23,15 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
     navigation.navigate(SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name);
   }, [navigation]);
 
+  const goBack = useCallback(() => {
+    navigation.goBack();
+  }, [navigation]);
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.iconBackWrapper}>
-          <Button icon={IMAGES.iconBack} iconStyles={[styles.iconBack]} onPress={() => {}} />
+          <Button icon={IMAGES.iconBack} iconStyles={[styles.iconBack]} onPress={goBack} />
         </View>
         <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started'></Title>
       </View>
