@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { ActivityIndicator } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Types
 import { ILoadingIndicatorProps } from 'types/components/LoadingIndicator';
@@ -18,4 +19,4 @@ const LoadingIndicator = ({
   <ActivityIndicator style={styles.loading} size={size} color={color} />
 );
 
-export default memo(LoadingIndicator);
+export default memo(LoadingIndicator, isEqual);

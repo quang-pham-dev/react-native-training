@@ -32,7 +32,7 @@ export interface IProductCardProps {
   testID?: string;
   product: IProductsCardListProps;
   handleNavigationProductDetailScreen: (id: string) => void;
-  handleLikeProduct: () => void;
+  handleLikeProduct: (item: IProduct) => void;
   handleNavigationDetailScreen?: () => void;
   productCardStyles?: ViewStyle;
 }
@@ -42,9 +42,9 @@ export interface IProductsCardListProps extends IProduct {
 }
 
 export interface IProductsListProps {
-  productsData: IProductsCardListProps[];
+  products: IProduct[];
   productCardStyles?: ViewStyle;
-  handleLikeProduct: (item: IProduct) => void;
+  handleLikeProduct: (item: IProduct[]) => void;
   handleNavigationProductDetailScreen: (id: string) => void;
   handleRefreshing?: () => void;
 }

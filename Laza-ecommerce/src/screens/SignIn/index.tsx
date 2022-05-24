@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { KeyboardAvoidingView, ScrollView, Switch, Text, View } from 'react-native';
 
 // Components
@@ -17,9 +17,9 @@ import { styles } from './styles';
 
 const SignInScreen = ({ navigation }: ISignInScreenProps) => {
   // handle action when press goBack
-  const handlePressBack = () => {
+  const handlePressBack = useCallback(() => {
     navigation.goBack();
-  };
+  }, [navigation]);
 
   return (
     <ScrollView>

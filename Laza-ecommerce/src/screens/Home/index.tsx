@@ -116,10 +116,10 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   );
 
   // handle action Like Product
-  const handleLikeProduct = () => {};
+  const handleLikeProduct = useCallback(() => {}, []);
 
   // handle action search
-  const onSubmitEditing = () => {};
+  const onSubmitEditing = useCallback(() => {}, []);
 
   return (
     <SafeAreaView style={styles.Container}>
@@ -187,7 +187,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
               </View>
               {productState?.isProcessing && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
               <ProductsList
-                productsData={masterData}
+                products={masterData}
                 handleLikeProduct={handleLikeProduct}
                 handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
               />

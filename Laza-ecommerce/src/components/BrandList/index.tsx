@@ -1,5 +1,6 @@
 import React, { memo, useCallback } from 'react';
 import { FlatList, View, Text } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Components
 import BrandCard from 'components/BrandCard';
@@ -16,9 +17,18 @@ import { IBrandCardListProps, IBrandsListProps } from 'types/models/Brands';
 import styles from './styles';
 
 const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: IBrandsListProps) => {
+//   console.log('BrandsCardList render');
+
+  const handleNavigationBrandDetailPress = useCallback(
+    (id: string) => {
+      handleNavigationBrandDetailScreen(id);
+    },
+    [handleNavigationBrandDetailScreen],
+  );
+
   // handle render Card component
   const renderBrandCard = ({ item }: { item: IBrandCardListProps }) => (
-    <BrandCard brand={item} handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen} />
+    <BrandCard brand={item} handleNavigationBrandDetailScreen={handleNavigationBrandDetailPress} />
   );
 
   const renderEmptyList = () => <Title titleName={BRANDS_EMPTY_RESULT} />;
@@ -37,4 +47,4 @@ const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: IBran
   );
 };
 
-export default memo(BrandsCardList);
+export default memo(BrandsCardList, isEqual);

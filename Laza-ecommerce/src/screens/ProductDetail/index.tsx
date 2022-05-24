@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useCallback, useContext, useEffect } from 'react';
 import { Alert, Image, ImageBackground, Pressable, Text, View } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -36,11 +36,6 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
   const { productState, productDispatch } = useContext(AppContext);
   const { productById, isProcessing } = productState || {};
 
-  // handle back button
-  const handlePressBack = () => {
-    navigation.goBack();
-  };
-
   useEffect(() => {
     getProductById();
   }, [id, productDispatch]);
@@ -63,8 +58,15 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
     }
   };
 
+  // handle back button
+  const handlePressBack = useCallback(() => {
+    navigation.goBack();
+  }, [navigation]);
+
   // handle action press button cart
-  const handlePressCart = () => {};
+  const handlePressCart = useCallback(() => {}, []);
+  // handle action press button add to cart
+  const handlePressAddToCart = useCallback(() => {}, []);
 
   return (
     <View style={styles.Container}>
@@ -207,7 +209,7 @@ const ProductDetail = ({ navigation, route }: IProductDetailProps) => {
             text='Add to Cart'
             buttonStyles={[styles.bottomButton, styles.loginButton]}
             textStyles={[styles.textBottomButton]}
-            onPress={() => {}}
+            onPress={handlePressAddToCart}
           />
         </View>
       </ScrollView>

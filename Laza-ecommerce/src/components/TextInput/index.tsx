@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Text, TextInput, View } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Types
 import { ITextInputProps } from 'types/components/TextInput';
@@ -32,4 +33,4 @@ const Input = ({
   );
 };
 
-export default memo(Input);
+export default memo(Input, isEqual);

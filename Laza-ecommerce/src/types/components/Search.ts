@@ -4,6 +4,6 @@ export interface ISearchBarProps {
   value?: string;
   autoFocus?: boolean;
   textInputStyles?: StyleProp<ViewStyle>;
-  onSubmitEditing?: () => void;
+  onSubmitEditing: () => void;
   onChangeText: (text: string) => void;
 }

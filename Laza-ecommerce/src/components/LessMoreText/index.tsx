@@ -1,5 +1,6 @@
-import React, { useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import { Text, View } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Types
 import { IMoreLessTextProps } from 'types/components/LessMore';
@@ -38,4 +39,4 @@ const MoreLessText = ({ children, numberOfLines, styleShowMoreText }: IMoreLessT
   );
 };
 
-export default MoreLessText;
+export default memo(MoreLessText, isEqual);

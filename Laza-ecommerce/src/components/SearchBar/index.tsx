@@ -1,5 +1,6 @@
 import React, { memo, useCallback } from 'react';
 import { Image, TextInput, TouchableOpacity, View } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Types
 import { ISearchBarProps } from 'types/components/Search';
@@ -27,6 +28,10 @@ const SearchBar = ({
     [onChangeText, setValueState],
   );
 
+  const onSubmitEditingHandler = useCallback(() => {
+    onSubmitEditing();
+  }, [onSubmitEditing, valueState]);
+
   return (
     <View style={styles.container}>
       <View style={styles.searchBarContainer}>
@@ -41,7 +46,7 @@ const SearchBar = ({
             autoCorrect={false}
             value={valueState}
             onChangeText={onChangeTextHandler}
-            onSubmitEditing={onSubmitEditing}
+            onSubmitEditing={onSubmitEditingHandler}
           />
         </View>
         <TouchableOpacity onPress={() => {}} style={styles.iconVoiceWrapper}>
@@ -52,4 +57,4 @@ const SearchBar = ({
   );
 };
 
-export default memo(SearchBar);
+export default memo(SearchBar, isEqual);

@@ -64,6 +64,7 @@ exports[`Search Bar Component Should render correctly 1`] = `
         allowFontScaling={true}
         autoCorrect={false}
         onChangeText={[Function]}
+        onSubmitEditing={[Function]}
         placeholder="Search.."
         rejectResponderTermination={true}
         style={

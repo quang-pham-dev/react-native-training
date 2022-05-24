@@ -1,5 +1,6 @@
 import React, { memo, useCallback } from 'react';
 import { Image, TouchableOpacity, View } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Components
 import Label from 'components/Label';
@@ -19,6 +20,7 @@ const BrandCard = ({
   handleNavigationBrandDetailScreen,
   brandCardStyles,
 }: IBrandCardProps) => {
+//   console.log('BrandCard render');
   const handleNavigationBrandDetailScreenPress = useCallback(() => {
     handleNavigationBrandDetailScreen(brand.id);
   }, [brand.id, handleNavigationBrandDetailScreen]);
@@ -42,4 +44,4 @@ const BrandCard = ({
   );
 };
 
-export default memo(BrandCard);
+export default memo(BrandCard, isEqual);

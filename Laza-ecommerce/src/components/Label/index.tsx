@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Text, View } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Types
 import { ILabelTextProps } from 'types/components/Label';
@@ -28,4 +29,4 @@ const Label = ({
   );
 };
 
-export default memo(Label);
+export default memo(Label, isEqual);

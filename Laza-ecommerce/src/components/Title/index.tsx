@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Text } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Types
 import { ITitleProps } from 'types/components/Title';
@@ -11,4 +12,4 @@ const Title = ({ titleName, titleStyles }: ITitleProps) => {
   return <Text style={[styles.title, titleStyles]}>{titleName}</Text>;
 };
 
-export default memo(Title);
+export default memo(Title, isEqual);

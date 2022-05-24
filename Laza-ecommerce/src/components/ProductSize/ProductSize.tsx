@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { View, ScrollView, Pressable, Text } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Constants
 import { PRODUCTS_SIZE } from 'constants/Products';
@@ -25,4 +26,4 @@ const ProductSize = () => {
   );
 };
 
-export default ProductSize;
+export default memo(ProductSize, isEqual);

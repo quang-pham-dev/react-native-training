@@ -23,6 +23,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
     navigation.navigate(SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name);
   }, [navigation]);
 
+  // handle go Back action
   const goBack = useCallback(() => {
     navigation.goBack();
   }, [navigation]);

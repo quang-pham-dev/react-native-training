@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Image, Text, TouchableOpacity } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Types
 import { IButtonProps } from 'types/components/Button';
@@ -30,4 +31,4 @@ const Button = ({
   );
 };
 
-export default memo(Button);
+export default memo(Button, isEqual);

@@ -1,5 +1,6 @@
 import React, { memo, useCallback } from 'react';
 import { FlatList, View } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Components
 import ProductCard from 'components/ProductCard';
@@ -16,7 +17,7 @@ import styles from './styles';
 
 const ProductsList = ({
   handleNavigationProductDetailScreen,
-  productsData,
+  products,
   handleLikeProduct,
 }: IProductsListProps) => {
   const handleNavigationProductDetailPress = useCallback(
@@ -26,6 +27,10 @@ const ProductsList = ({
     [handleNavigationProductDetailScreen],
   );
 
+  const handleLikeProductPress = useCallback(() => {
+    handleLikeProduct(products);
+  }, [products, handleLikeProduct]);
+
   // handle render when empty list
   const renderEmptyList = () => <Title titleName={PRODUCTS_EMPTY_RESULT} />;
 
@@ -33,11 +38,11 @@ const ProductsList = ({
   const renderProductCard = useCallback(
     ({ item }: { item: IProductsCardListProps }) => (
       <ProductCard
-        testID='productCardList'
+        testID='productCard'
         productCardStyles={styles.productCard}
         product={item}
         handleNavigationProductDetailScreen={handleNavigationProductDetailPress}
-        handleLikeProduct={() => handleLikeProduct(item)}
+        handleLikeProduct={handleLikeProductPress}
       />
     ),
     [handleNavigationProductDetailPress, handleLikeProduct],
@@ -48,7 +53,7 @@ const ProductsList = ({
       <FlatList
         numColumns={2}
         columnWrapperStyle={styles.columnWrapper}
-        data={productsData}
+        data={products}
         renderItem={renderProductCard}
         keyExtractor={product => product.id}
         showsVerticalScrollIndicator={false}
@@ -57,4 +62,4 @@ const ProductsList = ({
     </View>
   );
 };
-export default memo(ProductsList);
+export default memo(ProductsList, isEqual);

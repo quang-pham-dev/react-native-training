@@ -11,7 +11,7 @@ describe('Product Card List Component', () => {
   const component = render(
     <ProductsList
       handleNavigationProductDetailScreen={navigate}
-      productsData={products}
+      products={products}
       handleLikeProduct={jest.fn()}
     />,
   );
@@ -24,7 +24,7 @@ describe('Product Card List Component', () => {
     const component = render(
       <ProductsList
         handleNavigationProductDetailScreen={navigate}
-        productsData={[]}
+        products={[]}
         handleLikeProduct={jest.fn()}
       />,
     );

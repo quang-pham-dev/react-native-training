@@ -1,5 +1,6 @@
 import React, { memo, useCallback } from 'react';
 import { Image, ImageBackground, Pressable, Text, View } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // Components
 import Title from 'components/Title';
@@ -13,7 +14,7 @@ import IMAGES from 'themes/Images';
 // Styles
 import styles from './styles';
 
-const ProductCardList = ({
+const ProductCard = ({
   product,
   handleNavigationProductDetailScreen,
   handleLikeProduct,
@@ -23,6 +24,10 @@ const ProductCardList = ({
     handleNavigationProductDetailScreen(product.id);
   }, [product.id, handleNavigationProductDetailScreen]);
 
+  const handleLikeProductPress = useCallback(() => {
+    handleLikeProduct(product);
+  }, [product, handleLikeProduct]);
+
   return (
     <Pressable
       testID='productCard'
@@ -30,7 +35,7 @@ const ProductCardList = ({
       style={[styles.productCardContainer, productCardStyles]}>
       <View style={styles.imageWrapper}>
         <ImageBackground style={styles.image} source={{ uri: product.source }} />
-        <Pressable onPress={handleLikeProduct} style={styles.iconHeartWrapper}>
+        <Pressable onPress={handleLikeProductPress} style={styles.iconHeartWrapper}>
           <Image
             style={styles.iconHeart}
             source={product.like ? IMAGES.iconHeartLiked : IMAGES.iconHeart}
@@ -44,4 +49,4 @@ const ProductCardList = ({
   );
 };
 
-export default memo(ProductCardList);
+export default memo(ProductCard, isEqual);

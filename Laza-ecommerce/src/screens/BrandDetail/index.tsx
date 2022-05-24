@@ -37,9 +37,9 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   const { productState, productDispatch, brandState } = useContext(AppContext);
 
   // handle back button
-  const handlePressBack = () => {
+  const handlePressBack = useCallback(() => {
     navigation.goBack();
-  };
+  }, [navigation]);
 
   useEffect(() => {
     fetchProductsByBrandId();
@@ -70,7 +70,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   );
 
   // handle like product
-  const handleLikeProduct = () => {};
+  const handleLikeProduct = useCallback(() => {}, []);
 
   // handle action navigate to Product Detail Screen
   const handleNavigationProductDetailScreen = useCallback(
@@ -124,7 +124,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
             <LoadingIndicator size={LOADING_SIZE.LARGE} />
           ) : (
             <ProductsList
-              productsData={productState?.productsByBrandId}
+              products={productState?.productsByBrandId}
               handleLikeProduct={handleLikeProduct}
               handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
             />

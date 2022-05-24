@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { memo, useContext, useState } from 'react';
 import { Alert, Switch, Text, View } from 'react-native';
+import isEqual from 'react-fast-compare';
 
 // LIB
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
@@ -179,4 +180,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default memo(LoginForm, isEqual);
