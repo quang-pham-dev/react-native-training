@@ -91,7 +91,7 @@ const LoginForm = () => {
 
   return (
     <>
-      {authState?.isProcessing && <LoadingIndicator loadingSize={LOADING_SIZE.LARGE} />}
+      {authState?.isProcessing && <LoadingIndicator size={LOADING_SIZE.LARGE} />}
       <View style={styles.main}>
         {/* Username */}
         <Controller
