@@ -17,7 +17,7 @@ const Header = ({ navigation }: IHeaderProps) => {
     navigation.dispatch(DrawerActions.openDrawer());
   }, [navigation]);
 
-  const handlePressCart = () => {};
+  const handlePressCart = useCallback(() => {}, []);
 
   return (
     <View style={styles.container}>
