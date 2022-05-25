@@ -13,7 +13,7 @@ import {
   GET_PRODUCTS_BY_BRAND_ID,
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
   GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
-} from 'context/actions/products.actions';
+} from 'context/actions/products';
 
 // API
 import { productsService } from 'api/products.api';

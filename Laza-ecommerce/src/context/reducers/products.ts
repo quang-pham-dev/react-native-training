@@ -10,8 +10,8 @@ import {
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
   RESET_STATE,
   ProductsAction,
-} from 'context/actions/products.actions';
-import { InitialProductsState, ProductsState } from 'context/state/products.state';
+} from 'context/actions/products';
+import { InitialProductsState, ProductsState } from 'context/state/products';
 
 const productsReducer = (state: ProductsState = InitialProductsState, action: ProductsAction) => {
   switch (action.type) {

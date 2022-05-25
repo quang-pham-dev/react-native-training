@@ -17,8 +17,8 @@ import {
   GET_PRODUCTS,
   GET_PRODUCTS_FAILED,
   GET_PRODUCTS_SUCCESS,
-} from 'context/actions/products.actions';
-import { GET_BRANDS_FAILED, GET_BRANDS_SUCCESS } from 'context/actions/brands.actions';
+} from 'context/actions/products';
+import { GET_BRANDS_FAILED, GET_BRANDS_SUCCESS } from 'context/actions/brands';
 
 // API
 import { productsService } from 'api/products.api';

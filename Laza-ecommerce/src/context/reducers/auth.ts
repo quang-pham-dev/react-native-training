@@ -10,8 +10,8 @@ import {
   SIGN_OUT,
   SIGN_OUT_SUCCESS,
   RESET_STATE,
-} from 'context/actions/auth.actions';
-import { AuthState, InitialAuthState } from 'context/state/auth.state';
+} from 'context/actions/auth';
+import { AuthState, InitialAuthState } from 'context/state/auth';
 
 const authenticationReducer = (state: AuthState = InitialAuthState, action: AuthAction) => {
   switch (action.type) {

@@ -7,8 +7,8 @@ import {
   GET_BRAND_FAILED,
   GET_BRAND_SUCCESS,
   RESET_STATE,
-} from 'context/actions/brands.actions';
-import { BrandsState, InitialBrandsState } from 'context/state/brands.state';
+} from 'context/actions/brands';
+import { BrandsState, InitialBrandsState } from 'context/state/brands';
 
 const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAction) => {
   switch (action.type) {

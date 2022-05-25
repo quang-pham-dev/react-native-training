@@ -11,7 +11,7 @@ import Title from 'components/Title';
 
 // Context
 import { AppContext } from 'context/AppContext';
-import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'context/actions/auth.actions';
+import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'context/actions/auth';
 
 // API
 import { authService } from 'api';

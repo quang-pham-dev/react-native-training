@@ -19,7 +19,7 @@ import {
   GET_PRODUCT,
   GET_PRODUCT_FAILED,
   GET_PRODUCT_SUCCESS,
-} from 'context/actions/products.actions';
+} from 'context/actions/products';
 
 // Types
 import { IProductDetailProps } from 'types/screens/ProductDetail';
