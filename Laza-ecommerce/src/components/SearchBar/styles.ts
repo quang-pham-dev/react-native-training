@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     paddingLeft: Metrics.padding.md,
     paddingRight: 50,
+    width: '100%',
   },
   iconVoiceWrapper: {
     marginLeft: Metrics.margin.sm,
