@@ -11,8 +11,8 @@ describe('Product Card Component', () => {
   const component = renderer.create(
     <ProductCard
       product={product}
-      handleNavigationProductDetailScreen={navigate}
-      handleLikeProduct={jest.fn()}
+      onNavigateProductDetailScreen={navigate}
+      onPressLikeProduct={jest.fn()}
     />,
   );
   test('Should render correctly', () => {
@@ -20,7 +20,7 @@ describe('Product Card Component', () => {
     expect(result).toMatchSnapshot();
   });
 
-  test('should call function handleNavigationProductDetailScreen', () => {
+  test('should call function onNavigateProductDetailScreen', () => {
     const press = component.root.findAllByType(Pressable)[0];
     press.props.onPress();
     expect(navigate).toHaveBeenCalled();

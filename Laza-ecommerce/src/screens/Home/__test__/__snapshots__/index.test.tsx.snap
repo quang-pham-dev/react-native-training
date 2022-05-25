@@ -213,6 +213,7 @@ exports[`Home Screen Should renders correctly 1`] = `
                     "alignItems": "flex-start",
                     "paddingLeft": 12,
                     "paddingRight": 50,
+                    "width": "100%",
                   },
                   Object {},
                 ]

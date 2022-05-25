@@ -11,7 +11,7 @@ exports[`TextInput Component should render correctly 1`] = `
   <TextInput
     allowFontScaling={true}
     onBlur={[Function]}
-    onChangeText={[MockFunction]}
+    onChangeText={[Function]}
     rejectResponderTermination={true}
     style={
       Array [
@@ -42,7 +42,7 @@ exports[`TextInput Component should render placeholder 1`] = `
   <TextInput
     allowFontScaling={true}
     onBlur={[Function]}
-    onChangeText={[MockFunction]}
+    onChangeText={[Function]}
     placeholder="Enter your password"
     rejectResponderTermination={true}
     style={
@@ -90,7 +90,7 @@ exports[`TextInput Component should render with label 1`] = `
   <TextInput
     allowFontScaling={true}
     onBlur={[Function]}
-    onChangeText={[MockFunction]}
+    onChangeText={[Function]}
     rejectResponderTermination={true}
     style={
       Array [

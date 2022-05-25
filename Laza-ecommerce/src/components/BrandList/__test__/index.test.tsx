@@ -10,14 +10,14 @@ describe('Brand Card List Component', () => {
   const navigate = jest.fn();
 
   const component = renderer.create(
-    <BrandsCardList handleNavigationBrandDetailScreen={navigate} brandsData={brands} />,
+    <BrandsCardList onNavigateBrandDetailScreen={navigate} brandsData={brands} />,
   );
   test('Should render correctly', () => {
     const result = component.toJSON();
     expect(result).toMatchSnapshot();
   });
 
-  test('should call function handleNavigationBrandDetailScreen', () => {
+  test('should call function onNavigateBrandDetailScreen', () => {
     const press = component.root.findAllByType(TouchableOpacity)[0];
     press.props.onPress();
     expect(navigate).toHaveBeenCalled();
@@ -25,7 +25,7 @@ describe('Brand Card List Component', () => {
 
   test('Should render No Brand found text when brandsData is empty', () => {
     const component = render(
-      <BrandsCardList handleNavigationBrandDetailScreen={navigate} brandsData={[]} />,
+      <BrandsCardList onNavigateBrandDetailScreen={navigate} brandsData={[]} />,
     );
     const { getByText } = component;
     const label = getByText(BRANDS_EMPTY_RESULT);

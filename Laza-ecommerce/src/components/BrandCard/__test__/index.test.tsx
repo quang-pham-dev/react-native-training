@@ -14,7 +14,7 @@ describe('Brand Card Component', () => {
   const navigate = jest.fn();
 
   const component = renderer.create(
-    <BrandCard brand={brandData} handleNavigationBrandDetailScreen={navigate} />,
+    <BrandCard brand={brandData} onNavigateBrandDetailScreen={navigate} />,
   );
   test('Should render correctly', () => {
     const result = component.toJSON();
