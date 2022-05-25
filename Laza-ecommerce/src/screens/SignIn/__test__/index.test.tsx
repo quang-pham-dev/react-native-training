@@ -15,6 +15,9 @@ const mockLogin = jest.fn((data: IUserSignIn) => {
 describe('SignIn Screen', () => {
   let tree: any;
 
+  const welcomeText = 'Welcome';
+  const subTitleText = 'Please enter your data to continue';
+
   beforeEach(() => {
     jest.useFakeTimers();
     tree = render(<SignInScreen navigation={navigationMock} onSubmit={mockLogin} />);
@@ -29,11 +32,11 @@ describe('SignIn Screen', () => {
 
   test('should render Welcome text', () => {
     const { getByText } = tree;
-    expect(getByText('Welcome')).toBeTruthy();
+    expect(getByText(welcomeText)).toBeTruthy();
   });
 
   test('should render subheader text', () => {
     const { getByText } = tree;
-    expect(getByText('Please enter your data to continue')).toBeTruthy();
+    expect(getByText(subTitleText)).toBeTruthy();
   });
 });
