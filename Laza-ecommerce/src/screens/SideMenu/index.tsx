@@ -39,7 +39,6 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
   const orderCount = 3 | 0;
 
   // handel action sign out
-
   const handlePressLogout = useCallback(() => {
     Alert.alert('Logout!', 'Are you sure you want to logout?', [
       {
