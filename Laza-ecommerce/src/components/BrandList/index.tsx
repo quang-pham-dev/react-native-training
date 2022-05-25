@@ -17,8 +17,6 @@ import { IBrandCardListProps, IBrandsListProps } from 'types/models/Brands';
 import styles from './styles';
 
 const BrandsCardList = ({ handleNavigationBrandDetailScreen, brandsData }: IBrandsListProps) => {
-//   console.log('BrandsCardList render');
-
   const handleNavigationBrandDetailPress = useCallback(
     (id: string) => {
       handleNavigationBrandDetailScreen(id);

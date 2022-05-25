@@ -20,7 +20,6 @@ const BrandCard = ({
   handleNavigationBrandDetailScreen,
   brandCardStyles,
 }: IBrandCardProps) => {
-//   console.log('BrandCard render');
   const handleNavigationBrandDetailScreenPress = useCallback(() => {
     handleNavigationBrandDetailScreen(brand.id);
   }, [brand.id, handleNavigationBrandDetailScreen]);
