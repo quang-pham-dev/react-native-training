@@ -70,10 +70,10 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   );
 
   // handle like product
-  const handleLikeProduct = useCallback(() => {}, []);
+  const onPressLikeProductHandler = useCallback(() => {}, []);
 
   // handle action navigate to Product Detail Screen
-  const handleNavigationProductDetailScreen = useCallback(
+  const onNavigateProductDetailScreenHandler = useCallback(
     (id: string) => {
       navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);
     },
@@ -125,8 +125,8 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
           ) : (
             <ProductsList
               products={productState?.productsByBrandId}
-              handleLikeProduct={handleLikeProduct}
-              handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
+              onPressLikeProduct={onPressLikeProductHandler}
+              onNavigateProductDetailScreen={onNavigateProductDetailScreenHandler}
             />
           )}
         </>

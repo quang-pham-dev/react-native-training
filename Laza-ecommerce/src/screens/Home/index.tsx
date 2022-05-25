@@ -13,11 +13,7 @@ import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
 import { AppContext } from 'context/AppContext';
-import {
-  GET_PRODUCTS,
-  GET_PRODUCTS_FAILED,
-  GET_PRODUCTS_SUCCESS,
-} from 'context/actions/products';
+import { GET_PRODUCTS, GET_PRODUCTS_FAILED, GET_PRODUCTS_SUCCESS } from 'context/actions/products';
 import { GET_BRANDS_FAILED, GET_BRANDS_SUCCESS } from 'context/actions/brands';
 
 // API
@@ -100,7 +96,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   );
 
   // handle action navigate to Brand Detail Screen
-  const handleNavigationBrandDetailScreen = useCallback(
+  const onNavigateBrandDetailScreenHandler = useCallback(
     (id: string) => {
       navigation.navigate(SCREENS_ROUTES.HOME_STACK.BRAND_DETAIL_SCREEN.name, id);
     },
@@ -108,7 +104,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   );
 
   // handle action navigate to Product Detail Screen
-  const handleNavigationProductDetailScreen = useCallback(
+  const onNavigateProductDetailScreenHandler = useCallback(
     (id: string) => {
       navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);
     },
@@ -116,7 +112,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   );
 
   // handle action Like Product
-  const handleLikeProduct = useCallback(() => {}, []);
+  const onPressLikeProductHandler = useCallback(() => {}, []);
 
   // handle action search
   const onSubmitEditing = useCallback(() => {}, []);
@@ -164,7 +160,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
             {brandState?.isProcessing && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
             <BrandsCardList
               brandsData={brandState?.brands}
-              handleNavigationBrandDetailScreen={handleNavigationBrandDetailScreen}
+              onNavigateBrandDetailScreen={onNavigateBrandDetailScreenHandler}
             />
           </>
           <View>
@@ -188,8 +184,8 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
               {productState?.isProcessing && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
               <ProductsList
                 products={masterData}
-                handleLikeProduct={handleLikeProduct}
-                handleNavigationProductDetailScreen={handleNavigationProductDetailScreen}
+                onPressLikeProduct={onPressLikeProductHandler}
+                onNavigateProductDetailScreen={onNavigateProductDetailScreenHandler}
               />
             </>
           </View>
