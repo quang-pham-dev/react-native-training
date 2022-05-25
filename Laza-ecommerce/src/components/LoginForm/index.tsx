@@ -26,14 +26,14 @@ import { AUTH_DATA } from 'constants/Common';
 import { set } from 'utils/localStorage';
 
 // Types
-import { IUserSignIn } from 'types/models/User';
+import { ILoginCredentials } from 'types/models/User';
 import { LOADING_SIZE } from 'types/common/Enums';
 
 // Styles
 import { styles } from './styles';
 
 // initial values
-const loginFormInit: IUserSignIn = {
+const loginFormInit: ILoginCredentials = {
   username: '',
   password: '',
 };
@@ -56,14 +56,14 @@ const LoginForm = () => {
     reset,
     handleSubmit,
     formState: { errors },
-  } = useForm<IUserSignIn>({
+  } = useForm<ILoginCredentials>({
     mode: 'onChange',
     defaultValues: loginFormInit,
     resolver: yupResolver(loginSchema),
   });
 
   // handle action call api SignIn when user press Login button
-  const handOnSubmit: SubmitHandler<IUserSignIn> = async (loginInfo: IUserSignIn) => {
+  const handOnSubmit: SubmitHandler<ILoginCredentials> = async (loginInfo: ILoginCredentials) => {
     authDispatch({ type: SIGN_IN });
     const { username, password } = loginInfo;
     try {

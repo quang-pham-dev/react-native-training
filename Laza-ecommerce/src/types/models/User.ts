@@ -15,7 +15,7 @@ export interface IUserResponse {
   user: IUser;
 }
 
-export interface IUserSignIn {
+export interface ILoginCredentials {
   username: string;
   password: string;
 }

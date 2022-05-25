@@ -3,14 +3,14 @@ import { act, fireEvent, render, waitFor } from '@testing-library/react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import renderer from 'react-test-renderer';
 
-import { IUserSignIn } from 'types/models/User';
+import { ILoginCredentials } from 'types/models/User';
 import { AUTH_DATA } from 'constants/Common';
 import { navigationMock } from 'utils/testMock';
 import LoginForm from 'components/LoginForm';
 import { Alert } from 'react-native';
 import { AppContext } from 'context/AppContext';
 
-const mockLogin = jest.fn((data: IUserSignIn) => {
+const mockLogin = jest.fn((data: ILoginCredentials) => {
   return Promise.resolve({ data });
 });
 
