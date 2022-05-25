@@ -7,6 +7,15 @@ import { SCREENS_ROUTES } from 'constants/Screens';
 
 describe('GetStarted Screen', () => {
   let tree: any;
+  const action = 'press';
+
+  const TitleText = 'Let’s Get Started';
+  const createAnAccountText = 'Create an Account';
+  const facebookButtonText = 'Facebook';
+  const twitterButtonText = 'Twitter';
+  const googleButtonText = 'Google';
+
+  const LinkToSignInTestID = 'LinkToSignIn';
 
   beforeEach(() => {
     tree = render(<GetStartedScreen navigation={navigationMock} />);
@@ -20,27 +29,38 @@ describe('GetStarted Screen', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('should render Let’s Get Started Text', () => {
+  test('should render Title Text', () => {
     const { getByText } = tree;
-    expect(getByText('Let’s Get Started')).toBeTruthy();
+    expect(getByText(TitleText)).toBeTruthy();
   });
 
-  test('should render 3 social button', () => {
+  test('should render three social button', () => {
     const { getByText } = tree;
 
-    const facebookButton = getByText('Facebook');
-    const twitterButton = getByText('Twitter');
-    const googleButton = getByText('Google');
+    const facebookButton = getByText(facebookButtonText);
+    const twitterButton = getByText(twitterButtonText);
+    const googleButton = getByText(googleButtonText);
 
     expect(facebookButton).toBeTruthy();
     expect(twitterButton).toBeTruthy();
     expect(googleButton).toBeTruthy();
   });
 
+  test('should render button create an account', () => {
+    const { getByText } = tree;
+    const createAccountButton = getByText(createAnAccountText);
+
+    expect(createAccountButton).toBeTruthy();
+  });
+
   test('should navigate to SignIn Screen', () => {
     const { getByTestId } = tree;
-    const link = getByTestId('LinkToSignIn');
-    fireEvent(link, 'press');
-    expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name);
+    const link = getByTestId(LinkToSignInTestID);
+
+    fireEvent(link, action);
+
+    expect(navigationMock.navigate).toHaveBeenCalledWith(
+      SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name,
+    );
   });
 });
