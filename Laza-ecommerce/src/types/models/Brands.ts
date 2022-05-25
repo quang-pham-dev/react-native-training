@@ -8,7 +8,7 @@ export interface Brand {
 
 export interface IBrandCardProps {
   brand: IBrandCardListProps;
-  handleNavigationBrandDetailScreen: (id: string) => void;
+  onNavigateBrandDetailScreen: (id: string) => void;
   brandCardStyles?: StyleProp<TextStyle>;
 }
 
@@ -18,5 +18,5 @@ export interface IBrandCardListProps extends Brand {
 
 export interface IBrandsListProps {
   brandsData: IBrandCardListProps[];
-  handleNavigationBrandDetailScreen: (id: string) => void;
+  onNavigateBrandDetailScreen: (id: string) => void;
 }

@@ -16,20 +16,20 @@ import { IProductsCardListProps, IProductsListProps } from 'types/models/Product
 import styles from './styles';
 
 const ProductsList = ({
-  handleNavigationProductDetailScreen,
+  onNavigateProductDetailScreen,
   products,
-  handleLikeProduct,
+  onPressLikeProduct,
 }: IProductsListProps) => {
-  const handleNavigationProductDetailPress = useCallback(
+  const onNavigateProductDetailScreenHander = useCallback(
     (id: string) => {
-      handleNavigationProductDetailScreen(id);
+      onNavigateProductDetailScreen(id);
     },
-    [handleNavigationProductDetailScreen],
+    [onNavigateProductDetailScreen],
   );
 
-  const handleLikeProductPress = useCallback(() => {
-    handleLikeProduct(products);
-  }, [products, handleLikeProduct]);
+  const onPressLikeProductHandler = useCallback(() => {
+    onPressLikeProduct(products);
+  }, [products, onPressLikeProduct]);
 
   // handle render when empty list
   const renderEmptyList = () => <Title titleName={PRODUCTS_EMPTY_RESULT} />;
@@ -41,11 +41,11 @@ const ProductsList = ({
         testID='productCard'
         productCardStyles={styles.productCard}
         product={item}
-        handleNavigationProductDetailScreen={handleNavigationProductDetailPress}
-        handleLikeProduct={handleLikeProductPress}
+        onNavigateProductDetailScreen={onNavigateProductDetailScreenHander}
+        onPressLikeProduct={onPressLikeProductHandler}
       />
     ),
-    [handleNavigationProductDetailPress, handleLikeProduct],
+    [onNavigateProductDetailScreenHander, onPressLikeProduct],
   );
 
   return (

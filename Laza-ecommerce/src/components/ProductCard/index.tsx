@@ -1,5 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { Image, ImageBackground, Pressable, Text, View } from 'react-native';
+
+// Lib
 import isEqual from 'react-fast-compare';
 
 // Components
@@ -16,26 +18,26 @@ import styles from './styles';
 
 const ProductCard = ({
   product,
-  handleNavigationProductDetailScreen,
-  handleLikeProduct,
+  onNavigateProductDetailScreen,
+  onPressLikeProduct,
   productCardStyles,
 }: IProductCardProps) => {
-  const handleNavigationProductDetailScreenPress = useCallback(() => {
-    handleNavigationProductDetailScreen(product.id);
-  }, [product.id, handleNavigationProductDetailScreen]);
+  const onNavigateProductDetailScreenHandler = useCallback(() => {
+    onNavigateProductDetailScreen(product.id);
+  }, [product.id, onNavigateProductDetailScreen]);
 
-  const handleLikeProductPress = useCallback(() => {
-    handleLikeProduct(product);
-  }, [product, handleLikeProduct]);
+  const onPressLikeProductHandler = useCallback(() => {
+    onPressLikeProduct(product);
+  }, [product, onPressLikeProduct]);
 
   return (
     <Pressable
       testID='productCard'
-      onPress={handleNavigationProductDetailScreenPress}
+      onPress={onNavigateProductDetailScreenHandler}
       style={[styles.productCardContainer, productCardStyles]}>
       <View style={styles.imageWrapper}>
         <ImageBackground style={styles.image} source={{ uri: product.source }} />
-        <Pressable onPress={handleLikeProductPress} style={styles.iconHeartWrapper}>
+        <Pressable onPress={onPressLikeProductHandler} style={styles.iconHeartWrapper}>
           <Image
             style={styles.iconHeart}
             source={product.like ? IMAGES.iconHeartLiked : IMAGES.iconHeart}
