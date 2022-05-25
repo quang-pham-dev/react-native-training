@@ -31,9 +31,8 @@ export interface IImageReviewerProps {
 export interface IProductCardProps {
   testID?: string;
   product: IProductsCardListProps;
-  handleNavigationProductDetailScreen: (id: string) => void;
-  handleLikeProduct: (item: IProduct) => void;
-  handleNavigationDetailScreen?: () => void;
+  onNavigateProductDetailScreen: (id: string) => void;
+  onPressLikeProduct: (item: IProduct) => void;
   productCardStyles?: ViewStyle;
 }
 
@@ -44,7 +43,6 @@ export interface IProductsCardListProps extends IProduct {
 export interface IProductsListProps {
   products: IProduct[];
   productCardStyles?: ViewStyle;
-  handleLikeProduct: (item: IProduct[]) => void;
-  handleNavigationProductDetailScreen: (id: string) => void;
-  handleRefreshing?: () => void;
+  onPressLikeProduct: (item: IProduct[]) => void;
+  onNavigateProductDetailScreen: (id: string) => void;
 }
