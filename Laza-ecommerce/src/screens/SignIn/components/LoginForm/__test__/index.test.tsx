@@ -6,7 +6,7 @@ import renderer from 'react-test-renderer';
 import { ILoginCredentials } from 'types/models/User';
 import { AUTH_DATA } from 'constants/Common';
 import { navigationMock } from 'utils/testMock';
-import LoginForm from 'components/LoginForm';
+import LoginForm from 'screens/SignIn/components/LoginForm';
 import { Alert } from 'react-native';
 import { AppContext } from 'context/AppContext';
 

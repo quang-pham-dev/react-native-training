@@ -1,5 +1,5 @@
-import React, { memo, useContext, useState } from 'react';
-import { Alert, Switch, Text, View } from 'react-native';
+import React, { memo, useState } from 'react';
+import { Switch, Text, View } from 'react-native';
 import isEqual from 'react-fast-compare';
 
 // LIB
@@ -10,27 +10,13 @@ import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
 // Components
 import Button from 'components/Button';
 import TextInput from 'components/TextInput';
-import LoadingIndicator from 'components/LoadingIndicator';
-
-// Context
-import { AppContext } from 'context/AppContext';
-import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'context/actions/auth';
-
-// API
-import { authService } from 'api';
-
-// Constants
-import { AUTH_DATA } from 'constants/Common';
-
-// Utils
-import { set } from 'utils/localStorage';
 
 // Types
 import { ILoginCredentials } from 'types/models/User';
-import { LOADING_SIZE } from 'types/common/Enums';
 
 // Styles
 import { styles } from './styles';
+import Colors from 'themes/Colors';
 
 // initial values
 const loginFormInit: ILoginCredentials = {
@@ -46,14 +32,15 @@ const loginSchema = Yup.object({
     .min(6, 'Password must be at least 6 characters'),
 }).required();
 
-const LoginForm = () => {
+interface ILoginFormProps {
+  onSubmit: (data: ILoginCredentials) => void;
+}
+
+const LoginForm = ({ onSubmit }: ILoginFormProps) => {
   const [isEnabled, setIsEnabled] = useState(true);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-  const { authState, authDispatch } = useContext(AppContext);
-
   const {
     control,
-    reset,
     handleSubmit,
     formState: { errors },
   } = useForm<ILoginCredentials>({
@@ -62,37 +49,14 @@ const LoginForm = () => {
     resolver: yupResolver(loginSchema),
   });
 
-  // handle action call api SignIn when user press Login button
-  const handOnSubmit: SubmitHandler<ILoginCredentials> = async (loginInfo: ILoginCredentials) => {
-    authDispatch({ type: SIGN_IN });
-    const { username, password } = loginInfo;
-    try {
-      const response = await authService.signIn(username, password);
-      const data = JSON.stringify(response.data);
-      // set auth data info to local storage
-      await set(AUTH_DATA, data);
-      const { user } = response.data;
-      const { access_token } = response.data;
-      if (user && access_token) {
-        authDispatch({
-          type: SIGN_IN_SUCCESS,
-          payload: {
-            user,
-            access_token,
-          },
-        });
-      }
-    } catch (error) {
-      authDispatch({ type: SIGN_IN_FAILED, payload: error });
-      Alert.alert('Error', error.message);
-      // reset form
-      reset(loginFormInit);
-    }
+  const onSubmitHandler: SubmitHandler<ILoginCredentials> = async (
+    loginInfo: ILoginCredentials,
+  ) => {
+    onSubmit(loginInfo);
   };
 
   return (
     <>
-      {authState?.isProcessing && <LoadingIndicator size={LOADING_SIZE.LARGE} />}
       <View style={styles.main}>
         {/* Username */}
         <Controller
@@ -139,9 +103,9 @@ const LoginForm = () => {
           )}
           name='password'
         />
-        {errors.password && (
+        {errors?.password && (
           <Text testID='passwordInputError' style={styles.errorMessage}>
-            {errors.password?.message}
+            {errors?.password?.message}
           </Text>
         )}
 
@@ -152,9 +116,9 @@ const LoginForm = () => {
           <Text style={styles.rememberMeText}>Remember me</Text>
           <Switch
             style={styles.rememberMeSwitch}
-            trackColor={{ false: '#767577', true: '#34C759' }}
-            thumbColor={isEnabled ? 'white' : '#f4f3f4'}
-            ios_backgroundColor='#3e3e3e'
+            trackColor={{ false: Colors.lightGray, true: Colors.lightGreen }}
+            thumbColor={isEnabled ? Colors.white : Colors.lightGray}
+            ios_backgroundColor={Colors.lightGray}
             onValueChange={toggleSwitch}
             value={isEnabled}
           />
@@ -173,7 +137,7 @@ const LoginForm = () => {
           text='Login'
           buttonStyles={[styles.bottomButton, styles.loginButton]}
           textStyles={[styles.textBottomButton]}
-          onPress={handleSubmit(handOnSubmit)}
+          onPress={handleSubmit(onSubmitHandler)}
         />
       </View>
     </>

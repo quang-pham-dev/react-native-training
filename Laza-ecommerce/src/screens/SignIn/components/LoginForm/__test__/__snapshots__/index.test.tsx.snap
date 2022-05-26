@@ -190,14 +190,14 @@ Array [
                 ],
               },
               Object {
-                "backgroundColor": "#3e3e3e",
+                "backgroundColor": "#F2F2F2",
                 "borderRadius": 16,
               },
             ],
           ]
         }
-        thumbTintColor="white"
-        tintColor="#767577"
+        thumbTintColor="#fff"
+        tintColor="#F2F2F2"
         value={true}
       />
     </View>

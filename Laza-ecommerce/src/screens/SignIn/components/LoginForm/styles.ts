@@ -1,6 +1,5 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
-import { height } from 'themes';
 import Colors from 'themes/Colors';
 import Fonts from 'themes/Fonts';
 import Metrics from 'themes/Metrics';
@@ -59,7 +58,10 @@ export const styles = StyleSheet.create({
   },
 
   rememberMeSwitch: {
-    transform: [{ scaleX: 0.6 }, { scaleY: 0.6 }],
+    transform:
+      Platform.OS === 'android'
+        ? [{ scaleX: 0.9 }, { scaleY: 0.9 }]
+        : [{ scaleX: 0.6 }, { scaleY: 0.6 }],
   },
 
   footer: {
