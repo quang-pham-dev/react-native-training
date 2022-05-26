@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useEffect, useMemo } from 'react';
-import { Alert, Image, Pressable, View, TouchableOpacity } from 'react-native';
+import { Alert, Text, Image, Pressable, View, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 // Components
@@ -22,7 +22,7 @@ import { productsService } from 'api/products.api';
 import { SCREENS_ROUTES } from 'constants/Screens';
 
 // Types
-import { Brand } from 'types/models/Brands';
+import { IBrand } from 'types/models/Brands';
 import { LOADING_SIZE } from 'types/common/Enums';
 import { IBrandDetailProps } from 'types/screens/BrandDetail';
 
@@ -34,10 +34,15 @@ import styles from './styles';
 
 const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   const id = route.params;
+
   const { productState, productDispatch, brandState } = useContext(AppContext);
 
+  const { brands } = brandState || {};
+
+  const { productsByBrandId, isProcessing } = productState || {};
+  console.log('productById', productsByBrandId?.length);
   // handle back button
-  const handlePressBack = useCallback(() => {
+  const onPressBackHandler = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
@@ -65,8 +70,8 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
 
   // get current brand
   const currentBrand = useMemo(
-    () => brandState?.brands?.filter((brand: Brand) => brand.id === id),
-    [brandState, id],
+    () => brands?.filter((brand: IBrand) => brand.id === id),
+    [brands, id],
   );
 
   // handle like product
@@ -84,12 +89,12 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <View style={styles.actionsWrapper}>
-          <Pressable onPress={handlePressBack}>
+          <Pressable onPress={onPressBackHandler}>
             <Image style={styles.backIcon} source={IMAGES.iconBack} />
           </Pressable>
           <Pressable>
             <View style={styles.brandLogoWrapper}>
-              {currentBrand && (
+              {Boolean(currentBrand) && (
                 <Image style={styles.brandLogo} source={{ uri: currentBrand[0].logoUrl }} />
               )}
             </View>
@@ -99,37 +104,33 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
           </Pressable>
         </View>
       </View>
+      {/* end header */}
       <View style={styles.contentContainer}>
-        <>
-          <View style={styles.contentHeader}>
-            <View>
-              {productState?.isProcessing ? (
-                <Title titleName={'0 Items'} titleStyles={styles.totalCount} />
-              ) : (
-                <Title
-                  titleName={`${productState?.productsByBrandId?.length | 0} Items`}
-                  titleStyles={styles.totalCount}
-                />
-              )}
-              <Title titleName='Available in stock' titleStyles={styles.titleContent} />
-            </View>
-            <View style={styles.sortWrapper}>
-              <TouchableOpacity onPress={() => {}}>
-                <MaterialIcons name='sort' size={24} color='black' />
-              </TouchableOpacity>
-              <Title titleName='Sort' titleStyles={styles.sortText} />
-            </View>
+        <View style={styles.contentHeader}>
+          <View>
+            <Text style={styles.totalCount}>
+              {isProcessing ? 0 : productsByBrandId?.length | 0} Items
+            </Text>
+            <Text style={styles.titleContent}>Available in stock</Text>
           </View>
-          {productState?.isProcessing ? (
-            <LoadingIndicator size={LOADING_SIZE.LARGE} />
-          ) : (
-            <ProductsList
-              products={productState?.productsByBrandId}
-              onPressLikeProduct={onPressLikeProductHandler}
-              onNavigateProductDetailScreen={onNavigateProductDetailScreenHandler}
-            />
-          )}
-        </>
+          <View style={styles.sortWrapper}>
+            <TouchableOpacity onPress={() => {}}>
+              <MaterialIcons name='sort' size={24} color='black' />
+            </TouchableOpacity>
+            <Title titleName='Sort' titleStyles={styles.sortText} />
+          </View>
+        </View>
+        {/* end content header */}
+        {isProcessing ? (
+          <LoadingIndicator size={LOADING_SIZE.LARGE} />
+        ) : (
+          <ProductsList
+            products={productsByBrandId}
+            onPressLikeProduct={onPressLikeProductHandler}
+            onNavigateProductDetailScreen={onNavigateProductDetailScreenHandler}
+          />
+        )}
+        {/* end Product List */}
       </View>
     </View>
   );

@@ -1,6 +1,6 @@
 import { StyleProp, TextStyle } from 'react-native';
 
-export interface Brand {
+export interface IBrand {
   id: string;
   name: string;
   logoUrl: string;
@@ -12,7 +12,7 @@ export interface IBrandCardProps {
   brandCardStyles?: StyleProp<TextStyle>;
 }
 
-export interface IBrandCardListProps extends Brand {
+export interface IBrandCardListProps extends IBrand {
   brandCardListStyles?: StyleProp<TextStyle>;
 }
 

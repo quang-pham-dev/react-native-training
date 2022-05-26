@@ -125,37 +125,26 @@ exports[`Brand detail Screen should render correctly 1`] = `
       <View>
         <Text
           style={
-            Array [
-              Object {
-                "color": "#000",
-                "textTransform": "none",
-              },
-              Object {
-                "color": "#1D1E20",
-                "fontFamily": "Inter_500Medium",
-                "fontSize": 17,
-                "lineHeight": 18,
-              },
-            ]
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 18,
+            }
           }
         >
-          0 Items
+          0
+           Items
         </Text>
         <Text
           style={
-            Array [
-              Object {
-                "color": "#000",
-                "textTransform": "none",
-              },
-              Object {
-                "color": "#8F959E",
-                "fontFamily": "Inter_400Regular",
-                "fontSize": 15,
-                "lineHeight": 16,
-                "marginTop": 5,
-              },
-            ]
+            Object {
+              "color": "#8F959E",
+              "fontFamily": "Inter_400Regular",
+              "fontSize": 15,
+              "lineHeight": 16,
+              "marginTop": 5,
+            }
           }
         >
           Available in stock
