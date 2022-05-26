@@ -8,7 +8,3 @@ export interface IHeaderProps {
     dispatch: (value: DrawerActionType) => void;
   };
 }
-
-export interface ISideMenuPros {
-  navigation: DrawerNavigationHelpers;
-}
