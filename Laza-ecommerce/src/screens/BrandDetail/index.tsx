@@ -40,7 +40,6 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   const { brands } = brandState || {};
 
   const { productsByBrandId, isProcessing } = productState || {};
-  console.log('productById', productsByBrandId?.length);
   // handle back button
   const onPressBackHandler = useCallback(() => {
     navigation.goBack();
