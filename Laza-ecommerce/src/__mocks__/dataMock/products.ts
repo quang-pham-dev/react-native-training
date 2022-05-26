@@ -19,6 +19,29 @@ export const product: IProduct = {
     image:
       'https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80',
   },
+  size: [
+    {
+      id: '1',
+      size: 'S',
+    },
+    {
+      id: '2',
+      size: 'M',
+    },
+    {
+      id: '3',
+      size: 'L',
+    },
+    {
+      id: '4',
+      size: 'XL',
+    },
+    {
+      id: '5',
+      size: '2XL',
+    },
+  ],
+
   imageReview: [
     {
       id: '0',
@@ -76,6 +99,28 @@ export const products: IProduct[] = [
       image:
         'https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80',
     },
+    size: [
+      {
+        id: '1',
+        size: 'S',
+      },
+      {
+        id: '2',
+        size: 'M',
+      },
+      {
+        id: '3',
+        size: 'L',
+      },
+      {
+        id: '4',
+        size: 'XL',
+      },
+      {
+        id: '5',
+        size: '2XL',
+      },
+    ],
     imageReview: [
       {
         id: '0',
@@ -131,6 +176,28 @@ export const products: IProduct[] = [
       image:
         'https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80',
     },
+    size: [
+      {
+        id: '1',
+        size: 'S',
+      },
+      {
+        id: '2',
+        size: 'M',
+      },
+      {
+        id: '3',
+        size: 'L',
+      },
+      {
+        id: '4',
+        size: 'XL',
+      },
+      {
+        id: '5',
+        size: '2XL',
+      },
+    ],
     imageReview: [
       {
         id: '0',
