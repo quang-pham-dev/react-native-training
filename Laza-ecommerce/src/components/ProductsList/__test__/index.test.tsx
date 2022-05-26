@@ -10,9 +10,9 @@ describe('Product Card List Component', () => {
 
   const component = render(
     <ProductsList
-      handleNavigationProductDetailScreen={navigate}
+      onNavigateProductDetailScreen={navigate}
       products={products}
-      handleLikeProduct={jest.fn()}
+      onPressLikeProduct={jest.fn()}
     />,
   );
   test('Should render correctly', () => {
@@ -23,9 +23,9 @@ describe('Product Card List Component', () => {
   test('Should render No products found text when productsData is empty', () => {
     const component = render(
       <ProductsList
-        handleNavigationProductDetailScreen={navigate}
+        onNavigateProductDetailScreen={navigate}
         products={[]}
-        handleLikeProduct={jest.fn()}
+        onPressLikeProduct={jest.fn()}
       />,
     );
     const { getByText } = component;
