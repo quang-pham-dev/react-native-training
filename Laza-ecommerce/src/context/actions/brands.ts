@@ -1,4 +1,4 @@
-import { Brand } from 'types/models/Brands';
+import { IBrand } from 'types/models/Brands';
 
 export const GET_BRANDS = 'GET_BRANDS';
 export const GET_BRANDS_SUCCESS = 'GET_BRANDS_SUCCESS';
@@ -11,7 +11,7 @@ export const GET_BRAND_FAILED = 'GET_BRAND_FAILED';
 export const RESET_STATE = 'RESET_STATE';
 
 export interface BrandsAction {
-  payload?: Brand[];
+  payload?: IBrand[];
   type: string;
   error?: string;
 }
