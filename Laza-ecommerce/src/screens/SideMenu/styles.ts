@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 // Themes
 import Colors from 'themes/Colors';
@@ -99,26 +99,17 @@ const styles = StyleSheet.create({
   darkModeWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: Metrics.margin.xl,
-  },
-
-  darkMode: {
-    flexDirection: 'row',
     alignItems: 'center',
   },
 
-  switchWrapper: {
-    alignItems: 'center',
-  },
+  switchWrapper: {},
 
   darkModeSwitch: {
-    transform: [{ scaleX: 0.6 }, { scaleY: 0.6 }],
-  },
-
-  boxWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: Metrics.margin.xl,
+    marginBottom: -20,
+    transform:
+      Platform.OS === 'android'
+        ? [{ scaleX: 0.9 }, { scaleY: 0.9 }]
+        : [{ scaleX: 0.6 }, { scaleY: 0.6 }],
   },
 
   footer: {

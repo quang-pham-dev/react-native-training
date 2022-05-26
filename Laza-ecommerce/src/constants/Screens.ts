@@ -18,7 +18,12 @@ export const SCREENS_ROUTES = {
   // routes for the home stack
   HOME_STACK: {
     HOME_SCREEN: { name: 'Home', label: 'HOME' },
-    DRAWER_MENU: { name: 'DrawerMenu', label: 'MENU' },
+    DRAWER_MENU: {
+      AccountInformation: { name: 'Account information', label: 'ACCOUNT INFORMATION' },
+      Order: { name: 'Order', label: 'ORDER' },
+      Wallet: { name: 'My Cards', label: 'MY CARDS' },
+      WishList: { name: 'WishList', label: 'WISHLIST' },
+    },
     PRODUCT_DETAIL_SCREEN: { name: 'ProductDetail', label: 'PRODUCT DETAIL' },
     BRAND_DETAIL_SCREEN: { name: 'BrandDetail', label: 'BRAND DETAIL' },
   },

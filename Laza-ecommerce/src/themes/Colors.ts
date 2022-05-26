@@ -22,6 +22,7 @@ const Colors = {
   twitter: '#1DA1F2',
   google: '#EA4335',
   scaleGray: '#FCFCFC',
+  lightGreen: '#34C759',
   lightBlue: '#097ade',
   lightGray: '#F2F2F2',
   tintColor: '#e91e63',
