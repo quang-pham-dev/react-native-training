@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { Alert, KeyboardAvoidingView, View } from 'react-native';
+import { Alert, KeyboardAvoidingView, View, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Components
@@ -39,6 +39,14 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const { authState, productState, brandState, productDispatch, brandDispatch } =
     useContext(AppContext);
 
+  const {
+    currentUser: { username },
+  } = authState || {};
+
+  const { products } = productState || {};
+
+  const { brands } = brandState || {};
+
   // State for search bar
   const [searchValue, setSearchValue] = useState<string>('');
 
@@ -54,7 +62,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
       const { data } = await productsService.getProducts();
       productDispatch({
         type: GET_PRODUCTS_SUCCESS,
-        payload: data,
+        payload: { products: data },
       });
     } catch (error) {
       productDispatch({
@@ -88,11 +96,11 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const masterData = useMemo(
     () =>
       searchValue
-        ? productState?.products.filter((product: IProduct) =>
+        ? products.filter((product: IProduct) =>
             product.name.toLowerCase().includes(searchValue.toLowerCase()),
           )
-        : productState?.products,
-    [searchValue, productState?.products],
+        : products,
+    [searchValue, products],
   );
 
   // handle action navigate to Brand Detail Screen
@@ -124,13 +132,8 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           <Header navigation={navigation} />
           {/* end header layout */}
           <View style={styles.headerTitleWrapper}>
-            <Title titleName='Hello' titleStyles={styles.headerTitle} />
-            {authState?.currentUser?.username ? (
-              <Title
-                titleName={authState?.currentUser?.username}
-                titleStyles={styles.userNameTitle}
-              />
-            ) : null}
+            <Text style={styles.headerTitle}>Hello</Text>
+            {Boolean(username) && <Text style={styles.userNameTitle}>{username}</Text>}
           </View>
           <Title titleName='Welcome to Laza.' titleStyles={styles.subTitle}></Title>
           <SearchBar
@@ -139,11 +142,35 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
             value={searchValue}
           />
         </View>
+        {/* end header */}
         <View style={styles.body}>
-          <>
-            <View style={[styles.brandTitle, styles.titleRow]}>
+          <View style={[styles.brandTitle, styles.titleRow]}>
+            <Label
+              labelName='Choose Brand'
+              fontSize={Fonts.size.default}
+              lineHeight={Fonts.lineHeight.sm}
+              fontFamily={Fonts.fontFamily.Inter_500Medium}
+              color={Colors.textBlack}
+            />
+            <Label
+              labelName='View All'
+              fontSize={Fonts.size.small}
+              lineHeight={Fonts.lineHeight.xs}
+              fontFamily={Fonts.fontFamily.Inter_400Regular}
+              color={Colors.textGray}
+            />
+          </View>
+          {/* end brand title */}
+          {Boolean(brandState?.isProcessing) && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
+          <BrandsCardList
+            brandsData={brands}
+            onNavigateBrandDetailScreen={onNavigateBrandDetailScreenHandler}
+          />
+          {/* end brand list */}
+          <View>
+            <View style={[styles.productTitle, styles.titleRow]}>
               <Label
-                labelName='Choose Brand'
+                labelName='New Arraival'
                 fontSize={Fonts.size.default}
                 lineHeight={Fonts.lineHeight.sm}
                 fontFamily={Fonts.fontFamily.Inter_500Medium}
@@ -157,37 +184,14 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
                 color={Colors.textGray}
               />
             </View>
-            {brandState?.isProcessing && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
-            <BrandsCardList
-              brandsData={brandState?.brands}
-              onNavigateBrandDetailScreen={onNavigateBrandDetailScreenHandler}
+            {/* end product title */}
+            {Boolean(productState?.isProcessing) && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
+            <ProductsList
+              products={masterData}
+              onPressLikeProduct={onPressLikeProductHandler}
+              onNavigateProductDetailScreen={onNavigateProductDetailScreenHandler}
             />
-          </>
-          <View>
-            <>
-              <View style={[styles.productTitle, styles.titleRow]}>
-                <Label
-                  labelName='New Arraival'
-                  fontSize={Fonts.size.default}
-                  lineHeight={Fonts.lineHeight.sm}
-                  fontFamily={Fonts.fontFamily.Inter_500Medium}
-                  color={Colors.textBlack}
-                />
-                <Label
-                  labelName='View All'
-                  fontSize={Fonts.size.small}
-                  lineHeight={Fonts.lineHeight.xs}
-                  fontFamily={Fonts.fontFamily.Inter_400Regular}
-                  color={Colors.textGray}
-                />
-              </View>
-              {productState?.isProcessing && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
-              <ProductsList
-                products={masterData}
-                onPressLikeProduct={onPressLikeProductHandler}
-                onNavigateProductDetailScreen={onNavigateProductDetailScreenHandler}
-              />
-            </>
+            {/* end product list */}
           </View>
         </View>
       </KeyboardAvoidingView>
