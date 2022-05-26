@@ -9,14 +9,19 @@ export interface IProduct {
   type: string;
   source: string;
   description?: string;
-  reviewer?: IReviewerProps;
+  reviewer: ReviewerProps;
+  size: ProductSizeProps[];
   like?: boolean;
   imageReview?: IImageReviewerProps[];
   rating?: string;
   comment: string;
 }
 
-export interface IReviewerProps {
+export interface ProductSizeProps {
+  id: string;
+  size: string;
+}
+export interface ReviewerProps {
   id: string;
   name: string;
   date: string;

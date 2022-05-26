@@ -8,5 +8,17 @@ export interface IProductDetailProps {
   route: {
     params: string;
   };
-  productData: IProduct;
+  product: IProduct;
+}
+export interface IProductDetailHeaderProps {
+  navigation: {
+    navigate: (value: string, params: string) => void;
+    goBack: () => void;
+  };
+  onPressBack: () => void;
+  onPressCart: () => void;
+  product: IProduct;
+}
+export interface IProductDetailItemProps {
+  product: IProduct;
 }

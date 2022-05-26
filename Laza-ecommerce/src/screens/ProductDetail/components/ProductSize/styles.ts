@@ -7,7 +7,7 @@ import Colors from 'themes/Colors';
 
 const styles = StyleSheet.create({
   sizeContainer: {
-    justifyContent: 'space-between',
+    width: '100%',
   },
 
   textSizeWrapper: {
@@ -30,18 +30,18 @@ const styles = StyleSheet.create({
   },
 
   sizeWrapper: {
-    flexDirection: 'row',
+    width: '100%',
+    marginTop: 10,
   },
 
   sizeItem: {
+    justifyContent: 'center',
+    alignItems: 'center',
     width: 60,
     height: 60,
     borderRadius: Metrics.borderRadius.roundedMedium,
     backgroundColor: Colors.secondaryBackground,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: 8,
-    marginTop: 10,
+    marginRight: 10,
   },
 });
 
