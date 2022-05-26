@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { ActivityIndicator } from 'react-native';
+import { ActivityIndicator, SafeAreaView } from 'react-native';
 import isEqual from 'react-fast-compare';
 
 // Types
@@ -16,7 +16,9 @@ const LoadingIndicator = ({
   size = LOADING_SIZE.LARGE,
   color = Colors.secondaryColor,
 }: ILoadingIndicatorProps) => (
-  <ActivityIndicator style={styles.loading} size={size} color={color} />
+  <SafeAreaView>
+    <ActivityIndicator style={styles.loading} size={size} color={color} />
+  </SafeAreaView>
 );
 
 export default memo(LoadingIndicator, isEqual);
