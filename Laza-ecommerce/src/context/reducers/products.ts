@@ -28,7 +28,7 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
         ...state,
         type: action.type,
         isProcessing: false,
-        products: action.payload,
+        products: action.payload.products,
       };
 
     case GET_PRODUCT_SUCCESS:
@@ -36,7 +36,7 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
         ...state,
         type: action.type,
         isProcessing: false,
-        productById: action.payload,
+        product: action.payload.product,
       };
 
     case GET_PRODUCTS_BY_BRAND_ID_SUCCESS:

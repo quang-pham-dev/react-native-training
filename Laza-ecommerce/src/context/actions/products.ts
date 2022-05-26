@@ -14,8 +14,12 @@ export const GET_PRODUCTS_BY_BRAND_ID_FAILED = 'GET_PRODUCTS_BY_BRAND_ID_FAILED'
 
 export const RESET_STATE = 'RESET_STATE';
 
+interface IProductPayload {
+  product: IProduct;
+  products: IProduct[];
+}
 export interface ProductsAction {
-  payload?: IProduct[];
+  payload: IProductPayload;
   type: string;
   error?: string;
 }
