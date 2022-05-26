@@ -1,8 +1,10 @@
-// utils
-import { remove } from 'utils/localStorage';
+import { Alert } from 'react-native';
 
 // API
 import http from 'api/http';
+
+// utils
+import { remove } from 'utils/localStorage';
 
 // Constants
 import { AUTH_DATA, ENDPOINTS } from 'constants/Common';
