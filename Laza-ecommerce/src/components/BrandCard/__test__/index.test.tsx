@@ -1,29 +1,30 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import { TouchableOpacity } from 'react-native';
 
+// LIBS
+import renderer from 'react-test-renderer';
+
+// Components
 import BrandCard from 'components/BrandCard';
 
-const brandData = {
-  id: '1',
-  name: 'Nike',
-  logoUrl: 'https://www.nike.com/a/content/dam/one_tap/one_tap_home/2019/07/nike-logo-white.png',
-};
+// Mocks
+import { brand } from '__mocks__/dataMock/brands';
+
+// Utils
+import { navigationMock } from 'utils/testMock';
 
 describe('Brand Card Component', () => {
-  const navigate = jest.fn();
-
-  const component = renderer.create(
-    <BrandCard brand={brandData} onNavigateBrandDetailScreen={navigate} />,
+  const tree = renderer.create(
+    <BrandCard brand={brand} onNavigateBrandDetailScreen={navigationMock.navigate} />,
   );
   test('Should render correctly', () => {
-    const result = component.toJSON();
-    expect(result).toMatchSnapshot();
+    const component = tree.toJSON();
+    expect(component).toMatchSnapshot();
   });
 
   test('should call function handleNavigationBrandDetailScreen', () => {
-    const press = component.root.findAllByType(TouchableOpacity)[0];
-    press.props.onPress();
-    expect(navigate).toHaveBeenCalled();
+    const Pressable = tree.root.findAllByType(TouchableOpacity)[0];
+    Pressable.props.onPress();
+    expect(navigationMock.navigate).toHaveBeenCalled();
   });
 });

@@ -51,7 +51,7 @@ exports[`Brand Card Component Should render correctly 1`] = `
       <Image
         source={
           Object {
-            "uri": "https://www.nike.com/a/content/dam/one_tap/one_tap_home/2019/07/nike-logo-white.png",
+            "uri": "https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png",
           }
         }
         style={
@@ -80,7 +80,7 @@ exports[`Brand Card Component Should render correctly 1`] = `
           ]
         }
       >
-        Nike
+        Adidas
       </Text>
     </View>
   </View>
