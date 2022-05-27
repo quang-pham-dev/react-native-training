@@ -1,6 +1,9 @@
 import React from 'react';
+
+// LIBS
 import renderer from 'react-test-renderer';
 
+// Components
 import MoreLessText from 'components/LessMoreText';
 
 describe('Read more Component', () => {
