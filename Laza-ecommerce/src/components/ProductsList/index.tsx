@@ -1,5 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { FlatList, View } from 'react-native';
+
+// LIBS
 import isEqual from 'react-fast-compare';
 
 // Components
@@ -20,7 +22,7 @@ const ProductsList = ({
   products,
   onPressLikeProduct,
 }: IProductsListProps) => {
-  const onNavigateProductDetailScreenHander = useCallback(
+  const onNavigateProductDetailScreenHandler = useCallback(
     (id: string) => {
       onNavigateProductDetailScreen(id);
     },
@@ -41,11 +43,11 @@ const ProductsList = ({
         testID='productCard'
         productCardStyles={styles.productCard}
         product={item}
-        onNavigateProductDetailScreen={onNavigateProductDetailScreenHander}
+        onNavigateProductDetailScreen={onNavigateProductDetailScreenHandler}
         onPressLikeProduct={onPressLikeProductHandler}
       />
     ),
-    [onNavigateProductDetailScreenHander, onPressLikeProduct],
+    [onNavigateProductDetailScreenHandler, onPressLikeProduct],
   );
 
   return (
