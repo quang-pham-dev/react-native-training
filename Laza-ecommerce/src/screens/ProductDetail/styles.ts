@@ -7,25 +7,21 @@ import Metrics from 'themes/Metrics';
 
 const styles = StyleSheet.create({
   Container: {
-    // flex: 1,
     width: '100%',
     backgroundColor: Colors.primaryBackground,
   },
   headerContainer: {
-    flex: 1,
     height: 418,
     width: '100%',
   },
 
   mainContainer: {
-    flex: 3,
     width: '100%',
     backgroundColor: Colors.primaryBackground,
     paddingHorizontal: Metrics.padding.lg,
   },
 
   footerContainer: {
-    flex: 1,
     width: '100%',
   },
 

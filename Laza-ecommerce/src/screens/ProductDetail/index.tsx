@@ -71,52 +71,54 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
 
   return (
     <ScrollView style={styles.Container} showsVerticalScrollIndicator={false}>
-      {/* product detail header */}
-      <View style={styles.headerContainer}>
-        {isProcessing ? (
-          <LoadingIndicator />
-        ) : (
-          <ProductDetailHeader
-            product={data}
-            navigation={navigation}
-            onPressBack={onPressBackHandler}
-            onPressCart={onPressCartHandler}
-          />
-        )}
-      </View>
-      {/* End Header block */}
+      {isProcessing ? (
+        <LoadingIndicator />
+      ) : (
+        <>
+          {/* product detail header */}
+          <View style={styles.headerContainer}>
+            <ProductDetailHeader
+              product={data}
+              navigation={navigation}
+              onPressBack={onPressBackHandler}
+              onPressCart={onPressCartHandler}
+            />
+          </View>
+          {/* End Header block */}
 
-      <View style={styles.mainContainer}>
-        {/* product detail information */}
-        <ProductDetailInformation product={data} />
-        {/* end product detail information */}
+          <View style={styles.mainContainer}>
+            {/* product detail information */}
+            <ProductDetailInformation product={data} />
+            {/* end product detail information */}
 
-        {/* product detail images reviews */}
-        <ProductImagesReview product={data} />
-        {/* product detail images reviews */}
+            {/* product detail images reviews */}
+            <ProductImagesReview product={data} />
+            {/* product detail images reviews */}
 
-        {/* product detail size */}
-        <ProductSize product={data} />
-        {/* end product detail size */}
+            {/* product detail size */}
+            <ProductSize product={data} />
+            {/* end product detail size */}
 
-        {/* product detail description */}
-        <ProductDetailDescription product={data} />
-        {/* End product detail description */}
+            {/* product detail description */}
+            <ProductDetailDescription product={data} />
+            {/* End product detail description */}
 
-        {/* product detail Review */}
-        <ProductDetailReviews product={data} />
-        {/* End product Review  */}
-      </View>
-      <View style={styles.footerContainer}>
-        <Button
-          testID='AddtoCartButton'
-          text='Add to Cart'
-          buttonStyles={[styles.bottomButton, styles.loginButton]}
-          textStyles={[styles.textBottomButton]}
-          onPress={onAddToCartHandler}
-        />
-      </View>
-      {/* End footer block */}
+            {/* product detail Review */}
+            <ProductDetailReviews product={data} />
+            {/* End product Review  */}
+          </View>
+          <View style={styles.footerContainer}>
+            <Button
+              testID='AddtoCartButton'
+              text='Add to Cart'
+              buttonStyles={[styles.bottomButton, styles.loginButton]}
+              textStyles={[styles.textBottomButton]}
+              onPress={onAddToCartHandler}
+            />
+          </View>
+          {/* End footer block */}
+        </>
+      )}
     </ScrollView>
   );
 };
