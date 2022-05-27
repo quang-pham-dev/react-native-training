@@ -44,7 +44,7 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
         ...state,
         type: action.type,
         isProcessing: false,
-        productsByBrandId: action.payload,
+        productsByBrandId: action.payload.products,
       };
 
     case GET_PRODUCTS_FAILED:

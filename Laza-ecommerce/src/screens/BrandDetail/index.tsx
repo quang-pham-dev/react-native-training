@@ -55,7 +55,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
       const { data } = await productsService.getProductByBrandId(id);
       productDispatch({
         type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
-        payload: data,
+        payload: { products: data },
       });
     } catch (error) {
       productDispatch({
