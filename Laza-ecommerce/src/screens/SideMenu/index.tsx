@@ -1,13 +1,5 @@
-import React, { memo, useCallback, useContext, useState } from 'react';
-import {
-  Alert,
-  Image,
-  Switch,
-  TouchableOpacity,
-  View,
-  Text,
-  ImageSourcePropType,
-} from 'react-native';
+import React, { useCallback, useContext, useState } from 'react';
+import { Alert, Image, Switch, View } from 'react-native';
 import { DrawerActions } from '@react-navigation/native';
 
 // Screens
@@ -52,7 +44,7 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
     currentUser: { username, avatar },
   } = authState;
 
-  const orderCount = 3 | 0;
+  const orderCount = 3 || 0;
 
   // handel action sign out
   const onPressLogoutHandler = useCallback(() => {
