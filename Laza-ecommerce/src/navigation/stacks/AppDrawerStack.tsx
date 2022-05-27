@@ -1,6 +1,8 @@
 import React from 'react';
+import { Image, Text } from 'react-native';
+
+// LIBS
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // Stack
@@ -18,6 +20,66 @@ import { SCREENS_ROUTES } from 'constants/Screens';
 // Themes
 import Colors from 'themes/Colors';
 import IMAGES from 'themes/Images';
+import Metrics from 'themes/Metrics';
+
+const TabBarIcon = {
+  [SCREENS_ROUTES.STACK.HOME.name]: IMAGES.iconHome,
+  [SCREENS_ROUTES.STACK.WISHLIST.name]: IMAGES.iconHeart,
+  [SCREENS_ROUTES.STACK.BAGS.name]: IMAGES.iconBag,
+  [SCREENS_ROUTES.STACK.WALLET.name]: IMAGES.iconWallet,
+};
+
+const TabBarName = {
+  [SCREENS_ROUTES.STACK.HOME.name]: SCREENS_ROUTES.STACK.HOME.name,
+  [SCREENS_ROUTES.STACK.WISHLIST.name]: SCREENS_ROUTES.STACK.WISHLIST.name,
+  [SCREENS_ROUTES.STACK.BAGS.name]: SCREENS_ROUTES.STACK.BAGS.name,
+  [SCREENS_ROUTES.STACK.WALLET.name]: SCREENS_ROUTES.STACK.WALLET.name,
+};
+
+const renderTabBarLabel = (focused: boolean, route: any) => {
+  const tintColor = focused ? Colors.primaryColor : Colors.textBlack;
+  const styles = { color: tintColor };
+  return <Text children={TabBarName[route?.routeName]} style={styles} />;
+};
+
+const renderTabBarIcon = (focused: boolean, route: any) => {
+  console.log('renderTabBarIcon', route.routeName);
+  const sizeIcon = focused ? Metrics.icons.custom : Metrics.icons.standard;
+  const tintColor = focused ? Colors.primaryColor : Colors.textGray;
+  const styles = { tintColor, width: sizeIcon, height: sizeIcon };
+  return <Image style={styles} source={TabBarIcon[route?.routeName]} resizeMode='contain' />;
+};
+
+const TabBarList = [
+  {
+    routeName: SCREENS_ROUTES.STACK.HOME.name,
+    component: HomeStack,
+    options: {
+      headerShown: false,
+    },
+  },
+  {
+    routeName: SCREENS_ROUTES.STACK.WISHLIST.name,
+    component: WishListStack,
+    options: {
+      headerShown: true,
+    },
+  },
+  {
+    routeName: SCREENS_ROUTES.STACK.BAGS.name,
+    component: BagsStack,
+    options: {
+      headerShown: true,
+    },
+  },
+  {
+    routeName: SCREENS_ROUTES.STACK.WALLET.name,
+    component: WalletStack,
+    options: {
+      headerShown: true,
+    },
+  },
+];
 
 const BottomTab = createBottomTabNavigator();
 
@@ -31,77 +93,21 @@ const AppStackNavigator = () => {
         tabBarStyle: {
           paddingBottom: 0,
         },
+        headerShown: true,
       }}>
-      <BottomTab.Screen
-        name={SCREENS_ROUTES.STACK.HOME.name}
-        component={HomeStack}
-        options={{
-          headerShown: false,
-          tabBarLabel: SCREENS_ROUTES.STACK.HOME.name,
-          tabBarActiveTintColor: Colors.primaryColor,
-          tabBarIcon: ({ size, color, focused }) => {
-            return (
-              <Image
-                style={{
-                  width: size,
-                  height: size,
-                  tintColor: focused ? Colors.primaryColor : color,
-                }}
-                source={IMAGES.iconHome}
-                resizeMode='contain'
-              />
-            );
-          },
-        }}
-      />
-      <BottomTab.Screen
-        name={SCREENS_ROUTES.STACK.WISHLIST.name}
-        component={WishListStack}
-        options={{
-          tabBarLabel: SCREENS_ROUTES.STACK.WISHLIST.name,
-          tabBarIcon: ({ size, color }) => {
-            return (
-              <Image
-                style={{ width: size, height: size, tintColor: color }}
-                source={IMAGES.iconHeart}
-                resizeMode='contain'
-              />
-            );
-          },
-        }}
-      />
-      <BottomTab.Screen
-        name={SCREENS_ROUTES.STACK.BAGS.name}
-        component={BagsStack}
-        options={{
-          tabBarLabel: SCREENS_ROUTES.STACK.BAGS.name,
-          tabBarIcon: ({ size, color }) => {
-            return (
-              <Image
-                style={{ width: size, height: size, tintColor: color }}
-                source={IMAGES.iconBag}
-                resizeMode='contain'
-              />
-            );
-          },
-        }}
-      />
-      <BottomTab.Screen
-        name={SCREENS_ROUTES.STACK.WALLET.name}
-        component={WalletStack}
-        options={{
-          tabBarLabel: SCREENS_ROUTES.STACK.WALLET.name,
-          tabBarIcon: ({ size, color }) => {
-            return (
-              <Image
-                style={{ width: size, height: size, tintColor: color }}
-                source={IMAGES.iconWallet}
-                resizeMode='contain'
-              />
-            );
-          },
-        }}
-      />
+      {TabBarList.map((elem, index) => (
+        <BottomTab.Screen
+          key={index}
+          name={elem.routeName}
+          component={elem.component}
+          options={{
+            headerShown: elem.options.headerShown,
+            tabBarActiveTintColor: Colors.primaryColor,
+            tabBarLabel: ({ focused }) => renderTabBarLabel(focused, elem),
+            tabBarIcon: ({ focused }) => renderTabBarIcon(focused, elem),
+          }}
+        />
+      ))}
     </BottomTab.Navigator>
   );
 };
