@@ -24,7 +24,7 @@ exports[`Button Component should render correctly 1`] = `
       ]
     }
   >
-    Facebook
+    Button
   </Text>
 </View>
 `;
@@ -62,7 +62,7 @@ exports[`Button Component should render icon button correctly 1`] = `
       ]
     }
   >
-    Google
+    Button
   </Text>
 </View>
 `;

@@ -1,19 +1,42 @@
 import React from 'react';
+import { TouchableOpacity } from 'react-native';
+
+// LIBS
 import renderer from 'react-test-renderer';
 
-import IMAGES from 'themes/Images';
+// Components
 import Button from 'components/Button';
 
+// Themes
+import IMAGES from 'themes/Images';
+
 describe('Button Component', () => {
+  const props = {
+    onPressHandler: jest.fn(),
+    text: 'Button',
+  };
+
+  const tree = renderer.create(<Button {...props} />);
+
   test('should render correctly', () => {
-    const tree = renderer.create(<Button text='Facebook' onPress={jest.fn()} />).toJSON();
-    expect(tree).toMatchSnapshot();
+    const component = tree.toJSON();
+    expect(component).toMatchSnapshot();
   });
 
   test('should render icon button correctly', () => {
-    const tree = renderer
-      .create(<Button text='Google' icon={IMAGES.iconGoogle} onPress={jest.fn()} />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    const newProps = {
+      ...props,
+      icon: IMAGES.iconGoogle,
+    };
+
+    const tree = renderer.create(<Button {...newProps} />);
+    const component = tree.toJSON();
+    expect(component).toMatchSnapshot();
+  });
+
+  test('should call function onPressHandler', () => {
+    const Pressable = tree.root.findAllByType(TouchableOpacity)[0];
+    Pressable.props.onPress();
+    expect(props.onPressHandler).toHaveBeenCalled();
   });
 });

@@ -2,9 +2,9 @@ import { ImageSourcePropType, StyleProp, TextStyle, ViewStyle } from 'react-nati
 
 export interface IButtonProps {
   testID?: string;
-  onPress?: () => void;
+  onPressHandler?: () => void;
   buttonStyles?: ViewStyle[];
-  text?: string;
+  text: string;
   textStyles?: StyleProp<TextStyle>;
   icon?: ImageSourcePropType;
   iconStyles?: ViewStyle[];

@@ -1,5 +1,7 @@
 import React, { memo } from 'react';
 import { Image, Text, TouchableOpacity } from 'react-native';
+
+// LIBS
 import isEqual from 'react-fast-compare';
 
 // Types
@@ -9,7 +11,7 @@ import { IButtonProps } from 'types/components/Button';
 import styles from './styles';
 
 const Button = ({
-  onPress = () => {},
+  onPressHandler = () => {},
   text,
   textStyles,
   buttonStyles,
@@ -21,7 +23,7 @@ const Button = ({
   return (
     <TouchableOpacity
       style={[buttonStyles]}
-      onPress={onPress}
+      onPress={onPressHandler}
       disabled={disabled}
       activeOpacity={0.8}>
       {icon && <Image style={[styles.icon, iconStyles]} source={icon} />}
