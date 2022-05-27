@@ -19,7 +19,7 @@ import styles from './styles';
 
 function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
   // handle navigate to SignIn screen
-  const handlePressNavigateToSignIn = useCallback(() => {
+  const onNavigateSignInScreenHandler = useCallback(() => {
     navigation.navigate(SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name);
   }, [navigation]);
 
@@ -69,7 +69,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
       <View style={styles.footer}>
         <View style={styles.footerTextWrapper}>
           <Title titleStyles={styles.alreadyText} titleName='Already have an account? ' />
-          <TouchableOpacity onPress={handlePressNavigateToSignIn} testID='LinkToSignIn'>
+          <TouchableOpacity onPress={onNavigateSignInScreenHandler} testID='LinkToSignIn'>
             <Title titleStyles={styles.signIn} titleName='Signin' />
           </TouchableOpacity>
         </View>
