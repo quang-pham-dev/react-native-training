@@ -316,10 +316,10 @@
       "brandId": 4,
       "name": "Fila",
       "price": "100",
-      "type": "Cotton",
+      "type": "Veston Man",
       "like": false,
       "title": "Fila Sportswear Club Fleece",
-      "source": "https://cf.shopee.vn/file/cf2fa834335b2858e837dec75e9ab044",
+      "source": "https://cf.shopee.sg/file/0a96a3f84dc488099d74e8107742b6e9",
       "description": "Fila is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
       "reviewer": {
         "id": 2,
@@ -356,27 +356,27 @@
       "imageReview": [
         {
           "id": 0,
-          "image": "https://cf.shopee.vn/file/c9e01bd08b94465b594a69b614ffc677"
+          "image": "https://cf.shopee.sg/file/d067b18bb1cf30a577a9d378b76b7963"
         },
         {
           "id": 1,
-          "image": "https://cf.shopee.vn/file/5bcc2a7c72869d3a3e679a4e576b2656"
+          "image": "https://cf.shopee.sg/file/70d1388b4699ec424da50c411fdf7ed7"
         },
         {
           "id": 2,
-          "image": "https://cf.shopee.vn/file/f282ff038bc7dc010d5eb4cf7bc22b87"
+          "image": "https://cf.shopee.sg/file/510bb3e391efec4204f953be9da1c4f2"
         },
         {
           "id": 3,
-          "image": "https://cf.shopee.vn/file/fcd5d8aeef981abf4d823611f5bdd65a"
+          "image": "https://cf.shopee.sg/file/1c24d853b59ee51129b57ed5d155abb9"
         },
         {
           "id": 4,
-          "image": "https://cf.shopee.vn/file/ae65037085f2c8841076ef1c4e2613ce"
+          "image": "https://cf.shopee.sg/file/47afd42b91f190cd362d39bd4e07976f"
         },
         {
           "id": 5,
-          "image": "https://cf.shopee.vn/file/39d8a13842ea9313339afb1c55d68567"
+          "image": "https://cf.shopee.sg/file/d067b18bb1cf30a577a9d378b76b7963"
         }
       ],
       "rating": "4.5",
@@ -590,81 +590,6 @@
         {
           "id": 5,
           "image": "https://cf.shopee.vn/file/a8496a64cf6506726d2aa509223237e6"
-        }
-      ],
-      "rating": "4.5",
-      "comment": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila."
-    },
-    {
-      "id": 8,
-      "brandId": 1,
-      "name": "Nike",
-      "price": "110",
-      "type": "sports running shoes",
-      "like": false,
-      "title": "New Nike Zoom fly",
-      "source": "https://cf.shopee.vn/file/2c26dd7a65fcfc2cf142894507ce7d2b",
-      "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
-      "reviewer": {
-        "id": 2,
-        "name": "John Doe",
-        "date": "13, Sep, 2020",
-        "image": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400"
-      },
-      "size": [
-        {
-          "id": 0,
-          "size": "S"
-        },
-        {
-          "id": 1,
-          "size": "M"
-        },
-        {
-          "id": 2,
-          "size": "L"
-        },
-        {
-          "id": 3,
-          "size": "XL"
-        },
-        {
-          "id": 4,
-          "size": "2XL"
-        },
-        {
-          "id": 5,
-          "size": "3XL"
-        }
-      ],
-      "imageReview": [
-        {
-          "id": 0,
-          "image": "https://cf.shopee.vn/file/eb6246c174f462b7c99b6aacd0437286"
-        },
-        {
-          "id": 1,
-          "image": "https://cf.shopee.vn/file/b8c08e56aa953eb93cdb2180b85f70fa"
-        },
-        {
-          "id": 2,
-          "image": "https://cf.shopee.vn/file/2c26dd7a65fcfc2cf142894507ce7d2b"
-        },
-        {
-          "id": 3,
-          "image": "https://cf.shopee.vn/file/26eff6caff8b26a753ff016e991ae7e1"
-        },
-        {
-          "id": 4,
-          "image": "https://cf.shopee.vn/file/6f5b2cbf3823e1751df513b344b459dd"
-        },
-        {
-          "id": 5,
-          "image": "https://cf.shopee.vn/file/b9e5084310b398a964f4eeb6543a6fa5"
-        },
-        {
-          "id": 6,
-          "image": "https://cf.shopee.vn/file/8d90106ef8651fa64c829d4515d48d8c"
         }
       ],
       "rating": "4.5",
