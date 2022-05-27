@@ -1,5 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { FlatList, View, Text } from 'react-native';
+
+// LIBS
 import isEqual from 'react-fast-compare';
 
 // Components
@@ -16,7 +18,7 @@ import { IBrandCardListProps, IBrandsListProps } from 'types/models/Brands';
 // Styles
 import styles from './styles';
 
-const BrandsCardList = ({ onNavigateBrandDetailScreen, brandsData }: IBrandsListProps) => {
+const BrandsCardList = ({ onNavigateBrandDetailScreen, brands }: IBrandsListProps) => {
   const onNavigateBrandDetailScreenHandler = useCallback(
     (id: string) => {
       onNavigateBrandDetailScreen(id);
@@ -34,7 +36,7 @@ const BrandsCardList = ({ onNavigateBrandDetailScreen, brandsData }: IBrandsList
   return (
     <View style={styles.container}>
       <FlatList
-        data={brandsData}
+        data={brands}
         renderItem={renderBrandCard}
         keyExtractor={brand => brand.id}
         horizontal={true}

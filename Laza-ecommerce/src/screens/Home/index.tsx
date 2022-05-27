@@ -163,7 +163,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           {/* end brand title */}
           {Boolean(brandState?.isProcessing) && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
           <BrandsCardList
-            brandsData={brands}
+            brands={brands}
             onNavigateBrandDetailScreen={onNavigateBrandDetailScreenHandler}
           />
           {/* end brand list */}

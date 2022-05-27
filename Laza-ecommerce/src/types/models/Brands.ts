@@ -17,6 +17,6 @@ export interface IBrandCardListProps extends IBrand {
 }
 
 export interface IBrandsListProps {
-  brandsData: IBrandCardListProps[];
+  brands: IBrandCardListProps[];
   onNavigateBrandDetailScreen: (id: string) => void;
 }
