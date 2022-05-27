@@ -43,7 +43,6 @@ const renderTabBarLabel = (focused: boolean, route: any) => {
 };
 
 const renderTabBarIcon = (focused: boolean, route: any) => {
-  console.log('renderTabBarIcon', route.routeName);
   const sizeIcon = focused ? Metrics.icons.custom : Metrics.icons.standard;
   const tintColor = focused ? Colors.primaryColor : Colors.textGray;
   const styles = { tintColor, width: sizeIcon, height: sizeIcon };
