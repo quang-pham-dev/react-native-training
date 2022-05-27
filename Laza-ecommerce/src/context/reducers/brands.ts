@@ -39,6 +39,7 @@ const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAc
     case GET_BRAND_FAILED:
       return {
         ...state,
+        isProcessing: false,
         type: action.type,
         error: action.error,
       };

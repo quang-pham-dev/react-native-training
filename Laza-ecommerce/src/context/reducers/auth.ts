@@ -71,6 +71,7 @@ const authenticationReducer = (state: AuthState = InitialAuthState, action: Auth
         ...state,
         type: action.type,
         isLoading: false,
+        isProcessing: false,
         error: action.error,
       };
 

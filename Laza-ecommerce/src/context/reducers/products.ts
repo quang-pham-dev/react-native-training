@@ -52,6 +52,7 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
     case GET_PRODUCTS_BY_BRAND_ID_FAILED:
       return {
         ...state,
+        isProcessing: false,
         type: action.type,
         error: action.error,
       };
