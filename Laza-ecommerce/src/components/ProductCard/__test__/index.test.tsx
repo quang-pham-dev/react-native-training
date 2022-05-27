@@ -1,28 +1,34 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-
-import ProductCard from 'components/ProductCard';
-import { product } from '__mocks__/dataMock/products';
 import { Pressable } from 'react-native';
 
-describe('Product Card Component', () => {
-  const navigate = jest.fn();
+// LIBS
+import renderer from 'react-test-renderer';
 
-  const component = renderer.create(
-    <ProductCard
-      product={product}
-      onNavigateProductDetailScreen={navigate}
-      onPressLikeProduct={jest.fn()}
-    />,
-  );
+// Components
+import ProductCard from 'components/ProductCard';
+
+// Mocks
+import { product } from '__mocks__/dataMock/products';
+
+// Utils
+import { navigationMock } from 'utils/testMock';
+
+describe('Product Card Component', () => {
+  const props = {
+    product,
+    onNavigateProductDetailScreen: navigationMock.navigate,
+    onPressLikeProduct: jest.fn(),
+  };
+
+  const tree = renderer.create(<ProductCard {...props} />);
   test('Should render correctly', () => {
-    const result = component.toJSON();
-    expect(result).toMatchSnapshot();
+    const component = tree.toJSON();
+    expect(component).toMatchSnapshot();
   });
 
   test('should call function onNavigateProductDetailScreen', () => {
-    const press = component.root.findAllByType(Pressable)[0];
+    const press = tree.root.findAllByType(Pressable)[0];
     press.props.onPress();
-    expect(navigate).toHaveBeenCalled();
+    expect(navigationMock.navigate).toHaveBeenCalled();
   });
 });
