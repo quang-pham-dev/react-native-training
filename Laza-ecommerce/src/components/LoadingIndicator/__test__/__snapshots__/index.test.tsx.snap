@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LoadingIndicator Component should render color LoadingIndicator correctly 1`] = `
+exports[`LoadingIndicator Component should render correctly 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
 >
   <ActivityIndicator
     animating={true}
-    color="red"
+    color="#FFC107"
     hidesWhenStopped={true}
-    size="small"
+    size="large"
     style={
       Object {
         "margin": 13,
@@ -18,7 +18,7 @@ exports[`LoadingIndicator Component should render color LoadingIndicator correct
 </RCTSafeAreaView>
 `;
 
-exports[`LoadingIndicator Component should render correctly 1`] = `
+exports[`LoadingIndicator Component should render new color props correctly 1`] = `
 <RCTSafeAreaView
   emulateUnlessSupported={true}
 >
