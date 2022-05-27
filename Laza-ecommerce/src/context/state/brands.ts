@@ -1,10 +1,10 @@
-import { Brand } from 'types/models/Brands';
+import { IBrand } from 'types/models/Brands';
 
 export interface BrandsState {
   isLoading: boolean;
   isProcessing: boolean;
   error: string | null;
-  brands: Brand[];
+  brands: IBrand[];
   getBrands(): Promise<void>;
   getBrand(id: string): Promise<void>;
 }
