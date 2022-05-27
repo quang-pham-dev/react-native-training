@@ -1,12 +1,28 @@
 import React from 'react';
-import { render } from '@testing-library/react-native';
+import { TextInput } from 'react-native';
 
+// LIBS
+import { render } from '@testing-library/react-native';
+import renderer from 'react-test-renderer';
+
+// Components
 import SearchBar from 'components/SearchBar';
 
 describe('Search Bar Component', () => {
-  const component = render(<SearchBar onChangeText={jest.fn()} onSubmitEditing={jest.fn()} />);
+  const props = {
+    value: '',
+    onChangeText: jest.fn(),
+    onSubmitEditing: jest.fn(),
+  };
+  const tree = renderer.create(<SearchBar {...props} />);
   test('Should render correctly', () => {
-    const result = component.toJSON();
-    expect(result).toMatchSnapshot();
+    const component = tree.toJSON();
+    expect(component).toMatchSnapshot();
+  });
+
+  test('should call function onChangeText', () => {
+    const component = tree.root.findAllByType(TextInput)[0];
+    component.props.onChangeText();
+    expect(props.onChangeText).toHaveBeenCalled();
   });
 });

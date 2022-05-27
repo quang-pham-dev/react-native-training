@@ -1,5 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { Image, TextInput, TouchableOpacity, View } from 'react-native';
+
+// LIBS
 import isEqual from 'react-fast-compare';
 
 // Types
@@ -32,11 +34,15 @@ const SearchBar = ({
     onSubmitEditing();
   }, [onSubmitEditing, valueState]);
 
+  const onSearchHandler = useCallback(() => {
+    onSubmitEditingHandler();
+  }, [onSubmitEditingHandler]);
+
   return (
     <View style={styles.container}>
       <View style={styles.searchBarContainer}>
         <View style={styles.inputWrapper}>
-          <TouchableOpacity onPress={() => {}} style={styles.iconSearchWrapper}>
+          <TouchableOpacity onPress={onSearchHandler} style={styles.iconSearchWrapper}>
             <Image style={styles.iconSearch} source={IMAGES.iconSearch} />
           </TouchableOpacity>
           <TextInput

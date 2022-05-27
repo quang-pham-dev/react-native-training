@@ -79,6 +79,7 @@ exports[`Search Bar Component Should render correctly 1`] = `
           ]
         }
         underlineColorAndroid="transparent"
+        value=""
       />
     </View>
     <View
