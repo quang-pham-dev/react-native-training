@@ -33,7 +33,7 @@ const Metrics = {
     small: 11,
     medium: 16,
     standard: 20,
-    custom: 22,
+    custom: 25,
     semiLarge: 45,
     large: 50,
   },
