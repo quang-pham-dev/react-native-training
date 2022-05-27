@@ -13,4 +13,5 @@ export interface ITextInputProps {
   iconPosition?: 'left' | 'right';
   onBlur?: () => void;
   onChangeText: (value: string) => void | undefined;
+  onSubmitEditing?: () => void;
 }

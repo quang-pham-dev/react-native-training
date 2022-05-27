@@ -1,28 +1,59 @@
 import React from 'react';
+import { TextInput } from 'react-native';
+
+// LIBS
 import renderer from 'react-test-renderer';
 
+// Components
 import Input from 'components/TextInput';
 
 describe('TextInput Component', () => {
+  const props = {
+    value: 'user name',
+    autoFocus: false,
+    onChangeText: jest.fn(),
+    onSubmitEditing: jest.fn(),
+    onBlur: jest.fn(),
+  };
+
   const onChangeText = jest.fn();
-  const component = renderer.create(<Input value='username' onChangeText={onChangeText} />);
+  const tree = renderer.create(<Input {...props} />);
   test('should render correctly', () => {
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    const component = tree.toJSON();
+    expect(component).toMatchSnapshot();
   });
 
-  test('should render with label', () => {
-    const tree = renderer
-      .create(<Input value='username' label='Username' onChangeText={onChangeText} />)
-      .toJSON();
+  test('should render with label correctly', () => {
+    const newProps = {
+      ...props,
+      label: 'Username',
+    };
+    const tree = renderer.create(<Input {...newProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
   test('should render placeholder', () => {
-    const tree = renderer
-      .create(
-        <Input value='Password' placeholder='Enter your password' onChangeText={onChangeText} />,
-      )
-      .toJSON();
+    const newProps = {
+      ...props,
+      placeholder: 'Enter your username',
+    };
+    const tree = renderer.create(<Input {...newProps} />).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+  test('should call function onChangeText', () => {
+    const component = tree.root.findAllByType(TextInput)[0];
+    component.props.onChangeText();
+    expect(props.onChangeText).toHaveBeenCalled();
+  });
+
+  test('should call function onSubmitEditing', () => {
+    const component = tree.root.findAllByType(TextInput)[0];
+    component.props.onSubmitEditing();
+    expect(props.onSubmitEditing).toHaveBeenCalled();
+  });
+
+  test('should call function onBlur', () => {
+    const component = tree.root.findAllByType(TextInput)[0];
+    component.props.onBlur();
+    expect(props.onBlur).toHaveBeenCalled();
   });
 });

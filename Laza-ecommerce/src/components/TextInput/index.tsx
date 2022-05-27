@@ -1,5 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { Text, TextInput, View } from 'react-native';
+
+// LIBS
 import isEqual from 'react-fast-compare';
 
 // Types
@@ -17,6 +19,7 @@ const Input = ({
   secureTextEntry,
   onChangeText = () => {},
   onBlur = () => {},
+  onSubmitEditing = () => {},
 }: ITextInputProps) => {
   const [valueState, setValueState] = React.useState(value);
 
@@ -28,13 +31,22 @@ const Input = ({
     [onChangeText, setValueState],
   );
 
+  const onSubmitEditingHandler = useCallback(() => {
+    onSubmitEditing();
+  }, [onSubmitEditing, valueState]);
+
+  const onBlurHandler = useCallback(() => {
+    onBlur();
+  }, [onBlur, valueState]);
+
   return (
     <View style={styles.inputWrap}>
       {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
       <TextInput
         value={valueState}
         onChangeText={onChangeTextHandler}
-        onBlur={onBlur}
+        onBlur={onBlurHandler}
+        onSubmitEditing={onSubmitEditingHandler}
         placeholder={placeholder}
         style={[styles.input, textInputStyles]}
         secureTextEntry={secureTextEntry}

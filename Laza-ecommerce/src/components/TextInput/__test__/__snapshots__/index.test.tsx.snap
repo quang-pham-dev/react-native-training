@@ -12,6 +12,7 @@ exports[`TextInput Component should render correctly 1`] = `
     allowFontScaling={true}
     onBlur={[Function]}
     onChangeText={[Function]}
+    onSubmitEditing={[Function]}
     rejectResponderTermination={true}
     style={
       Array [
@@ -26,7 +27,7 @@ exports[`TextInput Component should render correctly 1`] = `
       ]
     }
     underlineColorAndroid="transparent"
-    value="username"
+    value="user name"
   />
 </View>
 `;
@@ -43,7 +44,8 @@ exports[`TextInput Component should render placeholder 1`] = `
     allowFontScaling={true}
     onBlur={[Function]}
     onChangeText={[Function]}
-    placeholder="Enter your password"
+    onSubmitEditing={[Function]}
+    placeholder="Enter your username"
     rejectResponderTermination={true}
     style={
       Array [
@@ -58,12 +60,12 @@ exports[`TextInput Component should render placeholder 1`] = `
       ]
     }
     underlineColorAndroid="transparent"
-    value="Password"
+    value="user name"
   />
 </View>
 `;
 
-exports[`TextInput Component should render with label 1`] = `
+exports[`TextInput Component should render with label correctly 1`] = `
 <View
   style={
     Object {
@@ -91,6 +93,7 @@ exports[`TextInput Component should render with label 1`] = `
     allowFontScaling={true}
     onBlur={[Function]}
     onChangeText={[Function]}
+    onSubmitEditing={[Function]}
     rejectResponderTermination={true}
     style={
       Array [
@@ -105,7 +108,7 @@ exports[`TextInput Component should render with label 1`] = `
       ]
     }
     underlineColorAndroid="transparent"
-    value="username"
+    value="user name"
   />
 </View>
 `;
