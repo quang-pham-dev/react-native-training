@@ -12,7 +12,7 @@ import IMAGES from 'themes/Images';
 
 describe('Button Component', () => {
   const props = {
-    onPressHandler: jest.fn(),
+    onPress: jest.fn(),
     text: 'Button',
   };
 
@@ -34,9 +34,9 @@ describe('Button Component', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('should call function onPressHandler', () => {
+  test('should call function onPress', () => {
     const Pressable = tree.root.findAllByType(TouchableOpacity)[0];
     Pressable.props.onPress();
-    expect(props.onPressHandler).toHaveBeenCalled();
+    expect(props.onPress).toHaveBeenCalled();
   });
 });

@@ -11,7 +11,7 @@ import { IButtonProps } from 'types/components/Button';
 import styles from './styles';
 
 const Button = ({
-  onPressHandler = () => {},
+  onPress = () => {},
   text,
   textStyles,
   buttonStyles,
@@ -23,7 +23,7 @@ const Button = ({
   return (
     <TouchableOpacity
       style={[buttonStyles]}
-      onPress={onPressHandler}
+      onPress={onPress}
       disabled={disabled}
       activeOpacity={0.8}>
       {icon && <Image style={[styles.icon, iconStyles]} source={icon} />}
