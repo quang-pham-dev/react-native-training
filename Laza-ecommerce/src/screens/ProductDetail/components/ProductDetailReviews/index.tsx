@@ -8,10 +8,14 @@ import isEqual from 'react-fast-compare';
 import Title from 'components/Title';
 import MoreLessText from 'components/LessMoreText';
 
+// Types
+import { IProductDetailItemProps } from 'types/screens/ProductDetail';
+
+// Themes
+import IMAGES from 'themes/Images';
+
 // Styles
 import styles from './styles';
-import { IProductDetailItemProps } from 'types/screens/ProductDetail';
-import IMAGES from 'themes/Images';
 
 const ProductDetailReviews = ({ product }: IProductDetailItemProps) => {
   const { comment, rating, reviewer } = product || {};
