@@ -6,7 +6,7 @@
 
 ## Timeline
 
-- 5 working days (May 5th 2022 - May 11th 2022)
+- 7 working days
 
 ## Team size
 
