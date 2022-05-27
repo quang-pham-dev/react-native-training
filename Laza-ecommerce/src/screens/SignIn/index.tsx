@@ -60,7 +60,7 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
       }
     } catch (error) {
       authDispatch({ type: SIGN_IN_FAILED, payload: error });
-      Alert.alert('Error', error.message);
+      Alert.alert(error.response.data.message);
     }
   };
 
