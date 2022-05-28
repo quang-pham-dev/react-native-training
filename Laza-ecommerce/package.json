@@ -9,7 +9,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest",
+    "test": "jest --config jest.config.js",
     "coverage": "jest --coverage --no-cache",
     "lint": "eslint --fix --ext .ts,.tsx,.js",
     "prettier": "prettier --write ./**/*.{js,ts,tsx}",
