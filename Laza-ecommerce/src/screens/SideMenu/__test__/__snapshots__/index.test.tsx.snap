@@ -1,3 +1,525 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Side menu should render correctly 1`] = `undefined`;
+exports[`Side menu should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "paddingHorizontal": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginTop": 45,
+        }
+      }
+    >
+      <View
+        accessible={true}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {},
+              Array [
+                Object {
+                  "height": 45,
+                  "width": 45,
+                },
+              ],
+            ]
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginTop": 30,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "justifyContent": "space-between",
+              "marginLeft": 15,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "textTransform": "none",
+                  },
+                  Object {
+                    "color": "#8F959E",
+                    "fontFamily": "Inter_400Regular",
+                    "fontSize": 13,
+                  },
+                ]
+              }
+            >
+              Verified Profile
+            </Text>
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 15,
+                  "resizeMode": "contain",
+                  "width": 15,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 5,
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+                "textTransform": "none",
+              },
+              Object {
+                "color": "#8F959E",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 11,
+              },
+            ]
+          }
+        >
+          3 Orders
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginTop": 25,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 19,
+                "marginRight": 13,
+                "resizeMode": "contain",
+                "width": 19,
+              }
+            }
+          />
+          <Text
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Inter_400Regular",
+                  "fontSize": 15,
+                  "lineHeight": 16,
+                },
+                undefined,
+              ]
+            }
+          >
+            Dark Mode
+          </Text>
+        </View>
+      </View>
+      <View
+        style={Object {}}
+      >
+        <RCTSwitch
+          accessibilityRole="switch"
+          onChange={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onTintColor="#34C759"
+          style={
+            Array [
+              Object {
+                "height": 31,
+                "width": 51,
+              },
+              Array [
+                Object {
+                  "marginBottom": -20,
+                  "transform": Array [
+                    Object {
+                      "scaleX": 0.6,
+                    },
+                    Object {
+                      "scaleY": 0.6,
+                    },
+                  ],
+                },
+                Object {
+                  "backgroundColor": "#F2F2F2",
+                  "borderRadius": 16,
+                },
+              ],
+            ]
+          }
+          thumbTintColor="#F2F2F2"
+          tintColor="#F2F2F2"
+          value={false}
+        />
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginTop": 25,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 19,
+              "marginRight": 13,
+              "resizeMode": "contain",
+              "width": 19,
+            }
+          }
+        />
+        <Text
+          style={
+            Array [
+              Object {
+                "fontFamily": "Inter_400Regular",
+                "fontSize": 15,
+                "lineHeight": 16,
+              },
+              undefined,
+            ]
+          }
+        >
+          Account information
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginTop": 25,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 19,
+              "marginRight": 13,
+              "resizeMode": "contain",
+              "width": 19,
+            }
+          }
+        />
+        <Text
+          style={
+            Array [
+              Object {
+                "fontFamily": "Inter_400Regular",
+                "fontSize": 15,
+                "lineHeight": 16,
+              },
+              undefined,
+            ]
+          }
+        >
+          Order
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginTop": 25,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 19,
+              "marginRight": 13,
+              "resizeMode": "contain",
+              "width": 19,
+            }
+          }
+        />
+        <Text
+          style={
+            Array [
+              Object {
+                "fontFamily": "Inter_400Regular",
+                "fontSize": 15,
+                "lineHeight": 16,
+              },
+              undefined,
+            ]
+          }
+        >
+          My Cards
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginTop": 25,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 19,
+              "marginRight": 13,
+              "resizeMode": "contain",
+              "width": 19,
+            }
+          }
+        />
+        <Text
+          style={
+            Array [
+              Object {
+                "fontFamily": "Inter_400Regular",
+                "fontSize": 15,
+                "lineHeight": 16,
+              },
+              undefined,
+            ]
+          }
+        >
+          WishList
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginTop": 25,
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 19,
+              "marginRight": 13,
+              "resizeMode": "contain",
+              "width": 19,
+            }
+          }
+        />
+        <Text
+          style={
+            Array [
+              Object {
+                "fontFamily": "Inter_400Regular",
+                "fontSize": 15,
+                "lineHeight": 16,
+              },
+              Object {
+                "color": "#FF5757",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 15,
+              },
+            ]
+          }
+        >
+          Logout
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

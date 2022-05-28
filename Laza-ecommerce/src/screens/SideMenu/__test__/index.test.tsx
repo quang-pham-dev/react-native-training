@@ -1,56 +1,61 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react-native';
+import { Pressable } from 'react-native';
 
-import { SCREENS_ROUTES } from 'constants/Screens';
-import SideMenu from 'screens/SideMenu';
-import { navigationMock } from 'utils/testMock';
+// LIBS
 import { DrawerActions } from '@react-navigation/native';
+import { fireEvent, render } from '@testing-library/react-native';
+import renderer from 'react-test-renderer';
+
+// Screen
+import SideMenu from 'screens/SideMenu';
+
+// Constants
+import { SCREENS_ROUTES } from 'constants/Screens';
+
+// Utils
+import { navigationMock } from 'utils/testMock';
+
+// Mocks
 
 describe('Side menu', () => {
   let tree: any;
-  const action = 'press';
+  const closeMenuID = 'Side-menu-close';
 
-  const bagTestID = 'Side-menu-Bag';
-  const walletTestID = 'Side-menu-Wallet';
-  const wishlistTestID = 'Side-menu-Wishlist';
-  const toggleDrawerTestID = 'Side-menu-toggle';
-
-  beforeEach(() => {
-    tree = render(<SideMenu navigation={navigationMock} />);
-  });
-
-  //   afterEach(() => {
-  //     jest.clearAllMocks();
-  //   });
+  const props = {
+    navigation: navigationMock,
+  };
+  tree = renderer.create(<SideMenu {...props} />);
 
   test('should render correctly', () => {
-    expect(tree).toMatchSnapshot();
+    const component = tree.toJSON();
+    expect(component).toMatchSnapshot();
+  });
+
+  test('should call function onCloseMenuHandler', async () => {
+    const closeMenu = tree.root.findByProps({ testID: closeMenuID });
+    await fireEvent.press(closeMenu);
+
+    expect(props.navigation.dispatch).toHaveBeenCalledWith(DrawerActions.closeDrawer());
   });
 
   test('should navigated to handleNavigateToBagScreen', () => {
-    const { getByTestId } = tree;
-    const bagIconPress = getByTestId(bagTestID);
-
-    fireEvent(bagIconPress, action);
+    const button = tree.root.findAllByType(Pressable)[2];
+    button.props.onPress();
 
     expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.STACK.BAGS.name);
   });
 
   test('should navigated to handleNavigateToWalletScreen', () => {
-    const { getByTestId } = tree;
-    const walletIconPress = getByTestId(walletTestID);
-
-    fireEvent(walletIconPress, action);
+    const button = tree.root.findAllByType(Pressable)[3];
+    button.props.onPress();
 
     expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.STACK.WALLET.name);
   });
 
   test('should navigated to handleNavigateToWishlistScreen', () => {
-    const { getByTestId } = tree;
-    const wishlistIconPress = getByTestId(wishlistTestID);
+    const button = tree.root.findAllByType(Pressable)[4];
+    button.props.onPress();
 
-    fireEvent(wishlistIconPress, action);
-
-    expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.STACK.WALLET.name);
+    expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.STACK.WISHLIST.name);
   });
 });

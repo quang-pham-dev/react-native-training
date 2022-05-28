@@ -40,9 +40,9 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   const { authState, authDispatch } = useContext(AppContext);
 
-  const {
-    currentUser: { username, avatar },
-  } = authState;
+  const { currentUser } = authState || {};
+
+  const { username, avatar } = currentUser || {};
 
   const orderCount = 3 || 0;
 
@@ -127,7 +127,7 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
       <View style={styles.header}>
         <View style={styles.iconMenuWrapper}>
           <Button
-            testID='Side-menu-toggle'
+            testID='Side-menu-close'
             icon={IMAGES.iconMenuOpen}
             iconStyles={[styles.iconMenu]}
             onPress={onCloseMenuHandler}
