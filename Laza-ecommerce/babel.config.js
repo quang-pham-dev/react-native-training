@@ -9,7 +9,7 @@ module.exports = function (api) {
           root: ['./src'],
           extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', 'svg', 'jpg', 'jpeg', 'png', 'gif'],
           alias: {
-            'src/*': './src/*',
+            src: './src/*',
             api: './src/api',
             assets: './src/assets',
             components: './src/components',
@@ -21,6 +21,7 @@ module.exports = function (api) {
             themes: './src/themes',
             types: './src/types',
             utils: './src/utils',
+            mock: './src/__mock__',
           },
         },
       ],
