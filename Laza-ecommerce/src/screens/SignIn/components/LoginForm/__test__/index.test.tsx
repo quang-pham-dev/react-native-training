@@ -1,14 +1,18 @@
 import React from 'react';
-import { act, fireEvent, render, waitFor } from '@testing-library/react-native';
+
+// LIBS
+import { act, fireEvent, render } from '@testing-library/react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import renderer from 'react-test-renderer';
 
-import { ILoginCredentials } from 'types/models/User';
-import { AUTH_DATA } from 'constants/Common';
-import { navigationMock } from 'utils/testMock';
+// Components
 import LoginForm from 'screens/SignIn/components/LoginForm';
-import { Alert } from 'react-native';
-import { AppContext } from 'context/AppContext';
+
+// constants
+import { AUTH_DATA } from 'constants/Common';
+
+// Types
+import { ILoginCredentials } from 'types/models/User';
 
 const mockLogin = jest.fn((data: ILoginCredentials) => {
   return Promise.resolve({ data });
@@ -17,16 +21,7 @@ const mockLogin = jest.fn((data: ILoginCredentials) => {
 describe('Login Form', () => {
   let tree: any;
   beforeEach(() => {
-    jest.spyOn(Alert, 'alert');
     tree = render(<LoginForm onSubmit={mockLogin} />);
-
-    const appContext = {
-      authDispatch: jest.fn(),
-      authState: {
-        isAuthenticated: false,
-        user: null,
-      },
-    };
   });
 
   afterEach(() => {
@@ -52,8 +47,12 @@ describe('Login Form', () => {
     const usernameValue = 'Quangpham';
     const passwordValue = '12345';
 
-    fireEvent.changeText(getByPlaceholderText('Enter your username'), usernameValue);
-    fireEvent.changeText(getByPlaceholderText('Enter your password'), passwordValue);
+    await act(async () =>
+      fireEvent.changeText(getByPlaceholderText('Enter your username'), usernameValue),
+    );
+    await act(async () =>
+      fireEvent.changeText(getByPlaceholderText('Enter your password'), passwordValue),
+    );
 
     const errorMessage = queryAllByText('Password must be at least 6 characters');
 
