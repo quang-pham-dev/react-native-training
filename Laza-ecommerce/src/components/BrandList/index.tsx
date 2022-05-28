@@ -1,12 +1,11 @@
 import React, { memo, useCallback } from 'react';
-import { FlatList, View, Text } from 'react-native';
+import { FlatList, View } from 'react-native';
 
 // LIBS
 import isEqual from 'react-fast-compare';
 
 // Components
 import BrandCard from 'components/BrandCard';
-import Label from 'components/Label';
 import Title from 'components/Title';
 
 // Constants
