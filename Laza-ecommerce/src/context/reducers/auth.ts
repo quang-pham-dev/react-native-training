@@ -40,7 +40,6 @@ const authenticationReducer = (state: AuthState = InitialAuthState, action: Auth
         isProcessing: false,
         isAuthenticated: Boolean(action.payload?.access_token),
         currentUser: action.payload?.user,
-        isSignout: false,
       };
 
     case SIGN_IN_SUCCESS:
@@ -61,7 +60,6 @@ const authenticationReducer = (state: AuthState = InitialAuthState, action: Auth
         isAuthenticated: false,
         access_token: null,
         currentUser: null,
-        isSignout: true,
       };
 
     case INITIALIZE_FAILED:
