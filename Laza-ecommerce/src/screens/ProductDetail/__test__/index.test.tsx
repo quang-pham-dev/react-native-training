@@ -8,11 +8,10 @@ import { product } from '__mocks__/dataMock';
 describe('Product detail Screen', () => {
   let tree: any;
   beforeEach(() => {
-    jest.useFakeTimers();
     tree = render(
       <ProductDetailScreen
         navigation={navigationMock}
-        productData={product}
+        product={product}
         route={{ params: product.id }}
       />,
     );

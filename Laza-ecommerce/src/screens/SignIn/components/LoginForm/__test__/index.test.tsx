@@ -18,8 +18,7 @@ describe('Login Form', () => {
   let tree: any;
   beforeEach(() => {
     jest.spyOn(Alert, 'alert');
-    jest.useFakeTimers();
-    tree = render(<LoginForm />);
+    tree = render(<LoginForm onSubmit={mockLogin} />);
 
     const appContext = {
       authDispatch: jest.fn(),
@@ -30,11 +29,6 @@ describe('Login Form', () => {
     };
   });
 
-  const component = renderer.create(
-    <AppContext.Provider value={AppContext}>
-      <LoginForm />
-    </AppContext.Provider>,
-  );
   afterEach(() => {
     jest.clearAllMocks();
   });

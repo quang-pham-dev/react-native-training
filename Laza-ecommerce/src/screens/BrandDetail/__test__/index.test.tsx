@@ -10,8 +10,6 @@ describe('Brand detail Screen', () => {
   let tree: any;
 
   beforeEach(() => {
-    jest.useFakeTimers();
-
     tree = render(
       <BrandDetailScreen
         navigation={navigationMock}

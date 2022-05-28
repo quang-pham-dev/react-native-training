@@ -19,7 +19,6 @@ describe('SignIn Screen', () => {
   const subTitleText = 'Please enter your data to continue';
 
   beforeEach(() => {
-    jest.useFakeTimers();
     tree = render(<SignInScreen navigation={navigationMock} onSubmit={mockLogin} />);
   });
   afterEach(() => {
