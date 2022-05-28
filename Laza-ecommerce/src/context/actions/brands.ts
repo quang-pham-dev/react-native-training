@@ -10,8 +10,13 @@ export const GET_BRAND_FAILED = 'GET_BRAND_FAILED';
 
 export const RESET_STATE = 'RESET_STATE';
 
+interface IPBrandPayload {
+  brand: IBrand;
+  brands: IBrand[];
+}
+
 export interface BrandsAction {
-  payload?: IBrand[];
+  payload?: IPBrandPayload;
   type: string;
   error?: string;
 }

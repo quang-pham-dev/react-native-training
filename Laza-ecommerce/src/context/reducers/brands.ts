@@ -24,7 +24,7 @@ const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAc
         ...state,
         type: action.type,
         isProcessing: false,
-        brands: action.payload,
+        brands: action.payload?.brands,
       };
 
     case GET_BRAND_SUCCESS:
@@ -32,7 +32,7 @@ const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAc
         ...state,
         type: action.type,
         isProcessing: false,
-        brandById: action.payload,
+        brand: action.payload?.brand,
       };
 
     case GET_BRANDS_FAILED:
