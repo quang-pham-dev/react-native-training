@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Types
-import { LOADING_SIZE } from 'types/common/Enums';
+import { LOADING_SIZE } from 'types/components/LoadingIndicator';
 
 // Themes
 import Colors from 'themes/Colors';

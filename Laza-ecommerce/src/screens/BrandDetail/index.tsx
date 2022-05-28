@@ -23,7 +23,7 @@ import { SCREENS_ROUTES } from 'constants/Screens';
 
 // Types
 import { IBrand } from 'types/models/Brands';
-import { LOADING_SIZE } from 'types/common/Enums';
+import { LOADING_SIZE } from 'types/components/LoadingIndicator';
 import { IBrandDetailProps } from 'types/screens/BrandDetail';
 
 // Theme

@@ -18,7 +18,7 @@ import { AUTH_DATA } from 'constants/Common';
 import { SCREENS_ROUTES } from 'constants/Screens';
 
 // Types
-import { LOADING_SIZE } from 'types/common/Enums';
+import { LOADING_SIZE } from 'types/components/LoadingIndicator';
 
 // Utils
 import { get } from 'utils/localStorage';

@@ -23,7 +23,7 @@ import { brandsService } from 'api/brands.api';
 // Types
 import { IHomeScreenProps } from 'types/screens/Home';
 import { IProduct } from 'types/models/Products';
-import { LOADING_SIZE } from 'types/common/Enums';
+import { LOADING_SIZE } from 'types/components/LoadingIndicator';
 
 // Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
@@ -80,7 +80,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
       const { data } = await brandsService.fetchBrands();
       brandDispatch({
         type: GET_BRANDS_SUCCESS,
-        payload: data,
+        payload: { brands: data },
       });
     } catch (error) {
       brandDispatch({

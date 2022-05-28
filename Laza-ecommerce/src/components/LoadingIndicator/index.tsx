@@ -5,8 +5,7 @@ import { ActivityIndicator, SafeAreaView } from 'react-native';
 import isEqual from 'react-fast-compare';
 
 // Types
-import { ILoadingIndicatorProps } from 'types/components/LoadingIndicator';
-import { LOADING_SIZE } from 'types/common/Enums';
+import { ILoadingIndicatorProps, LOADING_SIZE } from 'types/components/LoadingIndicator';
 
 // Themes
 import Colors from 'themes/Colors';
