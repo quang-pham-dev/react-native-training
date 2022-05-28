@@ -106,18 +106,12 @@ exports[`Home Screen Should renders correctly 1`] = `
       >
         <Text
           style={
-            Array [
-              Object {
-                "color": "#000",
-                "textTransform": "none",
-              },
-              Object {
-                "color": "#1D1E20",
-                "fontFamily": "Inter_600SemiBold",
-                "fontSize": 28,
-                "lineHeight": 30,
-              },
-            ]
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 28,
+              "lineHeight": 30,
+            }
           }
         >
           Hello
@@ -392,7 +386,7 @@ exports[`Home Screen Should renders correctly 1`] = `
                 ]
               }
             >
-              New Arraival
+              New Arrival
             </Text>
           </View>
           <View>

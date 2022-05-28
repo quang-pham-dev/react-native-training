@@ -39,9 +39,9 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const { authState, productState, brandState, productDispatch, brandDispatch } =
     useContext(AppContext);
 
-  const {
-    currentUser: { username },
-  } = authState || {};
+  const { currentUser } = authState || {};
+
+  const { username } = currentUser || {};
 
   const { products } = productState || {};
 
@@ -170,7 +170,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           <View>
             <View style={[styles.productTitle, styles.titleRow]}>
               <Label
-                labelName='New Arraival'
+                labelName='New Arrival'
                 fontSize={Fonts.size.default}
                 lineHeight={Fonts.lineHeight.sm}
                 fontFamily={Fonts.fontFamily.Inter_500Medium}
