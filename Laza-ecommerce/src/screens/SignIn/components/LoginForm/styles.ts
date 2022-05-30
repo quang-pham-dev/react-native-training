@@ -1,5 +1,6 @@
 import { Platform, StyleSheet } from 'react-native';
 
+// Themes
 import Colors from 'themes/Colors';
 import Fonts from 'themes/Fonts';
 import Metrics from 'themes/Metrics';

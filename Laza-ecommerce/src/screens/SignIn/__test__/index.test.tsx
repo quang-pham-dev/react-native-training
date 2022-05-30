@@ -1,28 +1,21 @@
 import React from 'react';
-import { fireEvent, render, waitFor } from '@testing-library/react-native';
-// import AsyncStorage from '@react-native-async-storage/async-storage';
 
+// LIBS
+import { render } from '@testing-library/react-native';
+
+// Screen
 import SignInScreen from 'screens/SignIn';
-import { ILoginCredentials } from 'types/models/User';
-import { AUTH_DATA } from 'constants/Common';
-import { navigationMock } from 'utils/testMock';
-import { get } from 'utils/localStorage';
 
-const mockLogin = jest.fn((data: ILoginCredentials) => {
-  return Promise.resolve({ data });
-});
+// Utils
+import { navigationMock } from 'utils/testMock';
 
 describe('SignIn Screen', () => {
   let tree: any;
-
   const welcomeText = 'Welcome';
   const subTitleText = 'Please enter your data to continue';
 
   beforeEach(() => {
-    tree = render(<SignInScreen navigation={navigationMock} onSubmit={mockLogin} />);
-  });
-  afterEach(() => {
-    jest.clearAllMocks();
+    tree = render(<SignInScreen navigation={navigationMock} />);
   });
 
   test('should render correctly', () => {

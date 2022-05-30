@@ -6,5 +6,4 @@ export type AuthNavigationProp = NativeStackNavigationProp<AuthStackParams>;
 
 export interface ISignInScreenProps {
   navigation: AuthNavigationProp;
-  onSubmit: (data: ILoginCredentials) => void;
 }

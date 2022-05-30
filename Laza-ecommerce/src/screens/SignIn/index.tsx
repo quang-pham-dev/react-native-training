@@ -1,5 +1,5 @@
-import React, { memo, useCallback, useContext, useState } from 'react';
-import { Alert, KeyboardAvoidingView, ScrollView, Switch, Text, View } from 'react-native';
+import React, { memo, useCallback, useContext } from 'react';
+import { Alert, KeyboardAvoidingView, ScrollView, View } from 'react-native';
 
 // LIB
 import isEqual from 'react-fast-compare';

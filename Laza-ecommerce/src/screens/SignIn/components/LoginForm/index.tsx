@@ -1,8 +1,8 @@
 import React, { memo, useState } from 'react';
 import { Switch, Text, View } from 'react-native';
-import isEqual from 'react-fast-compare';
 
 // LIB
+import isEqual from 'react-fast-compare';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup';

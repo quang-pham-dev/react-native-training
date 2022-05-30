@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 
-import { height } from 'themes';
+// Themes
+import { height } from 'themes/Dimensions';
 import Colors from 'themes/Colors';
 import Fonts from 'themes/Fonts';
 import Metrics from 'themes/Metrics';
