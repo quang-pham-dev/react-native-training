@@ -15,8 +15,6 @@ export interface IProductDetailHeaderProps {
     navigate: (value: string, params: string) => void;
     goBack: () => void;
   };
-  onPressBack: () => void;
-  onPressCart: () => void;
   product: IProduct;
 }
 export interface IProductDetailItemProps {
