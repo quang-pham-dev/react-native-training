@@ -1,5 +1,7 @@
 import React, { useCallback, useContext, useEffect, useMemo } from 'react';
 import { Alert, Text, Image, Pressable, View, TouchableOpacity } from 'react-native';
+
+// LIBS
 import { MaterialIcons } from '@expo/vector-icons';
 
 // Components
