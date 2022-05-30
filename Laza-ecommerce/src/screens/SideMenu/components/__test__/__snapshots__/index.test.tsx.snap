@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Side menu should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginTop": 25,
+      }
+    }
+  >
+    <Image
+      source={0}
+      style={
+        Object {
+          "height": 19,
+          "marginRight": 13,
+          "resizeMode": "contain",
+          "width": 19,
+        }
+      }
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "fontFamily": "Inter_400Regular",
+            "fontSize": 15,
+            "lineHeight": 16,
+          },
+          undefined,
+        ]
+      }
+    >
+      title
+    </Text>
+  </View>
+</View>
+`;

@@ -15,8 +15,6 @@ import { SCREENS_ROUTES } from 'constants/Screens';
 // Utils
 import { navigationMock } from 'utils/testMock';
 
-// Mocks
-
 describe('Side menu', () => {
   let tree: any;
   const closeMenuID = 'Side-menu-close';
