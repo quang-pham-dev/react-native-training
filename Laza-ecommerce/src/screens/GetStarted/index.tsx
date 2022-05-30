@@ -24,7 +24,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
   }, [navigation]);
 
   // handle go Back action
-  const goBack = useCallback(() => {
+  const onGoBackHandler = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
@@ -32,7 +32,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.iconBackWrapper}>
-          <Button icon={IMAGES.iconBack} iconStyles={[styles.iconBack]} onPress={goBack} />
+          <Button icon={IMAGES.iconBack} iconStyles={[styles.iconBack]} onPress={onGoBackHandler} />
         </View>
         <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started'></Title>
       </View>
