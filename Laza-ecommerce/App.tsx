@@ -1,4 +1,6 @@
 import React from 'react';
+
+// LIBS
 import 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import AppLoading from 'expo-app-loading';
@@ -6,6 +8,9 @@ import * as SplashScreen from 'expo-splash-screen';
 
 // Hooks
 import useFonts from 'hooks/useFonts';
+
+// Components
+import ErrorBoundary from 'components/ErrorBoundary';
 
 // Navigation
 import RootNavigator from 'navigation/RootNavigator';
@@ -48,7 +53,9 @@ export default function App() {
   return (
     <AppProvider>
       <SafeAreaProvider>
-        <RootNavigator />
+        <ErrorBoundary>
+          <RootNavigator />
+        </ErrorBoundary>
       </SafeAreaProvider>
     </AppProvider>
   );
