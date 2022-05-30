@@ -15,7 +15,6 @@ import { user } from '__mocks__/dataMock/user';
 
 describe('Home Screen', () => {
   let tree: any;
-  beforeEach(() => {});
   const props = {
     navigation: navigationMock,
     route: {
@@ -24,7 +23,10 @@ describe('Home Screen', () => {
     currentUser: user,
     username: user.username,
   };
-  tree = renderer.create(<HomeScreen {...props} />);
+  beforeEach(() => {
+    tree = renderer.create(<HomeScreen {...props} />);
+  });
+
   afterEach(() => {
     jest.clearAllMocks();
     cleanup();

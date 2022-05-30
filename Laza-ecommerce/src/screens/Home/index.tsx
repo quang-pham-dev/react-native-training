@@ -1,5 +1,7 @@
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { Alert, KeyboardAvoidingView, View, Text } from 'react-native';
+
+// LIBS
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Components
