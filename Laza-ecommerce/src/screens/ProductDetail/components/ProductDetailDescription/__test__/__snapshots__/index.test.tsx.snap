@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product detail Description should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginTop": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "textTransform": "none",
+        },
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter_600SemiBold",
+          "fontSize": 17,
+          "lineHeight": 18,
+          "marginBottom": 10,
+        },
+      ]
+    }
+  >
+    Description
+  </Text>
+  <Text
+    onTextLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "fontFamily": "Inter_600SemiBold",
+          "fontSize": 15,
+          "lineHeight": 22,
+        },
+        Object {
+          "color": "#8F959E",
+          "fontFamily": "Inter_400Regular",
+          "fontSize": 15,
+          "lineHeight": 22,
+        },
+      ]
+    }
+  >
+    Nike is a multinaelichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.
+  </Text>
+</View>
+`;

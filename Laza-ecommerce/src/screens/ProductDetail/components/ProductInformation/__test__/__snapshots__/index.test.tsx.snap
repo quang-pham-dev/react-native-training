@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product detail information should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginTop": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "textTransform": "none",
+          },
+          Object {
+            "color": "#8F959E",
+            "fontFamily": "Inter_400Regular",
+            "fontSize": 13,
+            "lineHeight": 14,
+          },
+        ]
+      }
+    >
+      Nike Sportswear Club Fleece
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "textTransform": "none",
+          },
+          Object {
+            "color": "#1D1E20",
+            "fontFamily": "Inter_600SemiBold",
+            "fontSize": 22,
+            "lineHeight": 24,
+            "paddingTop": 8,
+          },
+        ]
+      }
+    >
+      shoes
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "textTransform": "none",
+          },
+          Object {
+            "color": "#8F959E",
+            "fontFamily": "Inter_400Regular",
+            "fontSize": 13,
+            "lineHeight": 14,
+          },
+        ]
+      }
+    >
+      Price
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter_600SemiBold",
+          "fontSize": 22,
+          "lineHeight": 24,
+          "paddingTop": 8,
+        }
+      }
+    >
+      $100
+    </Text>
+  </View>
+</View>
+`;

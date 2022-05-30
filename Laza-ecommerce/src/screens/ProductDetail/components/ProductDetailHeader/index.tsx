@@ -13,19 +13,14 @@ import { IProductDetailHeaderProps } from 'types/screens/ProductDetail';
 // Style
 import styles from './styles';
 
-const ProductDetailHeader = ({
-  product,
-  navigation,
-  onPressBack,
-  onPressCart,
-}: IProductDetailHeaderProps) => {
+const ProductDetailHeader = ({ product, navigation }: IProductDetailHeaderProps) => {
   // handle back button
-  onPressBack = useCallback(() => {
+  const onPressBack = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
   // handle action press button cart
-  onPressCart = useCallback(() => {}, []);
+  const onPressCart = useCallback(() => {}, []);
 
   return (
     <View style={styles.headerContainer}>

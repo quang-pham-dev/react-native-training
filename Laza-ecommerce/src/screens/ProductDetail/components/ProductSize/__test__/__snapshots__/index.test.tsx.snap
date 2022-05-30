@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product detail size should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter_600SemiBold",
+          "fontSize": 17,
+          "lineHeight": 18,
+        }
+      }
+    >
+      Size
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#3D93F8",
+          "fontFamily": "Inter_400Regular",
+          "fontSize": 17,
+          "lineHeight": 16,
+        }
+      }
+    >
+      Size Guide
+    </Text>
+  </View>
+  <RCTScrollView
+    horizontal={true}
+    showsHorizontalScrollIndicator={false}
+    style={
+      Object {
+        "marginTop": 10,
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 60,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 60,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 17,
+              "lineHeight": 18,
+            }
+          }
+        >
+          S
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 60,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 60,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 17,
+              "lineHeight": 18,
+            }
+          }
+        >
+          M
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 60,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 60,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 17,
+              "lineHeight": 18,
+            }
+          }
+        >
+          L
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 60,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 60,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 17,
+              "lineHeight": 18,
+            }
+          }
+        >
+          XL
+        </Text>
+      </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 60,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 60,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#1D1E20",
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 17,
+              "lineHeight": 18,
+            }
+          }
+        >
+          2XL
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

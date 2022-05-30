@@ -1,8 +1,15 @@
 import React from 'react';
+
+// LIBS
 import { cleanup, render } from '@testing-library/react-native';
 
+// Screens
 import ProductDetailScreen from 'screens/ProductDetail';
+
+// Utils
 import { navigationMock } from 'utils/testMock';
+
+// Mock data
 import { product } from '__mocks__/dataMock';
 
 describe('Product detail Screen', () => {

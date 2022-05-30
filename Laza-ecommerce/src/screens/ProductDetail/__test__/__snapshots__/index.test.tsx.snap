@@ -2,9 +2,6 @@
 
 exports[`Product detail Screen should render correctly 1`] = `
 <RCTScrollView
-  collapsable={false}
-  onGestureHandlerEvent={[Function]}
-  onGestureHandlerStateChange={[Function]}
   showsVerticalScrollIndicator={false}
   style={
     Object {
@@ -102,7 +99,42 @@ exports[`Product detail Screen should render correctly 1`] = `
               "width": "100%",
             }
           }
-        />
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": "100%",
+                "resizeMode": "cover",
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": undefined,
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                  undefined,
+                ]
+              }
+            />
+          </View>
+        </View>
       </View>
     </View>
     <View

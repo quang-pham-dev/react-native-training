@@ -1,11 +1,10 @@
 import React, { useCallback, useContext, useEffect } from 'react';
-import { Alert, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
+import { Alert, ScrollView, View } from 'react-native';
 
 // Components
 import Button from 'components/Button';
 import LoadingIndicator from 'components/LoadingIndicator';
-import ProductSize from './components/ProductSize/ProductSize';
+import ProductSize from './components/ProductSize';
 import ProductDetailHeader from './components/ProductDetailHeader';
 import ProductDetailInformation from './components/ProductInformation';
 import ProductImagesReview from './components/ProductDetailImagesReview';
@@ -32,7 +31,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
 
   const { product, isProcessing } = productState || {};
 
-  const data = Boolean(product) && product[0];
+  const data = product ? product[0] : {};
 
   useEffect(() => {
     getProductById();
@@ -56,14 +55,6 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
     }
   };
 
-  // handle back button
-  const onPressBackHandler = useCallback(() => {
-    navigation.goBack();
-  }, [navigation]);
-
-  // handle action press button cart
-  const onPressCartHandler = useCallback(() => {}, []);
-
   // handle action press button add to cart
   const onAddToCartHandler = useCallback(() => {}, []);
 
@@ -77,12 +68,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
         <>
           {/* product detail header */}
           <View style={styles.headerContainer}>
-            <ProductDetailHeader
-              product={data}
-              navigation={navigation}
-              onPressBack={onPressBackHandler}
-              onPressCart={onPressCartHandler}
-            />
+            <ProductDetailHeader product={data} navigation={navigation} />
           </View>
           {/* End Header block */}
 

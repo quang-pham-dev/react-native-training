@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product detail reviewer review should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "marginTop": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "textTransform": "none",
+          },
+          Object {
+            "color": "#1D1E20",
+            "fontFamily": "Inter_600SemiBold",
+            "fontSize": 17,
+            "lineHeight": 18,
+          },
+        ]
+      }
+    >
+      Reviews
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "textTransform": "none",
+          },
+          Object {
+            "color": "#8F959E",
+            "fontFamily": "Inter_400Regular",
+            "fontSize": 13,
+            "lineHeight": 14,
+          },
+        ]
+      }
+    >
+      View All
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "justifyContent": "space-between",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": 15,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Image
+          source={
+            Object {
+              "uri": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            }
+          }
+          style={
+            Object {
+              "borderRadius": 40,
+              "height": 40,
+              "width": 40,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "marginLeft": 15,
+            }
+          }
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "textTransform": "none",
+                },
+                Object {
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 15,
+                  "lineHeight": 16,
+                },
+              ]
+            }
+          >
+            John Doe
+          </Text>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "marginTop": 8,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 11,
+                  "width": 11,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#8F959E",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "lineHeight": 12,
+                  "marginLeft": 5,
+                }
+              }
+            >
+              13, Sep, 2020
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#1D1E20",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 15,
+                "lineHeight": 16,
+              }
+            }
+          >
+            4.5
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "#8F959E",
+                "fontFamily": "Inter_400Regular",
+                "fontSize": 11,
+                "lineHeight": 12,
+                "marginLeft": 5,
+              }
+            }
+          >
+            rating
+          </Text>
+        </View>
+        <Image
+          source={1}
+          style={
+            Object {
+              "height": 13,
+              "width": 57,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Object {
+          "marginTop": 10,
+        }
+      }
+    >
+      <Text
+        onTextLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 15,
+              "lineHeight": 22,
+            },
+            Object {
+              "color": "#8F959E",
+              "fontFamily": "Inter_400Regular",
+              "fontSize": 15,
+              "lineHeight": 22,
+            },
+          ]
+        }
+      >
+        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,adipisicing elit. Quisquam, quia.
+      </Text>
+    </View>
+  </View>
+</View>
+`;
