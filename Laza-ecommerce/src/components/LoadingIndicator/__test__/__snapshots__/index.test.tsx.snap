@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoadingIndicator Component should render correctly 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<RNCSafeAreaView>
   <ActivityIndicator
     animating={true}
     color="#FFC107"
@@ -15,13 +13,11 @@ exports[`LoadingIndicator Component should render correctly 1`] = `
       }
     }
   />
-</RCTSafeAreaView>
+</RNCSafeAreaView>
 `;
 
 exports[`LoadingIndicator Component should render new color props correctly 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
->
+<RNCSafeAreaView>
   <ActivityIndicator
     animating={true}
     color="#FFC107"
@@ -33,5 +29,5 @@ exports[`LoadingIndicator Component should render new color props correctly 1`] 
       }
     }
   />
-</RCTSafeAreaView>
+</RNCSafeAreaView>
 `;

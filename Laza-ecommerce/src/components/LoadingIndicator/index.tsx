@@ -1,8 +1,9 @@
 import React, { memo } from 'react';
-import { ActivityIndicator, SafeAreaView } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 
 // LIBS
 import isEqual from 'react-fast-compare';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Types
 import { ILoadingIndicatorProps, LOADING_SIZE } from 'types/components/LoadingIndicator';
