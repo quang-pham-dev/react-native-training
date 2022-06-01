@@ -354,112 +354,118 @@ exports[`Home Screen Should renders correctly 1`] = `
           </View>
         </RCTScrollView>
       </View>
-      <View>
-        <View
-          style={
-            Array [
-              Object {
-                "marginTop": 15,
-              },
-              Object {
-                "alignItems": "center",
-                "flexDirection": "row",
-                "justifyContent": "space-between",
-              },
-            ]
-          }
-        >
-          <View>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#1D1E20",
-                    "fontSize": 17,
-                  },
-                  Object {
-                    "color": "#1D1E20",
-                    "fontFamily": "Inter_500Medium",
-                    "fontSize": 17,
-                    "lineHeight": 18,
-                  },
-                ]
-              }
-            >
-              New Arrival
-            </Text>
-          </View>
-          <View>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#1D1E20",
-                    "fontSize": 17,
-                  },
-                  Object {
-                    "color": "#8F959E",
-                    "fontFamily": "Inter_400Regular",
-                    "fontSize": 13,
-                    "lineHeight": 14,
-                  },
-                ]
-              }
-            >
-              View All
-            </Text>
-          </View>
-        </View>
-        <View
-          style={
+      <View
+        style={
+          Array [
             Object {
-              "marginBottom": 70,
               "marginTop": 15,
+            },
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            },
+          ]
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontSize": 17,
+                },
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 17,
+                  "lineHeight": 18,
+                },
+              ]
+            }
+          >
+            New Arrival
+          </Text>
+        </View>
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontSize": 17,
+                },
+                Object {
+                  "color": "#8F959E",
+                  "fontFamily": "Inter_400Regular",
+                  "fontSize": 13,
+                  "lineHeight": 14,
+                },
+              ]
+            }
+          >
+            View All
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 70,
+            "marginTop": 15,
+          }
+        }
+      >
+        <RCTScrollView
+          ListEmptyComponent={[Function]}
+          ListFooterComponentStyle={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginBottom": 15,
             }
           }
+          disableVirtualization={false}
+          getItem={[Function]}
+          getItemCount={[Function]}
+          horizontal={false}
+          initialNumToRender={6}
+          keyExtractor={[Function]}
+          maxToRenderPerBatch={10}
+          onContentSizeChange={[Function]}
+          onEndReached={null}
+          onEndReachedThreshold={0.5}
+          onLayout={[Function]}
+          onMomentumScrollEnd={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEventThrottle={50}
+          showsVerticalScrollIndicator={false}
+          stickyHeaderIndices={Array []}
+          updateCellsBatchingPeriod={50}
+          viewabilityConfigCallbackPairs={Array []}
+          windowSize={21}
         >
-          <RCTScrollView
-            ListEmptyComponent={[Function]}
-            disableVirtualization={false}
-            getItem={[Function]}
-            getItemCount={[Function]}
-            horizontal={false}
-            initialNumToRender={10}
-            keyExtractor={[Function]}
-            maxToRenderPerBatch={10}
-            onContentSizeChange={[Function]}
-            onEndReachedThreshold={2}
-            onLayout={[Function]}
-            onMomentumScrollEnd={[Function]}
-            onScroll={[Function]}
-            onScrollBeginDrag={[Function]}
-            onScrollEndDrag={[Function]}
-            removeClippedSubviews={false}
-            renderItem={[Function]}
-            scrollEventThrottle={50}
-            showsVerticalScrollIndicator={false}
-            stickyHeaderIndices={Array []}
-            updateCellsBatchingPeriod={50}
-            viewabilityConfigCallbackPairs={Array []}
-            windowSize={21}
-          >
-            <View>
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#000",
-                      "textTransform": "none",
-                    },
-                    undefined,
-                  ]
-                }
-              >
-                No products found
-              </Text>
-            </View>
-          </RCTScrollView>
-        </View>
+          <View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "textTransform": "none",
+                  },
+                  undefined,
+                ]
+              }
+            >
+              No products found
+            </Text>
+          </View>
+        </RCTScrollView>
       </View>
     </View>
   </View>

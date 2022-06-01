@@ -207,15 +207,23 @@ exports[`Brand detail Screen should render correctly 1`] = `
     >
       <RCTScrollView
         ListEmptyComponent={[Function]}
+        ListFooterComponentStyle={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "marginBottom": 15,
+          }
+        }
         disableVirtualization={false}
         getItem={[Function]}
         getItemCount={[Function]}
         horizontal={false}
-        initialNumToRender={10}
+        initialNumToRender={6}
         keyExtractor={[Function]}
         maxToRenderPerBatch={10}
         onContentSizeChange={[Function]}
-        onEndReachedThreshold={2}
+        onEndReached={null}
+        onEndReachedThreshold={0.5}
         onLayout={[Function]}
         onMomentumScrollEnd={[Function]}
         onScroll={[Function]}

@@ -11,6 +11,13 @@ exports[`Product Card List Component Should render correctly 1`] = `
 >
   <RCTScrollView
     ListEmptyComponent={[Function]}
+    ListFooterComponentStyle={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "marginBottom": 15,
+      }
+    }
     data={
       Array [
         Object {
@@ -18,7 +25,7 @@ exports[`Product Card List Component Should render correctly 1`] = `
           "comment": "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,adipisicing elit. Quisquam, quia.",
           "description": "Nike is a multinaelichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
           "id": "0",
-          "imageReview": Array [
+          "imagesPreview": Array [
             Object {
               "id": "0",
               "image": "https://images.unsplash.com/photo-1499852848443-3004d6dc4cfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
@@ -48,13 +55,13 @@ exports[`Product Card List Component Should render correctly 1`] = `
           "name": "Nike",
           "price": 100,
           "rating": "4.5",
-          "reviewer": Object {
+          "reviewers": Object {
             "date": "13, Sep, 2020",
             "id": "2",
             "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
             "name": "John Doe",
           },
-          "size": Array [
+          "sizes": Array [
             Object {
               "id": "1",
               "size": "S",
@@ -85,7 +92,7 @@ exports[`Product Card List Component Should render correctly 1`] = `
           "comment": "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,adipisicing elit. Quisquam, quia.",
           "description": "Nike is a multinaelichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
           "id": "0",
-          "imageReview": Array [
+          "imagesPreview": Array [
             Object {
               "id": "0",
               "image": "https://images.unsplash.com/photo-1499852848443-3004d6dc4cfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
@@ -115,13 +122,13 @@ exports[`Product Card List Component Should render correctly 1`] = `
           "name": "Nike",
           "price": 100,
           "rating": "4.5",
-          "reviewer": Object {
+          "reviewers": Object {
             "date": "13, Sep, 2020",
             "id": "2",
             "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
             "name": "John Doe",
           },
-          "size": Array [
+          "sizes": Array [
             Object {
               "id": "1",
               "size": "S",
@@ -153,11 +160,12 @@ exports[`Product Card List Component Should render correctly 1`] = `
     getItem={[Function]}
     getItemCount={[Function]}
     horizontal={false}
-    initialNumToRender={10}
+    initialNumToRender={6}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
     onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
+    onEndReached={null}
+    onEndReachedThreshold={0.5}
     onLayout={[Function]}
     onMomentumScrollEnd={[Function]}
     onScroll={[Function]}

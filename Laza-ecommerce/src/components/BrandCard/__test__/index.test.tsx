@@ -15,14 +15,14 @@ import { navigationMock } from 'utils/testMock';
 
 describe('Brand Card Component', () => {
   const tree = renderer.create(
-    <BrandCard brand={brand} onNavigateBrandDetailScreen={navigationMock.navigate} />,
+    <BrandCard brand={brand} onPressBrandCard={navigationMock.navigate} />,
   );
   test('Should render correctly', () => {
     const component = tree.toJSON();
     expect(component).toMatchSnapshot();
   });
 
-  test('should call function handleNavigationBrandDetailScreen', () => {
+  test('should call function onPressProductCard', () => {
     const Pressable = tree.root.findAllByType(TouchableOpacity)[0];
     Pressable.props.onPress();
     expect(navigationMock.navigate).toHaveBeenCalled();

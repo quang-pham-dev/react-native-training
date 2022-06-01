@@ -20,8 +20,9 @@ import { navigationMock } from 'utils/testMock';
 describe('Product Card List Component', () => {
   const props = {
     products,
-    onNavigateProductDetailScreen: navigationMock.navigate,
+    onPressProductCard: navigationMock.navigate,
     onPressLikeProduct: jest.fn(),
+    onLoadMoreProducts: jest.fn(),
   };
 
   const tree = renderer.create(<ProductsList {...props} />);

@@ -19,7 +19,7 @@ import { navigationMock } from 'utils/testMock';
 
 describe('Brand Card List Component', () => {
   const props = {
-    onNavigateBrandDetailScreen: navigationMock.navigate,
+    onPressBrandCard: navigationMock.navigate,
     brands,
   };
 
@@ -29,7 +29,7 @@ describe('Brand Card List Component', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('should call function onNavigateBrandDetailScreen', () => {
+  test('should call function onPressBrandCard', () => {
     const Pressable = tree.root.findAllByType(TouchableOpacity)[0];
     Pressable.props.onPress();
     expect(navigationMock.navigate).toHaveBeenCalled();
