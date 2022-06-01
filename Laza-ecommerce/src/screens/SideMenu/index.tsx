@@ -36,8 +36,6 @@ import styles from './styles';
 import { remove } from 'utils/localStorage';
 
 const SideMenu = ({ navigation }: ISideMenuPros) => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   const { authState, authDispatch } = useContext(AppContext);
 
   const { currentUser } = authState || {};
@@ -45,6 +43,10 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
   const { username, avatar } = currentUser || {};
 
   const orderCount = 3 || 0;
+
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   // handel action sign out
   const onPressLogoutHandler = useCallback(() => {
@@ -75,22 +77,22 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
   }, []);
 
   // handle Close menu
-  const onCloseMenuHandler = useCallback(() => {
+  const handleCloseMenu = useCallback(() => {
     navigation.dispatch(DrawerActions.closeDrawer());
   }, [navigation]);
 
   // handle action navigate to Bag screen
-  const onNavigatedBagScreenHandler = useCallback(() => {
+  const handlePressBagIcon = useCallback(() => {
     navigation.navigate(SCREENS_ROUTES.STACK.BAGS.name);
   }, [navigation]);
 
   // handle action navigate to WishList screen
-  const onNavigateWishlistScreenHandler = useCallback(() => {
+  const handlePressWishlistIcon = useCallback(() => {
     navigation.navigate(SCREENS_ROUTES.STACK.WISHLIST.name);
   }, [navigation]);
 
   // handle action navigate to Wallet screen
-  const onNavigateWalletScreenHandler = useCallback(() => {
+  const handlePressWalletIcon = useCallback(() => {
     navigation.navigate(SCREENS_ROUTES.STACK.WALLET.name);
   }, [navigation]);
 
@@ -106,19 +108,19 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
       testID: 'Side-menu-Bag',
       title: SCREENS_ROUTES.HOME_STACK.DRAWER_MENU.Order.name,
       source: IMAGES.iconBagDrawer,
-      onPress: onNavigatedBagScreenHandler,
+      onPress: handlePressBagIcon,
     },
     {
       testID: 'Side-menu-Wallet',
       title: SCREENS_ROUTES.HOME_STACK.DRAWER_MENU.Wallet.name,
       source: IMAGES.iconWalletDrawer,
-      onPress: onNavigateWalletScreenHandler,
+      onPress: handlePressWalletIcon,
     },
     {
       testID: 'Side-menu-Wishlist',
       title: SCREENS_ROUTES.HOME_STACK.DRAWER_MENU.WishList.name,
       source: IMAGES.iconHeartDrawer,
-      onPress: onNavigateWishlistScreenHandler,
+      onPress: handlePressWishlistIcon,
     },
   ];
 
@@ -130,9 +132,10 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
             testID='Side-menu-close'
             icon={IMAGES.iconMenuOpen}
             iconStyles={[styles.iconMenu]}
-            onPress={onCloseMenuHandler}
+            onPress={handleCloseMenu}
           />
         </View>
+
         <View style={[styles.infoWrapper]}>
           <View style={styles.profile}>
             {Boolean(avatar) && <Image style={styles.avatar} source={{ uri: avatar }} />}
@@ -149,6 +152,8 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
           </View>
         </View>
       </View>
+      {/* end header */}
+
       <View style={styles.main}>
         <View style={[styles.darkModeWrapper]}>
           <DrawerItem title='Dark Mode' source={IMAGES.iconSun} onPress={() => {}} />
@@ -171,6 +176,7 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
         ))}
         {/* End Main Drawer Menu */}
       </View>
+      {/* end main */}
 
       <View style={styles.footer}>
         <DrawerItem
