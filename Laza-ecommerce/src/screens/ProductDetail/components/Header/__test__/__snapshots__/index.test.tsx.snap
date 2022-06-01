@@ -81,41 +81,6 @@ exports[`Product detail Header should render correctly 1`] = `
         "width": "100%",
       }
     }
-  >
-    <View
-      accessibilityIgnoresInvertColors={true}
-      style={
-        Object {
-          "height": "100%",
-          "resizeMode": "cover",
-          "width": "100%",
-        }
-      }
-    >
-      <Image
-        source={
-          Object {
-            "uri": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-          }
-        }
-        style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "height": "100%",
-              "width": "100%",
-            },
-            undefined,
-          ]
-        }
-      />
-    </View>
-  </View>
+  />
 </View>
 `;

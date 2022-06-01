@@ -1,4 +1,12 @@
-import { IProduct } from 'types/models/Products';
+import { ImageSourcePropType } from 'react-native';
+
+// Types
+import {
+  IImageReviewerProps,
+  IProduct,
+  ProductSizeProps,
+  ReviewerProps,
+} from 'types/models/Products';
 
 export interface IProductDetailProps {
   navigation: {
@@ -6,7 +14,7 @@ export interface IProductDetailProps {
     goBack: () => void;
   };
   route: {
-    params: string;
+    params?: string;
   };
   product: IProduct;
 }
@@ -15,8 +23,19 @@ export interface IProductDetailHeaderProps {
     navigate: (value: string, params: string) => void;
     goBack: () => void;
   };
-  product: IProduct;
+  source: string;
 }
 export interface IProductDetailItemProps {
-  product: IProduct;
+  price?: number;
+  title?: string;
+  name?: string;
+  type?: string;
+  source?: string;
+  description?: string;
+  reviewers?: ReviewerProps;
+  sizes?: ProductSizeProps[];
+  like?: boolean;
+  imagesPreview?: IImageReviewerProps[];
+  rating?: string;
+  comment?: string;
 }

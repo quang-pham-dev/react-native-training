@@ -6,14 +6,14 @@ import isEqual from 'react-fast-compare';
 
 // Constants
 import { IProductDetailItemProps } from 'types/screens/ProductDetail';
+
+// Types
 import { ProductSizeProps } from 'types/models/Products';
 
 // Styles
 import styles from './styles';
 
-const ProductSize = ({ product }: IProductDetailItemProps) => {
-  const { size } = product || {};
-
+const ProductSize = ({ sizes }: IProductDetailItemProps) => {
   return (
     <View style={styles.sizeContainer}>
       <View style={styles.textSizeWrapper}>
@@ -22,8 +22,8 @@ const ProductSize = ({ product }: IProductDetailItemProps) => {
       </View>
 
       <ScrollView style={styles.sizeWrapper} horizontal showsHorizontalScrollIndicator={false}>
-        {Boolean(size) &&
-          size.map((item: ProductSizeProps) => (
+        {Boolean(sizes) &&
+          sizes?.map((item: ProductSizeProps) => (
             <Pressable style={styles.sizeItem} key={item.id}>
               <Text style={styles.textSize}>{item.size}</Text>
             </Pressable>

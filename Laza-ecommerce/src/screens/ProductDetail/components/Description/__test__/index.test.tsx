@@ -4,13 +4,13 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 // Components
-import ProductDetailReviews from 'screens/ProductDetail/components/ProductDetailReviews';
+import Description from 'screens/ProductDetail/components/Description';
 
 // Mock data
 import { product } from '__mocks__/dataMock';
 
-describe('Product detail reviewer review', () => {
-  const tree = renderer.create(<ProductDetailReviews product={product} />);
+describe('Product detail Description', () => {
+  const tree = renderer.create(<Description description={product.description} />);
 
   test('should render correctly', () => {
     expect(tree).toMatchSnapshot();

@@ -17,10 +17,8 @@ import IMAGES from 'themes/Images';
 // Styles
 import styles from './styles';
 
-const ProductDetailReviews = ({ product }: IProductDetailItemProps) => {
-  const { comment, rating, reviewer } = product || {};
-
-  const { name, image, date } = reviewer || {};
+const Reviews = ({ comment, rating, reviewers }: IProductDetailItemProps) => {
+  const { name, image, date } = reviewers || {};
 
   return (
     <View style={styles.reviewContainer}>
@@ -66,4 +64,4 @@ const ProductDetailReviews = ({ product }: IProductDetailItemProps) => {
   );
 };
 
-export default memo(ProductDetailReviews, isEqual);
+export default memo(Reviews, isEqual);

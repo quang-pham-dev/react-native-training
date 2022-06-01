@@ -5,11 +5,11 @@ import { Alert, ScrollView, View } from 'react-native';
 import Button from 'components/Button';
 import LoadingIndicator from 'components/LoadingIndicator';
 import ProductSize from './components/ProductSize';
-import ProductDetailHeader from './components/ProductDetailHeader';
-import ProductDetailInformation from './components/ProductInformation';
-import ProductImagesReview from './components/ProductDetailImagesReview';
-import ProductDetailDescription from './components/ProductDetailDescription';
-import ProductDetailReviews from './components/ProductDetailReviews';
+import Header from './components/Header';
+import Information from './components/Information';
+import ImagesPreview from './components/ImagesPreview';
+import Description from './components/Description';
+import Reviews from './components/Reviews';
 
 // API
 import { productsService } from 'api/products.api';
@@ -25,13 +25,26 @@ import { IProductDetailProps } from 'types/screens/ProductDetail';
 import styles from './styles';
 
 const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
-  const id = route.params;
+  const id = route.params as string;
 
   const { productState, productDispatch } = useContext(AppContext);
 
   const { product, isProcessing } = productState || {};
 
   const data = product ? product[0] : {};
+
+  const {
+    source,
+    title,
+    price,
+    type,
+    description,
+    imagesPreview,
+    sizes,
+    reviewers,
+    comment,
+    rating,
+  } = data;
 
   useEffect(() => {
     getProductById();
@@ -62,8 +75,6 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
   // handle action press button add to cart
   const onAddToCartHandler = useCallback(() => {}, []);
 
-  //   return null
-
   return (
     <ScrollView style={styles.Container} showsVerticalScrollIndicator={false}>
       {isProcessing ? (
@@ -72,29 +83,29 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
         <>
           {/* product detail header */}
           <View style={styles.headerContainer}>
-            <ProductDetailHeader product={data} navigation={navigation} />
+            <Header source={source} navigation={navigation} />
           </View>
           {/* End Header block */}
 
           <View style={styles.mainContainer}>
             {/* product detail information */}
-            <ProductDetailInformation product={data} />
+            <Information title={title} type={type} price={price} />
             {/* end product detail information */}
 
             {/* product detail images reviews */}
-            <ProductImagesReview product={data} />
+            <ImagesPreview imagesPreview={imagesPreview} />
             {/* product detail images reviews */}
 
             {/* product detail size */}
-            <ProductSize product={data} />
+            <ProductSize sizes={sizes} />
             {/* end product detail size */}
 
             {/* product detail description */}
-            <ProductDetailDescription product={data} />
+            <Description description={description} />
             {/* End product detail description */}
 
             {/* product detail Review */}
-            <ProductDetailReviews product={data} />
+            <Reviews reviewers={reviewers} comment={comment} rating={rating} />
             {/* End product Review  */}
           </View>
           <View style={styles.footerContainer}>

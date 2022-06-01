@@ -79,20 +79,6 @@ exports[`Product detail reviewer review should render correctly 1`] = `
           }
         }
       >
-        <Image
-          source={
-            Object {
-              "uri": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
-            }
-          }
-          style={
-            Object {
-              "borderRadius": 40,
-              "height": 40,
-              "width": 40,
-            }
-          }
-        />
         <View
           style={
             Object {
@@ -100,23 +86,6 @@ exports[`Product detail reviewer review should render correctly 1`] = `
             }
           }
         >
-          <Text
-            style={
-              Array [
-                Object {
-                  "color": "#000",
-                  "textTransform": "none",
-                },
-                Object {
-                  "fontFamily": "Inter_500Medium",
-                  "fontSize": 15,
-                  "lineHeight": 16,
-                },
-              ]
-            }
-          >
-            John Doe
-          </Text>
           <View
             style={
               Object {
@@ -135,19 +104,6 @@ exports[`Product detail reviewer review should render correctly 1`] = `
                 }
               }
             />
-            <Text
-              style={
-                Object {
-                  "color": "#8F959E",
-                  "fontFamily": "Inter_500Medium",
-                  "fontSize": 11,
-                  "lineHeight": 12,
-                  "marginLeft": 5,
-                }
-              }
-            >
-              13, Sep, 2020
-            </Text>
           </View>
         </View>
       </View>

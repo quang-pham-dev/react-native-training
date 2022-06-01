@@ -9,10 +9,10 @@ export interface IProduct {
   type: string;
   source: string;
   description?: string;
-  reviewer: ReviewerProps;
-  size: ProductSizeProps[];
+  reviewers: ReviewerProps;
+  sizes: ProductSizeProps[];
   like?: boolean;
-  imageReview?: IImageReviewerProps[];
+  imagesPreview?: IImageReviewerProps[];
   rating?: string;
   comment: string;
 }

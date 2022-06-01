@@ -13,7 +13,7 @@ import { IProductDetailHeaderProps } from 'types/screens/ProductDetail';
 // Style
 import styles from './styles';
 
-const ProductDetailHeader = ({ product, navigation }: IProductDetailHeaderProps) => {
+const Header = ({ source, navigation }: IProductDetailHeaderProps) => {
   // handle back button
   const onPressBack = useCallback(() => {
     navigation.goBack();
@@ -35,13 +35,11 @@ const ProductDetailHeader = ({ product, navigation }: IProductDetailHeaderProps)
       {/* End action header */}
 
       <View style={styles.headerImageWrapper}>
-        {Boolean(product) && (
-          <ImageBackground style={styles.image} source={{ uri: product?.source }} />
-        )}
+        {Boolean(source) && <ImageBackground style={styles.image} source={{ uri: source }} />}
       </View>
       {/* End Header block */}
     </View>
   );
 };
 
-export default memo(ProductDetailHeader, isEqual);
+export default memo(Header, isEqual);

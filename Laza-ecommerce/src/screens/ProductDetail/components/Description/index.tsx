@@ -14,8 +14,7 @@ import { IProductDetailItemProps } from 'types/screens/ProductDetail';
 // Styles
 import styles from './styles';
 
-const ProductDetailDescription = ({ product }: IProductDetailItemProps) => {
-  const { description } = product || {};
+const Description = ({ description }: IProductDetailItemProps) => {
   return (
     <View style={styles.descriptionContainer}>
       <Title titleName='Description' titleStyles={styles.textDescriptionTitle} />
@@ -28,4 +27,4 @@ const ProductDetailDescription = ({ product }: IProductDetailItemProps) => {
   );
 };
 
-export default memo(ProductDetailDescription, isEqual);
+export default memo(Description, isEqual);

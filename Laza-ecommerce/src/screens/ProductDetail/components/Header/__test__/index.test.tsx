@@ -5,21 +5,21 @@ import { Pressable } from 'react-native';
 import renderer from 'react-test-renderer';
 
 // Components
-import ProductDetailHeader from 'screens/ProductDetail/components/ProductDetailHeader';
+import Header from 'screens/ProductDetail/components/Header';
 
 // Mock data
 import { product } from '__mocks__/dataMock';
 
 describe('Product detail Header', () => {
   let props = {
-    product,
+    source: '',
     navigation: {
       navigate: jest.fn(),
       goBack: jest.fn(),
     },
   };
 
-  const tree = renderer.create(<ProductDetailHeader {...props} />);
+  const tree = renderer.create(<Header {...props} />);
 
   test('should render correctly', () => {
     expect(tree).toMatchSnapshot();
