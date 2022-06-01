@@ -10,6 +10,16 @@ import {
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
   RESET_STATE,
   ProductsAction,
+  LOAD_MORE_PRODUCTS,
+  LOAD_MORE_PRODUCTS_FAILED,
+  LOAD_MORE_PRODUCTS_SUCCESS,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
+  SEARCH_PRODUCTS,
+  SEARCH_PRODUCTS_SUCCESS,
+  SEARCH_PRODUCTS_FAILED,
+  SEARCH_PRODUCTS_VALUE,
 } from 'context/actions/products';
 import { InitialProductsState, ProductsState } from 'context/state/products';
 
@@ -22,21 +32,42 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
         ...state,
         isProcessing: true,
       };
+    case LOAD_MORE_PRODUCTS:
+    case LOAD_MORE_PRODUCTS_BY_BRAND_ID:
+      return {
+        ...state,
+        isLoading: true,
+      };
+
+    case SEARCH_PRODUCTS:
+      return {
+        ...state,
+        isProcessing: true,
+      };
+
+    case SEARCH_PRODUCTS_VALUE:
+      return {
+        ...state,
+        searchValue: action.searchValue,
+      };
 
     case GET_PRODUCTS_SUCCESS:
       return {
         ...state,
         type: action.type,
         isProcessing: false,
-        products: action.payload.products,
+        products: action.payload.data.products,
+        limit: action.payload.limit,
+        totalRows: action.payload.totalRows,
       };
 
     case GET_PRODUCT_SUCCESS:
+      const { product } = action.payload?.data;
       return {
         ...state,
         type: action.type,
         isProcessing: false,
-        product: action.payload.product,
+        product,
       };
 
     case GET_PRODUCTS_BY_BRAND_ID_SUCCESS:
@@ -44,15 +75,49 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
         ...state,
         type: action.type,
         isProcessing: false,
-        productsByBrandId: action.payload.products,
+        productsByBrandId: action.payload.data.productsByBrandId,
+        limit: action.payload.limit,
+        totalRowsByBrandId: action.payload.totalRowsByBrandId,
+      };
+
+    case LOAD_MORE_PRODUCTS_SUCCESS:
+      return {
+        ...state,
+        type: action.type,
+        isLoading: false,
+        products: action.payload?.data?.products,
+        limit: action.payload?.limit,
+      };
+
+    case LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS:
+      return {
+        ...state,
+        type: action.type,
+        isLoading: false,
+        productsByBrandId: action.payload?.data?.productsByBrandId,
+        limit: action.payload?.limit,
+      };
+
+    case SEARCH_PRODUCTS_SUCCESS:
+      return {
+        ...state,
+        type: action.type,
+        isProcessing: false,
+        productsSearch: action.payload?.data?.productsSearch,
+        limit: action.payload?.limit,
+        totalRows: action.payload?.totalRows,
       };
 
     case GET_PRODUCTS_FAILED:
     case GET_PRODUCT_FAILED:
     case GET_PRODUCTS_BY_BRAND_ID_FAILED:
+    case LOAD_MORE_PRODUCTS_FAILED:
+    case LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED:
+    case SEARCH_PRODUCTS_FAILED:
       return {
         ...state,
         isProcessing: false,
+        isLoading: false,
         type: action.type,
         error: action.error,
       };

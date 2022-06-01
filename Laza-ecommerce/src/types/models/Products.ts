@@ -36,7 +36,7 @@ export interface IImageReviewerProps {
 export interface IProductCardProps {
   testID?: string;
   product: IProductsCardListProps;
-  onNavigateProductDetailScreen: (id: string) => void;
+  onPressProductCard: (id: string) => void;
   onPressLikeProduct: (item: IProduct) => void;
   productCardStyles?: ViewStyle;
 }
@@ -49,5 +49,16 @@ export interface IProductsListProps {
   products: IProduct[];
   productCardStyles?: ViewStyle;
   onPressLikeProduct: (item: IProduct[]) => void;
-  onNavigateProductDetailScreen: (id: string) => void;
+  onPressProductCard: (id: string) => void;
+  onLoadMoreProducts: () => void;
+}
+export interface IProductResponse {
+  data: {
+    data: IProduct[];
+    pagination: {
+      _page?: number;
+      _totalRows?: number;
+      _limit: number;
+    };
+  };
 }

@@ -43,7 +43,11 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
       const { data } = await productsService.getProductById(id);
       productDispatch({
         type: GET_PRODUCT_SUCCESS,
-        payload: { product: data },
+        payload: {
+          data: {
+            product: data,
+          },
+        },
       });
     } catch (error) {
       productDispatch({

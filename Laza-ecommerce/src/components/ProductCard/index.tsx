@@ -18,26 +18,28 @@ import styles from './styles';
 
 const ProductCard = ({
   product,
-  onNavigateProductDetailScreen,
+  onPressProductCard,
   onPressLikeProduct,
   productCardStyles,
 }: IProductCardProps) => {
-  const onNavigateProductDetailScreenHandler = useCallback(() => {
-    onNavigateProductDetailScreen(product.id);
-  }, [product.id, onNavigateProductDetailScreen]);
+  // handle action press product card with id
+  const handlePressCardProduct = useCallback(() => {
+    onPressProductCard(product.id);
+  }, [product.id, onPressProductCard]);
 
-  const onPressLikeProductHandler = useCallback(() => {
+  // handle action press like product
+  const handlePressLikeProduct = useCallback(() => {
     onPressLikeProduct(product);
   }, [product, onPressLikeProduct]);
 
   return (
     <Pressable
       testID='productCard'
-      onPress={onNavigateProductDetailScreenHandler}
+      onPress={handlePressCardProduct}
       style={[styles.productCardContainer, productCardStyles]}>
       <View style={styles.imageWrapper}>
         <ImageBackground style={styles.image} source={{ uri: product.source }} />
-        <Pressable onPress={onPressLikeProductHandler} style={styles.iconHeartWrapper}>
+        <Pressable onPress={handlePressLikeProduct} style={styles.iconHeartWrapper}>
           <Image
             style={styles.iconHeart}
             source={product.like ? IMAGES.iconHeartLiked : IMAGES.iconHeart}

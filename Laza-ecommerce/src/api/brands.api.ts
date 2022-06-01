@@ -5,15 +5,15 @@ import http from 'api/http';
 import { ENDPOINTS } from 'constants/Common';
 
 // get all brands
-const fetchBrands = async () => {
+const getBrands = async () => {
   return await http.get(ENDPOINTS.BRAND.GET_BRANDS);
 };
 
 // get brand by id
-const fetchBrandById = async (id: string) => {
+const getBrandById = async (id: string) => {
   return await http.get(`${ENDPOINTS.BRAND.GET_BRANDS}?id=${id}`);
 };
 export const brandsService = {
-  fetchBrands,
-  fetchBrandById,
+  getBrands,
+  getBrandById,
 };

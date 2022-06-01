@@ -1,5 +1,6 @@
 import { StyleSheet, Platform } from 'react-native';
 
+// Themes
 import Metrics from 'themes/Metrics';
 
 const styles = StyleSheet.create({
@@ -15,6 +16,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  listFooter: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: Metrics.margin.xm,
   },
 });
 

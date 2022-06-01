@@ -17,19 +17,21 @@ import { IBrandCardListProps, IBrandsListProps } from 'types/models/Brands';
 // Styles
 import styles from './styles';
 
-const BrandsCardList = ({ onNavigateBrandDetailScreen, brands }: IBrandsListProps) => {
-  const onNavigateBrandDetailScreenHandler = useCallback(
+const BrandsCardList = ({ onPressBrandCard, brands }: IBrandsListProps) => {
+  // handle action when press card brand with id
+  const handlePressBrandCard = useCallback(
     (id: string) => {
-      onNavigateBrandDetailScreen(id);
+      onPressBrandCard(id);
     },
-    [onNavigateBrandDetailScreen],
+    [onPressBrandCard],
   );
 
   // handle render Card component
   const renderBrandCard = ({ item }: { item: IBrandCardListProps }) => (
-    <BrandCard brand={item} onNavigateBrandDetailScreen={onNavigateBrandDetailScreenHandler} />
+    <BrandCard brand={item} key={item.id} onPressBrandCard={handlePressBrandCard} />
   );
 
+  // render empty list
   const renderEmptyList = () => <Title titleName={BRANDS_EMPTY_RESULT} />;
 
   return (

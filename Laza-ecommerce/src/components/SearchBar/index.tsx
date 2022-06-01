@@ -1,8 +1,12 @@
-import React, { memo, useCallback } from 'react';
+import React, { memo, useCallback, useContext } from 'react';
 import { Image, TextInput, TouchableOpacity, View } from 'react-native';
 
 // LIBS
 import isEqual from 'react-fast-compare';
+
+// Context
+import { AppContext } from 'context/AppContext';
+import { SEARCH_PRODUCTS_VALUE } from 'context/actions/products';
 
 // Types
 import { ISearchBarProps } from 'types/components/Search';
@@ -17,32 +21,29 @@ const SearchBar = ({
   value,
   autoFocus,
   textInputStyles = {},
-  onChangeText = () => {},
   onSubmitEditing,
 }: ISearchBarProps) => {
-  const [valueState, setValueState] = React.useState(value);
+  const { productDispatch } = useContext(AppContext);
 
-  const onChangeTextHandler = useCallback(
+  const [valueState, setValueState] = React.useState<string>('');
+
+  const handleTextChange = useCallback(
     (text: string) => {
       setValueState(text);
-      onChangeText(text);
+      productDispatch({ type: SEARCH_PRODUCTS_VALUE, searchValue: text });
     },
-    [onChangeText, setValueState],
+    [setValueState],
   );
 
-  const onSubmitEditingHandler = useCallback(() => {
+  const handleSubmitEditing = useCallback(() => {
     onSubmitEditing();
   }, [onSubmitEditing, valueState]);
-
-  const onSearchHandler = useCallback(() => {
-    onSubmitEditingHandler();
-  }, [onSubmitEditingHandler]);
 
   return (
     <View style={styles.container}>
       <View style={styles.searchBarContainer}>
         <View style={styles.inputWrapper}>
-          <TouchableOpacity onPress={onSearchHandler} style={styles.iconSearchWrapper}>
+          <TouchableOpacity onPress={handleSubmitEditing} style={styles.iconSearchWrapper}>
             <Image style={styles.iconSearch} source={IMAGES.iconSearch} />
           </TouchableOpacity>
           <TextInput
@@ -51,8 +52,8 @@ const SearchBar = ({
             autoFocus={autoFocus}
             autoCorrect={false}
             value={valueState}
-            onChangeText={onChangeTextHandler}
-            onSubmitEditing={onSubmitEditingHandler}
+            onChangeText={handleTextChange}
+            onSubmitEditing={handleSubmitEditing}
           />
         </View>
         <TouchableOpacity onPress={() => {}} style={styles.iconVoiceWrapper}>

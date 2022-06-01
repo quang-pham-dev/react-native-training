@@ -15,6 +15,9 @@ import {
   GET_PRODUCTS_BY_BRAND_ID,
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
   GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
 } from 'context/actions/products';
 
 // API
@@ -22,6 +25,7 @@ import { productsService } from 'api/products.api';
 
 // Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
+import { PAGINATION } from 'constants/Products';
 
 // Types
 import { IBrand } from 'types/models/Brands';
@@ -37,28 +41,34 @@ import styles from './styles';
 const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   const id = route.params;
 
-  const { productState, productDispatch, brandState } = useContext(AppContext);
+  const { productState, productDispatch, brandState, brandDispatch } = useContext(AppContext);
 
   const { brands } = brandState || {};
 
-  const { productsByBrandId, isProcessing } = productState || {};
-  // handle back button
-  const onPressBackHandler = useCallback(() => {
-    navigation.goBack();
-  }, [navigation]);
+  const { productsByBrandId, isProcessing, limit, totalRowsByBrandId } = productState || {};
 
   useEffect(() => {
     fetchProductsByBrandId();
-  }, [id, productDispatch]);
+  }, [productDispatch]);
 
   const fetchProductsByBrandId = async () => {
     productDispatch({ type: GET_PRODUCTS_BY_BRAND_ID });
     try {
-      const { data } = await productsService.getProductByBrandId(id);
-      productDispatch({
-        type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
-        payload: { products: data },
-      });
+      const response = await productsService.getProductsByBrandId(id, PAGINATION.LIMIT);
+      if (response.data) {
+        const { data, pagination } = response.data || {};
+        const { _limit, _totalRows } = pagination || {};
+        productDispatch({
+          type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
+          payload: {
+            data: {
+              productsByBrandId: data,
+            },
+            limit: _limit,
+            totalRowsByBrandId: _totalRows,
+          },
+        });
+      }
     } catch (error) {
       productDispatch({
         type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
@@ -75,16 +85,50 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
     [brands, id],
   );
 
+  // handle back button
+  const onPressBackHandler = useCallback(() => {
+    navigation.goBack();
+  }, [navigation]);
+
   // handle like product
   const onPressLikeProductHandler = useCallback(() => {}, []);
 
   // handle action navigate to Product Detail Screen
-  const onNavigateProductDetailScreenHandler = useCallback(
+  const handlePressProductCard = useCallback(
     (id: string) => {
       navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);
     },
     [navigation, id],
   );
+
+  // handle load more products
+  const handleLoadMoreProducts = useCallback(async () => {
+    productDispatch({
+      type: LOAD_MORE_PRODUCTS_BY_BRAND_ID,
+    });
+
+    try {
+      const res = await productsService.getProductsByBrandId(id, limit + PAGINATION.LIMIT);
+      const { data, pagination } = res.data || {};
+      const { _limit } = pagination || {};
+      productDispatch({
+        type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
+        payload: {
+          data: {
+            productsByBrandId: data,
+          },
+          limit: _limit,
+        },
+      });
+    } catch (error) {
+      productDispatch({
+        type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
+        payload: error,
+      });
+
+      Alert.alert('Error', error.message);
+    }
+  }, [limit, productsByBrandId]);
 
   return (
     <View style={styles.container}>
@@ -106,12 +150,11 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
         </View>
       </View>
       {/* end header */}
+
       <View style={styles.contentContainer}>
         <View style={styles.contentHeader}>
           <View>
-            <Text style={styles.totalCount}>
-              {isProcessing ? 0 : productsByBrandId?.length | 0} Items
-            </Text>
+            <Text style={styles.totalCount}>{isProcessing ? 0 : totalRowsByBrandId | 0} Items</Text>
             <Text style={styles.titleContent}>Available in stock</Text>
           </View>
           <View style={styles.sortWrapper}>
@@ -122,13 +165,15 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
           </View>
         </View>
         {/* end content header */}
+
         {isProcessing ? (
           <LoadingIndicator size={LOADING_SIZE.LARGE} />
         ) : (
           <ProductsList
             products={productsByBrandId}
             onPressLikeProduct={onPressLikeProductHandler}
-            onNavigateProductDetailScreen={onNavigateProductDetailScreenHandler}
+            onPressProductCard={handlePressProductCard}
+            onLoadMoreProducts={handleLoadMoreProducts}
           />
         )}
         {/* end Product List */}

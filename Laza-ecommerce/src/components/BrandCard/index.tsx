@@ -17,14 +17,15 @@ import Colors from 'themes/Colors';
 // Styles
 import styles from './styles';
 
-const BrandCard = ({ brand, onNavigateBrandDetailScreen, brandCardStyles }: IBrandCardProps) => {
-  const onNavigateBrandDetailScreenHandler = useCallback(() => {
-    onNavigateBrandDetailScreen(brand.id);
-  }, [brand.id, onNavigateBrandDetailScreen]);
+const BrandCard = ({ brand, onPressBrandCard, brandCardStyles }: IBrandCardProps) => {
+  // handle action press card brand
+  const handlePressBrandCard = useCallback(() => {
+    onPressBrandCard(brand.id);
+  }, [brand.id, onPressBrandCard]);
   return (
     <TouchableOpacity
       testID='brandCard'
-      onPress={onNavigateBrandDetailScreenHandler}
+      onPress={handlePressBrandCard}
       style={[styles.brandCardContainer, brandCardStyles]}>
       <View style={[styles.brandCardWrapper]}>
         <View style={styles.brandLogoWrapper}>
