@@ -36,7 +36,7 @@ const ProductsList = ({
   const handleLoadMoreProducts = (products: IProduct[]) => {
     let cacheEndReached = null;
 
-    if (products.length < totalRows) {
+    if (products?.length < totalRows) {
       cacheEndReached = onLoadMoreProducts;
     }
 
@@ -74,11 +74,6 @@ const ProductsList = ({
     [handlePressProductCard, onPressLikeProduct],
   );
 
-  // render footer loading indicator
-  const renderFooter = () => {
-    return isProcessing && <LoadingIndicator size={LOADING_SIZE.LARGE} />;
-  };
-
   return (
     <View style={styles.container}>
       <FlatList
@@ -90,7 +85,6 @@ const ProductsList = ({
         keyExtractor={product => product.id}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={renderEmptyList}
-        ListFooterComponent={renderFooter}
         ListFooterComponentStyle={styles.listFooter}
         onEndReached={handleLoadMoreProducts(products)}
         onEndReachedThreshold={0.5}
