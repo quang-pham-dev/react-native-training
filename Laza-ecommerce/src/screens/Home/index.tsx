@@ -22,9 +22,6 @@ import {
   LOAD_MORE_PRODUCTS,
   LOAD_MORE_PRODUCTS_FAILED,
   LOAD_MORE_PRODUCTS_SUCCESS,
-  SEARCH_PRODUCTS,
-  SEARCH_PRODUCTS_FAILED,
-  SEARCH_PRODUCTS_SUCCESS,
 } from 'context/actions/products';
 import { GET_BRANDS, GET_BRANDS_FAILED, GET_BRANDS_SUCCESS } from 'context/actions/brands';
 
@@ -49,9 +46,6 @@ import Colors from 'themes/Colors';
 import styles from './styles';
 
 const HomeScreen = ({ navigation }: IHomeScreenProps) => {
-  // State for search bar
-  const [searchText, setSearchText] = useState<string>('');
-
   const { authState, productState, brandState, productDispatch, brandDispatch } =
     useContext(AppContext);
 
@@ -59,7 +53,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
   const { username } = currentUser || {};
 
-  const { products, limit, searchValue, productsSearch } = productState || {};
+  const { products, limit, searchValue } = productState || {};
 
   const { brands } = brandState || {};
 
@@ -164,43 +158,17 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const handlePressLikeProduct = useCallback(() => {}, []);
 
   // handle action search
-  const handleSubmitEditing = useCallback(() => {
-    handleSearchProducts();
-    // }
-  }, []);
+  const handleSubmitEditing = useCallback(() => {}, []);
 
-  const handleSearchProducts = useCallback(async () => {
-    productDispatch({
-      type: SEARCH_PRODUCTS,
-    });
-
-    try {
-      const response = await productsService.searchProductsByName(limit, searchValue);
-      if (response.data) {
-        const { data, pagination } = response.data || {};
-        const { _limit } = pagination || {};
-        productDispatch({
-          type: SEARCH_PRODUCTS_SUCCESS,
-          payload: {
-            data: {
-              productsSearch: data,
-            },
-          },
-        });
-      }
-    } catch (error) {
-      productDispatch({
-        type: SEARCH_PRODUCTS_FAILED,
-        payload: error,
-      });
-
-      Alert.alert('Error', error.message);
-    }
-  }, [limit, products]);
-
-  const productsData = useMemo(
-    () => (productsSearch ? productsSearch : products),
-    [productsSearch, products],
+  // master data render products listÏ
+  const masterData = useMemo(
+    () =>
+      searchValue
+        ? products.filter((product: IProduct) =>
+            product.name.toLowerCase().includes(searchValue.toLowerCase()),
+          )
+        : products,
+    [searchValue, products],
   );
 
   return (
@@ -261,7 +229,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
           {Boolean(productState?.isProcessing) && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
           <ProductsList
-            products={products}
+            products={masterData}
             onPressLikeProduct={handlePressLikeProduct}
             onPressProductCard={handlePressProductCard}
             onLoadMoreProducts={handleLoadMoreProducts}

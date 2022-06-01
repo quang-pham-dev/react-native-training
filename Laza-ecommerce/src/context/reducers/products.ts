@@ -16,9 +16,6 @@ import {
   LOAD_MORE_PRODUCTS_BY_BRAND_ID,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
-  SEARCH_PRODUCTS,
-  SEARCH_PRODUCTS_SUCCESS,
-  SEARCH_PRODUCTS_FAILED,
   SEARCH_PRODUCTS_VALUE,
 } from 'context/actions/products';
 import { InitialProductsState, ProductsState } from 'context/state/products';
@@ -37,12 +34,6 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
       return {
         ...state,
         isLoading: true,
-      };
-
-    case SEARCH_PRODUCTS:
-      return {
-        ...state,
-        isProcessing: true,
       };
 
     case SEARCH_PRODUCTS_VALUE:
@@ -98,22 +89,11 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
         limit: action.payload?.limit,
       };
 
-    case SEARCH_PRODUCTS_SUCCESS:
-      return {
-        ...state,
-        type: action.type,
-        isProcessing: false,
-        productsSearch: action.payload?.data?.productsSearch,
-        limit: action.payload?.limit,
-        totalRows: action.payload?.totalRows,
-      };
-
     case GET_PRODUCTS_FAILED:
     case GET_PRODUCT_FAILED:
     case GET_PRODUCTS_BY_BRAND_ID_FAILED:
     case LOAD_MORE_PRODUCTS_FAILED:
     case LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED:
-    case SEARCH_PRODUCTS_FAILED:
       return {
         ...state,
         isProcessing: false,
