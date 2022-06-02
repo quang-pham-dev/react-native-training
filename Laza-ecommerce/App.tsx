@@ -9,9 +9,6 @@ import * as SplashScreen from 'expo-splash-screen';
 // Hooks
 import useFonts from 'hooks/useFonts';
 
-// Components
-import ErrorBoundary from 'components/ErrorBoundary';
-
 // Navigation
 import RootNavigator from 'navigation/RootNavigator';
 
@@ -53,9 +50,7 @@ export default function App() {
   return (
     <AppProvider>
       <SafeAreaProvider>
-        <ErrorBoundary>
-          <RootNavigator />
-        </ErrorBoundary>
+        <RootNavigator />
       </SafeAreaProvider>
     </AppProvider>
   );
