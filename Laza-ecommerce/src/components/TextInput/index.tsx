@@ -23,7 +23,7 @@ const Input = ({
 }: ITextInputProps) => {
   const [valueState, setValueState] = React.useState(value);
 
-  const onChangeTextHandler = useCallback(
+  const handleTextChange = useCallback(
     (text: string) => {
       setValueState(text);
       onChangeText(text);
@@ -31,11 +31,11 @@ const Input = ({
     [onChangeText, setValueState],
   );
 
-  const onSubmitEditingHandler = useCallback(() => {
+  const handleSubmitEditing = useCallback(() => {
     onSubmitEditing();
   }, [onSubmitEditing, valueState]);
 
-  const onBlurHandler = useCallback(() => {
+  const handleBlur = useCallback(() => {
     onBlur();
   }, [onBlur, valueState]);
 
@@ -44,9 +44,9 @@ const Input = ({
       {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
       <TextInput
         value={valueState}
-        onChangeText={onChangeTextHandler}
-        onBlur={onBlurHandler}
-        onSubmitEditing={onSubmitEditingHandler}
+        onChangeText={handleTextChange}
+        onBlur={handleBlur}
+        onSubmitEditing={handleSubmitEditing}
         placeholder={placeholder}
         style={[styles.input, textInputStyles]}
         secureTextEntry={secureTextEntry}

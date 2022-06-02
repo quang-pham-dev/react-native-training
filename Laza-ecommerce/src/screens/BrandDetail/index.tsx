@@ -86,12 +86,12 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   );
 
   // handle back button
-  const onPressBackHandler = useCallback(() => {
+  const handlePressBackIcon = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
   // handle like product
-  const onPressLikeProductHandler = useCallback(() => {}, []);
+  const handlePressLikeProduct = useCallback(() => {}, []);
 
   // handle action navigate to Product Detail Screen
   const handlePressProductCard = useCallback(
@@ -134,7 +134,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <View style={styles.actionsWrapper}>
-          <Pressable onPress={onPressBackHandler}>
+          <Pressable onPress={handlePressBackIcon}>
             <Image style={styles.backIcon} source={IMAGES.iconBack} />
           </Pressable>
           <Pressable>
@@ -171,7 +171,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
         ) : (
           <ProductsList
             products={productsByBrandId}
-            onPressLikeProduct={onPressLikeProductHandler}
+            onPressLikeProduct={handlePressLikeProduct}
             onPressProductCard={handlePressProductCard}
             onLoadMoreProducts={handleLoadMoreProducts}
           />

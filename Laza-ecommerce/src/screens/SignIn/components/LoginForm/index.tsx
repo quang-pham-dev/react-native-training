@@ -49,7 +49,7 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
     resolver: yupResolver(loginSchema),
   });
 
-  const onSubmitHandler: SubmitHandler<ILoginCredentials> = async (
+  const onSubmitLoginForm: SubmitHandler<ILoginCredentials> = async (
     loginInfo: ILoginCredentials,
   ) => {
     onSubmit(loginInfo);
@@ -137,7 +137,7 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
           text='Login'
           buttonStyles={[styles.bottomButton, styles.loginButton]}
           textStyles={[styles.textBottomButton]}
-          onPress={handleSubmit(onSubmitHandler)}
+          onPress={handleSubmit(onSubmitLoginForm)}
         />
       </View>
     </>

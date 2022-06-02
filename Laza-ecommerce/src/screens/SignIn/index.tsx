@@ -39,7 +39,7 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
   const { isProcessing } = authState || {};
 
   // handle action call api SignIn when user press Login button
-  const onSubmitHandler = async (loginInfo: ILoginCredentials) => {
+  const handleSubmitButton = async (loginInfo: ILoginCredentials) => {
     authDispatch({ type: SIGN_IN });
     const { username, password } = loginInfo;
     try {
@@ -89,7 +89,7 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
           {/* end header */}
           {Boolean(isProcessing) && <LoadingIndicator />}
           {/* Form */}
-          <LoginForm onSubmit={onSubmitHandler} />
+          <LoginForm onSubmit={handleSubmitButton} />
           {/* end Form */}
         </View>
       </KeyboardAvoidingView>

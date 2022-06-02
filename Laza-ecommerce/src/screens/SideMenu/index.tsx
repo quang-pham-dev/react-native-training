@@ -49,7 +49,7 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   // handel action sign out
-  const onPressLogoutHandler = useCallback(() => {
+  const handlePressLogoutIcon = useCallback(() => {
     Alert.alert('Logout!', 'Are you sure you want to logout?', [
       {
         text: 'Cancel',
@@ -183,7 +183,7 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
           title='Logout'
           titleStyle={styles.logoutText}
           source={IMAGES.iconLogout}
-          onPress={onPressLogoutHandler}
+          onPress={handlePressLogoutIcon}
         />
       </View>
     </View>

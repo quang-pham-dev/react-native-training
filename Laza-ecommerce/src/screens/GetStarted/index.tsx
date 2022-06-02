@@ -19,12 +19,12 @@ import styles from './styles';
 
 function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
   // handle navigate to SignIn screen
-  const onNavigateSignInScreenHandler = useCallback(() => {
+  const handlePressSignInLink = useCallback(() => {
     navigation.navigate(SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name);
   }, [navigation]);
 
   // handle go Back action
-  const onGoBackHandler = useCallback(() => {
+  const handlePressBackIcon = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
@@ -32,7 +32,11 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.iconBackWrapper}>
-          <Button icon={IMAGES.iconBack} iconStyles={[styles.iconBack]} onPress={onGoBackHandler} />
+          <Button
+            icon={IMAGES.iconBack}
+            iconStyles={[styles.iconBack]}
+            onPress={handlePressBackIcon}
+          />
         </View>
         <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started'></Title>
       </View>
@@ -69,7 +73,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
       <View style={styles.footer}>
         <View style={styles.footerTextWrapper}>
           <Title titleStyles={styles.alreadyText} titleName='Already have an account? ' />
-          <TouchableOpacity onPress={onNavigateSignInScreenHandler} testID='LinkToSignIn'>
+          <TouchableOpacity onPress={handlePressSignInLink} testID='LinkToSignIn'>
             <Title titleStyles={styles.signIn} titleName='Signin' />
           </TouchableOpacity>
         </View>

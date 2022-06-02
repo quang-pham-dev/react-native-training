@@ -73,7 +73,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
   };
 
   // handle action press button add to cart
-  const onAddToCartHandler = useCallback(() => {}, []);
+  const handlePressAddToCartIcon = useCallback(() => {}, []);
 
   return (
     <ScrollView style={styles.Container} showsVerticalScrollIndicator={false}>
@@ -114,7 +114,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
               text='Add to Cart'
               buttonStyles={[styles.bottomButton, styles.loginButton]}
               textStyles={[styles.textBottomButton]}
-              onPress={onAddToCartHandler}
+              onPress={handlePressAddToCartIcon}
             />
           </View>
           {/* End footer block */}

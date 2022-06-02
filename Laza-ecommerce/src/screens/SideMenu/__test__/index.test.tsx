@@ -29,28 +29,28 @@ describe('Side menu', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('should call function onCloseMenuHandler', async () => {
+  test('should call function handleCloseMenu', async () => {
     const closeMenu = tree.root.findByProps({ testID: closeMenuID });
     await fireEvent.press(closeMenu);
 
     expect(props.navigation.dispatch).toHaveBeenCalledWith(DrawerActions.closeDrawer());
   });
 
-  test('should navigated to handleNavigateToBagScreen', () => {
+  test('should navigated to handlePressBagIcon', () => {
     const button = tree.root.findAllByType(Pressable)[2];
     button.props.onPress();
 
     expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.STACK.BAGS.name);
   });
 
-  test('should navigated to handleNavigateToWalletScreen', () => {
+  test('should navigated to handlePressWalletIcon', () => {
     const button = tree.root.findAllByType(Pressable)[3];
     button.props.onPress();
 
     expect(navigationMock.navigate).toHaveBeenCalledWith(SCREENS_ROUTES.STACK.WALLET.name);
   });
 
-  test('should navigated to handleNavigateToWishlistScreen', () => {
+  test('should navigated to handlePressWishlistIcon', () => {
     const button = tree.root.findAllByType(Pressable)[4];
     button.props.onPress();
 

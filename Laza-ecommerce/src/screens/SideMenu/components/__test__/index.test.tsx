@@ -23,7 +23,7 @@ describe('Side menu', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('should call function onPressHandler', async () => {
+  test('should call function handlePressMenuItem', async () => {
     const button = tree.root.findAllByType(Pressable)[0];
 
     await fireEvent.press(button);

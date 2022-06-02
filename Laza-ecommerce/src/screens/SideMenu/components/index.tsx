@@ -8,11 +8,11 @@ import { DrawerItemProps } from 'types/screens/Menu';
 import styles from './styles';
 
 const DrawerItem = ({ title, source, onPress, titleStyle }: DrawerItemProps) => {
-  const onPressHandler = useCallback(() => {
+  const handlePressItem = useCallback(() => {
     onPress();
   }, [onPress]);
   return (
-    <Pressable onPress={onPressHandler}>
+    <Pressable onPress={handlePressItem}>
       <View style={styles.boxWrapper}>
         <Image source={source} style={styles.icons} />
         <Text style={[styles.text, titleStyle]}>{title}</Text>
