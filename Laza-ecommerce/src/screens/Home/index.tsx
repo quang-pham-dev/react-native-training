@@ -1,8 +1,20 @@
-import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { Alert, KeyboardAvoidingView, View, Text } from 'react-native';
+import React, { memo, useCallback, useContext, useEffect, useMemo, useRef } from 'react';
+import {
+  Alert,
+  KeyboardAvoidingView,
+  View,
+  Text,
+  Animated,
+  StatusBar,
+  StyleSheet,
+  Platform,
+  NativeSyntheticEvent,
+  NativeScrollEvent,
+} from 'react-native';
 
 // LIBS
 import { SafeAreaView } from 'react-native-safe-area-context';
+import isEqual from 'react-fast-compare';
 
 // Components
 import BrandsCardList from 'components/BrandList';
@@ -41,9 +53,10 @@ import { PAGINATION } from 'constants/Products';
 // Themes
 import Fonts from 'themes/Fonts';
 import Colors from 'themes/Colors';
+import Metrics from 'themes/Metrics';
 
 // Styles
-import styles from './styles';
+// import styles from './styles';
 
 const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const { authState, productState, brandState, productDispatch, brandDispatch } =
@@ -57,16 +70,108 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
   const { brands } = brandState || {};
 
+  // animation values
+  const animatedValue = useRef(new Animated.Value(0)).current;
+
+  const SearchBarAnimation = {
+    transform: [
+      {
+        translateY: animatedValue.interpolate({
+          inputRange: [0, 50],
+          outputRange: [0, -140],
+          extrapolate: 'clamp',
+        }),
+      },
+      {
+        scaleX: animatedValue.interpolate({
+          inputRange: [0, 50],
+          outputRange: [1, 0.7],
+          extrapolate: 'clamp',
+        }),
+      },
+      {
+        scaleY: animatedValue.interpolate({
+          inputRange: [0, 50],
+          outputRange: [1, 0.7],
+          extrapolate: 'clamp',
+        }),
+      },
+    ],
+  };
+
+  const headerIconAnimation = {
+    transform: [
+      {
+        translateY: animatedValue.interpolate({
+          inputRange: [0, 50],
+          outputRange: [0, -3],
+          extrapolate: 'clamp',
+        }),
+      },
+    ],
+  };
+
+  const headerTitleAnimation = {
+    transform: [
+      {
+        translateX: animatedValue.interpolate({
+          inputRange: [0, 50],
+          outputRange: [0, -100],
+          extrapolate: 'clamp',
+        }),
+      },
+      {
+        translateY: animatedValue.interpolate({
+          inputRange: [0, 50],
+          outputRange: [0, -100],
+          extrapolate: 'clamp',
+        }),
+      },
+    ],
+    opacity: animatedValue.interpolate({
+      inputRange: [0, 50],
+      outputRange: [1, 0],
+      extrapolate: 'clamp',
+    }),
+  };
+  const brandsAnimation = {
+    transform: [
+      {
+        translateX: animatedValue.interpolate({
+          inputRange: [0, 50],
+          outputRange: [0, 200],
+          extrapolate: 'clamp',
+        }),
+      },
+    ],
+    opacity: animatedValue.interpolate({
+      inputRange: [0, 30],
+      outputRange: [1, 0],
+      extrapolate: 'clamp',
+    }),
+  };
+  const productListAnimation = {
+    transform: [
+      {
+        translateY: animatedValue.interpolate({
+          inputRange: [0, 40],
+          outputRange: [0, -230],
+          extrapolate: 'clamp',
+        }),
+      },
+    ],
+  };
+
   useEffect(() => {
-    getProducts();
     getBrands();
-  }, [productDispatch, brandDispatch]);
+    getProducts();
+  }, []);
 
   // GET PRODUCTS
   const getProducts = async () => {
     productDispatch({ type: GET_PRODUCTS });
     try {
-      const response = await productsService.getProducts(PAGINATION.LIMIT);
+      const response = await productsService.getProducts(limit);
       if (response.data) {
         const { data, pagination } = response.data || {};
         const { _limit, _totalRows } = pagination || {};
@@ -126,14 +231,13 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     [navigation],
   );
 
+  // handle Load More Products
   const handleLoadMoreProducts = useCallback(async () => {
-    productDispatch({
-      type: LOAD_MORE_PRODUCTS,
-    });
+    productDispatch({ type: LOAD_MORE_PRODUCTS });
 
     try {
-      const res = await productsService.getProducts(limit + PAGINATION.LIMIT);
-      const { data, pagination } = res.data || {};
+      const response = await productsService.getProducts(limit + PAGINATION.LIMIT);
+      const { data, pagination } = response.data || {};
       const { _limit } = pagination || {};
       productDispatch({
         type: LOAD_MORE_PRODUCTS_SUCCESS,
@@ -160,7 +264,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   // handle action search
   const handleSubmitEditing = useCallback(() => {}, []);
 
-  // master data render products listÏ
+  // master data render products list
   const masterData = useMemo(
     () =>
       searchValue
@@ -171,22 +275,46 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     [searchValue, products],
   );
 
+  // handle scroll Product list then sticky header
+  const handleScrollProductsList = useCallback(
+    (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+      const { contentOffset } = event.nativeEvent;
+      const { y } = contentOffset;
+      if (y >= 0) {
+        Animated.timing(animatedValue, {
+          toValue: y,
+          duration: 800,
+          useNativeDriver: true,
+        }).start();
+      }
+    },
+    [animatedValue],
+  );
+
   return (
     <SafeAreaView style={styles.Container}>
-      <KeyboardAvoidingView style={styles.homeMain}>
-        <View style={styles.header}>
+      <StatusBar barStyle='light-content' />
+      <View style={styles.header}>
+        <Animated.View style={headerIconAnimation}>
           <Header navigation={navigation} />
-          {/* end header layout */}
-          <View style={styles.headerTitleWrapper}>
-            <Text style={styles.headerTitle}>Hello</Text>
-            {Boolean(username) && <Text style={styles.userNameTitle}>{username}</Text>}
-          </View>
-          <Title titleName='Welcome to Laza.' titleStyles={styles.subTitle}></Title>
-          <SearchBar onSubmitEditing={handleSubmitEditing} />
-        </View>
-        {/* end header */}
+        </Animated.View>
+        {/* end header layout */}
 
-        <View style={styles.body}>
+        <Animated.View style={[styles.headerTitleWrapper, headerTitleAnimation]}>
+          <Text style={styles.headerTitle}>Hello</Text>
+          {Boolean(username) && <Text style={styles.userNameTitle}>{username}</Text>}
+        </Animated.View>
+        <Animated.View style={headerTitleAnimation}>
+          <Title titleName='Welcome to Laza.' titleStyles={styles.subTitle}></Title>
+        </Animated.View>
+        <Animated.View style={SearchBarAnimation}>
+          <SearchBar onSubmitEditing={handleSubmitEditing} />
+        </Animated.View>
+      </View>
+      {/* end header */}
+
+      <View style={styles.body}>
+        <Animated.View style={brandsAnimation}>
           <View style={[styles.brandTitle, styles.titleRow]}>
             <Label
               labelName='Choose Brand'
@@ -208,7 +336,9 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           {Boolean(brandState?.isProcessing) && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
           <BrandsCardList brands={brands} onPressBrandCard={handlePressBrandCard} />
           {/* end brand list */}
+        </Animated.View>
 
+        <Animated.View style={productListAnimation}>
           <View style={[styles.productTitle, styles.titleRow]}>
             <Label
               labelName='New Arrival'
@@ -233,12 +363,65 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
             onPressLikeProduct={handlePressLikeProduct}
             onPressProductCard={handlePressProductCard}
             onLoadMoreProducts={handleLoadMoreProducts}
+            onScroll={handleScrollProductsList}
           />
           {/* end product list */}
-        </View>
-      </KeyboardAvoidingView>
+        </Animated.View>
+      </View>
     </SafeAreaView>
   );
 };
 
-export default HomeScreen;
+export default memo(HomeScreen, isEqual);
+
+const styles = StyleSheet.create({
+  Container: {
+    flex: 1,
+    backgroundColor: Colors.primaryBackground,
+    paddingHorizontal: Metrics.padding.lg,
+  },
+
+  header: {
+    marginTop: Platform.OS === 'android' ? Metrics.margin.lg : 0,
+  },
+  body: {
+    marginBottom: Platform.OS === 'android' ? 250 : 200,
+  },
+  headerTitleWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginTop: Metrics.margin.xm,
+  },
+  headerTitle: {
+    fontSize: Fonts.size.h5,
+    fontFamily: Fonts.fontFamily.Inter_600SemiBold,
+    lineHeight: Fonts.lineHeight.xxl,
+    color: Colors.textBlack,
+  },
+  userNameTitle: {
+    alignSelf: 'flex-end',
+    fontSize: Fonts.size.large,
+    fontFamily: Fonts.fontFamily.Inter_500Medium,
+    color: Colors.textBlack,
+    lineHeight: Fonts.lineHeight.xxl,
+    marginLeft: Metrics.margin.sm,
+  },
+  subTitle: {
+    fontSize: Fonts.size.normal,
+    fontFamily: Fonts.fontFamily.Inter_400Regular,
+    color: Colors.textGray,
+    marginTop: Metrics.margin.xsm,
+  },
+  titleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+
+  productTitle: {
+    marginTop: Metrics.margin.xm,
+  },
+  brandTitle: {
+    paddingBottom: Metrics.padding.xm,
+  },
+});

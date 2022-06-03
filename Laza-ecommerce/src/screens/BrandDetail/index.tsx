@@ -48,10 +48,10 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   const { productsByBrandId, isProcessing, limit, totalRowsByBrandId } = productState || {};
 
   useEffect(() => {
-    fetchProductsByBrandId();
-  }, [productDispatch]);
+    getProductsByBrandId();
+  }, []);
 
-  const fetchProductsByBrandId = async () => {
+  const getProductsByBrandId = async () => {
     productDispatch({ type: GET_PRODUCTS_BY_BRAND_ID });
     try {
       const response = await productsService.getProductsByBrandId(id, PAGINATION.LIMIT);
@@ -103,13 +103,11 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
 
   // handle load more products
   const handleLoadMoreProducts = useCallback(async () => {
-    productDispatch({
-      type: LOAD_MORE_PRODUCTS_BY_BRAND_ID,
-    });
+    productDispatch({ type: LOAD_MORE_PRODUCTS_BY_BRAND_ID });
 
     try {
-      const res = await productsService.getProductsByBrandId(id, limit + PAGINATION.LIMIT);
-      const { data, pagination } = res.data || {};
+      const response = await productsService.getProductsByBrandId(id, limit + PAGINATION.LIMIT);
+      const { data, pagination } = response.data || {};
       const { _limit } = pagination || {};
       productDispatch({
         type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,

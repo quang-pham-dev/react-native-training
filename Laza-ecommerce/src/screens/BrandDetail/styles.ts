@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     flex: 1,
+    paddingBottom: Metrics.padding.xxl,
   },
 
   contentHeader: {

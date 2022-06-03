@@ -4,13 +4,13 @@ exports[`Product Card List Component Should render correctly 1`] = `
 <View
   style={
     Object {
-      "marginBottom": 70,
       "marginTop": 15,
     }
   }
 >
   <RCTScrollView
     ListEmptyComponent={[Function]}
+    ListFooterComponent={[Function]}
     ListFooterComponentStyle={
       Object {
         "alignItems": "center",
@@ -173,7 +173,7 @@ exports[`Product Card List Component Should render correctly 1`] = `
     onScrollEndDrag={[Function]}
     removeClippedSubviews={false}
     renderItem={[Function]}
-    scrollEventThrottle={50}
+    scrollEventThrottle={16}
     showsVerticalScrollIndicator={false}
     stickyHeaderIndices={Array []}
     updateCellsBatchingPeriod={50}
@@ -511,6 +511,16 @@ exports[`Product Card List Component Should render correctly 1`] = `
           </View>
         </View>
       </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "marginBottom": 15,
+          }
+        }
+      />
     </View>
   </RCTScrollView>
 </View>

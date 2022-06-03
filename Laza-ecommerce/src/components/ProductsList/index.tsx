@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useContext } from 'react';
+import React, { memo, useCallback, useContext, useRef } from 'react';
 import { FlatList, View } from 'react-native';
 
 // LIBS
@@ -17,7 +17,6 @@ import { PRODUCTS_EMPTY_RESULT } from 'constants/Products';
 
 // Types
 import { IProduct, IProductsListProps } from 'types/models/Products';
-import { LOADING_SIZE } from 'types/components/LoadingIndicator';
 
 // Styles
 import styles from './styles';
@@ -27,17 +26,32 @@ const ProductsList = ({
   products,
   onPressLikeProduct,
   onLoadMoreProducts,
+  onScroll,
 }: IProductsListProps) => {
   const { productState } = useContext(AppContext);
 
-  const { totalRows, isProcessing } = productState || {};
+  const {
+    isLoading,
+    totalRows,
+    productsByBrandId,
+    totalRowsByBrandId,
+    products: allProduct,
+  } = productState || {};
 
   // handle action load more products
-  const handleLoadMoreProducts = (products: IProduct[]) => {
+  const handleLoadMoreProducts = () => {
     let cacheEndReached = null;
+    let productList = [];
+    let totalProduct = 0;
 
-    if (products?.length < totalRows) {
-      cacheEndReached = onLoadMoreProducts;
+    if (totalRows > totalRowsByBrandId && totalRowsByBrandId === 0) {
+      productList = allProduct;
+      totalProduct = totalRows;
+      productList?.length < totalProduct && (cacheEndReached = onLoadMoreProducts);
+    } else if (totalRowsByBrandId <= totalRows) {
+      productList = productsByBrandId;
+      totalProduct = totalRowsByBrandId;
+      productList?.length < totalProduct && (cacheEndReached = onLoadMoreProducts);
     }
 
     return cacheEndReached;
@@ -74,6 +88,14 @@ const ProductsList = ({
     [handlePressProductCard, onPressLikeProduct],
   );
 
+  // handle render Footer component
+  const renderFooterList = useCallback(() => {
+    if (isLoading) {
+      return <LoadingIndicator />;
+    }
+    return null;
+  }, [isLoading]);
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -85,9 +107,12 @@ const ProductsList = ({
         keyExtractor={product => product.id}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={renderEmptyList}
+        ListFooterComponent={renderFooterList}
         ListFooterComponentStyle={styles.listFooter}
-        onEndReached={handleLoadMoreProducts(products)}
+        onEndReached={handleLoadMoreProducts()}
         onEndReachedThreshold={0.5}
+        onScroll={onScroll}
+        scrollEventThrottle={16}
       />
     </View>
   );

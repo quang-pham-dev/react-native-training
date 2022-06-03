@@ -1,4 +1,10 @@
-import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import {
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+  StyleProp,
+  TextStyle,
+  ViewStyle,
+} from 'react-native';
 
 export interface IProduct {
   id: string;
@@ -51,6 +57,7 @@ export interface IProductsListProps {
   onPressLikeProduct: (item: IProduct[]) => void;
   onPressProductCard: (id: string) => void;
   onLoadMoreProducts: () => void;
+  onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
 }
 export interface IProductResponse {
   data: {

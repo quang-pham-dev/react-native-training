@@ -6,22 +6,25 @@ exports[`Home Screen Should renders correctly 1`] = `
     Object {
       "backgroundColor": "#fff",
       "flex": 1,
+      "paddingHorizontal": 20,
     }
   }
 >
   <View
-    onLayout={[Function]}
     style={
       Object {
-        "flex": 1,
-        "paddingHorizontal": 20,
+        "marginTop": 0,
       }
     }
   >
     <View
       style={
         Object {
-          "marginTop": 0,
+          "transform": Array [
+            Object {
+              "translateY": 0,
+            },
+          ],
         }
       }
     >
@@ -95,28 +98,53 @@ exports[`Home Screen Should renders correctly 1`] = `
           />
         </View>
       </View>
-      <View
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginTop": 15,
+          "opacity": 1,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+            Object {
+              "translateY": 0,
+            },
+          ],
+        }
+      }
+    >
+      <Text
         style={
           Object {
-            "alignItems": "center",
-            "flexDirection": "row",
-            "marginTop": 15,
+            "color": "#1D1E20",
+            "fontFamily": "Inter_600SemiBold",
+            "fontSize": 28,
+            "lineHeight": 30,
           }
         }
       >
-        <Text
-          style={
+        Hello
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "opacity": 1,
+          "transform": Array [
             Object {
-              "color": "#1D1E20",
-              "fontFamily": "Inter_600SemiBold",
-              "fontSize": 28,
-              "lineHeight": 30,
-            }
-          }
-        >
-          Hello
-        </Text>
-      </View>
+              "translateX": 0,
+            },
+            Object {
+              "translateY": 0,
+            },
+          ],
+        }
+      }
+    >
       <Text
         style={
           Array [
@@ -135,6 +163,24 @@ exports[`Home Screen Should renders correctly 1`] = `
       >
         Welcome to Laza.
       </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "translateY": 0,
+            },
+            Object {
+              "scaleX": 1,
+            },
+            Object {
+              "scaleY": 1,
+            },
+          ],
+        }
+      }
+    >
       <View
         style={
           Object {
@@ -247,10 +293,23 @@ exports[`Home Screen Should renders correctly 1`] = `
         </View>
       </View>
     </View>
+  </View>
+  <View
+    style={
+      Object {
+        "marginBottom": 200,
+      }
+    }
+  >
     <View
       style={
         Object {
-          "flex": 1,
+          "opacity": 1,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+          ],
         }
       }
     >
@@ -354,6 +413,18 @@ exports[`Home Screen Should renders correctly 1`] = `
           </View>
         </RCTScrollView>
       </View>
+    </View>
+    <View
+      style={
+        Object {
+          "transform": Array [
+            Object {
+              "translateY": 0,
+            },
+          ],
+        }
+      }
+    >
       <View
         style={
           Array [
@@ -412,13 +483,13 @@ exports[`Home Screen Should renders correctly 1`] = `
       <View
         style={
           Object {
-            "marginBottom": 70,
             "marginTop": 15,
           }
         }
       >
         <RCTScrollView
           ListEmptyComponent={[Function]}
+          ListFooterComponent={[Function]}
           ListFooterComponentStyle={
             Object {
               "alignItems": "center",
@@ -443,7 +514,7 @@ exports[`Home Screen Should renders correctly 1`] = `
           onScrollEndDrag={[Function]}
           removeClippedSubviews={false}
           renderItem={[Function]}
-          scrollEventThrottle={50}
+          scrollEventThrottle={16}
           showsVerticalScrollIndicator={false}
           stickyHeaderIndices={Array []}
           updateCellsBatchingPeriod={50}
@@ -464,6 +535,16 @@ exports[`Home Screen Should renders correctly 1`] = `
             >
               No products found
             </Text>
+            <View
+              onLayout={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "justifyContent": "center",
+                  "marginBottom": 15,
+                }
+              }
+            />
           </View>
         </RCTScrollView>
       </View>

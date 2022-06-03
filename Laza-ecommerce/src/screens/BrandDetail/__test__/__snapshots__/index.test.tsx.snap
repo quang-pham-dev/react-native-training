@@ -110,6 +110,7 @@ exports[`Brand detail Screen should render correctly 1`] = `
     style={
       Object {
         "flex": 1,
+        "paddingBottom": 30,
       }
     }
   >
@@ -200,13 +201,13 @@ exports[`Brand detail Screen should render correctly 1`] = `
     <View
       style={
         Object {
-          "marginBottom": 70,
           "marginTop": 15,
         }
       }
     >
       <RCTScrollView
         ListEmptyComponent={[Function]}
+        ListFooterComponent={[Function]}
         ListFooterComponentStyle={
           Object {
             "alignItems": "center",
@@ -231,7 +232,7 @@ exports[`Brand detail Screen should render correctly 1`] = `
         onScrollEndDrag={[Function]}
         removeClippedSubviews={false}
         renderItem={[Function]}
-        scrollEventThrottle={50}
+        scrollEventThrottle={16}
         showsVerticalScrollIndicator={false}
         stickyHeaderIndices={Array []}
         updateCellsBatchingPeriod={50}
@@ -252,6 +253,16 @@ exports[`Brand detail Screen should render correctly 1`] = `
           >
             No products found
           </Text>
+          <View
+            onLayout={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "marginBottom": 15,
+              }
+            }
+          />
         </View>
       </RCTScrollView>
     </View>
