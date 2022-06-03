@@ -22,6 +22,7 @@ const BrandCard = ({ brand, onPressBrandCard, brandCardStyles }: IBrandCardProps
   const handlePressBrandCard = useCallback(() => {
     onPressBrandCard(brand.id);
   }, [brand.id, onPressBrandCard]);
+
   return (
     <TouchableOpacity
       testID='brandCard'
@@ -31,12 +32,14 @@ const BrandCard = ({ brand, onPressBrandCard, brandCardStyles }: IBrandCardProps
         <View style={styles.brandLogoWrapper}>
           <Image style={styles.brandLogo} source={{ uri: brand.logoUrl }} />
         </View>
+
         <Label
           lineHeight={16.5}
           fontSize={Fonts.size.normal}
           fontFamily={Fonts.fontFamily.Inter_500Medium}
           color={Colors.textBlack}
-          labelName={brand.name}></Label>
+          labelName={brand.name}
+        />
       </View>
     </TouchableOpacity>
   );

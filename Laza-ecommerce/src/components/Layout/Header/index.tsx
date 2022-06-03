@@ -1,6 +1,10 @@
 import React, { memo, useCallback } from 'react';
 import { Image, Pressable, View } from 'react-native';
 
+// LIBS
+import { DrawerActions } from '@react-navigation/native';
+
+
 // Types
 import { IHeaderProps } from 'types/screens/Layout';
 
@@ -9,7 +13,6 @@ import IMAGES from 'themes/Images';
 
 // Styles
 import styles from './styles';
-import { DrawerActions } from '@react-navigation/native';
 
 const Header = ({ navigation }: IHeaderProps) => {
   // Toggle menu open

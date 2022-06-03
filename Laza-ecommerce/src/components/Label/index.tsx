@@ -24,6 +24,7 @@ const Label = ({
     color,
     ...(lineHeight && { lineHeight }),
   };
+
   return (
     <View style={labelWrapperStyles}>
       <Text style={[styles.labelText, labelStyles]}>{labelName}</Text>

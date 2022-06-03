@@ -26,7 +26,6 @@ import styles from './styles';
 
 const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
   const id = route.params as string;
-
   const { productState, productDispatch } = useContext(AppContext);
 
   const { product, isProcessing } = productState || {};
@@ -110,7 +109,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
           </View>
           <View style={styles.footerContainer}>
             <Button
-              testID='AddtoCartButton'
+              testID='AddToCartButton'
               text='Add to Cart'
               buttonStyles={[styles.bottomButton, styles.loginButton]}
               textStyles={[styles.textBottomButton]}

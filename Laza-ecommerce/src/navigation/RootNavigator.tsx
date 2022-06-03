@@ -28,7 +28,8 @@ const RootStack = createNativeStackNavigator();
 const RootNavigator: React.FC = () => {
   // get status authenticated from context
   const { authState, authDispatch } = useContext(AppContext);
-  const { isAuthenticated, isProcessing } = authState || {};
+
+  const { isAuthenticated } = authState || {};
 
   // check authenticated state
   const getAuth = async () => {

@@ -1,7 +1,7 @@
 import React, { memo, useCallback } from 'react';
 import { Image, ImageBackground, Pressable, Text, View } from 'react-native';
 
-// Lib
+// LIBS
 import isEqual from 'react-fast-compare';
 
 // Components

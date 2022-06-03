@@ -12,6 +12,7 @@ const MoreLessText = ({ children, numberOfLines, styleShowMoreText }: IMoreLessT
   const [isTruncatedText, setIsTruncatedText] = useState(false);
   const [showMore, setShowMore] = useState(true);
 
+  // handle action press show more text
   const handleShowMore = useCallback(() => {
     setShowMore(!showMore);
   }, [showMore]);

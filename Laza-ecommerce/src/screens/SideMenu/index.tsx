@@ -1,6 +1,9 @@
-import React, { useCallback, useContext, useState } from 'react';
+import React, { memo, useCallback, useContext, useState } from 'react';
 import { Alert, Image, Switch, View } from 'react-native';
+
+// LIBS
 import { DrawerActions } from '@react-navigation/native';
+import isEqual from 'react-fast-compare';
 
 // Screens
 import { SCREENS_ROUTES } from 'constants/Screens';
@@ -37,7 +40,6 @@ import { remove } from 'utils/localStorage';
 
 const SideMenu = ({ navigation }: ISideMenuPros) => {
   const { authState, authDispatch } = useContext(AppContext);
-
   const { currentUser } = authState || {};
 
   const { username, avatar } = currentUser || {};
@@ -190,4 +192,4 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
   );
 };
 
-export default SideMenu;
+export default memo(SideMenu, isEqual);
