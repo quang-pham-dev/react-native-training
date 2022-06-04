@@ -53,10 +53,9 @@ import { PAGINATION } from 'constants/Products';
 // Themes
 import Fonts from 'themes/Fonts';
 import Colors from 'themes/Colors';
-import Metrics from 'themes/Metrics';
 
 // Styles
-// import styles from './styles';
+import styles from './styles';
 
 const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const { authState, productState, brandState, productDispatch, brandDispatch } =
@@ -134,6 +133,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
       extrapolate: 'clamp',
     }),
   };
+
   const brandsAnimation = {
     transform: [
       {
@@ -150,6 +150,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
       extrapolate: 'clamp',
     }),
   };
+
   const productListAnimation = {
     transform: [
       {
@@ -373,55 +374,3 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 };
 
 export default memo(HomeScreen, isEqual);
-
-const styles = StyleSheet.create({
-  Container: {
-    flex: 1,
-    backgroundColor: Colors.primaryBackground,
-    paddingHorizontal: Metrics.padding.lg,
-  },
-
-  header: {
-    marginTop: Platform.OS === 'android' ? Metrics.margin.lg : 0,
-  },
-  body: {
-    marginBottom: Platform.OS === 'android' ? 250 : 200,
-  },
-  headerTitleWrapper: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: Metrics.margin.xm,
-  },
-  headerTitle: {
-    fontSize: Fonts.size.h5,
-    fontFamily: Fonts.fontFamily.Inter_600SemiBold,
-    lineHeight: Fonts.lineHeight.xxl,
-    color: Colors.textBlack,
-  },
-  userNameTitle: {
-    alignSelf: 'flex-end',
-    fontSize: Fonts.size.large,
-    fontFamily: Fonts.fontFamily.Inter_500Medium,
-    color: Colors.textBlack,
-    lineHeight: Fonts.lineHeight.xxl,
-    marginLeft: Metrics.margin.sm,
-  },
-  subTitle: {
-    fontSize: Fonts.size.normal,
-    fontFamily: Fonts.fontFamily.Inter_400Regular,
-    color: Colors.textGray,
-    marginTop: Metrics.margin.xsm,
-  },
-  titleRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-
-  productTitle: {
-    marginTop: Metrics.margin.xm,
-  },
-  brandTitle: {
-    paddingBottom: Metrics.padding.xm,
-  },
-});

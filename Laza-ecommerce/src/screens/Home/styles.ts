@@ -9,17 +9,14 @@ const styles = StyleSheet.create({
   Container: {
     flex: 1,
     backgroundColor: Colors.primaryBackground,
-  },
-
-  homeMain: {
-    flex: 1,
     paddingHorizontal: Metrics.padding.lg,
   },
+
   header: {
     marginTop: Platform.OS === 'android' ? Metrics.margin.lg : 0,
   },
   body: {
-    flex: 1,
+    marginBottom: Platform.OS === 'android' ? 250 : 200,
   },
   headerTitleWrapper: {
     flexDirection: 'row',
