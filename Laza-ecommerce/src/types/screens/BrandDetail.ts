@@ -8,5 +8,4 @@ export interface IBrandDetailProps {
   route: {
     params: string;
   };
-  productData: IProduct;
 }

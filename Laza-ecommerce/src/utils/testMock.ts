@@ -27,15 +27,3 @@ export const navigationMock: any = {
     routes: [],
   },
 };
-
-/**
- * Returns a mocked set of navigation props, optionally including route params
- */
-export function navigationMockWithParams(data: Record<string, any>) {
-  return {
-    ...navigationMock,
-    getParam: jest.fn().mockImplementation(name => {
-      return data[name];
-    }),
-  };
-}

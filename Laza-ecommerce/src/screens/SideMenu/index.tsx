@@ -20,7 +20,7 @@ import { AppContext } from 'context/AppContext';
 import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'context/actions/auth';
 
 // API
-import { authService } from 'api';
+import { authService } from 'api/auth.api';
 
 // Constants
 import { AUTH_DATA } from 'constants/Common';
@@ -40,6 +40,7 @@ import { remove } from 'utils/localStorage';
 
 const SideMenu = ({ navigation }: ISideMenuPros) => {
   const { authState, authDispatch } = useContext(AppContext);
+
   const { currentUser } = authState || {};
 
   const { username, avatar } = currentUser || {};

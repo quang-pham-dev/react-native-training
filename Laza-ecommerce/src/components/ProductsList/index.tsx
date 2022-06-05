@@ -44,13 +44,16 @@ const ProductsList = ({
     let productList = [];
     let totalProduct = 0;
 
-    if (totalRows > totalRowsByBrandId && totalRowsByBrandId === 0) {
+    if (totalRows > totalRowsByBrandId) {
       productList = allProduct;
       totalProduct = totalRows;
+
       productList?.length < totalProduct && (cacheEndReached = onLoadMoreProducts);
-    } else if (totalRowsByBrandId <= totalRows) {
+    }
+    if (totalRowsByBrandId <= totalRows) {
       productList = productsByBrandId;
       totalProduct = totalRowsByBrandId;
+
       productList?.length < totalProduct && (cacheEndReached = onLoadMoreProducts);
     }
 
@@ -77,7 +80,6 @@ const ProductsList = ({
   const renderProductCard = useCallback(
     ({ item }: { item: IProduct }) => (
       <ProductCard
-        testID='productCard'
         key={item.id}
         productCardStyles={styles.productCard}
         product={item}
@@ -89,12 +91,12 @@ const ProductsList = ({
   );
 
   // handle render Footer component
-  const renderFooterList = useCallback(() => {
-    if (isLoading) {
-      return <LoadingIndicator />;
+  const renderFooterList = () => {
+    {
+      Boolean(isLoading) && <LoadingIndicator />;
     }
     return null;
-  }, [isLoading]);
+  };
 
   return (
     <View style={styles.container}>

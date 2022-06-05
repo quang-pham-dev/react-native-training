@@ -11,6 +11,10 @@ import Input from 'components/TextInput';
 describe('TextInput Component', () => {
   const props = {
     value: 'user name',
+    labelStyle: {},
+    placeholder: 'Enter your user name',
+    textInputStyles: {},
+    secureTextEntry: false,
     autoFocus: false,
     onChangeText: jest.fn(),
     onSubmitEditing: jest.fn(),
@@ -40,6 +44,7 @@ describe('TextInput Component', () => {
     const tree = renderer.create(<Input {...newProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
+
   test('should call function onChangeText', async () => {
     const component = tree.root.findAllByType(TextInput)[0];
     await waitFor(() => component.props.onChangeText());

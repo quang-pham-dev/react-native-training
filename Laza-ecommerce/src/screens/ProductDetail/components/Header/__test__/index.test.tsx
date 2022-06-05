@@ -12,7 +12,7 @@ import { product } from '__mocks__/dataMock';
 
 describe('Product detail Header', () => {
   let props = {
-    source: '',
+    source: product.source,
     navigation: {
       navigate: jest.fn(),
       goBack: jest.fn(),
@@ -22,7 +22,8 @@ describe('Product detail Header', () => {
   const tree = renderer.create(<Header {...props} />);
 
   test('should render correctly', () => {
-    expect(tree).toMatchSnapshot();
+    const component = tree.toJSON();
+    expect(component).toMatchSnapshot();
   });
 
   test('should call back button', () => {

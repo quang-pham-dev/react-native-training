@@ -11,7 +11,7 @@ import { IButtonProps } from 'types/components/Button';
 import styles from './styles';
 
 const Button = ({
-  onPress = () => {},
+  onPress,
   text,
   textStyles,
   buttonStyles,

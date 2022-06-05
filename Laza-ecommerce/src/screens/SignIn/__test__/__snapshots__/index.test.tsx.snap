@@ -143,9 +143,7 @@ exports[`SignIn Screen should render correctly 1`] = `
             </Text>
             <TextInput
               allowFontScaling={true}
-              onBlur={[Function]}
               onChangeText={[Function]}
-              onSubmitEditing={[Function]}
               placeholder="Enter your username"
               rejectResponderTermination={true}
               style={
@@ -197,9 +195,7 @@ exports[`SignIn Screen should render correctly 1`] = `
             </Text>
             <TextInput
               allowFontScaling={true}
-              onBlur={[Function]}
               onChangeText={[Function]}
-              onSubmitEditing={[Function]}
               placeholder="Enter your password"
               rejectResponderTermination={true}
               secureTextEntry={true}

@@ -49,9 +49,7 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
     resolver: yupResolver(loginSchema),
   });
 
-  const onSubmitLoginForm: SubmitHandler<ILoginCredentials> = async (
-    loginInfo: ILoginCredentials,
-  ) => {
+  const onSubmitLoginForm: SubmitHandler<ILoginCredentials> = (loginInfo: ILoginCredentials) => {
     onSubmit(loginInfo);
   };
 

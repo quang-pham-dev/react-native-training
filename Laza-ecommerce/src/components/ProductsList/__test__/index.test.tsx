@@ -43,9 +43,15 @@ describe('Product Card List Component', () => {
     expect(label).toBeTruthy();
   });
 
-  test('should call function onNavigateProductDetailScreen', () => {
+  test('should call function onPressProductCard', () => {
     const press = tree.root.findAllByType(Pressable)[0];
     press.props.onPress();
     expect(navigationMock.navigate).toHaveBeenCalled();
+  });
+
+  test('should call function handlePressLikeProduct', () => {
+    const press = tree.root.findAllByType(Pressable)[1];
+    press.props.onPress();
+    expect(props.onPressLikeProduct).toHaveBeenCalled();
   });
 });

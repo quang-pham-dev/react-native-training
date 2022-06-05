@@ -1,9 +1,4 @@
 export interface ILoadingIndicatorProps {
-  size?: 'large' | 'small' | undefined | number;
+  size?: number | 'small' | 'large' | undefined;
   color?: string;
-}
-
-export enum LOADING_SIZE {
-  LARGE = 'large',
-  SMALL = 'small',
 }

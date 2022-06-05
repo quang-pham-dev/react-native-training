@@ -43,7 +43,6 @@ import { brandsService } from 'api/brands.api';
 
 // Types
 import { IHomeScreenProps } from 'types/screens/Home';
-import { LOADING_SIZE } from 'types/components/LoadingIndicator';
 import { IProduct } from 'types/models/Products';
 
 // Constants
@@ -166,7 +165,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   useEffect(() => {
     getBrands();
     getProducts();
-  }, []);
+  }, [productDispatch, brandDispatch]);
 
   // GET PRODUCTS
   const getProducts = async () => {
@@ -334,7 +333,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           </View>
           {/* end brand title */}
 
-          {Boolean(brandState?.isProcessing) && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
+          {Boolean(brandState?.isProcessing) && <LoadingIndicator size={'small'} />}
           <BrandsCardList brands={brands} onPressBrandCard={handlePressBrandCard} />
           {/* end brand list */}
         </Animated.View>
@@ -358,7 +357,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           </View>
           {/* end product title */}
 
-          {Boolean(productState?.isProcessing) && <LoadingIndicator size={LOADING_SIZE.SMALL} />}
+          {Boolean(productState?.isProcessing) && <LoadingIndicator size={'small'} />}
           <ProductsList
             products={masterData}
             onPressLikeProduct={handlePressLikeProduct}

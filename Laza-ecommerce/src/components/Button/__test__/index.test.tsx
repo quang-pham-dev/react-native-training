@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
 // LIBS
 import renderer from 'react-test-renderer';
@@ -19,6 +19,16 @@ describe('Button Component', () => {
   const tree = renderer.create(<Button {...props} />);
 
   test('should render correctly', () => {
+    const component = tree.toJSON();
+    expect(component).toMatchSnapshot();
+  });
+
+  test('should render children', () => {
+    const newProps = {
+      ...props,
+      children: <Text>i'm Button</Text>,
+    };
+    const tree = renderer.create(<Button {...newProps} />);
     const component = tree.toJSON();
     expect(component).toMatchSnapshot();
   });

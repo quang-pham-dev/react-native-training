@@ -4,7 +4,6 @@ import { Image, Pressable, View } from 'react-native';
 // LIBS
 import { DrawerActions } from '@react-navigation/native';
 
-
 // Types
 import { IHeaderProps } from 'types/screens/Layout';
 
@@ -20,14 +19,12 @@ const Header = ({ navigation }: IHeaderProps) => {
     navigation.dispatch(DrawerActions.openDrawer());
   }, [navigation]);
 
-  const handlePressCart = useCallback(() => {}, []);
-
   return (
     <View style={styles.container}>
       <Pressable style={styles.menuWrapper} onPress={handleToggleMenu}>
         <Image style={styles.menuIcon} source={IMAGES.iconMenu} />
       </Pressable>
-      <Pressable style={styles.cartWrapper} onPress={handlePressCart}>
+      <Pressable style={styles.cartWrapper}>
         <Image style={styles.cartIcon} source={IMAGES.iconCart} />
       </Pressable>
     </View>

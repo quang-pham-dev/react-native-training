@@ -14,9 +14,6 @@ export interface ProductsState {
   totalRowsByBrandId: number;
   limit: number;
   searchValue: string;
-  getProducts(): Promise<void>;
-  getProduct(id: string): Promise<void>;
-  getProductsByBrandId(id: string): Promise<void>;
 }
 
 export const InitialProductsState: ProductsState = {
@@ -29,7 +26,4 @@ export const InitialProductsState: ProductsState = {
   totalRowsByBrandId: 0,
   searchValue: '',
   limit: PAGINATION.LIMIT,
-  getProducts: () => Promise.resolve(),
-  getProduct: (id: string) => Promise.resolve(),
-  getProductsByBrandId: (id: string) => Promise.resolve(),
 };

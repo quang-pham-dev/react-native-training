@@ -10,10 +10,12 @@ exports[`TextInput Component should render correctly 1`] = `
 >
   <TextInput
     allowFontScaling={true}
-    onBlur={[Function]}
+    onBlur={[MockFunction]}
     onChangeText={[Function]}
-    onSubmitEditing={[Function]}
+    onSubmitEditing={[MockFunction]}
+    placeholder="Enter your user name"
     rejectResponderTermination={true}
+    secureTextEntry={false}
     style={
       Array [
         Object {
@@ -42,11 +44,12 @@ exports[`TextInput Component should render placeholder 1`] = `
 >
   <TextInput
     allowFontScaling={true}
-    onBlur={[Function]}
+    onBlur={[MockFunction]}
     onChangeText={[Function]}
-    onSubmitEditing={[Function]}
+    onSubmitEditing={[MockFunction]}
     placeholder="Enter your username"
     rejectResponderTermination={true}
+    secureTextEntry={false}
     style={
       Array [
         Object {
@@ -83,7 +86,7 @@ exports[`TextInput Component should render with label correctly 1`] = `
           "fontSize": 13,
           "lineHeight": 14,
         },
-        undefined,
+        Object {},
       ]
     }
   >
@@ -91,10 +94,12 @@ exports[`TextInput Component should render with label correctly 1`] = `
   </Text>
   <TextInput
     allowFontScaling={true}
-    onBlur={[Function]}
+    onBlur={[MockFunction]}
     onChangeText={[Function]}
-    onSubmitEditing={[Function]}
+    onSubmitEditing={[MockFunction]}
+    placeholder="Enter your user name"
     rejectResponderTermination={true}
+    secureTextEntry={false}
     style={
       Array [
         Object {

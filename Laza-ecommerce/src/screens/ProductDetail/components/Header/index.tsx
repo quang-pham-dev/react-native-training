@@ -19,16 +19,13 @@ const Header = ({ source, navigation }: IProductDetailHeaderProps) => {
     navigation.goBack();
   }, [navigation]);
 
-  // handle action press button cart
-  const onPressCart = useCallback(() => {}, []);
-
   return (
     <View style={styles.headerContainer}>
       <View style={styles.actionsWrapper}>
         <Pressable onPress={onPressBack}>
           <Image style={styles.backIcon} source={IMAGES.iconBack} />
         </Pressable>
-        <Pressable onPress={onPressCart}>
+        <Pressable>
           <Image style={styles.cartIcon} source={IMAGES.iconCart} />
         </Pressable>
       </View>

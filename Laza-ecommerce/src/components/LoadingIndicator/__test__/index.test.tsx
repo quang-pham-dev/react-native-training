@@ -6,15 +6,13 @@ import renderer from 'react-test-renderer';
 // Components
 import LoadingIndicator from 'components/LoadingIndicator';
 
-// Types
-import { LOADING_SIZE } from 'types/components/LoadingIndicator';
-
 // Themes
 import Colors from 'themes/Colors';
+import { ILoadingIndicatorProps } from 'types/components/LoadingIndicator';
 
 describe('LoadingIndicator Component', () => {
   const props = {
-    size: LOADING_SIZE.LARGE,
+    size: 'large' as ILoadingIndicatorProps['size'],
   };
   const tree = renderer.create(<LoadingIndicator {...props} />);
 
@@ -23,6 +21,15 @@ describe('LoadingIndicator Component', () => {
     expect(component).toMatchSnapshot();
   });
 
+  test('should render new small size props correctly', () => {
+    const newProps = {
+      color: Colors.secondaryColor,
+      size: 'small' as ILoadingIndicatorProps['size'],
+    };
+
+    const tree = renderer.create(<LoadingIndicator {...newProps} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
   test('should render new color props correctly', () => {
     const newProps = {
       ...props,

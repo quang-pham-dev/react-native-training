@@ -29,7 +29,6 @@ import { PAGINATION } from 'constants/Products';
 
 // Types
 import { IBrand } from 'types/models/Brands';
-import { LOADING_SIZE } from 'types/components/LoadingIndicator';
 import { IBrandDetailProps } from 'types/screens/BrandDetail';
 
 // Theme
@@ -49,7 +48,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
 
   useEffect(() => {
     getProductsByBrandId();
-  }, []);
+  }, [id, productDispatch]);
 
   const getProductsByBrandId = async () => {
     productDispatch({ type: GET_PRODUCTS_BY_BRAND_ID });
@@ -165,7 +164,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
         {/* end content header */}
 
         {isProcessing ? (
-          <LoadingIndicator size={LOADING_SIZE.LARGE} />
+          <LoadingIndicator size={'large'} />
         ) : (
           <ProductsList
             products={productsByBrandId}

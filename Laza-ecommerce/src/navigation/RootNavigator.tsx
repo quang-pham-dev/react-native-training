@@ -17,9 +17,6 @@ import LoadingIndicator from 'components/LoadingIndicator';
 import { AUTH_DATA } from 'constants/Common';
 import { SCREENS_ROUTES } from 'constants/Screens';
 
-// Types
-import { LOADING_SIZE } from 'types/components/LoadingIndicator';
-
 // Utils
 import { get } from 'utils/localStorage';
 
@@ -65,7 +62,7 @@ const RootNavigator: React.FC = () => {
   };
 
   return (
-    <NavigationContainer fallback={<LoadingIndicator size={LOADING_SIZE.LARGE} />}>
+    <NavigationContainer fallback={<LoadingIndicator />}>
       <RootStack.Navigator screenOptions={{ headerShown: false }}>
         {renderStack()}
       </RootStack.Navigator>

@@ -15,11 +15,11 @@ const Input = ({
   labelStyle,
   value,
   placeholder,
-  textInputStyles = {},
+  textInputStyles,
   secureTextEntry,
-  onChangeText = () => {},
-  onBlur = () => {},
-  onSubmitEditing = () => {},
+  onChangeText,
+  onBlur,
+  onSubmitEditing,
 }: ITextInputProps) => {
   const [valueState, setValueState] = React.useState(value);
 
@@ -31,22 +31,14 @@ const Input = ({
     [onChangeText, setValueState],
   );
 
-  const handleSubmitEditing = useCallback(() => {
-    onSubmitEditing();
-  }, [onSubmitEditing, valueState]);
-
-  const handleBlur = useCallback(() => {
-    onBlur();
-  }, [onBlur, valueState]);
-
   return (
     <View style={styles.inputWrap}>
       {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
       <TextInput
         value={valueState}
         onChangeText={handleTextChange}
-        onBlur={handleBlur}
-        onSubmitEditing={handleSubmitEditing}
+        onBlur={onBlur}
+        onSubmitEditing={onSubmitEditing}
         placeholder={placeholder}
         style={[styles.input, textInputStyles]}
         secureTextEntry={secureTextEntry}

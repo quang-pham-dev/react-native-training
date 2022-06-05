@@ -7,8 +7,6 @@ export interface AuthState {
   error: string | null;
   isProcessing: boolean;
   currentUser: IUser | undefined;
-  signIn(username: string, password: string): Promise<void>;
-  signOut(): Promise<void>;
 }
 
 export const InitialAuthState: AuthState = {
@@ -18,6 +16,4 @@ export const InitialAuthState: AuthState = {
   error: null,
   isProcessing: true,
   currentUser: undefined,
-  signIn: () => Promise.resolve(),
-  signOut: () => Promise.resolve(),
 };

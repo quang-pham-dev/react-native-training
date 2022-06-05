@@ -15,7 +15,7 @@ import { AppContext } from 'context/AppContext';
 import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'context/actions/auth';
 
 // API
-import { authService } from 'api';
+import { authService } from 'api/auth.api';
 
 // Constants
 import { AUTH_DATA } from 'constants/Common';

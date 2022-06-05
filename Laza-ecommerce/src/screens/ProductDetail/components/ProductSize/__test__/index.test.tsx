@@ -10,7 +10,7 @@ import ProductSize from 'screens/ProductDetail/components/ProductSize';
 import { product } from '__mocks__/dataMock';
 
 describe('Product detail size', () => {
-  const tree = renderer.create(<ProductSize product={product} />);
+  const tree = renderer.create(<ProductSize sizes={product.sizes} />);
 
   test('should render correctly', () => {
     expect(tree).toMatchSnapshot();

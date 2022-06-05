@@ -5,8 +5,6 @@ export interface BrandsState {
   isProcessing: boolean;
   error: string | null;
   brands: IBrand[];
-  getBrands(): Promise<void>;
-  getBrand(id: string): Promise<void>;
 }
 
 export const InitialBrandsState: BrandsState = {
@@ -14,6 +12,4 @@ export const InitialBrandsState: BrandsState = {
   isProcessing: true,
   error: null,
   brands: [],
-  getBrands: () => Promise.resolve(),
-  getBrand: () => Promise.resolve(),
 };

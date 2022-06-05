@@ -6,11 +6,4 @@ export const set = async (key: string, data: string) => await AsyncStorage.setIt
 
 export const remove = async (key: string) => await AsyncStorage.removeItem(key);
 
-export const setJSON = (key: string, data: any) => set(key, JSON.stringify(data));
-
-export const getJSON = <T = any>(key: string): T | null => {
-  const data = get(key);
-  return typeof data === 'string' ? JSON.parse(data) : null;
-};
-
-export default { get, set, remove, setJSON, getJSON };
+export default { get, set, remove };

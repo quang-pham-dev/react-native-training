@@ -40,9 +40,7 @@ Array [
       </Text>
       <TextInput
         allowFontScaling={true}
-        onBlur={[Function]}
         onChangeText={[Function]}
-        onSubmitEditing={[Function]}
         placeholder="Enter your username"
         rejectResponderTermination={true}
         style={
@@ -94,9 +92,7 @@ Array [
       </Text>
       <TextInput
         allowFontScaling={true}
-        onBlur={[Function]}
         onChangeText={[Function]}
-        onSubmitEditing={[Function]}
         placeholder="Enter your password"
         rejectResponderTermination={true}
         secureTextEntry={true}

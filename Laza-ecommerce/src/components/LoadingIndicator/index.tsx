@@ -6,7 +6,7 @@ import isEqual from 'react-fast-compare';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Types
-import { ILoadingIndicatorProps, LOADING_SIZE } from 'types/components/LoadingIndicator';
+import { ILoadingIndicatorProps } from 'types/components/LoadingIndicator';
 
 // Themes
 import Colors from 'themes/Colors';
@@ -15,7 +15,7 @@ import Colors from 'themes/Colors';
 import styles from './styles';
 
 const LoadingIndicator = ({
-  size = LOADING_SIZE.LARGE,
+  size = 'large',
   color = Colors.secondaryColor,
 }: ILoadingIndicatorProps) => (
   <SafeAreaView>

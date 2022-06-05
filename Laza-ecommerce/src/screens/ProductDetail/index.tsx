@@ -26,6 +26,7 @@ import styles from './styles';
 
 const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
   const id = route.params as string;
+
   const { productState, productDispatch } = useContext(AppContext);
 
   const { product, isProcessing } = productState || {};
