@@ -6,7 +6,7 @@ import Metrics from 'themes/Metrics';
 import Colors from 'themes/Colors';
 
 const styles = StyleSheet.create({
-  inputWrap: {
+  inputContainer: {
     width: '100%',
   },
   label: {
@@ -16,12 +16,23 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.fontFamily.Inter_400Regular,
     color: Colors.textGray,
   },
+
+  inputWrapper: {
+    justifyContent: 'center',
+  },
+
   input: {
     width: '100%',
     fontFamily: Fonts.fontFamily.Inter_500Medium,
     fontSize: Fonts.size.normal,
     lineHeight: Fonts.lineHeight.base,
     paddingVertical: Metrics.padding.xm,
+  },
+
+  icon: {
+    width: Metrics.icons.standard,
+    position: 'absolute',
+    right: 0,
   },
 });
 

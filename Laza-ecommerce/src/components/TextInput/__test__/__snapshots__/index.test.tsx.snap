@@ -8,29 +8,60 @@ exports[`TextInput Component should render correctly 1`] = `
     }
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onBlur={[MockFunction]}
-    onChangeText={[Function]}
-    onSubmitEditing={[MockFunction]}
-    placeholder="Enter your user name"
-    rejectResponderTermination={true}
-    secureTextEntry={false}
+  <View
     style={
-      Array [
-        Object {
-          "fontFamily": "Inter_500Medium",
-          "fontSize": 15,
-          "lineHeight": 16,
-          "paddingVertical": 15,
-          "width": "100%",
-        },
-        Object {},
-      ]
+      Object {
+        "justifyContent": "center",
+      }
     }
-    underlineColorAndroid="transparent"
-    value="user name"
-  />
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[MockFunction]}
+      onChangeText={[Function]}
+      onSubmitEditing={[MockFunction]}
+      placeholder="Enter your user name"
+      rejectResponderTermination={true}
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 15,
+            "lineHeight": 16,
+            "paddingVertical": 15,
+            "width": "100%",
+          },
+          Object {},
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="user name"
+    />
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 0,
+            "width": 20,
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -42,29 +73,60 @@ exports[`TextInput Component should render placeholder 1`] = `
     }
   }
 >
-  <TextInput
-    allowFontScaling={true}
-    onBlur={[MockFunction]}
-    onChangeText={[Function]}
-    onSubmitEditing={[MockFunction]}
-    placeholder="Enter your username"
-    rejectResponderTermination={true}
-    secureTextEntry={false}
+  <View
     style={
-      Array [
-        Object {
-          "fontFamily": "Inter_500Medium",
-          "fontSize": 15,
-          "lineHeight": 16,
-          "paddingVertical": 15,
-          "width": "100%",
-        },
-        Object {},
-      ]
+      Object {
+        "justifyContent": "center",
+      }
     }
-    underlineColorAndroid="transparent"
-    value="user name"
-  />
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[MockFunction]}
+      onChangeText={[Function]}
+      onSubmitEditing={[MockFunction]}
+      placeholder="Enter your username"
+      rejectResponderTermination={true}
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 15,
+            "lineHeight": 16,
+            "paddingVertical": 15,
+            "width": "100%",
+          },
+          Object {},
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="user name"
+    />
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 0,
+            "width": 20,
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;
 
@@ -92,28 +154,59 @@ exports[`TextInput Component should render with label correctly 1`] = `
   >
     Username
   </Text>
-  <TextInput
-    allowFontScaling={true}
-    onBlur={[MockFunction]}
-    onChangeText={[Function]}
-    onSubmitEditing={[MockFunction]}
-    placeholder="Enter your user name"
-    rejectResponderTermination={true}
-    secureTextEntry={false}
+  <View
     style={
-      Array [
-        Object {
-          "fontFamily": "Inter_500Medium",
-          "fontSize": 15,
-          "lineHeight": 16,
-          "paddingVertical": 15,
-          "width": "100%",
-        },
-        Object {},
-      ]
+      Object {
+        "justifyContent": "center",
+      }
     }
-    underlineColorAndroid="transparent"
-    value="user name"
-  />
+  >
+    <TextInput
+      allowFontScaling={true}
+      onBlur={[MockFunction]}
+      onChangeText={[Function]}
+      onSubmitEditing={[MockFunction]}
+      placeholder="Enter your user name"
+      rejectResponderTermination={true}
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 15,
+            "lineHeight": 16,
+            "paddingVertical": 15,
+            "width": "100%",
+          },
+          Object {},
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="user name"
+    />
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 0,
+            "width": 20,
+          },
+        ]
+      }
+    />
+  </View>
 </View>
 `;

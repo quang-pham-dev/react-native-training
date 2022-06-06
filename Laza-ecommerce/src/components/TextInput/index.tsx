@@ -1,5 +1,5 @@
 import React, { memo, useCallback } from 'react';
-import { Text, TextInput, View } from 'react-native';
+import { Pressable, Text, TextInput, View } from 'react-native';
 
 // LIBS
 import isEqual from 'react-fast-compare';
@@ -17,6 +17,7 @@ const Input = ({
   placeholder,
   textInputStyles,
   secureTextEntry,
+  icon,
   onChangeText,
   onBlur,
   onSubmitEditing,
@@ -32,17 +33,20 @@ const Input = ({
   );
 
   return (
-    <View style={styles.inputWrap}>
+    <View style={styles.inputContainer}>
       {label && <Text style={[styles.label, labelStyle]}>{label}</Text>}
-      <TextInput
-        value={valueState}
-        onChangeText={handleTextChange}
-        onBlur={onBlur}
-        onSubmitEditing={onSubmitEditing}
-        placeholder={placeholder}
-        style={[styles.input, textInputStyles]}
-        secureTextEntry={secureTextEntry}
-      />
+      <View style={styles.inputWrapper}>
+        <TextInput
+          value={valueState}
+          onChangeText={handleTextChange}
+          onBlur={onBlur}
+          onSubmitEditing={onSubmitEditing}
+          placeholder={placeholder}
+          style={[styles.input, textInputStyles]}
+          secureTextEntry={secureTextEntry}
+        />
+        <Pressable style={[styles.icon]}>{icon}</Pressable>
+      </View>
     </View>
   );
 };

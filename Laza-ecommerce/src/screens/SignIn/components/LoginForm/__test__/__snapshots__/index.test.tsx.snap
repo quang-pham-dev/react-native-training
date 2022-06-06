@@ -38,31 +38,65 @@ Array [
       >
         Username
       </Text>
-      <TextInput
-        allowFontScaling={true}
-        onChangeText={[Function]}
-        placeholder="Enter your username"
-        rejectResponderTermination={true}
+      <View
         style={
-          Array [
-            Object {
-              "fontFamily": "Inter_500Medium",
-              "fontSize": 15,
-              "lineHeight": 16,
-              "paddingVertical": 15,
-              "width": "100%",
-            },
-            Object {
-              "borderBottomColor": "#E7E8EA",
-              "borderBottomWidth": 1,
-              "paddingVertical": 15,
-              "width": "100%",
-            },
-          ]
+          Object {
+            "justifyContent": "center",
+          }
         }
-        underlineColorAndroid="transparent"
-        value=""
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          onChangeText={[Function]}
+          placeholder="Enter your username"
+          rejectResponderTermination={true}
+          style={
+            Array [
+              Object {
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 15,
+                "lineHeight": 16,
+                "paddingVertical": 15,
+                "width": "100%",
+              },
+              Object {
+                "borderBottomColor": "#E7E8EA",
+                "borderBottomWidth": 1,
+                "paddingVertical": 15,
+                "width": "100%",
+              },
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "position": "absolute",
+                "right": 0,
+                "width": 20,
+              },
+              undefined,
+            ]
+          }
+        >
+          <Text />
+        </View>
+      </View>
     </View>
     <View
       style={
@@ -90,32 +124,81 @@ Array [
       >
         Password
       </Text>
-      <TextInput
-        allowFontScaling={true}
-        onChangeText={[Function]}
-        placeholder="Enter your password"
-        rejectResponderTermination={true}
-        secureTextEntry={true}
+      <View
         style={
-          Array [
-            Object {
-              "fontFamily": "Inter_500Medium",
-              "fontSize": 15,
-              "lineHeight": 16,
-              "paddingVertical": 15,
-              "width": "100%",
-            },
-            Object {
-              "borderBottomColor": "#E7E8EA",
-              "borderBottomWidth": 1,
-              "paddingVertical": 15,
-              "width": "100%",
-            },
-          ]
+          Object {
+            "justifyContent": "center",
+          }
         }
-        underlineColorAndroid="transparent"
-        value=""
-      />
+      >
+        <TextInput
+          allowFontScaling={true}
+          onChangeText={[Function]}
+          placeholder="Enter your password"
+          rejectResponderTermination={true}
+          secureTextEntry={true}
+          style={
+            Array [
+              Object {
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 15,
+                "lineHeight": 16,
+                "paddingVertical": 15,
+                "width": "100%",
+              },
+              Object {
+                "borderBottomColor": "#E7E8EA",
+                "borderBottomWidth": 1,
+                "paddingVertical": 15,
+                "width": "100%",
+              },
+            ]
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "position": "absolute",
+                "right": 0,
+                "width": 20,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+          >
+            <Text />
+          </View>
+        </View>
+      </View>
     </View>
     <View
       style={

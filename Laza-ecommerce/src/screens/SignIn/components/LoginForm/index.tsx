@@ -1,11 +1,12 @@
 import React, { memo, useState } from 'react';
-import { Switch, Text, View } from 'react-native';
+import { Pressable, Switch, Text, View } from 'react-native';
 
 // LIB
 import isEqual from 'react-fast-compare';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
+import { Feather } from '@expo/vector-icons';
 
 // Components
 import Button from 'components/Button';
@@ -39,6 +40,11 @@ interface ILoginFormProps {
 const LoginForm = ({ onSubmit }: ILoginFormProps) => {
   const [isEnabled, setIsEnabled] = useState(true);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+
+  const [showPassword, setShowPassword] = useState(true);
+
+  const handleShowPassword = () => setShowPassword(previousState => !previousState);
+
   const {
     control,
     handleSubmit,
@@ -71,6 +77,7 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
               labelStyle={styles.inputTitle}
               placeholder='Enter your username'
               testID='usernameInput'
+              icon={<Feather name='user' size={20} color={Colors.textGray} />}
             />
           )}
           name='username'
@@ -94,9 +101,18 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
               textInputStyles={styles.input}
               label='Password'
               labelStyle={styles.inputTitle}
-              secureTextEntry
+              secureTextEntry={showPassword}
               placeholder='Enter your password'
               testID='passwordInput'
+              icon={
+                <Pressable onPress={handleShowPassword}>
+                  <Feather
+                    name={showPassword ? 'eye-off' : 'eye'}
+                    size={20}
+                    color={Colors.textGray}
+                  />
+                </Pressable>
+              }
             />
           )}
           name='password'
@@ -133,6 +149,7 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
         <Button
           testID='loginButton'
           text='Login'
+          disabled={Boolean(errors?.username || errors?.password)}
           buttonStyles={[styles.bottomButton, styles.loginButton]}
           textStyles={[styles.textBottomButton]}
           onPress={handleSubmit(onSubmitLoginForm)}
