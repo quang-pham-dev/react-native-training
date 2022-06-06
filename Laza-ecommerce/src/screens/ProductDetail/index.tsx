@@ -15,7 +15,7 @@ import Reviews from './components/Reviews';
 import { productsService } from 'api/products.api';
 
 // Context
-import { AppContext } from 'context/AppContext';
+import { ProductsContext } from 'context/ProductsContext';
 import { GET_PRODUCT, GET_PRODUCT_FAILED, GET_PRODUCT_SUCCESS } from 'context/actions/products';
 
 // Types
@@ -27,7 +27,7 @@ import styles from './styles';
 const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
   const id = route.params as string;
 
-  const { productState, productDispatch } = useContext(AppContext);
+  const { productState, productDispatch } = useContext(ProductsContext);
 
   const { product, isProcessing } = productState || {};
 

@@ -75,6 +75,21 @@ exports[`Side menu should render correctly 1`] = `
           }
         }
       >
+        <Image
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
+          style={
+            Object {
+              "borderRadius": 45,
+              "height": 45,
+              "resizeMode": "cover",
+              "width": 45,
+            }
+          }
+        />
         <View
           style={
             Object {
@@ -83,6 +98,21 @@ exports[`Side menu should render correctly 1`] = `
             }
           }
         >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "textTransform": "none",
+                },
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 17,
+                },
+              ]
+            }
+          />
           <View
             style={
               Object {

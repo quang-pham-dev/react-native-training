@@ -18,8 +18,6 @@ import IMAGES from 'themes/Images';
 import styles from './styles';
 
 const Reviews = ({ comment, rating, reviewers }: IProductDetailItemProps) => {
-  const { name, image, date } = reviewers || {};
-
   return (
     <View style={styles.reviewContainer}>
       <View style={styles.reviewTitleWrapper}>
@@ -31,12 +29,12 @@ const Reviews = ({ comment, rating, reviewers }: IProductDetailItemProps) => {
       <View style={styles.reviewWrapper}>
         <View style={styles.reviewItemWrapper}>
           <View style={styles.reviewerInfoWrapper}>
-            {Boolean(image) && <Image style={styles.imageAvatar} source={{ uri: image }} />}
+            <Image style={styles.imageAvatar} source={{ uri: reviewers?.image }} />
             <View style={styles.reviewerItemInfo}>
-              {Boolean(name) && <Title titleName={name} titleStyles={styles.textName} />}
+              <Title titleName={reviewers?.name} titleStyles={styles.textName} />
               <View style={styles.reviewTime}>
                 <Image style={styles.imageClock} source={IMAGES.iconClock} />
-                {date && <Text style={styles.textDate}>{date}</Text>}
+                <Text style={styles.textDate}>{reviewers?.date}</Text>
               </View>
             </View>
           </View>

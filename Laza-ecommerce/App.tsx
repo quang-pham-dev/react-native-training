@@ -13,7 +13,7 @@ import useFonts from 'hooks/useFonts';
 import RootNavigator from 'navigation/RootNavigator';
 
 // Context Provider
-import AppProvider from 'context/AppContext';
+import AuthProvider from 'context/AuthContext';
 
 export default function App() {
   const [appIsReady, setAppIsReady] = React.useState(false);
@@ -48,10 +48,10 @@ export default function App() {
   }
 
   return (
-    <AppProvider>
+    <AuthProvider>
       <SafeAreaProvider>
         <RootNavigator />
       </SafeAreaProvider>
-    </AppProvider>
+    </AuthProvider>
   );
 }

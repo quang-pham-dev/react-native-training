@@ -7,7 +7,7 @@ import AuthStack from './stacks/AuthStack';
 import AppDrawerStack from './stacks/AppDrawerStack';
 
 // Context
-import { AppContext } from 'context/AppContext';
+import { AuthenticationContext } from 'context/AuthContext';
 import { INITIALIZE, INITIALIZE_FAILED, INITIALIZE_SUCCESS } from 'context/actions/auth';
 
 // Components
@@ -24,7 +24,7 @@ const RootStack = createNativeStackNavigator();
 
 const RootNavigator: React.FC = () => {
   // get status authenticated from context
-  const { authState, authDispatch } = useContext(AppContext);
+  const { authState, authDispatch } = useContext(AuthenticationContext);
 
   const { isAuthenticated } = authState || {};
 

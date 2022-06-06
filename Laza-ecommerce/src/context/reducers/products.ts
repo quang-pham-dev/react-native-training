@@ -9,7 +9,6 @@ import {
   GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
   RESET_STATE,
-  ProductsAction,
   LOAD_MORE_PRODUCTS,
   LOAD_MORE_PRODUCTS_FAILED,
   LOAD_MORE_PRODUCTS_SUCCESS,
@@ -19,6 +18,9 @@ import {
   SEARCH_PRODUCTS_VALUE,
 } from 'context/actions/products';
 import { InitialProductsState, ProductsState } from 'context/state/products';
+
+// Types
+import { ProductsAction } from 'types/context/ProductAction';
 
 const productsReducer = (state: ProductsState = InitialProductsState, action: ProductsAction) => {
   switch (action.type) {

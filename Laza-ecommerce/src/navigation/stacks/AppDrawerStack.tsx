@@ -5,6 +5,10 @@ import { Image, Text } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+// Context
+import ProductsProvider from 'context/ProductsContext';
+import BrandsProvider from 'context/BrandsContext';
+
 // Stack
 import BagsStack from './BagsStack';
 import HomeStack from './HomeStack';
@@ -115,18 +119,22 @@ const Drawer = createDrawerNavigator();
 
 function AppDrawerStack() {
   return (
-    <Drawer.Navigator
-      screenOptions={{
-        headerShown: false,
-        drawerPosition: 'left',
-        drawerStyle: {
-          backgroundColor: Colors.primaryBackground,
-          width: '80%',
-        },
-      }}
-      drawerContent={({ navigation }) => <SideMenu navigation={navigation} />}>
-      <Drawer.Screen name={SCREENS_ROUTES.APP_NAVIGATOR.name} component={AppStackNavigator} />
-    </Drawer.Navigator>
+    <ProductsProvider>
+      <BrandsProvider>
+        <Drawer.Navigator
+          screenOptions={{
+            headerShown: false,
+            drawerPosition: 'left',
+            drawerStyle: {
+              backgroundColor: Colors.primaryBackground,
+              width: '80%',
+            },
+          }}
+          drawerContent={({ navigation }) => <SideMenu navigation={navigation} />}>
+          <Drawer.Screen name={SCREENS_ROUTES.APP_NAVIGATOR.name} component={AppStackNavigator} />
+        </Drawer.Navigator>
+      </BrandsProvider>
+    </ProductsProvider>
   );
 }
 

@@ -26,7 +26,9 @@ import Label from 'components/Label';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { AppContext } from 'context/AppContext';
+import { AuthenticationContext } from 'context/AuthContext';
+import { ProductsContext } from 'context/ProductsContext';
+import { BrandsContext } from 'context/BrandsContext';
 import {
   GET_PRODUCTS,
   GET_PRODUCTS_FAILED,
@@ -55,10 +57,14 @@ import Colors from 'themes/Colors';
 
 // Styles
 import styles from './styles';
+import { FeatureViewAnimation } from './utils';
 
 const HomeScreen = ({ navigation }: IHomeScreenProps) => {
-  const { authState, productState, brandState, productDispatch, brandDispatch } =
-    useContext(AppContext);
+  const { authState } = useContext(AuthenticationContext);
+
+  const { productState, productDispatch } = useContext(ProductsContext);
+
+  const { brandState, brandDispatch } = useContext(BrandsContext);
 
   const { currentUser } = authState || {};
 
@@ -223,7 +229,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     [navigation],
   );
 
-  // handle action navigate to Product Detail Screen when press product item
+  // handle action navigate to Product Detail Screen when press card product
   const handlePressProductCard = useCallback(
     (id: string) => {
       navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);

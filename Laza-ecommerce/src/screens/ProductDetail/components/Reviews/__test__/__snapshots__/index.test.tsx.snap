@@ -79,6 +79,20 @@ exports[`Product detail reviewer review should render correctly 1`] = `
           }
         }
       >
+        <Image
+          source={
+            Object {
+              "uri": undefined,
+            }
+          }
+          style={
+            Object {
+              "borderRadius": 40,
+              "height": 40,
+              "width": 40,
+            }
+          }
+        />
         <View
           style={
             Object {
@@ -86,6 +100,21 @@ exports[`Product detail reviewer review should render correctly 1`] = `
             }
           }
         >
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#000",
+                  "textTransform": "none",
+                },
+                Object {
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 15,
+                  "lineHeight": 16,
+                },
+              ]
+            }
+          />
           <View
             style={
               Object {
@@ -101,6 +130,17 @@ exports[`Product detail reviewer review should render correctly 1`] = `
                 Object {
                   "height": 11,
                   "width": 11,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#8F959E",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "lineHeight": 12,
+                  "marginLeft": 5,
                 }
               }
             />

@@ -11,7 +11,7 @@ import Title from 'components/Title';
 import LoginForm from 'screens/SignIn/components/LoginForm';
 
 // Context
-import { AppContext } from 'context/AppContext';
+import { AuthenticationContext } from 'context/AuthContext';
 import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'context/actions/auth';
 
 // API
@@ -34,7 +34,7 @@ import IMAGES from 'themes/Images';
 import { styles } from './styles';
 
 const SignInScreen = ({ navigation }: ISignInScreenProps) => {
-  const { authState, authDispatch } = useContext(AppContext);
+  const { authState, authDispatch } = useContext(AuthenticationContext);
 
   const { isProcessing } = authState || {};
 
@@ -60,7 +60,9 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
       }
     } catch (error) {
       authDispatch({ type: SIGN_IN_FAILED, payload: error });
-      Alert.alert(error.response.data.message);
+      error?.response?.data
+        ? Alert.alert(error.response.data.message)
+        : Alert.alert('Login failed', error.message);
     }
   };
 

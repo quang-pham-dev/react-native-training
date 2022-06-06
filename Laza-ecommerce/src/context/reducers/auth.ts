@@ -1,5 +1,4 @@
 import {
-  AuthAction,
   INITIALIZE,
   INITIALIZE_FAILED,
   INITIALIZE_SUCCESS,
@@ -12,6 +11,9 @@ import {
   RESET_STATE,
 } from 'context/actions/auth';
 import { AuthState, InitialAuthState } from 'context/state/auth';
+
+// Types
+import { AuthAction } from 'types/context/AuthenticationAction';
 
 const authenticationReducer = (state: AuthState = InitialAuthState, action: AuthAction) => {
   switch (action.type) {

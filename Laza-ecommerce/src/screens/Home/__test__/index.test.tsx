@@ -14,6 +14,9 @@ import { navigationMock } from 'utils/testMock';
 import { user } from '__mocks__/dataMock/user';
 
 describe('Home Screen', () => {
+  const helloText = 'Hello';
+  const wellComeText = 'Welcome to Laza.';
+
   let tree: any;
   const props = {
     navigation: navigationMock,
@@ -41,13 +44,13 @@ describe('Home Screen', () => {
     const tree = render(<HomeScreen {...props} />);
     const { getByText } = tree;
 
-    expect(getByText('Hello')).toBeTruthy();
+    expect(getByText(helloText)).toBeTruthy();
   });
 
   test('Should render a Welcome to Laza. text', () => {
     const tree = render(<HomeScreen {...props} />);
     const { getByText } = tree;
 
-    expect(getByText('Welcome to Laza.')).toBeTruthy();
+    expect(getByText(wellComeText)).toBeTruthy();
   });
 });

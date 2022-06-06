@@ -1,5 +1,4 @@
 import {
-  BrandsAction,
   GET_BRAND,
   GET_BRANDS,
   GET_BRANDS_FAILED,
@@ -9,6 +8,9 @@ import {
   RESET_STATE,
 } from 'context/actions/brands';
 import { BrandsState, InitialBrandsState } from 'context/state/brands';
+
+// Types
+import { BrandsAction } from 'types/context/BrandsAction';
 
 const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAction) => {
   switch (action.type) {

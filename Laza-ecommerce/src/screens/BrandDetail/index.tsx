@@ -10,7 +10,8 @@ import Title from 'components/Title';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { AppContext } from 'context/AppContext';
+import { BrandsContext } from 'context/BrandsContext';
+import { ProductsContext } from 'context/ProductsContext';
 import {
   GET_PRODUCTS_BY_BRAND_ID,
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
@@ -40,7 +41,9 @@ import styles from './styles';
 const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   const id = route.params;
 
-  const { productState, productDispatch, brandState, brandDispatch } = useContext(AppContext);
+  const { brandState } = useContext(BrandsContext);
+
+  const { productState, productDispatch } = useContext(ProductsContext);
 
   const { brands } = brandState || {};
 

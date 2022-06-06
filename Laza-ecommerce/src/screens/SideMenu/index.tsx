@@ -16,7 +16,7 @@ import Title from 'components/Title';
 import DrawerItem from 'screens/SideMenu/components';
 
 // Context
-import { AppContext } from 'context/AppContext';
+import { AuthenticationContext } from 'context/AuthContext';
 import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'context/actions/auth';
 
 // API
@@ -39,7 +39,7 @@ import styles from './styles';
 import { remove } from 'utils/localStorage';
 
 const SideMenu = ({ navigation }: ISideMenuPros) => {
-  const { authState, authDispatch } = useContext(AppContext);
+  const { authState, authDispatch } = useContext(AuthenticationContext);
 
   const { currentUser } = authState || {};
 
@@ -105,7 +105,6 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
       testID: 'AccountInformation',
       title: SCREENS_ROUTES.HOME_STACK.DRAWER_MENU.AccountInformation.name,
       source: IMAGES.iconInfo,
-      onPress: () => {},
     },
     {
       testID: 'Side-menu-Bag',
@@ -141,9 +140,9 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
 
         <View style={[styles.infoWrapper]}>
           <View style={styles.profile}>
-            {Boolean(avatar) && <Image style={styles.avatar} source={{ uri: avatar }} />}
+            <Image style={styles.avatar} source={{ uri: avatar }} />
             <View style={styles.profileInfoWrapper}>
-              {Boolean(username) && <Title titleStyles={styles.accountName} titleName={username} />}
+              <Title titleStyles={styles.accountName} titleName={username} />
               <View style={styles.verifiedWrapper}>
                 <Title titleName='Verified Profile' titleStyles={styles.verifiedText} />
                 <Image style={styles.iconBadge} source={IMAGES.iconBadge} />
