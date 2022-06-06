@@ -11,6 +11,9 @@ import Reviews from 'screens/ProductDetail/components/Reviews';
 // Mock data
 import { product } from '__mocks__/dataMock';
 
+// API
+import { productsService } from 'api/products.api';
+
 describe('Product detail reviewer review', () => {
   const props = {
     comment: product.comment,
@@ -26,15 +29,17 @@ describe('Product detail reviewer review', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('should render with reviewer comment', () => {
-    const comment = tree.root.findAllByType(Text)[4];
-    expect(comment.props.children).toEqual(props.comment);
-    expect(comment.props.children).toBeTruthy();
-  });
+  test('should render product reviews', async () => {
+    let resProduct = await productsService.getProductById(product.id);
 
-  test('should render with reviewer rating', () => {
-    const rating = tree.root.findAllByType(Text)[2];
-    expect(rating.props.children).toEqual(props.rating);
-    expect(rating.props.children).toBeTruthy();
+    const renderReviews = renderer.create(
+      <Reviews
+        comment={resProduct.data.comment}
+        rating={resProduct.data.rating}
+        reviewers={resProduct.data.reviewers}
+      />,
+    );
+
+    expect(renderReviews).toBeTruthy();
   });
 });

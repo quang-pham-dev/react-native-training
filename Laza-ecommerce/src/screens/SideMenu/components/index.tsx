@@ -7,7 +7,7 @@ import { DrawerItemProps } from 'types/screens/Menu';
 // Styles
 import styles from './styles';
 
-const DrawerItem = ({ title, source, onPress, titleStyle }: DrawerItemProps) => {
+const DrawerItem = ({ title, source, onPress = () => {}, titleStyle }: DrawerItemProps) => {
   const handlePressItem = useCallback(() => {
     onPress();
   }, [onPress]);

@@ -48,7 +48,6 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
           buttonStyles={[styles.socialButton, styles.facebookButton]}
           iconStyles={[styles.socialIcon]}
           textStyles={[styles.text]}
-          onPress={() => {}}
         />
         <Button
           testID='TwitterButton'
@@ -57,7 +56,6 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
           buttonStyles={[styles.socialButton, styles.twitterButton]}
           iconStyles={[styles.socialIcon]}
           textStyles={[styles.text]}
-          onPress={() => {}}
         />
         <Button
           testID='GoogleButton'
@@ -66,7 +64,6 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
           buttonStyles={[styles.socialButton, styles.googleButton]}
           iconStyles={[styles.socialIcon]}
           textStyles={[styles.text]}
-          onPress={() => {}}
         />
       </View>
       {/* end main */}
@@ -81,7 +78,6 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
           text={'Create an Account'}
           buttonStyles={[styles.bottomButton, styles.createAnAccountButton]}
           textStyles={[styles.text, styles.textBottomButton]}
-          onPress={() => {}}
         />
       </View>
       {/* end footer */}

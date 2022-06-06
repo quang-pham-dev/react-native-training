@@ -56,7 +56,7 @@ const SearchBar = ({
             onSubmitEditing={handleSubmitEditing}
           />
         </View>
-        <TouchableOpacity onPress={() => {}} style={styles.iconVoiceWrapper}>
+        <TouchableOpacity style={styles.iconVoiceWrapper}>
           <Image style={styles.iconVoice} source={IMAGES.iconVoice} />
         </TouchableOpacity>
       </View>

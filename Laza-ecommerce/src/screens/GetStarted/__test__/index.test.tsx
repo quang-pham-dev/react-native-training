@@ -1,8 +1,19 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react-native';
 
+// LIBS
+import { fireEvent, render } from '@testing-library/react-native';
+import renderer from 'react-test-renderer';
+
+// Screens
 import GetStartedScreen from 'screens/GetStarted';
+
+// Components
+import Button from 'components/Button';
+
+// Utils
 import { navigationMock } from 'utils/testMock';
+
+// Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
 
 describe('GetStarted Screen', () => {
@@ -62,5 +73,12 @@ describe('GetStarted Screen', () => {
     expect(navigationMock.navigate).toHaveBeenCalledWith(
       SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name,
     );
+  });
+
+  test('should handle back button', () => {
+    const tree = renderer.create(<GetStartedScreen navigation={navigationMock} />);
+    const Pressabled = tree.root.findAllByType(Button)[0];
+    Pressabled.props.onPress();
+    expect(navigationMock.goBack).toHaveBeenCalled();
   });
 });

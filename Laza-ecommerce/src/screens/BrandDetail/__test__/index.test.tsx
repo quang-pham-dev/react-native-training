@@ -12,7 +12,7 @@ import BrandDetailScreen from 'screens/BrandDetail';
 import { navigationMock } from 'utils/testMock';
 
 // Mock data
-import { brands, brand, product } from '__mocks__/dataMock';
+import { brands, brand, product, products } from '__mocks__/dataMock';
 
 // API
 import { productsService } from 'api/products.api';
@@ -78,10 +78,5 @@ describe('Brand detail Screen', () => {
     );
 
     await productsService.getProductsByBrandId(product.brandId, PAGINATION.LIMIT);
-  });
-
-  test('should call function handlePressProductCard', () => {
-    const press = tree.root.findAllByType(Pressable)[0];
-    press.props.onPress();
   });
 });

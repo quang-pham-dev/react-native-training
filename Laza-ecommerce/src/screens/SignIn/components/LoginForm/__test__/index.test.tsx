@@ -42,27 +42,61 @@ describe('Login Form', () => {
     expect(getByText('Remember me')).toBeTruthy();
   });
 
-  test('should not render error messages when input values are valid', async () => {
+  test('should render error messages when input values are invalid', async () => {
     const { queryAllByText, getByPlaceholderText } = tree;
     const usernameValue = 'Quangpham';
-    const passwordValue = '12345';
+    const passwordValue = '123';
 
     await act(async () =>
       fireEvent.changeText(getByPlaceholderText('Enter your username'), usernameValue),
     );
+
     await act(async () =>
       fireEvent.changeText(getByPlaceholderText('Enter your password'), passwordValue),
     );
 
     const errorMessage = queryAllByText('Password must be at least 6 characters');
 
-    expect(errorMessage).not.toBeNull();
+    expect(errorMessage).toBeTruthy();
+  });
+  test('should render error messages when user name input values are invalid', async () => {
+    const { queryAllByText, getByPlaceholderText } = tree;
+    const usernameValue = 'Quangpham';
+
+    await act(async () =>
+      fireEvent.changeText(getByPlaceholderText('Enter your username'), usernameValue),
+    );
+    await act(async () =>
+      fireEvent.changeText(getByPlaceholderText('Enter your username'), ''),
+    );
+
+    const errorMessage = queryAllByText('Username is required');
+
+    expect(errorMessage).toBeTruthy();
   });
 
-  //check with mock async storage value
   test('checks if Async Storage is used', async () => {
     await AsyncStorage.getItem(AUTH_DATA);
 
     expect(AsyncStorage.getItem).toBeCalledWith(AUTH_DATA);
+  });
+
+  it('on submit login', async () => {
+    const data = { password: '123456', username: 'Quangpham' };
+    const submitHandler = jest.fn();
+    const tree = renderer.create(<LoginForm onSubmit={submitHandler} />);
+    const username = tree.root.findByProps({ testID: 'usernameInput' });
+    const password = tree.root.findByProps({ testID: 'passwordInput' });
+
+    await act(async () => {
+      await username.props.onChangeText(data.username);
+      await password.props.onChangeText(data.password);
+    });
+
+    await act(async () => {
+      await fireEvent.press(tree.root.findByProps({ testID: 'loginButton' }));
+    });
+
+    expect(submitHandler).toBeCalledWith(data);
   });
 });

@@ -141,7 +141,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
               )}
             </View>
           </Pressable>
-          <Pressable onPress={() => {}}>
+          <Pressable>
             <Image style={styles.cartIcon} source={IMAGES.iconCart} />
           </Pressable>
         </View>
@@ -151,11 +151,11 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
       <View style={styles.contentContainer}>
         <View style={styles.contentHeader}>
           <View>
-            <Text style={styles.totalCount}>{isProcessing ? 0 : totalRowsByBrandId | 0} Items</Text>
+            <Text style={styles.totalCount}>{isProcessing ? 0 : totalRowsByBrandId} Items</Text>
             <Text style={styles.titleContent}>Available in stock</Text>
           </View>
           <View style={styles.sortWrapper}>
-            <TouchableOpacity onPress={() => {}}>
+            <TouchableOpacity>
               <MaterialIcons name='sort' size={24} color='black' />
             </TouchableOpacity>
             <Title titleName='Sort' titleStyles={styles.sortText} />

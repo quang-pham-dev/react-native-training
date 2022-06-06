@@ -9,6 +9,6 @@ export interface DrawerItemProps {
   testID?: string;
   title: string;
   titleStyle?: StyleProp<TextStyle>;
-  onPress: () => void;
+  onPress?: () => void;
   source: ImageSourcePropType;
 }

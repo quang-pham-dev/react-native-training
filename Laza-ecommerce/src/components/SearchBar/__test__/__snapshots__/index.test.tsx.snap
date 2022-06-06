@@ -84,7 +84,7 @@ exports[`Search Bar Component Should render correctly 1`] = `
     </View>
     <View
       accessible={true}
-      focusable={true}
+      focusable={false}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

@@ -159,7 +159,7 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
 
       <View style={styles.main}>
         <View style={[styles.darkModeWrapper]}>
-          <DrawerItem title='Dark Mode' source={IMAGES.iconSun} onPress={() => {}} />
+          <DrawerItem title='Dark Mode' source={IMAGES.iconSun} />
           <View style={styles.switchWrapper}>
             <Switch
               style={styles.darkModeSwitch}
