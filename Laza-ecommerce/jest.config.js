@@ -6,5 +6,15 @@ module.exports = {
   ],
   setupFilesAfterEnv: ['<rootDir>/src/__mocks__/globalMock.js'],
   collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx,js,jsx}',
+    '!**/coverage/**',
+    '!**/node_modules/**',
+    '!**/babel.config.js',
+    '!**/jest.setup.js',
+    '!src/hooks/*',
+    '!src/context/*',
+    '!src/navigation/**',
+  ],
   coverageReporters: ['json', 'html'],
 };
