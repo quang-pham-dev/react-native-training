@@ -80,7 +80,6 @@ const ProductsList = ({
   const renderProductCard = useCallback(
     ({ item }: { item: IProduct }) => (
       <ProductCard
-        key={item.id}
         productCardStyles={styles.productCard}
         product={item}
         onPressProductCard={handlePressProductCard}
@@ -91,7 +90,7 @@ const ProductsList = ({
   );
 
   // handle render Footer component
-  const renderFooterList = () => {
+  const renderFooterComponent = () => {
     {
       Boolean(isLoading) && <LoadingIndicator />;
     }
@@ -109,7 +108,7 @@ const ProductsList = ({
         keyExtractor={product => product.id}
         showsVerticalScrollIndicator={false}
         ListEmptyComponent={renderEmptyList}
-        ListFooterComponent={renderFooterList}
+        ListFooterComponent={renderFooterComponent}
         ListFooterComponentStyle={styles.listFooter}
         onEndReached={handleLoadMoreProducts()}
         onEndReachedThreshold={0.5}

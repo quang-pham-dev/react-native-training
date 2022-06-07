@@ -26,7 +26,7 @@ import { productsService } from 'api/products.api';
 
 // Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
-import { PAGINATION } from 'constants/Products';
+import { PRODUCT_PAGINATION } from 'constants/Products';
 
 // Types
 import { IBrand } from 'types/models/Brands';
@@ -56,7 +56,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   const getProductsByBrandId = async () => {
     productDispatch({ type: GET_PRODUCTS_BY_BRAND_ID });
     try {
-      const response = await productsService.getProductsByBrandId(id, PAGINATION.LIMIT);
+      const response = await productsService.getProductsByBrandId(id, PRODUCT_PAGINATION.PRODUCT_LIMIT);
       if (response.data) {
         const { data, pagination } = response.data || {};
         const { _limit, _totalRows } = pagination || {};
@@ -108,7 +108,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
     productDispatch({ type: LOAD_MORE_PRODUCTS_BY_BRAND_ID });
 
     try {
-      const response = await productsService.getProductsByBrandId(id, limit + PAGINATION.LIMIT);
+      const response = await productsService.getProductsByBrandId(id, limit + PRODUCT_PAGINATION.PRODUCT_LIMIT);
       const { data, pagination } = response.data || {};
       const { _limit } = pagination || {};
       productDispatch({

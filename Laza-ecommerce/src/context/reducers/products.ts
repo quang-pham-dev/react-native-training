@@ -49,9 +49,9 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
         ...state,
         type: action.type,
         isProcessing: false,
-        products: action.payload.data.products,
-        limit: action.payload.limit,
-        totalRows: action.payload.totalRows,
+        products: action.payload?.data?.products,
+        limit: action.payload?.limit,
+        totalRows: action.payload?.totalRows,
       };
 
     case GET_PRODUCT_SUCCESS:
@@ -68,9 +68,9 @@ const productsReducer = (state: ProductsState = InitialProductsState, action: Pr
         ...state,
         type: action.type,
         isProcessing: false,
-        productsByBrandId: action.payload.data.productsByBrandId,
+        productsByBrandId: action.payload?.data?.productsByBrandId,
         limit: action.payload.limit,
-        totalRowsByBrandId: action.payload.totalRowsByBrandId,
+        totalRowsByBrandId: action.payload?.totalRowsByBrandId,
       };
 
     case LOAD_MORE_PRODUCTS_SUCCESS:

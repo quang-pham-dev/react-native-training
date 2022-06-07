@@ -18,7 +18,7 @@ import { brands, brand, product, products } from '__mocks__/dataMock';
 import { productsService } from 'api/products.api';
 
 // Constants
-import { PAGINATION } from 'constants/Products';
+import { PRODUCT_PAGINATION } from 'constants/Products';
 
 jest.mock('api/http');
 
@@ -77,6 +77,6 @@ describe('Brand detail Screen', () => {
       />,
     );
 
-    await productsService.getProductsByBrandId(product.brandId, PAGINATION.LIMIT);
+    await productsService.getProductsByBrandId(product.brandId, PRODUCT_PAGINATION.PRODUCT_LIMIT);
   });
 });

@@ -18,7 +18,6 @@ import {
   GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
   RESET_STATE,
-  ProductsAction,
   LOAD_MORE_PRODUCTS,
   LOAD_MORE_PRODUCTS_FAILED,
   LOAD_MORE_PRODUCTS_SUCCESS,
@@ -30,7 +29,9 @@ import {
 
 // Mocks
 import { product, products } from '__mocks__/dataMock/products';
-import { PAGINATION } from 'constants/Products';
+
+// Constants
+import { PRODUCT_PAGINATION } from 'constants/Products';
 
 describe('productsReducer', () => {
   const ProductPayload = {
@@ -43,7 +44,7 @@ describe('productsReducer', () => {
   const ProductsResponse = {
     payload: {
       data: ProductPayload,
-      limit: PAGINATION.LIMIT,
+      limit: PRODUCT_PAGINATION.PRODUCT_LIMIT,
       totalRows: 0,
       totalRowsByBrandId: 0,
     },

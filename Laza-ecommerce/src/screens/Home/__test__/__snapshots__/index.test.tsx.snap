@@ -373,6 +373,7 @@ exports[`Home Screen Should renders correctly 1`] = `
       >
         <RCTScrollView
           ListEmptyComponent={[Function]}
+          ListFooterComponent={[Function]}
           disableVirtualization={false}
           getItem={[Function]}
           getItemCount={[Function]}
@@ -381,7 +382,8 @@ exports[`Home Screen Should renders correctly 1`] = `
           keyExtractor={[Function]}
           maxToRenderPerBatch={10}
           onContentSizeChange={[Function]}
-          onEndReachedThreshold={2}
+          onEndReached={null}
+          onEndReachedThreshold={0.5}
           onLayout={[Function]}
           onMomentumScrollEnd={[Function]}
           onScroll={[Function]}
@@ -410,6 +412,9 @@ exports[`Home Screen Should renders correctly 1`] = `
             >
               No Brand found
             </Text>
+            <View
+              onLayout={[Function]}
+            />
           </View>
         </RCTScrollView>
       </View>

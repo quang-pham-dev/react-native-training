@@ -2,7 +2,7 @@
 import { IProduct } from 'types/models/Products';
 
 // Constants
-import { PAGINATION } from 'constants/Products';
+import { PRODUCT_PAGINATION } from 'constants/Products';
 
 export interface ProductsState {
   isLoading: boolean;
@@ -25,5 +25,5 @@ export const InitialProductsState: ProductsState = {
   totalRows: 0,
   totalRowsByBrandId: 0,
   searchValue: '',
-  limit: PAGINATION.LIMIT,
+  limit: PRODUCT_PAGINATION.PRODUCT_LIMIT,
 };
