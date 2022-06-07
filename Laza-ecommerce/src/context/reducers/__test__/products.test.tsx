@@ -4,7 +4,7 @@ import React from 'react';
 import productsReducer from 'context/reducers/products';
 
 // State
-import { InitialProductsState } from 'context/state/products';
+import { InitialProductsState } from 'context/reducers/products';
 
 // Actions
 import {
@@ -272,6 +272,16 @@ describe('productsReducer', () => {
       ...InitialProductsState,
       isProcessing: true,
       error: null,
+    });
+  });
+
+  test('should handle default', () => {
+    return expect(
+      productsReducer(InitialProductsState, {
+        payload: ProductsResponse.payload,
+      }),
+    ).toEqual({
+      ...InitialProductsState,
     });
   });
 });

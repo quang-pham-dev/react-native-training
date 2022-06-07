@@ -4,7 +4,7 @@ import React from 'react';
 import brandsReducer from 'context/reducers/brands';
 
 // State
-import { InitialBrandsState } from 'context/state/brands';
+import { InitialBrandsState } from 'context/reducers/brands';
 
 // Actions
 import {
@@ -163,6 +163,16 @@ describe('brandsReducer', () => {
     return expect(
       brandsReducer(InitialBrandsState, {
         type: RESET_STATE,
+        payload: BrandsResponse.payload,
+      }),
+    ).toEqual({
+      ...InitialBrandsState,
+    });
+  });
+
+  test('should handle default', () => {
+    return expect(
+      brandsReducer(InitialBrandsState, {
         payload: BrandsResponse.payload,
       }),
     ).toEqual({

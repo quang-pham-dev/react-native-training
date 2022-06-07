@@ -4,7 +4,7 @@ import React from 'react';
 import authenticationReducer from 'context/reducers/auth';
 
 // State
-import { InitialAuthState } from 'context/state/auth';
+import { InitialAuthState } from 'context/reducers/auth';
 
 // Actions
 import {
@@ -170,6 +170,16 @@ describe('authReducer', () => {
       isLoading: false,
       isProcessing: true,
       error: null,
+    });
+  });
+
+  test('should handle default', () => {
+    return expect(
+      authenticationReducer(InitialAuthState, {
+        payload: UserResponse,
+      }),
+    ).toEqual({
+      ...InitialAuthState,
     });
   });
 });

@@ -85,9 +85,9 @@ const brandsReducer = (state: typeof InitialBrandsState, action: BrandsAction) =
       };
 
     default:
-      /* If this reducer doesn't recognize the action type, or doesn't
-     care about this specific action, return the existing state unchanged */
-      throw new Error(`Unknown action type: ${action.type}`);
+      return {
+        ...state,
+      };
   }
 };
 

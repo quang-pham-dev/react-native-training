@@ -15,6 +15,6 @@ export interface ProductsAction {
     page?: number;
   };
   searchValue?: string;
-  type: string;
+  type?: string;
   error?: string;
 }

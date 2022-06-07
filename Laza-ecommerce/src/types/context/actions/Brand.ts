@@ -11,6 +11,6 @@ export interface BrandsAction {
     limit?: number;
     totalRowsOfBrands?: number;
   };
-  type: string;
+  type?: string;
   error?: string;
 }
