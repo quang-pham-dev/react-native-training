@@ -1,3 +1,7 @@
+// Constants
+import { BRAND_PAGINATION } from 'constants/Brands';
+
+// Types
 import { IBrand } from 'types/models/Brands';
 
 export interface BrandsState {
@@ -5,6 +9,8 @@ export interface BrandsState {
   isProcessing: boolean;
   error: string | null;
   brands: IBrand[];
+  totalRowsOfBrands: number;
+  limit: number;
 }
 
 export const InitialBrandsState: BrandsState = {
@@ -12,4 +18,6 @@ export const InitialBrandsState: BrandsState = {
   isProcessing: true,
   error: null,
   brands: [],
+  totalRowsOfBrands: 0,
+  limit: BRAND_PAGINATION.BRAND_LIMIT,
 };

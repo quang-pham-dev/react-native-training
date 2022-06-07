@@ -5,6 +5,9 @@ import {
   GET_BRANDS_SUCCESS,
   GET_BRAND_FAILED,
   GET_BRAND_SUCCESS,
+  LOAD_MORE_BRANDS,
+  LOAD_MORE_BRANDS_SUCCESS,
+  LOAD_MORE_BRANDS_FAILED,
   RESET_STATE,
 } from 'context/actions/brands';
 import { BrandsState, InitialBrandsState } from 'context/state/brands';
@@ -21,12 +24,20 @@ const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAc
         isProcessing: true,
       };
 
+    case LOAD_MORE_BRANDS:
+      return {
+        ...state,
+        isLoading: true,
+      };
+
     case GET_BRANDS_SUCCESS:
       return {
         ...state,
         type: action.type,
         isProcessing: false,
-        brands: action.payload?.brands,
+        brands: action.payload?.data?.brands,
+        limit: action.payload?.limit,
+        totalRowsOfBrands: action.payload?.totalRowsOfBrands,
       };
 
     case GET_BRAND_SUCCESS:
@@ -34,11 +45,21 @@ const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAc
         ...state,
         type: action.type,
         isProcessing: false,
-        brand: action.payload?.brand,
+        brand: action.payload?.data?.brand,
+      };
+
+    case LOAD_MORE_BRANDS_SUCCESS:
+      return {
+        ...state,
+        type: action.type,
+        isLoading: false,
+        brands: action.payload?.data?.brands,
+        limit: action.payload?.limit,
       };
 
     case GET_BRANDS_FAILED:
     case GET_BRAND_FAILED:
+      LOAD_MORE_BRANDS_FAILED;
       return {
         ...state,
         isProcessing: false,

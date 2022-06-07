@@ -6,8 +6,6 @@ import {
   Text,
   Animated,
   StatusBar,
-  StyleSheet,
-  Platform,
   NativeSyntheticEvent,
   NativeScrollEvent,
 } from 'react-native';
@@ -37,7 +35,14 @@ import {
   LOAD_MORE_PRODUCTS_FAILED,
   LOAD_MORE_PRODUCTS_SUCCESS,
 } from 'context/actions/products';
-import { GET_BRANDS, GET_BRANDS_FAILED, GET_BRANDS_SUCCESS } from 'context/actions/brands';
+import {
+  GET_BRANDS,
+  GET_BRANDS_FAILED,
+  GET_BRANDS_SUCCESS,
+  LOAD_MORE_BRANDS,
+  LOAD_MORE_BRANDS_FAILED,
+  LOAD_MORE_BRANDS_SUCCESS,
+} from 'context/actions/brands';
 
 // API
 import { productsService } from 'api/products.api';
@@ -49,7 +54,8 @@ import { IProduct } from 'types/models/Products';
 
 // Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
-import { PAGINATION } from 'constants/Products';
+import { PRODUCT_PAGINATION } from 'constants/Products';
+import { BRAND_PAGINATION } from 'constants/Brands';
 
 // Themes
 import Fonts from 'themes/Fonts';
@@ -57,7 +63,6 @@ import Colors from 'themes/Colors';
 
 // Styles
 import styles from './styles';
-import { FeatureViewAnimation } from './utils';
 
 const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const { authState } = useContext(AuthenticationContext);
@@ -72,7 +77,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
   const { products, limit, searchValue } = productState || {};
 
-  const { brands } = brandState || {};
+  const { brands, limit: brandsLimit } = brandState || {};
 
   // animation values
   const animatedValue = useRef(new Animated.Value(0)).current;
@@ -206,11 +211,22 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const getBrands = async () => {
     brandDispatch({ type: GET_BRANDS });
     try {
-      const { data } = await brandsService.getBrands();
-      brandDispatch({
-        type: GET_BRANDS_SUCCESS,
-        payload: { brands: data },
-      });
+      const response = await brandsService.getBrands(brandsLimit);
+      if (response.data) {
+        const { data, pagination } = response.data || {};
+        const { _limit, _totalRows } = pagination || {};
+
+        brandDispatch({
+          type: GET_BRANDS_SUCCESS,
+          payload: {
+            data: {
+              brands: data,
+            },
+            totalRowsOfBrands: _totalRows,
+            limit: _limit,
+          },
+        });
+      }
     } catch (error) {
       brandDispatch({
         type: GET_BRANDS_FAILED,
@@ -242,7 +258,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     productDispatch({ type: LOAD_MORE_PRODUCTS });
 
     try {
-      const response = await productsService.getProducts(limit + PAGINATION.LIMIT);
+      const response = await productsService.getProducts(limit + PRODUCT_PAGINATION.PRODUCT_LIMIT);
       const { data, pagination } = response.data || {};
       const { _limit } = pagination || {};
       productDispatch({
@@ -263,6 +279,33 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
       Alert.alert('Error', error.message);
     }
   }, [limit, products]);
+
+  // handle Load More Brands
+  const handleLoadMoreBrands = useCallback(async () => {
+    brandDispatch({ type: LOAD_MORE_BRANDS });
+
+    try {
+      const response = await brandsService.getBrands(brandsLimit + BRAND_PAGINATION.BRAND_LIMIT);
+      const { data, pagination } = response.data || {};
+      const { _limit } = pagination || {};
+      brandDispatch({
+        type: LOAD_MORE_BRANDS_SUCCESS,
+        payload: {
+          data: {
+            brands: data,
+          },
+          limit: _limit,
+        },
+      });
+    } catch (error) {
+      brandDispatch({
+        type: LOAD_MORE_BRANDS_FAILED,
+        payload: error,
+      });
+
+      Alert.alert('Error', error.message);
+    }
+  }, [brandsLimit, brands]);
 
   // handle action Like Product
   const handlePressLikeProduct = useCallback(() => {}, []);
@@ -340,7 +383,11 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           {/* end brand title */}
 
           {Boolean(brandState?.isProcessing) && <LoadingIndicator size={'small'} />}
-          <BrandsCardList brands={brands} onPressBrandCard={handlePressBrandCard} />
+          <BrandsCardList
+            brands={brands}
+            onPressBrandCard={handlePressBrandCard}
+            onLoadMoreBrands={handleLoadMoreBrands}
+          />
           {/* end brand list */}
         </Animated.View>
 

@@ -19,4 +19,16 @@ export interface IBrandCardListProps extends IBrand {
 export interface IBrandsListProps {
   brands: IBrandCardListProps[];
   onPressBrandCard: (id: string) => void;
+  onLoadMoreBrands: () => void;
+}
+
+export interface IBrandsResponse {
+  data: {
+    data: IBrand[];
+    pagination: {
+      _page?: number;
+      _totalRows?: number;
+      _limit: number;
+    };
+  };
 }

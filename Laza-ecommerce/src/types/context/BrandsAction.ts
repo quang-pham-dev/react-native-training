@@ -6,7 +6,11 @@ interface IPBrandPayload {
 }
 
 export interface BrandsAction {
-  payload?: IPBrandPayload;
+  payload: {
+    data: IPBrandPayload;
+    limit?: number;
+    totalRowsOfBrands?: number;
+  };
   type: string;
   error?: string;
 }
