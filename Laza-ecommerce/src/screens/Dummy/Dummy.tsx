@@ -1,5 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
+
+// Styles
+import styles from './styles';
 
 const DummyScreen = () => {
   return (
@@ -10,11 +13,3 @@ const DummyScreen = () => {
 };
 
 export default DummyScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});

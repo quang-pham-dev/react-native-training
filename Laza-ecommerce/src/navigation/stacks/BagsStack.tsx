@@ -2,7 +2,7 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Screens
-import DummyScreen from 'screens/Dummy';
+import DummyScreen from 'screens/Dummy/Dummy';
 
 // Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
