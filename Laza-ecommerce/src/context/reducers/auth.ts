@@ -10,12 +10,21 @@ import {
   SIGN_OUT_SUCCESS,
   RESET_STATE,
 } from 'context/actions/auth';
-import { AuthState, InitialAuthState } from 'context/state/auth';
 
 // Types
-import { AuthAction } from 'types/context/AuthenticationAction';
+import { AuthAction } from 'types/context/actions/Auth';
+import { AuthState } from 'types/context/reducers/Auth';
 
-const authenticationReducer = (state: AuthState = InitialAuthState, action: AuthAction) => {
+export const InitialAuthState: AuthState = {
+  isLoading: false,
+  isFirstTime: false,
+  isAuthenticated: false,
+  error: null,
+  isProcessing: true,
+  currentUser: undefined,
+};
+
+const authenticationReducer = (state: typeof InitialAuthState, action: AuthAction) => {
   switch (action.type) {
     case INITIALIZE:
       return {

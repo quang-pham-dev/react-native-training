@@ -17,12 +17,27 @@ import {
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
   SEARCH_PRODUCTS_VALUE,
 } from 'context/actions/products';
-import { InitialProductsState, ProductsState } from 'context/state/products';
+
+// Constants
+import { PRODUCT_PAGINATION } from 'constants/Products';
 
 // Types
-import { ProductsAction } from 'types/context/ProductAction';
+import { ProductsAction } from 'types/context/actions/Product';
+import { ProductsState } from 'types/context/reducers/Product';
 
-const productsReducer = (state: ProductsState = InitialProductsState, action: ProductsAction) => {
+export const InitialProductsState: ProductsState = {
+  isLoading: false,
+  isProcessing: true,
+  error: null,
+  products: [],
+  productsByBrandId: [],
+  totalRows: 0,
+  totalRowsByBrandId: 0,
+  searchValue: '',
+  limit: PRODUCT_PAGINATION.PRODUCT_LIMIT,
+};
+
+const productsReducer = (state: typeof InitialProductsState, action: ProductsAction) => {
   switch (action.type) {
     case GET_PRODUCTS:
     case GET_PRODUCT:

@@ -4,22 +4,27 @@ import React from 'react';
 import brandsReducer from 'context/reducers/brands';
 
 // State
-import { BrandsState, InitialBrandsState } from 'context/state/brands';
+import { InitialBrandsState } from 'context/state/brands';
 
 // Actions
 import {
   GET_BRAND,
   GET_BRANDS,
-  GET_BRANDS_FAILED,
-  GET_BRANDS_SUCCESS,
-  GET_BRAND_FAILED,
+  LOAD_MORE_BRANDS,
   GET_BRAND_SUCCESS,
+  GET_BRANDS_SUCCESS,
+  LOAD_MORE_BRANDS_SUCCESS,
+  GET_BRAND_FAILED,
+  GET_BRANDS_FAILED,
+  LOAD_MORE_BRANDS_FAILED,
   RESET_STATE,
 } from 'context/actions/brands';
 
+// Constants
+import { BRAND_PAGINATION } from 'constants/Brands';
+
 // Mocks
 import { brand, brands } from '__mocks__/dataMock/brands';
-import { PRODUCT_PAGINATION } from 'constants/Products';
 
 describe('brandsReducer', () => {
   const BrandsPayload = {
@@ -30,7 +35,7 @@ describe('brandsReducer', () => {
   const BrandsResponse = {
     payload: {
       data: BrandsPayload,
-      limit: PRODUCT_PAGINATION.PRODUCT_LIMIT,
+      limit: BRAND_PAGINATION.BRAND_LIMIT,
       totalRowsOfBrands: 0,
     },
     error: undefined,
@@ -59,6 +64,18 @@ describe('brandsReducer', () => {
     });
   });
 
+  test('should handle LOAD_MORE_BRANDS', () => {
+    return expect(
+      brandsReducer(InitialBrandsState, {
+        type: LOAD_MORE_BRANDS,
+        payload: BrandsResponse.payload,
+      }),
+    ).toEqual({
+      ...InitialBrandsState,
+      isLoading: true,
+    });
+  });
+
   test('should handle GET_BRAND_SUCCESS', () => {
     return expect(
       brandsReducer(InitialBrandsState, {
@@ -82,7 +99,21 @@ describe('brandsReducer', () => {
       ...InitialBrandsState,
       type: GET_BRANDS_SUCCESS,
       isProcessing: false,
-      brands: BrandsResponse.payload?.data?.brands,
+      brands: BrandsPayload.brands,
+    });
+  });
+
+  test('should handle LOAD_MORE_BRANDS_SUCCESS', () => {
+    return expect(
+      brandsReducer(InitialBrandsState, {
+        type: LOAD_MORE_BRANDS_SUCCESS,
+        payload: BrandsResponse.payload,
+      }),
+    ).toEqual({
+      ...InitialBrandsState,
+      type: LOAD_MORE_BRANDS_SUCCESS,
+      isLoading: false,
+      brands: BrandsPayload.brands,
     });
   });
 
@@ -110,6 +141,21 @@ describe('brandsReducer', () => {
       type: GET_BRANDS_FAILED,
       isProcessing: false,
       error: undefined,
+    });
+  });
+
+  test('should handle LOAD_MORE_BRANDS_FAILED', () => {
+    return expect(
+      brandsReducer(InitialBrandsState, {
+        type: LOAD_MORE_BRANDS_FAILED,
+        payload: BrandsResponse.payload,
+      }),
+    ).toEqual({
+      ...InitialBrandsState,
+      type: LOAD_MORE_BRANDS_FAILED,
+      isLoading: false,
+      isProcessing: false,
+      error: BrandsResponse.error,
     });
   });
 

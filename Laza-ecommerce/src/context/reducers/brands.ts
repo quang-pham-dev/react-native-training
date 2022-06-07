@@ -10,12 +10,24 @@ import {
   LOAD_MORE_BRANDS_FAILED,
   RESET_STATE,
 } from 'context/actions/brands';
-import { BrandsState, InitialBrandsState } from 'context/state/brands';
+
+// Constants
+import { BRAND_PAGINATION } from 'constants/Brands';
 
 // Types
-import { BrandsAction } from 'types/context/BrandsAction';
+import { BrandsAction } from 'types/context/actions/Brand';
+import { BrandsState } from 'types/context/reducers/Brand';
 
-const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAction) => {
+export const InitialBrandsState: BrandsState = {
+  isLoading: false,
+  isProcessing: true,
+  error: null,
+  brands: [],
+  totalRowsOfBrands: 0,
+  limit: BRAND_PAGINATION.BRAND_LIMIT,
+};
+
+const brandsReducer = (state: typeof InitialBrandsState, action: BrandsAction) => {
   switch (action.type) {
     case GET_BRANDS:
     case GET_BRAND:
@@ -59,7 +71,7 @@ const brandsReducer = (state: BrandsState = InitialBrandsState, action: BrandsAc
 
     case GET_BRANDS_FAILED:
     case GET_BRAND_FAILED:
-      LOAD_MORE_BRANDS_FAILED;
+    case LOAD_MORE_BRANDS_FAILED:
       return {
         ...state,
         isProcessing: false,

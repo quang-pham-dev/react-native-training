@@ -96,6 +96,18 @@ describe('productsReducer', () => {
       isLoading: true,
     });
   });
+
+  test('should handle LOAD_MORE_PRODUCTS_BY_BRAND_ID', () => {
+    return expect(
+      productsReducer(InitialProductsState, {
+        type: LOAD_MORE_PRODUCTS_BY_BRAND_ID,
+        payload: ProductsResponse.payload,
+      }),
+    ).toEqual({
+      ...InitialProductsState,
+      isLoading: true,
+    });
+  });
   test('should handle SEARCH_PRODUCTS_VALUE', () => {
     return expect(
       productsReducer(InitialProductsState, {

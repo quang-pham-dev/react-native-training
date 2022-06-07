@@ -8,12 +8,3 @@ export interface AuthState {
   isProcessing: boolean;
   currentUser: IUser | undefined;
 }
-
-export const InitialAuthState: AuthState = {
-  isLoading: false,
-  isFirstTime: false,
-  isAuthenticated: false,
-  error: null,
-  isProcessing: true,
-  currentUser: undefined,
-};

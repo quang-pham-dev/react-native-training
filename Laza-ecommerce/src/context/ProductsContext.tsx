@@ -1,10 +1,7 @@
 import React, { createContext, useMemo, useReducer } from 'react';
 
 // Context Reducer
-import productsReducer from './reducers/products';
-
-// Context initial state
-import { InitialProductsState } from 'context/state/products';
+import productsReducer, { InitialProductsState } from './reducers/products';
 
 // Types
 import { IProviderProps } from 'types/context/Providers';
