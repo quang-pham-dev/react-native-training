@@ -92,7 +92,7 @@ const ProductsList = ({
   // handle render Footer component
   const renderFooterComponent = () => {
     {
-      Boolean(isLoading) && <LoadingIndicator />;
+      isLoading && <LoadingIndicator />;
     }
     return null;
   };

@@ -48,7 +48,7 @@ const ProductCard = ({
       </View>
       <Title titleStyles={styles.productTitle} titleName={product?.title} />
       <Title titleStyles={styles.productType} titleName={product?.type} />
-      <Text style={styles.price}>{`$ ${product?.price || 0}`}</Text>
+      <Text style={styles.price}>{`$ ${product?.price}`}</Text>
     </Pressable>
   );
 };

@@ -14,10 +14,7 @@ import Colors from 'themes/Colors';
 // Styles
 import styles from './styles';
 
-const LoadingIndicator = ({
-  size = 'large',
-  color = Colors.secondaryColor,
-}: ILoadingIndicatorProps) => (
+const LoadingIndicator = ({ size, color = Colors.secondaryColor }: ILoadingIndicatorProps) => (
   <SafeAreaView>
     <ActivityIndicator style={styles.loading} size={size} color={color} />
   </SafeAreaView>

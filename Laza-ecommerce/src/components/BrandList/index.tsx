@@ -37,7 +37,6 @@ const BrandsCardList = ({ onPressBrandCard, brands, onLoadMoreBrands }: IBrandsL
   // handle action load more brands
   const handleLoadMoreBrands = () => {
     let cacheEndReached = null;
-    console.log('handleLoadMoreBrands', brands?.length);
     brands?.length < totalRowsOfBrands && (cacheEndReached = onLoadMoreBrands);
 
     return cacheEndReached;
@@ -54,7 +53,7 @@ const BrandsCardList = ({ onPressBrandCard, brands, onLoadMoreBrands }: IBrandsL
   // handle render Footer component
   const renderFooterComponent = () => {
     {
-      isLoading && <LoadingIndicator size='small' />;
+      isLoading && <LoadingIndicator />;
     }
     return null;
   };
