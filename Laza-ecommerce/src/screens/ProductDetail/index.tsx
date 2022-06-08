@@ -53,12 +53,12 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
   const getProductById = async (): Promise<void> => {
     productDispatch({ type: GET_PRODUCT });
     try {
-      const data = await productsService.getProductById(id);
+      const response = await productsService.getProductById(id);
       productDispatch({
         type: GET_PRODUCT_SUCCESS,
         payload: {
           data: {
-            product: data,
+            product: response?.data,
           },
         },
       });
