@@ -1,12 +1,13 @@
-# React Native practice one
+# React Native practice one: The Laza e-commerce application.
 
 ## Overview
 
-- This document provides the plan for implementing an application about
+- Building an mini application about e-commerce with limit feature as authentication sign in, sign out, display the Products list, Brands list, search filter by product name, view product detail, brand detail...
 
 ## Timeline
 
-- 7 working days
+- 7 working days,
+- actual 15 working days.
 
 ## Team size
 
@@ -16,7 +17,7 @@
 
 ## Targets
 
-- Create an app
+- Create an mini E-commerce app.
 - Applying the React Native knowledge I've read into practice.
 - Learn more about app behavior and UX.
 
@@ -26,9 +27,9 @@
 - React v17.0.2
 - React Native v0.68.0
 - Typescript v4.3.5
-- Details: [Here][1]
+- Details: [Here][2]
 
-  [1]: https://gitlab.asoft-python.com/quang.pham/react-training/-/blob/feature/react-native-practice-one/Laza-ecommerce/package.json
+  [2]: https://gitlab.asoft-python.com/quang.pham/react-training/-/blob/feature/react-native-practice-one/Laza-ecommerce/package.json
 
 ## Platform
 
@@ -52,14 +53,14 @@
 
   git checkout feature/react-native-practice-one
 
-  cd
+  cd Laza-ecommerce
   ```
 
 - Install dependencies:
   ```
   yarn or npm install
   ```
-- Run Android application:
+- Run application:
 
   ```
   Run your simulator (e.g. Android Studio, Android Emulator, Xcode, Iphone12)
