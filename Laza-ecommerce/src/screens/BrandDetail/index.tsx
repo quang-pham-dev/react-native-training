@@ -51,12 +51,15 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
 
   useEffect(() => {
     getProductsByBrandId();
-  }, [id, productDispatch]);
+  }, []);
 
-  const getProductsByBrandId = async () => {
+  const getProductsByBrandId = async (): Promise<void> => {
     productDispatch({ type: GET_PRODUCTS_BY_BRAND_ID });
     try {
-      const response = await productsService.getProductsByBrandId(id, PRODUCT_PAGINATION.PRODUCT_LIMIT);
+      const response = await productsService.getProductsByBrandId(
+        id,
+        PRODUCT_PAGINATION.PRODUCT_LIMIT,
+      );
       if (response.data) {
         const { data, pagination } = response.data || {};
         const { _limit, _totalRows } = pagination || {};
@@ -81,21 +84,21 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
     }
   };
 
-  // get current brand
+  // Get current brand
   const currentBrand = useMemo(
     () => brands?.filter((brand: IBrand) => brand.id === id),
     [brands, id],
   );
 
-  // handle back button
+  // Handle back button
   const handlePressBackIcon = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
-  // handle like product
+  // Handle like product
   const handlePressLikeProduct = useCallback(() => {}, []);
 
-  // handle action navigate to Product Detail Screen
+  // Handle action navigate to Product Detail Screen
   const handlePressProductCard = useCallback(
     (id: string) => {
       navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);
@@ -103,12 +106,15 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
     [navigation, id],
   );
 
-  // handle load more products
+  // Handle load more products
   const handleLoadMoreProducts = useCallback(async () => {
     productDispatch({ type: LOAD_MORE_PRODUCTS_BY_BRAND_ID });
 
     try {
-      const response = await productsService.getProductsByBrandId(id, limit + PRODUCT_PAGINATION.PRODUCT_LIMIT);
+      const response = await productsService.getProductsByBrandId(
+        id,
+        limit + PRODUCT_PAGINATION.PRODUCT_LIMIT,
+      );
       const { data, pagination } = response.data || {};
       const { _limit } = pagination || {};
       productDispatch({
@@ -176,6 +182,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
             onLoadMoreProducts={handleLoadMoreProducts}
           />
         )}
+
         {/* end Product List */}
       </View>
     </View>

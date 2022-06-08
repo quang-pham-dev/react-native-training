@@ -39,16 +39,16 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
   const { isProcessing } = authState || {};
 
   // handle action call api SignIn when user press Login button
-  const handleSubmitButton = async (loginInfo: ILoginCredentials) => {
+  const handleSubmitButton = async (loginInfo: ILoginCredentials): Promise<void> => {
     authDispatch({ type: SIGN_IN });
     const { username, password } = loginInfo;
     try {
       const response = await authService.signIn(username, password);
-      const data = JSON.stringify(response.data);
+      const data = JSON.stringify(response?.data);
       // set auth data info to local storage
       await set(AUTH_DATA, data);
-      const { user } = response.data;
-      const { access_token } = response.data;
+      const user = response?.data?.user;
+      const access_token = response?.data?.access_token;
       if (user && access_token) {
         authDispatch({
           type: SIGN_IN_SUCCESS,

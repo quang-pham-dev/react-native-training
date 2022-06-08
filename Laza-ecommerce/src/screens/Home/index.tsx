@@ -82,6 +82,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   // animation values
   const animatedValue = useRef(new Animated.Value(0)).current;
 
+  // Animation for the search bar
   const SearchBarAnimation = {
     transform: [
       {
@@ -108,6 +109,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     ],
   };
 
+  // Animation for the header
   const headerIconAnimation = {
     transform: [
       {
@@ -120,6 +122,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     ],
   };
 
+  // Animation for the header title
   const headerTitleAnimation = {
     transform: [
       {
@@ -144,6 +147,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     }),
   };
 
+  // Animation for the brands card list
   const brandsAnimation = {
     transform: [
       {
@@ -161,6 +165,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     }),
   };
 
+  // Animation for the products list
   const productListAnimation = {
     transform: [
       {
@@ -176,10 +181,10 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   useEffect(() => {
     getBrands();
     getProducts();
-  }, [productDispatch, brandDispatch]);
+  }, []);
 
   // GET PRODUCTS
-  const getProducts = async () => {
+  const getProducts = async (): Promise<void> => {
     productDispatch({ type: GET_PRODUCTS });
     try {
       const response = await productsService.getProducts(limit);
@@ -208,7 +213,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   };
 
   // GET BRANDS
-  const getBrands = async () => {
+  const getBrands = async (): Promise<void> => {
     brandDispatch({ type: GET_BRANDS });
     try {
       const response = await brandsService.getBrands(brandsLimit);
@@ -324,7 +329,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     [searchValue, products],
   );
 
-  // handle scroll Product list then sticky header
+  // Handle Animation on scroll Product list then sticky header
   const handleScrollProductsList = useCallback(
     (event: NativeSyntheticEvent<NativeScrollEvent>) => {
       const { contentOffset } = event.nativeEvent;

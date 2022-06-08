@@ -66,22 +66,20 @@ describe('Login Form', () => {
     await act(async () =>
       fireEvent.changeText(getByPlaceholderText('Enter your username'), usernameValue),
     );
-    await act(async () =>
-      fireEvent.changeText(getByPlaceholderText('Enter your username'), ''),
-    );
+    await act(async () => fireEvent.changeText(getByPlaceholderText('Enter your username'), ''));
 
     const errorMessage = queryAllByText('Username is required');
 
     expect(errorMessage).toBeTruthy();
   });
 
-  test('checks if Async Storage is used', async () => {
+  test('should checked if Async Storage is used', async () => {
     await AsyncStorage.getItem(AUTH_DATA);
 
     expect(AsyncStorage.getItem).toBeCalledWith(AUTH_DATA);
   });
 
-  it('on submit login', async () => {
+  test('should handle on submit login', async () => {
     const data = { password: '123456', username: 'Quangpham' };
     const submitHandler = jest.fn();
     const tree = renderer.create(<LoginForm onSubmit={submitHandler} />);

@@ -45,11 +45,11 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
 
   const { username, avatar } = currentUser || {};
 
-  const orderCount = 3 || 0;
+  const orderCount = 3;
 
   const [isEnabled, setIsEnabled] = useState(false);
 
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
+  const toggleSwitch = (): void => setIsEnabled(previousState => !previousState);
 
   // handel action sign out
   const handlePressLogoutIcon = useCallback(() => {

@@ -39,11 +39,12 @@ interface ILoginFormProps {
 
 const LoginForm = ({ onSubmit }: ILoginFormProps) => {
   const [isEnabled, setIsEnabled] = useState(true);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   const [showPassword, setShowPassword] = useState(true);
 
-  const handleShowPassword = () => setShowPassword(previousState => !previousState);
+  const toggleSwitch = (): void => setIsEnabled(previousState => !previousState);
+
+  const handleShowPassword = (): void => setShowPassword(previousState => !previousState);
 
   const {
     control,

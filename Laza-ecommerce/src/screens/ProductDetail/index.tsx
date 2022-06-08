@@ -48,12 +48,12 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
 
   useEffect(() => {
     getProductById();
-  }, [id, productDispatch]);
+  }, []);
 
-  const getProductById = async () => {
+  const getProductById = async (): Promise<void> => {
     productDispatch({ type: GET_PRODUCT });
     try {
-      const { data } = await productsService.getProductById(id);
+      const data = await productsService.getProductById(id);
       productDispatch({
         type: GET_PRODUCT_SUCCESS,
         payload: {

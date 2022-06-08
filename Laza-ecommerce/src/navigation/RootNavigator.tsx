@@ -29,7 +29,7 @@ const RootNavigator: React.FC = () => {
   const { isAuthenticated } = authState || {};
 
   // check authenticated state
-  const getAuth = async () => {
+  const getAuth = async (): Promise<void> => {
     authDispatch({ type: INITIALIZE });
     try {
       // get auth data from local storage
@@ -54,6 +54,7 @@ const RootNavigator: React.FC = () => {
     getAuth();
   }, [authDispatch]);
 
+  // Render stack navigator
   const renderStack = () => {
     if (isAuthenticated) {
       return <RootStack.Screen component={AppDrawerStack} name={SCREENS_ROUTES.STACK.APP.name} />;

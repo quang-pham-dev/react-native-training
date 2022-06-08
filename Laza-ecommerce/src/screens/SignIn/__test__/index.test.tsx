@@ -15,6 +15,9 @@ import Button from 'components/Button';
 // Utils
 import { navigationMock } from 'utils/testMock';
 
+// API
+import { authService } from 'api/auth.api';
+
 describe('SignIn Screen', () => {
   let tree: any;
   const welcomeText = 'Welcome';
@@ -57,5 +60,17 @@ describe('SignIn Screen', () => {
     const Pressabled = tree.root.findAllByType(Button)[0];
     Pressabled.props.onPress();
     expect(navigationMock.goBack).toHaveBeenCalled();
+  });
+
+  test('should called function handleSubmitButton', async () => {
+    jest.spyOn(authService, 'signIn');
+    const username = 'Quangpham';
+    const password = '123456';
+
+    render(<SignInScreen navigation={navigationMock} />);
+
+    await authService.signIn(username, password);
+
+    expect(authService.signIn).toHaveBeenCalledTimes(1);
   });
 });

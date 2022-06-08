@@ -26,12 +26,4 @@ describe('Test brands api', () => {
     jest.fn().mockRejectedValueOnce({ data: [products] });
     await productsService.getProductsByBrandId(product.brandId, PRODUCT_PAGINATION.PRODUCT_LIMIT);
   });
-  test('should call function loadMoreProducts', async () => {
-    jest.fn().mockRejectedValueOnce({ data: [products] });
-    await productsService.loadMoreProducts(PRODUCT_PAGINATION.PRODUCT_LIMIT);
-  });
-  test('should call function searchProductsByName', async () => {
-    jest.fn().mockRejectedValueOnce({ data: [products] });
-    await productsService.searchProductsByName(PRODUCT_PAGINATION.PRODUCT_LIMIT, product.name);
-  });
 });

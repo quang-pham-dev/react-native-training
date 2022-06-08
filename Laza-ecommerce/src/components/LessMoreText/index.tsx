@@ -1,5 +1,5 @@
 import React, { memo, useCallback, useState } from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 import isEqual from 'react-fast-compare';
 
 // Types
@@ -18,7 +18,7 @@ const MoreLessText = ({ children, numberOfLines, styleShowMoreText }: IMoreLessT
   }, [showMore]);
 
   return isTruncatedText ? (
-    <View style={[styles.showMoreContainer]}>
+    <>
       <Text
         style={[styles.readMoreText, styleShowMoreText]}
         numberOfLines={showMore ? numberOfLines : 0}>
@@ -27,7 +27,7 @@ const MoreLessText = ({ children, numberOfLines, styleShowMoreText }: IMoreLessT
       <Text style={styles.readMoreText} onPress={handleShowMore}>
         {showMore ? 'Read More' : 'Less'}
       </Text>
-    </View>
+    </>
   ) : (
     <Text
       style={[styles.readMoreText, styleShowMoreText]}
