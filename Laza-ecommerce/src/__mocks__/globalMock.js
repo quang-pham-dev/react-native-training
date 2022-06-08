@@ -2,6 +2,6 @@ import mockAsyncStorage from '@react-native-async-storage/async-storage/jest/asy
 import '@testing-library/jest-dom';
 
 jest.mock('@react-native-async-storage/async-storage', () => mockAsyncStorage);
-jest.useFakeTimers()
+jest.useFakeTimers();
 global.window = {};
 global.window = global;

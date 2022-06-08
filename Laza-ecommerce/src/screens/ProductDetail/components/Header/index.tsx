@@ -15,14 +15,14 @@ import styles from './styles';
 
 const Header = ({ source, navigation }: IProductDetailHeaderProps) => {
   // handle back button
-  const onPressBack = useCallback(() => {
+  const handlePressBack = useCallback(() => {
     navigation.goBack();
   }, [navigation]);
 
   return (
     <View style={styles.headerContainer}>
       <View style={styles.actionsWrapper}>
-        <Pressable onPress={onPressBack}>
+        <Pressable onPress={handlePressBack}>
           <Image style={styles.backIcon} source={IMAGES.iconBack} />
         </Pressable>
         <Pressable>

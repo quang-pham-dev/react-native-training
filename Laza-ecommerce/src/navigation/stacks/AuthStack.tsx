@@ -1,4 +1,6 @@
 import React from 'react';
+
+// LIBS
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Screens
@@ -8,6 +10,7 @@ import SignInScreen from 'screens/SignIn';
 // Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
 
+// Create Auth stack navigator
 const Stack = createNativeStackNavigator();
 
 const AuthStack = () => (

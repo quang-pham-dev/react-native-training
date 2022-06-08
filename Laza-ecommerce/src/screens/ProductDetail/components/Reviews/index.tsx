@@ -49,6 +49,7 @@ const Reviews = ({ comment, rating, reviewers }: IProductDetailItemProps) => {
           </View>
           {/* End of review Rating */}
         </View>
+
         <View style={styles.reviewItemContent}>
           {Boolean(comment) && (
             <MoreLessText styleShowMoreText={styles.textContent} numberOfLines={2}>

@@ -4,6 +4,7 @@ import { Pressable } from 'react-native';
 // LIBS
 import { cleanup, fireEvent, render } from '@testing-library/react-native';
 import renderer from 'react-test-renderer';
+import '@testing-library/jest-dom';
 
 // Screens
 import BrandDetailScreen from 'screens/BrandDetail';
@@ -66,8 +67,10 @@ describe('Brand detail Screen', () => {
     expect(navigationMock.goBack).toHaveBeenCalled();
   });
 
-  test('should call function getProductsByBrandId successfully', async () => {
-    jest.fn().mockRejectedValueOnce({ data: [brands] });
+  test('should called function getProductsByBrandId', async () => {
+    jest.spyOn(React, 'useEffect').mockImplementationOnce(f => f());
+    jest.spyOn(productsService, 'getProductsByBrandId');
+
     render(
       <BrandDetailScreen
         navigation={navigationMock}
@@ -78,5 +81,7 @@ describe('Brand detail Screen', () => {
     );
 
     await productsService.getProductsByBrandId(product.brandId, PRODUCT_PAGINATION.PRODUCT_LIMIT);
+
+    expect(productsService.getProductsByBrandId).toHaveBeenCalledTimes(1);
   });
 });

@@ -26,6 +26,7 @@ import Colors from 'themes/Colors';
 import IMAGES from 'themes/Images';
 import Metrics from 'themes/Metrics';
 
+// List Tab Bar Icon
 const TabBarIcon = {
   [SCREENS_ROUTES.STACK.HOME.name]: IMAGES.iconHome,
   [SCREENS_ROUTES.STACK.WISHLIST.name]: IMAGES.iconHeart,
@@ -33,6 +34,7 @@ const TabBarIcon = {
   [SCREENS_ROUTES.STACK.WALLET.name]: IMAGES.iconWallet,
 };
 
+// List Tab Bar Label
 const TabBarName = {
   [SCREENS_ROUTES.STACK.HOME.name]: SCREENS_ROUTES.STACK.HOME.name,
   [SCREENS_ROUTES.STACK.WISHLIST.name]: SCREENS_ROUTES.STACK.WISHLIST.name,
@@ -40,12 +42,14 @@ const TabBarName = {
   [SCREENS_ROUTES.STACK.WALLET.name]: SCREENS_ROUTES.STACK.WALLET.name,
 };
 
+// Handle render tab bar label
 const renderTabBarLabel = (focused: boolean, route: any) => {
   const tintColor = focused ? Colors.primaryColor : Colors.textBlack;
   const styles = { color: tintColor };
   return <Text children={TabBarName[route?.routeName]} style={styles} />;
 };
 
+// Handle render tab bar icon
 const renderTabBarIcon = (focused: boolean, route: any) => {
   const sizeIcon = focused ? Metrics.icons.custom : Metrics.icons.standard;
   const tintColor = focused ? Colors.primaryColor : Colors.textGray;
@@ -53,6 +57,7 @@ const renderTabBarIcon = (focused: boolean, route: any) => {
   return <Image style={styles} source={TabBarIcon[route?.routeName]} resizeMode='contain' />;
 };
 
+// List Tab Bar
 const TabBarList = [
   {
     routeName: SCREENS_ROUTES.STACK.HOME.name,
@@ -84,6 +89,7 @@ const TabBarList = [
   },
 ];
 
+// Create Tab Navigator
 const BottomTab = createBottomTabNavigator();
 
 const AppStackNavigator = () => {
@@ -115,6 +121,7 @@ const AppStackNavigator = () => {
   );
 };
 
+// Create Drawer navigator
 const Drawer = createDrawerNavigator();
 
 function AppDrawerStack() {

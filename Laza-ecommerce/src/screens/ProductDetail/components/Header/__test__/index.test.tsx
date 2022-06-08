@@ -26,7 +26,7 @@ describe('Product detail Header', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('should call back button', () => {
+  test('should call function handlePressBack', () => {
     const backButton = tree.root.findAllByType(Pressable)[0];
     backButton.props.onPress();
 

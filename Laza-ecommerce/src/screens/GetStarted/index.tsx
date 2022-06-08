@@ -40,6 +40,8 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
         </View>
         <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started'></Title>
       </View>
+      {/* End of header */}
+
       <View style={styles.main}>
         <Button
           testID='facebookButton'
@@ -67,6 +69,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
         />
       </View>
       {/* end main */}
+
       <View style={styles.footer}>
         <View style={styles.footerTextWrapper}>
           <Title titleStyles={styles.alreadyText} titleName='Already have an account? ' />
@@ -80,6 +83,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
           textStyles={[styles.text, styles.textBottomButton]}
         />
       </View>
+
       {/* end footer */}
     </View>
   );
