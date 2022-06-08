@@ -16,7 +16,7 @@ const getProducts = async (limit: number): Promise<IProductResponse> => {
 };
 
 // get product by id
-const getProductById = async (id: string): Promise<IProduct> => {
+const getProductById = async (id: string): Promise<IProductResponse> => {
   return await http.get(`${ENDPOINTS.PRODUCT.GET_PRODUCTS}?id=${id}`);
 };
 
