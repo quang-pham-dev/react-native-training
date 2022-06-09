@@ -17,7 +17,7 @@ const Header = ({ navigation }: IHeaderProps) => {
   // Toggle menu open
   const handleToggleMenu = useCallback(() => {
     navigation.dispatch(DrawerActions.openDrawer());
-  }, [navigation]);
+  }, []);
 
   return (
     <View style={styles.container}>

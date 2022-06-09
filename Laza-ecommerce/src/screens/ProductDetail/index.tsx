@@ -12,7 +12,7 @@ import Description from './components/Description';
 import Reviews from './components/Reviews';
 
 // API
-import { productsService } from 'api/products.api';
+import { productsService } from 'api/products';
 
 // Context
 import { ProductsContext } from 'context/ProductsContext';
@@ -25,7 +25,7 @@ import { IProductDetailProps } from 'types/screens/ProductDetail';
 import styles from './styles';
 
 const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
-  const id = route.params as string;
+  const id = route.params;
 
   const { productState, productDispatch } = useContext(ProductsContext);
 
@@ -47,30 +47,38 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
   } = data;
 
   useEffect(() => {
-    getProductById();
+    // Get product by id
+    let isCancel = false;
+    (async function getProductById(): Promise<void> {
+      productDispatch({ type: GET_PRODUCT });
+      try {
+        const response = await productsService.getProductById(id);
+        if (!isCancel) {
+          productDispatch({
+            type: GET_PRODUCT_SUCCESS,
+            payload: {
+              data: {
+                product: response?.data,
+              },
+            },
+          });
+        }
+      } catch (error) {
+        if (!isCancel) {
+          productDispatch({
+            type: GET_PRODUCT_FAILED,
+            payload: error,
+          });
+        }
+        Alert.alert('Error', error.message);
+      }
+    })();
+
+    // clean up
+    return () => {
+      isCancel = true;
+    };
   }, []);
-
-  const getProductById = async (): Promise<void> => {
-    productDispatch({ type: GET_PRODUCT });
-    try {
-      const response = await productsService.getProductById(id);
-      productDispatch({
-        type: GET_PRODUCT_SUCCESS,
-        payload: {
-          data: {
-            product: response?.data,
-          },
-        },
-      });
-    } catch (error) {
-      productDispatch({
-        type: GET_PRODUCT_FAILED,
-        payload: error,
-      });
-
-      Alert.alert('Error', error.message);
-    }
-  };
 
   // handle action press button add to cart
   const handlePressAddToCartIcon = useCallback(() => {}, []);

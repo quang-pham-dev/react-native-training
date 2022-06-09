@@ -52,7 +52,7 @@ const RootNavigator: React.FC = () => {
 
   useEffect(() => {
     getAuth();
-  }, [authDispatch]);
+  }, []);
 
   // Render stack navigator
   const renderStack = () => {

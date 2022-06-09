@@ -18,7 +18,6 @@ import IMAGES from 'themes/Images';
 import styles from './styles';
 
 const SearchBar = ({
-  value,
   autoFocus,
   textInputStyles = {},
   onSubmitEditing,
@@ -32,12 +31,12 @@ const SearchBar = ({
       setValueState(text);
       productDispatch({ type: SEARCH_PRODUCTS_VALUE, searchValue: text });
     },
-    [setValueState],
+    [productDispatch],
   );
 
   const handleSubmitEditing = useCallback(() => {
     onSubmitEditing();
-  }, [onSubmitEditing, valueState]);
+  }, [onSubmitEditing]);
 
   return (
     <View style={styles.container}>

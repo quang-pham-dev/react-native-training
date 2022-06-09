@@ -3,7 +3,6 @@ import { Alert, Image, Switch, View } from 'react-native';
 
 // LIBS
 import { DrawerActions } from '@react-navigation/native';
-import isEqual from 'react-fast-compare';
 
 // Screens
 import { SCREENS_ROUTES } from 'constants/Screens';
@@ -20,7 +19,7 @@ import { AuthenticationContext } from 'context/AuthContext';
 import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'context/actions/auth';
 
 // API
-import { authService } from 'api/auth.api';
+import { authService } from 'api/auth';
 
 // Constants
 import { AUTH_DATA } from 'constants/Common';
@@ -82,22 +81,22 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
   // handle Close menu
   const handleCloseMenu = useCallback(() => {
     navigation.dispatch(DrawerActions.closeDrawer());
-  }, [navigation]);
+  }, []);
 
   // handle action navigate to Bag screen
   const handlePressBagIcon = useCallback(() => {
     navigation.navigate(SCREENS_ROUTES.STACK.BAGS.name);
-  }, [navigation]);
+  }, []);
 
   // handle action navigate to WishList screen
   const handlePressWishlistIcon = useCallback(() => {
     navigation.navigate(SCREENS_ROUTES.STACK.WISHLIST.name);
-  }, [navigation]);
+  }, []);
 
   // handle action navigate to Wallet screen
   const handlePressWalletIcon = useCallback(() => {
     navigation.navigate(SCREENS_ROUTES.STACK.WALLET.name);
-  }, [navigation]);
+  }, []);
 
   // Drawer List Item
   const renderDrawerItem = [

@@ -22,7 +22,7 @@ import {
 } from 'context/actions/products';
 
 // API
-import { productsService } from 'api/products.api';
+import { productsService } from 'api/products';
 
 // Constants
 import { SCREENS_ROUTES } from 'constants/Screens';
@@ -50,39 +50,46 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   const { productsByBrandId, isProcessing, limit, totalRowsByBrandId } = productState || {};
 
   useEffect(() => {
-    getProductsByBrandId();
-  }, []);
+    // Get products by brand id
+    let isCancel = false;
+    (async function getProductsByBrandId(): Promise<void> {
+      productDispatch({ type: GET_PRODUCTS_BY_BRAND_ID });
 
-  const getProductsByBrandId = async (): Promise<void> => {
-    productDispatch({ type: GET_PRODUCTS_BY_BRAND_ID });
-    try {
-      const response = await productsService.getProductsByBrandId(
-        id,
-        PRODUCT_PAGINATION.PRODUCT_LIMIT,
-      );
-      if (response.data) {
-        const { data, pagination } = response.data || {};
-        const { _limit, _totalRows } = pagination || {};
-        productDispatch({
-          type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
-          payload: {
-            data: {
-              productsByBrandId: data,
+      try {
+        const response = await productsService.getProductsByBrandId(
+          id,
+          PRODUCT_PAGINATION.PRODUCT_LIMIT,
+        );
+
+        if (!isCancel) {
+          const { data, pagination } = response?.data || {};
+          const { _limit, _totalRows } = pagination || {};
+          productDispatch({
+            type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
+            payload: {
+              data: {
+                productsByBrandId: data,
+              },
+              limit: _limit,
+              totalRowsByBrandId: _totalRows,
             },
-            limit: _limit,
-            totalRowsByBrandId: _totalRows,
-          },
-        });
+          });
+        }
+      } catch (error) {
+        if (!isCancel) {
+          productDispatch({
+            type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
+            payload: error,
+          });
+        }
+        Alert.alert('Error', error.message);
       }
-    } catch (error) {
-      productDispatch({
-        type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
-        payload: error,
-      });
+    })();
 
-      Alert.alert('Error', error.message);
-    }
-  };
+    return () => {
+      isCancel = true;
+    };
+  }, []);
 
   // Get current brand
   const currentBrand = useMemo(
@@ -93,18 +100,15 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   // Handle back button
   const handlePressBackIcon = useCallback(() => {
     navigation.goBack();
-  }, [navigation]);
+  }, []);
 
   // Handle like product
   const handlePressLikeProduct = useCallback(() => {}, []);
 
   // Handle action navigate to Product Detail Screen
-  const handlePressProductCard = useCallback(
-    (id: string) => {
-      navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);
-    },
-    [navigation, id],
-  );
+  const handlePressProductCard = useCallback((id: string) => {
+    navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);
+  }, []);
 
   // Handle load more products
   const handleLoadMoreProducts = useCallback(async () => {
@@ -134,7 +138,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
 
       Alert.alert('Error', error.message);
     }
-  }, [limit, productsByBrandId]);
+  }, [limit]);
 
   return (
     <View style={styles.container}>

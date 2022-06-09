@@ -43,8 +43,8 @@ import {
 } from 'context/actions/brands';
 
 // API
-import { productsService } from 'api/products.api';
-import { brandsService } from 'api/brands.api';
+import { productsService } from 'api/products';
+import { brandsService } from 'api/brands';
 
 // Types
 import { IHomeScreenProps } from 'types/screens/Home';
@@ -64,7 +64,6 @@ import styles from './styles';
 
 const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const { authState } = useContext(AuthenticationContext);
-
   const { productState, productDispatch } = useContext(ProductsContext);
 
   const { brandState, brandDispatch } = useContext(BrandsContext);
@@ -177,84 +176,93 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   };
 
   useEffect(() => {
-    getBrands();
-    getProducts();
+    // GET BRANDS
+    let isCancel = false;
+    (async function getBrands(): Promise<void> {
+      brandDispatch({ type: GET_BRANDS });
+      try {
+        const response = await brandsService.getBrands(brandsLimit);
+        if (!isCancel) {
+          const { data, pagination } = response.data || {};
+          const { _limit, _totalRows } = pagination || {};
+
+          brandDispatch({
+            type: GET_BRANDS_SUCCESS,
+            payload: {
+              data: {
+                brands: data,
+              },
+              totalRowsOfBrands: _totalRows,
+              limit: _limit,
+            },
+          });
+        }
+      } catch (error) {
+        if (!isCancel) {
+          brandDispatch({
+            type: GET_BRANDS_FAILED,
+            payload: error,
+          });
+        }
+        Alert.alert('Error', error.message);
+      }
+    })();
+
+    // cleanup
+    return () => {
+      isCancel = true;
+    };
   }, []);
 
-  // GET PRODUCTS
-  const getProducts = async (): Promise<void> => {
-    productDispatch({ type: GET_PRODUCTS });
-    try {
-      const response = await productsService.getProducts(limit);
-      if (response.data) {
-        const { data, pagination } = response.data || {};
-        const { _limit, _totalRows } = pagination || {};
-        productDispatch({
-          type: GET_PRODUCTS_SUCCESS,
-          payload: {
-            data: {
-              products: data,
+  useEffect(() => {
+    // GET PRODUCTS
+    let isCancel = false;
+    (async function getProducts(): Promise<void> {
+      productDispatch({ type: GET_PRODUCTS });
+
+      try {
+        const response = await productsService.getProducts(limit);
+        if (!isCancel) {
+          const { data, pagination } = response.data || {};
+          const { _limit, _totalRows } = pagination || {};
+          productDispatch({
+            type: GET_PRODUCTS_SUCCESS,
+            payload: {
+              data: {
+                products: data,
+              },
+              totalRows: _totalRows,
+              limit: _limit,
             },
-            totalRows: _totalRows,
-            limit: _limit,
-          },
-        });
+          });
+        }
+      } catch (error) {
+        if (!isCancel) {
+          productDispatch({
+            type: GET_PRODUCTS_FAILED,
+            payload: error,
+          });
+        }
+        Alert.alert('Error', error.message);
       }
-    } catch (error) {
-      productDispatch({
-        type: GET_PRODUCTS_FAILED,
-        payload: error,
-      });
+    })();
 
-      Alert.alert('Error', error.message);
-    }
-  };
-
-  // GET BRANDS
-  const getBrands = async (): Promise<void> => {
-    brandDispatch({ type: GET_BRANDS });
-    try {
-      const response = await brandsService.getBrands(brandsLimit);
-      if (response.data) {
-        const { data, pagination } = response.data || {};
-        const { _limit, _totalRows } = pagination || {};
-
-        brandDispatch({
-          type: GET_BRANDS_SUCCESS,
-          payload: {
-            data: {
-              brands: data,
-            },
-            totalRowsOfBrands: _totalRows,
-            limit: _limit,
-          },
-        });
-      }
-    } catch (error) {
-      brandDispatch({
-        type: GET_BRANDS_FAILED,
-        payload: error,
-      });
-
-      Alert.alert('Error', error.message);
-    }
-  };
+    //cleanup
+    return () => {
+      isCancel = true;
+    };
+  }, []);
 
   // handle action navigate to Brand Detail Screen when press card brand
-  const handlePressBrandCard = useCallback(
-    (id: string) => {
-      navigation.navigate(SCREENS_ROUTES.HOME_STACK.BRAND_DETAIL_SCREEN.name, id);
-    },
-    [navigation],
-  );
+  const handlePressBrandCard = useCallback((id: string) => {
+    navigation.navigate(SCREENS_ROUTES.HOME_STACK.BRAND_DETAIL_SCREEN.name, id);
+
+  }, []);
 
   // handle action navigate to Product Detail Screen when press card product
-  const handlePressProductCard = useCallback(
-    (id: string) => {
-      navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);
-    },
-    [navigation],
-  );
+  const handlePressProductCard = useCallback((id: string) => {
+    navigation.navigate(SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name, id);
+  }, []);
 
   // handle Load More Products
   const handleLoadMoreProducts = useCallback(async () => {
@@ -281,7 +289,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
       Alert.alert('Error', error.message);
     }
-  }, [limit, products]);
+  }, [limit]);
 
   // handle Load More Brands
   const handleLoadMoreBrands = useCallback(async () => {
@@ -308,7 +316,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
       Alert.alert('Error', error.message);
     }
-  }, [brandsLimit, brands]);
+  }, [brandsLimit]);
 
   // handle action Like Product
   const handlePressLikeProduct = useCallback(() => {}, []);
@@ -321,8 +329,8 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     () =>
       searchValue
         ? products.filter((product: IProduct) =>
-            product.name.toLowerCase().includes(searchValue.toLowerCase()),
-          )
+          product.name.toLowerCase().includes(searchValue.toLowerCase()),
+        )
         : products,
     [searchValue, products],
   );

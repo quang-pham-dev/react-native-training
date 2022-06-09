@@ -17,7 +17,7 @@ const Header = ({ source, navigation }: IProductDetailHeaderProps) => {
   // handle back button
   const handlePressBack = useCallback(() => {
     navigation.goBack();
-  }, [navigation]);
+  }, []);
 
   return (
     <View style={styles.headerContainer}>

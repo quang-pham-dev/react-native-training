@@ -21,12 +21,12 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
   // handle navigate to SignIn screen
   const handlePressSignInLink = useCallback(() => {
     navigation.navigate(SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name);
-  }, [navigation]);
+  }, []);
 
   // handle go Back action
   const handlePressBackIcon = useCallback(() => {
     navigation.goBack();
-  }, [navigation]);
+  }, []);
 
   return (
     <View style={styles.container}>
