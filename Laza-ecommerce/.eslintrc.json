@@ -18,13 +18,15 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-native", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "react-hooks", "react-native", "@typescript-eslint", "prettier"],
   "rules": {
     "react-native/no-unused-styles": 2,
     "react-native/split-platform-components": 2,
     "react-native/no-inline-styles": 0,
     "react-native/no-color-literals": 2,
     "react-native/no-raw-text": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "no-undef": "off",
     "prefer-destructuring": [
       "error",
@@ -38,7 +40,7 @@
     ],
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
-    "no-console": "off",
+    "no-console": "warn",
     "quotes": ["error", "single"],
     "semi": ["error", "always"]
   }
