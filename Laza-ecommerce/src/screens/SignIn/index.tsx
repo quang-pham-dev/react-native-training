@@ -1,8 +1,5 @@
-import React, { memo, useCallback, useContext } from 'react';
+import React, { useCallback, useContext } from 'react';
 import { Alert, KeyboardAvoidingView, ScrollView, View } from 'react-native';
-
-// LIB
-import isEqual from 'react-fast-compare';
 
 // Components
 import LoadingIndicator from 'components/LoadingIndicator';
@@ -99,4 +96,4 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
   );
 };
 
-export default memo(SignInScreen, isEqual);
+export default SignInScreen;

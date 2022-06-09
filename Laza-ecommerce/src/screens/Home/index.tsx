@@ -1,7 +1,6 @@
-import React, { memo, useCallback, useContext, useEffect, useMemo, useRef } from 'react';
+import React, { useCallback, useContext, useEffect, useMemo, useRef } from 'react';
 import {
   Alert,
-  KeyboardAvoidingView,
   View,
   Text,
   Animated,
@@ -12,7 +11,6 @@ import {
 
 // LIBS
 import { SafeAreaView } from 'react-native-safe-area-context';
-import isEqual from 'react-fast-compare';
 
 // Components
 import BrandsCardList from 'components/BrandList';
@@ -430,4 +428,4 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   );
 };
 
-export default memo(HomeScreen, isEqual);
+export default HomeScreen;

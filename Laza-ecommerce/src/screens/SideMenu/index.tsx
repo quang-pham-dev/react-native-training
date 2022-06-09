@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useContext, useState } from 'react';
+import React, { useCallback, useContext, useState } from 'react';
 import { Alert, Image, Switch, View } from 'react-native';
 
 // LIBS
@@ -192,4 +192,4 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
   );
 };
 
-export default memo(SideMenu, isEqual);
+export default SideMenu;
