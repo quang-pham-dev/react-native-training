@@ -12,7 +12,7 @@ import { AuthenticationContext } from 'context/AuthContext';
 import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'context/actions/auth';
 
 // API
-import { authService } from 'api/auth.api';
+import { authService } from 'api/auth';
 
 // Constants
 import { AUTH_DATA } from 'constants/Common';
@@ -66,7 +66,7 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
   // handle action when press goBack
   const handlePressBack = useCallback(() => {
     navigation.goBack();
-  }, [navigation]);
+  }, []);
 
   return (
     <ScrollView>

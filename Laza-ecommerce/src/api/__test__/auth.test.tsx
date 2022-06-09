@@ -1,7 +1,7 @@
 import { jest } from '@jest/globals';
 
 // API
-import { authService } from 'api/auth.api';
+import { authService } from 'api/auth';
 
 // Mocks
 import { user } from '__mocks__/dataMock/user';

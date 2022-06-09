@@ -1,5 +1,3 @@
-import { Alert } from 'react-native';
-
 // API
 import http from 'api/http';
 

@@ -16,7 +16,7 @@ import Button from 'components/Button';
 import { navigationMock } from 'utils/testMock';
 
 // API
-import { authService } from 'api/auth.api';
+import { authService } from 'api/auth';
 
 describe('SignIn Screen', () => {
   let tree: any;

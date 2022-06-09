@@ -6,7 +6,7 @@ import { ENDPOINTS } from 'constants/Common';
 import { PRODUCT_PAGINATION } from 'constants/Products';
 
 // Types
-import { IProduct, IProductResponse } from 'types/models/Products';
+import { IProductResponse } from 'types/models/Products';
 
 // get all products
 const getProducts = async (limit: number): Promise<IProductResponse> => {

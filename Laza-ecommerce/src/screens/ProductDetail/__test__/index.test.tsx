@@ -12,14 +12,6 @@ import { navigationMock } from 'utils/testMock';
 // Mock data
 import { product } from '__mocks__/dataMock';
 
-// API
-import { productsService } from 'api/products.api';
-
-// @ts-ignore
-global.fetch = jest.fn(() => Promise.resolve({ json: () => Promise.resolve(product) }));
-
-jest.mock('api/products.api');
-
 describe('Product detail Screen', () => {
   let tree: any;
   beforeEach(() => {

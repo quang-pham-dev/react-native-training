@@ -1,7 +1,7 @@
 import { jest } from '@jest/globals';
 
 // API
-import { productsService } from 'api/products.api';
+import { productsService } from 'api/products';
 
 // Constants
 import { PRODUCT_PAGINATION } from 'constants/Products';
