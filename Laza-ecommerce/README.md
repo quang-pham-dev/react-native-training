@@ -2,7 +2,7 @@
 
 ## Overview
 
-- Building an mini application about e-commerce with limit feature as authentication sign in, sign out, display the Products list, Brands list, search filter by product name, view product detail, brand detail...
+- Building the mini application about e-commerce with limit feature as authentication with sign in, sign out, display the Products list, Brands list, search filter by product name, view product detail, brand detail...
 
 ## Timeline
 
@@ -17,15 +17,15 @@
 
 ## Targets
 
-- Create an mini E-commerce app.
+- Create the mini E-commerce app.
 - Applying the React Native knowledge I've read into practice.
 - Learn more about app behavior and UX.
 
 ## Technologies
 
 - Expo v44.0.0
-- React v17.0.2
-- React Native v0.68.0
+- React v17.0.1
+- React Native v0.64.3
 - Typescript v4.3.5
 - Details: [Here][2]
 
