@@ -1,5 +1,3 @@
-import { ImageSourcePropType } from 'react-native';
-
 // Types
 import {
   IImageReviewerProps,
@@ -14,7 +12,7 @@ export interface IProductDetailProps {
     goBack: () => void;
   };
   route: {
-    params?: string;
+    params: string;
   };
   product: IProduct;
 }

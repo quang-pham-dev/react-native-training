@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useContext, useRef } from 'react';
+import React, { memo, useCallback, useContext } from 'react';
 import { FlatList, View } from 'react-native';
 
 // LIBS
@@ -86,7 +86,7 @@ const ProductsList = ({
         onPressLikeProduct={handlePressLikeProduct}
       />
     ),
-    [handlePressProductCard, onPressLikeProduct],
+    [handlePressLikeProduct, handlePressProductCard],
   );
 
   // handle render Footer component

@@ -29,7 +29,7 @@ describe('Product Card Component', () => {
 
   test('Should render with ImageBackground', () => {
     const image = tree.root.findAllByType(ImageBackground)[0];
-    expect(image.props.source.uri).toBe(product.source);
+    expect(image.props.source.uri).toEqual(product.source);
   });
 
   test('Should render with title', async () => {
