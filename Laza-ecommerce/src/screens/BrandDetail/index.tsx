@@ -51,7 +51,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
 
   useEffect(() => {
     // Get products by brand id
-    let isCancel = false;
+    let isCancelled = false;
     (async function getProductsByBrandId(): Promise<void> {
       productDispatch({ type: GET_PRODUCTS_BY_BRAND_ID });
 
@@ -61,7 +61,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
           PRODUCT_PAGINATION.PRODUCT_LIMIT,
         );
 
-        if (!isCancel) {
+        if (!isCancelled) {
           const { data, pagination } = response?.data || {};
           const { _limit, _totalRows } = pagination || {};
           productDispatch({
@@ -76,7 +76,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
           });
         }
       } catch (error) {
-        if (!isCancel) {
+        if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
             payload: error,
@@ -87,7 +87,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
     })();
 
     return () => {
-      isCancel = true;
+      isCancelled = true;
     };
   }, []);
 

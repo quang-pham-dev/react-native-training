@@ -48,12 +48,12 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
 
   useEffect(() => {
     // Get product by id
-    let isCancel = false;
+    let isCancelled = false;
     (async function getProductById(): Promise<void> {
       productDispatch({ type: GET_PRODUCT });
       try {
         const response = await productsService.getProductById(id);
-        if (!isCancel) {
+        if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCT_SUCCESS,
             payload: {
@@ -64,7 +64,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
           });
         }
       } catch (error) {
-        if (!isCancel) {
+        if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCT_FAILED,
             payload: error,
@@ -76,7 +76,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
 
     // clean up
     return () => {
-      isCancel = true;
+      isCancelled = true;
     };
   }, []);
 

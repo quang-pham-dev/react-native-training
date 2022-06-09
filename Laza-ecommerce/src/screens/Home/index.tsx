@@ -177,12 +177,12 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
   useEffect(() => {
     // GET BRANDS
-    let isCancel = false;
+    let isCancelled = false;
     (async function getBrands(): Promise<void> {
       brandDispatch({ type: GET_BRANDS });
       try {
         const response = await brandsService.getBrands(brandsLimit);
-        if (!isCancel) {
+        if (!isCancelled) {
           const { data, pagination } = response.data || {};
           const { _limit, _totalRows } = pagination || {};
 
@@ -198,7 +198,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           });
         }
       } catch (error) {
-        if (!isCancel) {
+        if (!isCancelled) {
           brandDispatch({
             type: GET_BRANDS_FAILED,
             payload: error,
@@ -210,19 +210,19 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
     // cleanup
     return () => {
-      isCancel = true;
+      isCancelled = true;
     };
   }, []);
 
   useEffect(() => {
     // GET PRODUCTS
-    let isCancel = false;
+    let isCancelled = false;
     (async function getProducts(): Promise<void> {
       productDispatch({ type: GET_PRODUCTS });
 
       try {
         const response = await productsService.getProducts(limit);
-        if (!isCancel) {
+        if (!isCancelled) {
           const { data, pagination } = response.data || {};
           const { _limit, _totalRows } = pagination || {};
           productDispatch({
@@ -237,7 +237,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           });
         }
       } catch (error) {
-        if (!isCancel) {
+        if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCTS_FAILED,
             payload: error,
@@ -249,7 +249,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
     //cleanup
     return () => {
-      isCancel = true;
+      isCancelled = true;
     };
   }, []);
 
