@@ -16,7 +16,19 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
-    }
+      "supportsTablet": true,
+      "requireFullScreen": true,
+      "bundleIdentifier": "y"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.asnet.laza",
+      "versionCode": 1
+    },
+    "plugins": ["expo-community-flipper"],
+    "jsEngine": "hermes"
   }
 }
