@@ -7,7 +7,7 @@ import Metrics from 'themes/Metrics';
 
 const styles = StyleSheet.create({
   productCardContainer: {
-    width: 160,
+    width: 165,
   },
 
   imageWrapper: {
