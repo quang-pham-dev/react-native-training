@@ -51,8 +51,8 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
           type: SIGN_IN_SUCCESS,
           payload: {
             user,
-            access_token,
-          },
+            access_token
+          }
         });
       }
     } catch (error) {
@@ -86,10 +86,12 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
               titleName='Please enter your data to continue'></Title>
           </View>
           {/* end header */}
-          {Boolean(isProcessing) && <LoadingIndicator />}
-          {/* Form */}
-          <LoginForm onSubmit={handleSubmitButton} />
-          {/* end Form */}
+          <View style={styles.loginForm}>
+            {Boolean(isProcessing) && <LoadingIndicator />}
+            {/* Form */}
+            <LoginForm onSubmit={handleSubmitButton} />
+            {/* end Form */}
+          </View>
         </View>
       </KeyboardAvoidingView>
     </ScrollView>

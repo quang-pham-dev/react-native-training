@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.primaryBackground,
-    height: height,
+    height
   },
 
   header: { flex: 1 },
@@ -18,12 +18,12 @@ export const styles = StyleSheet.create({
   iconBack: {
     width: 45,
     height: 45,
-    marginTop: Metrics.margin.xxxl,
+    marginTop: Metrics.margin.xxxl
   },
 
   iconBackWrapper: {
     flexDirection: 'row',
-    marginLeft: Metrics.margin.lg,
+    marginLeft: Metrics.margin.lg
   },
 
   headerTitle: {
@@ -34,7 +34,7 @@ export const styles = StyleSheet.create({
     color: Colors.textBlack,
     paddingHorizontal: Metrics.margin.lg,
 
-    marginTop: Metrics.margin.xm,
+    marginTop: Metrics.margin.xm
   },
 
   headerSubTitle: {
@@ -43,6 +43,9 @@ export const styles = StyleSheet.create({
     lineHeight: Fonts.lineHeight.base,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
     color: Colors.textGray,
-    paddingTop: Metrics.padding.xsm,
+    paddingTop: Metrics.padding.xsm
   },
+  loginForm: {
+    flex: 2
+  }
 });

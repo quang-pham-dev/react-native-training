@@ -1,12 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Login Form should render correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     style={
       Object {
         "alignItems": "center",
-        "flex": 2,
+        "flex": 3,
         "justifyContent": "center",
         "paddingHorizontal": 20,
       }
@@ -280,7 +286,7 @@ Array [
         value={true}
       />
     </View>
-  </View>,
+  </View>
   <View
     style={
       Object {
@@ -362,6 +368,6 @@ Array [
         Login
       </Text>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
