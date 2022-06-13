@@ -18,7 +18,7 @@
     "ios": {
       "supportsTablet": true,
       "requireFullScreen": true,
-      "bundleIdentifier": "y"
+      "bundleIdentifier": "com.asnet.laza"
     },
     "android": {
       "adaptiveIcon": {
