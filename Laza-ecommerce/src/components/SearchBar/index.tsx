@@ -5,8 +5,8 @@ import { Image, TextInput, TouchableOpacity, View } from 'react-native';
 import isEqual from 'react-fast-compare';
 
 // Context
-import { ProductsContext } from 'context/ProductsContext';
-import { SEARCH_PRODUCTS_VALUE } from 'context/actions/products';
+import { ProductsContext } from 'contexts/ProductsContext';
+import { SEARCH_PRODUCTS_VALUE } from 'contexts/actions/products';
 
 // Types
 import { ISearchBarProps } from 'types/components/Search';

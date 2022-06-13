@@ -9,7 +9,7 @@ import {
   LOAD_MORE_BRANDS_SUCCESS,
   LOAD_MORE_BRANDS_FAILED,
   RESET_STATE,
-} from 'context/actions/brands';
+} from 'contexts/actions/brands';
 
 // Constants
 import { BRAND_PAGINATION } from 'constants/Brands';

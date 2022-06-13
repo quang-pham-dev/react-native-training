@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Reducer
-import authenticationReducer from 'context/reducers/auth';
+import authenticationReducer from 'contexts/reducers/auth';
 
 // State
-import { InitialAuthState } from 'context/reducers/auth';
+import { InitialAuthState } from 'contexts/reducers/auth';
 
 // Actions
 import {
@@ -18,7 +18,7 @@ import {
   SIGN_OUT,
   SIGN_OUT_SUCCESS,
   RESET_STATE,
-} from 'context/actions/auth';
+} from 'contexts/actions/auth';
 
 // Mocks
 import { user } from '__mocks__/dataMock/user';

@@ -22,9 +22,9 @@ import Label from 'components/Label';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { AuthenticationContext } from 'context/AuthContext';
-import { ProductsContext } from 'context/ProductsContext';
-import { BrandsContext } from 'context/BrandsContext';
+import { AuthenticationContext } from 'contexts/AuthContext';
+import { ProductsContext } from 'contexts/ProductsContext';
+import { BrandsContext } from 'contexts/BrandsContext';
 import {
   GET_PRODUCTS,
   GET_PRODUCTS_FAILED,
@@ -32,7 +32,7 @@ import {
   LOAD_MORE_PRODUCTS,
   LOAD_MORE_PRODUCTS_FAILED,
   LOAD_MORE_PRODUCTS_SUCCESS,
-} from 'context/actions/products';
+} from 'contexts/actions/products';
 import {
   GET_BRANDS,
   GET_BRANDS_FAILED,
@@ -40,7 +40,7 @@ import {
   LOAD_MORE_BRANDS,
   LOAD_MORE_BRANDS_FAILED,
   LOAD_MORE_BRANDS_SUCCESS,
-} from 'context/actions/brands';
+} from 'contexts/actions/brands';
 
 // API
 import { productsService } from 'api/products';

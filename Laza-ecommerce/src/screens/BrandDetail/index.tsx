@@ -10,8 +10,8 @@ import Title from 'components/Title';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { BrandsContext } from 'context/BrandsContext';
-import { ProductsContext } from 'context/ProductsContext';
+import { BrandsContext } from 'contexts/BrandsContext';
+import { ProductsContext } from 'contexts/ProductsContext';
 import {
   GET_PRODUCTS_BY_BRAND_ID,
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
@@ -19,7 +19,7 @@ import {
   LOAD_MORE_PRODUCTS_BY_BRAND_ID,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
-} from 'context/actions/products';
+} from 'contexts/actions/products';
 
 // API
 import { productsService } from 'api/products';

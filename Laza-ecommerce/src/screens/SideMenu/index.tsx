@@ -15,8 +15,8 @@ import Title from 'components/Title';
 import DrawerItem from 'screens/SideMenu/components';
 
 // Context
-import { AuthenticationContext } from 'context/AuthContext';
-import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'context/actions/auth';
+import { AuthenticationContext } from 'contexts/AuthContext';
+import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'contexts/actions/auth';
 
 // API
 import { authService } from 'api/auth';

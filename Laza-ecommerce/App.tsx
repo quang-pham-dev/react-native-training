@@ -13,7 +13,7 @@ import useFonts from 'hooks/useFonts';
 import RootNavigator from 'navigation/RootNavigator';
 
 // Context Provider
-import AuthProvider from 'context/AuthContext';
+import AuthProvider from 'contexts/AuthContext';
 
 export default function App() {
   const [appIsReady, setAppIsReady] = React.useState(false);

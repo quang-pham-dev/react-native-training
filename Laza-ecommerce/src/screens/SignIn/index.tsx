@@ -8,8 +8,8 @@ import Title from 'components/Title';
 import LoginForm from 'screens/SignIn/components/LoginForm';
 
 // Context
-import { AuthenticationContext } from 'context/AuthContext';
-import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'context/actions/auth';
+import { AuthenticationContext } from 'contexts/AuthContext';
+import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'contexts/actions/auth';
 
 // API
 import { authService } from 'api/auth';

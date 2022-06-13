@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Reducer
-import brandsReducer from 'context/reducers/brands';
+import brandsReducer from 'contexts/reducers/brands';
 
 // State
-import { InitialBrandsState } from 'context/reducers/brands';
+import { InitialBrandsState } from 'contexts/reducers/brands';
 
 // Actions
 import {
@@ -18,7 +18,7 @@ import {
   GET_BRANDS_FAILED,
   LOAD_MORE_BRANDS_FAILED,
   RESET_STATE,
-} from 'context/actions/brands';
+} from 'contexts/actions/brands';
 
 // Constants
 import { BRAND_PAGINATION } from 'constants/Brands';
