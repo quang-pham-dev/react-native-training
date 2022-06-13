@@ -17,7 +17,7 @@ exports[`Product Card Component Should render correctly 1`] = `
   style={
     Array [
       Object {
-        "width": 160,
+        "width": 165,
       },
       undefined,
     ]

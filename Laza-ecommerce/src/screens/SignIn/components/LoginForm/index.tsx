@@ -22,7 +22,7 @@ import Colors from 'themes/Colors';
 // initial values
 const loginFormInit: ILoginCredentials = {
   username: '',
-  password: '',
+  password: ''
 };
 
 // validation schema
@@ -30,7 +30,7 @@ const loginSchema = Yup.object({
   username: Yup.string().required('Username is required'),
   password: Yup.string()
     .required('Password is required')
-    .min(6, 'Password must be at least 6 characters'),
+    .min(6, 'Password must be at least 6 characters')
 }).required();
 
 interface ILoginFormProps {
@@ -49,11 +49,11 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
   const {
     control,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<ILoginCredentials>({
     mode: 'onChange',
     defaultValues: loginFormInit,
-    resolver: yupResolver(loginSchema),
+    resolver: yupResolver(loginSchema)
   });
 
   const onSubmitLoginForm: SubmitHandler<ILoginCredentials> = (loginInfo: ILoginCredentials) => {
@@ -61,13 +61,13 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
   };
 
   return (
-    <>
+    <View style={styles.container}>
       <View style={styles.main}>
         {/* Username */}
         <Controller
           control={control}
           rules={{
-            required: true,
+            required: true
           }}
           render={({ field: { onChange, value } }) => (
             <TextInput
@@ -93,7 +93,7 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
         <Controller
           control={control}
           rules={{
-            required: true,
+            required: true
           }}
           render={({ field: { onChange, value } }) => (
             <TextInput
@@ -156,7 +156,7 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
           onPress={handleSubmit(onSubmitLoginForm)}
         />
       </View>
-    </>
+    </View>
   );
 };
 

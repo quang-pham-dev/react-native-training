@@ -215,7 +215,7 @@ exports[`Product Card List Component Should render correctly 1`] = `
             style={
               Array [
                 Object {
-                  "width": 160,
+                  "width": 165,
                 },
                 Object {
                   "marginBottom": 15,
@@ -370,7 +370,7 @@ exports[`Product Card List Component Should render correctly 1`] = `
             style={
               Array [
                 Object {
-                  "width": 160,
+                  "width": 165,
                 },
                 Object {
                   "marginBottom": 15,
