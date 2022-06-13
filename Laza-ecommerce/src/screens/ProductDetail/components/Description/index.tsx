@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 
 // Components
 import Title from 'components/Title';

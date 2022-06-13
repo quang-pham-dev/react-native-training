@@ -1,5 +1,7 @@
 import React, { memo } from 'react';
 import { Text } from 'react-native';
+
+// LIBS
 import isEqual from 'react-fast-compare';
 
 // Types

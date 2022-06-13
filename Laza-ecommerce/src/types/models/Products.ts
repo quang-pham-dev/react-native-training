@@ -3,7 +3,7 @@ import {
   NativeSyntheticEvent,
   StyleProp,
   TextStyle,
-  ViewStyle,
+  ViewStyle
 } from 'react-native';
 
 export interface IProduct {

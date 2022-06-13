@@ -20,7 +20,7 @@ const ProductCard = ({
   product,
   onPressProductCard,
   onPressLikeProduct,
-  productCardStyles,
+  productCardStyles
 }: IProductCardProps) => {
   // handle action press product card with id
   const handlePressCardProduct = useCallback(() => {
@@ -36,7 +36,8 @@ const ProductCard = ({
     <Pressable
       testID='productCard'
       onPress={handlePressCardProduct}
-      style={[styles.productCardContainer, productCardStyles]}>
+      style={[styles.productCardContainer, productCardStyles]}
+    >
       <View style={styles.imageWrapper}>
         <ImageBackground style={styles.image} source={{ uri: product?.source }} />
         <Pressable onPress={handlePressLikeProduct} style={styles.iconHeartWrapper}>

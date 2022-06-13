@@ -107,8 +107,8 @@ server.post('/auth/login', (req, res) => {
       email: user.email,
       phone: user.phone,
       address: user.address,
-      role: user.role,
-    },
+      role: user.role
+    }
   });
 });
 
@@ -148,8 +148,8 @@ router.render = (req, res) => {
       pagination: {
         _page: Number.parseInt(queryParams._page) || 1,
         _limit: Number.parseInt(queryParams._limit) || 10,
-        _totalRows: Number.parseInt(totalCountHeader),
-      },
+        _totalRows: Number.parseInt(totalCountHeader)
+      }
     };
     return res.jsonp(response);
   }

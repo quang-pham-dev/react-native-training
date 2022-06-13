@@ -31,7 +31,7 @@ const BrandsCardList = ({ onPressBrandCard, brands, onLoadMoreBrands }: IBrandsL
     (id: string) => {
       onPressBrandCard(id);
     },
-    [onPressBrandCard],
+    [onPressBrandCard]
   );
 
   // handle action load more brands

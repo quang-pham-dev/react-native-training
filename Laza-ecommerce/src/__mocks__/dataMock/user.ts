@@ -7,5 +7,5 @@ export const user = {
   phone: '+84 (919) 507231',
   address: '199 Bergen Street, Bowie, Oregon, 7933',
   role: 'admin',
-  password: '123456',
+  password: '123456'
 };

@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   headerContainer: {
     height: 418,
     backgroundColor: Colors.lightGray,
-    alignItems: 'center',
+    alignItems: 'center'
   },
 
   actionsWrapper: {
@@ -20,30 +20,30 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: Metrics.padding.lg,
+    paddingHorizontal: Metrics.padding.lg
   },
 
   headerImageWrapper: {
     width: '100%',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
 
   image: {
     width: '100%',
     height: '100%',
-    resizeMode: 'cover',
+    resizeMode: 'cover'
   },
 
   backIcon: {
     width: Metrics.icons.semiLarge,
-    height: Metrics.icons.semiLarge,
+    height: Metrics.icons.semiLarge
   },
 
   cartIcon: {
     width: Metrics.icons.semiLarge,
-    height: Metrics.icons.semiLarge,
-  },
+    height: Metrics.icons.semiLarge
+  }
 });
 
 export default styles;

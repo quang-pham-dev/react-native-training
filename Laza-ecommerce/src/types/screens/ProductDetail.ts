@@ -3,7 +3,7 @@ import {
   IImageReviewerProps,
   IProduct,
   ProductSizeProps,
-  ReviewerProps,
+  ReviewerProps
 } from 'types/models/Products';
 
 export interface IProductDetailProps {

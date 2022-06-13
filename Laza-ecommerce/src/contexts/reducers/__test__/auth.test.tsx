@@ -17,7 +17,7 @@ import {
   SIGN_IN_FAILED,
   SIGN_OUT,
   SIGN_OUT_SUCCESS,
-  RESET_STATE,
+  RESET_STATE
 } from 'contexts/actions/auth';
 
 // Mocks
@@ -27,28 +27,28 @@ describe('authReducer', () => {
   const UserResponse = {
     access_token:
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c',
-    user: user,
+    user: user
   };
 
   test('should handle INITIALIZE', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: INITIALIZE,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       isInitialized: false,
       isProcessing: false,
-      isLoading: false,
+      isLoading: false
     });
   });
   test('should handle INITIALIZE_SUCCESS', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: INITIALIZE_SUCCESS,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       type: INITIALIZE_SUCCESS,
@@ -56,7 +56,7 @@ describe('authReducer', () => {
       isInitialized: true,
       isProcessing: false,
       isAuthenticated: true,
-      currentUser: user,
+      currentUser: user
     });
   });
 
@@ -64,27 +64,27 @@ describe('authReducer', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: SIGN_IN,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       isProcessing: true,
-      isLoading: true,
+      isLoading: true
     });
   });
   test('should handle SIGN_IN_SUCCESS', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: SIGN_IN_SUCCESS,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       type: SIGN_IN_SUCCESS,
       isProcessing: false,
       isAuthenticated: true,
       access_token: UserResponse.access_token,
-      currentUser: user,
+      currentUser: user
     });
   });
 
@@ -92,27 +92,27 @@ describe('authReducer', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: SIGN_OUT,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       isProcessing: true,
-      isLoading: true,
+      isLoading: true
     });
   });
   test('should handle SIGN_OUT_SUCCESS', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: SIGN_OUT_SUCCESS,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       type: SIGN_OUT_SUCCESS,
       isProcessing: false,
       isAuthenticated: false,
       access_token: null,
-      currentUser: null,
+      currentUser: null
     });
   });
 
@@ -120,42 +120,42 @@ describe('authReducer', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: INITIALIZE_FAILED,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       type: INITIALIZE_FAILED,
       isLoading: false,
       isProcessing: false,
-      error: undefined,
+      error: undefined
     });
   });
   test('should handle SIGN_OUT_FAILED', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: SIGN_OUT_FAILED,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       type: SIGN_OUT_FAILED,
       isLoading: false,
       isProcessing: false,
-      error: undefined,
+      error: undefined
     });
   });
   test('should handle SIGN_IN_FAILED', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: SIGN_IN_FAILED,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       type: SIGN_IN_FAILED,
       isLoading: false,
       isProcessing: false,
-      error: undefined,
+      error: undefined
     });
   });
 
@@ -163,23 +163,23 @@ describe('authReducer', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
         type: RESET_STATE,
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
       ...InitialAuthState,
       isLoading: false,
       isProcessing: true,
-      error: null,
+      error: null
     });
   });
 
   test('should handle default', () => {
     return expect(
       authenticationReducer(InitialAuthState, {
-        payload: UserResponse,
-      }),
+        payload: UserResponse
+      })
     ).toEqual({
-      ...InitialAuthState,
+      ...InitialAuthState
     });
   });
 });

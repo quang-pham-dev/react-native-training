@@ -15,9 +15,9 @@ describe('Header Component', () => {
     navigation: {
       navigate: jest.fn(),
       toggleDrawer: jest.fn(),
-      dispatch: jest.fn(),
+      dispatch: jest.fn()
     },
-    handlePressCart: jest.fn(),
+    handlePressCart: jest.fn()
   };
 
   const tree = renderer.create(<Header {...props} />);

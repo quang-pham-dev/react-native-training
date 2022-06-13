@@ -31,7 +31,7 @@ const TabBarIcon = {
   [SCREENS_ROUTES.STACK.HOME.name]: IMAGES.iconHome,
   [SCREENS_ROUTES.STACK.WISHLIST.name]: IMAGES.iconHeart,
   [SCREENS_ROUTES.STACK.BAGS.name]: IMAGES.iconBag,
-  [SCREENS_ROUTES.STACK.WALLET.name]: IMAGES.iconWallet,
+  [SCREENS_ROUTES.STACK.WALLET.name]: IMAGES.iconWallet
 };
 
 // List Tab Bar Label
@@ -39,7 +39,7 @@ const TabBarName = {
   [SCREENS_ROUTES.STACK.HOME.name]: SCREENS_ROUTES.STACK.HOME.name,
   [SCREENS_ROUTES.STACK.WISHLIST.name]: SCREENS_ROUTES.STACK.WISHLIST.name,
   [SCREENS_ROUTES.STACK.BAGS.name]: SCREENS_ROUTES.STACK.BAGS.name,
-  [SCREENS_ROUTES.STACK.WALLET.name]: SCREENS_ROUTES.STACK.WALLET.name,
+  [SCREENS_ROUTES.STACK.WALLET.name]: SCREENS_ROUTES.STACK.WALLET.name
 };
 
 // Handle render tab bar label
@@ -63,30 +63,30 @@ const TabBarList = [
     routeName: SCREENS_ROUTES.STACK.HOME.name,
     component: HomeStack,
     options: {
-      headerShown: false,
-    },
+      headerShown: false
+    }
   },
   {
     routeName: SCREENS_ROUTES.STACK.WISHLIST.name,
     component: WishListStack,
     options: {
-      headerShown: true,
-    },
+      headerShown: true
+    }
   },
   {
     routeName: SCREENS_ROUTES.STACK.BAGS.name,
     component: BagsStack,
     options: {
-      headerShown: true,
-    },
+      headerShown: true
+    }
   },
   {
     routeName: SCREENS_ROUTES.STACK.WALLET.name,
     component: WalletStack,
     options: {
-      headerShown: true,
-    },
-  },
+      headerShown: true
+    }
+  }
 ];
 
 // Create Tab Navigator
@@ -100,10 +100,11 @@ const AppStackNavigator = () => {
         tabBarActiveTintColor: Colors.primaryColor,
         tabBarShowLabel: false,
         tabBarStyle: {
-          paddingBottom: 0,
+          paddingBottom: 0
         },
-        headerShown: true,
-      }}>
+        headerShown: true
+      }}
+    >
       {TabBarList.map((elem, index) => (
         <BottomTab.Screen
           key={index}
@@ -113,7 +114,7 @@ const AppStackNavigator = () => {
             headerShown: elem.options.headerShown,
             tabBarActiveTintColor: Colors.primaryColor,
             tabBarLabel: ({ focused }) => renderTabBarLabel(focused, elem),
-            tabBarIcon: ({ focused }) => renderTabBarIcon(focused, elem),
+            tabBarIcon: ({ focused }) => renderTabBarIcon(focused, elem)
           }}
         />
       ))}
@@ -134,10 +135,11 @@ function AppDrawerStack() {
             drawerPosition: 'left',
             drawerStyle: {
               backgroundColor: Colors.primaryBackground,
-              width: '80%',
-            },
+              width: '80%'
+            }
           }}
-          drawerContent={({ navigation }) => <SideMenu navigation={navigation} />}>
+          drawerContent={({ navigation }) => <SideMenu navigation={navigation} />}
+        >
           <Drawer.Screen name={SCREENS_ROUTES.APP_NAVIGATOR.name} component={AppStackNavigator} />
         </Drawer.Navigator>
       </BrandsProvider>

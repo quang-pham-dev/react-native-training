@@ -1,5 +1,7 @@
 import React, { memo, useCallback, useState } from 'react';
 import { Text } from 'react-native';
+
+// LIBS
 import isEqual from 'react-fast-compare';
 
 // Types
@@ -21,7 +23,8 @@ const MoreLessText = ({ children, numberOfLines, styleShowMoreText }: IMoreLessT
     <>
       <Text
         style={[styles.readMoreText, styleShowMoreText]}
-        numberOfLines={showMore ? numberOfLines : 0}>
+        numberOfLines={showMore ? numberOfLines : 0}
+      >
         {children}
       </Text>
       <Text style={styles.readMoreText} onPress={handleShowMore}>
@@ -34,7 +37,8 @@ const MoreLessText = ({ children, numberOfLines, styleShowMoreText }: IMoreLessT
       onTextLayout={event => {
         const { lines } = event.nativeEvent;
         setIsTruncatedText(lines?.length > numberOfLines);
-      }}>
+      }}
+    >
       {children}
     </Text>
   );

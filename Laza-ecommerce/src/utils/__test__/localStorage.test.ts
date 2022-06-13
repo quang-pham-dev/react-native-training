@@ -8,8 +8,8 @@ jest.mock('react-native', () => ({
     removeItem: jest.fn(),
     multiSet: jest.fn(),
     multiRemove: jest.fn(),
-    clear: jest.fn(),
-  },
+    clear: jest.fn()
+  }
 }));
 
 // fixtures

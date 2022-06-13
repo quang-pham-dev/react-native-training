@@ -5,7 +5,7 @@ const useFonts = async () =>
     Inter_Bold: require('assets/fonts/Inter-Bold.ttf'),
     Inter_400Regular: require('assets/fonts/Inter-Regular.ttf'),
     Inter_500Medium: require('assets/fonts/Inter-Medium.ttf'),
-    Inter_600SemiBold: require('assets/fonts/Inter-SemiBold.ttf'),
+    Inter_600SemiBold: require('assets/fonts/Inter-SemiBold.ttf')
   });
 
 export default useFonts;

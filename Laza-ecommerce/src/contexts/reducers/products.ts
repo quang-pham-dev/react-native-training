@@ -15,7 +15,7 @@ import {
   LOAD_MORE_PRODUCTS_BY_BRAND_ID,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
-  SEARCH_PRODUCTS_VALUE,
+  SEARCH_PRODUCTS_VALUE
 } from 'contexts/actions/products';
 
 // Constants
@@ -34,7 +34,7 @@ export const InitialProductsState: ProductsState = {
   totalRows: 0,
   totalRowsByBrandId: 0,
   searchValue: '',
-  limit: PRODUCT_PAGINATION.PRODUCT_LIMIT,
+  limit: PRODUCT_PAGINATION.PRODUCT_LIMIT
 };
 
 const productsReducer = (state: typeof InitialProductsState, action: ProductsAction) => {
@@ -44,19 +44,19 @@ const productsReducer = (state: typeof InitialProductsState, action: ProductsAct
     case GET_PRODUCTS_BY_BRAND_ID:
       return {
         ...state,
-        isProcessing: true,
+        isProcessing: true
       };
     case LOAD_MORE_PRODUCTS:
     case LOAD_MORE_PRODUCTS_BY_BRAND_ID:
       return {
         ...state,
-        isLoading: true,
+        isLoading: true
       };
 
     case SEARCH_PRODUCTS_VALUE:
       return {
         ...state,
-        searchValue: action.searchValue,
+        searchValue: action.searchValue
       };
 
     case GET_PRODUCTS_SUCCESS:
@@ -66,7 +66,7 @@ const productsReducer = (state: typeof InitialProductsState, action: ProductsAct
         isProcessing: false,
         products: action.payload?.data?.products,
         limit: action.payload?.limit,
-        totalRows: action.payload?.totalRows,
+        totalRows: action.payload?.totalRows
       };
 
     case GET_PRODUCT_SUCCESS:
@@ -75,7 +75,7 @@ const productsReducer = (state: typeof InitialProductsState, action: ProductsAct
         ...state,
         type: action.type,
         isProcessing: false,
-        product,
+        product
       };
 
     case GET_PRODUCTS_BY_BRAND_ID_SUCCESS:
@@ -84,8 +84,8 @@ const productsReducer = (state: typeof InitialProductsState, action: ProductsAct
         type: action.type,
         isProcessing: false,
         productsByBrandId: action.payload?.data?.productsByBrandId,
-        limit: action.payload.limit,
-        totalRowsByBrandId: action.payload?.totalRowsByBrandId,
+        limit: action.payload?.limit,
+        totalRowsByBrandId: action.payload?.totalRowsByBrandId
       };
 
     case LOAD_MORE_PRODUCTS_SUCCESS:
@@ -94,7 +94,7 @@ const productsReducer = (state: typeof InitialProductsState, action: ProductsAct
         type: action.type,
         isLoading: false,
         products: action.payload?.data?.products,
-        limit: action.payload?.limit,
+        limit: action.payload?.limit
       };
 
     case LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS:
@@ -103,7 +103,7 @@ const productsReducer = (state: typeof InitialProductsState, action: ProductsAct
         type: action.type,
         isLoading: false,
         productsByBrandId: action.payload?.data?.productsByBrandId,
-        limit: action.payload?.limit,
+        limit: action.payload?.limit
       };
 
     case GET_PRODUCTS_FAILED:
@@ -116,17 +116,17 @@ const productsReducer = (state: typeof InitialProductsState, action: ProductsAct
         isProcessing: false,
         isLoading: false,
         type: action.type,
-        error: action.error,
+        error: action.error
       };
 
     case RESET_STATE:
       return {
-        ...InitialProductsState,
+        ...InitialProductsState
       };
 
     default:
       return {
-        ...state,
+        ...state
       };
   }
 };

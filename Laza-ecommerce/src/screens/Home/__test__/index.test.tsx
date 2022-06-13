@@ -21,10 +21,10 @@ describe('Home Screen', () => {
   const props = {
     navigation: navigationMock,
     route: {
-      params: {},
+      params: {}
     },
     currentUser: user,
-    username: user.username,
+    username: user.username
   };
   beforeEach(() => {
     tree = renderer.create(<HomeScreen {...props} />);

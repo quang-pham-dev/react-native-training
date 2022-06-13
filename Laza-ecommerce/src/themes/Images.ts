@@ -31,7 +31,7 @@ const IMAGES = {
   adidas: require('assets/images/brands/adidas.png'),
   nike: require('assets/images/brands/nike.png'),
   fila: require('assets/images/brands/fila.png'),
-  puma: require('assets/images/brands/puma.png'),
+  puma: require('assets/images/brands/puma.png')
 };
 
 export default IMAGES;

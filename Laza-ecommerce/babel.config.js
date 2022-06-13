@@ -21,11 +21,11 @@ module.exports = function (api) {
             themes: './src/themes',
             types: './src/types',
             utils: './src/utils',
-            mock: './src/__mock__',
-          },
-        },
+            mock: './src/__mock__'
+          }
+        }
       ],
-      'react-native-reanimated/plugin',
-    ],
+      'react-native-reanimated/plugin'
+    ]
   };
 };

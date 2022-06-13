@@ -5,17 +5,17 @@ export const APP_BASE_URL = 'http://localhost:3000';
 export const ENDPOINTS = {
   AUTH: {
     LOGIN: '/auth/login',
-    LOGOUT: '/auth/logout',
+    LOGOUT: '/auth/logout'
   },
 
   PRODUCT: {
     GET_PRODUCTS: '/products',
-    GET_PRODUCT: '/products/:id',
+    GET_PRODUCT: '/products/:id'
   },
   BRAND: {
     GET_BRANDS: '/brands',
-    GET_BRAND: '/brands/:id',
-  },
+    GET_BRAND: '/brands/:id'
+  }
 };
 
 // Auth Data key for local storage

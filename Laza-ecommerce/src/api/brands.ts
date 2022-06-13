@@ -11,7 +11,7 @@ import { IBrand, IBrandsResponse } from 'types/models/Brands';
 // get all brands
 const getBrands = async (limit: number): Promise<IBrandsResponse> => {
   return await http.get(
-    `${ENDPOINTS.BRAND.GET_BRANDS}?_page=${PRODUCT_PAGINATION.PAGE}&_limit=${limit}`,
+    `${ENDPOINTS.BRAND.GET_BRANDS}?_page=${PRODUCT_PAGINATION.PAGE}&_limit=${limit}`
   );
 };
 
@@ -21,5 +21,5 @@ const getBrandById = async (id: string): Promise<IBrand> => {
 };
 export const brandsService = {
   getBrands,
-  getBrandById,
+  getBrandById
 };

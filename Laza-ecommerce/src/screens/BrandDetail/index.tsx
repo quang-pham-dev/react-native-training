@@ -18,7 +18,7 @@ import {
   GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
-  LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS
 } from 'contexts/actions/products';
 
 // API
@@ -32,7 +32,7 @@ import { PRODUCT_PAGINATION } from 'constants/Products';
 import { IBrand } from 'types/models/Brands';
 import { IBrandDetailProps } from 'types/screens/BrandDetail';
 
-// Theme
+// Themes
 import IMAGES from 'themes/Images';
 
 // Styles
@@ -58,7 +58,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
       try {
         const response = await productsService.getProductsByBrandId(
           id,
-          PRODUCT_PAGINATION.PRODUCT_LIMIT,
+          PRODUCT_PAGINATION.PRODUCT_LIMIT
         );
 
         if (!isCancelled) {
@@ -68,18 +68,18 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
             type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
             payload: {
               data: {
-                productsByBrandId: data,
+                productsByBrandId: data
               },
               limit: _limit,
-              totalRowsByBrandId: _totalRows,
-            },
+              totalRowsByBrandId: _totalRows
+            }
           });
         }
       } catch (error) {
         if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
-            payload: error,
+            payload: error
           });
         }
         Alert.alert('Error', error.message);
@@ -94,7 +94,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   // Get current brand
   const currentBrand = useMemo(
     () => brands?.filter((brand: IBrand) => brand.id === id),
-    [brands, id],
+    [brands, id]
   );
 
   // Handle back button
@@ -117,7 +117,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
     try {
       const response = await productsService.getProductsByBrandId(
         id,
-        limit + PRODUCT_PAGINATION.PRODUCT_LIMIT,
+        limit + PRODUCT_PAGINATION.PRODUCT_LIMIT
       );
       const { data, pagination } = response.data || {};
       const { _limit } = pagination || {};
@@ -125,15 +125,15 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
         type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
         payload: {
           data: {
-            productsByBrandId: data,
+            productsByBrandId: data
           },
-          limit: _limit,
-        },
+          limit: _limit
+        }
       });
     } catch (error) {
       productDispatch({
         type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
-        payload: error,
+        payload: error
       });
 
       Alert.alert('Error', error.message);

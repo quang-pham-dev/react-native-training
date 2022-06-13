@@ -14,7 +14,7 @@ describe('Side menu', () => {
 
   const props = {
     title: 'title',
-    onPress: jest.fn(),
+    onPress: jest.fn()
   };
   tree = renderer.create(<DrawerItem {...props} source={0} />);
 

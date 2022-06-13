@@ -30,8 +30,10 @@ const Reviews = ({ comment, rating, reviewers }: IProductDetailItemProps) => {
         <View style={styles.reviewItemWrapper}>
           <View style={styles.reviewerInfoWrapper}>
             <Image style={styles.imageAvatar} source={{ uri: reviewers?.image }} />
+
             <View style={styles.reviewerItemInfo}>
               <Title titleName={reviewers?.name} titleStyles={styles.textName} />
+
               <View style={styles.reviewTime}>
                 <Image style={styles.imageClock} source={IMAGES.iconClock} />
                 <Text style={styles.textDate}>{reviewers?.date}</Text>
@@ -45,6 +47,7 @@ const Reviews = ({ comment, rating, reviewers }: IProductDetailItemProps) => {
               {Boolean(rating) && <Text style={styles.ratingTextPoint}>{rating}</Text>}
               <Text style={styles.ratingText}>rating</Text>
             </View>
+
             <Image style={styles.imageStar} source={IMAGES.ratingStart} />
           </View>
           {/* End of review Rating */}

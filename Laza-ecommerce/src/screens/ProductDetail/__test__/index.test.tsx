@@ -20,9 +20,9 @@ describe('Product detail Screen', () => {
         navigation={navigationMock}
         product={product}
         route={{
-          params: product.id,
+          params: product.id
         }}
-      />,
+      />
     );
   });
 

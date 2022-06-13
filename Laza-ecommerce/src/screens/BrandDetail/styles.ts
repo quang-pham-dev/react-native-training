@@ -10,10 +10,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    backgroundColor: Colors.primaryBackground,
+    backgroundColor: Colors.primaryBackground
   },
   headerContainer: {
-    height: 120,
+    height: 120
   },
 
   actionsWrapper: {
@@ -22,17 +22,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '100%',
+    width: '100%'
   },
 
   backIcon: {
     width: Metrics.icons.semiLarge,
-    height: Metrics.icons.semiLarge,
+    height: Metrics.icons.semiLarge
   },
 
   cartIcon: {
     width: Metrics.icons.semiLarge,
-    height: Metrics.icons.semiLarge,
+    height: Metrics.icons.semiLarge
   },
 
   brandLogoWrapper: {
@@ -40,29 +40,29 @@ const styles = StyleSheet.create({
     width: 70,
     padding: Metrics.padding.sm,
     borderRadius: 10,
-    backgroundColor: Colors.secondaryBackground,
+    backgroundColor: Colors.secondaryBackground
   },
   brandLogo: {
     width: '100%',
     height: '100%',
-    resizeMode: 'contain',
+    resizeMode: 'contain'
   },
   contentContainer: {
     flex: 1,
-    paddingBottom: Metrics.padding.xxl,
+    paddingBottom: Metrics.padding.xxl
   },
 
   contentHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'center'
   },
 
   totalCount: {
     fontSize: Fonts.size.default,
     lineHeight: Fonts.lineHeight.sm,
     fontFamily: Fonts.fontFamily.Inter_500Medium,
-    color: Colors.textBlack,
+    color: Colors.textBlack
   },
   sortWrapper: {
     flexDirection: 'row',
@@ -70,11 +70,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: Colors.secondaryBackground,
     padding: Metrics.padding.sm,
-    borderRadius: 10,
+    borderRadius: 10
   },
 
   sortText: {
-    marginLeft: Metrics.margin.xsm,
+    marginLeft: Metrics.margin.xsm
   },
 
   titleContent: {
@@ -82,8 +82,8 @@ const styles = StyleSheet.create({
     lineHeight: Fonts.lineHeight.base,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
     color: Colors.textGray,
-    marginTop: Metrics.margin.xsm,
-  },
+    marginTop: Metrics.margin.xsm
+  }
 });
 
 export default styles;

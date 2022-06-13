@@ -38,7 +38,9 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
   // handle action call api SignIn when user press Login button
   const handleSubmitButton = async (loginInfo: ILoginCredentials): Promise<void> => {
     authDispatch({ type: SIGN_IN });
+
     const { username, password } = loginInfo;
+
     try {
       const response = await authService.signIn(username, password);
       const data = JSON.stringify(response?.data);
@@ -83,7 +85,8 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
             <Title titleStyles={styles.headerTitle} titleName='Welcome'></Title>
             <Title
               titleStyles={styles.headerSubTitle}
-              titleName='Please enter your data to continue'></Title>
+              titleName='Please enter your data to continue'
+            ></Title>
           </View>
           {/* end header */}
           <View style={styles.loginForm}>

@@ -12,7 +12,7 @@ import { ILoadingIndicatorProps } from 'types/components/LoadingIndicator';
 
 describe('LoadingIndicator Component', () => {
   const props = {
-    size: 'large' as ILoadingIndicatorProps['size'],
+    size: 'large' as ILoadingIndicatorProps['size']
   };
   const tree = renderer.create(<LoadingIndicator {...props} />);
 
@@ -24,7 +24,7 @@ describe('LoadingIndicator Component', () => {
   test('should render new small size props correctly', () => {
     const newProps = {
       color: Colors.secondaryColor,
-      size: 'small' as ILoadingIndicatorProps['size'],
+      size: 'small' as ILoadingIndicatorProps['size']
     };
 
     const tree = renderer.create(<LoadingIndicator {...newProps} />).toJSON();
@@ -33,7 +33,7 @@ describe('LoadingIndicator Component', () => {
   test('should render new color props correctly', () => {
     const newProps = {
       ...props,
-      color: Colors.secondaryColor,
+      color: Colors.secondaryColor
     };
 
     const tree = renderer.create(<LoadingIndicator {...newProps} />).toJSON();

@@ -9,7 +9,7 @@ import MoreLessText from 'components/LessMoreText';
 describe('Read more Component', () => {
   const props = {
     numberOfLines: 2,
-    styleShowMoreText: { color: 'red' },
+    styleShowMoreText: { color: 'red' }
   };
 
   test('should render correctly', () => {

@@ -13,7 +13,7 @@ describe('Product detail information', () => {
   const props = {
     title: product.title,
     type: product.type,
-    price: product.price,
+    price: product.price
   };
 
   const tree = renderer.create(<Information {...props} />);

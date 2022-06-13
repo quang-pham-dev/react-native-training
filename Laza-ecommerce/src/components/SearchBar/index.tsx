@@ -17,11 +17,7 @@ import IMAGES from 'themes/Images';
 // Styles
 import styles from './styles';
 
-const SearchBar = ({
-  autoFocus,
-  textInputStyles = {},
-  onSubmitEditing,
-}: ISearchBarProps) => {
+const SearchBar = ({ autoFocus, textInputStyles = {}, onSubmitEditing }: ISearchBarProps) => {
   const { productDispatch } = useContext(ProductsContext);
 
   const [valueState, setValueState] = React.useState<string>('');
@@ -31,7 +27,7 @@ const SearchBar = ({
       setValueState(text);
       productDispatch({ type: SEARCH_PRODUCTS_VALUE, searchValue: text });
     },
-    [productDispatch],
+    [productDispatch]
   );
 
   const handleSubmitEditing = useCallback(() => {

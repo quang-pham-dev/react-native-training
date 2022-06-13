@@ -9,8 +9,8 @@ import { get } from 'utils/localStorage';
 const http = axios.create({
   baseURL: APP_BASE_URL,
   headers: {
-    'Content-Type': 'application/json',
-  },
+    'Content-Type': 'application/json'
+  }
 });
 
 http.interceptors.request.use(
@@ -20,7 +20,7 @@ http.interceptors.request.use(
     if (access_token) {
       const masterHeaders = {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${access_token}`,
+        Authorization: `Bearer ${access_token}`
       };
       config.headers = masterHeaders;
     }
@@ -28,7 +28,7 @@ http.interceptors.request.use(
   },
   error => {
     return Promise.reject(error.message);
-  },
+  }
 );
 
 // Add a response interceptor
@@ -36,7 +36,7 @@ http.interceptors.response.use(
   function (response: AxiosResponse) {
     // Do something with response data
     return response;
-  },
+  }
   //   async function (error) {
   // Do something with response error
   // const originalRequest = error.config;

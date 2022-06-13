@@ -6,7 +6,7 @@ import Metrics from 'themes/Metrics';
 
 const styles = StyleSheet.create({
   brandCardContainer: {
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   brandCardWrapper: {
     flexDirection: 'row',
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: Colors.secondaryBackground,
     marginRight: Metrics.margin.sm,
-    paddingRight: Metrics.padding.sm,
+    paddingRight: Metrics.padding.sm
   },
   brandLogoWrapper: {
     width: 40,
@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
     marginLeft: Metrics.margin.xsm,
     marginRight: Metrics.margin.sm,
     marginVertical: Metrics.margin.xsm,
-    backgroundColor: Colors.primaryBackground,
+    backgroundColor: Colors.primaryBackground
   },
   brandLogo: {
     width: '100%',
     height: '100%',
-    resizeMode: 'contain',
-  },
+    resizeMode: 'contain'
+  }
 });
 
 export default styles;

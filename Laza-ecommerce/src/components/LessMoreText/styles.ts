@@ -6,8 +6,8 @@ const styles = StyleSheet.create({
   readMoreText: {
     fontSize: Fonts.size.normal,
     fontFamily: Fonts.fontFamily.Inter_600SemiBold,
-    lineHeight: Fonts.lineHeight.lg,
-  },
+    lineHeight: Fonts.lineHeight.lg
+  }
 });
 
 export default styles;

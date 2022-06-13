@@ -15,7 +15,7 @@ import { navigationMock } from 'utils/testMock';
 
 describe('Brand Card Component', () => {
   const tree = renderer.create(
-    <BrandCard brand={brand} onPressBrandCard={navigationMock.navigate} />,
+    <BrandCard brand={brand} onPressBrandCard={navigationMock.navigate} />
   );
   test('Should render correctly', () => {
     const component = tree.toJSON();

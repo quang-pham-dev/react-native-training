@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from 'react';
+
+// LIBS
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -41,8 +43,8 @@ const RootNavigator: React.FC = () => {
           type: INITIALIZE_SUCCESS,
           payload: {
             user,
-            access_token,
-          },
+            access_token
+          }
         });
       }
     } catch (error) {

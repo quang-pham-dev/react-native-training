@@ -20,7 +20,7 @@ import { navigationMock } from 'utils/testMock';
 describe('Brand Card List Component', () => {
   const props = {
     onPressBrandCard: navigationMock.navigate,
-    brands,
+    brands
   };
 
   const tree = renderer.create(<BrandsCardList {...props} />);
@@ -38,7 +38,7 @@ describe('Brand Card List Component', () => {
   test('Should render No Brand found text when brands is empty', () => {
     const newProps = {
       ...props,
-      brands: [],
+      brands: []
     };
     const component = render(<BrandsCardList {...newProps} />);
     const { getByText } = component;

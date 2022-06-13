@@ -18,7 +18,7 @@ describe('TextInput Component', () => {
     autoFocus: false,
     onChangeText: jest.fn(),
     onSubmitEditing: jest.fn(),
-    onBlur: jest.fn(),
+    onBlur: jest.fn()
   };
 
   const onChangeText = jest.fn();
@@ -31,7 +31,7 @@ describe('TextInput Component', () => {
   test('should render with label correctly', () => {
     const newProps = {
       ...props,
-      label: 'Username',
+      label: 'Username'
     };
     const tree = renderer.create(<Input {...newProps} />).toJSON();
     expect(tree).toMatchSnapshot();
@@ -39,7 +39,7 @@ describe('TextInput Component', () => {
   test('should render placeholder', () => {
     const newProps = {
       ...props,
-      placeholder: 'Enter your username',
+      placeholder: 'Enter your username'
     };
     const tree = renderer.create(<Input {...newProps} />).toJSON();
     expect(tree).toMatchSnapshot();

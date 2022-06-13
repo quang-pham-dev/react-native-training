@@ -22,7 +22,7 @@ describe('Product Card List Component', () => {
     products,
     onPressProductCard: navigationMock.navigate,
     onPressLikeProduct: jest.fn(),
-    onLoadMoreProducts: jest.fn(),
+    onLoadMoreProducts: jest.fn()
   };
 
   const tree = renderer.create(<ProductsList {...props} />);
@@ -34,7 +34,7 @@ describe('Product Card List Component', () => {
   test('Should render No products found text when products is empty', () => {
     const newProps = {
       ...props,
-      products: [],
+      products: []
     };
 
     const tree = render(<ProductsList {...newProps} />);

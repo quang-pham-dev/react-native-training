@@ -8,7 +8,7 @@ import {
   SIGN_IN_FAILED,
   SIGN_OUT,
   SIGN_OUT_SUCCESS,
-  RESET_STATE,
+  RESET_STATE
 } from 'contexts/actions/auth';
 
 // Types
@@ -21,7 +21,7 @@ export const InitialAuthState: AuthState = {
   isAuthenticated: false,
   error: null,
   isProcessing: true,
-  currentUser: undefined,
+  currentUser: undefined
 };
 
 const authenticationReducer = (state: typeof InitialAuthState, action: AuthAction) => {
@@ -31,7 +31,7 @@ const authenticationReducer = (state: typeof InitialAuthState, action: AuthActio
         ...state,
         isInitialized: false,
         isProcessing: false,
-        isLoading: false,
+        isLoading: false
       };
 
     case SIGN_IN:
@@ -39,7 +39,7 @@ const authenticationReducer = (state: typeof InitialAuthState, action: AuthActio
       return {
         ...state,
         isProcessing: true,
-        isLoading: true,
+        isLoading: true
       };
 
     case INITIALIZE_SUCCESS:
@@ -50,7 +50,7 @@ const authenticationReducer = (state: typeof InitialAuthState, action: AuthActio
         isInitialized: true,
         isProcessing: false,
         isAuthenticated: Boolean(action.payload?.access_token),
-        currentUser: action.payload?.user,
+        currentUser: action.payload?.user
       };
 
     case SIGN_IN_SUCCESS:
@@ -60,7 +60,7 @@ const authenticationReducer = (state: typeof InitialAuthState, action: AuthActio
         isProcessing: false,
         isAuthenticated: true,
         access_token: action.payload?.access_token,
-        currentUser: action.payload?.user,
+        currentUser: action.payload?.user
       };
 
     case SIGN_OUT_SUCCESS:
@@ -70,7 +70,7 @@ const authenticationReducer = (state: typeof InitialAuthState, action: AuthActio
         isProcessing: false,
         isAuthenticated: false,
         access_token: null,
-        currentUser: null,
+        currentUser: null
       };
 
     case INITIALIZE_FAILED:
@@ -81,17 +81,17 @@ const authenticationReducer = (state: typeof InitialAuthState, action: AuthActio
         type: action.type,
         isLoading: false,
         isProcessing: false,
-        error: action.error,
+        error: action.error
       };
 
     case RESET_STATE:
       return {
-        ...InitialAuthState,
+        ...InitialAuthState
       };
 
     default:
       return {
-        ...state,
+        ...state
       };
   }
 };

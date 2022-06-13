@@ -15,8 +15,8 @@ describe('Product detail Header', () => {
     source: product.source,
     navigation: {
       navigate: jest.fn(),
-      goBack: jest.fn(),
-    },
+      goBack: jest.fn()
+    }
   };
 
   const tree = renderer.create(<Header {...props} />);

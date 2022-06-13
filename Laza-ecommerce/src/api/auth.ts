@@ -26,5 +26,5 @@ const signOut = async (): Promise<void> => {
 
 export const authService = {
   signIn,
-  signOut,
+  signOut
 };
