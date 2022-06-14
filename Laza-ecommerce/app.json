@@ -22,13 +22,15 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/images/adaptive-icon.png",
+        "foregroundImage": "./src/assets/images/icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.asnet.laza",
       "versionCode": 1
     },
-    "plugins": ["expo-community-flipper"],
-    "jsEngine": "hermes"
+    "extra": {
+      "flipperHack": "React Native packager is running"
+    },
+    "plugins": ["expo-community-flipper"]
   }
 }

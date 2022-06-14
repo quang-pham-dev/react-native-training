@@ -1,5 +1,5 @@
-import 'expo-dev-client';
 import React from 'react';
+
 // Debugging
 import { connectToDevTools } from 'react-devtools-core';
 
