@@ -31,9 +31,9 @@ describe('Brand detail Screen', () => {
       <BrandDetailScreen
         navigation={navigationMock}
         route={{
-          params: brand.id,
+          params: brand.id
         }}
-      />,
+      />
     );
   });
 
@@ -52,9 +52,9 @@ describe('Brand detail Screen', () => {
       <BrandDetailScreen
         navigation={navigationMock}
         route={{
-          params: brand.id,
+          params: brand.id
         }}
-      />,
+      />
     );
     const { getByText } = tree;
     const text = getByText('Available in stock');
@@ -75,9 +75,9 @@ describe('Brand detail Screen', () => {
       <BrandDetailScreen
         navigation={navigationMock}
         route={{
-          params: brand.id,
+          params: brand.id
         }}
-      />,
+      />
     );
 
     await productsService.getProductsByBrandId(product.brandId, PRODUCT_PAGINATION.PRODUCT_LIMIT);

@@ -11,7 +11,7 @@ import SearchBar from 'components/SearchBar';
 describe('Search Bar Component', () => {
   const props = {
     value: 'search value',
-    onSubmitEditing: jest.fn(),
+    onSubmitEditing: jest.fn()
   };
   const tree = renderer.create(<SearchBar {...props} />);
   test('Should render correctly', () => {

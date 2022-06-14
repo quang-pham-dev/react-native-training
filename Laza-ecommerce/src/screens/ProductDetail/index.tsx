@@ -15,8 +15,8 @@ import Reviews from './components/Reviews';
 import { productsService } from 'api/products';
 
 // Context
-import { ProductsContext } from 'context/ProductsContext';
-import { GET_PRODUCT, GET_PRODUCT_FAILED, GET_PRODUCT_SUCCESS } from 'context/actions/products';
+import { ProductsContext } from 'contexts/ProductsContext';
+import { GET_PRODUCT, GET_PRODUCT_FAILED, GET_PRODUCT_SUCCESS } from 'contexts/actions/products';
 
 // Types
 import { IProductDetailProps } from 'types/screens/ProductDetail';
@@ -43,7 +43,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
     sizes,
     reviewers,
     comment,
-    rating,
+    rating
   } = data;
 
   useEffect(() => {
@@ -58,16 +58,16 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
             type: GET_PRODUCT_SUCCESS,
             payload: {
               data: {
-                product: response?.data,
-              },
-            },
+                product: response?.data
+              }
+            }
           });
         }
       } catch (error) {
         if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCT_FAILED,
-            payload: error,
+            payload: error
           });
         }
         Alert.alert('Error', error.message);
@@ -102,7 +102,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
 
             {/* product detail images reviews */}
             <ImagesPreview imagesPreview={imagesPreview} />
-            {/* product detail images reviews */}
+            {/* end product detail images reviews */}
 
             {/* product detail size */}
             <ProductSize sizes={sizes} />
@@ -110,11 +110,11 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
 
             {/* product detail description */}
             <Description description={description} />
-            {/* End product detail description */}
+            {/* end product detail description */}
 
             {/* product detail Review */}
             <Reviews reviewers={reviewers} comment={comment} rating={rating} />
-            {/* End product Review  */}
+            {/* end product Review  */}
           </View>
           <View style={styles.footerContainer}>
             <Button
@@ -125,7 +125,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
               onPress={handlePressAddToCartIcon}
             />
           </View>
-          {/* End footer block */}
+          {/* end footer block */}
         </>
       )}
     </ScrollView>

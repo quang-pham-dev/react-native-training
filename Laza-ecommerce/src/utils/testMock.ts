@@ -24,6 +24,6 @@ export const navigationMock: any = {
     path: '',
     index: 1,
     isTransitioning: false,
-    routes: [],
-  },
+    routes: []
+  }
 };

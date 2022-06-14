@@ -20,7 +20,7 @@ const Input = ({
   icon,
   onChangeText,
   onBlur,
-  onSubmitEditing,
+  onSubmitEditing
 }: ITextInputProps) => {
   const [valueState, setValueState] = React.useState(value);
 
@@ -29,7 +29,7 @@ const Input = ({
       setValueState(text);
       onChangeText(text);
     },
-    [onChangeText, setValueState],
+    [onChangeText, setValueState]
   );
 
   return (

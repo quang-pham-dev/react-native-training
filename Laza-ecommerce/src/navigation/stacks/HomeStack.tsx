@@ -15,8 +15,9 @@ const HomeStack = () => (
   <Stack.Navigator
     initialRouteName={SCREENS_ROUTES.HOME_STACK.HOME_SCREEN.name}
     screenOptions={{
-      headerShown: false,
-    }}>
+      headerShown: false
+    }}
+  >
     <Stack.Screen
       name={SCREENS_ROUTES.HOME_STACK.HOME_SCREEN.name}
       component={HomeScreen}
@@ -27,7 +28,7 @@ const HomeStack = () => (
       name={SCREENS_ROUTES.HOME_STACK.PRODUCT_DETAIL_SCREEN.name}
       component={ProductDetail}
       options={{
-        headerShown: false,
+        headerShown: false
       }}
     />
 
@@ -35,7 +36,7 @@ const HomeStack = () => (
       name={SCREENS_ROUTES.HOME_STACK.BRAND_DETAIL_SCREEN.name}
       component={BrandDetail}
       options={{
-        headerShown: false,
+        headerShown: false
       }}
     />
   </Stack.Navigator>

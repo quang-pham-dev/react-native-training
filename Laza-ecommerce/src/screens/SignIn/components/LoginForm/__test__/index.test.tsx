@@ -48,11 +48,11 @@ describe('Login Form', () => {
     const passwordValue = '123';
 
     await act(async () =>
-      fireEvent.changeText(getByPlaceholderText('Enter your username'), usernameValue),
+      fireEvent.changeText(getByPlaceholderText('Enter your username'), usernameValue)
     );
 
     await act(async () =>
-      fireEvent.changeText(getByPlaceholderText('Enter your password'), passwordValue),
+      fireEvent.changeText(getByPlaceholderText('Enter your password'), passwordValue)
     );
 
     const errorMessage = queryAllByText('Password must be at least 6 characters');
@@ -64,7 +64,7 @@ describe('Login Form', () => {
     const usernameValue = 'Quangpham';
 
     await act(async () =>
-      fireEvent.changeText(getByPlaceholderText('Enter your username'), usernameValue),
+      fireEvent.changeText(getByPlaceholderText('Enter your username'), usernameValue)
     );
     await act(async () => fireEvent.changeText(getByPlaceholderText('Enter your username'), ''));
 

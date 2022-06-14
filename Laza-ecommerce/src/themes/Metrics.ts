@@ -8,7 +8,7 @@ const Metrics = {
     lg: 20,
     xl: 25,
     xxl: 30,
-    xxxl: 45,
+    xxxl: 45
   },
 
   padding: {
@@ -19,14 +19,14 @@ const Metrics = {
     xm: 15,
     lg: 20,
     xl: 25,
-    xxl: 30,
+    xxl: 30
   },
 
   borderRadius: {
     roundedSmall: 5,
     roundedMedium: 10,
     roundedBase: 30,
-    roundedFull: 100,
+    roundedFull: 100
   },
 
   icons: {
@@ -35,7 +35,7 @@ const Metrics = {
     standard: 20,
     custom: 25,
     semiLarge: 45,
-    large: 50,
+    large: 50
   },
 
   images: {
@@ -46,8 +46,8 @@ const Metrics = {
     avatarLarge: 60,
     imageMedium: 400,
     imageSmall: 200,
-    imageHeightSmall: 125,
-  },
+    imageHeightSmall: 125
+  }
 };
 
 export default Metrics;

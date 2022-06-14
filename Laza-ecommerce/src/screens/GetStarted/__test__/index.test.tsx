@@ -71,7 +71,7 @@ describe('GetStarted Screen', () => {
     fireEvent(link, action);
 
     expect(navigationMock.navigate).toHaveBeenCalledWith(
-      SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name,
+      SCREENS_ROUTES.AUTH_STACK.SIGN_IN_SCREEN.name
     );
   });
 

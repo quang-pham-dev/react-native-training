@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingBottom: Metrics.padding.xm,
-  },
+    paddingBottom: Metrics.padding.xm
+  }
 });
 
 export default styles;

@@ -16,7 +16,7 @@ describe('Label Component', () => {
     fontSize: 17,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
     color: Colors.textBlack,
-    lineHeight: 15,
+    lineHeight: 15
   };
 
   test('should render correctly', () => {

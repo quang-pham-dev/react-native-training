@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Reducer
-import productsReducer from 'context/reducers/products';
+import productsReducer from 'contexts/reducers/products';
 
 // State
-import { InitialProductsState } from 'context/reducers/products';
+import { InitialProductsState } from 'contexts/reducers/products';
 
 // Actions
 import {
@@ -24,8 +24,8 @@ import {
   LOAD_MORE_PRODUCTS_BY_BRAND_ID,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
-  SEARCH_PRODUCTS_VALUE,
-} from 'context/actions/products';
+  SEARCH_PRODUCTS_VALUE
+} from 'contexts/actions/products';
 
 // Mocks
 import { product, products } from '__mocks__/dataMock/products';
@@ -38,7 +38,7 @@ describe('productsReducer', () => {
     product: product,
     products: products,
     productsByBrandId: products,
-    productsSearch: products,
+    productsSearch: products
   };
 
   const ProductsResponse = {
@@ -46,54 +46,54 @@ describe('productsReducer', () => {
       data: ProductPayload,
       limit: PRODUCT_PAGINATION.PRODUCT_LIMIT,
       totalRows: 0,
-      totalRowsByBrandId: 0,
+      totalRowsByBrandId: 0
     },
     searchValue: undefined,
-    error: undefined,
+    error: undefined
   };
 
   test('should handle GET_PRODUCT', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: GET_PRODUCT,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
-      isProcessing: true,
+      isProcessing: true
     });
   });
   test('should handle GET_PRODUCTS', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: GET_PRODUCTS,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
-      isProcessing: true,
+      isProcessing: true
     });
   });
   test('should handle GET_PRODUCTS_BY_BRAND_ID', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: GET_PRODUCTS_BY_BRAND_ID,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
-      isProcessing: true,
+      isProcessing: true
     });
   });
   test('should handle LOAD_MORE_PRODUCTS', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: LOAD_MORE_PRODUCTS,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
-      isLoading: true,
+      isLoading: true
     });
   });
 
@@ -101,22 +101,22 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: LOAD_MORE_PRODUCTS_BY_BRAND_ID,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
-      isLoading: true,
+      isLoading: true
     });
   });
   test('should handle SEARCH_PRODUCTS_VALUE', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: SEARCH_PRODUCTS_VALUE,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
-      searchValue: ProductsResponse.searchValue,
+      searchValue: ProductsResponse.searchValue
     });
   });
 
@@ -124,13 +124,13 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: GET_PRODUCT_SUCCESS,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: GET_PRODUCT_SUCCESS,
       isProcessing: false,
-      product: ProductPayload.product,
+      product: ProductPayload.product
     });
   });
 
@@ -138,13 +138,13 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: GET_PRODUCTS_SUCCESS,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: GET_PRODUCTS_SUCCESS,
       isProcessing: false,
-      products: ProductPayload.products,
+      products: ProductPayload.products
     });
   });
 
@@ -152,13 +152,13 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
       isProcessing: false,
-      productsByBrandId: ProductPayload.productsByBrandId,
+      productsByBrandId: ProductPayload.productsByBrandId
     });
   });
 
@@ -166,13 +166,13 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: LOAD_MORE_PRODUCTS_SUCCESS,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: LOAD_MORE_PRODUCTS_SUCCESS,
       isLoading: false,
-      products: ProductPayload.products,
+      products: ProductPayload.products
     });
   });
 
@@ -180,13 +180,13 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
       isLoading: false,
-      productsByBrandId: ProductPayload.productsByBrandId,
+      productsByBrandId: ProductPayload.productsByBrandId
     });
   });
 
@@ -194,13 +194,13 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: GET_PRODUCT_FAILED,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: GET_PRODUCT_FAILED,
       isProcessing: false,
-      error: ProductsResponse.error,
+      error: ProductsResponse.error
     });
   });
 
@@ -208,13 +208,13 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: GET_PRODUCTS_FAILED,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: GET_PRODUCTS_FAILED,
       isProcessing: false,
-      error: ProductsResponse.error,
+      error: ProductsResponse.error
     });
   });
 
@@ -222,13 +222,13 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
       isProcessing: false,
-      error: ProductsResponse.error,
+      error: ProductsResponse.error
     });
   });
 
@@ -236,14 +236,14 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: LOAD_MORE_PRODUCTS_FAILED,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: LOAD_MORE_PRODUCTS_FAILED,
       isLoading: false,
       isProcessing: false,
-      error: ProductsResponse.error,
+      error: ProductsResponse.error
     });
   });
 
@@ -251,14 +251,14 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
       isLoading: false,
       isProcessing: false,
-      error: ProductsResponse.error,
+      error: ProductsResponse.error
     });
   });
 
@@ -266,22 +266,22 @@ describe('productsReducer', () => {
     return expect(
       productsReducer(InitialProductsState, {
         type: RESET_STATE,
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
       ...InitialProductsState,
       isProcessing: true,
-      error: null,
+      error: null
     });
   });
 
   test('should handle default', () => {
     return expect(
       productsReducer(InitialProductsState, {
-        payload: ProductsResponse.payload,
-      }),
+        payload: ProductsResponse.payload
+      })
     ).toEqual({
-      ...InitialProductsState,
+      ...InitialProductsState
     });
   });
 });

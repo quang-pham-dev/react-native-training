@@ -6,7 +6,7 @@ import {
   Animated,
   StatusBar,
   NativeSyntheticEvent,
-  NativeScrollEvent,
+  NativeScrollEvent
 } from 'react-native';
 
 // LIBS
@@ -22,25 +22,25 @@ import Label from 'components/Label';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { AuthenticationContext } from 'context/AuthContext';
-import { ProductsContext } from 'context/ProductsContext';
-import { BrandsContext } from 'context/BrandsContext';
+import { AuthenticationContext } from 'contexts/AuthContext';
+import { ProductsContext } from 'contexts/ProductsContext';
+import { BrandsContext } from 'contexts/BrandsContext';
 import {
   GET_PRODUCTS,
   GET_PRODUCTS_FAILED,
   GET_PRODUCTS_SUCCESS,
   LOAD_MORE_PRODUCTS,
   LOAD_MORE_PRODUCTS_FAILED,
-  LOAD_MORE_PRODUCTS_SUCCESS,
-} from 'context/actions/products';
+  LOAD_MORE_PRODUCTS_SUCCESS
+} from 'contexts/actions/products';
 import {
   GET_BRANDS,
   GET_BRANDS_FAILED,
   GET_BRANDS_SUCCESS,
   LOAD_MORE_BRANDS,
   LOAD_MORE_BRANDS_FAILED,
-  LOAD_MORE_BRANDS_SUCCESS,
-} from 'context/actions/brands';
+  LOAD_MORE_BRANDS_SUCCESS
+} from 'contexts/actions/brands';
 
 // API
 import { productsService } from 'api/products';
@@ -64,6 +64,7 @@ import styles from './styles';
 
 const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   const { authState } = useContext(AuthenticationContext);
+
   const { productState, productDispatch } = useContext(ProductsContext);
 
   const { brandState, brandDispatch } = useContext(BrandsContext);
@@ -86,24 +87,24 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         translateY: animatedValue.interpolate({
           inputRange: [0, 50],
           outputRange: [0, -140],
-          extrapolate: 'clamp',
-        }),
+          extrapolate: 'clamp'
+        })
       },
       {
         scaleX: animatedValue.interpolate({
           inputRange: [0, 50],
           outputRange: [1, 0.7],
-          extrapolate: 'clamp',
-        }),
+          extrapolate: 'clamp'
+        })
       },
       {
         scaleY: animatedValue.interpolate({
           inputRange: [0, 50],
           outputRange: [1, 0.7],
-          extrapolate: 'clamp',
-        }),
-      },
-    ],
+          extrapolate: 'clamp'
+        })
+      }
+    ]
   };
 
   // Animation for the header
@@ -113,10 +114,10 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         translateY: animatedValue.interpolate({
           inputRange: [0, 50],
           outputRange: [0, -3],
-          extrapolate: 'clamp',
-        }),
-      },
-    ],
+          extrapolate: 'clamp'
+        })
+      }
+    ]
   };
 
   // Animation for the header title
@@ -126,22 +127,22 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         translateX: animatedValue.interpolate({
           inputRange: [0, 50],
           outputRange: [0, -100],
-          extrapolate: 'clamp',
-        }),
+          extrapolate: 'clamp'
+        })
       },
       {
         translateY: animatedValue.interpolate({
           inputRange: [0, 50],
           outputRange: [0, -100],
-          extrapolate: 'clamp',
-        }),
-      },
+          extrapolate: 'clamp'
+        })
+      }
     ],
     opacity: animatedValue.interpolate({
       inputRange: [0, 50],
       outputRange: [1, 0],
-      extrapolate: 'clamp',
-    }),
+      extrapolate: 'clamp'
+    })
   };
 
   // Animation for the brands card list
@@ -151,15 +152,15 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         translateX: animatedValue.interpolate({
           inputRange: [0, 50],
           outputRange: [0, 200],
-          extrapolate: 'clamp',
-        }),
-      },
+          extrapolate: 'clamp'
+        })
+      }
     ],
     opacity: animatedValue.interpolate({
       inputRange: [0, 30],
       outputRange: [1, 0],
-      extrapolate: 'clamp',
-    }),
+      extrapolate: 'clamp'
+    })
   };
 
   // Animation for the products list
@@ -169,10 +170,10 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         translateY: animatedValue.interpolate({
           inputRange: [0, 40],
           outputRange: [0, -230],
-          extrapolate: 'clamp',
-        }),
-      },
-    ],
+          extrapolate: 'clamp'
+        })
+      }
+    ]
   };
 
   useEffect(() => {
@@ -190,18 +191,18 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
             type: GET_BRANDS_SUCCESS,
             payload: {
               data: {
-                brands: data,
+                brands: data
               },
               totalRowsOfBrands: _totalRows,
-              limit: _limit,
-            },
+              limit: _limit
+            }
           });
         }
       } catch (error) {
         if (!isCancelled) {
           brandDispatch({
             type: GET_BRANDS_FAILED,
-            payload: error,
+            payload: error
           });
         }
         Alert.alert('Error', error.message);
@@ -229,18 +230,18 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
             type: GET_PRODUCTS_SUCCESS,
             payload: {
               data: {
-                products: data,
+                products: data
               },
               totalRows: _totalRows,
-              limit: _limit,
-            },
+              limit: _limit
+            }
           });
         }
       } catch (error) {
         if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCTS_FAILED,
-            payload: error,
+            payload: error
           });
         }
         Alert.alert('Error', error.message);
@@ -256,7 +257,6 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
   // handle action navigate to Brand Detail Screen when press card brand
   const handlePressBrandCard = useCallback((id: string) => {
     navigation.navigate(SCREENS_ROUTES.HOME_STACK.BRAND_DETAIL_SCREEN.name, id);
-
   }, []);
 
   // handle action navigate to Product Detail Screen when press card product
@@ -276,15 +276,15 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         type: LOAD_MORE_PRODUCTS_SUCCESS,
         payload: {
           data: {
-            products: data,
+            products: data
           },
-          limit: _limit,
-        },
+          limit: _limit
+        }
       });
     } catch (error) {
       productDispatch({
         type: LOAD_MORE_PRODUCTS_FAILED,
-        payload: error,
+        payload: error
       });
 
       Alert.alert('Error', error.message);
@@ -303,15 +303,15 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         type: LOAD_MORE_BRANDS_SUCCESS,
         payload: {
           data: {
-            brands: data,
+            brands: data
           },
-          limit: _limit,
-        },
+          limit: _limit
+        }
       });
     } catch (error) {
       brandDispatch({
         type: LOAD_MORE_BRANDS_FAILED,
-        payload: error,
+        payload: error
       });
 
       Alert.alert('Error', error.message);
@@ -329,10 +329,10 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     () =>
       searchValue
         ? products.filter((product: IProduct) =>
-          product.name.toLowerCase().includes(searchValue.toLowerCase()),
+          product.name.toLowerCase().includes(searchValue.toLowerCase())
         )
         : products,
-    [searchValue, products],
+    [searchValue, products]
   );
 
   // Handle Animation on scroll Product list then sticky header
@@ -344,11 +344,11 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         Animated.timing(animatedValue, {
           toValue: y,
           duration: 800,
-          useNativeDriver: true,
+          useNativeDriver: true
         }).start();
       }
     },
-    [animatedValue],
+    [animatedValue]
   );
 
   return (
@@ -364,9 +364,11 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
           <Text style={styles.headerTitle}>Hello</Text>
           {Boolean(username) && <Text style={styles.userNameTitle}>{username}</Text>}
         </Animated.View>
+
         <Animated.View style={headerTitleAnimation}>
           <Title titleName='Welcome to Laza.' titleStyles={styles.subTitle}></Title>
         </Animated.View>
+
         <Animated.View style={SearchBarAnimation}>
           <SearchBar onSubmitEditing={handleSubmitEditing} />
         </Animated.View>
@@ -383,6 +385,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
               fontFamily={Fonts.fontFamily.Inter_500Medium}
               color={Colors.textBlack}
             />
+
             <Label
               labelName='View All'
               fontSize={Fonts.size.small}
@@ -411,6 +414,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
               fontFamily={Fonts.fontFamily.Inter_500Medium}
               color={Colors.textBlack}
             />
+
             <Label
               labelName='View All'
               fontSize={Fonts.size.small}

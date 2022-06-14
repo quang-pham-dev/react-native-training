@@ -18,7 +18,7 @@ describe('Product Card Component', () => {
   const props = {
     product,
     onPressProductCard: navigationMock.navigate,
-    onPressLikeProduct: jest.fn(),
+    onPressLikeProduct: jest.fn()
   };
 
   const tree = renderer.create(<ProductCard {...props} />);

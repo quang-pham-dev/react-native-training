@@ -7,18 +7,18 @@ import Colors from 'themes/Colors';
 
 const styles = StyleSheet.create({
   inputContainer: {
-    width: '100%',
+    width: '100%'
   },
   label: {
     alignSelf: 'flex-start',
     fontSize: Fonts.size.small,
     lineHeight: Fonts.lineHeight.xs,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
-    color: Colors.textGray,
+    color: Colors.textGray
   },
 
   inputWrapper: {
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 
   input: {
@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.fontFamily.Inter_500Medium,
     fontSize: Fonts.size.normal,
     lineHeight: Fonts.lineHeight.base,
-    paddingVertical: Metrics.padding.xm,
+    paddingVertical: Metrics.padding.xm
   },
 
   icon: {
     width: Metrics.icons.standard,
     position: 'absolute',
-    right: 0,
-  },
+    right: 0
+  }
 });
 
 export default styles;

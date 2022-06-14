@@ -11,7 +11,7 @@ import { IProductResponse } from 'types/models/Products';
 // get all products
 const getProducts = async (limit: number): Promise<IProductResponse> => {
   return await http.get(
-    `${ENDPOINTS.PRODUCT.GET_PRODUCTS}?_page=${PRODUCT_PAGINATION.PAGE}&_limit=${limit}`,
+    `${ENDPOINTS.PRODUCT.GET_PRODUCTS}?_page=${PRODUCT_PAGINATION.PAGE}&_limit=${limit}`
   );
 };
 
@@ -23,12 +23,12 @@ const getProductById = async (id: string): Promise<IProductResponse> => {
 // get product by brand id
 const getProductsByBrandId = async (id: string, limit: number): Promise<IProductResponse> => {
   return await http.get(
-    `${ENDPOINTS.PRODUCT.GET_PRODUCTS}?brandId=${id}&_page=${PRODUCT_PAGINATION.PAGE}&_limit=${limit}`,
+    `${ENDPOINTS.PRODUCT.GET_PRODUCTS}?brandId=${id}&_page=${PRODUCT_PAGINATION.PAGE}&_limit=${limit}`
   );
 };
 
 export const productsService = {
   getProducts,
   getProductById,
-  getProductsByBrandId,
+  getProductsByBrandId
 };

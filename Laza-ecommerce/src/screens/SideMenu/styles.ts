@@ -8,98 +8,98 @@ import Metrics from 'themes/Metrics';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingHorizontal: Metrics.padding.lg,
+    paddingHorizontal: Metrics.padding.lg
   },
 
   header: {
-    flex: 1,
+    flex: 1
   },
 
   iconMenuWrapper: {
     flexDirection: 'row',
-    marginTop: Metrics.margin.xxxl,
+    marginTop: Metrics.margin.xxxl
   },
 
   iconMenu: {
     width: 45,
-    height: 45,
+    height: 45
   },
 
   infoWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: Metrics.margin.xxl,
+    marginTop: Metrics.margin.xxl
   },
 
   profileInfoWrapper: {
     justifyContent: 'space-between',
-    marginLeft: Metrics.margin.xm,
+    marginLeft: Metrics.margin.xm
   },
 
   profile: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
 
   verifiedWrapper: {
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
 
   verifiedText: {
     fontSize: Fonts.size.small,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
-    color: Colors.textGray,
+    color: Colors.textGray
   },
   accountName: {
     fontSize: Fonts.size.default,
     fontFamily: Fonts.fontFamily.Inter_500Medium,
-    color: Colors.textBlack,
+    color: Colors.textBlack
   },
 
   iconBadge: {
     width: 15,
     height: 15,
-    resizeMode: 'contain',
+    resizeMode: 'contain'
   },
 
   orderInfo: {
     padding: Metrics.padding.sm,
     backgroundColor: Colors.secondaryBackground,
-    borderRadius: Metrics.borderRadius.roundedSmall,
+    borderRadius: Metrics.borderRadius.roundedSmall
   },
   textOrder: {
     fontSize: Fonts.size.min,
     fontFamily: Fonts.fontFamily.Inter_500Medium,
-    color: Colors.textGray,
+    color: Colors.textGray
   },
 
   avatar: {
     width: 45,
     height: 45,
     borderRadius: 45,
-    resizeMode: 'cover',
+    resizeMode: 'cover'
   },
 
   icons: {
     width: 19,
     height: 19,
     resizeMode: 'contain',
-    marginRight: Metrics.margin.md,
+    marginRight: Metrics.margin.md
   },
 
   text: {
     fontSize: Fonts.size.normal,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
-    lineHeight: Fonts.lineHeight.base,
+    lineHeight: Fonts.lineHeight.base
   },
 
   main: {
-    flex: 2,
+    flex: 2
   },
   darkModeWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'center'
   },
 
   switchWrapper: {},
@@ -109,19 +109,19 @@ const styles = StyleSheet.create({
     transform:
       Platform.OS === 'android'
         ? [{ scaleX: 0.9 }, { scaleY: 0.9 }]
-        : [{ scaleX: 0.6 }, { scaleY: 0.6 }],
+        : [{ scaleX: 0.6 }, { scaleY: 0.6 }]
   },
 
   footer: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
 
   logoutText: {
     fontSize: Fonts.size.normal,
     fontFamily: Fonts.fontFamily.Inter_500Medium,
-    color: Colors.textLogout,
-  },
+    color: Colors.textLogout
+  }
 });
 
 export default styles;

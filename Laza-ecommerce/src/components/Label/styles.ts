@@ -7,8 +7,8 @@ import Fonts from 'themes/Fonts';
 const styles = StyleSheet.create({
   labelText: {
     fontSize: Fonts.size.default,
-    color: Colors.textBlack,
-  },
+    color: Colors.textBlack
+  }
 });
 
 export default styles;

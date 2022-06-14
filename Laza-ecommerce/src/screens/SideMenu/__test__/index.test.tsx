@@ -20,7 +20,7 @@ describe('Side menu', () => {
   const closeMenuID = 'Side-menu-close';
 
   const props = {
-    navigation: navigationMock,
+    navigation: navigationMock
   };
   tree = renderer.create(<SideMenu {...props} />);
 

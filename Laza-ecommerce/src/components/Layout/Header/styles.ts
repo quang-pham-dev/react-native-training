@@ -9,24 +9,24 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '100%',
+    width: '100%'
   },
   menuWrapper: {
-    backgroundColor: Colors.primaryBackground,
+    backgroundColor: Colors.primaryBackground
   },
   menuIcon: {
     width: Metrics.icons.semiLarge,
-    height: Metrics.icons.semiLarge,
+    height: Metrics.icons.semiLarge
   },
 
   cartWrapper: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   cartIcon: {
     width: Metrics.icons.semiLarge,
-    height: Metrics.icons.semiLarge,
-  },
+    height: Metrics.icons.semiLarge
+  }
 });
 
 export default styles;

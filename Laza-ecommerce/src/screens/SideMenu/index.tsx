@@ -15,8 +15,8 @@ import Title from 'components/Title';
 import DrawerItem from 'screens/SideMenu/components';
 
 // Context
-import { AuthenticationContext } from 'context/AuthContext';
-import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'context/actions/auth';
+import { AuthenticationContext } from 'contexts/AuthContext';
+import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'contexts/actions/auth';
 
 // API
 import { authService } from 'api/auth';
@@ -55,7 +55,7 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
     Alert.alert('Logout!', 'Are you sure you want to logout?', [
       {
         text: 'Cancel',
-        onPress: () => {},
+        onPress: () => {}
       },
       {
         text: 'OK',
@@ -67,14 +67,14 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
             await authService.signOut();
             await remove(AUTH_DATA);
             authDispatch({
-              type: SIGN_OUT_SUCCESS,
+              type: SIGN_OUT_SUCCESS
             });
           } catch (error) {
             authDispatch({ type: SIGN_OUT_FAILED, payload: error });
             Alert.alert('Error', error.message);
           }
-        },
-      },
+        }
+      }
     ]);
   }, []);
 
@@ -103,26 +103,26 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
     {
       testID: 'AccountInformation',
       title: SCREENS_ROUTES.HOME_STACK.DRAWER_MENU.AccountInformation.name,
-      source: IMAGES.iconInfo,
+      source: IMAGES.iconInfo
     },
     {
       testID: 'Side-menu-Bag',
       title: SCREENS_ROUTES.HOME_STACK.DRAWER_MENU.Order.name,
       source: IMAGES.iconBagDrawer,
-      onPress: handlePressBagIcon,
+      onPress: handlePressBagIcon
     },
     {
       testID: 'Side-menu-Wallet',
       title: SCREENS_ROUTES.HOME_STACK.DRAWER_MENU.Wallet.name,
       source: IMAGES.iconWalletDrawer,
-      onPress: handlePressWalletIcon,
+      onPress: handlePressWalletIcon
     },
     {
       testID: 'Side-menu-Wishlist',
       title: SCREENS_ROUTES.HOME_STACK.DRAWER_MENU.WishList.name,
       source: IMAGES.iconHeartDrawer,
-      onPress: handlePressWishlistIcon,
-    },
+      onPress: handlePressWishlistIcon
+    }
   ];
 
   return (

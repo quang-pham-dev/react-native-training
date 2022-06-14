@@ -13,7 +13,7 @@ const BrandsProvider = ({ children }: IProviderProps) => {
 
   const BrandsContextValue = useMemo(
     () => ({ brandState, brandDispatch }),
-    [brandState, brandDispatch],
+    [brandState, brandDispatch]
   );
 
   return (

@@ -5,22 +5,22 @@ import Metrics from 'themes/Metrics';
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: Metrics.margin.xm,
+    marginTop: Metrics.margin.xm
   },
 
   productCard: {
-    marginBottom: Metrics.margin.xm,
+    marginBottom: Metrics.margin.xm
   },
   columnWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   listFooter: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: Metrics.margin.xm,
-  },
+    marginBottom: Metrics.margin.xm
+  }
 });
 
 export default styles;

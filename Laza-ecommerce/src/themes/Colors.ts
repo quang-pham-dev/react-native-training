@@ -28,7 +28,7 @@ const Colors = {
   tintColor: '#e91e63',
   shadowGray: 'rgba(0, 0, 0, 0.15)',
   primaryBackground: '#fff',
-  secondaryBackground: '#F5F6FA',
+  secondaryBackground: '#F5F6FA'
 };
 
 export default Colors;

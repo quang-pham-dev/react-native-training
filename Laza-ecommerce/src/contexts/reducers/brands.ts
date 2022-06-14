@@ -8,8 +8,8 @@ import {
   LOAD_MORE_BRANDS,
   LOAD_MORE_BRANDS_SUCCESS,
   LOAD_MORE_BRANDS_FAILED,
-  RESET_STATE,
-} from 'context/actions/brands';
+  RESET_STATE
+} from 'contexts/actions/brands';
 
 // Constants
 import { BRAND_PAGINATION } from 'constants/Brands';
@@ -24,7 +24,7 @@ export const InitialBrandsState: BrandsState = {
   error: null,
   brands: [],
   totalRowsOfBrands: 0,
-  limit: BRAND_PAGINATION.BRAND_LIMIT,
+  limit: BRAND_PAGINATION.BRAND_LIMIT
 };
 
 const brandsReducer = (state: typeof InitialBrandsState, action: BrandsAction) => {
@@ -33,13 +33,13 @@ const brandsReducer = (state: typeof InitialBrandsState, action: BrandsAction) =
     case GET_BRAND:
       return {
         ...state,
-        isProcessing: true,
+        isProcessing: true
       };
 
     case LOAD_MORE_BRANDS:
       return {
         ...state,
-        isLoading: true,
+        isLoading: true
       };
 
     case GET_BRANDS_SUCCESS:
@@ -49,7 +49,7 @@ const brandsReducer = (state: typeof InitialBrandsState, action: BrandsAction) =
         isProcessing: false,
         brands: action.payload?.data?.brands,
         limit: action.payload?.limit,
-        totalRowsOfBrands: action.payload?.totalRowsOfBrands,
+        totalRowsOfBrands: action.payload?.totalRowsOfBrands
       };
 
     case GET_BRAND_SUCCESS:
@@ -57,7 +57,7 @@ const brandsReducer = (state: typeof InitialBrandsState, action: BrandsAction) =
         ...state,
         type: action.type,
         isProcessing: false,
-        brand: action.payload?.data?.brand,
+        brand: action.payload?.data?.brand
       };
 
     case LOAD_MORE_BRANDS_SUCCESS:
@@ -66,7 +66,7 @@ const brandsReducer = (state: typeof InitialBrandsState, action: BrandsAction) =
         type: action.type,
         isLoading: false,
         brands: action.payload?.data?.brands,
-        limit: action.payload?.limit,
+        limit: action.payload?.limit
       };
 
     case GET_BRANDS_FAILED:
@@ -76,17 +76,17 @@ const brandsReducer = (state: typeof InitialBrandsState, action: BrandsAction) =
         ...state,
         isProcessing: false,
         type: action.type,
-        error: action.error,
+        error: action.error
       };
 
     case RESET_STATE:
       return {
-        ...InitialBrandsState,
+        ...InitialBrandsState
       };
 
     default:
       return {
-        ...state,
+        ...state
       };
   }
 };

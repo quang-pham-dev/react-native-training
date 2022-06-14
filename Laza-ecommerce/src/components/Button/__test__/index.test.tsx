@@ -13,7 +13,7 @@ import IMAGES from 'themes/Images';
 describe('Button Component', () => {
   const props = {
     onPress: jest.fn(),
-    text: 'Button',
+    text: 'Button'
   };
 
   const tree = renderer.create(<Button {...props} />);
@@ -26,7 +26,7 @@ describe('Button Component', () => {
   test('should render children', () => {
     const newProps = {
       ...props,
-      children: <Text>i'm Button</Text>,
+      children: <Text>i'm Button</Text>
     };
     const tree = renderer.create(<Button {...newProps} />);
     const component = tree.toJSON();
@@ -36,7 +36,7 @@ describe('Button Component', () => {
   test('should render icon button correctly', () => {
     const newProps = {
       ...props,
-      icon: IMAGES.iconGoogle,
+      icon: IMAGES.iconGoogle
     };
 
     const tree = renderer.create(<Button {...newProps} />);

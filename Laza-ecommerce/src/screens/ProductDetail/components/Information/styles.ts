@@ -9,18 +9,18 @@ const styles = StyleSheet.create({
   productInfoContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop: Metrics.margin.xm,
+    marginTop: Metrics.margin.xm
   },
 
   productInfoWrapper: {
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
 
   textTitle: {
     fontSize: Fonts.size.small,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
     lineHeight: Fonts.lineHeight.xs,
-    color: Colors.textGray,
+    color: Colors.textGray
   },
 
   textValue: {
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.fontFamily.Inter_600SemiBold,
     lineHeight: Fonts.lineHeight.xl - 2,
     color: Colors.textBlack,
-    paddingTop: Metrics.padding.xs,
-  },
+    paddingTop: Metrics.padding.xs
+  }
 });
 
 export default styles;

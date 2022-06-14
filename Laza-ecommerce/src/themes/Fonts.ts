@@ -10,7 +10,7 @@ const size = {
   h4: 32,
   h3: 36,
   h2: 40,
-  h1: 44,
+  h1: 44
 };
 
 const lineHeight = {
@@ -20,7 +20,7 @@ const lineHeight = {
   sm: 18,
   lg: 22,
   xl: 26,
-  xxl: 30,
+  xxl: 30
 };
 
 const fontFamily = {
@@ -29,11 +29,11 @@ const fontFamily = {
   Inter_300Light: 'Inter_300Light',
   Inter_400Regular: 'Inter_400Regular',
   Inter_500Medium: 'Inter_500Medium',
-  Inter_600SemiBold: 'Inter_600SemiBold',
+  Inter_600SemiBold: 'Inter_600SemiBold'
 };
 
 export default {
   size,
   lineHeight,
-  fontFamily,
+  fontFamily
 };

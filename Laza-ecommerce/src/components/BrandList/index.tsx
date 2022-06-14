@@ -5,7 +5,7 @@ import { FlatList, View } from 'react-native';
 import isEqual from 'react-fast-compare';
 
 // Context
-import { BrandsContext } from 'context/BrandsContext';
+import { BrandsContext } from 'contexts/BrandsContext';
 
 // Components
 import BrandCard from 'components/BrandCard';
@@ -31,7 +31,7 @@ const BrandsCardList = ({ onPressBrandCard, brands, onLoadMoreBrands }: IBrandsL
     (id: string) => {
       onPressBrandCard(id);
     },
-    [onPressBrandCard],
+    [onPressBrandCard]
   );
 
   // handle action load more brands

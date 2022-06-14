@@ -14,7 +14,7 @@ import useFonts from 'hooks/useFonts';
 import RootNavigator from 'navigation/RootNavigator';
 
 // Context Provider
-import AuthProvider from 'context/AuthContext';
+import AuthProvider from 'contexts/AuthContext';
 
 if (__DEV__) {
   connectToDevTools({

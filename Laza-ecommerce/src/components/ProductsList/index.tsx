@@ -10,7 +10,7 @@ import Title from 'components/Title';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { ProductsContext } from 'context/ProductsContext';
+import { ProductsContext } from 'contexts/ProductsContext';
 
 // Constants
 import { PRODUCTS_EMPTY_RESULT } from 'constants/Products';
@@ -26,7 +26,7 @@ const ProductsList = ({
   products,
   onPressLikeProduct,
   onLoadMoreProducts,
-  onScroll,
+  onScroll
 }: IProductsListProps) => {
   const { productState } = useContext(ProductsContext);
 
@@ -35,7 +35,7 @@ const ProductsList = ({
     totalRows,
     productsByBrandId,
     totalRowsByBrandId,
-    products: allProduct,
+    products: allProduct
   } = productState || {};
 
   // handle action load more products
@@ -65,7 +65,7 @@ const ProductsList = ({
     (id: string) => {
       onPressProductCard(id);
     },
-    [onPressProductCard],
+    [onPressProductCard]
   );
 
   // handle action when press like product card
@@ -86,7 +86,7 @@ const ProductsList = ({
         onPressLikeProduct={handlePressLikeProduct}
       />
     ),
-    [handlePressLikeProduct, handlePressProductCard],
+    [handlePressLikeProduct, handlePressProductCard]
   );
 
   // handle render Footer component

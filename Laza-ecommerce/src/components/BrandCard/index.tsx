@@ -27,7 +27,8 @@ const BrandCard = ({ brand, onPressBrandCard, brandCardStyles }: IBrandCardProps
     <TouchableOpacity
       testID='brandCard'
       onPress={handlePressBrandCard}
-      style={[styles.brandCardContainer, brandCardStyles]}>
+      style={[styles.brandCardContainer, brandCardStyles]}
+    >
       <View style={[styles.brandCardWrapper]}>
         <View style={styles.brandLogoWrapper}>
           <Image style={styles.brandLogo} source={{ uri: brand.logoUrl }} />

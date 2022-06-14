@@ -51,6 +51,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
           iconStyles={[styles.socialIcon]}
           textStyles={[styles.text]}
         />
+
         <Button
           testID='TwitterButton'
           text={'Twitter'}
@@ -59,6 +60,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
           iconStyles={[styles.socialIcon]}
           textStyles={[styles.text]}
         />
+
         <Button
           testID='GoogleButton'
           text={'Google'}
@@ -77,6 +79,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
             <Title titleStyles={styles.signIn} titleName='Signin' />
           </TouchableOpacity>
         </View>
+
         <Button
           text={'Create an Account'}
           buttonStyles={[styles.bottomButton, styles.createAnAccountButton]}

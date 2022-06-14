@@ -16,13 +16,13 @@ const Label = ({
   fontFamily,
   color,
   labelWrapperStyles,
-  lineHeight,
+  lineHeight
 }: ILabelTextProps) => {
   const labelStyles = {
     fontSize: fontSize,
     fontFamily: fontFamily,
     color,
-    ...(lineHeight && { lineHeight }),
+    ...(lineHeight && { lineHeight })
   };
 
   return (

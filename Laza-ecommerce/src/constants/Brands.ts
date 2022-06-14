@@ -1,7 +1,7 @@
 // Constant pagination of brands
 export const BRAND_PAGINATION = {
   PAGE: 1,
-  BRAND_LIMIT: 5,
+  BRAND_LIMIT: 5
 };
 
 // Constant messages empty result
