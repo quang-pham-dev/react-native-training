@@ -45,6 +45,7 @@ export const styles = StyleSheet.create({
     color: Colors.textGray,
     paddingTop: Metrics.padding.xsm
   },
+
   loginForm: {
     flex: 2
   }
