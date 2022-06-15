@@ -13,7 +13,7 @@ module.exports = {
     '!**/babel.config.js',
     '!**/jest.setup.js',
     '!src/hooks/*',
-    '!src/context/*',
+    '!src/contexts/*',
     '!src/navigation/**'
   ],
   coverageReporters: ['json', 'html']
