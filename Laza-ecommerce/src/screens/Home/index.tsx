@@ -329,8 +329,8 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
     () =>
       searchValue
         ? products.filter((product: IProduct) =>
-          product.name.toLowerCase().includes(searchValue.toLowerCase())
-        )
+            product.name.toLowerCase().includes(searchValue.toLowerCase())
+          )
         : products,
     [searchValue, products]
   );
@@ -366,7 +366,7 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         </Animated.View>
 
         <Animated.View style={headerTitleAnimation}>
-          <Title titleName='Welcome to Laza.' titleStyles={styles.subTitle}></Title>
+          <Title titleName='Welcome to Laza.' titleStyles={styles.subTitle} />
         </Animated.View>
 
         <Animated.View style={SearchBarAnimation}>

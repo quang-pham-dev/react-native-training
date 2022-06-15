@@ -82,11 +82,11 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
                 onPress={handlePressBack}
               />
             </View>
-            <Title titleStyles={styles.headerTitle} titleName='Welcome'></Title>
+            <Title titleStyles={styles.headerTitle} titleName='Welcome' />
             <Title
               titleStyles={styles.headerSubTitle}
               titleName='Please enter your data to continue'
-            ></Title>
+            />
           </View>
           {/* end header */}
           <View style={styles.loginForm}>

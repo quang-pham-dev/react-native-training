@@ -38,7 +38,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
             onPress={handlePressBackIcon}
           />
         </View>
-        <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started'></Title>
+        <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started' />
       </View>
       {/* End of header */}
 
