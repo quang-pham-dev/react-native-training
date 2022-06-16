@@ -4,7 +4,7 @@ import React, { createContext, useMemo, useReducer } from 'react';
 import authenticationReducer, { InitialAuthState } from './reducers/auth';
 
 // Types
-import { IProviderProps } from 'types/context/Providers';
+import { IProviderProps } from 'types/contexts/Providers';
 
 export const AuthenticationContext = createContext({} as any);
 

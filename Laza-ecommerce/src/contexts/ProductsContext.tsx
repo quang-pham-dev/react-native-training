@@ -4,7 +4,7 @@ import React, { createContext, useMemo, useReducer } from 'react';
 import productsReducer, { InitialProductsState } from './reducers/products';
 
 // Types
-import { IProviderProps } from 'types/context/Providers';
+import { IProviderProps } from 'types/contexts/Providers';
 
 export const ProductsContext = createContext({} as any);
 

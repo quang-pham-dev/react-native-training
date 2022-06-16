@@ -12,8 +12,8 @@ import {
 } from 'contexts/actions/auth';
 
 // Types
-import { AuthAction } from 'types/context/actions/Auth';
-import { AuthState } from 'types/context/reducers/Auth';
+import { AuthAction } from 'types/contexts/actions/Auth';
+import { AuthState } from 'types/contexts/reducers/Auth';
 
 export const InitialAuthState: AuthState = {
   isLoading: false,

@@ -15,8 +15,8 @@ import {
 import { BRAND_PAGINATION } from 'constants/Brands';
 
 // Types
-import { BrandsAction } from 'types/context/actions/Brand';
-import { BrandsState } from 'types/context/reducers/Brand';
+import { BrandsAction } from 'types/contexts/actions/Brand';
+import { BrandsState } from 'types/contexts/reducers/Brand';
 
 export const InitialBrandsState: BrandsState = {
   isLoading: false,

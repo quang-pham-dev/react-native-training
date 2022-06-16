@@ -22,8 +22,8 @@ import {
 import { PRODUCT_PAGINATION } from 'constants/Products';
 
 // Types
-import { ProductsAction } from 'types/context/actions/Product';
-import { ProductsState } from 'types/context/reducers/Product';
+import { ProductsAction } from 'types/contexts/actions/Product';
+import { ProductsState } from 'types/contexts/reducers/Product';
 
 export const InitialProductsState: ProductsState = {
   isLoading: false,
