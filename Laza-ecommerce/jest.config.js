@@ -13,6 +13,7 @@ module.exports = {
     '!**/babel.config.js',
     '!**/jest.setup.js',
     '!src/hooks/*',
+    '!src/api/*',
     '!src/contexts/*',
     '!src/navigation/**'
   ],
