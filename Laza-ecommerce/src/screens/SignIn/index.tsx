@@ -5,7 +5,6 @@ import { Alert, KeyboardAvoidingView, ScrollView, View } from 'react-native';
 import LoadingIndicator from 'components/LoadingIndicator';
 import Button from 'components/Button';
 import Title from 'components/Title';
-import LoginForm from 'screens/SignIn/components/LoginForm';
 
 // Context
 import { AuthenticationContext } from 'contexts/AuthContext';
@@ -29,6 +28,9 @@ import IMAGES from 'themes/Images';
 
 // Styles
 import { styles } from './styles';
+
+// Splitting lazy load component
+const LoginFormLazy = React.lazy(() => import('screens/SignIn/components/LoginForm'));
 
 const SignInScreen = ({ navigation }: ISignInScreenProps) => {
   const { authState, authDispatch } = useContext(AuthenticationContext);
@@ -92,7 +94,9 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
           <View style={styles.loginForm}>
             {Boolean(isProcessing) && <LoadingIndicator />}
             {/* Form */}
-            <LoginForm onSubmit={handleSubmitButton} />
+            <React.Suspense fallback={<LoadingIndicator />}>
+              <LoginFormLazy onSubmit={handleSubmitButton} />
+            </React.Suspense>
             {/* end Form */}
           </View>
         </View>
