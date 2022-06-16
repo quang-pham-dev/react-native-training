@@ -36,25 +36,25 @@ http.interceptors.response.use(
   function (response: AxiosResponse) {
     // Do something with response data
     return response;
+  },
+  async function (error) {
+    //   Do something with response error
+    const originalRequest = error.config;
+    const httpStatus = error.response?.status;
+
+    if (!httpStatus || httpStatus === 500) {
+      // Internal Server
+    }
+    if (httpStatus === 401 && !originalRequest._retry) {
+      // not yet login, redirect to login
+      // handle access token expired
+    }
+    if (httpStatus === 400) {
+      // error when bad request
+    }
+
+    return Promise.reject((error.response && error.response.data) || 'Something went wrong');
   }
-  //   async function (error) {
-  // Do something with response error
-  // const originalRequest = error.config;
-  // const httpStatus = error.response?.status;
-
-  // if (!httpStatus || httpStatus === 500) {
-  //   // Internal Server
-  // }
-  // if (httpStatus === 401 && !originalRequest._retry) {
-  //   // not yet login, redirect to login
-  //   // handle access token expired
-  // }
-  // if (httpStatus === 400) {
-  //   // error when bad request
-  // }
-
-  // return Promise.reject((error.response && error.response.data) || 'Something went wrong');
-  //   },
 );
 
 export default http;
