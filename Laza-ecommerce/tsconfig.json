@@ -28,7 +28,8 @@
       "screens/*": ["./screens/*"],
       "themes/*": ["./themes/*"],
       "types/*": ["./types/*"],
-      "utils/*": ["./utils/*"]
+      "utils/*": ["./utils/*"],
+      "storybook/*": ["./storybook/*"],
     }
   },
   "exclude": ["node_modules", "babel.config.js", "jest.config.js"]
