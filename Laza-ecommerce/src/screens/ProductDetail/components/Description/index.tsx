@@ -5,9 +5,6 @@ import { View } from 'react-native';
 import Title from 'components/Title';
 import MoreLessText from 'components/LessMoreText';
 
-// LIBS
-import isEqual from 'react-fast-compare';
-
 // Types
 import { IProductDetailItemProps } from 'types/screens/ProductDetail';
 
@@ -27,4 +24,4 @@ const Description = ({ description }: IProductDetailItemProps) => {
   );
 };
 
-export default memo(Description, isEqual);
+export default memo(Description);

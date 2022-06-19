@@ -4,6 +4,12 @@ import { Alert, ScrollView, View } from 'react-native';
 // Components
 import Button from 'components/Button';
 import LoadingIndicator from 'components/LoadingIndicator';
+import ProductSize from './components/ProductSize';
+import Header from './components/Header';
+import Information from './components/Information';
+import ImagesPreview from './components/ImagesPreview';
+import Description from './components/Description';
+import Reviews from './components/Reviews';
 
 // API
 import { productsService } from 'api/products';
@@ -17,14 +23,6 @@ import { IProductDetailProps } from 'types/screens/ProductDetail';
 
 // Style
 import styles from './styles';
-
-// Splitting lazy load component
-const HeaderLazy = React.lazy(() => import('./components/Header'));
-const InformationLazy = React.lazy(() => import('./components/Information'));
-const ImagesPreviewLazy = React.lazy(() => import('./components/ImagesPreview'));
-const ProductSizeLazy = React.lazy(() => import('./components/ProductSize'));
-const ReviewsLazy = React.lazy(() => import('./components/Reviews'));
-const DescriptionLazy = React.lazy(() => import('./components/Description'));
 
 const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
   const id = route.params;
@@ -93,52 +91,37 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
         <>
           {/* product detail header */}
           <View style={styles.headerContainer}>
-            <React.Suspense fallback={<LoadingIndicator />}>
-              <HeaderLazy source={source} navigation={navigation} />
-            </React.Suspense>
+            <Header source={source} navigation={navigation} />
           </View>
           {/* End Header block */}
 
           <View style={styles.mainContainer}>
             {/* product detail information */}
-            <React.Suspense fallback={<LoadingIndicator />}>
-              <InformationLazy title={title} type={type} price={price} />
-            </React.Suspense>
+            <Information title={title} type={type} price={price} />
             {/* end product detail information */}
 
             {/* product detail images reviews */}
-            <React.Suspense fallback={<LoadingIndicator />}>
-              <ImagesPreviewLazy imagesPreview={imagesPreview} />
-            </React.Suspense>
+            <ImagesPreview imagesPreview={imagesPreview} />
             {/* end product detail images reviews */}
 
             {/* product detail size */}
-            <React.Suspense fallback={<LoadingIndicator />}>
-              <ProductSizeLazy sizes={sizes} />
-            </React.Suspense>
+            <ProductSize sizes={sizes} />
             {/* end product detail size */}
 
             {/* product detail description */}
-            <React.Suspense fallback={<LoadingIndicator />}>
-              <DescriptionLazy description={description} />
-            </React.Suspense>
+            <Description description={description} />
             {/* end product detail description */}
 
             {/* product detail Review */}
-            <React.Suspense fallback={<LoadingIndicator />}>
-              <ReviewsLazy reviewers={reviewers} comment={comment} rating={rating} />
-            </React.Suspense>
+            <Reviews reviewers={reviewers} comment={comment} rating={rating} />
             {/* end product Review  */}
           </View>
-          <View style={styles.footerContainer}>
-            <Button
-              testID='AddToCartButton'
-              text='Add to Cart'
-              buttonStyles={[styles.bottomButton, styles.loginButton]}
-              textStyles={[styles.textBottomButton]}
-              onPress={handlePressAddToCartIcon}
-            />
-          </View>
+          <Button
+            testID='AddToCartButton'
+            text='Add to Cart'
+            type='Bottom'
+            onPress={handlePressAddToCartIcon}
+          />
           {/* end footer block */}
         </>
       )}

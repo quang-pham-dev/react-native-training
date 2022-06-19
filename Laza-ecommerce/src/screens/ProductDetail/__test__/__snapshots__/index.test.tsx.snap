@@ -14,7 +14,6 @@ exports[`Product detail Screen should render correctly 1`] = `
     <View
       style={
         Object {
-          "height": 418,
           "width": "100%",
         }
       }
@@ -24,7 +23,7 @@ exports[`Product detail Screen should render correctly 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "#F2F2F2",
-            "height": 418,
+            "height": 667,
           }
         }
       >
@@ -44,50 +43,48 @@ exports[`Product detail Screen should render correctly 1`] = `
         >
           <View
             accessible={true}
-            collapsable={false}
             focusable={true}
-            onBlur={[Function]}
             onClick={[Function]}
-            onFocus={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 45,
+                "opacity": 1,
+                "width": 45,
+              }
+            }
           >
             <Image
               source={1}
-              style={
-                Object {
-                  "height": 45,
-                  "width": 45,
-                }
-              }
+              style={Object {}}
             />
           </View>
           <View
             accessible={true}
-            collapsable={false}
-            focusable={true}
-            onBlur={[Function]}
+            focusable={false}
             onClick={[Function]}
-            onFocus={[Function]}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
             onResponderTerminate={[Function]}
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "height": 45,
+                "opacity": 1,
+                "width": 45,
+              }
+            }
           >
             <Image
               source={1}
-              style={
-                Object {
-                  "height": 45,
-                  "width": 45,
-                }
-              }
+              style={Object {}}
             />
           </View>
         </View>
@@ -445,51 +442,42 @@ exports[`Product detail Screen should render correctly 1`] = `
       </View>
     </View>
     <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
+          "backgroundColor": "#3D93F8",
+          "height": 75,
+          "opacity": 1,
+          "paddingTop": 15,
           "width": "100%",
         }
       }
     >
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+      <Text
         style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#3D93F8",
-            "bottom": 0,
-            "height": 75,
-            "opacity": 1,
-            "paddingTop": 15,
-            "width": "100%",
-          }
+          Array [
+            Object {
+              "color": "#fff",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 18,
+              "textAlign": "center",
+            },
+            undefined,
+          ]
         }
       >
-        <Text
-          style={
-            Array [
-              Array [
-                Object {
-                  "color": "#fff",
-                  "fontFamily": "Inter_500Medium",
-                  "fontSize": 17,
-                  "lineHeight": 18,
-                },
-              ],
-            ]
-          }
-        >
-          Add to Cart
-        </Text>
-      </View>
+        Add to Cart
+      </Text>
     </View>
   </View>
 </RCTScrollView>
