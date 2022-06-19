@@ -78,11 +78,7 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
         <View style={styles.container}>
           <View style={styles.header}>
             <View style={styles.iconBackWrapper}>
-              <Button
-                icon={IMAGES.iconBack}
-                iconStyles={[styles.iconBack]}
-                onPress={handlePressBack}
-              />
+              <Button icon={IMAGES.iconBack} onPress={handlePressBack} type='Circle' />
             </View>
             <Title titleStyles={styles.headerTitle} titleName='Welcome' />
             <Title

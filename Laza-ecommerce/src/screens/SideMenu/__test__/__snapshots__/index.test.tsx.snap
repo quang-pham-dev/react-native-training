@@ -19,7 +19,6 @@ exports[`Side menu should render correctly 1`] = `
     <View
       style={
         Object {
-          "flexDirection": "row",
           "marginTop": 45,
         }
       }
@@ -36,23 +35,15 @@ exports[`Side menu should render correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
+            "height": 45,
             "opacity": 1,
+            "width": 45,
           }
         }
       >
         <Image
           source={1}
-          style={
-            Array [
-              Object {},
-              Array [
-                Object {
-                  "height": 45,
-                  "width": 45,
-                },
-              ],
-            ]
-          }
+          style={Object {}}
         />
       </View>
     </View>

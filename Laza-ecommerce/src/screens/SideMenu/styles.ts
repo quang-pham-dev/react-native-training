@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
   },
 
   iconMenuWrapper: {
-    flexDirection: 'row',
     marginTop: Metrics.margin.xxxl
   },
 

@@ -1,8 +1,11 @@
 import React, { memo, useCallback } from 'react';
-import { Alert, Image, ImageBackground, Pressable, View } from 'react-native';
+import { ImageBackground, View } from 'react-native';
 
 // LIBS
 import isEqual from 'react-fast-compare';
+
+// Components
+import Button from 'components/Button';
 
 // Theme
 import IMAGES from 'themes/Images';
@@ -22,12 +25,8 @@ const Header = ({ source, navigation }: IProductDetailHeaderProps) => {
   return (
     <View style={styles.headerContainer}>
       <View style={styles.actionsWrapper}>
-        <Pressable onPress={handlePressBack}>
-          <Image style={styles.backIcon} source={IMAGES.iconBack} />
-        </Pressable>
-        <Pressable>
-          <Image style={styles.cartIcon} source={IMAGES.iconCart} />
-        </Pressable>
+        <Button icon={IMAGES.iconBack} onPress={handlePressBack} type='Circle' />
+        <Button icon={IMAGES.iconCart} type='Circle' />
       </View>
       {/* End action header */}
 

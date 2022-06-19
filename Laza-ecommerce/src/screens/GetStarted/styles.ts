@@ -17,13 +17,7 @@ const styles = StyleSheet.create({
   },
 
   iconBackWrapper: {
-    flexDirection: 'row',
     marginLeft: Metrics.margin.lg
-  },
-
-  iconBack: {
-    width: 45,
-    height: 45
   },
 
   headerTitle: {
@@ -40,43 +34,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: Metrics.padding.lg
-  },
-
-  socialButton: {
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'center',
-
-    marginBottom: Metrics.margin.sm,
-    borderRadius: Metrics.borderRadius.roundedMedium,
-
-    fontSize: Fonts.size.h5,
-    color: Colors.white,
-    paddingVertical: Metrics.padding.xm
-  },
-
-  facebookButton: {
-    backgroundColor: Colors.facebook
-  },
-
-  socialIcon: {
-    width: 22,
-    height: 22
-  },
-
-  text: {
-    fontSize: Fonts.size.default,
-    fontFamily: Fonts.fontFamily.Inter_600SemiBold,
-    lineHeight: Fonts.lineHeight.lg,
-    color: Colors.white
-  },
-
-  twitterButton: {
-    backgroundColor: Colors.twitter
-  },
-
-  googleButton: {
-    backgroundColor: Colors.google
   },
 
   footer: {
@@ -100,22 +57,6 @@ const styles = StyleSheet.create({
   signIn: {
     color: Colors.textBlack,
     fontFamily: Fonts.fontFamily.Inter_500Medium
-  },
-
-  textBottomButton: {
-    fontFamily: Fonts.fontFamily.Inter_500Medium,
-    lineHeight: Fonts.lineHeight.sm
-  },
-
-  bottomButton: {
-    width: '100%',
-    height: 75,
-    paddingTop: Metrics.padding.xm,
-    alignItems: 'center'
-  },
-
-  createAnAccountButton: {
-    backgroundColor: Colors.primaryColor
   }
 });
 

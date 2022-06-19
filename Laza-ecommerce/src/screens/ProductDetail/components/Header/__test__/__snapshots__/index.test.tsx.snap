@@ -6,7 +6,7 @@ exports[`Product detail Header should render correctly 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "#F2F2F2",
-      "height": 418,
+      "height": 667,
     }
   }
 >
@@ -26,50 +26,48 @@ exports[`Product detail Header should render correctly 1`] = `
   >
     <View
       accessible={true}
-      collapsable={false}
       focusable={true}
-      onBlur={[Function]}
       onClick={[Function]}
-      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 45,
+          "opacity": 1,
+          "width": 45,
+        }
+      }
     >
       <Image
         source={1}
-        style={
-          Object {
-            "height": 45,
-            "width": 45,
-          }
-        }
+        style={Object {}}
       />
     </View>
     <View
       accessible={true}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
+      focusable={false}
       onClick={[Function]}
-      onFocus={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
       onResponderTerminate={[Function]}
       onResponderTerminationRequest={[Function]}
       onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "height": 45,
+          "opacity": 1,
+          "width": 45,
+        }
+      }
     >
       <Image
         source={1}
-        style={
-          Object {
-            "height": 45,
-            "width": 45,
-          }
-        }
+        style={Object {}}
       />
     </View>
   </View>

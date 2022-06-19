@@ -149,10 +149,9 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
 
         <Button
           testID='loginButton'
+          type='Bottom'
           text='Login'
           disabled={Boolean(errors?.username || errors?.password)}
-          buttonStyles={[styles.bottomButton, styles.loginButton]}
-          textStyles={[styles.textBottomButton]}
           onPress={handleSubmit(onSubmitLoginForm)}
         />
       </View>

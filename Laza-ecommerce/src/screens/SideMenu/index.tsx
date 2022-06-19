@@ -132,8 +132,8 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
           <Button
             testID='Side-menu-close'
             icon={IMAGES.iconMenuOpen}
-            iconStyles={[styles.iconMenu]}
             onPress={handleCloseMenu}
+            type='Circle'
           />
         </View>
 

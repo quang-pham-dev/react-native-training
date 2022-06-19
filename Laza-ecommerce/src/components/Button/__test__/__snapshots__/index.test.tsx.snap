@@ -20,6 +20,13 @@ exports[`Button Component should render children 1`] = `
   <Text
     style={
       Array [
+        Object {
+          "color": "#fff",
+          "fontFamily": "Inter_500Medium",
+          "fontSize": 17,
+          "lineHeight": 18,
+          "textAlign": "center",
+        },
         undefined,
       ]
     }
@@ -52,6 +59,13 @@ exports[`Button Component should render correctly 1`] = `
   <Text
     style={
       Array [
+        Object {
+          "color": "#fff",
+          "fontFamily": "Inter_500Medium",
+          "fontSize": 17,
+          "lineHeight": 18,
+          "textAlign": "center",
+        },
         undefined,
       ]
     }
@@ -80,16 +94,18 @@ exports[`Button Component should render icon button correctly 1`] = `
 >
   <Image
     source={1}
-    style={
-      Array [
-        Object {},
-        undefined,
-      ]
-    }
+    style={Object {}}
   />
   <Text
     style={
       Array [
+        Object {
+          "color": "#fff",
+          "fontFamily": "Inter_500Medium",
+          "fontSize": 17,
+          "lineHeight": 18,
+          "textAlign": "center",
+        },
         undefined,
       ]
     }

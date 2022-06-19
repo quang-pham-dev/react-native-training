@@ -1,14 +1,11 @@
 import React from 'react';
-import { Pressable } from 'react-native';
 
 // LIBS
 import renderer from 'react-test-renderer';
 
 // Components
 import Header from 'components/Layout/Header';
-
-// Utils
-import { navigationMock } from 'utils/testMock';
+import Button from 'components/Button';
 
 describe('Header Component', () => {
   const props = {
@@ -28,7 +25,7 @@ describe('Header Component', () => {
   });
 
   test('should call function handleToggleMenu', () => {
-    const Pressabled = tree.root.findAllByType(Pressable)[0];
+    const Pressabled = tree.root.findAllByType(Button)[0];
     Pressabled.props.onPress();
     expect(props.navigation.dispatch).toHaveBeenCalled();
   });

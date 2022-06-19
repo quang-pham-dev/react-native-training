@@ -12,6 +12,7 @@ import IMAGES from 'themes/Images';
 
 // Styles
 import styles from './styles';
+import Button from 'components/Button';
 
 const Header = ({ navigation }: IHeaderProps) => {
   // Toggle menu open
@@ -21,12 +22,8 @@ const Header = ({ navigation }: IHeaderProps) => {
 
   return (
     <View style={styles.container}>
-      <Pressable style={styles.menuWrapper} onPress={handleToggleMenu}>
-        <Image style={styles.menuIcon} source={IMAGES.iconMenu} />
-      </Pressable>
-      <Pressable style={styles.cartWrapper}>
-        <Image style={styles.cartIcon} source={IMAGES.iconCart} />
-      </Pressable>
+      <Button icon={IMAGES.iconMenu} onPress={handleToggleMenu} type='Circle' />
+      <Button icon={IMAGES.iconCart} type='Circle' />
     </View>
   );
 };

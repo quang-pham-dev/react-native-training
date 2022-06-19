@@ -20,7 +20,6 @@ exports[`GetStarted Screen should renders correctly 1`] = `
     <View
       style={
         Object {
-          "flexDirection": "row",
           "marginLeft": 20,
         }
       }
@@ -37,23 +36,15 @@ exports[`GetStarted Screen should renders correctly 1`] = `
         onStartShouldSetResponder={[Function]}
         style={
           Object {
+            "height": 45,
             "opacity": 1,
+            "width": 45,
           }
         }
       >
         <Image
           source={1}
-          style={
-            Array [
-              Object {},
-              Array [
-                Object {
-                  "height": 45,
-                  "width": 45,
-                },
-              ],
-            ]
-          }
+          style={Object {}}
         />
       </View>
     </View>
@@ -99,11 +90,10 @@ exports[`GetStarted Screen should renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#4267B2",
           "borderRadius": 10,
-          "color": "#fff",
           "flexDirection": "row",
-          "fontSize": 28,
           "justifyContent": "center",
           "marginBottom": 10,
           "opacity": 1,
@@ -114,29 +104,24 @@ exports[`GetStarted Screen should renders correctly 1`] = `
     >
       <Image
         source={1}
-        style={
-          Array [
-            Object {},
-            Array [
-              Object {
-                "height": 22,
-                "width": 22,
-              },
-            ],
-          ]
-        }
+        style={Object {}}
       />
       <Text
         style={
           Array [
-            Array [
-              Object {
-                "color": "#fff",
-                "fontFamily": "Inter_600SemiBold",
-                "fontSize": 17,
-                "lineHeight": 22,
-              },
-            ],
+            Object {
+              "color": "#fff",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#fff",
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 17,
+              "lineHeight": 22,
+            },
           ]
         }
       >
@@ -155,11 +140,10 @@ exports[`GetStarted Screen should renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#1DA1F2",
           "borderRadius": 10,
-          "color": "#fff",
           "flexDirection": "row",
-          "fontSize": 28,
           "justifyContent": "center",
           "marginBottom": 10,
           "opacity": 1,
@@ -170,29 +154,24 @@ exports[`GetStarted Screen should renders correctly 1`] = `
     >
       <Image
         source={1}
-        style={
-          Array [
-            Object {},
-            Array [
-              Object {
-                "height": 22,
-                "width": 22,
-              },
-            ],
-          ]
-        }
+        style={Object {}}
       />
       <Text
         style={
           Array [
-            Array [
-              Object {
-                "color": "#fff",
-                "fontFamily": "Inter_600SemiBold",
-                "fontSize": 17,
-                "lineHeight": 22,
-              },
-            ],
+            Object {
+              "color": "#fff",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#fff",
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 17,
+              "lineHeight": 22,
+            },
           ]
         }
       >
@@ -211,11 +190,10 @@ exports[`GetStarted Screen should renders correctly 1`] = `
       onStartShouldSetResponder={[Function]}
       style={
         Object {
+          "alignItems": "center",
           "backgroundColor": "#EA4335",
           "borderRadius": 10,
-          "color": "#fff",
           "flexDirection": "row",
-          "fontSize": 28,
           "justifyContent": "center",
           "marginBottom": 10,
           "opacity": 1,
@@ -226,29 +204,24 @@ exports[`GetStarted Screen should renders correctly 1`] = `
     >
       <Image
         source={1}
-        style={
-          Array [
-            Object {},
-            Array [
-              Object {
-                "height": 22,
-                "width": 22,
-              },
-            ],
-          ]
-        }
+        style={Object {}}
       />
       <Text
         style={
           Array [
-            Array [
-              Object {
-                "color": "#fff",
-                "fontFamily": "Inter_600SemiBold",
-                "fontSize": 17,
-                "lineHeight": 22,
-              },
-            ],
+            Object {
+              "color": "#fff",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 18,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#fff",
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 17,
+              "lineHeight": 22,
+            },
           ]
         }
       >
@@ -350,18 +323,14 @@ exports[`GetStarted Screen should renders correctly 1`] = `
       <Text
         style={
           Array [
-            Array [
-              Object {
-                "color": "#fff",
-                "fontFamily": "Inter_600SemiBold",
-                "fontSize": 17,
-                "lineHeight": 22,
-              },
-              Object {
-                "fontFamily": "Inter_500Medium",
-                "lineHeight": 18,
-              },
-            ],
+            Object {
+              "color": "#fff",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 18,
+              "textAlign": "center",
+            },
+            undefined,
           ]
         }
       >

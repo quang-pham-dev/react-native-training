@@ -91,22 +91,6 @@ export const styles = StyleSheet.create({
   Term: {
     color: Colors.textBlack,
     fontFamily: Fonts.fontFamily.Inter_500Medium
-  },
-
-  bottomButton: {
-    width: '100%',
-    height: 75,
-    paddingTop: Metrics.padding.xm,
-    alignItems: 'center'
-  },
-  loginButton: {
-    backgroundColor: Colors.primaryColor
-  },
-  textBottomButton: {
-    fontSize: Fonts.size.default,
-    fontFamily: Fonts.fontFamily.Inter_500Medium,
-    color: Colors.white,
-    lineHeight: Fonts.lineHeight.sm
   }
 });
 

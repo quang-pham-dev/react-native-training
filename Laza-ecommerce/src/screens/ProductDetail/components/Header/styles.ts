@@ -4,10 +4,11 @@ import { Platform, StyleSheet } from 'react-native';
 import Colors from 'themes/Colors';
 import Fonts from 'themes/Fonts';
 import Metrics from 'themes/Metrics';
+import { height } from 'themes/Dimensions';
 
 const styles = StyleSheet.create({
   headerContainer: {
-    height: 418,
+    height: height * 0.5,
     backgroundColor: Colors.lightGray,
     alignItems: 'center'
   },
@@ -33,16 +34,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     resizeMode: 'cover'
-  },
-
-  backIcon: {
-    width: Metrics.icons.semiLarge,
-    height: Metrics.icons.semiLarge
-  },
-
-  cartIcon: {
-    width: Metrics.icons.semiLarge,
-    height: Metrics.icons.semiLarge
   }
 });
 

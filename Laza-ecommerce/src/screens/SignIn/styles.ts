@@ -13,13 +13,7 @@ export const styles = StyleSheet.create({
     height
   },
 
-  header: { flex: 1 },
-
-  iconBack: {
-    width: 45,
-    height: 45,
-    marginTop: Metrics.margin.xxxl
-  },
+  header: { flex: 1, marginTop: Metrics.margin.xxxl },
 
   iconBackWrapper: {
     flexDirection: 'row',

@@ -13,6 +13,7 @@ import { IGetStartedScreenProps } from 'types/screens/GetStarted';
 
 // Themes
 import IMAGES from 'themes/Images';
+import Colors from 'themes/Colors';
 
 // Styles
 import styles from './styles';
@@ -32,11 +33,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.iconBackWrapper}>
-          <Button
-            icon={IMAGES.iconBack}
-            iconStyles={[styles.iconBack]}
-            onPress={handlePressBackIcon}
-          />
+          <Button icon={IMAGES.iconBack} onPress={handlePressBackIcon} type='Circle' />
         </View>
         <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started' />
       </View>
@@ -45,29 +42,24 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
       <View style={styles.main}>
         <Button
           testID='facebookButton'
+          backgroundColor={Colors.facebook}
           text={'Facebook'}
           icon={IMAGES.iconFacebook}
-          buttonStyles={[styles.socialButton, styles.facebookButton]}
-          iconStyles={[styles.socialIcon]}
-          textStyles={[styles.text]}
+          type='Social'
         />
-
         <Button
           testID='TwitterButton'
+          backgroundColor={Colors.twitter}
           text={'Twitter'}
           icon={IMAGES.iconTwitter}
-          buttonStyles={[styles.socialButton, styles.twitterButton]}
-          iconStyles={[styles.socialIcon]}
-          textStyles={[styles.text]}
+          type='Social'
         />
-
         <Button
           testID='GoogleButton'
+          backgroundColor={Colors.google}
           text={'Google'}
           icon={IMAGES.iconGoogle}
-          buttonStyles={[styles.socialButton, styles.googleButton]}
-          iconStyles={[styles.socialIcon]}
-          textStyles={[styles.text]}
+          type='Social'
         />
       </View>
       {/* end main */}
@@ -80,11 +72,7 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
           </TouchableOpacity>
         </View>
 
-        <Button
-          text={'Create an Account'}
-          buttonStyles={[styles.bottomButton, styles.createAnAccountButton]}
-          textStyles={[styles.text, styles.textBottomButton]}
-        />
+        <Button text='Create an Account' type='Bottom' />
       </View>
 
       {/* end footer */}
