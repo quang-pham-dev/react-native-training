@@ -1,10 +1,10 @@
 import React from 'react';
-import { Pressable } from 'react-native';
 
 // LIBS
 import renderer from 'react-test-renderer';
 
 // Components
+import Button from 'components/Button';
 import Header from 'screens/ProductDetail/components/Header';
 
 // Mock data
@@ -27,7 +27,7 @@ describe('Product detail Header', () => {
   });
 
   test('should call function handlePressBack', () => {
-    const backButton = tree.root.findAllByType(Pressable)[0];
+    const backButton = tree.root.findAllByType(Button)[0];
     backButton.props.onPress();
 
     expect(props.navigation.goBack).toHaveBeenCalled();
