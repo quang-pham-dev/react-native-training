@@ -40,11 +40,8 @@ exports[`Home Screen Should renders correctly 1`] = `
       >
         <View
           accessible={true}
-          collapsable={false}
           focusable={true}
-          onBlur={[Function]}
           onClick={[Function]}
-          onFocus={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -53,27 +50,21 @@ exports[`Home Screen Should renders correctly 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "backgroundColor": "#fff",
+              "height": 45,
+              "opacity": 1,
+              "width": 45,
             }
           }
         >
           <Image
             source={1}
-            style={
-              Object {
-                "height": 45,
-                "width": 45,
-              }
-            }
+            style={Object {}}
           />
         </View>
         <View
           accessible={true}
-          collapsable={false}
-          focusable={true}
-          onBlur={[Function]}
+          focusable={false}
           onClick={[Function]}
-          onFocus={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -82,19 +73,15 @@ exports[`Home Screen Should renders correctly 1`] = `
           onStartShouldSetResponder={[Function]}
           style={
             Object {
-              "alignItems": "center",
-              "flexDirection": "row",
+              "height": 45,
+              "opacity": 1,
+              "width": 45,
             }
           }
         >
           <Image
             source={1}
-            style={
-              Object {
-                "height": 45,
-                "width": 45,
-              }
-            }
+            style={Object {}}
           />
         </View>
       </View>
