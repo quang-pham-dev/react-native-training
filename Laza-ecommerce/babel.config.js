@@ -21,8 +21,7 @@ module.exports = function (api) {
             themes: './src/themes',
             types: './src/types',
             utils: './src/utils',
-            mock: './src/__mock__',
-            storybook: './storybook'
+            mock: './src/__mock__'
           }
         }
       ],
