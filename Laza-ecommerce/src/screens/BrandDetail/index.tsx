@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useEffect, useMemo } from 'react';
-import { Alert, Text, Image, Pressable, View, TouchableOpacity } from 'react-native';
+import { Alert, Text, View, TouchableOpacity } from 'react-native';
 
 // LIBS
 import { MaterialIcons } from '@expo/vector-icons';
@@ -8,6 +8,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import ProductsList from 'components/ProductsList';
 import Title from 'components/Title';
 import LoadingIndicator from 'components/LoadingIndicator';
+import Header from './components/Header';
 
 // Context
 import { BrandsContext } from 'contexts/BrandsContext';
@@ -97,11 +98,6 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
     [brands, id]
   );
 
-  // Handle back button
-  const handlePressBackIcon = useCallback(() => {
-    navigation.goBack();
-  }, []);
-
   // Handle like product
   const handlePressLikeProduct = useCallback(() => {}, []);
 
@@ -143,35 +139,23 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <View style={styles.actionsWrapper}>
-          <Pressable onPress={handlePressBackIcon}>
-            <Image style={styles.backIcon} source={IMAGES.iconBack} />
-          </Pressable>
-          <Pressable>
-            <View style={styles.brandLogoWrapper}>
-              {Boolean(currentBrand) && (
-                <Image style={styles.brandLogo} source={{ uri: currentBrand[0].logoUrl }} />
-              )}
-            </View>
-          </Pressable>
-          <Pressable>
-            <Image style={styles.cartIcon} source={IMAGES.iconCart} />
-          </Pressable>
-        </View>
+        {/* product detail header */}
+        <Header logoUrl={currentBrand[0]?.logoUrl} navigation={navigation} />
+        {/* End Header block */}
       </View>
       {/* end header */}
 
       <View style={styles.contentContainer}>
         <View style={styles.contentHeader}>
           <View>
-            <Text style={styles.totalCount}>{isProcessing ? 0 : totalRowsByBrandId} Items</Text>
-            <Text style={styles.titleContent}>Available in stock</Text>
+            <Title titleName={`${isProcessing ? 0 : totalRowsByBrandId} Items`} />
+            <Title.subHeadingPage titleName='Available in stock' style={styles.titleContent} />
           </View>
           <View style={styles.sortWrapper}>
             <TouchableOpacity>
               <MaterialIcons name='sort' size={24} color='black' />
             </TouchableOpacity>
-            <Title titleName='Sort' titleStyles={styles.sortText} />
+            <Title titleName='Sort' style={styles.sortText} />
           </View>
         </View>
         {/* end content header */}

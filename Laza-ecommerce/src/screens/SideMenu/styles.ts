@@ -49,11 +49,6 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.fontFamily.Inter_400Regular,
     color: Colors.textGray
   },
-  accountName: {
-    fontSize: Fonts.size.default,
-    fontFamily: Fonts.fontFamily.Inter_500Medium,
-    color: Colors.textBlack
-  },
 
   iconBadge: {
     width: 15,
@@ -86,22 +81,15 @@ const styles = StyleSheet.create({
     marginRight: Metrics.margin.md
   },
 
-  text: {
-    fontSize: Fonts.size.normal,
-    fontFamily: Fonts.fontFamily.Inter_400Regular,
-    lineHeight: Fonts.lineHeight.base
-  },
-
   main: {
     flex: 2
   },
+
   darkModeWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center'
   },
-
-  switchWrapper: {},
 
   darkModeSwitch: {
     marginBottom: -20,

@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react-native';
 import React from 'react';
-import CenterView from 'storybook/stories/CenterView';
+import CenterView from '../../../storybook/stories/CenterView';
 import LoadingIndicator from './index';
 
 storiesOf('LoadingIndicator', module)

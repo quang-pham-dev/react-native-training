@@ -21,11 +21,6 @@ const styles = StyleSheet.create({
   },
 
   headerTitle: {
-    alignSelf: 'center',
-    fontSize: Fonts.size.h5,
-    fontFamily: Fonts.fontFamily.Inter_600SemiBold,
-    color: Colors.textBlack,
-
     paddingTop: Metrics.padding.xm
   },
 
@@ -44,19 +39,15 @@ const styles = StyleSheet.create({
   footerTextWrapper: {
     flexDirection: 'row',
     justifyContent: 'center',
-    fontSize: Fonts.size.normal,
     marginBottom: Metrics.margin.xl
   },
 
   alreadyText: {
-    alignSelf: 'center',
-    color: Colors.textGray,
-    fontFamily: Fonts.fontFamily.Inter_400Regular
+    color: Colors.textGray
   },
 
   signIn: {
-    color: Colors.textBlack,
-    fontFamily: Fonts.fontFamily.Inter_500Medium
+    color: Colors.textBlack
   }
 });
 

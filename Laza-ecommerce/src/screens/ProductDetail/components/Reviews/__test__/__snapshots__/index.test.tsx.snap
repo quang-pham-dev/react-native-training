@@ -22,13 +22,21 @@ exports[`Product detail reviewer review should render correctly 1`] = `
         Array [
           Object {
             "color": "#000",
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 17,
+            "lineHeight": 16,
             "textTransform": "none",
           },
+          Array [
+            Object {
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 16,
+            },
+            undefined,
+          ],
           Object {
-            "color": "#1D1E20",
-            "fontFamily": "Inter_600SemiBold",
-            "fontSize": 17,
-            "lineHeight": 18,
+            "textAlign": "left",
           },
         ]
       }
@@ -40,13 +48,22 @@ exports[`Product detail reviewer review should render correctly 1`] = `
         Array [
           Object {
             "color": "#000",
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 17,
+            "lineHeight": 16,
             "textTransform": "none",
           },
+          Array [
+            Object {
+              "color": "#8F959E",
+              "fontFamily": "Inter_400Regular",
+              "fontSize": 13,
+              "lineHeight": 14,
+            },
+            undefined,
+          ],
           Object {
-            "color": "#8F959E",
-            "fontFamily": "Inter_400Regular",
-            "fontSize": 13,
-            "lineHeight": 14,
+            "textAlign": "left",
           },
         ]
       }
@@ -102,17 +119,11 @@ exports[`Product detail reviewer review should render correctly 1`] = `
         >
           <Text
             style={
-              Array [
-                Object {
-                  "color": "#000",
-                  "textTransform": "none",
-                },
-                Object {
-                  "fontFamily": "Inter_500Medium",
-                  "fontSize": 15,
-                  "lineHeight": 16,
-                },
-              ]
+              Object {
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 15,
+                "lineHeight": 16,
+              }
             }
           />
           <View

@@ -53,14 +53,23 @@ exports[`GetStarted Screen should renders correctly 1`] = `
         Array [
           Object {
             "color": "#000",
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 17,
+            "lineHeight": 16,
             "textTransform": "none",
           },
+          Array [
+            Object {
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 28,
+              "lineHeight": 30,
+            },
+            Object {
+              "paddingTop": 15,
+            },
+          ],
           Object {
-            "alignSelf": "center",
-            "color": "#1D1E20",
-            "fontFamily": "Inter_600SemiBold",
-            "fontSize": 28,
-            "paddingTop": 15,
+            "textAlign": "center",
           },
         ]
       }
@@ -241,7 +250,6 @@ exports[`GetStarted Screen should renders correctly 1`] = `
       style={
         Object {
           "flexDirection": "row",
-          "fontSize": 15,
           "justifyContent": "center",
           "marginBottom": 25,
         }
@@ -252,12 +260,16 @@ exports[`GetStarted Screen should renders correctly 1`] = `
           Array [
             Object {
               "color": "#000",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 16,
               "textTransform": "none",
             },
             Object {
-              "alignSelf": "center",
               "color": "#8F959E",
-              "fontFamily": "Inter_400Regular",
+            },
+            Object {
+              "textAlign": "left",
             },
           ]
         }
@@ -286,11 +298,16 @@ exports[`GetStarted Screen should renders correctly 1`] = `
             Array [
               Object {
                 "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
                 "textTransform": "none",
               },
               Object {
                 "color": "#1D1E20",
-                "fontFamily": "Inter_500Medium",
+              },
+              Object {
+                "textAlign": "left",
               },
             ]
           }

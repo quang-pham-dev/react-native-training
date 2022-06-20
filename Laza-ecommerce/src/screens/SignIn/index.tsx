@@ -80,9 +80,10 @@ const SignInScreen = ({ navigation }: ISignInScreenProps) => {
             <View style={styles.iconBackWrapper}>
               <Button icon={IMAGES.iconBack} onPress={handlePressBack} type='Circle' />
             </View>
-            <Title titleStyles={styles.headerTitle} titleName='Welcome' />
-            <Title
-              titleStyles={styles.headerSubTitle}
+            <Title.HeadingPage style={styles.headerTitle} titleName='Welcome' titleAlign='center' />
+            <Title.subHeadingPage
+              style={styles.headerSubTitle}
+              titleAlign='center'
               titleName='Please enter your data to continue'
             />
           </View>

@@ -15,17 +15,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
 
-  textSize: {
-    fontSize: Fonts.size.default,
-    fontFamily: Fonts.fontFamily.Inter_600SemiBold,
-    lineHeight: Fonts.lineHeight.sm,
-    color: Colors.textBlack
-  },
-
   textSizeGuide: {
     fontSize: Fonts.size.default,
-    fontFamily: Fonts.fontFamily.Inter_400Regular,
-    lineHeight: Fonts.lineHeight.base,
     color: Colors.primaryColor
   },
 

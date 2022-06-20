@@ -6,9 +6,15 @@ exports[`Title Component should render  correctly 1`] = `
     Array [
       Object {
         "color": "#000",
+        "fontFamily": "Inter_500Medium",
+        "fontSize": 17,
+        "lineHeight": 16,
         "textTransform": "none",
       },
       undefined,
+      Object {
+        "textAlign": "left",
+      },
     ]
   }
 >

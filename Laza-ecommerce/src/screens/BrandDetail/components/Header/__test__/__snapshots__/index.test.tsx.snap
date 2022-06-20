@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Brand detail Header should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginTop": 45,
+      "position": "absolute",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": 45,
+        "opacity": 1,
+        "width": 45,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={Object {}}
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F5F6FA",
+        "borderRadius": 10,
+        "height": 45,
+        "padding": 10,
+        "width": 70,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png",
+        }
+      }
+      style={
+        Object {
+          "height": "100%",
+          "resizeMode": "contain",
+          "width": "100%",
+        }
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "height": 45,
+        "opacity": 1,
+        "width": 45,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={Object {}}
+    />
+  </View>
+</View>
+`;

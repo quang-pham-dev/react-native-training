@@ -13,14 +13,23 @@ exports[`Product detail Description should render correctly 1`] = `
       Array [
         Object {
           "color": "#000",
+          "fontFamily": "Inter_500Medium",
+          "fontSize": 17,
+          "lineHeight": 16,
           "textTransform": "none",
         },
+        Array [
+          Object {
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 17,
+            "lineHeight": 16,
+          },
+          Object {
+            "marginBottom": 10,
+          },
+        ],
         Object {
-          "color": "#1D1E20",
-          "fontFamily": "Inter_600SemiBold",
-          "fontSize": 17,
-          "lineHeight": 18,
-          "marginBottom": 10,
+          "textAlign": "left",
         },
       ]
     }

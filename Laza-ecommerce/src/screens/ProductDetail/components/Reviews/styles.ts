@@ -16,13 +16,6 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
-  textReviewTitle: {
-    fontSize: Fonts.size.default,
-    fontFamily: Fonts.fontFamily.Inter_600SemiBold,
-    lineHeight: Fonts.lineHeight.sm,
-    color: Colors.textBlack
-  },
-
   reviewWrapper: {
     width: '100%',
     justifyContent: 'space-between'
@@ -73,6 +66,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.fontFamily.Inter_500Medium,
     lineHeight: Fonts.lineHeight.base
   },
+
   reviewItemRating: {
     width: '100%',
     justifyContent: 'center',
@@ -102,20 +96,15 @@ const styles = StyleSheet.create({
     width: 57,
     height: 13
   },
+
   reviewItemContent: {
     marginTop: Metrics.margin.sm
   },
+
   textContent: {
     fontSize: Fonts.size.normal,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
     lineHeight: Fonts.lineHeight.lg,
-    color: Colors.textGray
-  },
-
-  textTitle: {
-    fontSize: Fonts.size.small,
-    fontFamily: Fonts.fontFamily.Inter_400Regular,
-    lineHeight: Fonts.lineHeight.xs,
     color: Colors.textGray
   }
 });

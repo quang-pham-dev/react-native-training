@@ -1,4 +1,4 @@
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 // Themes
 import Colors from 'themes/Colors';
@@ -11,10 +11,6 @@ const styles = StyleSheet.create({
   },
 
   textDescriptionTitle: {
-    fontSize: Fonts.size.default,
-    fontFamily: Fonts.fontFamily.Inter_600SemiBold,
-    lineHeight: Fonts.lineHeight.sm,
-    color: Colors.textBlack,
     marginBottom: Metrics.margin.sm
   },
   textContent: {

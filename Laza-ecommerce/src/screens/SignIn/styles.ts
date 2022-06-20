@@ -21,23 +21,11 @@ export const styles = StyleSheet.create({
   },
 
   headerTitle: {
-    alignSelf: 'center',
-    fontSize: Fonts.size.h5,
-    fontFamily: Fonts.fontFamily.Inter_600SemiBold,
-    lineHeight: Fonts.lineHeight.xxl,
-    color: Colors.textBlack,
-    paddingHorizontal: Metrics.margin.lg,
-
     marginTop: Metrics.margin.xm
   },
 
   headerSubTitle: {
-    alignSelf: 'center',
-    fontSize: Fonts.size.normal,
-    lineHeight: Fonts.lineHeight.base,
-    fontFamily: Fonts.fontFamily.Inter_400Regular,
-    color: Colors.textGray,
-    paddingTop: Metrics.padding.xsm
+    marginTop: Metrics.padding.xsm
   },
 
   loginForm: {

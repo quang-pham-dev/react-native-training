@@ -35,7 +35,11 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
         <View style={styles.iconBackWrapper}>
           <Button icon={IMAGES.iconBack} onPress={handlePressBackIcon} type='Circle' />
         </View>
-        <Title titleStyles={styles.headerTitle} titleName='Let’s Get Started' />
+        <Title.HeadingPage
+          titleName='Let’s Get Started'
+          titleAlign='center'
+          style={styles.headerTitle}
+        />
       </View>
       {/* End of header */}
 
@@ -66,9 +70,9 @@ function GetStartedScreen({ navigation }: IGetStartedScreenProps) {
 
       <View style={styles.footer}>
         <View style={styles.footerTextWrapper}>
-          <Title titleStyles={styles.alreadyText} titleName='Already have an account? ' />
+          <Title style={styles.alreadyText} titleName='Already have an account? ' />
           <TouchableOpacity onPress={handlePressSignInLink} testID='LinkToSignIn'>
-            <Title titleStyles={styles.signIn} titleName='Signin' />
+            <Title style={styles.signIn} titleName='Signin' />
           </TouchableOpacity>
         </View>
 

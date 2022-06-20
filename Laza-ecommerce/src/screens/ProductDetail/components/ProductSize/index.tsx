@@ -4,6 +4,9 @@ import { View, ScrollView, Pressable, Text } from 'react-native';
 // LIBS
 import isEqual from 'react-fast-compare';
 
+// Components
+import Title from 'components/Title';
+
 // Constants
 import { IProductDetailItemProps } from 'types/screens/ProductDetail';
 
@@ -17,15 +20,15 @@ const ProductSize = ({ sizes }: IProductDetailItemProps) => {
   return (
     <View style={styles.sizeContainer}>
       <View style={styles.textSizeWrapper}>
-        <Text style={styles.textSize}>Size</Text>
-        <Text style={styles.textSizeGuide}>Size Guide</Text>
+        <Title.titleLeftSection titleName='Size' />
+        <Title.titleRightSection style={styles.textSizeGuide}>Size Guide</Title.titleRightSection>
       </View>
 
       <ScrollView style={styles.sizeWrapper} horizontal showsHorizontalScrollIndicator={false}>
         {Boolean(sizes) &&
           sizes?.map((item: ProductSizeProps) => (
             <Pressable style={styles.sizeItem} key={item.id}>
-              <Text style={styles.textSize}>{item.size}</Text>
+              <Title titleName={item.size} />
             </Pressable>
           ))}
       </ScrollView>

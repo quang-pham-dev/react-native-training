@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { storiesOf } from '@storybook/react-native';
-import CenterView from 'storybook/stories/CenterView';
+import CenterView from '../../../storybook/stories/CenterView';
 import Colors from 'themes/Colors';
 import TextInput from './index';
 

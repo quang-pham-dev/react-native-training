@@ -141,15 +141,15 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
           <View style={styles.profile}>
             <Image style={styles.avatar} source={{ uri: avatar }} />
             <View style={styles.profileInfoWrapper}>
-              <Title titleStyles={styles.accountName} titleName={username} />
+              <Title titleName={username} />
               <View style={styles.verifiedWrapper}>
-                <Title titleName='Verified Profile' titleStyles={styles.verifiedText} />
+                <Title titleName='Verified Profile' style={styles.verifiedText} />
                 <Image style={styles.iconBadge} source={IMAGES.iconBadge} />
               </View>
             </View>
           </View>
           <View style={styles.orderInfo}>
-            <Title titleName={`${orderCount} Orders`} titleStyles={styles.textOrder} />
+            <Title titleName={`${orderCount} Orders`} style={styles.textOrder} />
           </View>
         </View>
       </View>
@@ -158,16 +158,14 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
       <View style={styles.main}>
         <View style={[styles.darkModeWrapper]}>
           <DrawerItem title='Dark Mode' source={IMAGES.iconSun} />
-          <View style={styles.switchWrapper}>
-            <Switch
-              style={styles.darkModeSwitch}
-              trackColor={{ false: Colors.lightGray, true: Colors.lightGreen }}
-              thumbColor={isEnabled ? Colors.white : Colors.lightGray}
-              ios_backgroundColor={Colors.lightGray}
-              onValueChange={toggleSwitch}
-              value={isEnabled}
-            />
-          </View>
+          <Switch
+            style={styles.darkModeSwitch}
+            trackColor={{ false: Colors.lightGray, true: Colors.lightGreen }}
+            thumbColor={isEnabled ? Colors.white : Colors.lightGray}
+            ios_backgroundColor={Colors.lightGray}
+            onValueChange={toggleSwitch}
+            value={isEnabled}
+          />
         </View>
         {/* End Dark mode  */}
 

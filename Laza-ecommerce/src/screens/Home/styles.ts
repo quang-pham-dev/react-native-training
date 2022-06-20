@@ -20,29 +20,14 @@ const styles = StyleSheet.create({
   },
   headerTitleWrapper: {
     flexDirection: 'row',
-    alignItems: 'center',
     marginTop: Metrics.margin.xm
   },
-  headerTitle: {
-    fontSize: Fonts.size.h5,
-    fontFamily: Fonts.fontFamily.Inter_600SemiBold,
-    lineHeight: Fonts.lineHeight.xxl,
-    color: Colors.textBlack
-  },
+
   userNameTitle: {
-    alignSelf: 'flex-end',
     fontSize: Fonts.size.large,
-    fontFamily: Fonts.fontFamily.Inter_500Medium,
-    color: Colors.textBlack,
-    lineHeight: Fonts.lineHeight.xxl,
     marginLeft: Metrics.margin.sm
   },
-  subTitle: {
-    fontSize: Fonts.size.normal,
-    fontFamily: Fonts.fontFamily.Inter_400Regular,
-    color: Colors.textGray,
-    marginTop: Metrics.margin.xsm
-  },
+
   titleRow: {
     flexDirection: 'row',
     alignItems: 'center',

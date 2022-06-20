@@ -94,12 +94,14 @@ exports[`Side menu should render correctly 1`] = `
               Array [
                 Object {
                   "color": "#000",
-                  "textTransform": "none",
-                },
-                Object {
-                  "color": "#1D1E20",
                   "fontFamily": "Inter_500Medium",
                   "fontSize": 17,
+                  "lineHeight": 16,
+                  "textTransform": "none",
+                },
+                undefined,
+                Object {
+                  "textAlign": "left",
                 },
               ]
             }
@@ -116,12 +118,18 @@ exports[`Side menu should render correctly 1`] = `
                 Array [
                   Object {
                     "color": "#000",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
                     "textTransform": "none",
                   },
                   Object {
                     "color": "#8F959E",
                     "fontFamily": "Inter_400Regular",
                     "fontSize": 13,
+                  },
+                  Object {
+                    "textAlign": "left",
                   },
                 ]
               }
@@ -155,12 +163,18 @@ exports[`Side menu should render correctly 1`] = `
             Array [
               Object {
                 "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
                 "textTransform": "none",
               },
               Object {
                 "color": "#8F959E",
                 "fontFamily": "Inter_500Medium",
                 "fontSize": 11,
+              },
+              Object {
+                "textAlign": "left",
               },
             ]
           }
@@ -238,45 +252,41 @@ exports[`Side menu should render correctly 1`] = `
           </Text>
         </View>
       </View>
-      <View
-        style={Object {}}
-      >
-        <RCTSwitch
-          accessibilityRole="switch"
-          onChange={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          onTintColor="#34C759"
-          style={
+      <RCTSwitch
+        accessibilityRole="switch"
+        onChange={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onTintColor="#34C759"
+        style={
+          Array [
+            Object {
+              "height": 31,
+              "width": 51,
+            },
             Array [
               Object {
-                "height": 31,
-                "width": 51,
+                "marginBottom": -20,
+                "transform": Array [
+                  Object {
+                    "scaleX": 0.6,
+                  },
+                  Object {
+                    "scaleY": 0.6,
+                  },
+                ],
               },
-              Array [
-                Object {
-                  "marginBottom": -20,
-                  "transform": Array [
-                    Object {
-                      "scaleX": 0.6,
-                    },
-                    Object {
-                      "scaleY": 0.6,
-                    },
-                  ],
-                },
-                Object {
-                  "backgroundColor": "#F2F2F2",
-                  "borderRadius": 16,
-                },
-              ],
-            ]
-          }
-          thumbTintColor="#F2F2F2"
-          tintColor="#F2F2F2"
-          value={false}
-        />
-      </View>
+              Object {
+                "backgroundColor": "#F2F2F2",
+                "borderRadius": 16,
+              },
+            ],
+          ]
+        }
+        thumbTintColor="#F2F2F2"
+        tintColor="#F2F2F2"
+        value={false}
+      />
     </View>
     <View
       accessible={true}

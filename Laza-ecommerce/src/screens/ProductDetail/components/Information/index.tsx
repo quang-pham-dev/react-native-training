@@ -4,9 +4,6 @@ import { View, Text } from 'react-native';
 // LIBS
 import isEqual from 'react-fast-compare';
 
-// Components
-import Title from 'components/Title';
-
 //Types
 import { IProductDetailItemProps } from 'types/screens/ProductDetail';
 
@@ -19,14 +16,14 @@ const Information = ({ title, type, price }: IProductDetailItemProps) => {
       <View style={styles.productInfoWrapper}>
         {Boolean(title && type) && (
           <>
-            <Title titleName={title} titleStyles={styles.textTitle} />
-            <Title titleName={type} titleStyles={styles.textValue} />
+            <Text style={styles.textTitle}>{title}</Text>
+            <Text style={styles.textValue}>{type}</Text>
           </>
         )}
       </View>
 
       <View style={styles.productInfoWrapper}>
-        <Title titleName='Price' titleStyles={styles.textTitle} />
+        <Text style={styles.textTitle}>Price</Text>
         {Boolean(price) && <Text style={styles.textValue}>{`$${price}`}</Text>}
       </View>
     </View>

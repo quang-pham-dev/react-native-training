@@ -133,18 +133,12 @@ exports[`Product detail Screen should render correctly 1`] = `
         >
           <Text
             style={
-              Array [
-                Object {
-                  "color": "#000",
-                  "textTransform": "none",
-                },
-                Object {
-                  "color": "#8F959E",
-                  "fontFamily": "Inter_400Regular",
-                  "fontSize": 13,
-                  "lineHeight": 14,
-                },
-              ]
+              Object {
+                "color": "#8F959E",
+                "fontFamily": "Inter_400Regular",
+                "fontSize": 13,
+                "lineHeight": 14,
+              }
             }
           >
             Price
@@ -180,28 +174,58 @@ exports[`Product detail Screen should render correctly 1`] = `
         >
           <Text
             style={
-              Object {
-                "color": "#1D1E20",
-                "fontFamily": "Inter_600SemiBold",
-                "fontSize": 17,
-                "lineHeight": 18,
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 17,
+                  "lineHeight": 16,
+                  "textTransform": "none",
+                },
+                Array [
+                  Object {
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
+                  },
+                  undefined,
+                ],
+                Object {
+                  "textAlign": "left",
+                },
+              ]
             }
           >
             Size
           </Text>
           <Text
             style={
-              Object {
-                "color": "#3D93F8",
-                "fontFamily": "Inter_400Regular",
-                "fontSize": 17,
-                "lineHeight": 16,
-              }
+              Array [
+                Object {
+                  "color": "#000",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 17,
+                  "lineHeight": 16,
+                  "textTransform": "none",
+                },
+                Array [
+                  Object {
+                    "color": "#8F959E",
+                    "fontFamily": "Inter_400Regular",
+                    "fontSize": 13,
+                    "lineHeight": 14,
+                  },
+                  Object {
+                    "color": "#3D93F8",
+                    "fontSize": 17,
+                  },
+                ],
+                Object {
+                  "textAlign": "left",
+                },
+              ]
             }
-          >
-            Size Guide
-          </Text>
+          />
         </View>
         <RCTScrollView
           horizontal={true}
@@ -228,14 +252,23 @@ exports[`Product detail Screen should render correctly 1`] = `
             Array [
               Object {
                 "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
                 "textTransform": "none",
               },
+              Array [
+                Object {
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 17,
+                  "lineHeight": 16,
+                },
+                Object {
+                  "marginBottom": 10,
+                },
+              ],
               Object {
-                "color": "#1D1E20",
-                "fontFamily": "Inter_600SemiBold",
-                "fontSize": 17,
-                "lineHeight": 18,
-                "marginBottom": 10,
+                "textAlign": "left",
               },
             ]
           }
@@ -264,13 +297,21 @@ exports[`Product detail Screen should render correctly 1`] = `
               Array [
                 Object {
                   "color": "#000",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 17,
+                  "lineHeight": 16,
                   "textTransform": "none",
                 },
+                Array [
+                  Object {
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
+                  },
+                  undefined,
+                ],
                 Object {
-                  "color": "#1D1E20",
-                  "fontFamily": "Inter_600SemiBold",
-                  "fontSize": 17,
-                  "lineHeight": 18,
+                  "textAlign": "left",
                 },
               ]
             }
@@ -282,13 +323,22 @@ exports[`Product detail Screen should render correctly 1`] = `
               Array [
                 Object {
                   "color": "#000",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 17,
+                  "lineHeight": 16,
                   "textTransform": "none",
                 },
+                Array [
+                  Object {
+                    "color": "#8F959E",
+                    "fontFamily": "Inter_400Regular",
+                    "fontSize": 13,
+                    "lineHeight": 14,
+                  },
+                  undefined,
+                ],
                 Object {
-                  "color": "#8F959E",
-                  "fontFamily": "Inter_400Regular",
-                  "fontSize": 13,
-                  "lineHeight": 14,
+                  "textAlign": "left",
                 },
               ]
             }
@@ -344,17 +394,11 @@ exports[`Product detail Screen should render correctly 1`] = `
               >
                 <Text
                   style={
-                    Array [
-                      Object {
-                        "color": "#000",
-                        "textTransform": "none",
-                      },
-                      Object {
-                        "fontFamily": "Inter_500Medium",
-                        "fontSize": 15,
-                        "lineHeight": 16,
-                      },
-                    ]
+                    Object {
+                      "fontFamily": "Inter_500Medium",
+                      "fontSize": 15,
+                      "lineHeight": 16,
+                    }
                   }
                 />
                 <View

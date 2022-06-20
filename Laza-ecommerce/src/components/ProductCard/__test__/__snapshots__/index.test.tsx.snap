@@ -107,36 +107,24 @@ exports[`Product Card Component Should render correctly 1`] = `
   </View>
   <Text
     style={
-      Array [
-        Object {
-          "color": "#000",
-          "textTransform": "none",
-        },
-        Object {
-          "color": "#1D1E20",
-          "fontFamily": "Inter_500Medium",
-          "fontSize": 11,
-          "marginTop": 5,
-        },
-      ]
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter_500Medium",
+        "fontSize": 11,
+        "marginTop": 5,
+      }
     }
   >
     Nike Sportswear Club Fleece
   </Text>
   <Text
     style={
-      Array [
-        Object {
-          "color": "#000",
-          "textTransform": "none",
-        },
-        Object {
-          "color": "#1D1E20",
-          "fontFamily": "Inter_500Medium",
-          "fontSize": 11,
-          "marginBottom": 5,
-        },
-      ]
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter_500Medium",
+        "fontSize": 11,
+        "marginBottom": 5,
+      }
     }
   >
     shoes
@@ -152,6 +140,7 @@ exports[`Product Card Component Should render correctly 1`] = `
     }
   >
     $ 100
+     
   </Text>
 </View>
 `;

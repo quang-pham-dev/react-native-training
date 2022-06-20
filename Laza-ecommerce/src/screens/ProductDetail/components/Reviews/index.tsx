@@ -21,8 +21,8 @@ const Reviews = ({ comment, rating, reviewers }: IProductDetailItemProps) => {
   return (
     <View style={styles.reviewContainer}>
       <View style={styles.reviewTitleWrapper}>
-        <Title titleName='Reviews' titleStyles={styles.textReviewTitle} />
-        <Title titleName='View All' titleStyles={styles.textTitle} />
+        <Title.titleLeftSection titleName='Reviews' />
+        <Title.titleRightSection titleName='View All' />
       </View>
       {/* End of reviews Title */}
 
@@ -32,7 +32,7 @@ const Reviews = ({ comment, rating, reviewers }: IProductDetailItemProps) => {
             <Image style={styles.imageAvatar} source={{ uri: reviewers?.image }} />
 
             <View style={styles.reviewerItemInfo}>
-              <Title titleName={reviewers?.name} titleStyles={styles.textName} />
+              <Text style={styles.textName}>{reviewers?.name}</Text>
 
               <View style={styles.reviewTime}>
                 <Image style={styles.imageClock} source={IMAGES.iconClock} />

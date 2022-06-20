@@ -18,28 +18,58 @@ exports[`Product detail size should render correctly 1`] = `
   >
     <Text
       style={
-        Object {
-          "color": "#1D1E20",
-          "fontFamily": "Inter_600SemiBold",
-          "fontSize": 17,
-          "lineHeight": 18,
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 17,
+            "lineHeight": 16,
+            "textTransform": "none",
+          },
+          Array [
+            Object {
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 16,
+            },
+            undefined,
+          ],
+          Object {
+            "textAlign": "left",
+          },
+        ]
       }
     >
       Size
     </Text>
     <Text
       style={
-        Object {
-          "color": "#3D93F8",
-          "fontFamily": "Inter_400Regular",
-          "fontSize": 17,
-          "lineHeight": 16,
-        }
+        Array [
+          Object {
+            "color": "#000",
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 17,
+            "lineHeight": 16,
+            "textTransform": "none",
+          },
+          Array [
+            Object {
+              "color": "#8F959E",
+              "fontFamily": "Inter_400Regular",
+              "fontSize": 13,
+              "lineHeight": 14,
+            },
+            Object {
+              "color": "#3D93F8",
+              "fontSize": 17,
+            },
+          ],
+          Object {
+            "textAlign": "left",
+          },
+        ]
       }
-    >
-      Size Guide
-    </Text>
+    />
   </View>
   <RCTScrollView
     horizontal={true}
@@ -79,12 +109,19 @@ exports[`Product detail size should render correctly 1`] = `
       >
         <Text
           style={
-            Object {
-              "color": "#1D1E20",
-              "fontFamily": "Inter_600SemiBold",
-              "fontSize": 17,
-              "lineHeight": 18,
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
+              undefined,
+              Object {
+                "textAlign": "left",
+              },
+            ]
           }
         >
           S
@@ -117,12 +154,19 @@ exports[`Product detail size should render correctly 1`] = `
       >
         <Text
           style={
-            Object {
-              "color": "#1D1E20",
-              "fontFamily": "Inter_600SemiBold",
-              "fontSize": 17,
-              "lineHeight": 18,
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
+              undefined,
+              Object {
+                "textAlign": "left",
+              },
+            ]
           }
         >
           M
@@ -155,12 +199,19 @@ exports[`Product detail size should render correctly 1`] = `
       >
         <Text
           style={
-            Object {
-              "color": "#1D1E20",
-              "fontFamily": "Inter_600SemiBold",
-              "fontSize": 17,
-              "lineHeight": 18,
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
+              undefined,
+              Object {
+                "textAlign": "left",
+              },
+            ]
           }
         >
           L
@@ -193,12 +244,19 @@ exports[`Product detail size should render correctly 1`] = `
       >
         <Text
           style={
-            Object {
-              "color": "#1D1E20",
-              "fontFamily": "Inter_600SemiBold",
-              "fontSize": 17,
-              "lineHeight": 18,
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
+              undefined,
+              Object {
+                "textAlign": "left",
+              },
+            ]
           }
         >
           XL
@@ -231,12 +289,19 @@ exports[`Product detail size should render correctly 1`] = `
       >
         <Text
           style={
-            Object {
-              "color": "#1D1E20",
-              "fontFamily": "Inter_600SemiBold",
-              "fontSize": 17,
-              "lineHeight": 18,
-            }
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
+              undefined,
+              Object {
+                "textAlign": "left",
+              },
+            ]
           }
         >
           2XL

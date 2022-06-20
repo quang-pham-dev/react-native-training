@@ -134,26 +134,25 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               />
             </View>
-            <View>
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#1D1E20",
-                      "fontSize": 17,
-                    },
-                    Object {
-                      "color": "#1D1E20",
-                      "fontFamily": "Inter_500Medium",
-                      "fontSize": 15,
-                      "lineHeight": 16.5,
-                    },
-                  ]
-                }
-              >
-                Adidas
-              </Text>
-            </View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
+                    "textTransform": "none",
+                  },
+                  undefined,
+                  Object {
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Adidas
+            </Text>
           </View>
         </View>
       </View>
@@ -230,26 +229,25 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               />
             </View>
-            <View>
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#1D1E20",
-                      "fontSize": 17,
-                    },
-                    Object {
-                      "color": "#1D1E20",
-                      "fontFamily": "Inter_500Medium",
-                      "fontSize": 15,
-                      "lineHeight": 16.5,
-                    },
-                  ]
-                }
-              >
-                Nike
-              </Text>
-            </View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
+                    "textTransform": "none",
+                  },
+                  undefined,
+                  Object {
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Nike
+            </Text>
           </View>
         </View>
       </View>
@@ -326,26 +324,25 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               />
             </View>
-            <View>
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#1D1E20",
-                      "fontSize": 17,
-                    },
-                    Object {
-                      "color": "#1D1E20",
-                      "fontFamily": "Inter_500Medium",
-                      "fontSize": 15,
-                      "lineHeight": 16.5,
-                    },
-                  ]
-                }
-              >
-                Fila
-              </Text>
-            </View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
+                    "textTransform": "none",
+                  },
+                  undefined,
+                  Object {
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Fila
+            </Text>
           </View>
         </View>
       </View>
@@ -422,26 +419,25 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               />
             </View>
-            <View>
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#1D1E20",
-                      "fontSize": 17,
-                    },
-                    Object {
-                      "color": "#1D1E20",
-                      "fontFamily": "Inter_500Medium",
-                      "fontSize": 15,
-                      "lineHeight": 16.5,
-                    },
-                  ]
-                }
-              >
-                Puma
-              </Text>
-            </View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
+                    "textTransform": "none",
+                  },
+                  undefined,
+                  Object {
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Puma
+            </Text>
           </View>
         </View>
       </View>
@@ -518,26 +514,25 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               />
             </View>
-            <View>
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#1D1E20",
-                      "fontSize": 17,
-                    },
-                    Object {
-                      "color": "#1D1E20",
-                      "fontFamily": "Inter_500Medium",
-                      "fontSize": 15,
-                      "lineHeight": 16.5,
-                    },
-                  ]
-                }
-              >
-                Guci
-              </Text>
-            </View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
+                    "textTransform": "none",
+                  },
+                  undefined,
+                  Object {
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Guci
+            </Text>
           </View>
         </View>
       </View>

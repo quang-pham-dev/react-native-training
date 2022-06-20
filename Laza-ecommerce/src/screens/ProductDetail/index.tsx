@@ -116,6 +116,7 @@ const ProductDetailScreen = ({ navigation, route }: IProductDetailProps) => {
             <Reviews reviewers={reviewers} comment={comment} rating={rating} />
             {/* end product Review  */}
           </View>
+
           <Button
             testID='AddToCartButton'
             text='Add to Cart'

@@ -14,7 +14,7 @@ import styles from './styles';
 const Description = ({ description }: IProductDetailItemProps) => {
   return (
     <View style={styles.descriptionContainer}>
-      <Title titleName='Description' titleStyles={styles.textDescriptionTitle} />
+      <Title.titleLeftSection titleName='Description' style={styles.textDescriptionTitle} />
       {Boolean(description) && (
         <MoreLessText styleShowMoreText={styles.textContent} numberOfLines={3}>
           {description}

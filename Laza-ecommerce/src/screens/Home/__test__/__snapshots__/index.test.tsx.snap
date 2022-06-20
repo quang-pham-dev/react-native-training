@@ -89,37 +89,8 @@ exports[`Home Screen Should renders correctly 1`] = `
     <View
       style={
         Object {
-          "alignItems": "center",
           "flexDirection": "row",
           "marginTop": 15,
-          "opacity": 1,
-          "transform": Array [
-            Object {
-              "translateX": 0,
-            },
-            Object {
-              "translateY": 0,
-            },
-          ],
-        }
-      }
-    >
-      <Text
-        style={
-          Object {
-            "color": "#1D1E20",
-            "fontFamily": "Inter_600SemiBold",
-            "fontSize": 28,
-            "lineHeight": 30,
-          }
-        }
-      >
-        Hello
-      </Text>
-    </View>
-    <View
-      style={
-        Object {
           "opacity": 1,
           "transform": Array [
             Object {
@@ -137,13 +108,66 @@ exports[`Home Screen Should renders correctly 1`] = `
           Array [
             Object {
               "color": "#000",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 16,
               "textTransform": "none",
             },
+            Array [
+              Object {
+                "fontFamily": "Inter_600SemiBold",
+                "fontSize": 28,
+                "lineHeight": 30,
+              },
+              undefined,
+            ],
             Object {
-              "color": "#8F959E",
-              "fontFamily": "Inter_400Regular",
-              "fontSize": 15,
-              "marginTop": 5,
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        Hello
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "marginTop": 15,
+          "opacity": 1,
+          "transform": Array [
+            Object {
+              "translateX": 0,
+            },
+            Object {
+              "translateY": 0,
+            },
+          ],
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "fontFamily": "Inter_500Medium",
+              "fontSize": 17,
+              "lineHeight": 16,
+              "textTransform": "none",
+            },
+            Array [
+              Object {
+                "color": "#8F959E",
+                "fontFamily": "Inter_400Regular",
+                "fontSize": 15,
+                "lineHeight": 16,
+              },
+              undefined,
+            ],
+            Object {
+              "textAlign": "left",
             },
           ]
         }
@@ -314,46 +338,59 @@ exports[`Home Screen Should renders correctly 1`] = `
           ]
         }
       >
-        <View>
-          <Text
-            style={
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
               Array [
                 Object {
-                  "color": "#1D1E20",
-                  "fontSize": 17,
-                },
-                Object {
-                  "color": "#1D1E20",
                   "fontFamily": "Inter_500Medium",
                   "fontSize": 17,
-                  "lineHeight": 18,
+                  "lineHeight": 16,
                 },
-              ]
-            }
-          >
-            Choose Brand
-          </Text>
-        </View>
-        <View>
-          <Text
-            style={
+                undefined,
+              ],
+              Object {
+                "textAlign": "left",
+              },
+            ]
+          }
+        >
+          Choose Brand
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
               Array [
-                Object {
-                  "color": "#1D1E20",
-                  "fontSize": 17,
-                },
                 Object {
                   "color": "#8F959E",
                   "fontFamily": "Inter_400Regular",
                   "fontSize": 13,
                   "lineHeight": 14,
                 },
-              ]
-            }
-          >
-            View All
-          </Text>
-        </View>
+                undefined,
+              ],
+              Object {
+                "textAlign": "left",
+              },
+            ]
+          }
+        >
+          View All
+        </Text>
       </View>
       <View
         style={Object {}}
@@ -391,9 +428,15 @@ exports[`Home Screen Should renders correctly 1`] = `
                 Array [
                   Object {
                     "color": "#000",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
                     "textTransform": "none",
                   },
                   undefined,
+                  Object {
+                    "textAlign": "left",
+                  },
                 ]
               }
             >
@@ -431,46 +474,59 @@ exports[`Home Screen Should renders correctly 1`] = `
           ]
         }
       >
-        <View>
-          <Text
-            style={
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
               Array [
                 Object {
-                  "color": "#1D1E20",
-                  "fontSize": 17,
-                },
-                Object {
-                  "color": "#1D1E20",
                   "fontFamily": "Inter_500Medium",
                   "fontSize": 17,
-                  "lineHeight": 18,
+                  "lineHeight": 16,
                 },
-              ]
-            }
-          >
-            New Arrival
-          </Text>
-        </View>
-        <View>
-          <Text
-            style={
+                undefined,
+              ],
+              Object {
+                "textAlign": "left",
+              },
+            ]
+          }
+        >
+          New Arrival
+        </Text>
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
               Array [
-                Object {
-                  "color": "#1D1E20",
-                  "fontSize": 17,
-                },
                 Object {
                   "color": "#8F959E",
                   "fontFamily": "Inter_400Regular",
                   "fontSize": 13,
                   "lineHeight": 14,
                 },
-              ]
-            }
-          >
-            View All
-          </Text>
-        </View>
+                undefined,
+              ],
+              Object {
+                "textAlign": "left",
+              },
+            ]
+          }
+        >
+          View All
+        </Text>
       </View>
       <View
         style={
@@ -519,9 +575,15 @@ exports[`Home Screen Should renders correctly 1`] = `
                 Array [
                   Object {
                     "color": "#000",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
                     "textTransform": "none",
                   },
                   undefined,
+                  Object {
+                    "textAlign": "left",
+                  },
                 ]
               }
             >

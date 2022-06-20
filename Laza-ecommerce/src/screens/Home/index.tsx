@@ -18,7 +18,6 @@ import Header from 'components/Layout/Header';
 import SearchBar from 'components/SearchBar';
 import ProductsList from 'components/ProductsList';
 import Title from 'components/Title';
-import Label from 'components/Label';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
@@ -54,10 +53,6 @@ import { IProduct } from 'types/models/Products';
 import { SCREENS_ROUTES } from 'constants/Screens';
 import { PRODUCT_PAGINATION } from 'constants/Products';
 import { BRAND_PAGINATION } from 'constants/Brands';
-
-// Themes
-import Fonts from 'themes/Fonts';
-import Colors from 'themes/Colors';
 
 // Styles
 import styles from './styles';
@@ -361,12 +356,14 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
         {/* end header layout */}
 
         <Animated.View style={[styles.headerTitleWrapper, headerTitleAnimation]}>
-          <Text style={styles.headerTitle}>Hello</Text>
-          {Boolean(username) && <Text style={styles.userNameTitle}>{username}</Text>}
+          <Title.HeadingPage titleName='Hello' />
+          {Boolean(username) && (
+            <Title.HeadingPage titleName={`${username}`} style={styles.userNameTitle} />
+          )}
         </Animated.View>
 
-        <Animated.View style={headerTitleAnimation}>
-          <Title titleName='Welcome to Laza.' titleStyles={styles.subTitle} />
+        <Animated.View style={[styles.headerTitleWrapper, headerTitleAnimation]}>
+          <Title.subHeadingPage titleName='Welcome to Laza.' />
         </Animated.View>
 
         <Animated.View style={SearchBarAnimation}>
@@ -378,21 +375,8 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
       <View style={styles.body}>
         <Animated.View style={brandsAnimation}>
           <View style={[styles.brandTitle, styles.titleRow]}>
-            <Label
-              labelName='Choose Brand'
-              fontSize={Fonts.size.default}
-              lineHeight={Fonts.lineHeight.sm}
-              fontFamily={Fonts.fontFamily.Inter_500Medium}
-              color={Colors.textBlack}
-            />
-
-            <Label
-              labelName='View All'
-              fontSize={Fonts.size.small}
-              lineHeight={Fonts.lineHeight.xs}
-              fontFamily={Fonts.fontFamily.Inter_400Regular}
-              color={Colors.textGray}
-            />
+            <Title.titleLeftSection titleName='Choose Brand' />
+            <Title.titleRightSection titleName='View All' />
           </View>
           {/* end brand title */}
 
@@ -407,21 +391,8 @@ const HomeScreen = ({ navigation }: IHomeScreenProps) => {
 
         <Animated.View style={productListAnimation}>
           <View style={[styles.productTitle, styles.titleRow]}>
-            <Label
-              labelName='New Arrival'
-              fontSize={Fonts.size.default}
-              lineHeight={Fonts.lineHeight.sm}
-              fontFamily={Fonts.fontFamily.Inter_500Medium}
-              color={Colors.textBlack}
-            />
-
-            <Label
-              labelName='View All'
-              fontSize={Fonts.size.small}
-              lineHeight={Fonts.lineHeight.xs}
-              fontFamily={Fonts.fontFamily.Inter_400Regular}
-              color={Colors.textGray}
-            />
+            <Title.titleLeftSection titleName='New Arrival' />
+            <Title.titleRightSection titleName='View All' />
           </View>
           {/* end product title */}
 

@@ -5,7 +5,7 @@ import { Image, TouchableOpacity, View } from 'react-native';
 import isEqual from 'react-fast-compare';
 
 // Components
-import Label from 'components/Label';
+import Title from 'components/Title';
 
 // Types
 import { IBrandCardProps } from 'types/models/Brands';
@@ -27,20 +27,12 @@ const BrandCard = ({ brand, onPressBrandCard, brandCardStyles }: IBrandCardProps
     <TouchableOpacity
       testID='brandCard'
       onPress={handlePressBrandCard}
-      style={[styles.brandCardContainer, brandCardStyles]}
-    >
+      style={[styles.brandCardContainer, brandCardStyles]}>
       <View style={[styles.brandCardWrapper]}>
         <View style={styles.brandLogoWrapper}>
           <Image style={styles.brandLogo} source={{ uri: brand.logoUrl }} />
         </View>
-
-        <Label
-          lineHeight={16.5}
-          fontSize={Fonts.size.normal}
-          fontFamily={Fonts.fontFamily.Inter_500Medium}
-          color={Colors.textBlack}
-          labelName={brand.name}
-        />
+        <Title titleName={brand.name} />
       </View>
     </TouchableOpacity>
   );
