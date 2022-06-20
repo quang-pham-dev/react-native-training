@@ -58,7 +58,6 @@ import { BRAND_PAGINATION } from 'constants/Brands';
 import styles from './styles';
 
 const HomeScreen = ({ navigation }: IHomeScreenProps) => {
-  console.log('HomeScreen');
   const { authState } = useAuthContext();
 
   const { productState, productDispatch } = useProductContext();
