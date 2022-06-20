@@ -12,7 +12,7 @@ import Header from './components/Header';
 
 // Context
 import { BrandsContext } from 'contexts/BrandsContext';
-import { ProductsContext } from 'contexts/ProductsContext';
+import { useProductContext } from 'contexts/ProductsContext';
 import {
   GET_PRODUCTS_BY_BRAND_ID,
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
@@ -44,7 +44,7 @@ const BrandDetailScreen = ({ navigation, route }: IBrandDetailProps) => {
 
   const { brandState } = useContext(BrandsContext);
 
-  const { productState, productDispatch } = useContext(ProductsContext);
+  const { productState, productDispatch } = useProductContext();
 
   const { brands } = brandState || {};
 

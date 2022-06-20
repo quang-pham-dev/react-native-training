@@ -1,24 +1,28 @@
-import React, { createContext, useMemo, useReducer } from 'react';
+import React, { createContext, Dispatch, useContext, useMemo, useReducer } from 'react';
 
 // Context Reducer
 import brandsReducer, { InitialBrandsState } from './reducers/brands';
 
 // Types
 import { IProviderProps } from 'types/contexts/Providers';
+import { BrandsState } from 'types/contexts/reducers/Brand';
 
-export const BrandsContext = createContext({} as any);
+export const BrandsContext = createContext<{
+  brandState: BrandsState;
+  brandDispatch: Dispatch<any>;
+}>({
+  brandState: InitialBrandsState,
+  brandDispatch: () => null
+});
 
-const BrandsProvider = ({ children }: IProviderProps) => {
+export const BrandsContextProvider = ({ children }: IProviderProps) => {
   const [brandState, brandDispatch] = useReducer<any>(brandsReducer, InitialBrandsState);
 
-  const BrandsContextValue = useMemo(
-    () => ({ brandState, brandDispatch }),
-    [brandState, brandDispatch]
-  );
+  const BrandsContextValue = useMemo(() => ({ brandState, brandDispatch }), [brandState]);
 
   return (
-    <BrandsContext.Provider value={{ ...BrandsContextValue }}>{children}</BrandsContext.Provider>
+    <BrandsContext.Provider value={BrandsContextValue as any}>{children}</BrandsContext.Provider>
   );
 };
 
-export default BrandsProvider;
+export const useBrandsContext = () => useContext(BrandsContext);

@@ -14,7 +14,7 @@ import useFonts from 'hooks/useFonts';
 import RootNavigator from 'navigation/RootNavigator';
 
 // Context Provider
-import AuthProvider from 'contexts/AuthContext';
+import { AuthContextProvider } from 'contexts/AuthContext';
 
 if (__DEV__) {
   connectToDevTools({
@@ -46,10 +46,10 @@ export default function App() {
   }
 
   return (
-    <AuthProvider>
+    <AuthContextProvider>
       <SafeAreaProvider>
         <RootNavigator />
       </SafeAreaProvider>
-    </AuthProvider>
+    </AuthContextProvider>
   );
 }

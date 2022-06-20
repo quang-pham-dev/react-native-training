@@ -6,8 +6,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // Context
-import ProductsProvider from 'contexts/ProductsContext';
-import BrandsProvider from 'contexts/BrandsContext';
+import { ProductContextProvider } from 'contexts/ProductsContext';
+import { BrandsContextProvider } from 'contexts/BrandsContext';
 
 // Stack
 import BagsStack from './BagsStack';
@@ -103,8 +103,7 @@ const AppStackNavigator = () => {
           paddingBottom: 0
         },
         headerShown: true
-      }}
-    >
+      }}>
       {TabBarList.map((elem, index) => (
         <BottomTab.Screen
           key={index}
@@ -127,8 +126,8 @@ const Drawer = createDrawerNavigator();
 
 function AppDrawerStack() {
   return (
-    <ProductsProvider>
-      <BrandsProvider>
+    <ProductContextProvider>
+      <BrandsContextProvider>
         <Drawer.Navigator
           screenOptions={{
             headerShown: false,
@@ -138,12 +137,11 @@ function AppDrawerStack() {
               width: '80%'
             }
           }}
-          drawerContent={({ navigation }) => <SideMenu navigation={navigation} />}
-        >
+          drawerContent={({ navigation }) => <SideMenu navigation={navigation} />}>
           <Drawer.Screen name={SCREENS_ROUTES.APP_NAVIGATOR.name} component={AppStackNavigator} />
         </Drawer.Navigator>
-      </BrandsProvider>
-    </ProductsProvider>
+      </BrandsContextProvider>
+    </ProductContextProvider>
   );
 }
 

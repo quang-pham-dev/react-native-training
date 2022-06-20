@@ -5,7 +5,7 @@ import { Image, TextInput, TouchableOpacity, View } from 'react-native';
 import isEqual from 'react-fast-compare';
 
 // Context
-import { ProductsContext } from 'contexts/ProductsContext';
+import { useProductContext } from 'contexts/ProductsContext';
 import { SEARCH_PRODUCTS_VALUE } from 'contexts/actions/products';
 
 // Types
@@ -18,7 +18,7 @@ import IMAGES from 'themes/Images';
 import styles from './styles';
 
 const SearchBar = ({ autoFocus, textInputStyles = {}, onSubmitEditing }: ISearchBarProps) => {
-  const { productDispatch } = useContext(ProductsContext);
+  const { productDispatch } = useProductContext();
 
   const [valueState, setValueState] = React.useState<string>('');
 

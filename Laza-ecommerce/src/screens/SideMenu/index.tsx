@@ -15,7 +15,7 @@ import Title from 'components/Title';
 import DrawerItem from 'screens/SideMenu/components';
 
 // Context
-import { AuthenticationContext } from 'contexts/AuthContext';
+import { useAuthContext } from 'contexts/AuthContext';
 import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'contexts/actions/auth';
 
 // API
@@ -38,7 +38,7 @@ import styles from './styles';
 import { remove } from 'utils/localStorage';
 
 const SideMenu = ({ navigation }: ISideMenuPros) => {
-  const { authState, authDispatch } = useContext(AuthenticationContext);
+  const { authState, authDispatch } = useAuthContext();
 
   const { currentUser } = authState || {};
 

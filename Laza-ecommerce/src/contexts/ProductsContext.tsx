@@ -1,4 +1,4 @@
-import React, { createContext, useMemo, useReducer } from 'react';
+import React, { createContext, Dispatch, useContext, useMemo, useReducer } from 'react';
 
 // Context Reducer
 import productsReducer, { InitialProductsState } from './reducers/products';
@@ -6,21 +6,24 @@ import productsReducer, { InitialProductsState } from './reducers/products';
 // Types
 import { IProviderProps } from 'types/contexts/Providers';
 
-export const ProductsContext = createContext({} as any);
+export const ProductsContext = createContext<{
+  productState: any;
+  productDispatch: Dispatch<any>;
+}>({
+  productState: InitialProductsState,
+  productDispatch: () => null
+});
 
-const ProductsProvider = ({ children }: IProviderProps) => {
+export const ProductContextProvider = ({ children }: IProviderProps) => {
   const [productState, productDispatch] = useReducer<any>(productsReducer, InitialProductsState);
 
-  const ProductsContextValue = useMemo(
-    () => ({ productState, productDispatch }),
-    [productState, productDispatch]
-  );
+  const ProductsContextValue = useMemo(() => ({ productState, productDispatch }), [productState]);
 
   return (
-    <ProductsContext.Provider value={{ ...ProductsContextValue }}>
+    <ProductsContext.Provider value={ProductsContextValue as any}>
       {children}
     </ProductsContext.Provider>
   );
 };
 
-export default ProductsProvider;
+export const useProductContext = () => useContext(ProductsContext);

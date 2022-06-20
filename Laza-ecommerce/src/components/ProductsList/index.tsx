@@ -10,7 +10,7 @@ import Title from 'components/Title';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { ProductsContext } from 'contexts/ProductsContext';
+import { useProductContext } from 'contexts/ProductsContext';
 
 // Constants
 import { PRODUCTS_EMPTY_RESULT } from 'constants/Products';
@@ -28,7 +28,7 @@ const ProductsList = ({
   onLoadMoreProducts,
   onScroll
 }: IProductsListProps) => {
-  const { productState } = useContext(ProductsContext);
+  const { productState } = useProductContext();
 
   const {
     isLoading,

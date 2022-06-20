@@ -21,8 +21,8 @@ import Title from 'components/Title';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { AuthenticationContext } from 'contexts/AuthContext';
-import { ProductsContext } from 'contexts/ProductsContext';
+import { useAuthContext } from 'contexts/AuthContext';
+import { useProductContext } from 'contexts/ProductsContext';
 import { BrandsContext } from 'contexts/BrandsContext';
 import {
   GET_PRODUCTS,
@@ -58,9 +58,10 @@ import { BRAND_PAGINATION } from 'constants/Brands';
 import styles from './styles';
 
 const HomeScreen = ({ navigation }: IHomeScreenProps) => {
-  const { authState } = useContext(AuthenticationContext);
+  console.log('HomeScreen');
+  const { authState } = useAuthContext();
 
-  const { productState, productDispatch } = useContext(ProductsContext);
+  const { productState, productDispatch } = useProductContext();
 
   const { brandState, brandDispatch } = useContext(BrandsContext);
 

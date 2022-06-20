@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from 'react';
+import React, { useCallback } from 'react';
 import { Alert, KeyboardAvoidingView, ScrollView, View } from 'react-native';
 
 // Components
@@ -7,7 +7,7 @@ import Button from 'components/Button';
 import Title from 'components/Title';
 
 // Context
-import { AuthenticationContext } from 'contexts/AuthContext';
+import { useAuthContext } from 'contexts/AuthContext';
 import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'contexts/actions/auth';
 
 // API
@@ -33,7 +33,7 @@ import { styles } from './styles';
 const LoginFormLazy = React.lazy(() => import('screens/SignIn/components/LoginForm'));
 
 const SignInScreen = ({ navigation }: ISignInScreenProps) => {
-  const { authState, authDispatch } = useContext(AuthenticationContext);
+  const { authState, authDispatch } = useAuthContext();
 
   const { isProcessing } = authState || {};
 
