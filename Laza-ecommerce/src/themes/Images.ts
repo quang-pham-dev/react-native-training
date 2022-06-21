@@ -15,7 +15,6 @@ const IMAGES = {
   iconBag: require('assets/images/icons/bag.webp'),
   iconWallet: require('assets/images/icons/wallet.webp'),
   iconSun: require('assets/images/icons/sun.webp'),
-  iconAvatar: require('assets/images/icons/avatar.webp'),
   iconInfo: require('assets/images/icons/info.webp'),
   iconLogout: require('assets/images/icons/logout.webp'),
   iconBadge: require('assets/images/icons/badge.webp'),
@@ -23,7 +22,6 @@ const IMAGES = {
   iconHeartDrawer: require('assets/images/icons/heart-drawer.webp'),
   iconWalletDrawer: require('assets/images/icons/wallet-drawer.webp'),
   iconClock: require('assets/images/icons/clock.webp'),
-  reviewerAvatar: require('assets/images/icons/reviewer.webp'),
   ratingStart: require('assets/images/icons/start-rate.webp')
 };
 
