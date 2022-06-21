@@ -392,12 +392,26 @@ exports[`Home Screen Should renders correctly 1`] = `
           View All
         </Text>
       </View>
+      <RNCSafeAreaView>
+        <ActivityIndicator
+          animating={true}
+          color="#FFC107"
+          hidesWhenStopped={true}
+          size="small"
+          style={
+            Object {
+              "margin": 13,
+            }
+          }
+        />
+      </RNCSafeAreaView>
       <View
         style={Object {}}
       >
         <RCTScrollView
           ListEmptyComponent={[Function]}
           ListFooterComponent={[Function]}
+          data={Array []}
           disableVirtualization={false}
           getItem={[Function]}
           getItemCount={[Function]}
@@ -528,6 +542,19 @@ exports[`Home Screen Should renders correctly 1`] = `
           View All
         </Text>
       </View>
+      <RNCSafeAreaView>
+        <ActivityIndicator
+          animating={true}
+          color="#FFC107"
+          hidesWhenStopped={true}
+          size="small"
+          style={
+            Object {
+              "margin": 13,
+            }
+          }
+        />
+      </RNCSafeAreaView>
       <View
         style={
           Object {
@@ -545,6 +572,7 @@ exports[`Home Screen Should renders correctly 1`] = `
               "marginBottom": 15,
             }
           }
+          data={Array []}
           disableVirtualization={false}
           getItem={[Function]}
           getItemCount={[Function]}
