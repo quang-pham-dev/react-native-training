@@ -31,6 +31,7 @@
     "extra": {
       "flipperHack": "React Native packager is running"
     },
-    "plugins": ["expo-community-flipper"]
+    "plugins": ["expo-community-flipper"],
+    "jsEngine": "hermes"
   }
 }
