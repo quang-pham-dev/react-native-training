@@ -2,3 +2,8 @@ import 'components/Button/index.stories';
 import 'components/LoadingIndicator/index.stories';
 import 'components/TextInput/index.stories';
 import 'components/Title/index.stories';
+import 'components/BrandCard/index.stories';
+import 'components/BrandList/index.stories';
+import 'components/ProductCard/index.stories';
+import 'components/ProductsList/index.stories';
+import 'components/SearchBar/index.stories';
