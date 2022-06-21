@@ -1,40 +1,40 @@
 /* A data array. */
+
 export const brand = {
   id: '0',
-  name: 'Adidas',
+  name: 'Nike',
   logoUrl:
-    'https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png'
+    'https://toppng.com/uploads/preview/ike-logo-png-hd-nike-logo-png-image-free-download-nike-logo-sv-11562865034fkhqkcoas6.png'
 };
 
 export const brands = [
   {
     id: '0',
-    name: 'Adidas',
+    name: 'Nike',
     logoUrl:
-      'https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png'
+      'https://toppng.com/uploads/preview/ike-logo-png-hd-nike-logo-png-image-free-download-nike-logo-sv-11562865034fkhqkcoas6.png'
   },
   {
     id: '1',
-    name: 'Nike',
+    name: 'Adidas',
     logoUrl:
-      'https://www.nike.com/images/t_PDP_1280_v1/b_white/f_auto/j_pdp_white/k_P/w_80/0f0f0f/0f0f0f_nike_logo_white.png'
+      'https://www.pikpng.com/pngl/m/42-429866_adidas-logo-png-images-free-download-rh-pngimg.png'
   },
   {
     id: '2',
     name: 'Fila',
     logoUrl:
-      'https://www.fila.com/on/demandware.static/-/Sites-fila-US-Library/default/dwf9f9f9f/images/logo.png'
+      'https://toppng.com/uploads/preview/fila-logo-vector-download-free-11574216707jcmvfu58fy.png'
   },
   {
     id: '3',
     name: 'Puma',
     logoUrl:
-      'https://www.puma.com/on/demandware.static/-/Sites-puma-US-Library/default/dwf9f9f9f/images/logo.png'
+      'https://banner2.cleanpng.com/20180613/gsj/kisspng-tracksuit-puma-logo-brand-clothing-puma-logo-5b20dc6b232426.487874081528880235144.jpg'
   },
   {
     id: '4',
-    name: 'Guci',
-    logoUrl:
-      'https://www.gucci.com/on/demandware.static/-/Sites-gucci-US-Library/default/dwf9f9f9f/images/logo.png'
+    name: 'Gucci',
+    logoUrl: 'https://esquilo.io/png/thumb/XBwczcMncYeff65-Vector-Gucci-Logo-PNG-Free-Download.png'
   }
 ];
