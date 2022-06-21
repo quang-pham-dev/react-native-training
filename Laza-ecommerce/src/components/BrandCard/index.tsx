@@ -10,10 +10,6 @@ import Title from 'components/Title';
 // Types
 import { IBrandCardProps } from 'types/models/Brands';
 
-// Themes
-import Fonts from 'themes/Fonts';
-import Colors from 'themes/Colors';
-
 // Styles
 import styles from './styles';
 

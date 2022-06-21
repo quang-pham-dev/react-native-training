@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useEffect, useMemo } from 'react';
-import { Alert, Text, View, TouchableOpacity } from 'react-native';
+import { Alert, View, TouchableOpacity } from 'react-native';
 
 // LIBS
 import { MaterialIcons } from '@expo/vector-icons';
@@ -32,9 +32,6 @@ import { PRODUCT_PAGINATION } from 'constants/Products';
 // Types
 import { IBrand } from 'types/models/Brands';
 import { IBrandDetailProps } from 'types/screens/BrandDetail';
-
-// Themes
-import IMAGES from 'themes/Images';
 
 // Styles
 import styles from './styles';
