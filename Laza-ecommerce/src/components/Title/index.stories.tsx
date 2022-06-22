@@ -5,7 +5,7 @@ import CenterView from '../../../storybook/stories/CenterView';
 
 storiesOf('Title', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('normal', () => <Title titleName='title' />)
+  .add('default', () => <Title titleName='title' />)
   .add('headingPage', () => <Title.HeadingPage titleName='Welcome' />)
   .add('subHeadingPage', () => (
     <Title.subHeadingPage titleName='Please enter your data to continue' />
