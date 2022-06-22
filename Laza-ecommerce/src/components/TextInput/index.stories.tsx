@@ -7,7 +7,7 @@ import TextInput from './index';
 
 storiesOf('TextInput', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('Username', () => (
+  .add('Type text', () => (
     <TextInput
       label='Username'
       labelStyle={{ color: Colors.textGray }}
@@ -18,7 +18,7 @@ storiesOf('TextInput', module)
       onChangeText={() => {}}
     />
   ))
-  .add('Password', () => (
+  .add('Type password', () => (
     <TextInput
       value={''}
       onChangeText={() => {}}
