@@ -65,7 +65,7 @@
   ```
   Run your simulator (e.g. Android Studio, Android Emulator, Xcode, Iphone12)
 
-  yarn run android or yarn run ios
+  yarn android or yarn ios
   ```
 
   - Run server:
