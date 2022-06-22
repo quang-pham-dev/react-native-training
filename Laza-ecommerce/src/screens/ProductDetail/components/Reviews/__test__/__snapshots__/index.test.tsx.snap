@@ -96,20 +96,39 @@ exports[`Product detail reviewer review should render correctly 1`] = `
           }
         }
       >
-        <Image
-          source={
-            Object {
-              "uri": undefined,
-            }
-          }
+        <View
           style={
-            Object {
-              "borderRadius": 40,
-              "height": 40,
-              "width": 40,
-            }
+            Array [
+              Object {
+                "overflow": "hidden",
+              },
+              Object {
+                "borderRadius": 40,
+                "height": 40,
+                "width": 40,
+              },
+            ]
           }
-        />
+        >
+          <FastImageView
+            resizeMode="cover"
+            source={
+              Object {
+                "priority": "normal",
+                "uri": undefined,
+              }
+            }
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          />
+        </View>
         <View
           style={
             Object {

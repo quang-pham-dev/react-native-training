@@ -1,44 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search Bar Component Should render correctly 1`] = `
-<View>
-  <RCTSwitch
-    accessibilityRole="switch"
-    onChange={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    onTintColor="#34C759"
-    style={
-      Array [
-        Object {
-          "height": 31,
-          "width": 51,
-        },
-        Array [
-          Object {
-            "transform": Array [
-              Object {
-                "scaleX": 0.6,
-              },
-              Object {
-                "scaleY": 0.6,
-              },
-            ],
-          },
-          Object {
-            "backgroundColor": "#F2F2F2",
-            "borderRadius": 16,
-          },
-        ],
-      ]
-    }
-    thumbTintColor="#fff"
-    tintColor="#F2F2F2"
-    value={true}
-  />
-</View>
-`;
-
 exports[`Switch Component Should render correctly 1`] = `
 <View>
   <RCTSwitch

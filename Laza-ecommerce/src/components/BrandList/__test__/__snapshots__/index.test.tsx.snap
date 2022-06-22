@@ -119,20 +119,39 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               }
             >
-              <Image
-                source={
-                  Object {
-                    "uri": "https://toppng.com/uploads/preview/ike-logo-png-hd-nike-logo-png-image-free-download-nike-logo-sv-11562865034fkhqkcoas6.png",
-                  }
-                }
+              <View
                 style={
-                  Object {
-                    "height": "100%",
-                    "resizeMode": "contain",
-                    "width": "100%",
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "height": "100%",
+                      "resizeMode": "contain",
+                      "width": "100%",
+                    },
+                  ]
                 }
-              />
+              >
+                <FastImageView
+                  resizeMode="cover"
+                  source={
+                    Object {
+                      "priority": "normal",
+                      "uri": "https://toppng.com/uploads/preview/ike-logo-png-hd-nike-logo-png-image-free-download-nike-logo-sv-11562865034fkhqkcoas6.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
             </View>
             <Text
               style={
@@ -214,20 +233,39 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               }
             >
-              <Image
-                source={
-                  Object {
-                    "uri": "https://www.pikpng.com/pngl/m/42-429866_adidas-logo-png-images-free-download-rh-pngimg.png",
-                  }
-                }
+              <View
                 style={
-                  Object {
-                    "height": "100%",
-                    "resizeMode": "contain",
-                    "width": "100%",
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "height": "100%",
+                      "resizeMode": "contain",
+                      "width": "100%",
+                    },
+                  ]
                 }
-              />
+              >
+                <FastImageView
+                  resizeMode="cover"
+                  source={
+                    Object {
+                      "priority": "normal",
+                      "uri": "https://www.pikpng.com/pngl/m/42-429866_adidas-logo-png-images-free-download-rh-pngimg.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
             </View>
             <Text
               style={
@@ -309,20 +347,39 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               }
             >
-              <Image
-                source={
-                  Object {
-                    "uri": "https://toppng.com/uploads/preview/fila-logo-vector-download-free-11574216707jcmvfu58fy.png",
-                  }
-                }
+              <View
                 style={
-                  Object {
-                    "height": "100%",
-                    "resizeMode": "contain",
-                    "width": "100%",
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "height": "100%",
+                      "resizeMode": "contain",
+                      "width": "100%",
+                    },
+                  ]
                 }
-              />
+              >
+                <FastImageView
+                  resizeMode="cover"
+                  source={
+                    Object {
+                      "priority": "normal",
+                      "uri": "https://toppng.com/uploads/preview/fila-logo-vector-download-free-11574216707jcmvfu58fy.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
             </View>
             <Text
               style={
@@ -404,20 +461,39 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               }
             >
-              <Image
-                source={
-                  Object {
-                    "uri": "https://banner2.cleanpng.com/20180613/gsj/kisspng-tracksuit-puma-logo-brand-clothing-puma-logo-5b20dc6b232426.487874081528880235144.jpg",
-                  }
-                }
+              <View
                 style={
-                  Object {
-                    "height": "100%",
-                    "resizeMode": "contain",
-                    "width": "100%",
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "height": "100%",
+                      "resizeMode": "contain",
+                      "width": "100%",
+                    },
+                  ]
                 }
-              />
+              >
+                <FastImageView
+                  resizeMode="cover"
+                  source={
+                    Object {
+                      "priority": "normal",
+                      "uri": "https://banner2.cleanpng.com/20180613/gsj/kisspng-tracksuit-puma-logo-brand-clothing-puma-logo-5b20dc6b232426.487874081528880235144.jpg",
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
             </View>
             <Text
               style={
@@ -499,20 +575,39 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 }
               }
             >
-              <Image
-                source={
-                  Object {
-                    "uri": "https://esquilo.io/png/thumb/XBwczcMncYeff65-Vector-Gucci-Logo-PNG-Free-Download.png",
-                  }
-                }
+              <View
                 style={
-                  Object {
-                    "height": "100%",
-                    "resizeMode": "contain",
-                    "width": "100%",
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "height": "100%",
+                      "resizeMode": "contain",
+                      "width": "100%",
+                    },
+                  ]
                 }
-              />
+              >
+                <FastImageView
+                  resizeMode="cover"
+                  source={
+                    Object {
+                      "priority": "normal",
+                      "uri": "https://esquilo.io/png/thumb/XBwczcMncYeff65-Vector-Gucci-Logo-PNG-Free-Download.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
             </View>
             <Text
               style={
