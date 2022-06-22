@@ -3,6 +3,7 @@ import { View, Text, Image } from 'react-native';
 
 // LIBS
 import isEqual from 'react-fast-compare';
+import FastImage from 'react-native-fast-image';
 
 // Components
 import Title from 'components/Title';
@@ -29,7 +30,14 @@ const Reviews = ({ comment, rating, reviewers }: IProductDetailItemProps) => {
       <View style={styles.reviewWrapper}>
         <View style={styles.reviewItemWrapper}>
           <View style={styles.reviewerInfoWrapper}>
-            <Image style={styles.imageAvatar} source={{ uri: reviewers?.image }} />
+            <FastImage
+              style={styles.imageAvatar}
+              source={{
+                uri: reviewers?.image,
+                priority: FastImage.priority.normal
+              }}
+              resizeMode={FastImage.resizeMode.cover}
+            />
 
             <View style={styles.reviewerItemInfo}>
               <Text style={styles.textName}>{reviewers?.name}</Text>

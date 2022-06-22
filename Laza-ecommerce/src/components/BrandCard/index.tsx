@@ -3,6 +3,7 @@ import { Image, TouchableOpacity, View } from 'react-native';
 
 // LIBS
 import isEqual from 'react-fast-compare';
+import FastImage from 'react-native-fast-image';
 
 // Components
 import Title from 'components/Title';
@@ -26,7 +27,14 @@ const BrandCard = ({ brand, onPressBrandCard, brandCardStyles }: IBrandCardProps
       style={[styles.brandCardContainer, brandCardStyles]}>
       <View style={[styles.brandCardWrapper]}>
         <View style={styles.brandLogoWrapper}>
-          <Image style={styles.brandLogo} source={{ uri: brand.logoUrl }} />
+          <FastImage
+            style={styles.brandLogo}
+            source={{
+              uri: brand?.logoUrl,
+              priority: FastImage.priority.normal
+            }}
+            resizeMode={FastImage.resizeMode.cover}
+          />
         </View>
         <Title titleName={brand.name} />
       </View>
