@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import './rn-addons';
 import * as Font from 'expo-font';
 
+// load font
 Font.loadAsync({
   Inter_Bold: require('assets/fonts/Inter-Bold.ttf'),
   Inter_400Regular: require('assets/fonts/Inter-Regular.ttf'),

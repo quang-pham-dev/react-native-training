@@ -7,3 +7,5 @@ import 'components/BrandList/index.stories';
 import 'components/ProductCard/index.stories';
 import 'components/ProductsList/index.stories';
 import 'components/SearchBar/index.stories';
+import 'components/Layout/Header/index.stories';
+import 'components/LessMoreText/index.stories';
