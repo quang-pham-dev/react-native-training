@@ -30,6 +30,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     marginBottom: Metrics.margin.lg
   },
+
   forgotPassword: {
     fontFamily: 'Inter_400Regular',
     fontSize: Fonts.size.normal,
@@ -44,18 +45,12 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: Metrics.margin.lg
   },
+
   rememberMeText: {
     fontFamily: Fonts.fontFamily.Inter_500Medium,
     fontSize: Fonts.size.small,
     lineHeight: Fonts.lineHeight.xs,
     color: Colors.textBlack
-  },
-
-  rememberMeSwitch: {
-    transform:
-      Platform.OS === 'android'
-        ? [{ scaleX: 0.9 }, { scaleY: 0.9 }]
-        : [{ scaleX: 0.6 }, { scaleY: 0.6 }]
   },
 
   footer: {
@@ -70,6 +65,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: Metrics.margin.lg,
     marginBottom: Metrics.margin.xl
   },
+
   condition: {
     textAlign: 'center',
     fontFamily: Fonts.fontFamily.Inter_400Regular,
@@ -77,6 +73,7 @@ export const styles = StyleSheet.create({
     fontSize: Fonts.size.small,
     lineHeight: Fonts.lineHeight.sm
   },
+
   Term: {
     color: Colors.textBlack,
     fontFamily: Fonts.fontFamily.Inter_500Medium

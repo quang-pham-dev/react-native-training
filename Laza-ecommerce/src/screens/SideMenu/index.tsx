@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { Alert, Image, Switch, View } from 'react-native';
+import { Alert, Image, View } from 'react-native';
 
 // LIBS
 import { DrawerActions } from '@react-navigation/native';
@@ -10,6 +10,7 @@ import { SCREENS_ROUTES } from 'constants/Screens';
 // Components
 import Button from 'components/Button';
 import Title from 'components/Title';
+import Switch from 'components/Switch';
 
 // Screens
 import DrawerItem from 'screens/SideMenu/components';
@@ -158,14 +159,9 @@ const SideMenu = ({ navigation }: ISideMenuPros) => {
       <View style={styles.main}>
         <View style={[styles.darkModeWrapper]}>
           <DrawerItem title='Dark Mode' source={IMAGES.iconSun} />
-          <Switch
-            style={styles.darkModeSwitch}
-            trackColor={{ false: Colors.lightGray, true: Colors.lightGreen }}
-            thumbColor={isEnabled ? Colors.white : Colors.lightGray}
-            ios_backgroundColor={Colors.lightGray}
-            onValueChange={toggleSwitch}
-            value={isEnabled}
-          />
+          <View style={styles.darkModeSwitchWrapper}>
+            <Switch value={false} />
+          </View>
         </View>
         {/* End Dark mode  */}
 

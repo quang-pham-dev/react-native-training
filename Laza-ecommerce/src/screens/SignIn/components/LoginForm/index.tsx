@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Pressable, Switch, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 
 // LIB
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
@@ -10,6 +10,7 @@ import { Feather } from '@expo/vector-icons';
 // Components
 import Button from 'components/Button';
 import TextInput from 'components/TextInput';
+import Switch from 'components/Switch';
 
 // Types
 import { ILoginCredentials } from 'types/models/User';
@@ -37,10 +38,6 @@ interface ILoginFormProps {
 }
 
 const LoginForm = ({ onSubmit }: ILoginFormProps) => {
-  const [isEnabled, setIsEnabled] = useState(true);
-
-  const toggleSwitch = (): void => setIsEnabled(previousState => !previousState);
-
   const {
     control,
     handleSubmit,
@@ -112,14 +109,8 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
         </View>
         <View style={styles.rememberMeWrap}>
           <Text style={styles.rememberMeText}>Remember me</Text>
-          <Switch
-            style={styles.rememberMeSwitch}
-            trackColor={{ false: Colors.lightGray, true: Colors.lightGreen }}
-            thumbColor={isEnabled ? Colors.white : Colors.lightGray}
-            ios_backgroundColor={Colors.lightGray}
-            onValueChange={toggleSwitch}
-            value={isEnabled}
-          />
+
+          <Switch value={true}/>
         </View>
       </View>
       <View style={styles.footer}>

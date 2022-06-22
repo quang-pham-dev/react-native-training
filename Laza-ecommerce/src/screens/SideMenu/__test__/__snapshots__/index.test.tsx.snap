@@ -252,41 +252,50 @@ exports[`Side menu should render correctly 1`] = `
           </Text>
         </View>
       </View>
-      <RCTSwitch
-        accessibilityRole="switch"
-        onChange={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onTintColor="#34C759"
+      <View
         style={
-          Array [
-            Object {
-              "height": 31,
-              "width": 51,
-            },
-            Array [
-              Object {
-                "marginBottom": -20,
-                "transform": Array [
+          Object {
+            "marginBottom": -20,
+          }
+        }
+      >
+        <View>
+          <RCTSwitch
+            accessibilityRole="switch"
+            onChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onTintColor="#34C759"
+            style={
+              Array [
+                Object {
+                  "height": 31,
+                  "width": 51,
+                },
+                Array [
                   Object {
-                    "scaleX": 0.6,
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6,
+                      },
+                      Object {
+                        "scaleY": 0.6,
+                      },
+                    ],
                   },
                   Object {
-                    "scaleY": 0.6,
+                    "backgroundColor": "#F2F2F2",
+                    "borderRadius": 16,
                   },
                 ],
-              },
-              Object {
-                "backgroundColor": "#F2F2F2",
-                "borderRadius": 16,
-              },
-            ],
-          ]
-        }
-        thumbTintColor="#F2F2F2"
-        tintColor="#F2F2F2"
-        value={false}
-      />
+              ]
+            }
+            thumbTintColor="#F2F2F2"
+            tintColor="#F2F2F2"
+            value={false}
+          />
+        </View>
+      </View>
     </View>
     <View
       accessible={true}

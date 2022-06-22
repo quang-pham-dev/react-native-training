@@ -225,40 +225,42 @@ exports[`Login Form should render correctly 1`] = `
       >
         Remember me
       </Text>
-      <RCTSwitch
-        accessibilityRole="switch"
-        onChange={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        onTintColor="#34C759"
-        style={
-          Array [
-            Object {
-              "height": 31,
-              "width": 51,
-            },
+      <View>
+        <RCTSwitch
+          accessibilityRole="switch"
+          onChange={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onTintColor="#34C759"
+          style={
             Array [
               Object {
-                "transform": Array [
-                  Object {
-                    "scaleX": 0.6,
-                  },
-                  Object {
-                    "scaleY": 0.6,
-                  },
-                ],
+                "height": 31,
+                "width": 51,
               },
-              Object {
-                "backgroundColor": "#F2F2F2",
-                "borderRadius": 16,
-              },
-            ],
-          ]
-        }
-        thumbTintColor="#fff"
-        tintColor="#F2F2F2"
-        value={true}
-      />
+              Array [
+                Object {
+                  "transform": Array [
+                    Object {
+                      "scaleX": 0.6,
+                    },
+                    Object {
+                      "scaleY": 0.6,
+                    },
+                  ],
+                },
+                Object {
+                  "backgroundColor": "#F2F2F2",
+                  "borderRadius": 16,
+                },
+              ],
+            ]
+          }
+          thumbTintColor="#fff"
+          tintColor="#F2F2F2"
+          value={true}
+        />
+      </View>
     </View>
   </View>
   <View

@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.secondaryBackground,
     borderRadius: Metrics.borderRadius.roundedSmall
   },
+
   textOrder: {
     fontSize: Fonts.size.min,
     fontFamily: Fonts.fontFamily.Inter_500Medium,
@@ -91,12 +92,8 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
 
-  darkModeSwitch: {
-    marginBottom: -20,
-    transform:
-      Platform.OS === 'android'
-        ? [{ scaleX: 0.9 }, { scaleY: 0.9 }]
-        : [{ scaleX: 0.6 }, { scaleY: 0.6 }]
+  darkModeSwitchWrapper: {
+    marginBottom: -20
   },
 
   footer: {
