@@ -307,6 +307,51 @@ exports[`Product detail size should render correctly 1`] = `
           2XL
         </Text>
       </View>
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 60,
+            "justifyContent": "center",
+            "marginRight": 10,
+            "width": 60,
+          }
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#000",
+                "fontFamily": "Inter_500Medium",
+                "fontSize": 17,
+                "lineHeight": 16,
+                "textTransform": "none",
+              },
+              undefined,
+              Object {
+                "textAlign": "left",
+              },
+            ]
+          }
+        >
+          3XL
+        </Text>
+      </View>
     </View>
   </RCTScrollView>
 </View>

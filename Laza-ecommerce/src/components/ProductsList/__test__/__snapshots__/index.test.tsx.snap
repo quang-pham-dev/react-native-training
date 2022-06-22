@@ -21,34 +21,105 @@ exports[`Product Card List Component Should render correctly 1`] = `
     data={
       Array [
         Object {
-          "brandId": "1",
+          "brandId": "2",
           "comment": "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,adipisicing elit. Quisquam, quia.",
-          "description": "Nike is a multinaelichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "description": "Fila is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
           "id": "0",
           "imagesPreview": Array [
             Object {
               "id": "0",
-              "image": "https://images.unsplash.com/photo-1499852848443-3004d6dc4cfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+              "image": "https://images.unsplash.com/photo-1618212158973-5e36714e374b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
             },
             Object {
               "id": "1",
-              "image": "https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              "image": "https://images.unsplash.com/photo-1516826957135-700dedea698c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
             },
             Object {
               "id": "2",
-              "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+              "image": "https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
             },
             Object {
               "id": "3",
-              "image": "https://images.unsplash.com/photo-1518656306295-aa28b28b2504?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+              "image": "https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
             },
             Object {
               "id": "4",
-              "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+              "image": "https://images.unsplash.com/photo-1612462768418-d844d50931d2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928",
             },
             Object {
               "id": "5",
-              "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+              "image": "https://images.unsplash.com/photo-1613418035472-424391ded253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=898&q=80",
+            },
+          ],
+          "like": true,
+          "name": "Fila",
+          "price": 100,
+          "rating": "4.5",
+          "reviewers": Object {
+            "date": "13, Sep, 2020",
+            "id": "2",
+            "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            "name": "John Doe",
+          },
+          "sizes": Array [
+            Object {
+              "id": "0",
+              "size": "S",
+            },
+            Object {
+              "id": "1",
+              "size": "M",
+            },
+            Object {
+              "id": "2",
+              "size": "L",
+            },
+            Object {
+              "id": "3",
+              "size": "XL",
+            },
+            Object {
+              "id": "4",
+              "size": "2XL",
+            },
+            Object {
+              "id": "5",
+              "size": "3XL",
+            },
+          ],
+          "source": "https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
+          "title": "Fila Sportswear Club Fleece",
+          "type": "Cotton",
+        },
+        Object {
+          "brandId": "0",
+          "comment": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "1",
+          "imagesPreview": Array [
+            Object {
+              "id": "0",
+              "image": "https://images.unsplash.com/photo-1514651872441-3f794c1df249?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80",
+            },
+            Object {
+              "id": "1",
+              "image": "https://images.unsplash.com/photo-1619352915541-45a6ace41ce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+            },
+            Object {
+              "id": "2",
+              "image": "https://images.unsplash.com/photo-1496217590455-aa63a8350eea?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
+            },
+            Object {
+              "id": "3",
+              "image": "https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
+            },
+            Object {
+              "id": "4",
+              "image": "https://images.unsplash.com/photo-1525450754258-0f4cbd02718d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
+            },
+            Object {
+              "id": "5",
+              "image": "https://images.unsplash.com/photo-1604702770021-6e8fcc5f9a17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
             },
           ],
           "like": true,
@@ -63,62 +134,66 @@ exports[`Product Card List Component Should render correctly 1`] = `
           },
           "sizes": Array [
             Object {
-              "id": "1",
+              "id": "0",
               "size": "S",
             },
             Object {
-              "id": "2",
+              "id": "1",
               "size": "M",
             },
             Object {
-              "id": "3",
+              "id": "2",
               "size": "L",
             },
             Object {
-              "id": "4",
+              "id": "3",
               "size": "XL",
             },
             Object {
-              "id": "5",
+              "id": "4",
               "size": "2XL",
             },
+            Object {
+              "id": "5",
+              "size": "3XL",
+            },
           ],
-          "source": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+          "source": "https://images.unsplash.com/photo-1611824204322-24963b44d68b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           "title": "Nike Sportswear Club Fleece",
           "type": "shoes",
         },
         Object {
-          "brandId": "1",
-          "comment": "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,adipisicing elit. Quisquam, quia.",
-          "description": "Nike is a multinaelichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
-          "id": "0",
+          "brandId": "0",
+          "comment": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "2",
           "imagesPreview": Array [
             Object {
               "id": "0",
-              "image": "https://images.unsplash.com/photo-1499852848443-3004d6dc4cfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+              "image": "https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
             },
             Object {
               "id": "1",
-              "image": "https://images.unsplash.com/photo-1618898909019-010e4e234c55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+              "image": "https://images.unsplash.com/photo-1509551388413-e18d0ac5d495?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
             },
             Object {
               "id": "2",
-              "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+              "image": "https://images.unsplash.com/photo-1612874470096-d93a610de87b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
             },
             Object {
               "id": "3",
-              "image": "https://images.unsplash.com/photo-1518656306295-aa28b28b2504?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+              "image": "https://images.unsplash.com/photo-1549062573-edc78a53ffa6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
             },
             Object {
               "id": "4",
-              "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+              "image": "https://images.unsplash.com/photo-1616723355545-95f2f2abb4d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
             },
             Object {
               "id": "5",
-              "image": "https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470",
+              "image": "https://images.unsplash.com/photo-1623421536280-fa8ae906ed1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
             },
           ],
-          "like": true,
+          "like": false,
           "name": "Nike",
           "price": 100,
           "rating": "4.5",
@@ -130,29 +205,459 @@ exports[`Product Card List Component Should render correctly 1`] = `
           },
           "sizes": Array [
             Object {
-              "id": "1",
+              "id": "0",
               "size": "S",
             },
             Object {
-              "id": "2",
+              "id": "1",
               "size": "M",
             },
             Object {
-              "id": "3",
+              "id": "2",
               "size": "L",
             },
             Object {
-              "id": "4",
+              "id": "3",
               "size": "XL",
             },
             Object {
-              "id": "5",
+              "id": "4",
               "size": "2XL",
             },
+            Object {
+              "id": "5",
+              "size": "3XL",
+            },
           ],
-          "source": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+          "source": "https://images.unsplash.com/photo-1611558709798-e009c8fd7706?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=782",
           "title": "Nike Sportswear Club Fleece",
           "type": "shoes",
+        },
+        Object {
+          "brandId": "3",
+          "comment": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "3",
+          "imagesPreview": Array [
+            Object {
+              "id": "0",
+              "image": "https://images.unsplash.com/photo-1542596594-649edbc13630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+            },
+            Object {
+              "id": "1",
+              "image": "https://images.unsplash.com/photo-1618149103302-fd4c48df88c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+            },
+            Object {
+              "id": "2",
+              "image": "https://images.unsplash.com/photo-1495385794356-15371f348c31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=670&q=80",
+            },
+            Object {
+              "id": "3",
+              "image": "https://images.unsplash.com/photo-1596636222220-dfb7071e3676?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+            },
+            Object {
+              "id": "4",
+              "image": "https://images.unsplash.com/photo-1524087689795-d449b477c4dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=836&q=80",
+            },
+            Object {
+              "id": "5",
+              "image": "https://images.unsplash.com/photo-1618149103489-0e1210d6128a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80",
+            },
+          ],
+          "like": false,
+          "name": "Puma",
+          "price": 100,
+          "rating": "4.0",
+          "reviewers": Object {
+            "date": "13, Sep, 2020",
+            "id": "2",
+            "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            "name": "John Doe",
+          },
+          "sizes": Array [
+            Object {
+              "id": "0",
+              "size": "S",
+            },
+            Object {
+              "id": "1",
+              "size": "M",
+            },
+            Object {
+              "id": "2",
+              "size": "L",
+            },
+            Object {
+              "id": "3",
+              "size": "XL",
+            },
+            Object {
+              "id": "4",
+              "size": "2XL",
+            },
+            Object {
+              "id": "5",
+              "size": "3XL",
+            },
+          ],
+          "source": "https://images.unsplash.com/photo-1612722432474-b971cdcea546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+          "title": "Adidas Sportswear Fleece",
+          "type": "shoes",
+        },
+        Object {
+          "brandId": "4",
+          "comment": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "description": "Gucci is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "4",
+          "imagesPreview": Array [
+            Object {
+              "id": "0",
+              "image": "https://cf.shopee.sg/file/d067b18bb1cf30a577a9d378b76b7963",
+            },
+            Object {
+              "id": "1",
+              "image": "https://cf.shopee.sg/file/70d1388b4699ec424da50c411fdf7ed7",
+            },
+            Object {
+              "id": "2",
+              "image": "https://cf.shopee.sg/file/510bb3e391efec4204f953be9da1c4f2",
+            },
+            Object {
+              "id": "3",
+              "image": "https://cf.shopee.sg/file/1c24d853b59ee51129b57ed5d155abb9",
+            },
+            Object {
+              "id": "4",
+              "image": "https://cf.shopee.sg/file/47afd42b91f190cd362d39bd4e07976f",
+            },
+            Object {
+              "id": "5",
+              "image": "https://cf.shopee.sg/file/d067b18bb1cf30a577a9d378b76b7963",
+            },
+          ],
+          "like": false,
+          "name": "Gucci",
+          "price": 100,
+          "rating": "4.5",
+          "reviewers": Object {
+            "date": "13, Sep, 2021",
+            "id": "2",
+            "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            "name": "John Doe",
+          },
+          "sizes": Array [
+            Object {
+              "id": "0",
+              "size": "S",
+            },
+            Object {
+              "id": "1",
+              "size": "M",
+            },
+            Object {
+              "id": "2",
+              "size": "L",
+            },
+            Object {
+              "id": "3",
+              "size": "XL",
+            },
+            Object {
+              "id": "4",
+              "size": "2XL",
+            },
+            Object {
+              "id": "5",
+              "size": "3XL",
+            },
+          ],
+          "source": "https://cf.shopee.sg/file/0a96a3f84dc488099d74e8107742b6e9",
+          "title": "Gucci Sportswear Club Fleece",
+          "type": "Veston Man",
+        },
+        Object {
+          "brandId": "4",
+          "comment": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "5",
+          "imagesPreview": Array [
+            Object {
+              "id": "0",
+              "image": "https://images.unsplash.com/photo-1621184455862-c163dfb30e0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+            },
+            Object {
+              "id": "1",
+              "image": "https://images.unsplash.com/photo-1523260578934-e9318da58c8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+            },
+            Object {
+              "id": "2",
+              "image": "https://images.unsplash.com/photo-1608234808654-2a8875faa7fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=902&q=80",
+            },
+            Object {
+              "id": "3",
+              "image": "https://images.unsplash.com/photo-1603344797033-f0f4f587ab60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+            },
+            Object {
+              "id": "4",
+              "image": "https://images.unsplash.com/photo-1521402966881-852a3b2551fc?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
+            },
+            Object {
+              "id": "5",
+              "image": "https://images.unsplash.com/photo-1613967210245-25e2e65d73b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+            },
+          ],
+          "like": true,
+          "name": "Gucci",
+          "price": 100,
+          "rating": "4.5",
+          "reviewers": Object {
+            "date": "13, Sep, 2020",
+            "id": "2",
+            "image": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            "name": "John Doe",
+          },
+          "sizes": Array [
+            Object {
+              "id": "0",
+              "size": "S",
+            },
+            Object {
+              "id": "1",
+              "size": "M",
+            },
+            Object {
+              "id": "2",
+              "size": "L",
+            },
+            Object {
+              "id": "3",
+              "size": "XL",
+            },
+            Object {
+              "id": "4",
+              "size": "2XL",
+            },
+            Object {
+              "id": "5",
+              "size": "3XL",
+            },
+          ],
+          "source": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=708&q=80",
+          "title": "Fila Sportswear Club Fleece",
+          "type": "shoes",
+        },
+        Object {
+          "brandId": "5",
+          "comment": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "6",
+          "imagesPreview": Array [
+            Object {
+              "id": "0",
+              "image": "https://cf.shopee.vn/file/b73ac2f8043bdbd104e01f5a5ab8a607",
+            },
+            Object {
+              "id": "1",
+              "image": "https://cf.shopee.vn/file/6b15b68a613e7d19dd985cf4aed06b22",
+            },
+            Object {
+              "id": "2",
+              "image": "https://cf.shopee.vn/file/d7021e60aab5ff493a29fab89015a133",
+            },
+            Object {
+              "id": "3",
+              "image": "https://cf.shopee.vn/file/146576718a8bdfa24a35cc4c11bebab5",
+            },
+            Object {
+              "id": "4",
+              "image": "https://cf.shopee.vn/file/a61be12b71b136f7fcd694b1001d1a32",
+            },
+            Object {
+              "id": "5",
+              "image": "https://cf.shopee.vn/file/1c8eb5a85c73a0e34742124a4b5f1719",
+            },
+          ],
+          "like": false,
+          "name": "Puma",
+          "price": 100,
+          "rating": "4.5",
+          "reviewers": Object {
+            "date": "13, Sep, 2020",
+            "id": "2",
+            "image": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
+            "name": "John Doe",
+          },
+          "sizes": Array [
+            Object {
+              "id": "0",
+              "size": "S",
+            },
+            Object {
+              "id": "1",
+              "size": "M",
+            },
+            Object {
+              "id": "2",
+              "size": "L",
+            },
+            Object {
+              "id": "3",
+              "size": "XL",
+            },
+            Object {
+              "id": "4",
+              "size": "2XL",
+            },
+            Object {
+              "id": "5",
+              "size": "3XL",
+            },
+          ],
+          "source": "https://cf.shopee.vn/file/4d29fe1b7c914aa25feca4c6f6612a54",
+          "title": "Puma Unisex AMOUR Sneakers",
+          "type": "Unisex AMOUR",
+        },
+        Object {
+          "brandId": "4",
+          "comment": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "description": "Guci is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "7",
+          "imagesPreview": Array [
+            Object {
+              "id": "0",
+              "image": "https://cf.shopee.vn/file/ea2a2954f2941f94aa6f5e87ec3562b7",
+            },
+            Object {
+              "id": "1",
+              "image": "https://cf.shopee.vn/file/7bd43ed6c15b13e5b5cb2dedad91ebe6",
+            },
+            Object {
+              "id": "2",
+              "image": "https://cf.shopee.vn/file/2cecd0e3faaf6a21d0e31b7cbf15e08d",
+            },
+            Object {
+              "id": "3",
+              "image": "https://cf.shopee.vn/file/768ff74d28aaa06f3ba694ecf3dc6d13",
+            },
+            Object {
+              "id": "4",
+              "image": "https://cf.shopee.vn/file/57300974b0d3b14f90ab78f877bcb244",
+            },
+            Object {
+              "id": "5",
+              "image": "https://cf.shopee.vn/file/a8496a64cf6506726d2aa509223237e6",
+            },
+          ],
+          "like": false,
+          "name": "Guci",
+          "price": 100,
+          "rating": "4.5",
+          "reviewers": Object {
+            "date": "13, Sep, 2020",
+            "id": "2",
+            "image": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
+            "name": "John Doe",
+          },
+          "sizes": Array [
+            Object {
+              "id": "0",
+              "size": "S",
+            },
+            Object {
+              "id": "1",
+              "size": "M",
+            },
+            Object {
+              "id": "2",
+              "size": "L",
+            },
+            Object {
+              "id": "3",
+              "size": "XL",
+            },
+            Object {
+              "id": "4",
+              "size": "2XL",
+            },
+            Object {
+              "id": "5",
+              "size": "3XL",
+            },
+          ],
+          "source": "https://cf.shopee.vn/file/93a89076e2c97e74f9bf0fbe401b4e97",
+          "title": "Jean  Body Close",
+          "type": "Jean Close",
+        },
+        Object {
+          "brandId": "1",
+          "comment": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "description": "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
+          "id": "9",
+          "imagesPreview": Array [
+            Object {
+              "id": "0",
+              "image": "https://cf.shopee.vn/file/594942fd13ccef2379723095b3c05881",
+            },
+            Object {
+              "id": "1",
+              "image": "https://cf.shopee.vn/file/ce8ae00b1115e863d563c71f9b10d504_tn",
+            },
+            Object {
+              "id": "2",
+              "image": "https://cf.shopee.vn/file/2872b73041df76c226e2e07e7897dc96_tn",
+            },
+            Object {
+              "id": "3",
+              "image": "https://cf.shopee.vn/file/491a1399831eaedfd5b32a5f59292c0d_tn",
+            },
+            Object {
+              "id": "4",
+              "image": "https://cf.shopee.vn/file/6b2f220a7d6150d5c55e7934fe0405d2_tn",
+            },
+            Object {
+              "id": "5",
+              "image": "https://cf.shopee.vn/file/594942fd13ccef2379723095b3c05881",
+            },
+          ],
+          "like": true,
+          "name": "Nike",
+          "price": 180,
+          "rating": "4.5",
+          "reviewers": Object {
+            "date": "13, Sep, 2022",
+            "id": "2",
+            "image": "https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imw'id'th=1400",
+            "name": "John Doe",
+          },
+          "sizes": Array [
+            Object {
+              "id": "0",
+              "size": "S",
+            },
+            Object {
+              "id": "1",
+              "size": "M",
+            },
+            Object {
+              "id": "2",
+              "size": "L",
+            },
+            Object {
+              "id": "3",
+              "size": "XL",
+            },
+            Object {
+              "id": "4",
+              "size": "2XL",
+            },
+            Object {
+              "id": "5",
+              "size": "3XL",
+            },
+          ],
+          "source": "https://cf.shopee.vn/file/594942fd13ccef2379723095b3c05881",
+          "title": "Nike air max 97 golf shoes",
+          "type": "Sport shoes",
         },
       ]
     }
@@ -215,10 +720,10 @@ exports[`Product Card List Component Should render correctly 1`] = `
             style={
               Array [
                 Object {
-                  "width": 165,
+                  "backgroundColor": "#fff",
                 },
                 Object {
-                  "marginBottom": 15,
+                  "paddingBottom": 15,
                 },
               ]
             }
@@ -227,10 +732,8 @@ exports[`Product Card List Component Should render correctly 1`] = `
             <View
               style={
                 Object {
-                  "backgroundColor": "#F5F6FA",
                   "borderRadius": 15,
                   "overflow": "hidden",
-                  "width": "100%",
                 }
               }
             >
@@ -239,16 +742,16 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 style={
                   Object {
                     "alignItems": "flex-end",
-                    "height": 203,
+                    "height": 200,
                     "resizeMode": "contain",
-                    "width": "100%",
+                    "width": 170,
                   }
                 }
               >
                 <Image
                   source={
                     Object {
-                      "uri": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                      "uri": "https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
                     }
                   }
                   style={
@@ -261,8 +764,312 @@ exports[`Product Card List Component Should render correctly 1`] = `
                         "top": 0,
                       },
                       Object {
-                        "height": 203,
-                        "width": "100%",
+                        "height": 200,
+                        "width": 170,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 15,
+                      "marginRight": 14,
+                      "marginTop": 17,
+                      "resizeMode": "contain",
+                      "width": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginTop": 5,
+                }
+              }
+            >
+              Fila Sportswear Club Fleece
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginBottom": 5,
+                }
+              }
+            >
+              Cotton
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_600SemiBold",
+                  "fontSize": 13,
+                  "marginTop": 5,
+                }
+              }
+            >
+              $ 100
+               
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                },
+                Object {
+                  "paddingBottom": 15,
+                },
+              ]
+            }
+            testID="productCard"
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 15,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "height": 200,
+                    "resizeMode": "contain",
+                    "width": 170,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://images.unsplash.com/photo-1611824204322-24963b44d68b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 200,
+                        "width": 170,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 15,
+                      "marginRight": 14,
+                      "marginTop": 17,
+                      "resizeMode": "contain",
+                      "width": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginTop": 5,
+                }
+              }
+            >
+              Nike Sportswear Club Fleece
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginBottom": 5,
+                }
+              }
+            >
+              shoes
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_600SemiBold",
+                  "fontSize": 13,
+                  "marginTop": 5,
+                }
+              }
+            >
+              $ 100
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                },
+                Object {
+                  "paddingBottom": 15,
+                },
+              ]
+            }
+            testID="productCard"
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 15,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "height": 200,
+                    "resizeMode": "contain",
+                    "width": 170,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://images.unsplash.com/photo-1611558709798-e009c8fd7706?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=782",
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 200,
+                        "width": 170,
                       },
                       undefined,
                     ]
@@ -359,10 +1166,10 @@ exports[`Product Card List Component Should render correctly 1`] = `
             style={
               Array [
                 Object {
-                  "width": 165,
+                  "backgroundColor": "#fff",
                 },
                 Object {
-                  "marginBottom": 15,
+                  "paddingBottom": 15,
                 },
               ]
             }
@@ -371,10 +1178,8 @@ exports[`Product Card List Component Should render correctly 1`] = `
             <View
               style={
                 Object {
-                  "backgroundColor": "#F5F6FA",
                   "borderRadius": 15,
                   "overflow": "hidden",
-                  "width": "100%",
                 }
               }
             >
@@ -383,16 +1188,16 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 style={
                   Object {
                     "alignItems": "flex-end",
-                    "height": 203,
+                    "height": 200,
                     "resizeMode": "contain",
-                    "width": "100%",
+                    "width": 170,
                   }
                 }
               >
                 <Image
                   source={
                     Object {
-                      "uri": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+                      "uri": "https://images.unsplash.com/photo-1612722432474-b971cdcea546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
                     }
                   }
                   style={
@@ -405,8 +1210,8 @@ exports[`Product Card List Component Should render correctly 1`] = `
                         "top": 0,
                       },
                       Object {
-                        "height": 203,
-                        "width": "100%",
+                        "height": 200,
+                        "width": 170,
                       },
                       undefined,
                     ]
@@ -459,7 +1264,7 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               }
             >
-              Nike Sportswear Club Fleece
+              Adidas Sportswear Fleece
             </Text>
             <Text
               style={
@@ -484,6 +1289,776 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               $ 100
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                },
+                Object {
+                  "paddingBottom": 15,
+                },
+              ]
+            }
+            testID="productCard"
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 15,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "height": 200,
+                    "resizeMode": "contain",
+                    "width": 170,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://cf.shopee.sg/file/0a96a3f84dc488099d74e8107742b6e9",
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 200,
+                        "width": 170,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 15,
+                      "marginRight": 14,
+                      "marginTop": 17,
+                      "resizeMode": "contain",
+                      "width": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginTop": 5,
+                }
+              }
+            >
+              Gucci Sportswear Club Fleece
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginBottom": 5,
+                }
+              }
+            >
+              Veston Man
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_600SemiBold",
+                  "fontSize": 13,
+                  "marginTop": 5,
+                }
+              }
+            >
+              $ 100
+               
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                },
+                Object {
+                  "paddingBottom": 15,
+                },
+              ]
+            }
+            testID="productCard"
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 15,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "height": 200,
+                    "resizeMode": "contain",
+                    "width": 170,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=708&q=80",
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 200,
+                        "width": 170,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 15,
+                      "marginRight": 14,
+                      "marginTop": 17,
+                      "resizeMode": "contain",
+                      "width": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginTop": 5,
+                }
+              }
+            >
+              Fila Sportswear Club Fleece
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginBottom": 5,
+                }
+              }
+            >
+              shoes
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_600SemiBold",
+                  "fontSize": 13,
+                  "marginTop": 5,
+                }
+              }
+            >
+              $ 100
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                },
+                Object {
+                  "paddingBottom": 15,
+                },
+              ]
+            }
+            testID="productCard"
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 15,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "height": 200,
+                    "resizeMode": "contain",
+                    "width": 170,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://cf.shopee.vn/file/4d29fe1b7c914aa25feca4c6f6612a54",
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 200,
+                        "width": 170,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 15,
+                      "marginRight": 14,
+                      "marginTop": 17,
+                      "resizeMode": "contain",
+                      "width": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginTop": 5,
+                }
+              }
+            >
+              Puma Unisex AMOUR Sneakers
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginBottom": 5,
+                }
+              }
+            >
+              Unisex AMOUR
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_600SemiBold",
+                  "fontSize": 13,
+                  "marginTop": 5,
+                }
+              }
+            >
+              $ 100
+               
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                },
+                Object {
+                  "paddingBottom": 15,
+                },
+              ]
+            }
+            testID="productCard"
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 15,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "height": 200,
+                    "resizeMode": "contain",
+                    "width": 170,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://cf.shopee.vn/file/93a89076e2c97e74f9bf0fbe401b4e97",
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 200,
+                        "width": 170,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 15,
+                      "marginRight": 14,
+                      "marginTop": 17,
+                      "resizeMode": "contain",
+                      "width": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginTop": 5,
+                }
+              }
+            >
+              Jean  Body Close
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginBottom": 5,
+                }
+              }
+            >
+              Jean Close
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_600SemiBold",
+                  "fontSize": 13,
+                  "marginTop": 5,
+                }
+              }
+            >
+              $ 100
+               
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                },
+                Object {
+                  "paddingBottom": 15,
+                },
+              ]
+            }
+            testID="productCard"
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 15,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                accessibilityIgnoresInvertColors={true}
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "height": 200,
+                    "resizeMode": "contain",
+                    "width": 170,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "uri": "https://cf.shopee.vn/file/594942fd13ccef2379723095b3c05881",
+                    }
+                  }
+                  style={
+                    Array [
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      },
+                      Object {
+                        "height": 200,
+                        "width": 170,
+                      },
+                      undefined,
+                    ]
+                  }
+                />
+              </View>
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                    "zIndex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={1}
+                  style={
+                    Object {
+                      "height": 15,
+                      "marginRight": 14,
+                      "marginTop": 17,
+                      "resizeMode": "contain",
+                      "width": 16,
+                    }
+                  }
+                />
+              </View>
+            </View>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginTop": 5,
+                }
+              }
+            >
+              Nike air max 97 golf shoes
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_500Medium",
+                  "fontSize": 11,
+                  "marginBottom": 5,
+                }
+              }
+            >
+              Sport shoes
+            </Text>
+            <Text
+              style={
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter_600SemiBold",
+                  "fontSize": 13,
+                  "marginTop": 5,
+                }
+              }
+            >
+              $ 180
                
             </Text>
           </View>

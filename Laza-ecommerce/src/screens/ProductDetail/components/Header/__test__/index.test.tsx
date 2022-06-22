@@ -27,7 +27,7 @@ describe('Product detail Header', () => {
   });
 
   test('should call function handlePressBack', () => {
-    const backButton = tree.root.findAllByType(Button)[0];
+    const backButton = tree.root.findAllByType(Button.type)[0];
     backButton.props.onPress();
 
     expect(props.navigation.goBack).toHaveBeenCalled();

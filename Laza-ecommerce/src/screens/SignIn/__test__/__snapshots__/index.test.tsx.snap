@@ -133,6 +133,19 @@ exports[`SignIn Screen should render correctly 1`] = `
               }
             />
           </RNCSafeAreaView>
+          <RNCSafeAreaView>
+            <ActivityIndicator
+              animating={true}
+              color="#FFC107"
+              hidesWhenStopped={true}
+              size="small"
+              style={
+                Object {
+                  "margin": 13,
+                }
+              }
+            />
+          </RNCSafeAreaView>
         </View>
       </View>
     </View>

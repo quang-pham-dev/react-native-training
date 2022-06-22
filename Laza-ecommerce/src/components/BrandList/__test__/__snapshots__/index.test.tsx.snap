@@ -11,28 +11,28 @@ exports[`Brand Card List Component Should render correctly 1`] = `
       Array [
         Object {
           "id": "0",
-          "logoUrl": "https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png",
-          "name": "Adidas",
-        },
-        Object {
-          "id": "1",
-          "logoUrl": "https://www.nike.com/images/t_PDP_1280_v1/b_white/f_auto/j_pdp_white/k_P/w_80/0f0f0f/0f0f0f_nike_logo_white.png",
+          "logoUrl": "https://toppng.com/uploads/preview/ike-logo-png-hd-nike-logo-png-image-free-download-nike-logo-sv-11562865034fkhqkcoas6.png",
           "name": "Nike",
         },
         Object {
+          "id": "1",
+          "logoUrl": "https://www.pikpng.com/pngl/m/42-429866_adidas-logo-png-images-free-download-rh-pngimg.png",
+          "name": "Adidas",
+        },
+        Object {
           "id": "2",
-          "logoUrl": "https://www.fila.com/on/demandware.static/-/Sites-fila-US-Library/default/dwf9f9f9f/images/logo.png",
+          "logoUrl": "https://toppng.com/uploads/preview/fila-logo-vector-download-free-11574216707jcmvfu58fy.png",
           "name": "Fila",
         },
         Object {
           "id": "3",
-          "logoUrl": "https://www.puma.com/on/demandware.static/-/Sites-puma-US-Library/default/dwf9f9f9f/images/logo.png",
+          "logoUrl": "https://banner2.cleanpng.com/20180613/gsj/kisspng-tracksuit-puma-logo-brand-clothing-puma-logo-5b20dc6b232426.487874081528880235144.jpg",
           "name": "Puma",
         },
         Object {
           "id": "4",
-          "logoUrl": "https://www.gucci.com/on/demandware.static/-/Sites-gucci-US-Library/default/dwf9f9f9f/images/logo.png",
-          "name": "Guci",
+          "logoUrl": "https://esquilo.io/png/thumb/XBwczcMncYeff65-Vector-Gucci-Logo-PNG-Free-Download.png",
+          "name": "Gucci",
         },
       ]
     }
@@ -122,102 +122,7 @@ exports[`Brand Card List Component Should render correctly 1`] = `
               <Image
                 source={
                   Object {
-                    "uri": "https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png",
-                  }
-                }
-                style={
-                  Object {
-                    "height": "100%",
-                    "resizeMode": "contain",
-                    "width": "100%",
-                  }
-                }
-              />
-            </View>
-            <Text
-              style={
-                Array [
-                  Object {
-                    "color": "#000",
-                    "fontFamily": "Inter_500Medium",
-                    "fontSize": 17,
-                    "lineHeight": 16,
-                    "textTransform": "none",
-                  },
-                  undefined,
-                  Object {
-                    "textAlign": "left",
-                  },
-                ]
-              }
-            >
-              Adidas
-            </Text>
-          </View>
-        </View>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={
-          Array [
-            Object {
-              "flexDirection": "row",
-            },
-            null,
-          ]
-        }
-      >
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "justifyContent": "center",
-              "opacity": 1,
-            }
-          }
-          testID="brandCard"
-        >
-          <View
-            style={
-              Array [
-                Object {
-                  "alignItems": "center",
-                  "backgroundColor": "#F5F6FA",
-                  "borderRadius": 10,
-                  "flexDirection": "row",
-                  "height": 50,
-                  "marginRight": 10,
-                  "paddingRight": 10,
-                },
-              ]
-            }
-          >
-            <View
-              style={
-                Object {
-                  "backgroundColor": "#fff",
-                  "borderRadius": 10,
-                  "height": 40,
-                  "marginLeft": 5,
-                  "marginRight": 10,
-                  "marginVertical": 5,
-                  "padding": 8,
-                  "width": 40,
-                }
-              }
-            >
-              <Image
-                source={
-                  Object {
-                    "uri": "https://www.nike.com/images/t_PDP_1280_v1/b_white/f_auto/j_pdp_white/k_P/w_80/0f0f0f/0f0f0f_nike_logo_white.png",
+                    "uri": "https://toppng.com/uploads/preview/ike-logo-png-hd-nike-logo-png-image-free-download-nike-logo-sv-11562865034fkhqkcoas6.png",
                   }
                 }
                 style={
@@ -312,7 +217,102 @@ exports[`Brand Card List Component Should render correctly 1`] = `
               <Image
                 source={
                   Object {
-                    "uri": "https://www.fila.com/on/demandware.static/-/Sites-fila-US-Library/default/dwf9f9f9f/images/logo.png",
+                    "uri": "https://www.pikpng.com/pngl/m/42-429866_adidas-logo-png-images-free-download-rh-pngimg.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  }
+                }
+              />
+            </View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#000",
+                    "fontFamily": "Inter_500Medium",
+                    "fontSize": 17,
+                    "lineHeight": 16,
+                    "textTransform": "none",
+                  },
+                  undefined,
+                  Object {
+                    "textAlign": "left",
+                  },
+                ]
+              }
+            >
+              Adidas
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID="brandCard"
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#F5F6FA",
+                  "borderRadius": 10,
+                  "flexDirection": "row",
+                  "height": 50,
+                  "marginRight": 10,
+                  "paddingRight": 10,
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "backgroundColor": "#fff",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "padding": 8,
+                  "width": 40,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://toppng.com/uploads/preview/fila-logo-vector-download-free-11574216707jcmvfu58fy.png",
                   }
                 }
                 style={
@@ -407,7 +407,7 @@ exports[`Brand Card List Component Should render correctly 1`] = `
               <Image
                 source={
                   Object {
-                    "uri": "https://www.puma.com/on/demandware.static/-/Sites-puma-US-Library/default/dwf9f9f9f/images/logo.png",
+                    "uri": "https://banner2.cleanpng.com/20180613/gsj/kisspng-tracksuit-puma-logo-brand-clothing-puma-logo-5b20dc6b232426.487874081528880235144.jpg",
                   }
                 }
                 style={
@@ -502,7 +502,7 @@ exports[`Brand Card List Component Should render correctly 1`] = `
               <Image
                 source={
                   Object {
-                    "uri": "https://www.gucci.com/on/demandware.static/-/Sites-gucci-US-Library/default/dwf9f9f9f/images/logo.png",
+                    "uri": "https://esquilo.io/png/thumb/XBwczcMncYeff65-Vector-Gucci-Logo-PNG-Free-Download.png",
                   }
                 }
                 style={
@@ -531,7 +531,7 @@ exports[`Brand Card List Component Should render correctly 1`] = `
                 ]
               }
             >
-              Guci
+              Gucci
             </Text>
           </View>
         </View>

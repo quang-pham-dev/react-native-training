@@ -77,8 +77,8 @@ describe('GetStarted Screen', () => {
 
   test('should handle back button', () => {
     const tree = renderer.create(<GetStartedScreen navigation={navigationMock} />);
-    const Pressabled = tree.root.findAllByType(Button)[0];
-    Pressabled.props.onPress();
+    const backButton = tree.root.findAllByType(Button.type)[0];
+    backButton.props.onPress();
     expect(navigationMock.goBack).toHaveBeenCalled();
   });
 });

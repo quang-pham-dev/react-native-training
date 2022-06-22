@@ -51,7 +51,7 @@ exports[`Brand Card Component Should render correctly 1`] = `
       <Image
         source={
           Object {
-            "uri": "https://www.adidas.com/on/demandware.static/-/Sites-adidas-US-Library/default/dwf9f9f9f/images/logo.png",
+            "uri": "https://toppng.com/uploads/preview/ike-logo-png-hd-nike-logo-png-image-free-download-nike-logo-sv-11562865034fkhqkcoas6.png",
           }
         }
         style={
@@ -80,7 +80,7 @@ exports[`Brand Card Component Should render correctly 1`] = `
         ]
       }
     >
-      Adidas
+      Nike
     </Text>
   </View>
 </View>

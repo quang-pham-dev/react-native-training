@@ -25,8 +25,8 @@ describe('Header Component', () => {
   });
 
   test('should call function handleToggleMenu', () => {
-    const Pressabled = tree.root.findAllByType(Button)[0];
-    Pressabled.props.onPress();
+    const ButtonPress = tree.root.findAllByType(Button.type)[0];
+    ButtonPress.props.onPress();
     expect(props.navigation.dispatch).toHaveBeenCalled();
   });
 });
