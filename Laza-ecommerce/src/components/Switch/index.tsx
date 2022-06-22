@@ -1,19 +1,14 @@
 import React, { useCallback } from 'react';
 import { View, Switch as RNSwitch } from 'react-native';
+
+// Themes
 import Colors from 'themes/Colors';
+
+// Types
+import { ISwitchProps } from 'types/components/Switch';
 
 // Styles
 import styles from './styles';
-
-interface ISwitchProps {
-  type?: 'android' | 'ios';
-
-  value?: boolean;
-
-  disable?: boolean;
-
-  onToggle?: (newValue: boolean) => void;
-}
 
 const Switch = ({ onToggle, value = true }: ISwitchProps) => {
   const [isEnabled, setIsEnabled] = React.useState(value);
