@@ -1,8 +1,11 @@
-import React, { memo, useCallback } from 'react';
-import { Image, Pressable, View } from 'react-native';
+import React, { useCallback } from 'react';
+import { View } from 'react-native';
 
 // LIBS
 import { DrawerActions } from '@react-navigation/native';
+
+// Components
+import Button from 'components/Button';
 
 // Types
 import { IHeaderProps } from 'types/screens/Layout';
@@ -12,7 +15,6 @@ import IMAGES from 'themes/Images';
 
 // Styles
 import styles from './styles';
-import Button from 'components/Button';
 
 const Header = ({ navigation }: IHeaderProps) => {
   // Toggle menu open
@@ -28,4 +30,4 @@ const Header = ({ navigation }: IHeaderProps) => {
   );
 };
 
-export default memo(Header);
+export default Header;

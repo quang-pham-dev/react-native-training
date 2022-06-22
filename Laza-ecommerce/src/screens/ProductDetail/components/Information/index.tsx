@@ -1,9 +1,6 @@
 import React, { memo } from 'react';
 import { View, Text } from 'react-native';
 
-// LIBS
-import isEqual from 'react-fast-compare';
-
 //Types
 import { IProductDetailItemProps } from 'types/screens/ProductDetail';
 
@@ -30,4 +27,4 @@ const Information = ({ title, type, price }: IProductDetailItemProps) => {
   );
 };
 
-export default memo(Information, isEqual);
+export default memo(Information);

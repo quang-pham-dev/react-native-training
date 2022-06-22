@@ -1,8 +1,7 @@
-import React, { memo, useState } from 'react';
+import React, { useState } from 'react';
 import { Pressable, Switch, Text, View } from 'react-native';
 
 // LIB
-import isEqual from 'react-fast-compare';
 import { useForm, Controller, SubmitHandler } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup/dist/yup';
@@ -159,4 +158,4 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
   );
 };
 
-export default memo(LoginForm, isEqual);
+export default LoginForm;

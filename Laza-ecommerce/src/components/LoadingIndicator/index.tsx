@@ -1,8 +1,6 @@
 import React, { memo } from 'react';
 import { ActivityIndicator } from 'react-native';
 
-// LIBS
-import isEqual from 'react-fast-compare';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 // Types
@@ -20,4 +18,4 @@ const LoadingIndicator = ({ size, color = Colors.secondaryColor }: ILoadingIndic
   </SafeAreaView>
 );
 
-export default memo(LoadingIndicator, isEqual);
+export default LoadingIndicator;

@@ -1,8 +1,5 @@
-import React, { memo, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { ImageBackground, View } from 'react-native';
-
-// LIBS
-import isEqual from 'react-fast-compare';
 
 // Components
 import Button from 'components/Button';
@@ -38,4 +35,4 @@ const Header = ({ source, navigation }: IProductDetailHeaderProps) => {
   );
 };
 
-export default memo(Header, isEqual);
+export default Header;

@@ -1,8 +1,5 @@
-import React, { memo, useCallback } from 'react';
-import { Image, ImageBackground, Pressable, View } from 'react-native';
-
-// LIBS
-import isEqual from 'react-fast-compare';
+import React, { useCallback } from 'react';
+import { Image, View } from 'react-native';
 
 // Components
 import Button from 'components/Button';
@@ -14,8 +11,10 @@ import IMAGES from 'themes/Images';
 import styles from './styles';
 
 type HeaderProps = {
-  navigation: any;
-  logoUrl: any;
+  navigation: {
+    goBack: () => void;
+  };
+  logoUrl: string;
 };
 
 const Header = ({ logoUrl, navigation }: HeaderProps) => {
@@ -35,4 +34,4 @@ const Header = ({ logoUrl, navigation }: HeaderProps) => {
   );
 };
 
-export default memo(Header, isEqual);
+export default Header;
