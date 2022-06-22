@@ -9,13 +9,15 @@ const styles = StyleSheet.create({
   },
 
   productCard: {
-    marginBottom: Metrics.margin.xm
+    paddingBottom: Metrics.margin.xm
   },
+
   columnWrapper: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center'
   },
+
   listFooter: {
     justifyContent: 'center',
     alignItems: 'center',
