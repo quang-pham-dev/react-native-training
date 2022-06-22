@@ -1,8 +1,9 @@
 import React, { memo, useCallback } from 'react';
-import { Pressable, Text, TextInput, View } from 'react-native';
+import { Pressable, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 // LIBS
 import isEqual from 'react-fast-compare';
+import { Feather } from '@expo/vector-icons';
 
 // Types
 import { ITextInputProps } from 'types/components/TextInput';
@@ -10,19 +11,23 @@ import { ITextInputProps } from 'types/components/TextInput';
 // Styles
 import styles from './styles';
 
+// Themes
+import Colors from 'themes/Colors';
+
 const Input = ({
   label,
   labelStyle,
   value,
   placeholder,
   textInputStyles,
-  secureTextEntry,
-  icon,
+  iconRight,
+  type = 'text',
   onChangeText,
   onBlur,
   onSubmitEditing
 }: ITextInputProps) => {
   const [valueState, setValueState] = React.useState(value);
+  const [showPassword, togglePassword] = React.useState(false);
 
   const handleTextChange = useCallback(
     (text: string) => {
@@ -43,9 +48,20 @@ const Input = ({
           onSubmitEditing={onSubmitEditing}
           placeholder={placeholder}
           style={[styles.input, textInputStyles]}
-          secureTextEntry={secureTextEntry}
+          secureTextEntry={type === 'password' && !showPassword}
         />
-        <Pressable style={[styles.icon]}>{icon}</Pressable>
+        {type === 'password' &&
+          (!showPassword ? (
+            <TouchableOpacity onPress={() => togglePassword(true)} style={[styles.iconRight]}>
+              <Feather name={'eye-off'} size={20} color={Colors.textGray} />
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity onPress={() => togglePassword(false)} style={[styles.iconRight]}>
+              <Feather name={'eye'} size={20} color={Colors.textGray} />
+            </TouchableOpacity>
+          ))}
+
+        {iconRight && <TouchableOpacity style={[styles.iconRight]}>{iconRight}</TouchableOpacity>}
       </View>
     </View>
   );

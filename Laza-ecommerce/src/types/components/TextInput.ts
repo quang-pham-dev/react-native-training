@@ -4,13 +4,12 @@ export interface ITextInputProps {
   testID?: string;
   value: string;
   label?: string;
+  type?: 'text' | 'number' | 'password';
   labelStyle?: StyleProp<TextStyle>;
   autoFocus?: boolean;
   placeholder?: string;
   textInputStyles?: StyleProp<ViewStyle>;
-  secureTextEntry?: boolean;
-  icon?: JSX.IntrinsicAttributes;
-  iconPosition?: 'left' | 'right';
+  iconRight?: JSX.IntrinsicAttributes;
   onBlur?: () => void;
   onChangeText: (value: string) => void | undefined;
   onSubmitEditing?: () => void;

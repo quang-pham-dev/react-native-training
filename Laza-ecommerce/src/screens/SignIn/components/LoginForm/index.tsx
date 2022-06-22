@@ -39,11 +39,7 @@ interface ILoginFormProps {
 const LoginForm = ({ onSubmit }: ILoginFormProps) => {
   const [isEnabled, setIsEnabled] = useState(true);
 
-  const [showPassword, setShowPassword] = useState(true);
-
   const toggleSwitch = (): void => setIsEnabled(previousState => !previousState);
-
-  const handleShowPassword = (): void => setShowPassword(previousState => !previousState);
 
   const {
     control,
@@ -72,12 +68,11 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
             <TextInput
               onChangeText={(value: string) => onChange(value)}
               value={value}
-              textInputStyles={styles.input}
               label='Username'
-              labelStyle={styles.inputTitle}
               placeholder='Enter your username'
               testID='usernameInput'
-              icon={<Feather name='user' size={20} color={Colors.textGray} />}
+              type='text'
+              iconRight={<Feather name='user' size={20} color={Colors.textGray} right />}
             />
           )}
           name='username'
@@ -98,21 +93,10 @@ const LoginForm = ({ onSubmit }: ILoginFormProps) => {
             <TextInput
               onChangeText={(value: string) => onChange(value)}
               value={value}
-              textInputStyles={styles.input}
               label='Password'
-              labelStyle={styles.inputTitle}
-              secureTextEntry={showPassword}
               placeholder='Enter your password'
               testID='passwordInput'
-              icon={
-                <Pressable onPress={handleShowPassword}>
-                  <Feather
-                    name={showPassword ? 'eye-off' : 'eye'}
-                    size={20}
-                    color={Colors.textGray}
-                  />
-                </Pressable>
-              }
+              type='password'
             />
           )}
           name='password'

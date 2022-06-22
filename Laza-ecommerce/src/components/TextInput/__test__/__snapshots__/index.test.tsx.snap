@@ -11,7 +11,10 @@ exports[`TextInput Component should render correctly 1`] = `
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
         "justifyContent": "center",
+        "width": "100%",
       }
     }
   >
@@ -26,9 +29,12 @@ exports[`TextInput Component should render correctly 1`] = `
       style={
         Array [
           Object {
+            "borderBottomColor": "#E7E8EA",
+            "borderBottomWidth": 1,
             "fontFamily": "Inter_500Medium",
             "fontSize": 15,
             "lineHeight": 16,
+            "paddingRight": 25,
             "paddingVertical": 15,
             "width": "100%",
           },
@@ -37,29 +43,6 @@ exports[`TextInput Component should render correctly 1`] = `
       }
       underlineColorAndroid="transparent"
       value="user name"
-    />
-    <View
-      accessible={true}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
-          Object {
-            "position": "absolute",
-            "right": 0,
-            "width": 20,
-          },
-        ]
-      }
     />
   </View>
 </View>
@@ -76,7 +59,10 @@ exports[`TextInput Component should render placeholder 1`] = `
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
         "justifyContent": "center",
+        "width": "100%",
       }
     }
   >
@@ -91,9 +77,12 @@ exports[`TextInput Component should render placeholder 1`] = `
       style={
         Array [
           Object {
+            "borderBottomColor": "#E7E8EA",
+            "borderBottomWidth": 1,
             "fontFamily": "Inter_500Medium",
             "fontSize": 15,
             "lineHeight": 16,
+            "paddingRight": 25,
             "paddingVertical": 15,
             "width": "100%",
           },
@@ -102,29 +91,6 @@ exports[`TextInput Component should render placeholder 1`] = `
       }
       underlineColorAndroid="transparent"
       value="user name"
-    />
-    <View
-      accessible={true}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
-          Object {
-            "position": "absolute",
-            "right": 0,
-            "width": 20,
-          },
-        ]
-      }
     />
   </View>
 </View>
@@ -147,6 +113,7 @@ exports[`TextInput Component should render with label correctly 1`] = `
           "fontFamily": "Inter_400Regular",
           "fontSize": 13,
           "lineHeight": 14,
+          "marginTop": 20,
         },
         Object {},
       ]
@@ -157,7 +124,10 @@ exports[`TextInput Component should render with label correctly 1`] = `
   <View
     style={
       Object {
+        "alignItems": "center",
+        "flexDirection": "row",
         "justifyContent": "center",
+        "width": "100%",
       }
     }
   >
@@ -172,9 +142,12 @@ exports[`TextInput Component should render with label correctly 1`] = `
       style={
         Array [
           Object {
+            "borderBottomColor": "#E7E8EA",
+            "borderBottomWidth": 1,
             "fontFamily": "Inter_500Medium",
             "fontSize": 15,
             "lineHeight": 16,
+            "paddingRight": 25,
             "paddingVertical": 15,
             "width": "100%",
           },
@@ -183,29 +156,6 @@ exports[`TextInput Component should render with label correctly 1`] = `
       }
       underlineColorAndroid="transparent"
       value="user name"
-    />
-    <View
-      accessible={true}
-      collapsable={false}
-      focusable={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
-      style={
-        Array [
-          Object {
-            "position": "absolute",
-            "right": 0,
-            "width": 20,
-          },
-        ]
-      }
     />
   </View>
 </View>

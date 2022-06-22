@@ -9,16 +9,21 @@ const styles = StyleSheet.create({
   inputContainer: {
     width: '100%'
   },
+
   label: {
     alignSelf: 'flex-start',
     fontSize: Fonts.size.small,
     lineHeight: Fonts.lineHeight.xs,
     fontFamily: Fonts.fontFamily.Inter_400Regular,
-    color: Colors.textGray
+    color: Colors.textGray,
+    marginTop: Metrics.margin.lg
   },
 
   inputWrapper: {
-    justifyContent: 'center'
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
   input: {
@@ -26,11 +31,13 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.fontFamily.Inter_500Medium,
     fontSize: Fonts.size.normal,
     lineHeight: Fonts.lineHeight.base,
-    paddingVertical: Metrics.padding.xm
+    paddingVertical: Metrics.padding.xm,
+    paddingRight: Metrics.padding.xl,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.borderGray
   },
 
-  icon: {
-    width: Metrics.icons.standard,
+  iconRight: {
     position: 'absolute',
     right: 0
   }

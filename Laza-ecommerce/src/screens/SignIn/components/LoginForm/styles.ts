@@ -17,17 +17,6 @@ export const styles = StyleSheet.create({
     paddingHorizontal: Metrics.padding.lg
   },
 
-  inputTitle: {
-    alignSelf: 'flex-start',
-    marginTop: Metrics.margin.lg
-  },
-  input: {
-    width: '100%',
-    paddingVertical: Metrics.padding.xm,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.borderGray
-  },
-
   errorMessage: {
     alignSelf: 'flex-start',
     fontSize: Fonts.size.small,
