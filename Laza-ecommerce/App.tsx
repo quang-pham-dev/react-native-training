@@ -7,6 +7,9 @@ import { connectToDevTools } from 'react-devtools-core';
 import 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+// Components
+import ErrorBoundary from 'components/ErrorBoundary';
+
 // Hooks
 import useFonts from 'hooks/useFonts';
 
@@ -48,8 +51,13 @@ export default function App() {
   return (
     <AuthContextProvider>
       <SafeAreaProvider>
-        <RootNavigator />
+        <ErrorBoundary>
+          <RootNavigator />
+        </ErrorBoundary>
       </SafeAreaProvider>
     </AuthContextProvider>
   );
 }
+
+// Storybooks
+// export { default } from './storybook';

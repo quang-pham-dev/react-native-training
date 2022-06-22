@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary Component should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "marginHorizontal": 30,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#000",
+            "fontFamily": "Inter_500Medium",
+            "fontSize": 17,
+            "lineHeight": 16,
+            "textTransform": "none",
+          },
+          Array [
+            Object {
+              "fontFamily": "Inter_600SemiBold",
+              "fontSize": 28,
+              "lineHeight": 30,
+            },
+            Object {
+              "color": "black",
+              "fontSize": 18,
+              "fontWeight": "bold",
+              "letterSpacing": 0.8,
+            },
+          ],
+          Object {
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Something went wrong!
+    </Text>
+  </View>
+</View>
+`;

@@ -20,3 +20,5 @@ export const ENDPOINTS = {
 
 // Auth Data key for local storage
 export const AUTH_DATA = '@AuthData';
+
+export const BOUNDARY_ERROR_MESSAGE = 'Something went wrong!';

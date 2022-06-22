@@ -6,7 +6,7 @@ import renderer from 'react-test-renderer';
 // Components
 import Switch from 'components/Switch';
 
-describe('Search Bar Component', () => {
+describe('Switch Component', () => {
   const tree = renderer.create(<Switch />);
   test('Should render correctly', () => {
     const component = tree.toJSON();
