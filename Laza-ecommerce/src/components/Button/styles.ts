@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
 
   socialButton: {
     width: '100%',
+    height: 50,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
