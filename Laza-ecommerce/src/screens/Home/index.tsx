@@ -21,9 +21,9 @@ import Title from 'components/Title';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { useAuthContext } from 'contexts/AuthContext';
-import { useProductContext } from 'contexts/ProductsContext';
-import { BrandsContext } from 'contexts/BrandsContext';
+import { useAuthContext } from 'contexts/auth/AuthContext';
+import { useProductContext } from 'contexts/products/ProductsContext';
+import { BrandsContext } from 'contexts/brands/BrandsContext';
 import {
   GET_PRODUCTS,
   GET_PRODUCTS_FAILED,
@@ -31,7 +31,7 @@ import {
   LOAD_MORE_PRODUCTS,
   LOAD_MORE_PRODUCTS_FAILED,
   LOAD_MORE_PRODUCTS_SUCCESS
-} from 'contexts/actions/products';
+} from 'contexts/products/actions/products';
 import {
   GET_BRANDS,
   GET_BRANDS_FAILED,
@@ -39,7 +39,7 @@ import {
   LOAD_MORE_BRANDS,
   LOAD_MORE_BRANDS_FAILED,
   LOAD_MORE_BRANDS_SUCCESS
-} from 'contexts/actions/brands';
+} from 'contexts/brands/actions/brands';
 
 // API
 import { productsService } from 'api/products';

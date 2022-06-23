@@ -5,7 +5,7 @@ import { FlatList, View } from 'react-native';
 import isEqual from 'react-fast-compare';
 
 // Context
-import { BrandsContext } from 'contexts/BrandsContext';
+import { BrandsContext } from 'contexts/brands/BrandsContext';
 
 // Components
 import BrandCard from 'components/BrandCard';

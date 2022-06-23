@@ -7,8 +7,8 @@ import Button from 'components/Button';
 import Title from 'components/Title';
 
 // Context
-import { useAuthContext } from 'contexts/AuthContext';
-import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'contexts/actions/auth';
+import { useAuthContext } from 'contexts/auth/AuthContext';
+import { SIGN_IN_SUCCESS, SIGN_IN_FAILED, SIGN_IN } from 'contexts/auth/actions/auth';
 
 // API
 import { authService } from 'api/auth';

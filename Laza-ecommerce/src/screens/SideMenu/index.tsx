@@ -16,8 +16,8 @@ import Switch from 'components/Switch';
 import DrawerItem from 'screens/SideMenu/components';
 
 // Context
-import { useAuthContext } from 'contexts/AuthContext';
-import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'contexts/actions/auth';
+import { useAuthContext } from 'contexts/auth/AuthContext';
+import { SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS } from 'contexts/auth/actions/auth';
 
 // API
 import { authService } from 'api/auth';

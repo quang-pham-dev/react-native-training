@@ -6,8 +6,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // Context
-import { ProductContextProvider } from 'contexts/ProductsContext';
-import { BrandsContextProvider } from 'contexts/BrandsContext';
+import { ProductContextProvider } from 'contexts/products/ProductsContext';
+import { BrandsContextProvider } from 'contexts/brands/BrandsContext';
 
 // Stack
 import BagsStack from './BagsStack';

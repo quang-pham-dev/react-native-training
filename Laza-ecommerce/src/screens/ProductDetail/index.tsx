@@ -15,8 +15,8 @@ import Reviews from './components/Reviews';
 import { productsService } from 'api/products';
 
 // Context
-import { useProductContext } from 'contexts/ProductsContext';
-import { GET_PRODUCT, GET_PRODUCT_FAILED, GET_PRODUCT_SUCCESS } from 'contexts/actions/products';
+import { useProductContext } from 'contexts/products/ProductsContext';
+import { GET_PRODUCT, GET_PRODUCT_FAILED, GET_PRODUCT_SUCCESS } from 'contexts/products/actions/products';
 
 // Types
 import { IProductDetailProps } from 'types/screens/ProductDetail';

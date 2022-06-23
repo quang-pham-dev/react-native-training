@@ -11,8 +11,8 @@ import LoadingIndicator from 'components/LoadingIndicator';
 import Header from './components/Header';
 
 // Context
-import { BrandsContext } from 'contexts/BrandsContext';
-import { useProductContext } from 'contexts/ProductsContext';
+import { BrandsContext } from 'contexts/brands/BrandsContext';
+import { useProductContext } from 'contexts/products/ProductsContext';
 import {
   GET_PRODUCTS_BY_BRAND_ID,
   GET_PRODUCTS_BY_BRAND_ID_FAILED,
@@ -20,7 +20,7 @@ import {
   LOAD_MORE_PRODUCTS_BY_BRAND_ID,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS
-} from 'contexts/actions/products';
+} from 'contexts/products/actions/products';
 
 // API
 import { productsService } from 'api/products';

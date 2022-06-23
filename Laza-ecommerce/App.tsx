@@ -19,7 +19,7 @@ import useFonts from 'hooks/useFonts';
 import RootNavigator from 'navigation/RootNavigator';
 
 // Context Provider
-import { AuthContextProvider } from 'contexts/AuthContext';
+import { AuthContextProvider } from 'contexts/auth/AuthContext';
 
 // Constants
 import { SENTRY_DSN } from 'constants/Common';

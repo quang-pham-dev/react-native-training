@@ -9,7 +9,7 @@ import {
   SIGN_OUT,
   SIGN_OUT_SUCCESS,
   RESET_STATE
-} from 'contexts/actions/auth';
+} from 'contexts/auth/actions/auth';
 
 // Types
 import { AuthAction } from 'types/contexts/actions/Auth';

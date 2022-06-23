@@ -1,10 +1,10 @@
 import React from 'react';
 
 // Reducer
-import productsReducer from 'contexts/reducers/products';
+import productsReducer from 'contexts/products/reducers/products';
 
 // State
-import { InitialProductsState } from 'contexts/reducers/products';
+import { InitialProductsState } from 'contexts/products/reducers/products';
 
 // Actions
 import {
@@ -25,7 +25,7 @@ import {
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
   SEARCH_PRODUCTS_VALUE
-} from 'contexts/actions/products';
+} from 'contexts/products/actions/products';
 
 // Mocks
 import { product, products } from '__mocks__/dataMock/products';

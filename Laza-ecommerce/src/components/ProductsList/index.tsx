@@ -10,7 +10,7 @@ import Title from 'components/Title';
 import LoadingIndicator from 'components/LoadingIndicator';
 
 // Context
-import { useProductContext } from 'contexts/ProductsContext';
+import { useProductContext } from 'contexts/products/ProductsContext';
 
 // Constants
 import { PRODUCTS_EMPTY_RESULT } from 'constants/Products';
