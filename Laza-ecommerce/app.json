@@ -31,6 +31,18 @@
     "extra": {
       "flipperHack": "React Native packager is running"
     },
-    "plugins": ["expo-community-flipper"]
+    "plugins": ["sentry-expo", "expo-community-flipper"],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "asnet-u7",
+            "project": "laza",
+            "authToken": "533123ce1f1b41a591e5ccf107ac006ec08e20d932584f1180039bfe539e8511"
+          }
+        }
+      ]
+    }
   }
 }

@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+
+// LIBS
+import * as Sentry from '@sentry/react-native';
 
 // Components
 import Title from 'components/Title';
 
+// Constants
+import { BOUNDARY_ERROR_MESSAGE } from 'constants/Common';
+
 // Styles
 import styles from './styles';
-import { BOUNDARY_ERROR_MESSAGE } from 'constants/Common';
 
 export default class ErrorBoundary extends Component {
   state = {
@@ -15,6 +20,7 @@ export default class ErrorBoundary extends Component {
   };
 
   static getDerivedStateFromError(error: any) {
+    Sentry.captureException(error);
     return { hasError: true, error };
   }
 

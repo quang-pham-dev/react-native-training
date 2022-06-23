@@ -22,3 +22,6 @@ export const ENDPOINTS = {
 export const AUTH_DATA = '@AuthData';
 
 export const BOUNDARY_ERROR_MESSAGE = 'Something went wrong!';
+
+export const SENTRY_DSN =
+  'https://30f74c15a1c54630a55c03e195d86cab@o1296237.ingest.sentry.io/6522749';

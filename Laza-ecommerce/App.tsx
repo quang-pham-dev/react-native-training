@@ -1,7 +1,9 @@
 import React from 'react';
+import { AppState } from 'react-native';
 
 // Debugging
 import { connectToDevTools } from 'react-devtools-core';
+import * as Sentry from 'sentry-expo';
 
 // LIBS
 import 'react-native-gesture-handler';
@@ -18,6 +20,16 @@ import RootNavigator from 'navigation/RootNavigator';
 
 // Context Provider
 import { AuthContextProvider } from 'contexts/AuthContext';
+
+// Constants
+import { SENTRY_DSN } from 'constants/Common';
+
+// Config following expo documentation
+Sentry.init({
+  dsn: SENTRY_DSN,
+  enableInExpoDevelopment: true,
+  debug: true // If `true`, Sentry will try to print out useful debugging information if something goes wrong with sending the event. Set it to `false` in production
+});
 
 if (__DEV__) {
   connectToDevTools({
