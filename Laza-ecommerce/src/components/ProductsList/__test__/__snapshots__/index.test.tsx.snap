@@ -795,7 +795,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               >
                 <Image
-                  source={1}
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                   style={
                     Object {
                       "height": 15,
@@ -937,7 +941,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               >
                 <Image
-                  source={1}
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                   style={
                     Object {
                       "height": 15,
@@ -1099,7 +1107,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               >
                 <Image
-                  source={1}
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                   style={
                     Object {
                       "height": 15,
@@ -1241,7 +1253,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               >
                 <Image
-                  source={1}
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                   style={
                     Object {
                       "height": 15,
@@ -1403,7 +1419,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               >
                 <Image
-                  source={1}
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                   style={
                     Object {
                       "height": 15,
@@ -1545,7 +1565,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               >
                 <Image
-                  source={1}
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                   style={
                     Object {
                       "height": 15,
@@ -1707,7 +1731,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               >
                 <Image
-                  source={1}
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                   style={
                     Object {
                       "height": 15,
@@ -1849,7 +1877,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               >
                 <Image
-                  source={1}
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                   style={
                     Object {
                       "height": 15,
@@ -2011,7 +2043,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
                 }
               >
                 <Image
-                  source={1}
+                  source={
+                    Object {
+                      "process": [Function],
+                    }
+                  }
                   style={
                     Object {
                       "height": 15,

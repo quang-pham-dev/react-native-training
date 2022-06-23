@@ -93,7 +93,11 @@ exports[`Button Component should render icon button correctly 1`] = `
   }
 >
   <Image
-    source={1}
+    source={
+      Object {
+        "process": [Function],
+      }
+    }
     style={Object {}}
   />
   <Text

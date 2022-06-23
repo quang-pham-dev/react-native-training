@@ -51,7 +51,11 @@ exports[`Search Bar Component Should render correctly 1`] = `
         }
       >
         <Image
-          source={1}
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={
             Object {
               "height": "100%",
@@ -100,7 +104,11 @@ exports[`Search Bar Component Should render correctly 1`] = `
       }
     >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={
           Object {
             "alignSelf": "center",

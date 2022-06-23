@@ -57,7 +57,11 @@ exports[`Home Screen Should renders correctly 1`] = `
           }
         >
           <Image
-            source={1}
+            source={
+              Object {
+                "process": [Function],
+              }
+            }
             style={Object {}}
           />
         </View>
@@ -80,7 +84,11 @@ exports[`Home Screen Should renders correctly 1`] = `
           }
         >
           <Image
-            source={1}
+            source={
+              Object {
+                "process": [Function],
+              }
+            }
             style={Object {}}
           />
         </View>
@@ -242,7 +250,11 @@ exports[`Home Screen Should renders correctly 1`] = `
               }
             >
               <Image
-                source={1}
+                source={
+                  Object {
+                    "process": [Function],
+                  }
+                }
                 style={
                   Object {
                     "height": "100%",
@@ -291,7 +303,11 @@ exports[`Home Screen Should renders correctly 1`] = `
             }
           >
             <Image
-              source={1}
+              source={
+                Object {
+                  "process": [Function],
+                }
+              }
               style={
                 Object {
                   "alignSelf": "center",

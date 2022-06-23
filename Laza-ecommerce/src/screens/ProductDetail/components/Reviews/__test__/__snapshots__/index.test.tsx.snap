@@ -155,7 +155,11 @@ exports[`Product detail reviewer review should render correctly 1`] = `
             }
           >
             <Image
-              source={1}
+              source={
+                Object {
+                  "process": [Function],
+                }
+              }
               style={
                 Object {
                   "height": 11,
@@ -221,7 +225,11 @@ exports[`Product detail reviewer review should render correctly 1`] = `
           </Text>
         </View>
         <Image
-          source={1}
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={
             Object {
               "height": 13,

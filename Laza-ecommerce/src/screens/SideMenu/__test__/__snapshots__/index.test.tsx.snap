@@ -42,7 +42,11 @@ exports[`Side menu should render correctly 1`] = `
         }
       >
         <Image
-          source={1}
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={Object {}}
         />
       </View>
@@ -137,7 +141,11 @@ exports[`Side menu should render correctly 1`] = `
               Verified Profile
             </Text>
             <Image
-              source={1}
+              source={
+                Object {
+                  "process": [Function],
+                }
+              }
               style={
                 Object {
                   "height": 15,
@@ -226,7 +234,11 @@ exports[`Side menu should render correctly 1`] = `
           }
         >
           <Image
-            source={1}
+            source={
+              Object {
+                "process": [Function],
+              }
+            }
             style={
               Object {
                 "height": 19,
@@ -321,7 +333,11 @@ exports[`Side menu should render correctly 1`] = `
         }
       >
         <Image
-          source={1}
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={
             Object {
               "height": 19,
@@ -371,7 +387,11 @@ exports[`Side menu should render correctly 1`] = `
         }
       >
         <Image
-          source={1}
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={
             Object {
               "height": 19,
@@ -421,7 +441,11 @@ exports[`Side menu should render correctly 1`] = `
         }
       >
         <Image
-          source={1}
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={
             Object {
               "height": 19,
@@ -471,7 +495,11 @@ exports[`Side menu should render correctly 1`] = `
         }
       >
         <Image
-          source={1}
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={
             Object {
               "height": 19,
@@ -530,7 +558,11 @@ exports[`Side menu should render correctly 1`] = `
         }
       >
         <Image
-          source={1}
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={
             Object {
               "height": 19,

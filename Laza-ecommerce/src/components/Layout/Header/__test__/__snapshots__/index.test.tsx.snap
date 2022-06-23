@@ -30,7 +30,11 @@ exports[`Header Component should render correctly 1`] = `
     }
   >
     <Image
-      source={1}
+      source={
+        Object {
+          "process": [Function],
+        }
+      }
       style={Object {}}
     />
   </View>
@@ -53,7 +57,11 @@ exports[`Header Component should render correctly 1`] = `
     }
   >
     <Image
-      source={1}
+      source={
+        Object {
+          "process": [Function],
+        }
+      }
       style={Object {}}
     />
   </View>

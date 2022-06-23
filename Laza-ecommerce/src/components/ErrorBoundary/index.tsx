@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 
 // LIBS
-import * as Sentry from '@sentry/react-native';
+// import * as Sentry from '@sentry/react-native';
+
 
 // Components
 import Title from 'components/Title';
@@ -20,7 +21,7 @@ export default class ErrorBoundary extends Component {
   };
 
   static getDerivedStateFromError(error: any) {
-    Sentry.captureException(error);
+    // Sentry.captureException(error);
     return { hasError: true, error };
   }
 

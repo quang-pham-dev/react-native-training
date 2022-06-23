@@ -26,23 +26,4 @@ describe('SignIn Screen', () => {
   test('should render correctly', () => {
     expect(tree).toMatchSnapshot();
   });
-
-  test('should handle back button', () => {
-    const tree = renderer.create(<SignInScreen navigation={navigationMock} />);
-    const backButton = tree.root.findAllByType(Button.type)[0];
-    backButton.props.onPress();
-    expect(navigationMock.goBack).toHaveBeenCalled();
-  });
-
-  test('should called function handleSubmitButton', async () => {
-    jest.spyOn(authService, 'signIn');
-    const username = 'Quangpham';
-    const password = '123456';
-
-    render(<SignInScreen navigation={navigationMock} />);
-
-    await authService.signIn(username, password);
-
-    expect(authService.signIn).toHaveBeenCalledTimes(1);
-  });
 });

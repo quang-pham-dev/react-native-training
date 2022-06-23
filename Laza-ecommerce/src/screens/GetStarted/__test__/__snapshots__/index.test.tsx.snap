@@ -43,7 +43,11 @@ exports[`GetStarted Screen should renders correctly 1`] = `
         }
       >
         <Image
-          source={1}
+          source={
+            Object {
+              "process": [Function],
+            }
+          }
           style={Object {}}
         />
       </View>
@@ -113,7 +117,11 @@ exports[`GetStarted Screen should renders correctly 1`] = `
       }
     >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={Object {}}
       />
       <Text
@@ -164,7 +172,11 @@ exports[`GetStarted Screen should renders correctly 1`] = `
       }
     >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={Object {}}
       />
       <Text
@@ -215,7 +227,11 @@ exports[`GetStarted Screen should renders correctly 1`] = `
       }
     >
       <Image
-        source={1}
+        source={
+          Object {
+            "process": [Function],
+          }
+        }
         style={Object {}}
       />
       <Text
