@@ -32,6 +32,8 @@ Sentry.init({
 });
 
 if (__DEV__) {
+  import('./ReactotronConfig.js');
+
   connectToDevTools({
     host: 'localhost',
     port: 8097
