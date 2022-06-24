@@ -1,5 +1,8 @@
 import React, { useCallback } from 'react';
-import { ImageBackground, View } from 'react-native';
+import { View } from 'react-native';
+
+// LIBS
+import FastImage from 'react-native-fast-image';
 
 // Components
 import Button from 'components/Button';
@@ -28,7 +31,16 @@ const Header = ({ source, navigation }: IProductDetailHeaderProps) => {
       {/* End action header */}
 
       <View style={styles.headerImageWrapper}>
-        {Boolean(source) && <ImageBackground style={styles.image} source={{ uri: source }} />}
+        {Boolean(source) && (
+          <FastImage
+            style={styles.image}
+            source={{
+              uri: source,
+              priority: FastImage.priority.normal
+            }}
+            resizeMode={FastImage.resizeMode.cover}
+          />
+        )}
       </View>
       {/* End Header block */}
     </View>
