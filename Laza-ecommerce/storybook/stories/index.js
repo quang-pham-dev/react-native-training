@@ -10,3 +10,4 @@ import 'components/SearchBar/index.stories';
 import 'components/Layout/Header/index.stories';
 import 'components/LessMoreText/index.stories';
 import 'components/Switch/index.stories';
+import 'screens/SideMenu/components/index.stories';

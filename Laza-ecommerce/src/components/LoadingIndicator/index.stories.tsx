@@ -5,5 +5,5 @@ import LoadingIndicator from './index';
 
 storiesOf('LoadingIndicator', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('large size', () => <LoadingIndicator size='large' />)
-  .add('small size', () => <LoadingIndicator size='small' />);
+  .add('Large size', () => <LoadingIndicator size='large' />)
+  .add('Small size', () => <LoadingIndicator size='small' />);
