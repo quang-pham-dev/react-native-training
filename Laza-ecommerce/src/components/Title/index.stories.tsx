@@ -5,10 +5,10 @@ import CenterView from '../../../storybook/stories/CenterView';
 
 storiesOf('Title', module)
   .addDecorator(getStory => <CenterView>{getStory()}</CenterView>)
-  .add('default', () => <Title titleName='title' />)
-  .add('headingPage', () => <Title.HeadingPage titleName='Welcome' />)
-  .add('subHeadingPage', () => (
+  .add('Default', () => <Title titleName='title' />)
+  .add('Heading Page', () => <Title.HeadingPage titleName='Welcome' />)
+  .add('Sub Heading Page', () => (
     <Title.subHeadingPage titleName='Please enter your data to continue' />
   ))
-  .add('titleLeftSection', () => <Title.titleLeftSection titleName='New Product' />)
-  .add('titleRightSection', () => <Title.titleRightSection titleName='View all' />);
+  .add('Title Left Section', () => <Title.titleLeftSection titleName='New Product' />)
+  .add('Title Right Section', () => <Title.titleRightSection titleName='View all' />);
