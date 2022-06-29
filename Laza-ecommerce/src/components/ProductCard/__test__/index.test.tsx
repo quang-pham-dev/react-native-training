@@ -3,6 +3,7 @@ import { ImageBackground, Pressable, Text } from 'react-native';
 
 // LIBS
 import renderer from 'react-test-renderer';
+import FastImage from 'react-native-fast-image';
 
 // Components
 import ProductCard from 'components/ProductCard';
@@ -27,7 +28,7 @@ describe('Product Card Component', () => {
   });
 
   test('Should render with ImageBackground', () => {
-    const image = tree.root.findAllByType(ImageBackground)[0];
+    const image = tree.root.findAllByType(FastImage)[0];
     expect(image.props.source.uri).toEqual(product.source);
   });
 

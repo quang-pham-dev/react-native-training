@@ -738,37 +738,36 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               <View
-                accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "height": 200,
-                    "resizeMode": "contain",
-                    "width": 170,
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "alignItems": "flex-end",
+                      "height": 200,
+                      "resizeMode": "contain",
+                      "width": 170,
+                    },
+                  ]
                 }
               >
-                <Image
+                <FastImageView
+                  resizeMode="cover"
                   source={
                     Object {
+                      "priority": "normal",
                       "uri": "https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
                     }
                   }
                   style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 200,
-                        "width": 170,
-                      },
-                      undefined,
-                    ]
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -884,37 +883,36 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               <View
-                accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "height": 200,
-                    "resizeMode": "contain",
-                    "width": 170,
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "alignItems": "flex-end",
+                      "height": 200,
+                      "resizeMode": "contain",
+                      "width": 170,
+                    },
+                  ]
                 }
               >
-                <Image
+                <FastImageView
+                  resizeMode="cover"
                   source={
                     Object {
+                      "priority": "normal",
                       "uri": "https://images.unsplash.com/photo-1611824204322-24963b44d68b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
                     }
                   }
                   style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 200,
-                        "width": 170,
-                      },
-                      undefined,
-                    ]
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1050,37 +1048,36 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               <View
-                accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "height": 200,
-                    "resizeMode": "contain",
-                    "width": 170,
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "alignItems": "flex-end",
+                      "height": 200,
+                      "resizeMode": "contain",
+                      "width": 170,
+                    },
+                  ]
                 }
               >
-                <Image
+                <FastImageView
+                  resizeMode="cover"
                   source={
                     Object {
+                      "priority": "normal",
                       "uri": "https://images.unsplash.com/photo-1611558709798-e009c8fd7706?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=782",
                     }
                   }
                   style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 200,
-                        "width": 170,
-                      },
-                      undefined,
-                    ]
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1196,37 +1193,36 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               <View
-                accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "height": 200,
-                    "resizeMode": "contain",
-                    "width": 170,
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "alignItems": "flex-end",
+                      "height": 200,
+                      "resizeMode": "contain",
+                      "width": 170,
+                    },
+                  ]
                 }
               >
-                <Image
+                <FastImageView
+                  resizeMode="cover"
                   source={
                     Object {
+                      "priority": "normal",
                       "uri": "https://images.unsplash.com/photo-1612722432474-b971cdcea546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
                     }
                   }
                   style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 200,
-                        "width": 170,
-                      },
-                      undefined,
-                    ]
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1362,37 +1358,36 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               <View
-                accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "height": 200,
-                    "resizeMode": "contain",
-                    "width": 170,
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "alignItems": "flex-end",
+                      "height": 200,
+                      "resizeMode": "contain",
+                      "width": 170,
+                    },
+                  ]
                 }
               >
-                <Image
+                <FastImageView
+                  resizeMode="cover"
                   source={
                     Object {
+                      "priority": "normal",
                       "uri": "https://cf.shopee.sg/file/0a96a3f84dc488099d74e8107742b6e9",
                     }
                   }
                   style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 200,
-                        "width": 170,
-                      },
-                      undefined,
-                    ]
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1508,37 +1503,36 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               <View
-                accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "height": 200,
-                    "resizeMode": "contain",
-                    "width": 170,
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "alignItems": "flex-end",
+                      "height": 200,
+                      "resizeMode": "contain",
+                      "width": 170,
+                    },
+                  ]
                 }
               >
-                <Image
+                <FastImageView
+                  resizeMode="cover"
                   source={
                     Object {
+                      "priority": "normal",
                       "uri": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=708&q=80",
                     }
                   }
                   style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 200,
-                        "width": 170,
-                      },
-                      undefined,
-                    ]
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1674,37 +1668,36 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               <View
-                accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "height": 200,
-                    "resizeMode": "contain",
-                    "width": 170,
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "alignItems": "flex-end",
+                      "height": 200,
+                      "resizeMode": "contain",
+                      "width": 170,
+                    },
+                  ]
                 }
               >
-                <Image
+                <FastImageView
+                  resizeMode="cover"
                   source={
                     Object {
+                      "priority": "normal",
                       "uri": "https://cf.shopee.vn/file/4d29fe1b7c914aa25feca4c6f6612a54",
                     }
                   }
                   style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 200,
-                        "width": 170,
-                      },
-                      undefined,
-                    ]
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1820,37 +1813,36 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               <View
-                accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "height": 200,
-                    "resizeMode": "contain",
-                    "width": 170,
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "alignItems": "flex-end",
+                      "height": 200,
+                      "resizeMode": "contain",
+                      "width": 170,
+                    },
+                  ]
                 }
               >
-                <Image
+                <FastImageView
+                  resizeMode="cover"
                   source={
                     Object {
+                      "priority": "normal",
                       "uri": "https://cf.shopee.vn/file/93a89076e2c97e74f9bf0fbe401b4e97",
                     }
                   }
                   style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 200,
-                        "width": 170,
-                      },
-                      undefined,
-                    ]
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>
@@ -1986,37 +1978,36 @@ exports[`Product Card List Component Should render correctly 1`] = `
               }
             >
               <View
-                accessibilityIgnoresInvertColors={true}
                 style={
-                  Object {
-                    "alignItems": "flex-end",
-                    "height": 200,
-                    "resizeMode": "contain",
-                    "width": 170,
-                  }
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "alignItems": "flex-end",
+                      "height": 200,
+                      "resizeMode": "contain",
+                      "width": 170,
+                    },
+                  ]
                 }
               >
-                <Image
+                <FastImageView
+                  resizeMode="cover"
                   source={
                     Object {
+                      "priority": "normal",
                       "uri": "https://cf.shopee.vn/file/594942fd13ccef2379723095b3c05881",
                     }
                   }
                   style={
-                    Array [
-                      Object {
-                        "bottom": 0,
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
-                      },
-                      Object {
-                        "height": 200,
-                        "width": 170,
-                      },
-                      undefined,
-                    ]
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
                   }
                 />
               </View>

@@ -89,36 +89,35 @@ exports[`Product detail Header should render correctly 1`] = `
     }
   >
     <View
-      accessibilityIgnoresInvertColors={true}
       style={
-        Object {
-          "height": "100%",
-          "resizeMode": "cover",
-          "width": "100%",
-        }
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "height": "100%",
+            "resizeMode": "cover",
+            "width": "100%",
+          },
+        ]
       }
     >
-      <Image
+      <FastImageView
+        resizeMode="cover"
         source={
           Object {
+            "priority": "normal",
             "uri": "https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
           }
         }
         style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "height": "100%",
-              "width": "100%",
-            },
-            undefined,
-          ]
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
         }
       />
     </View>

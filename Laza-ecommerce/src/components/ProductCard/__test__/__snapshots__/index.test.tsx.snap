@@ -33,37 +33,36 @@ exports[`Product Card Component Should render correctly 1`] = `
     }
   >
     <View
-      accessibilityIgnoresInvertColors={true}
       style={
-        Object {
-          "alignItems": "flex-end",
-          "height": 200,
-          "resizeMode": "contain",
-          "width": 170,
-        }
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "alignItems": "flex-end",
+            "height": 200,
+            "resizeMode": "contain",
+            "width": 170,
+          },
+        ]
       }
     >
-      <Image
+      <FastImageView
+        resizeMode="cover"
         source={
           Object {
+            "priority": "normal",
             "uri": "https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
           }
         }
         style={
-          Array [
-            Object {
-              "bottom": 0,
-              "left": 0,
-              "position": "absolute",
-              "right": 0,
-              "top": 0,
-            },
-            Object {
-              "height": 200,
-              "width": 170,
-            },
-            undefined,
-          ]
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          }
         }
       />
     </View>
