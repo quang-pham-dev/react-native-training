@@ -1,0 +1,16 @@
+{
+  "{src}/**/*.{js,jsx,ts,tsx}": [
+    "prettier --write",
+    "eslint --fix",
+    "git add"
+  ],
+  "*.{png,jpeg,jpg,gif,svg}": [
+    "imagemin-lint-staged",
+    "git add"
+  ],
+  "*.{js,jsx,ts,tsx}": [
+    "prettier --write",
+    "eslint --fix",
+    "git add"
+  ]
+}

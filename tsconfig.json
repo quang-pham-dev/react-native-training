@@ -1,0 +1,40 @@
+// prettier-ignore
+{
+    "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
+    "compilerOptions": {
+      /* Visit https://aka.ms/tsconfig.json to read more about this file */
+  
+      /* Completeness */
+      "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+      "baseUrl": "./src",
+      "paths": {
+        "@apis": ["apis"],
+        "@apis/*": ["apis/*"],
+        "@assets": ["assets"],
+        "@assets/*": ["assets/*"],
+        "@fonts": ["assets/fonts"],
+        "@fonts/*": ["assets/fonts/*"],
+        "@images": ["assets/images"],
+        "@images/*": ["assets/images/*"],
+        "@components": ["components"],
+        "@components/*": ["components/*"],
+        "@configs": ["configs"],
+        "@configs/*": ["configs/*"],
+        "@constants": ["constants"],
+        "@constants/*": ["constants/*"],
+        "@hooks": ["hooks"],
+        "@hooks/*": ["hooks/*"],
+        "@navigators": ["navigators"],
+        "@navigators/*": ["navigators/*"],
+        "@screens": ["screens"],
+        "@screens/*": ["screens/*"],
+        "@services": ["services"],
+        "@services/*": ["services/*"],
+        "@store": ["store"],
+        "@store/*": ["store/*"],
+        "@themes": ["themes"],
+        "@themes/*": ["themes/*"],
+      },
+      "types": ["react-native", "jest", "styled-components-react-native"]
+    }
+  }
