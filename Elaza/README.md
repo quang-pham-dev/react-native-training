@@ -23,10 +23,9 @@
 
 ## Technologies
 
-- Expo v44.0.0
-- React v17.0.1
-- React Native v0.64.3
-- Typescript v4.3.5
+- React v18.1.0
+- React Native v0.70.0
+- Typescript v4.8.2
 - Details: [Here][2]
 
   [2]: https://gitlab.asoft-python.com/quang.pham/react-training/-/blob/feature/react-native-practice-one/Laza-ecommerce/package.json
