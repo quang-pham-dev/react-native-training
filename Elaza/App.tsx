@@ -19,6 +19,7 @@ import {
 } from 'react-native-safe-area-context'
 
 import SplashScreen from 'react-native-splash-screen'
+import {ToggleStorybook} from './storybook/toggle-storybook'
 
 const App = () => {
   useEffect(() => {
@@ -26,14 +27,16 @@ const App = () => {
   }, [])
 
   return (
-    <GestureHandlerRootView>
-      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
-        <StatusBar barStyle="light-content" />
-        <ErrorBoundary errorMode={ErrorMode.ALWAYS}>
-          <AppNavigator />
-        </ErrorBoundary>
-      </SafeAreaProvider>
-    </GestureHandlerRootView>
+    <ToggleStorybook>
+      <GestureHandlerRootView>
+        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+          <StatusBar barStyle="light-content" />
+          <ErrorBoundary errorMode={ErrorMode.ALWAYS}>
+            <AppNavigator />
+          </ErrorBoundary>
+        </SafeAreaProvider>
+      </GestureHandlerRootView>
+    </ToggleStorybook>
   )
 }
 
