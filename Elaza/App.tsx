@@ -11,8 +11,13 @@
 import ErrorBoundary, {ErrorMode} from '@components/ErrorBoundary'
 import AppNavigator from '@navigators/AppNavigator'
 import React, {useEffect} from 'react'
-import {StatusBar} from 'react-native'
+import {Alert, StatusBar} from 'react-native'
 import {GestureHandlerRootView} from 'react-native-gesture-handler'
+import {
+  setJSExceptionHandler,
+  setNativeExceptionHandler,
+} from 'react-native-exception-handler'
+
 import {
   SafeAreaProvider,
   initialWindowMetrics,
@@ -20,6 +25,22 @@ import {
 
 import SplashScreen from 'react-native-splash-screen'
 import {ToggleStorybook} from './storybook/toggle-storybook'
+
+setJSExceptionHandler((error: Error, isFatal: boolean) => {
+  Alert.alert(
+    'Unexpected Error Occurred',
+    `
+        Error ${isFatal ? 'Fatal:' : ''} ${error.name} ${error.message}
+        `,
+    [{text: 'OK'}],
+  )
+})
+
+setNativeExceptionHandler((exceptionString: string) => {
+  Alert.alert('Unexpected Native Error Occurred', exceptionString, [
+    {text: 'OK'},
+  ])
+}, false)
 
 const App = () => {
   useEffect(() => {
