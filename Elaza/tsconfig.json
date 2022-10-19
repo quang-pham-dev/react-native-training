@@ -34,6 +34,8 @@
         "@store/*": ["store/*"],
         "@themes": ["themes"],
         "@themes/*": ["themes/*"],
+        "@types": ["types"],
+        "@types/*": ["types/*"],
       },
       "types": ["react-native", "jest", "styled-components-react-native"]
     }
