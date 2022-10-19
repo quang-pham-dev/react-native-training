@@ -1,0 +1,1 @@
+export const VERTICAL_SCALE_FACTOR = 0.4
