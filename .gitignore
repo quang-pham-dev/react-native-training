@@ -65,5 +65,7 @@ buck-out/
 # Environment Variables
 .env
 
+# Test husky.
+
 # Testing
 coverage/
