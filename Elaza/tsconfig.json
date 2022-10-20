@@ -18,6 +18,8 @@
         "@images/*": ["assets/images/*"],
         "@components": ["components"],
         "@components/*": ["components/*"],
+        "@contexts": ["contexts"],
+        "@contexts/*": ["contexts/*"],
         "@configs": ["configs"],
         "@configs/*": ["configs/*"],
         "@constants": ["constants"],

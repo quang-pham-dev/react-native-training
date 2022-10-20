@@ -10,6 +10,7 @@ module.exports = {
           '@fonts': './src/assets/fonts',
           '@images': './src/assets/images',
           '@components': './src/components',
+          '@contexts': './src/contexts',
           '@configs': './src/configs',
           '@constants': './src/constants',
           '@hooks': './src/hooks',
