@@ -23,7 +23,7 @@
     "test": "jest --passWithNoTests",
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",
-    "prepare": "husky install",
+    "prepare": "cd ../ && husky install ./Elaza/.husky",
     "lint-staged": "lint-staged",
     "pre-commit": ".husky/pre-commit",
     "postinstall": "patch-package"
