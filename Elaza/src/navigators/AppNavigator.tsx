@@ -1,6 +1,9 @@
+import React from 'react'
 import {NavigationContainer} from '@react-navigation/native'
 import {NativeStackNavigationProp} from '@react-navigation/native-stack'
-import React from 'react'
+
+// Themes
+import {NavigationTheme} from '@themes'
 
 export type NavigatorParamList = {
   // 🔥 Your screens go here
@@ -10,7 +13,7 @@ export type NavigatorParamList = {
 export type NavigationPropsType = NativeStackNavigationProp<NavigatorParamList>
 
 const AppNavigator = () => {
-  return <NavigationContainer children={undefined} />
+  return <NavigationContainer theme={NavigationTheme} children={undefined} />
 }
 
 export default AppNavigator
