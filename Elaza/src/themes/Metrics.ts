@@ -80,6 +80,33 @@ const Metrics = {
       lineHeight: 29,
     },
   },
+
+  paragraph: {
+    tiny: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.tiny,
+      lineHeight: Fonts.lineHeight.tiny,
+      fontFamily: Fonts.type.interRegular,
+    },
+    small: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.normal,
+      lineHeight: Fonts.lineHeight.tiny,
+      fontFamily: Fonts.type.interRegular,
+    },
+    medium: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.medium,
+      lineHeight: Fonts.lineHeight.md,
+      fontFamily: Fonts.type.interRegular,
+    },
+    larger: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.large,
+      lineHeight: Fonts.lineHeight.lg,
+      fontFamily: Fonts.type.interSemiBold,
+    },
+  },
 }
 
 export default Metrics

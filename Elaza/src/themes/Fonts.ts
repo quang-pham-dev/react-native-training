@@ -19,7 +19,7 @@ export const Fonts = {
     tiny: mvs(11, VERTICAL_SCALE_FACTOR),
     xxs: mvs(12, VERTICAL_SCALE_FACTOR),
     xs: mvs(14, VERTICAL_SCALE_FACTOR),
-    base: mvs(16, VERTICAL_SCALE_FACTOR),
+    md: mvs(16, VERTICAL_SCALE_FACTOR),
     sm: mvs(18, VERTICAL_SCALE_FACTOR),
     lg: mvs(22, VERTICAL_SCALE_FACTOR),
     xl: mvs(26, VERTICAL_SCALE_FACTOR),
