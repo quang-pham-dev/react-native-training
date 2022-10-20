@@ -1,3 +1,3 @@
-require('@components/Heading/Heading.stories.tsx')
-require('@components/Paragraph/Paragraph.stories.tsx')
-require('@components/View/View.stories.tsx')
+require('@components/Heading/Heading.story.tsx')
+require('@components/Paragraph/Paragraph.story.tsx')
+require('@components/View/View.story.tsx')
