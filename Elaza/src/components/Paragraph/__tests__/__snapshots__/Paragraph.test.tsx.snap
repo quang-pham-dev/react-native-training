@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph should render Paragraph Right correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 15,
+        "lineHeight": 16,
+        "textAlign": "right",
+      },
+    ]
+  }
+  type="medium"
+>
+  Paragraph
+</Text>
+`;
+
+exports[`Paragraph should render Paragraph center correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 15,
+        "lineHeight": 16,
+        "textAlign": "center",
+      },
+    ]
+  }
+  type="medium"
+>
+  Paragraph
+</Text>
+`;
+
+exports[`Paragraph should render Paragraph font family base correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 15,
+        "lineHeight": 16,
+        "textAlign": "left",
+      },
+    ]
+  }
+  type="medium"
+>
+  Paragraph
+</Text>
+`;
+
+exports[`Paragraph should render Paragraph font family bold correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-SemiBold",
+        "fontSize": 15,
+        "lineHeight": 16,
+        "textAlign": "left",
+      },
+    ]
+  }
+  type="medium"
+>
+  Paragraph
+</Text>
+`;
+
+exports[`Paragraph should render Paragraph font family medium correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-Medium",
+        "fontSize": 15,
+        "lineHeight": 16,
+        "textAlign": "left",
+      },
+    ]
+  }
+  type="medium"
+>
+  Paragraph
+</Text>
+`;
+
+exports[`Paragraph should render Paragraph normal with base text correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "textAlign": "left",
+      },
+    ]
+  }
+  type="base"
+>
+  Paragraph
+</Text>
+`;
+
+exports[`Paragraph should render Paragraph normal with large text correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-SemiBold",
+        "fontSize": 17,
+        "lineHeight": 22,
+        "textAlign": "left",
+      },
+    ]
+  }
+  type="larger"
+>
+  Paragraph
+</Text>
+`;
+
+exports[`Paragraph should render Paragraph normal with medium text correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 15,
+        "lineHeight": 16,
+        "textAlign": "left",
+      },
+    ]
+  }
+  type="medium"
+>
+  Paragraph
+</Text>
+`;
+
+exports[`Paragraph should render Paragraph normal with small text correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 13,
+        "lineHeight": 11,
+        "textAlign": "left",
+      },
+    ]
+  }
+  type="small"
+>
+  Paragraph
+</Text>
+`;
+
+exports[`Paragraph should render Paragraph normal with tiny text correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 11,
+        "lineHeight": 11,
+        "textAlign": "left",
+      },
+    ]
+  }
+  type="tiny"
+>
+  Paragraph
+</Text>
+`;

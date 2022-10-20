@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading should render Default type correctly 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 24,
+        "lineHeight": 22,
+        "textAlign": "center",
+      },
+    ]
+  }
+  type="h1"
+>
+  Sample h1
+</Text>
+`;
+
+exports[`Heading should render Default type with custom props 1`] = `
+<Text
+  style={
+    Array [
+      Object {
+        "color": "#1D1E20",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 24,
+        "lineHeight": 29,
+        "textAlign": "center",
+      },
+    ]
+  }
+  type="h2"
+>
+  Sample h2
+</Text>
+`;

@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flex should render Center correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render CenterHorizontal correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render CenterVertical correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render Default correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render FlexEnd correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "justifyContent": "flex-end",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render ItemsEnd correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "flex-end",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render ItemsStart correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "flex-start",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render Row correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render RowCenter correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render RowCenterHorizontal correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Flex should render Wrap correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      },
+    ]
+  }
+/>
+`;
