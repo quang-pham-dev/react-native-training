@@ -59,6 +59,7 @@
     "@storybook/react-native": "^5.3.25",
     "@storybook/react-native-server": "^5.3.23",
     "@testing-library/jest-native": "^5.0.0",
+    "@testing-library/react-native": "^11.3.0",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.69.6",
