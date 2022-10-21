@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon should render large icon correctly 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../src/assets/icons/back.webp",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "height": 120,
+        "width": 120,
+      },
+    ]
+  }
+  type="large"
+/>
+`;
+
+exports[`Icon should render medium icon correctly 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../src/assets/icons/back.webp",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "height": 58,
+        "width": 58,
+      },
+    ]
+  }
+  type="medium"
+/>
+`;
+
+exports[`Icon should render small icon correctly 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../src/assets/icons/back.webp",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "height": 24,
+        "width": 24,
+      },
+    ]
+  }
+  type="small"
+/>
+`;
+
+exports[`Icon should render tiny icon correctly 1`] = `
+<Image
+  source={
+    Object {
+      "testUri": "../../../src/assets/icons/back.webp",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "height": 10,
+        "width": 10,
+      },
+    ]
+  }
+  type="tiny"
+/>
+`;

@@ -68,6 +68,36 @@ const Metrics = {
     large: 20,
   },
 
+  rotate: {
+    left: 'rotate(0deg)',
+    right: 'rotate(180deg)',
+    top: 'rotate(90deg)',
+    bottom: 'rotate(270deg)',
+  },
+
+  icon: {
+    tiny: {
+      width: mvs(10, VERTICAL_SCALE_FACTOR),
+      height: mvs(10, VERTICAL_SCALE_FACTOR),
+    },
+    small: {
+      width: mvs(24, VERTICAL_SCALE_FACTOR),
+      height: mvs(24, VERTICAL_SCALE_FACTOR),
+    },
+    medium: {
+      width: mvs(58, VERTICAL_SCALE_FACTOR),
+      height: mvs(58, VERTICAL_SCALE_FACTOR),
+    },
+    large: {
+      width: mvs(120, VERTICAL_SCALE_FACTOR),
+      height: mvs(120, VERTICAL_SCALE_FACTOR),
+    },
+    base: {
+      width: mvs(20, VERTICAL_SCALE_FACTOR),
+      height: mvs(20, VERTICAL_SCALE_FACTOR),
+    },
+  },
+
   heading: {
     h1: {
       color: Colors.palette.black,
