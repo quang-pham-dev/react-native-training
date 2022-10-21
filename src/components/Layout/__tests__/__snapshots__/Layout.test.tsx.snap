@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render Base correctly correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#F5F6FA",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingHorizontal": 24,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter-Regular",
+          "fontSize": 24,
+          "lineHeight": 22,
+          "textAlign": "center",
+        },
+      ]
+    }
+    type="h1"
+  >
+    Lorem ipsum dolor sit a
+  </Text>
+</View>
+`;
+
+exports[`Layout should render Default correctly correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingHorizontal": 24,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter-Regular",
+          "fontSize": 24,
+          "lineHeight": 22,
+          "textAlign": "center",
+        },
+      ]
+    }
+    type="h1"
+  >
+    Lorem ipsum dolor sit a
+  </Text>
+</View>
+`;
+
+exports[`Layout should render PaddingBottom35 correctly correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#F5F6FA",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": 35,
+        "paddingHorizontal": 24,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter-Regular",
+          "fontSize": 24,
+          "lineHeight": 22,
+          "textAlign": "center",
+        },
+      ]
+    }
+    type="h1"
+  >
+    Lorem ipsum dolor sit a
+  </Text>
+</View>
+`;
+
+exports[`Layout should render PaddingBottom38 correctly correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#F5F6FA",
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "paddingBottom": 38,
+        "paddingHorizontal": 24,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter-Regular",
+          "fontSize": 24,
+          "lineHeight": 22,
+          "textAlign": "center",
+        },
+      ]
+    }
+    type="h1"
+  >
+    Lorem ipsum dolor sit a
+  </Text>
+</View>
+`;
