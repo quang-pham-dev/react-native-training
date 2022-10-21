@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image should render normal image correctly 1`] = `
+<Image
+  height={300}
+  style={
+    Array [
+      Object {
+        "height": 300,
+        "width": "100%",
+      },
+    ]
+  }
+/>
+`;
