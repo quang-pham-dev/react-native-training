@@ -13,10 +13,10 @@ const color = {...Colors}
 storiesOf('LoadingIndicator', module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
   .add('Small', () => {
-    const colorPick = select('color', Object.keys(color), 'whiteNavigation')
+    const colorPick = select('color', Object.keys(color), '#3D93F8')
     return (
       <Story>
-        <UseCase bgColor="#2a9fd8" text="Default">
+        <UseCase bgColor={Colors.palette.lightGray} text="Default">
           <LoadingIndicator
             size={select('size', typesOption, typesOption[0])}
             color={colorPick}
@@ -26,10 +26,10 @@ storiesOf('LoadingIndicator', module)
     )
   })
   .add('Large', () => {
-    const colorPick = select('color', Object.keys(color), 'red')
+    const colorPick = select('color', Object.keys(color), '#FF7043')
     return (
       <Story>
-        <UseCase bgColor="#2a9fd8" text="Large">
+        <UseCase bgColor={Colors.palette.lightGray} text="Large">
           <LoadingIndicator
             size={select('size', typesOption, typesOption[0])}
             color={colorPick}
