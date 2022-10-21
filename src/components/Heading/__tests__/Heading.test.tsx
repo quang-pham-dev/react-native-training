@@ -1,5 +1,5 @@
 import React from 'react'
-import {create} from 'react-test-renderer'
+import {render} from '@testing-library/react-native'
 
 import HeadingStyled from '../Heading.styles'
 
@@ -7,7 +7,7 @@ import {HEADING_TYPE} from '@constants/type'
 
 describe('Heading', () => {
   test('should render Default type correctly', () => {
-    const component = create(
+    const component = render(
       <HeadingStyled type={HEADING_TYPE.H1}>Sample h1</HeadingStyled>,
     )
     const tree = component.toJSON()
@@ -16,7 +16,7 @@ describe('Heading', () => {
   })
 
   test('should render Default type with custom props', () => {
-    const component = create(
+    const component = render(
       <HeadingStyled type={HEADING_TYPE.H2}>Sample h2</HeadingStyled>,
     )
     const tree = component.toJSON()
