@@ -2,12 +2,12 @@ import React from 'react'
 import {render} from '@testing-library/react-native'
 
 // Styled
-import {Image} from '../ImageStyled.styles'
+import {Image} from '../Image.styles'
 
 import {Images} from '@themes/Images'
 
 const props = {
-  source: Images.virtualCard,
+  source: Images.splash,
   height: 300,
 }
 

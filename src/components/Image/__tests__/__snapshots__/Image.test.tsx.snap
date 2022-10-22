@@ -3,6 +3,11 @@
 exports[`Image should render normal image correctly 1`] = `
 <Image
   height={300}
+  source={
+    Object {
+      "testUri": "../../../src/assets/images/splash.png",
+    }
+  }
   style={
     Array [
       Object {

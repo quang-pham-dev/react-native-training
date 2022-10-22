@@ -5,7 +5,7 @@ import {select} from '@storybook/addon-knobs'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
 
 // Styled
-import {Image} from './ImageStyled.styles'
+import {Image} from './Image.styles'
 
 // Themes
 import {Images} from '@themes/Images'
