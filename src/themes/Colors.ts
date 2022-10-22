@@ -17,6 +17,8 @@ export const palette = {
   google: '#EA4335',
 
   borderGray: '#E7E8EA',
+  emerald: '#34C759',
+  alto: '#D6D6D6',
 }
 
 export const Colors = {

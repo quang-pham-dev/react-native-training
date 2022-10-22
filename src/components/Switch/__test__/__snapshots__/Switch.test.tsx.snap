@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Component Should render correctly 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "rgba(52, 199, 89, 1)",
+      "borderRadius": 30,
+      "height": 18,
+      "width": 32,
+    }
+  }
+  testID={null}
+>
+  <View
+    collapsable={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "left": 8,
+        "width": 32,
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(255, 255, 255, 1)",
+          "borderColor": "rgba(100, 100, 100, 1)",
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "height": 16,
+          "justifyContent": "center",
+          "width": 16,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`Switch Component Should render correctly with custom props 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "rgba(52, 199, 89, 1)",
+      "borderRadius": 30,
+      "height": 18,
+      "width": 32,
+    }
+  }
+  testID={null}
+>
+  <View
+    collapsable={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "left": 8,
+        "width": 32,
+      }
+    }
+  >
+    <View
+      collapsable={false}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(255, 255, 255, 1)",
+          "borderColor": "rgba(100, 100, 100, 1)",
+          "borderRadius": 8,
+          "borderWidth": 0,
+          "height": 16,
+          "justifyContent": "center",
+          "width": 16,
+        }
+      }
+    />
+  </View>
+</View>
+`;
