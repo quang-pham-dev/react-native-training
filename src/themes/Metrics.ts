@@ -101,7 +101,7 @@ const Metrics = {
   heading: {
     h1: {
       color: Colors.palette.black,
-      fontSize: Fonts.size.xxl,
+      fontSize: Fonts.size.massive,
       lineHeight: Fonts.lineHeight.lg,
     },
     h2: {
@@ -135,6 +135,33 @@ const Metrics = {
       fontSize: Fonts.size.large,
       lineHeight: Fonts.lineHeight.lg,
       fontFamily: Fonts.type.interSemiBold,
+    },
+  },
+  button: {
+    bottom: {
+      width: 'auto',
+      height: mvs(75, VERTICAL_SCALE_FACTOR),
+      bgColor: Colors.palette.primary,
+      color: Colors.palette.white,
+      fontSize: Fonts.size.medium,
+      fontFamily: Fonts.type.interMedium,
+      borderColor: Colors.palette.transparent,
+      disableBgColor: Colors.palette.emerald,
+      disableColor: Colors.palette.white,
+      disableBorderColor: Colors.palette.transparent,
+    },
+    social: {
+      width: 'auto',
+      height: mvs(50, VERTICAL_SCALE_FACTOR),
+      borderRadius: mvs(20, VERTICAL_SCALE_FACTOR) / 2,
+      bgColor: Colors.palette.primary,
+      borderColor: Colors.palette.transparent,
+      color: Colors.palette.white,
+      fontSize: Fonts.size.medium,
+      fontFamily: Fonts.type.interSemiBold,
+      disableBgColor: Colors.palette.emerald,
+      disableColor: Colors.palette.white,
+      disableBorderColor: Colors.palette.transparent,
     },
   },
 }

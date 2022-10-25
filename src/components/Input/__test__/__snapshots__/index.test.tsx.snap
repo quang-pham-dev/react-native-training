@@ -1,0 +1,186 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput Component should render correctly 1`] = `
+<View
+  flex={1}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderBottomColor": "#E7E8EA",
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      keyboardType="default"
+      onBlur={[MockFunction]}
+      onChangeText={[Function]}
+      onSubmitEditing={[MockFunction]}
+      placeholder="Enter your user name"
+      secureTextEntry={true}
+      style={
+        Array [
+          Object {
+            "color": "#1D1E20",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "fontFamily": "Inter-Medium",
+            "fontSize": 15,
+            "lineHeight": 16,
+            "paddingLeft": 0,
+            "paddingRight": 5,
+            "paddingVertical": 15,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="user name"
+    />
+  </View>
+</View>
+`;
+
+exports[`TextInput Component should render placeholder 1`] = `
+<View
+  flex={1}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderBottomColor": "#E7E8EA",
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      keyboardType="default"
+      onBlur={[MockFunction]}
+      onChangeText={[Function]}
+      onSubmitEditing={[MockFunction]}
+      placeholder="Enter your username"
+      secureTextEntry={true}
+      style={
+        Array [
+          Object {
+            "color": "#1D1E20",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "fontFamily": "Inter-Medium",
+            "fontSize": 15,
+            "lineHeight": 16,
+            "paddingLeft": 0,
+            "paddingRight": 5,
+            "paddingVertical": 15,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="user name"
+    />
+  </View>
+</View>
+`;
+
+exports[`TextInput Component should render with label correctly 1`] = `
+<View
+  flex={1}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+    ]
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#8F959E",
+          "fontFamily": "Inter-Regular",
+          "fontSize": 13,
+          "lineHeight": 14,
+        },
+      ]
+    }
+  >
+    Username
+  </Text>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderBottomColor": "#E7E8EA",
+          "borderBottomWidth": 1,
+          "flexDirection": "row",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      keyboardType="default"
+      onBlur={[MockFunction]}
+      onChangeText={[Function]}
+      onSubmitEditing={[MockFunction]}
+      placeholder="Enter your user name"
+      secureTextEntry={true}
+      style={
+        Array [
+          Object {
+            "color": "#1D1E20",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "fontFamily": "Inter-Medium",
+            "fontSize": 15,
+            "lineHeight": 16,
+            "paddingLeft": 0,
+            "paddingRight": 5,
+            "paddingVertical": 15,
+          },
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="user name"
+    />
+  </View>
+</View>
+`;

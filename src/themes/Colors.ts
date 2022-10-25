@@ -27,4 +27,5 @@ export const Colors = {
   whiteNavigation: palette.white,
   error: palette.red,
   red: palette.red,
+  textBold: palette.black,
 }

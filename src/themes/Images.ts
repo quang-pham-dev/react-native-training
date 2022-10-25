@@ -23,6 +23,9 @@ const Icons = {
   walletDrawer: require('@assets/icons/wallet-drawer.webp'),
   clock: require('@assets/icons/clock.webp'),
   ratingStart: require('@assets/icons/start-rate.webp'),
+  filledProfile: require('@assets/icons/filledProfile.png'),
+  eyeFill: require('@assets/icons/eye-fill.png'),
+  eyeOff: require('@assets/icons/eye-off.png'),
 }
 
 // Images
