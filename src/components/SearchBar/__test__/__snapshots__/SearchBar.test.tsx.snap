@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Bar Component Should render correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F5F6FA",
+          "borderRadius": 10,
+          "flexBasis": 0,
+          "flexDirection": "row",
+          "flexGrow": 1,
+          "flexShrink": 1,
+          "height": 50,
+        },
+      ]
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginLeft": 10,
+          "opacity": 1,
+        }
+      }
+    >
+      <Image
+        height={20}
+        source={
+          Object {
+            "testUri": "../../../src/assets/icons/search.webp",
+          }
+        }
+        style={
+          Array [
+            Object {},
+          ]
+        }
+        width={20}
+      />
+    </View>
+    <TextInput
+      autoCorrect={false}
+      onChangeText={[Function]}
+      onSubmitEditing={[Function]}
+      placeholder="Search.."
+      style={
+        Array [
+          Object {
+            "backgroundColor": "'red'",
+            "flexBasis": 0,
+            "flexGrow": 1,
+            "flexShrink": 1,
+            "paddingLeft": 10,
+            "paddingRight": 20,
+          },
+        ]
+      }
+      value=""
+    />
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "marginLeft": 10,
+        "opacity": 1,
+      }
+    }
+  >
+    <Image
+      height={50}
+      source={
+        Object {
+          "testUri": "../../../src/assets/icons/voice.webp",
+        }
+      }
+      style={
+        Array [
+          Object {},
+        ]
+      }
+      width={50}
+    />
+  </View>
+</View>
+`;
