@@ -22,8 +22,6 @@ export const PARAGRAPH_TYPE = {
 }
 
 export const BUTTON_TYPE = {
-  CONFIRM: 'confirm',
-  CANCEL: 'cancel',
-  LINK: 'link',
-  SUBMIT: 'submit',
+  BOTTOM: 'bottom',
+  SOCIAL: 'social',
 }
