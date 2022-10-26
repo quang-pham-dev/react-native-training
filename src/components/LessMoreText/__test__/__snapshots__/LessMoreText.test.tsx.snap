@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Read more Component should render correctly 1`] = `
+<Text
+  onTextLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "color": "#8F959E",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 15,
+        "lineHeight": 21,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`Read more Component should render correctly with children 1`] = `
+<Text
+  onTextLayout={[Function]}
+  style={
+    Array [
+      Object {
+        "color": "#8F959E",
+        "fontFamily": "Inter-Regular",
+        "fontSize": 15,
+        "lineHeight": 21,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
