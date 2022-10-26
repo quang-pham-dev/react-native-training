@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedKeyboard Should render correctly 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "align-items": "center",
+      "flex": 1,
+      "justify-content": "center",
+    }
+  }
+  style={
+    Array [
+      Object {},
+    ]
+  }
+>
+  <View>
+    <TextInput
+      placeholder="Enter your Username"
+    />
+  </View>
+</RCTScrollView>
+`;
