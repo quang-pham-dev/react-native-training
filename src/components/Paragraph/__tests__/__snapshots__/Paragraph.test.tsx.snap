@@ -7,7 +7,7 @@ exports[`Paragraph should render Paragraph Right correctly 1`] = `
       Object {
         "color": "#1D1E20",
         "fontFamily": "Inter-Regular",
-        "fontSize": 15,
+        "fontSize": 17,
         "lineHeight": 16,
         "textAlign": "right",
       },
@@ -26,7 +26,7 @@ exports[`Paragraph should render Paragraph center correctly 1`] = `
       Object {
         "color": "#1D1E20",
         "fontFamily": "Inter-Regular",
-        "fontSize": 15,
+        "fontSize": 17,
         "lineHeight": 16,
         "textAlign": "center",
       },
@@ -45,7 +45,7 @@ exports[`Paragraph should render Paragraph font family base correctly 1`] = `
       Object {
         "color": "#1D1E20",
         "fontFamily": "Inter-Regular",
-        "fontSize": 15,
+        "fontSize": 17,
         "lineHeight": 16,
         "textAlign": "left",
       },
@@ -64,7 +64,7 @@ exports[`Paragraph should render Paragraph font family bold correctly 1`] = `
       Object {
         "color": "#1D1E20",
         "fontFamily": "Inter-SemiBold",
-        "fontSize": 15,
+        "fontSize": 17,
         "lineHeight": 16,
         "textAlign": "left",
       },
@@ -83,7 +83,7 @@ exports[`Paragraph should render Paragraph font family medium correctly 1`] = `
       Object {
         "color": "#1D1E20",
         "fontFamily": "Inter-Medium",
-        "fontSize": 15,
+        "fontSize": 17,
         "lineHeight": 16,
         "textAlign": "left",
       },
@@ -117,7 +117,7 @@ exports[`Paragraph should render Paragraph normal with large text correctly 1`] 
       Object {
         "color": "#1D1E20",
         "fontFamily": "Inter-SemiBold",
-        "fontSize": 17,
+        "fontSize": 22,
         "lineHeight": 22,
         "textAlign": "left",
       },
@@ -136,7 +136,7 @@ exports[`Paragraph should render Paragraph normal with medium text correctly 1`]
       Object {
         "color": "#1D1E20",
         "fontFamily": "Inter-Regular",
-        "fontSize": 15,
+        "fontSize": 17,
         "lineHeight": 16,
         "textAlign": "left",
       },
@@ -155,7 +155,7 @@ exports[`Paragraph should render Paragraph normal with small text correctly 1`] 
       Object {
         "color": "#1D1E20",
         "fontFamily": "Inter-Regular",
-        "fontSize": 13,
+        "fontSize": 15,
         "lineHeight": 11,
         "textAlign": "left",
       },

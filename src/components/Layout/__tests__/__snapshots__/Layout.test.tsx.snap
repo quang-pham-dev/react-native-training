@@ -21,7 +21,7 @@ exports[`Layout should render Base correctly correctly 1`] = `
         Object {
           "color": "#1D1E20",
           "fontFamily": "Inter-Regular",
-          "fontSize": 24,
+          "fontSize": 28,
           "lineHeight": 22,
           "textAlign": "center",
         },
@@ -54,7 +54,7 @@ exports[`Layout should render Default correctly correctly 1`] = `
         Object {
           "color": "#1D1E20",
           "fontFamily": "Inter-Regular",
-          "fontSize": 24,
+          "fontSize": 28,
           "lineHeight": 22,
           "textAlign": "center",
         },
@@ -89,7 +89,7 @@ exports[`Layout should render PaddingBottom35 correctly correctly 1`] = `
         Object {
           "color": "#1D1E20",
           "fontFamily": "Inter-Regular",
-          "fontSize": 24,
+          "fontSize": 28,
           "lineHeight": 22,
           "textAlign": "center",
         },
@@ -124,7 +124,7 @@ exports[`Layout should render PaddingBottom38 correctly correctly 1`] = `
         Object {
           "color": "#1D1E20",
           "fontFamily": "Inter-Regular",
-          "fontSize": 24,
+          "fontSize": 28,
           "lineHeight": 22,
           "textAlign": "center",
         },

@@ -7,7 +7,7 @@ exports[`Heading should render Default type correctly 1`] = `
       Object {
         "color": "#1D1E20",
         "fontFamily": "Inter-Regular",
-        "fontSize": 24,
+        "fontSize": 28,
         "lineHeight": 22,
         "textAlign": "center",
       },
