@@ -2,7 +2,7 @@
 import styled from 'styled-components/native'
 
 // types
-import {SpacingProps} from '@types'
+import {SpacingProps} from '@prop-types'
 
 // utils
 import {isExits} from '@services/helpers'

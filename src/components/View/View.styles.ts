@@ -9,7 +9,7 @@ import {isExits} from '@services/helpers'
 import {Metrics, Colors} from '@themes'
 
 // types
-import {SpacingProps} from '@types'
+import {SpacingProps} from '@prop-types'
 
 interface ViewStyledProps {
   w?: string | number
