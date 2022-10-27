@@ -9,6 +9,7 @@ export const BrandCardWrapperStyled = styled.TouchableOpacity`
   margin-right: ${Metrics.margin.small}px;
   background-color: ${Colors.palette.lightGray};
   border-radius: ${Metrics.borderRadius.base}px;
+  padding-right: ${Metrics.padding.medium}px;
 `
 export const ImageWrapperStyled = styled.View`
   padding: ${Metrics.padding.xs}px;
