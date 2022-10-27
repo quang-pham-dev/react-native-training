@@ -75,6 +75,15 @@ PODS:
   - glog (0.3.5)
   - hermes-engine (0.70.0)
   - libevent (2.1.12)
+  - libwebp (1.2.3):
+    - libwebp/demux (= 1.2.3)
+    - libwebp/mux (= 1.2.3)
+    - libwebp/webp (= 1.2.3)
+  - libwebp/demux (1.2.3):
+    - libwebp/webp
+  - libwebp/mux (1.2.3):
+    - libwebp/demux
+  - libwebp/webp (1.2.3)
   - OpenSSL-Universal (1.1.1100)
   - RCT-Folly (2021.07.22.00):
     - boost
@@ -384,9 +393,13 @@ PODS:
     - React-Core
   - RNCAsyncStorage (1.17.10):
     - React-Core
-  - RNGestureHandler (2.7.1):
+  - RNFastImage (8.6.1):
     - React-Core
-  - RNReanimated (2.10.0):
+    - SDWebImage (~> 5.11.1)
+    - SDWebImageWebPCoder (~> 0.8.4)
+  - RNGestureHandler (2.8.0):
+    - React-Core
+  - RNReanimated (2.11.0):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -413,9 +426,15 @@ PODS:
     - React-RCTText
     - ReactCommon/turbomodule/core
     - Yoga
-  - RNScreens (3.18.1):
+  - RNScreens (3.18.2):
     - React-Core
     - React-RCTImage
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
+  - SDWebImageWebPCoder (0.8.5):
+    - libwebp (~> 1.0)
+    - SDWebImage/Core (~> 5.10)
   - SocketRocket (0.6.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -485,6 +504,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - ReactNativeExceptionHandler (from `../node_modules/react-native-exception-handler`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
+  - RNFastImage (from `../node_modules/react-native-fast-image`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -504,7 +524,10 @@ SPEC REPOS:
     - FlipperKit
     - fmt
     - libevent
+    - libwebp
     - OpenSSL-Universal
+    - SDWebImage
+    - SDWebImageWebPCoder
     - SocketRocket
     - YogaKit
 
@@ -585,6 +608,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-exception-handler"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
+  RNFastImage:
+    :path: "../node_modules/react-native-fast-image"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
@@ -613,6 +638,7 @@ SPEC CHECKSUMS:
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: 8e84f1284180801c1a1b241f443ba64f931ff561
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
+  libwebp: 60305b2e989864154bd9be3d772730f08fc6a59c
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 0080d0a6ebf2577475bda044aa59e2ca1f909cda
   RCTRequired: d0e501e8024056451424aa341daa078c0c620b0d
@@ -646,9 +672,12 @@ SPEC CHECKSUMS:
   ReactCommon: de55f940495d7bf87b5d7bf55b5b15cdd50d7d7b
   ReactNativeExceptionHandler: b11ff67c78802b2f62eed0e10e75cb1ef7947c60
   RNCAsyncStorage: 0c357f3156fcb16c8589ede67cc036330b6698ca
-  RNGestureHandler: b7a872907ee289ada902127f2554fa1d2c076122
-  RNReanimated: 60e291d42c77752a0f6d6f358387bdf225a87c6e
-  RNScreens: 1b7bb502dac62cc4cf01b94bea591c8da275132f
+  RNFastImage: 3207b9eb17c2425d574ca40db35185db6e324f4e
+  RNGestureHandler: 62232ba8f562f7dea5ba1b3383494eb5bf97a4d3
+  RNReanimated: ba35ab0f35bf8931a0508d454ec2aa074b79cf15
+  RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SDWebImageWebPCoder: 908b83b6adda48effe7667cd2b7f78c897e5111d
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   Yoga: 82c9e8f652789f67d98bed5aef9d6653f71b04a9
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
