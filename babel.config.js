@@ -20,6 +20,8 @@ module.exports = {
           '@store': './src/store',
           '@themes': './src/themes',
           '@types': './src/types',
+          '@model-types': './src/types/model-types',
+          '@prop-types': './src/types/prop-types',
         },
       },
     ],

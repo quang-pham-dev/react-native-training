@@ -2,6 +2,7 @@
 {
     "extends": "@tsconfig/react-native/tsconfig.json",     /* Recommended React Native TSConfig base */
     "compilerOptions": {
+      "jsx": "react",
       /* Visit https://aka.ms/tsconfig.json to read more about this file */
   
       /* Completeness */
@@ -38,6 +39,10 @@
         "@themes/*": ["themes/*"],
         "@types": ["types"],
         "@types/*": ["types/*"],
+        "@model-types": ["types/model-types"],
+        "@model-types/*": ["types/model-types/*"],
+        "@prop-types": ["types/prop-types"],
+        "@prop-types/*": ["types/prop-types/*"],
       },
       "types": ["react-native", "jest", "styled-components-react-native"]
     }
