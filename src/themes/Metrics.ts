@@ -136,6 +136,12 @@ const Metrics = {
       lineHeight: Fonts.lineHeight.lg,
       fontFamily: Fonts.type.interSemiBold,
     },
+    brand: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.normal,
+      lineHeight: mvs(16.5, VERTICAL_SCALE_FACTOR),
+      fontFamily: Fonts.type.interMedium,
+    },
   },
   button: {
     bottom: {

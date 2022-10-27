@@ -19,6 +19,7 @@ export const PARAGRAPH_TYPE = {
   BASE: 'base',
   MEDIUM: 'medium',
   LARGER: 'larger',
+  BRAND: 'brand',
 }
 
 export const BUTTON_TYPE = {
