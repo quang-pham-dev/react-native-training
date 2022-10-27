@@ -59,7 +59,6 @@ exports[`Brand Card Component Should render correctly 1`] = `
         resizeMode="contain"
         source={
           Object {
-            "priority": "normal",
             "uri": "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
           }
         }

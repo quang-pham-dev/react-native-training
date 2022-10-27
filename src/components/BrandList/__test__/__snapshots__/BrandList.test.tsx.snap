@@ -132,7 +132,6 @@ exports[`Brand List Component Should render correctly 1`] = `
                 resizeMode="contain"
                 source={
                   Object {
-                    "priority": "normal",
                     "uri": "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
                   }
                 }
@@ -237,7 +236,6 @@ exports[`Brand List Component Should render correctly 1`] = `
                 resizeMode="contain"
                 source={
                   Object {
-                    "priority": "normal",
                     "uri": "https://1000logos.net/wp-content/uploads/2016/10/Adidas-logo.png",
                   }
                 }
@@ -342,7 +340,6 @@ exports[`Brand List Component Should render correctly 1`] = `
                 resizeMode="contain"
                 source={
                   Object {
-                    "priority": "normal",
                     "uri": "https://1000logos.net/wp-content/uploads/2021/05/Fila-logo.png",
                   }
                 }
@@ -447,7 +444,6 @@ exports[`Brand List Component Should render correctly 1`] = `
                 resizeMode="contain"
                 source={
                   Object {
-                    "priority": "normal",
                     "uri": "https://1000logos.net/wp-content/uploads/2021/04/Puma-logo.png",
                   }
                 }
@@ -552,7 +548,6 @@ exports[`Brand List Component Should render correctly 1`] = `
                 resizeMode="contain"
                 source={
                   Object {
-                    "priority": "normal",
                     "uri": "https://1000logos.net/wp-content/uploads/2017/01/Gucci-Logo.png",
                   }
                 }

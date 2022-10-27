@@ -2,7 +2,6 @@ import React, {memo, useCallback} from 'react'
 
 // LIBS
 import isEqual from 'react-fast-compare'
-import FastImage from 'react-native-fast-image'
 import {s} from 'react-native-size-matters/extend'
 
 // Types
@@ -34,9 +33,8 @@ const BrandCard = ({brand, onPressBrandCard}: BrandCardProps) => {
             width={s(40)}
             source={{
               uri: url,
-              priority: FastImage.priority.normal,
             }}
-            resizeMode={FastImage.resizeMode.contain}
+            resizeMode="contain"
           />
         </ImageWrapperStyled>
         <PStyled.Base type={PARAGRAPH_TYPE.BRAND}>{name}</PStyled.Base>
