@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product Card Component Should render correctly 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "heigh": 260,
+        "justifyContent": "center",
+        "width": 160,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 15,
+          "marginBottom": 5,
+          "overflow": "hidden",
+        },
+      ]
+    }
+  >
+    <Image
+      alignSelf="center"
+      height={200}
+      resizeMode="cover"
+      source={
+        Object {
+          "uri": "https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "alignSelf": "center",
+            "height": 200,
+            "resizeMode": "cover",
+            "width": 160,
+          },
+        ]
+      }
+      width={160}
+    />
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 15,
+            "top": 14,
+            "zIndex": 1,
+          },
+        ]
+      }
+    >
+      <Image
+        height={16}
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../src/assets/icons/heart-liked.webp",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 16,
+              "resizeMode": "contain",
+              "width": 16,
+            },
+          ]
+        }
+        width={16}
+      />
+    </View>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter-Medium",
+          "fontSize": 11,
+          "lineHeight": 15.4,
+          "textAlign": "left",
+        },
+      ]
+    }
+    type="productNameAndType"
+  >
+    Fila Sportswear Club Fleece
+  </Text>
+  <View
+    mVertical={5}
+    style={
+      Array [
+        Object {
+          "marginVertical": 5,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1D1E20",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 11,
+            "lineHeight": 15.4,
+            "textAlign": "left",
+          },
+        ]
+      }
+      type="productNameAndType"
+    >
+      Cotton
+    </Text>
+  </View>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter-SemiBold",
+          "fontSize": 13,
+          "lineHeight": 14.3,
+          "textAlign": "left",
+        },
+      ]
+    }
+    type="productPrice"
+  >
+    $ 100
+     
+  </Text>
+</View>
+`;

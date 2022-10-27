@@ -20,6 +20,8 @@ export const PARAGRAPH_TYPE = {
   MEDIUM: 'medium',
   LARGER: 'larger',
   BRAND: 'brand',
+  PRODUCT_NAME_AND_TYPE: 'productNameAndType',
+  PRODUCT_PRICE: 'productPrice',
 }
 
 export const BUTTON_TYPE = {

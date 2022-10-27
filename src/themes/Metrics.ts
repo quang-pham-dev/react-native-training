@@ -142,6 +142,18 @@ const Metrics = {
       lineHeight: mvs(16.5, VERTICAL_SCALE_FACTOR),
       fontFamily: Fonts.type.interMedium,
     },
+    productNameAndType: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.tiny,
+      lineHeight: mvs(15.4, VERTICAL_SCALE_FACTOR),
+      fontFamily: Fonts.type.interMedium,
+    },
+    productPrice: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.small,
+      lineHeight: mvs(14.3, VERTICAL_SCALE_FACTOR),
+      fontFamily: Fonts.type.interSemiBold,
+    },
   },
   button: {
     bottom: {
