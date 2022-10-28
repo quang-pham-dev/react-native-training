@@ -20,9 +20,9 @@ exports[`Layout should render Base correctly correctly 1`] = `
       Array [
         Object {
           "color": "#1D1E20",
-          "fontFamily": "Inter-Regular",
+          "fontFamily": "Inter-SemiBold",
           "fontSize": 28,
-          "lineHeight": 22,
+          "lineHeight": 30,
           "textAlign": "center",
         },
       ]
@@ -53,9 +53,9 @@ exports[`Layout should render Main correctly correctly 1`] = `
       Array [
         Object {
           "color": "#1D1E20",
-          "fontFamily": "Inter-Regular",
+          "fontFamily": "Inter-SemiBold",
           "fontSize": 28,
-          "lineHeight": 22,
+          "lineHeight": 30,
           "textAlign": "center",
         },
       ]
@@ -88,9 +88,9 @@ exports[`Layout should render PaddingBottom35 correctly correctly 1`] = `
       Array [
         Object {
           "color": "#1D1E20",
-          "fontFamily": "Inter-Regular",
+          "fontFamily": "Inter-SemiBold",
           "fontSize": 28,
-          "lineHeight": 22,
+          "lineHeight": 30,
           "textAlign": "center",
         },
       ]
@@ -123,9 +123,9 @@ exports[`Layout should render PaddingBottom38 correctly correctly 1`] = `
       Array [
         Object {
           "color": "#1D1E20",
-          "fontFamily": "Inter-Regular",
+          "fontFamily": "Inter-SemiBold",
           "fontSize": 28,
-          "lineHeight": 22,
+          "lineHeight": 30,
           "textAlign": "center",
         },
       ]

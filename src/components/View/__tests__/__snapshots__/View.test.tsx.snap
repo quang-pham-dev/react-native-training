@@ -16,9 +16,9 @@ exports[`ViewStyled should render Absolute correctly correctly 1`] = `
       Array [
         Object {
           "color": "#1D1E20",
-          "fontFamily": "Inter-Regular",
+          "fontFamily": "Inter-SemiBold",
           "fontSize": 28,
-          "lineHeight": 22,
+          "lineHeight": 30,
           "textAlign": "center",
         },
       ]
