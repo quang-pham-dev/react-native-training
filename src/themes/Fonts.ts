@@ -18,6 +18,7 @@ export const Fonts = {
     xxs: mvs(12, VERTICAL_SCALE_FACTOR),
     xs: mvs(14, VERTICAL_SCALE_FACTOR),
     md: mvs(16, VERTICAL_SCALE_FACTOR),
+    custom: mvs(16.5, VERTICAL_SCALE_FACTOR),
     sm: mvs(18, VERTICAL_SCALE_FACTOR),
     lg: mvs(22, VERTICAL_SCALE_FACTOR),
     xl: mvs(26, VERTICAL_SCALE_FACTOR),

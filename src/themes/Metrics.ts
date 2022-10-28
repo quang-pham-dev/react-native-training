@@ -21,8 +21,8 @@ const Metrics = {
     small: 12,
     medium: 15,
     mediumPlus: 20,
-    large: 24,
-    extraLarger: 36,
+    large: 25,
+    extraLarger: 30,
   },
 
   margin: {
@@ -31,8 +31,8 @@ const Metrics = {
     small: 10,
     medium: 15,
     mediumPlus: 20,
-    extraMedium: 26,
-    large: 38,
+    extraMedium: 30,
+    large: 42,
     extraLarger: 76,
   },
 
@@ -102,12 +102,19 @@ const Metrics = {
     h1: {
       color: Colors.palette.black,
       fontSize: Fonts.size.massive,
-      lineHeight: Fonts.lineHeight.lg,
+      lineHeight: Fonts.lineHeight.xxl,
+      fontFamily: Fonts.type.interSemiBold,
     },
     h2: {
       color: Colors.palette.black,
       fontSize: 24,
       lineHeight: 29,
+    },
+    h4: {
+      color: Colors.palette.gray,
+      fontSize: Fonts.size.normal,
+      lineHeight: Fonts.lineHeight.custom,
+      fontFamily: Fonts.type.interRegular,
     },
   },
 
@@ -139,7 +146,7 @@ const Metrics = {
     brand: {
       color: Colors.palette.black,
       fontSize: Fonts.size.normal,
-      lineHeight: mvs(16.5, VERTICAL_SCALE_FACTOR),
+      lineHeight: Fonts.lineHeight.custom,
       fontFamily: Fonts.type.interMedium,
     },
     productNameAndType: {
@@ -152,6 +159,30 @@ const Metrics = {
       color: Colors.palette.black,
       fontSize: Fonts.size.small,
       lineHeight: mvs(14.3, VERTICAL_SCALE_FACTOR),
+      fontFamily: Fonts.type.interSemiBold,
+    },
+    alreadyAccount: {
+      color: Colors.palette.gray,
+      fontSize: Fonts.size.normal,
+      lineHeight: Fonts.lineHeight.custom,
+      fontFamily: Fonts.type.interRegular,
+    },
+    alreadySignIn: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.normal,
+      lineHeight: Fonts.lineHeight.custom,
+      fontFamily: Fonts.type.interMedium,
+    },
+    confirmAgree: {
+      color: Colors.palette.gray,
+      fontSize: Fonts.size.small,
+      lineHeight: Fonts.lineHeight.sm,
+      fontFamily: Fonts.type.interRegular,
+    },
+    termAndCondition: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.small,
+      lineHeight: Fonts.lineHeight.custom,
       fontFamily: Fonts.type.interSemiBold,
     },
   },

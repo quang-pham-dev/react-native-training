@@ -22,6 +22,10 @@ export const PARAGRAPH_TYPE = {
   BRAND: 'brand',
   PRODUCT_NAME_AND_TYPE: 'productNameAndType',
   PRODUCT_PRICE: 'productPrice',
+  ALREADY_ACCOUNT: 'alreadyAccount',
+  ALREADY_SIGN_IN: 'alreadySignIn',
+  CONFIRM_AGREE: 'confirmAgree',
+  TERM_AND_CONDITION: 'termAndCondition',
 }
 
 export const BUTTON_TYPE = {
