@@ -37,7 +37,7 @@ type ButtonProps = {
 
 const typeActive = (type: BtnType) =>
   [BtnType.BOTTOM, BtnType.SOCIAL].includes(type)
-    ? Colors.palette.lightGray
+    ? Colors.palette.gray
     : Colors.palette.primary
 
 const Button = ({
