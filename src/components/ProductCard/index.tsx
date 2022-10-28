@@ -18,8 +18,10 @@ import {
   ProductCardWrapperStyled,
 } from './ProductCard.styles'
 import PStyled from '@components/Paragraph/P.styles'
-import {PARAGRAPH_TYPE} from '@constants'
 import ViewStyled from '@components/View/View.styles'
+
+// Constant
+import {PARAGRAPH_TYPE} from '@constants'
 
 const ProductCard = ({
   product,
@@ -44,7 +46,7 @@ const ProductCard = ({
         <Image.Normal
           alignSelf="center"
           height={s(200)}
-          width={s(160)}
+          width={s(170)}
           source={{
             uri: url,
           }}
@@ -52,8 +54,8 @@ const ProductCard = ({
         />
         <IconHeartWrapperStyled onPress={handlePressLikeProduct}>
           <Image.Normal
-            height={s(16)}
-            width={s(16)}
+            height={s(20)}
+            width={s(20)}
             source={like ? Icons.heartLiked : Icons.heart}
             resizeMode="contain"
           />

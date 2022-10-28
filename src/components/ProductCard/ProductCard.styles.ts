@@ -5,10 +5,11 @@ import {s} from 'react-native-size-matters/extend'
 import {Colors, Metrics} from '@themes'
 
 export const ProductCardWrapperStyled = styled.Pressable`
-  width: ${s(160)}px;
+  width: ${s(170)}px
   heigh: ${s(260)}px;
-  background-color: ${Colors.background};
   justify-content: center;
+  margin-bottom: ${Metrics.margin.medium}px;
+  background-color: ${Colors.background};
 `
 export const ImageWrapperStyled = styled.View`
   border-radius: ${Metrics.borderRadius.medium}px;

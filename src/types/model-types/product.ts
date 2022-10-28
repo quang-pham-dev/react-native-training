@@ -1,3 +1,5 @@
+import {NativeScrollEvent, NativeSyntheticEvent} from 'react-native'
+
 export interface ProductSizeProps {
   id: string
   size: string
@@ -36,4 +38,12 @@ export interface IProductCardProps {
   product: IProduct
   onPressProductCard: (id: string) => void
   onPressLikeProduct: (item: IProduct) => void
+}
+
+export interface ProductListProps {
+  products: IProduct[]
+  onPressLikeProduct: (item: IProduct[]) => void
+  onPressProductCard: (id: string) => void
+  onLoadMoreProducts: () => void
+  onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void
 }

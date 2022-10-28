@@ -20,7 +20,8 @@ exports[`Product Card Component Should render correctly 1`] = `
         "backgroundColor": "#FFFFFF",
         "heigh": 260,
         "justifyContent": "center",
-        "width": 160,
+        "marginBottom": 15,
+        "width": 170,
       },
     ]
   }
@@ -51,11 +52,11 @@ exports[`Product Card Component Should render correctly 1`] = `
             "alignSelf": "center",
             "height": 200,
             "resizeMode": "cover",
-            "width": 160,
+            "width": 170,
           },
         ]
       }
-      width={160}
+      width={170}
     />
     <View
       accessible={true}
@@ -82,7 +83,7 @@ exports[`Product Card Component Should render correctly 1`] = `
       }
     >
       <Image
-        height={16}
+        height={20}
         resizeMode="contain"
         source={
           Object {
@@ -92,13 +93,13 @@ exports[`Product Card Component Should render correctly 1`] = `
         style={
           Array [
             Object {
-              "height": 16,
+              "height": 20,
               "resizeMode": "contain",
-              "width": 16,
+              "width": 20,
             },
           ]
         }
-        width={16}
+        width={20}
       />
     </View>
   </View>
