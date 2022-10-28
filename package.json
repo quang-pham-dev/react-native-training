@@ -31,6 +31,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
+    "@hookform/resolvers": "^2.9.10",
     "@react-native-async-storage/async-storage": "^1.17.10",
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.1",
@@ -39,6 +40,7 @@
     "babel-plugin-dotenv-import": "^3.0.1",
     "patch-package": "^6.4.7",
     "react": "18.1.0",
+    "react-hook-form": "^7.38.0",
     "react-native": "0.70.0",
     "react-native-config": "^1.4.11",
     "react-native-exception-handler": "^2.10.10",
@@ -50,7 +52,8 @@
     "react-native-size-matters": "^0.4.0",
     "react-native-splash-screen": "^3.3.0",
     "react-native-switch": "^1.5.1",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
