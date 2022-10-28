@@ -88,11 +88,12 @@ const Input = ({
   const handleTogglePassword = (): void => setShowPassword(!showPassword)
 
   return (
-    <FlexStyled.Default flex={1}>
+    <FlexStyled.Default>
       {label && <InputStyled.LabelStyled>{label}</InputStyled.LabelStyled>}
 
       <InputStyled.Wrapper>
         <InputStyled.InputField
+          type={type}
           value={displayValue}
           onChangeText={handleTextChange}
           onBlur={onBlur}
@@ -101,7 +102,7 @@ const Input = ({
           onSubmitEditing={onSubmitEditing}
           placeholder={placeholder}
           keyboardType={keyboardType}
-          secureTextEntry={!showPassword}
+          secureTextEntry={isPassword && !showPassword}
           {...inputProps}
         />
         {isPassword && (

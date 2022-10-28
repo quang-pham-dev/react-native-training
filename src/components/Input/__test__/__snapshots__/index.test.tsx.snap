@@ -2,14 +2,9 @@
 
 exports[`TextInput Component should render correctly 1`] = `
 <View
-  flex={1}
   style={
     Array [
-      Object {
-        "flexBasis": 0,
-        "flexGrow": 1,
-        "flexShrink": 1,
-      },
+      Object {},
     ]
   }
 >
@@ -33,7 +28,7 @@ exports[`TextInput Component should render correctly 1`] = `
       onChangeText={[Function]}
       onSubmitEditing={[MockFunction]}
       placeholder="Enter your user name"
-      secureTextEntry={true}
+      secureTextEntry={false}
       style={
         Array [
           Object {
@@ -50,6 +45,7 @@ exports[`TextInput Component should render correctly 1`] = `
           },
         ]
       }
+      type="normal"
       underlineColorAndroid="transparent"
       value="user name"
     />
@@ -59,14 +55,9 @@ exports[`TextInput Component should render correctly 1`] = `
 
 exports[`TextInput Component should render placeholder 1`] = `
 <View
-  flex={1}
   style={
     Array [
-      Object {
-        "flexBasis": 0,
-        "flexGrow": 1,
-        "flexShrink": 1,
-      },
+      Object {},
     ]
   }
 >
@@ -90,7 +81,7 @@ exports[`TextInput Component should render placeholder 1`] = `
       onChangeText={[Function]}
       onSubmitEditing={[MockFunction]}
       placeholder="Enter your username"
-      secureTextEntry={true}
+      secureTextEntry={false}
       style={
         Array [
           Object {
@@ -107,6 +98,7 @@ exports[`TextInput Component should render placeholder 1`] = `
           },
         ]
       }
+      type="normal"
       underlineColorAndroid="transparent"
       value="user name"
     />
@@ -116,14 +108,9 @@ exports[`TextInput Component should render placeholder 1`] = `
 
 exports[`TextInput Component should render with label correctly 1`] = `
 <View
-  flex={1}
   style={
     Array [
-      Object {
-        "flexBasis": 0,
-        "flexGrow": 1,
-        "flexShrink": 1,
-      },
+      Object {},
     ]
   }
 >
@@ -161,7 +148,7 @@ exports[`TextInput Component should render with label correctly 1`] = `
       onChangeText={[Function]}
       onSubmitEditing={[MockFunction]}
       placeholder="Enter your user name"
-      secureTextEntry={true}
+      secureTextEntry={false}
       style={
         Array [
           Object {
@@ -178,6 +165,7 @@ exports[`TextInput Component should render with label correctly 1`] = `
           },
         ]
       }
+      type="normal"
       underlineColorAndroid="transparent"
       value="user name"
     />
