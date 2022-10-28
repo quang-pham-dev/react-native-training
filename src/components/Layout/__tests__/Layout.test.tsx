@@ -7,13 +7,13 @@ import HeadingStyled from '@components/Heading/Heading.styles'
 import {HEADING_TYPE} from '@constants/type'
 
 describe('Layout', () => {
-  test('should render Default correctly correctly', () => {
+  test('should render Main correctly correctly', () => {
     const component = render(
-      <LayoutStyled.Default>
+      <LayoutStyled.Main>
         <HeadingStyled type={HEADING_TYPE.H1}>
           Lorem ipsum dolor sit a
         </HeadingStyled>
-      </LayoutStyled.Default>,
+      </LayoutStyled.Main>,
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()

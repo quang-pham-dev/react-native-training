@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
 
 storiesOf('Layout', module)
   .addDecorator(fn => <StoryScreen>{fn()}</StoryScreen>)
-  .add('Layout Default', () => (
+  .add('Layout Main', () => (
     <Story>
-      <UseCase text="Default">
-        <LayoutStyled.Default>
+      <UseCase text="Main">
+        <LayoutStyled.Main>
           <HeadingStyled type={HEADING_TYPE.H1}>
             Lorem ipsum dolor sit a
           </HeadingStyled>
-        </LayoutStyled.Default>
+        </LayoutStyled.Main>
       </UseCase>
     </Story>
   ))
