@@ -1,8 +1,8 @@
 import React, {memo, useCallback} from 'react'
-import {FlatList} from 'react-native'
 
 // LIBS
 import isEqual from 'react-fast-compare'
+import {FlashList} from '@shopify/flash-list'
 
 // Components
 import BrandCard from '@components/BrandCard'
@@ -45,9 +45,10 @@ const BrandList = ({onPressBrandCard, brands}: BrandsListProps) => {
 
   return (
     <ViewStyled.Default>
-      <FlatList
+      <FlashList
         horizontal
         data={brands}
+        estimatedItemSize={50}
         renderItem={renderBrandCard}
         keyExtractor={brand => brand.id}
         showsHorizontalScrollIndicator={false}
