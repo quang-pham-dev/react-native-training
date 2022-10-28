@@ -7,7 +7,7 @@ import {Stack} from './index'
 import {SCREEN_NAMES} from '@constants'
 
 // Screens
-import {GetStarted} from '@screens'
+import {GetStarted, Login} from '@screens'
 
 // Themes
 import {Colors} from '@themes'
@@ -29,6 +29,7 @@ const OnboardingNavigator = () => {
         },
       }}>
       <Stack.Screen name={SCREEN_NAMES.GET_STARTED} component={GetStarted} />
+      <Stack.Screen name={SCREEN_NAMES.LOGIN} component={Login} />
     </Stack.Navigator>
   )
 }
