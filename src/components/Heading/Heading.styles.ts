@@ -3,7 +3,6 @@ import styled from 'styled-components/native'
 
 // Services
 import {getType, convertToPx} from '@services/format'
-import {Fonts} from '@themes'
 
 type HeadingProps = {
   type: string
@@ -22,7 +21,6 @@ const element = 'heading'
 
 const HeadingStyled = styled.Text<HeadingProps>`
   text-align: ${props => props.textAlign || 'center'};
-  font-family: ${Fonts.type.interRegular};
   ${props => {
     const {color, lineHeight, type} = props
     const renderedColor = `${color ? `color: ${color};` : ''}`
@@ -36,6 +34,7 @@ const HeadingStyled = styled.Text<HeadingProps>`
         color: elementColor,
         fontSize: elementFontSize,
         lineHeight: elementLineHeight,
+        fontFamily: elementFontFamily,
       } = elementType
 
       return `
@@ -47,6 +46,11 @@ const HeadingStyled = styled.Text<HeadingProps>`
             : '')
         }
         ${elementFontSize ? `font-size: ${convertToPx(elementFontSize)};` : ''}
+        ${
+          elementFontFamily
+            ? `font-family: ${convertToPx(elementFontFamily)};`
+            : ''
+        }
       `
     }
 

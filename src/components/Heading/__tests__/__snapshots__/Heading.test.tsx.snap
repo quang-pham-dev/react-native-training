@@ -6,9 +6,9 @@ exports[`Heading should render Default type correctly 1`] = `
     Array [
       Object {
         "color": "#1D1E20",
-        "fontFamily": "Inter-Regular",
+        "fontFamily": "Inter-SemiBold",
         "fontSize": 28,
-        "lineHeight": 22,
+        "lineHeight": 30,
         "textAlign": "center",
       },
     ]
@@ -25,7 +25,6 @@ exports[`Heading should render Default type with custom props 1`] = `
     Array [
       Object {
         "color": "#1D1E20",
-        "fontFamily": "Inter-Regular",
         "fontSize": 24,
         "lineHeight": 29,
         "textAlign": "center",
