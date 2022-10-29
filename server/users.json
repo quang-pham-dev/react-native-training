@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": "621c4188dece66a40dad2951",
+      "avatar": "https://picsum.photos/200",
+      "username": "Quangpham",
+      "gender": "male",
+      "email": "admin@admin.com",
+      "phone": "+84 (919) 507231",
+      "address": "199 Bergen Street, Bowie, Oregon, 7933",
+      "role": "admin",
+      "password": "123456"
+    },
+    {
+      "id": "621c41883112f1c216433dcf",
+      "avatar": "https://picsum.photos/200",
+      "username": "Mcintyre Morrison",
+      "gender": "male",
+      "email": "test1@email.com",
+      "phone": "+84 (838) 539391",
+      "address": "313 Menahan Street, Aurora, North Dakota, 9139",
+      "role": "user",
+      "password": "123123"
+    },
+    {
+      "id": "621c4188f3063079e8800351",
+      "avatar": "https://picsum.photos/200",
+      "username": "Pate Sheppard",
+      "gender": "male",
+      "email": "patesheppard@entogrok.com",
+      "phone": "+84 (880) 599217",
+      "address": "411 Evans Street, Harrison, Missouri, 635",
+      "role": "user",
+      "password": "123123"
+    },
+    {
+      "id": "621c4188e8365653f9326450",
+      "avatar": "https://picsum.photos/200",
+      "username": "Frost Spence",
+      "gender": "male",
+      "email": "frostspence@entogrok.com",
+      "phone": "+84 (859) 508289",
+      "address": "745 Blake Avenue, Belmont, District Of Columbia, 4099",
+      "role": "user",
+      "password": "123123"
+    },
+    {
+      "id": "621c418897260d9a4a9b66f5",
+      "avatar": "https://picsum.photos/200",
+      "username": "Alvarado Greer",
+      "gender": "male",
+      "email": "alvaradogreer@entogrok.com",
+      "phone": "+84 (914) 488248",
+      "address": "248 Furman Avenue, Herald, Mississippi, 9105",
+      "role": "user",
+      "password": "123123"
+    }
+  ]
+}

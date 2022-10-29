@@ -1,0 +1,23 @@
+# Auth
+
+# @name login
+POST http://127.0.0.1:3000/test HTTP/1.1
+content-type: application/json
+
+{
+    "email": "admin@admin.com",
+    "password": "admin"
+}
+###
+
+# @name listAllProducts
+POST http://localhost:3000/api/products
+Content-Type: application/application/json
+{
+    
+}
+
+###
+
+# @name pagination
+GET http://localhost:3000/api/products?_page=1&_limit=20
