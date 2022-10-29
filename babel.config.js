@@ -22,6 +22,7 @@ module.exports = {
           '@types': './src/types',
           '@model-types': './src/types/model-types',
           '@prop-types': './src/types/prop-types',
+          '@state-types': './src/types/state-types',
         },
       },
     ],

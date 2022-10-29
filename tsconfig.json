@@ -43,6 +43,8 @@
         "@model-types/*": ["types/model-types/*"],
         "@prop-types": ["types/prop-types"],
         "@prop-types/*": ["types/prop-types/*"],
+        "@state-types": ["types/state-types"],
+        "@state-types/*": ["types/state-types/*"],
       },
       "types": ["react-native", "jest", "styled-components-react-native"]
     }
