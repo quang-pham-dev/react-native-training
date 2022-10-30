@@ -18,7 +18,7 @@ type ButtonProps = {
 
 const element = 'button'
 
-export const ButtonWrapperStyled = styled.TouchableHighlight<ButtonProps>`
+export const ButtonWrapperStyled = styled.TouchableOpacity<ButtonProps>`
   align-items: ${props => props.alignItems || 'center'};
   padding-top: ${props => props.pTop || Metrics.padding.mediumPlus}px
     ${props => {
@@ -70,7 +70,7 @@ export const ButtonLabelStyled = styled.Text<ButtonProps>`
   }};
 `
 
-export const ButtonSocialWrapperStyled = styled.TouchableHighlight<ButtonProps>`
+export const ButtonSocialWrapperStyled = styled.TouchableOpacity<ButtonProps>`
   align-items: ${props => props.alignItems || 'center'};
   justify-content: ${props => props.justifyContent || 'center'};
   background-color: ${props => props.bgColor || Colors.palette.transparent};

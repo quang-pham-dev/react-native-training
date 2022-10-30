@@ -35,11 +35,6 @@ type ButtonProps = {
   }
 }
 
-const typeActive = (type: BtnType) =>
-  [BtnType.BOTTOM, BtnType.SOCIAL].includes(type)
-    ? Colors.palette.gray
-    : Colors.palette.primary
-
 const Button = ({
   type = BtnType.BOTTOM,
   label,
@@ -53,7 +48,6 @@ const Button = ({
       type={type}
       onPress={disabled ? undefined : onPress}
       disabled={disabled}
-      underlayColor={typeActive(type)}
       {...btnProps}>
       <>
         {isLoading && (
@@ -101,7 +95,6 @@ const SocialButton = ({
       bgColor={bgColor}
       onPress={disabled ? undefined : onPress}
       disabled={disabled}
-      underlayColor={typeActive(type)}
       {...btnProps}>
       <>
         {isLoading && (
