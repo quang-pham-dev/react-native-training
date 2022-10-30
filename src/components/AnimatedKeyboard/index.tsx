@@ -5,7 +5,7 @@ import Animated, {
   useAnimatedStyle,
 } from 'react-native-reanimated'
 
-import {AnimatedKeyboardWrapperStyled} from './AnimatedKeyboard.styles'
+import ViewStyled from '@components/View/View.styles'
 
 const AnimatedKeyboard = ({children}: PropsWithChildren) => {
   const keyboard = useAnimatedKeyboard()
@@ -15,10 +15,12 @@ const AnimatedKeyboard = ({children}: PropsWithChildren) => {
     }
   })
 
+  const flex = {flex: 1}
+
   return (
-    <AnimatedKeyboardWrapperStyled>
-      <Animated.View style={[animatedStyle]}>{children}</Animated.View>
-    </AnimatedKeyboardWrapperStyled>
+    <ViewStyled.ScrollViewWrapper>
+      <Animated.View style={[animatedStyle, flex]}>{children}</Animated.View>
+    </ViewStyled.ScrollViewWrapper>
   )
 }
 
