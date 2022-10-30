@@ -32,7 +32,7 @@ const authenticationReducer = (
       return {
         ...state,
         isInitialized: false,
-        isLoading: true,
+        isLoading: false,
       }
 
     case SIGN_IN:
@@ -56,6 +56,7 @@ const authenticationReducer = (
       return {
         ...state,
         type: action.type,
+        isLoading: false,
         isAuthenticated: true,
         access_token: action.payload?.access_token,
         currentUser: action.payload?.user,
@@ -65,6 +66,7 @@ const authenticationReducer = (
       return {
         ...state,
         type: action.type,
+        isLoading: false,
         isAuthenticated: false,
         access_token: null,
         currentUser: null,

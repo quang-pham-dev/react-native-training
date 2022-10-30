@@ -32,8 +32,6 @@ export const AuthContextProvider = ({
 
   const value = useMemo(() => ({state, dispatch}), [state])
 
-  console.log('value', value)
-
   return (
     <AuthContext.Provider value={value as any}>{children}</AuthContext.Provider>
   )
