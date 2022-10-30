@@ -191,31 +191,41 @@ Array [
         </View>
       </View>
     </View>
-    <Text
-      mTop={30}
+    <View
+      pTop={30}
       style={
         Array [
           Object {
-            "color": "#EA4335",
-            "fontFamily": "Inter-Regular",
-            "marginTop": 30,
-            "textAlign": "right",
+            "paddingTop": 30,
+            "width": "100%",
           },
         ]
       }
-      textAlign="right"
     >
-      Forgot password?
-    </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#EA4335",
+              "fontFamily": "Inter-Regular",
+              "textAlign": "right",
+            },
+          ]
+        }
+        textAlign="right"
+      >
+        Forgot password?
+      </Text>
+    </View>
     <View
-      mTop={42}
+      pTop={42}
       style={
         Array [
           Object {
             "alignItems": "center",
             "flexDirection": "row",
             "justifyContent": "space-between",
-            "marginTop": 42,
+            "paddingTop": 42,
           },
         ]
       }

@@ -67,8 +67,6 @@ const Login = ({navigation}: LoginProps) => {
       await set(AUTH_DATA, dataStorage)
       const user = response?.data?.user
       const access_token = response?.data
-      console.log('user', user)
-      console.log('access_token', access_token)
       if (user && access_token) {
         dispatch({
           type: SIGN_IN_SUCCESS,
@@ -102,27 +100,31 @@ const Login = ({navigation}: LoginProps) => {
 
   return (
     <ErrorBoundary errorMode={ErrorMode.ALWAYS}>
-      <AnimatedKeyboard>
-        <ViewStyled.Custom flex={1} pTop={vs(105)}>
-          <HeadingStyled textAlign="center" type={HEADING_TYPE.H1}>
-            Welcome
-          </HeadingStyled>
-          <ViewStyled.Custom pTop={vs(Metrics.padding.tiny)}>
-            <HeadingStyled textAlign="center" type={HEADING_TYPE.H4}>
-              Please enter your data to continue
-            </HeadingStyled>
-          </ViewStyled.Custom>
-        </ViewStyled.Custom>
-        {/* end header */}
+      <>
+        <AnimatedKeyboard>
+          <>
+            <ViewStyled.Custom flex={1} pTop={vs(105)}>
+              <HeadingStyled textAlign="center" type={HEADING_TYPE.H1}>
+                Welcome
+              </HeadingStyled>
+              <ViewStyled.Custom pTop={vs(Metrics.padding.tiny)}>
+                <HeadingStyled textAlign="center" type={HEADING_TYPE.H4}>
+                  Please enter your data to continue
+                </HeadingStyled>
+              </ViewStyled.Custom>
+            </ViewStyled.Custom>
+            {/* end header */}
 
-        {/* Form */}
-        <Suspense fallback={<LoadingIndicator />}>
-          <ViewStyled.Custom flex={1}>
-            <LoginFormLazy onSubmit={handleSubmitButton} />
-          </ViewStyled.Custom>
-        </Suspense>
-        {/* end Form */}
-      </AnimatedKeyboard>
+            {/* Form */}
+            <Suspense fallback={<LoadingIndicator />}>
+              <ViewStyled.Custom flex={2} pTop={vs(30)}>
+                <LoginFormLazy onSubmit={handleSubmitButton} />
+              </ViewStyled.Custom>
+            </Suspense>
+            {/* end Form */}
+          </>
+        </AnimatedKeyboard>
+      </>
     </ErrorBoundary>
   )
 }

@@ -116,13 +116,12 @@ const LoginForm = ({onSubmit}: ILoginFormProps) => {
             </PStyled.ErrorMessage>
           )}
         </ViewStyled.Custom>
-
-        <PStyled.ErrorMessage
-          textAlign="right"
-          mTop={vs(Metrics.margin.extraMedium)}>
-          Forgot password?
-        </PStyled.ErrorMessage>
-        <FlexStyled.FlexSpaceBetweenCenter mTop={vs(Metrics.margin.large)}>
+        <ViewStyled.Custom pTop={vs(Metrics.margin.extraMedium)}>
+          <PStyled.ErrorMessage textAlign="right">
+            Forgot password?
+          </PStyled.ErrorMessage>
+        </ViewStyled.Custom>
+        <FlexStyled.FlexSpaceBetweenCenter pTop={vs(Metrics.margin.large)}>
           <PStyled.Base>Remember me</PStyled.Base>
           <Switch />
         </FlexStyled.FlexSpaceBetweenCenter>
