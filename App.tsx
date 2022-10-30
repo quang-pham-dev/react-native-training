@@ -21,6 +21,9 @@ import {
 } from 'react-native-safe-area-context'
 import SplashScreen from 'react-native-splash-screen'
 
+// Contexts
+import {AuthContextProvider} from '@contexts/auth/AuthContext'
+
 // Navigator
 import AppNavigator from '@navigators/app-navigator'
 
@@ -61,7 +64,9 @@ const App = () => {
         <SafeAreaProvider initialMetrics={initialWindowMetrics}>
           <StatusBar barStyle="light-content" />
           <ErrorBoundary errorMode={ErrorMode.ALWAYS}>
-            <AppNavigator />
+            <AuthContextProvider>
+              <AppNavigator />
+            </AuthContextProvider>
           </ErrorBoundary>
         </SafeAreaProvider>
       </GestureHandlerRootViewStyled>
