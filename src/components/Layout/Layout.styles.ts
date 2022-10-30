@@ -3,7 +3,7 @@ import styled from 'styled-components/native'
 import {mvs, s} from 'react-native-size-matters/extend'
 
 // themes
-import {Colors} from '@themes/Colors'
+import {Colors, Metrics} from '@themes'
 
 // constants
 import {VERTICAL_SCALE_FACTOR} from '@constants'
@@ -23,7 +23,7 @@ interface LayoutMainProps {
 const Main = styled.View<LayoutMainProps>`
   flex: 1;
   width: 100%;
-  padding-horizontal: ${s(20)}px;
+  padding-horizontal: ${s(Metrics.padding.mediumPlus)}px;
   ${props => props.pTop && `padding-top: ${convertToPx(props.pTop)}`}
 `
 

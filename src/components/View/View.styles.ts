@@ -102,6 +102,12 @@ const ZIndexMinus3 = styled(Custom)`
   z-index: -3;
 `
 
+const ScrollViewWrapper = styled.ScrollView.attrs(() => ({
+  contentContainerStyle: {
+    flexGrow: 1,
+  },
+}))``
+
 const OutLine = styled(Custom)`
   width: 100%;
   border: ${props => props.border};
@@ -122,6 +128,7 @@ interface IViewStyled {
   ZIndexMinus1: typeof ZIndexMinus1
   ZIndexMinus2: typeof ZIndexMinus2
   ZIndexMinus3: typeof ZIndexMinus3
+  ScrollViewWrapper: typeof ScrollViewWrapper
   OutLine: typeof OutLine
 }
 
@@ -136,6 +143,7 @@ const ViewStyled: IViewStyled = {
   ZIndexMinus1,
   ZIndexMinus2,
   ZIndexMinus3,
+  ScrollViewWrapper,
   OutLine,
 }
 
