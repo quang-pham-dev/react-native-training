@@ -17,6 +17,7 @@
     "ios:iP12": "react-native run-ios --simulator 'iPhone 12' --scheme 'Elaza'",
     "ios:iPSE2020": "react-native run-ios --simulator 'iPhone SE (2nd generation)' --scheme 'Elaza'",
     "ios:iP12ProMax": "react-native run-ios --simulator 'iPhone 12 Pro Max' --scheme 'Elaza'",
+    "ios:iP13Pro": "react-native run-ios --simulator 'iPhone 13 Pro' --scheme 'Elaza'",
     "start": "react-native start",
     "clean-android": "cd android && ./gradlew clean && cd ..",
     "clean-ios": "cd ios && xcodebuild clean && cd ..",
