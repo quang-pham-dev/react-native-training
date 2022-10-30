@@ -3,12 +3,10 @@
 exports[`Login Form should render correctly 1`] = `
 Array [
   <View
+    pHorizontal={20}
     style={
       Array [
         Object {
-          "flexBasis": 0,
-          "flexGrow": 1,
-          "flexShrink": 1,
           "paddingHorizontal": 20,
           "width": "100%",
         },
@@ -292,23 +290,25 @@ Array [
     </View>
   </View>,
   <View
+    flex={1}
     style={
       Array [
         Object {
+          "flexBasis": 0,
+          "flexGrow": 1,
+          "flexShrink": 1,
           "justifyContent": "flex-end",
         },
       ]
     }
   >
     <View
-      pBottom={25}
-      pHorizontal={25}
       style={
         Array [
           Object {
+            "alignItems": "center",
             "flexDirection": "row",
-            "paddingBottom": 25,
-            "paddingHorizontal": 25,
+            "justifyContent": "center",
           },
         ]
       }
@@ -327,7 +327,8 @@ Array [
         }
         type="confirmAgree"
       >
-        By connecting your account confirm that you agree with our 
+        By connecting your account confirm that you agree 
+with our 
         <Text
           style={
             Array [
@@ -336,7 +337,7 @@ Array [
                 "fontFamily": "Inter-SemiBold",
                 "fontSize": 13,
                 "lineHeight": 16.5,
-                "textAlign": "center",
+                "textAlign": "left",
               },
             ]
           }
@@ -347,22 +348,33 @@ Array [
       </Text>
     </View>
     <View
-      accessibilityState={
-        Object {
-          "disabled": false,
-        }
-      }
-      accessible={true}
-      focusable={true}
-      onClick={[Function]}
-      onResponderGrant={[Function]}
-      onResponderMove={[Function]}
-      onResponderRelease={[Function]}
-      onResponderTerminate={[Function]}
-      onResponderTerminationRequest={[Function]}
-      onStartShouldSetResponder={[Function]}
+      pTop={26}
       style={
         Array [
+          Object {
+            "paddingTop": 26,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        accessibilityState={
+          Object {
+            "disabled": false,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
           Object {
             "alignItems": "center",
             "backgroundColor": "#3D93F8",
@@ -370,27 +382,28 @@ Array [
             "borderStyle": "solid",
             "borderWidth": 1,
             "height": 75,
+            "opacity": 1,
             "paddingTop": 20,
             "width": "auto",
-          },
-        ]
-      }
-    >
-      <Text
-        disabled={false}
-        style={
-          Array [
-            Object {
-              "color": "#FFFFFF",
-              "fontFamily": "Inter-Medium",
-              "fontSize": 17,
-            },
-          ]
+          }
         }
-        type="bottom"
       >
-        Login
-      </Text>
+        <Text
+          disabled={false}
+          style={
+            Array [
+              Object {
+                "color": "#FFFFFF",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 17,
+              },
+            ]
+          }
+          type="bottom"
+        >
+          Login
+        </Text>
+      </View>
     </View>
   </View>,
 ]

@@ -35,12 +35,13 @@ const GetStarted = ({navigation}: GetStartedProps) => {
 
   return (
     <>
-      <LayoutStyled.Main>
+      <LayoutStyled.Main bgColor="red">
         <ViewStyled.Custom pTop={vs(105)} pBottom={vs(185)}>
           <HeadingStyled textAlign="center" type={HEADING_TYPE.H1}>
             Let’s Get Started
           </HeadingStyled>
         </ViewStyled.Custom>
+
         <SocialButton
           type={BtnType.SOCIAL}
           icon={Icons.facebook}
@@ -57,6 +58,7 @@ const GetStarted = ({navigation}: GetStartedProps) => {
             label="Google"
           />
         </ViewStyled.Custom>
+
         <SocialButton
           type={BtnType.SOCIAL}
           icon={Icons.twitter}

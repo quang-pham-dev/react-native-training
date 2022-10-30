@@ -6,6 +6,9 @@ import * as Yup from 'yup'
 import {yupResolver} from '@hookform/resolvers/yup/dist/yup'
 import {vs} from 'react-native-size-matters/extend'
 
+// Contexts
+import {useAuthContext} from '@contexts/auth/AuthContext'
+
 // Components
 import Input, {InputType} from '@components/Input'
 import Switch from '@components/Switch'
@@ -22,7 +25,6 @@ import FlexStyled from '@components/Flex/Flex.styles'
 import {LoginCredentials} from '@model-types'
 import {PARAGRAPH_TYPE} from '@constants'
 import {BtnType, Button} from '@components/Button'
-import LayoutStyled from '@components/Layout/Layout.styles'
 
 // initial values
 const loginFormInit: LoginCredentials = {
@@ -43,6 +45,10 @@ interface ILoginFormProps {
 }
 
 const LoginForm = ({onSubmit}: ILoginFormProps) => {
+  const {state} = useAuthContext()
+
+  const {isLoading} = state || {}
+
   const {
     control,
     handleSubmit,
@@ -61,7 +67,7 @@ const LoginForm = ({onSubmit}: ILoginFormProps) => {
 
   return (
     <>
-      <LayoutStyled.Main>
+      <ViewStyled.Custom pHorizontal={Metrics.padding.mediumPlus}>
         {/* Username */}
         <Controller
           control={control}
@@ -120,25 +126,27 @@ const LoginForm = ({onSubmit}: ILoginFormProps) => {
           <PStyled.Base>Remember me</PStyled.Base>
           <Switch />
         </FlexStyled.FlexSpaceBetweenCenter>
-      </LayoutStyled.Main>
-      <FlexStyled.FlexEnd>
-        <FlexStyled.Row
-          pBottom={Metrics.padding.large}
-          pHorizontal={Metrics.padding.large}>
-          <PStyled.Center type={PARAGRAPH_TYPE.CONFIRM_AGREE}>
-            {'By connecting your account confirm that you agree with our '}
-            <PStyled.Center type={PARAGRAPH_TYPE.TERM_AND_CONDITION}>
-              {'Term and Condition'}
-            </PStyled.Center>
-          </PStyled.Center>
-        </FlexStyled.Row>
+      </ViewStyled.Custom>
 
-        <Button
-          type={BtnType.BOTTOM}
-          disabled={!!errors?.username || !!errors?.password}
-          onPress={handleSubmit(onSubmitLoginForm)}
-          label="Login"
-        />
+      <FlexStyled.FlexEnd flex={1}>
+        <FlexStyled.RowCenter>
+          <PStyled.Center type={PARAGRAPH_TYPE.CONFIRM_AGREE}>
+            {'By connecting your account confirm that you agree \nwith our '}
+            <PStyled.Base type={PARAGRAPH_TYPE.TERM_AND_CONDITION}>
+              {'Term and Condition'}
+            </PStyled.Base>
+          </PStyled.Center>
+        </FlexStyled.RowCenter>
+
+        <ViewStyled.Custom pTop={vs(26)}>
+          <Button
+            type={BtnType.BOTTOM}
+            disabled={!!errors?.username || !!errors?.password}
+            onPress={handleSubmit(onSubmitLoginForm)}
+            label="Login"
+            isLoading={isLoading}
+          />
+        </ViewStyled.Custom>
       </FlexStyled.FlexEnd>
     </>
   )
