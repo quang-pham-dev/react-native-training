@@ -41,12 +41,12 @@ const ProductCard = ({
   }, [product, onPressLikeProduct])
 
   return (
-    <ProductCardWrapperStyled onPress={handlePressCardProduct}>
-      <ImageWrapperStyled>
+    <ProductCardWrapperStyled>
+      <ImageWrapperStyled onPress={handlePressCardProduct}>
         <Image.Normal
           alignSelf="center"
           height={s(200)}
-          width={s(170)}
+          width={s(160)}
           source={{
             uri: url,
           }}
@@ -71,7 +71,7 @@ const ProductCard = ({
         </PStyled.Base>
       </ViewStyled.Custom>
       <PStyled.Base type={PARAGRAPH_TYPE.PRODUCT_PRICE}>
-        {`$ ${price}`}{' '}
+        {`$ ${price}`}
       </PStyled.Base>
     </ProductCardWrapperStyled>
   )

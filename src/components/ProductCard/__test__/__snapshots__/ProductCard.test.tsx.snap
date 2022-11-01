@@ -2,31 +2,28 @@
 
 exports[`Product Card Component Should render correctly 1`] = `
 <View
-  accessible={true}
-  collapsable={false}
-  focusable={true}
-  onBlur={[Function]}
-  onClick={[Function]}
-  onFocus={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
   style={
     Array [
       Object {
         "backgroundColor": "#FFFFFF",
-        "heigh": 260,
-        "justifyContent": "center",
         "marginBottom": 15,
-        "width": 170,
       },
     ]
   }
 >
   <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
     style={
       Array [
         Object {
@@ -52,11 +49,11 @@ exports[`Product Card Component Should render correctly 1`] = `
             "alignSelf": "center",
             "height": 200,
             "resizeMode": "cover",
-            "width": 170,
+            "width": 160,
           },
         ]
       }
-      width={170}
+      width={160}
     />
     <View
       accessible={true}
@@ -162,7 +159,6 @@ exports[`Product Card Component Should render correctly 1`] = `
     type="productPrice"
   >
     $ 100
-     
   </Text>
 </View>
 `;

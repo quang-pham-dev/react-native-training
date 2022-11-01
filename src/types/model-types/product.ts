@@ -44,6 +44,6 @@ export interface ProductListProps {
   products: IProduct[]
   onPressLikeProduct: (item: IProduct[]) => void
   onPressProductCard: (id: string) => void
-  onLoadMoreProducts: () => void
+  onLoadMoreProduct: () => void
   onScroll?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void
 }
