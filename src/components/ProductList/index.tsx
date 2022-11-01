@@ -1,7 +1,8 @@
-import React, {memo, useCallback} from 'react'
+import React, {memo, useCallback, useRef} from 'react'
 // LIBS
 import isEqual from 'react-fast-compare'
-import {FlashList} from '@shopify/flash-list'
+import {FlatList} from 'react-native-gesture-handler'
+// import {FlashList} from '@shopify/flash-list'
 
 // Components
 import ProductCard from '@components/ProductCard'
@@ -17,15 +18,13 @@ import {IProduct, ProductListProps} from '@model-types'
 import PStyled from '@components/Paragraph/P.styles'
 import ViewStyled from '@components/View/View.styles'
 
-// Themes
-import {Metrics} from '@themes'
-
 const ProductsList = ({
   onPressProductCard,
   products,
   onPressLikeProduct,
   onScroll,
 }: ProductListProps) => {
+  const listRef = useRef<FlatList<IProduct> | null>(null)
   // handle action load more products
   const handleLoadMoreProducts = () => {}
 
@@ -63,14 +62,15 @@ const ProductsList = ({
   const renderFooterComponent = () => <LoadingIndicator />
 
   return (
-    <ViewStyled.Default
-      w={Metrics.screenWidth}
-      h={Metrics.screenHeight}
-      mTop={Metrics.margin.medium}>
-      <FlashList
+    <ViewStyled.Custom h="100%" w="100%">
+      <FlatList
+        ref={listRef}
         numColumns={2}
         data={products}
-        estimatedItemSize={200}
+        // eslint-disable-next-line react-native/no-inline-styles
+        columnWrapperStyle={{justifyContent: 'space-between'}}
+        contentInsetAdjustmentBehavior="always"
+        initialNumToRender={6}
         renderItem={renderProductCard}
         keyExtractor={product => product.id}
         showsVerticalScrollIndicator={false}
@@ -81,7 +81,7 @@ const ProductsList = ({
         onScroll={onScroll}
         scrollEventThrottle={16}
       />
-    </ViewStyled.Default>
+    </ViewStyled.Custom>
   )
 }
 export default memo(ProductsList, isEqual)

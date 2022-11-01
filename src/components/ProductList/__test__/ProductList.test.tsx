@@ -19,7 +19,7 @@ describe('Product Card List Component', () => {
     products,
     onPressProductCard: jest.fn(),
     onPressLikeProduct: jest.fn(),
-    onLoadMoreProducts: jest.fn(),
+    onLoadMoreProduct: jest.fn(),
   }
 
   const tree = render(<ProductsList {...props} />)

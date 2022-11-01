@@ -18,7 +18,7 @@ storiesOf('Product List', module)
           products={products}
           onPressLikeProduct={action('clicked')}
           onPressProductCard={action('clicked')}
-          onLoadMoreProducts={action('clicked')}
+          onLoadMoreProduct={action('clicked')}
         />
       </UseCase>
     </Story>
