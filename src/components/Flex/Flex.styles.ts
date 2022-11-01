@@ -113,6 +113,12 @@ const FlexSpaceBetweenCenter = styled(Row)`
   align-items: center;
   justify-content: space-between;
 `
+const FlexColum = styled(Default)`
+  flex-direction: column;
+`
+const ColumEnd = styled(FlexColum)`
+  align-items: flex-end;
+`
 
 interface IFlex {
   Default: typeof Default
@@ -134,6 +140,8 @@ interface IFlex {
   FlexSpaceBetween: typeof FlexSpaceBetween
   FlexSpaceBetweenCenter: typeof FlexSpaceBetweenCenter
   BetweenVertical: typeof BetweenVertical
+  FlexColum: typeof FlexColum
+  ColumEnd: typeof ColumEnd
 }
 
 const FlexStyled: IFlex = {
@@ -156,6 +164,8 @@ const FlexStyled: IFlex = {
   FlexSpaceBetween,
   FlexSpaceBetweenCenter,
   BetweenVertical,
+  FlexColum,
+  ColumEnd,
 }
 
 export default FlexStyled

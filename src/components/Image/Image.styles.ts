@@ -15,6 +15,7 @@ interface ImageProps {
   width: number
   resizeMode?: string
   transform?: string
+  borderRadius?: string
 }
 
 const ImageStyled = styled.Image<ImageProps>`
@@ -29,6 +30,7 @@ const ImageStyled = styled.Image<ImageProps>`
   ${props => props.pLeft && `padding-left: ${props.pLeft}px`};
   ${props => props.resizeMode && `resize-mode: ${props.resizeMode}`};
   ${props => props.transform && `transform: ${props.transform}`};
+  ${props => props.borderRadius && `border-radius: ${props.borderRadius}px`};
 `
 
 interface ImageData {

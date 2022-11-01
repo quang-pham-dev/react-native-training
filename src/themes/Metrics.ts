@@ -185,6 +185,24 @@ const Metrics = {
       lineHeight: Fonts.lineHeight.custom,
       fontFamily: Fonts.type.interSemiBold,
     },
+    profileUsername: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.medium,
+      lineHeight: Fonts.lineHeight.sm,
+      fontFamily: Fonts.type.interMedium,
+    },
+    profileVerified: {
+      color: Colors.palette.gray,
+      fontSize: Fonts.size.small,
+      lineHeight: Fonts.lineHeight.xs,
+      fontFamily: Fonts.type.interRegular,
+    },
+    profileItem: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.normal,
+      lineHeight: Fonts.lineHeight.md,
+      fontFamily: Fonts.type.interRegular,
+    },
   },
   button: {
     bottom: {

@@ -19,6 +19,7 @@ export const palette = {
   borderGray: '#E7E8EA',
   emerald: '#34C759',
   alto: '#D6D6D6',
+  wildSand: '#F5F5F5',
 }
 
 export const Colors = {

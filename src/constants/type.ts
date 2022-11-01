@@ -26,6 +26,9 @@ export const PARAGRAPH_TYPE = {
   ALREADY_SIGN_IN: 'alreadySignIn',
   CONFIRM_AGREE: 'confirmAgree',
   TERM_AND_CONDITION: 'termAndCondition',
+  PROFILE_USERNAME: 'profileUsername',
+  PROFILE_VERIFIED: 'profileVerified',
+  PROFILE_ITEM: 'profileItem',
 }
 
 export const BUTTON_TYPE = {
