@@ -22,7 +22,7 @@ import {
 } from '@contexts/auth/actions/auth'
 
 // Constants
-import {AUTH_DATA, PARAGRAPH_TYPE, SCREEN_NAMES} from '@constants'
+import {AUTH_DATA, PARAGRAPH_TYPE, STACKS_NAMES} from '@constants'
 
 // Themes
 import {Colors, Icons, Metrics} from '@themes'
@@ -90,17 +90,17 @@ const Menu = ({navigation}: ISideMenuPros) => {
 
   // handle action navigate to Bag screen
   const handlePressBagIcon = useCallback(() => {
-    navigation.navigate(SCREEN_NAMES.BAG)
+    navigation.navigate(STACKS_NAMES.BAG_STACK)
   }, [])
 
   // handle action navigate to WishList screen
   const handlePressWishlistIcon = useCallback(() => {
-    navigation.navigate(SCREEN_NAMES.WISHLIST)
+    navigation.navigate(STACKS_NAMES.WISHLIST_STACK)
   }, [])
 
   // handle action navigate to Wallet screen
   const handlePressWalletIcon = useCallback(() => {
-    navigation.navigate(SCREEN_NAMES.WALLET)
+    navigation.navigate(STACKS_NAMES.WALLET_STACK)
   }, [])
 
   // Drawer List Item
