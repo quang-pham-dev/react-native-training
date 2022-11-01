@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  Dispatch,
-  useContext,
-  useMemo,
-  useReducer,
-} from 'react'
+import React, {createContext, Dispatch, useContext, useReducer} from 'react'
 
 // Context Reducer
 import authenticationReducer, {InitialAuthState} from './reducers/auth'
@@ -12,10 +6,12 @@ import authenticationReducer, {InitialAuthState} from './reducers/auth'
 // Types
 import {AuthState} from '@state-types'
 
-export const AuthContext = createContext<{
+type AuthContext = {
   state: AuthState
   dispatch: Dispatch<any>
-}>({
+}
+
+export const AuthContext = createContext<AuthContext>({
   state: InitialAuthState,
   dispatch: () => null,
 })
@@ -30,10 +26,10 @@ export const AuthContextProvider = ({
     InitialAuthState,
   )
 
-  const value = useMemo(() => ({state, dispatch}), [state])
-
   return (
-    <AuthContext.Provider value={value as any}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{state, dispatch} as AuthContext}>
+      {children}
+    </AuthContext.Provider>
   )
 }
 
