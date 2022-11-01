@@ -35,7 +35,7 @@ const GetStarted = ({navigation}: GetStartedProps) => {
 
   return (
     <>
-      <LayoutStyled.Main bgColor="red">
+      <LayoutStyled.Main>
         <ViewStyled.Custom pTop={vs(105)} pBottom={vs(185)}>
           <HeadingStyled textAlign="center" type={HEADING_TYPE.H1}>
             Let’s Get Started
