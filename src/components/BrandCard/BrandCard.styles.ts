@@ -4,7 +4,6 @@ import styled from 'styled-components/native'
 import {Colors, Metrics} from '@themes'
 
 export const BrandCardWrapperStyled = styled.TouchableOpacity`
-  flex: 1;
   justify-content: center;
   margin-right: ${Metrics.margin.small}px;
   background-color: ${Colors.palette.lightGray};
