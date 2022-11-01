@@ -16,7 +16,6 @@ import {IProduct, ProductListProps} from '@model-types'
 
 // Styles
 import PStyled from '@components/Paragraph/P.styles'
-import ViewStyled from '@components/View/View.styles'
 
 const ProductsList = ({
   onPressProductCard,
@@ -62,26 +61,24 @@ const ProductsList = ({
   const renderFooterComponent = () => <LoadingIndicator />
 
   return (
-    <ViewStyled.Custom h="100%" w="100%">
-      <FlatList
-        ref={listRef}
-        numColumns={2}
-        data={products}
-        // eslint-disable-next-line react-native/no-inline-styles
-        columnWrapperStyle={{justifyContent: 'space-between'}}
-        contentInsetAdjustmentBehavior="always"
-        initialNumToRender={6}
-        renderItem={renderProductCard}
-        keyExtractor={product => product.id}
-        showsVerticalScrollIndicator={false}
-        ListEmptyComponent={renderEmptyList}
-        ListFooterComponent={renderFooterComponent}
-        onEndReached={handleLoadMoreProducts}
-        onEndReachedThreshold={0.5}
-        onScroll={onScroll}
-        scrollEventThrottle={16}
-      />
-    </ViewStyled.Custom>
+    <FlatList
+      ref={listRef}
+      numColumns={2}
+      data={products}
+      // eslint-disable-next-line react-native/no-inline-styles
+      columnWrapperStyle={{justifyContent: 'space-between'}}
+      contentInsetAdjustmentBehavior="always"
+      initialNumToRender={6}
+      renderItem={renderProductCard}
+      keyExtractor={product => product.id}
+      showsVerticalScrollIndicator={false}
+      ListEmptyComponent={renderEmptyList}
+      ListFooterComponent={renderFooterComponent}
+      onEndReached={handleLoadMoreProducts}
+      onEndReachedThreshold={0.5}
+      onScroll={onScroll}
+      scrollEventThrottle={16}
+    />
   )
 }
 export default memo(ProductsList, isEqual)

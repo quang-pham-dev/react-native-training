@@ -65,7 +65,7 @@ const ProductCard = ({
       <PStyled.Base type={PARAGRAPH_TYPE.PRODUCT_NAME_AND_TYPE}>
         {title}
       </PStyled.Base>
-      <ViewStyled.Custom mVertical={Metrics.margin.tiny}>
+      <ViewStyled.Custom mBottom={Metrics.margin.tiny}>
         <PStyled.Base type={PARAGRAPH_TYPE.PRODUCT_NAME_AND_TYPE}>
           {type}
         </PStyled.Base>
