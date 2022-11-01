@@ -16,7 +16,6 @@ import {BrandCardListProps, BrandsListProps} from '@model-types'
 
 // Styles
 import PStyled from '@components/Paragraph/P.styles'
-import ViewStyled from '@components/View/View.styles'
 
 const BrandList = ({onPressBrandCard, brands}: BrandsListProps) => {
   // handle action when press card brand with id
@@ -44,7 +43,7 @@ const BrandList = ({onPressBrandCard, brands}: BrandsListProps) => {
   const renderFooterComponent = () => <LoadingIndicator />
 
   return (
-    <ViewStyled.Default>
+    <>
       <FlashList
         horizontal
         data={brands}
@@ -57,7 +56,7 @@ const BrandList = ({onPressBrandCard, brands}: BrandsListProps) => {
         onEndReached={handleLoadMoreBrands}
         onEndReachedThreshold={0.5}
       />
-    </ViewStyled.Default>
+    </>
   )
 }
 

@@ -14,5 +14,5 @@ export interface BrandCardListProps extends IBrand {}
 export interface BrandsListProps {
   brands: BrandCardListProps[]
   onPressBrandCard: (id: string) => void
-  onLoadMoreBrands?: () => void
+  onLoadMoreBrand?: () => void
 }
