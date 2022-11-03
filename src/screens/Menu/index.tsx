@@ -129,7 +129,7 @@ const Menu = ({navigation}: ISideMenuPros) => {
   return (
     <DrawerContentScrollView>
       <LayoutStyled.Main>
-        <ViewStyled.Custom pTop={vs(30)}>
+        <ViewStyled.Custom>
           <TouchableOpacity onPress={handleCloseMenu}>
             <IconStyled source={Icons.menuOpen} />
           </TouchableOpacity>
