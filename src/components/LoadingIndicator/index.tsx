@@ -19,7 +19,7 @@ type LoadingIndicatorProps = {
 
 const LoadingIndicator = ({
   size,
-  color = Colors.palette.white,
+  color = Colors.palette.primary,
 }: LoadingIndicatorProps) => (
   <ViewStyled.Custom>
     <ActivityIndicator size={size} color={color} />

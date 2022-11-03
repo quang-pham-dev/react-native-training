@@ -11,7 +11,7 @@ exports[`LoadingIndicator Component should render correctly 1`] = `
   }
 >
   <ActivityIndicator
-    color="#FFFFFF"
+    color="#3D93F8"
   />
 </View>
 `;
