@@ -26,6 +26,14 @@ import {AUTH_DATA} from '@constants'
 export type NavigatorParamList = {
   GetStarted: undefined
   Login: undefined
+  Home: undefined
+  BrandDetail: {
+    route?: {
+      params?: {
+        id: string
+      }
+    }
+  }
   // 🔥 Your screens go here
 }
 

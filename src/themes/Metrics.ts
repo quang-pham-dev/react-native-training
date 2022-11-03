@@ -203,6 +203,18 @@ const Metrics = {
       lineHeight: Fonts.lineHeight.md,
       fontFamily: Fonts.type.interRegular,
     },
+    brandDetailTitle: {
+      color: Colors.palette.gray,
+      fontSize: Fonts.size.normal,
+      lineHeight: Fonts.lineHeight.md,
+      fontFamily: Fonts.type.interRegular,
+    },
+    brandDetailItemCount: {
+      color: Colors.palette.black,
+      fontSize: Fonts.size.medium,
+      lineHeight: Fonts.lineHeight.md,
+      fontFamily: Fonts.type.interMedium,
+    },
   },
   button: {
     bottom: {

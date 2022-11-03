@@ -29,6 +29,8 @@ export const PARAGRAPH_TYPE = {
   PROFILE_USERNAME: 'profileUsername',
   PROFILE_VERIFIED: 'profileVerified',
   PROFILE_ITEM: 'profileItem',
+  BRAND_DETAIL_TITLE: 'brandDetailTitle',
+  BRAND_DETAIL_ITEM_COUNT: 'brandDetailItemCount',
 }
 
 export const BUTTON_TYPE = {

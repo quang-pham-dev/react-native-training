@@ -115,7 +115,7 @@ const BottomTabNavigator = () => {
         tabBarStyle: {
           paddingBottom: 0,
         },
-        headerShown: true,
+        headerShown: false,
       }}>
       {TabBarList.map((elem, index) => (
         <BottomTab.Screen

@@ -4,19 +4,32 @@ import React from 'react'
 import {Stack} from '@navigators'
 
 // Screens
-import {Home} from '@screens'
+import {Home, BrandDetail} from '@screens'
 
 // Constants
 import {SCREEN_NAMES} from '@constants'
 
-const BagStack = () => (
+// Themes
+import {Colors} from '@themes'
+
+const HomeStack = () => (
   <Stack.Navigator
     initialRouteName={SCREEN_NAMES.HOME}
     screenOptions={{
-      headerShown: false,
+      headerShadowVisible: false,
+      headerTransparent: true,
+      headerTitle: '',
+      headerTintColor: Colors.palette.black,
+      headerBackVisible: false,
+      headerTitleAlign: 'center',
+      headerBackTitleVisible: false,
+      headerStyle: {
+        backgroundColor: Colors.palette.transparent,
+      },
     }}>
     <Stack.Screen name={SCREEN_NAMES.HOME} component={Home} />
+    <Stack.Screen name={SCREEN_NAMES.BRAND_DETAIL} component={BrandDetail} />
   </Stack.Navigator>
 )
 
-export default BagStack
+export default HomeStack

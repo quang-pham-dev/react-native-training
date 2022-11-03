@@ -7,6 +7,7 @@ export enum SCREEN_NAMES {
   WALLET = 'Wallet',
   DUMMY = 'Dummy',
   MENU = 'Menu',
+  BRAND_DETAIL = 'BrandDetail',
 }
 
 export enum STACKS_NAMES {
