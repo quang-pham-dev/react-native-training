@@ -113,9 +113,7 @@ exports[`Product Card Component Should render correctly 1`] = `
       ]
     }
     type="productNameAndType"
-  >
-    Fila Sportswear Club Fleece
-  </Text>
+  />
   <View
     mBottom={5}
     style={
