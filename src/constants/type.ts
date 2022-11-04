@@ -31,6 +31,13 @@ export const PARAGRAPH_TYPE = {
   PROFILE_ITEM: 'profileItem',
   BRAND_DETAIL_TITLE: 'brandDetailTitle',
   BRAND_DETAIL_ITEM_COUNT: 'brandDetailItemCount',
+  PRODUCT_DETAIL_TITLE: 'productDetailTitle',
+  PRODUCT_DETAIL_CONTENT_TITLE: 'productDetailContentTitle',
+  PRODUCT_DETAIL_TITLE_SECTION: 'productDetailTitleSection',
+  PRODUCT_DETAIL_SIZE_GUIDE: 'productDetailSizeGuide',
+  PRODUCT_DETAIL_REVIEWS_VIEW_ALL: 'productDetailReviewsReviewAll',
+  PRODUCT_DETAIL_REVIEWS_USERNAME: 'productDetailReviewsUsername',
+  PRODUCT_DETAIL_REVIEWS_DATE_TIME: 'productDetailReviewsDateTime',
 }
 
 export const BUTTON_TYPE = {

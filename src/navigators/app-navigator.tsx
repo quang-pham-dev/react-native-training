@@ -34,6 +34,13 @@ export type NavigatorParamList = {
       }
     }
   }
+  ProductDetail: {
+    route?: {
+      params?: {
+        id: string
+      }
+    }
+  }
   // 🔥 Your screens go here
 }
 

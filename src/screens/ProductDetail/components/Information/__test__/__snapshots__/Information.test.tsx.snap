@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product detail information should render correctly 1`] = `
+<View
+  pVertical={15}
+  style={
+    Array [
+      Object {
+        "paddingVertical": 15,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <View
+    pBottom={8}
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingBottom": 8,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#8F959E",
+            "fontFamily": "Inter-Regular",
+            "fontSize": 13,
+            "lineHeight": 14.3,
+            "textAlign": "left",
+          },
+        ]
+      }
+      type="productDetailTitle"
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#8F959E",
+            "fontFamily": "Inter-Regular",
+            "fontSize": 13,
+            "lineHeight": 14.3,
+            "textAlign": "left",
+          },
+        ]
+      }
+      type="productDetailTitle"
+    >
+      Price
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1D1E20",
+            "fontFamily": "Inter-SemiBold",
+            "fontSize": 22,
+            "lineHeight": 24.2,
+            "textAlign": "left",
+          },
+        ]
+      }
+      type="productDetailContentTitle"
+    >
+      Cotton
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "textAlign": "left",
+          },
+        ]
+      }
+    >
+      $100
+    </Text>
+  </View>
+</View>
+`;

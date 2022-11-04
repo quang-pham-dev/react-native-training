@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product detail reviewers should render correctly 1`] = `
+<View
+  mTop={15}
+  style={
+    Array [
+      Object {
+        "marginTop": 15,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1D1E20",
+            "fontFamily": "Inter-SemiBold",
+            "fontSize": 17,
+            "lineHeight": 18.7,
+            "textAlign": "left",
+          },
+        ]
+      }
+      type="productDetailTitleSection"
+    >
+      Reviews
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3D93F8",
+            "fontFamily": "Inter-Regular",
+            "fontSize": 13,
+            "lineHeight": 14.3,
+            "textAlign": "left",
+          },
+        ]
+      }
+      type="productDetailReviewsReviewAll"
+    >
+      View All
+    </Text>
+  </View>
+  <View
+    pTop={15}
+    style={
+      Array [
+        Object {
+          "paddingTop": 15,
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <Image
+          alignSelf="center"
+          borderRadius={40}
+          height={40}
+          mRight={10}
+          resizeMode="cover"
+          source={
+            Object {
+              "uri": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "alignSelf": "center",
+                "borderRadius": 40,
+                "height": 40,
+                "marginRight": 10,
+                "resizeMode": "cover",
+                "width": 40,
+              },
+            ]
+          }
+          width={40}
+        />
+        <View
+          style={
+            Array [
+              Object {},
+            ]
+          }
+        >
+          <Text
+            mBottom={8}
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 16.5,
+                  "marginBottom": 8,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            type="productDetailReviewsUsername"
+          >
+            John Doe
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                },
+              ]
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../src/assets/icons/clock.webp",
+                }
+              }
+              style={
+                Array [
+                  Object {},
+                ]
+              }
+            />
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#8F959E",
+                    "fontFamily": "Inter-Medium",
+                    "fontSize": 11,
+                    "lineHeight": 11,
+                    "textAlign": "left",
+                  },
+                ]
+              }
+              type="productDetailReviewsDateTime"
+            >
+              13, Sep, 2020
+            </Text>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+        >
+          <Text
+            mRight={5}
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 16.5,
+                  "marginRight": 5,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            type="productDetailReviewsUsername"
+          >
+            4.5
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#8F959E",
+                  "fontFamily": "Inter-Medium",
+                  "fontSize": 11,
+                  "lineHeight": 11,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            type="productDetailReviewsDateTime"
+          >
+            rating
+          </Text>
+        </View>
+        <Image
+          source={
+            Object {
+              "testUri": "../../../src/assets/icons/start-rate.webp",
+            }
+          }
+          style={
+            Array [
+              Object {},
+            ]
+          }
+        />
+      </View>
+    </View>
+    <View
+      mTop={10}
+      style={
+        Array [
+          Object {
+            "marginTop": 10,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <Text
+        onTextLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "color": "#8F959E",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 15,
+              "lineHeight": 21,
+            },
+          ]
+        }
+      >
+        lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,adipisicing elit. Quisquam, quia.
+      </Text>
+    </View>
+  </View>
+</View>
+`;

@@ -24,9 +24,10 @@ export const palette = {
 
 export const Colors = {
   palette,
+  textSecondary: palette.primary,
+  textPrimary: palette.black,
   background: palette.white,
   whiteNavigation: palette.white,
   error: palette.red,
   red: palette.red,
-  textBold: palette.black,
 }

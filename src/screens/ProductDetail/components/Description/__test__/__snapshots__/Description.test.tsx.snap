@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product detail Description should render correctly 1`] = `
+Array [
+  <Text
+    mBottom={15}
+    style={
+      Array [
+        Object {
+          "color": "#1D1E20",
+          "fontFamily": "Inter-SemiBold",
+          "fontSize": 17,
+          "lineHeight": 18.7,
+          "marginBottom": 15,
+          "textAlign": "left",
+        },
+      ]
+    }
+    type="productDetailTitleSection"
+  >
+    Description
+  </Text>,
+  <Text
+    onTextLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "color": "#8F959E",
+          "fontFamily": "Inter-Regular",
+          "fontSize": 15,
+          "lineHeight": 21,
+        },
+      ]
+    }
+  >
+    Fila is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.
+  </Text>,
+]
+`;

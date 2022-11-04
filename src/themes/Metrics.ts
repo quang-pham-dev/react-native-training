@@ -100,13 +100,13 @@ const Metrics = {
 
   heading: {
     h1: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.massive,
       lineHeight: Fonts.lineHeight.xxl,
       fontFamily: Fonts.type.interSemiBold,
     },
     h2: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: 24,
       lineHeight: 29,
     },
@@ -120,43 +120,43 @@ const Metrics = {
 
   paragraph: {
     tiny: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.tiny,
       lineHeight: Fonts.lineHeight.tiny,
       fontFamily: Fonts.type.interRegular,
     },
     small: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.normal,
       lineHeight: Fonts.lineHeight.tiny,
       fontFamily: Fonts.type.interRegular,
     },
     medium: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.medium,
       lineHeight: Fonts.lineHeight.md,
       fontFamily: Fonts.type.interRegular,
     },
     larger: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.large,
       lineHeight: Fonts.lineHeight.lg,
       fontFamily: Fonts.type.interSemiBold,
     },
     brand: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.normal,
       lineHeight: Fonts.lineHeight.custom,
       fontFamily: Fonts.type.interMedium,
     },
     productNameAndType: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.tiny,
       lineHeight: mvs(15.4, VERTICAL_SCALE_FACTOR),
       fontFamily: Fonts.type.interMedium,
     },
     productPrice: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.small,
       lineHeight: mvs(14.3, VERTICAL_SCALE_FACTOR),
       fontFamily: Fonts.type.interSemiBold,
@@ -168,7 +168,7 @@ const Metrics = {
       fontFamily: Fonts.type.interRegular,
     },
     alreadySignIn: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.normal,
       lineHeight: Fonts.lineHeight.custom,
       fontFamily: Fonts.type.interMedium,
@@ -180,13 +180,13 @@ const Metrics = {
       fontFamily: Fonts.type.interRegular,
     },
     termAndCondition: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.small,
       lineHeight: Fonts.lineHeight.custom,
       fontFamily: Fonts.type.interSemiBold,
     },
     profileUsername: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.medium,
       lineHeight: Fonts.lineHeight.sm,
       fontFamily: Fonts.type.interMedium,
@@ -198,7 +198,7 @@ const Metrics = {
       fontFamily: Fonts.type.interRegular,
     },
     profileItem: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.normal,
       lineHeight: Fonts.lineHeight.md,
       fontFamily: Fonts.type.interRegular,
@@ -210,9 +210,51 @@ const Metrics = {
       fontFamily: Fonts.type.interRegular,
     },
     brandDetailItemCount: {
-      color: Colors.palette.black,
+      color: Colors.textPrimary,
       fontSize: Fonts.size.medium,
       lineHeight: Fonts.lineHeight.md,
+      fontFamily: Fonts.type.interMedium,
+    },
+    productDetailTitle: {
+      color: Colors.palette.gray,
+      fontSize: Fonts.size.small,
+      lineHeight: mvs(14.3, VERTICAL_SCALE_FACTOR),
+      fontFamily: Fonts.type.interRegular,
+    },
+    productDetailContentTitle: {
+      color: Colors.textPrimary,
+      fontSize: Fonts.size.large,
+      lineHeight: mvs(24.2, VERTICAL_SCALE_FACTOR),
+      fontFamily: Fonts.type.interSemiBold,
+    },
+    productDetailTitleSection: {
+      color: Colors.textPrimary,
+      fontSize: Fonts.size.medium,
+      lineHeight: mvs(18.7, VERTICAL_SCALE_FACTOR),
+      fontFamily: Fonts.type.interSemiBold,
+    },
+    productDetailSizeGuide: {
+      color: Colors.textSecondary,
+      fontSize: Fonts.size.normal,
+      lineHeight: Fonts.lineHeight.custom,
+      fontFamily: Fonts.type.interRegular,
+    },
+    productDetailReviewsReviewAll: {
+      color: Colors.textSecondary,
+      fontSize: Fonts.size.small,
+      lineHeight: mvs(14.3, VERTICAL_SCALE_FACTOR),
+      fontFamily: Fonts.type.interRegular,
+    },
+    productDetailReviewsUsername: {
+      color: Colors.textPrimary,
+      fontSize: Fonts.size.normal,
+      lineHeight: mvs(16.5, VERTICAL_SCALE_FACTOR),
+      fontFamily: Fonts.type.interMedium,
+    },
+    productDetailReviewsDateTime: {
+      color: Colors.palette.gray,
+      fontSize: Fonts.size.tiny,
+      lineHeight: Fonts.lineHeight.tiny,
       fontFamily: Fonts.type.interMedium,
     },
   },

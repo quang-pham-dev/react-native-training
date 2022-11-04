@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product detail TotalPrice should render correctly 1`] = `
+<View
+  pVertical={15}
+  style={
+    Array [
+      Object {
+        "paddingVertical": 15,
+        "width": "100%",
+      },
+    ]
+  }
+>
+  <View
+    pBottom={10}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingBottom": 10,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#1D1E20",
+            "fontFamily": "Inter-SemiBold",
+            "fontSize": 17,
+            "lineHeight": 18.7,
+            "textAlign": "left",
+          },
+        ]
+      }
+      type="productDetailTitleSection"
+    >
+      Size
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3D93F8",
+            "fontFamily": "Inter-Regular",
+            "fontSize": 15,
+            "lineHeight": 16.5,
+            "textAlign": "left",
+          },
+        ]
+      }
+      type="productDetailSizeGuide"
+    >
+      Size Guide
+    </Text>
+  </View>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+    horizontal={true}
+    showsHorizontalScrollIndicator={false}
+    style={
+      Array [
+        Object {},
+      ]
+    }
+  >
+    <View>
+      <View
+        pRight={9}
+        style={
+          Array [
+            Object {
+              "paddingRight": 9,
+            },
+          ]
+        }
+      >
+        <View
+          bRadius={10}
+          bgColor="#F5F6FA"
+          h={60}
+          pHorizontal={20}
+          pVertical={20}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#F5F6FA",
+                "borderRadius": 10,
+                "height": 60,
+                "paddingHorizontal": 20,
+                "paddingVertical": 20,
+                "width": 60,
+              },
+            ]
+          }
+          w={60}
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            S
+          </Text>
+        </View>
+      </View>
+      <View
+        pRight={9}
+        style={
+          Array [
+            Object {
+              "paddingRight": 9,
+            },
+          ]
+        }
+      >
+        <View
+          bRadius={10}
+          bgColor="#F5F6FA"
+          h={60}
+          pHorizontal={20}
+          pVertical={20}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#F5F6FA",
+                "borderRadius": 10,
+                "height": 60,
+                "paddingHorizontal": 20,
+                "paddingVertical": 20,
+                "width": 60,
+              },
+            ]
+          }
+          w={60}
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            M
+          </Text>
+        </View>
+      </View>
+      <View
+        pRight={9}
+        style={
+          Array [
+            Object {
+              "paddingRight": 9,
+            },
+          ]
+        }
+      >
+        <View
+          bRadius={10}
+          bgColor="#F5F6FA"
+          h={60}
+          pHorizontal={20}
+          pVertical={20}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#F5F6FA",
+                "borderRadius": 10,
+                "height": 60,
+                "paddingHorizontal": 20,
+                "paddingVertical": 20,
+                "width": 60,
+              },
+            ]
+          }
+          w={60}
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            L
+          </Text>
+        </View>
+      </View>
+      <View
+        pRight={9}
+        style={
+          Array [
+            Object {
+              "paddingRight": 9,
+            },
+          ]
+        }
+      >
+        <View
+          bRadius={10}
+          bgColor="#F5F6FA"
+          h={60}
+          pHorizontal={20}
+          pVertical={20}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#F5F6FA",
+                "borderRadius": 10,
+                "height": 60,
+                "paddingHorizontal": 20,
+                "paddingVertical": 20,
+                "width": 60,
+              },
+            ]
+          }
+          w={60}
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            XL
+          </Text>
+        </View>
+      </View>
+      <View
+        pRight={9}
+        style={
+          Array [
+            Object {
+              "paddingRight": 9,
+            },
+          ]
+        }
+      >
+        <View
+          bRadius={10}
+          bgColor="#F5F6FA"
+          h={60}
+          pHorizontal={20}
+          pVertical={20}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#F5F6FA",
+                "borderRadius": 10,
+                "height": 60,
+                "paddingHorizontal": 20,
+                "paddingVertical": 20,
+                "width": 60,
+              },
+            ]
+          }
+          w={60}
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            2XL
+          </Text>
+        </View>
+      </View>
+      <View
+        pRight={9}
+        style={
+          Array [
+            Object {
+              "paddingRight": 9,
+            },
+          ]
+        }
+      >
+        <View
+          bRadius={10}
+          bgColor="#F5F6FA"
+          h={60}
+          pHorizontal={20}
+          pVertical={20}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#F5F6FA",
+                "borderRadius": 10,
+                "height": 60,
+                "paddingHorizontal": 20,
+                "paddingVertical": 20,
+                "width": 60,
+              },
+            ]
+          }
+          w={60}
+        >
+          <Text
+            style={
+              Array [
+                Object {
+                  "textAlign": "center",
+                },
+              ]
+            }
+          >
+            3XL
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

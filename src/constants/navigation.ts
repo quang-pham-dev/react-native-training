@@ -8,6 +8,7 @@ export enum SCREEN_NAMES {
   DUMMY = 'Dummy',
   MENU = 'Menu',
   BRAND_DETAIL = 'BrandDetail',
+  PRODUCT_DETAIL = 'ProductDetail',
 }
 
 export enum STACKS_NAMES {

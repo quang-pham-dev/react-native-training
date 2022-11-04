@@ -1,6 +1,6 @@
 import {NativeScrollEvent, NativeSyntheticEvent} from 'react-native'
 
-export interface ProductSizeProps {
+export interface ProductSize {
   id: string
   size: string
 }
@@ -21,16 +21,17 @@ export interface IProduct {
   id: string
   brandId: string
   price: number
-  title?: string
-  name: string
+  vatPrice: number
+  name?: string
+  brandName: string
   type: string
   url: string
   description?: string
   reviewers: ReviewerProps
-  sizes: ProductSizeProps[]
+  sizes: ProductSize[]
   like?: boolean
   imagesPreview?: ImageReviewerProps[]
-  rating?: string
+  rating: string
   comment: string
 }
 

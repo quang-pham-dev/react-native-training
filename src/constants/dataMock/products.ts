@@ -3,11 +3,12 @@ import {IProduct} from '@model-types'
 export const product: IProduct = {
   id: '0',
   brandId: '2',
-  name: 'Fila',
+  brandName: 'Fila',
   price: 100,
+  vatPrice: 125,
   type: 'Cotton',
   like: true,
-  title: 'Fila Sportswear Club Fleece',
+  name: 'Fila Sportswear Club Fleece',
   url: 'https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774',
   description:
     "Fila is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
@@ -85,11 +86,12 @@ export const products: IProduct[] = [
   {
     id: '0',
     brandId: '2',
-    name: 'Fila',
+    brandName: 'Fila',
     price: 100,
+    vatPrice: 125,
     type: 'Cotton',
     like: true,
-    title: 'Fila Sportswear Club Fleece',
+    name: 'Fila Sportswear Club Fleece',
     url: 'https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774',
     description:
       "Fila is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
@@ -165,11 +167,12 @@ export const products: IProduct[] = [
   {
     id: '1',
     brandId: '0',
-    name: 'Nike',
+    brandName: 'Nike',
     price: 100,
+    vatPrice: 125,
     type: 'shoes',
     like: true,
-    title: 'Nike Sportswear Club Fleece',
+    name: 'Nike Sportswear Club Fleece',
     url: 'https://images.unsplash.com/photo-1611824204322-24963b44d68b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     description:
       "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
@@ -245,11 +248,12 @@ export const products: IProduct[] = [
   {
     id: '2',
     brandId: '0',
-    name: 'Nike',
+    brandName: 'Nike',
     price: 100,
+    vatPrice: 125,
     type: 'shoes',
     like: false,
-    title: 'Nike Sportswear Club Fleece',
+    name: 'Nike Sportswear Club Fleece',
     url: 'https://images.unsplash.com/photo-1611558709798-e009c8fd7706?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=782',
     description:
       "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
@@ -325,11 +329,12 @@ export const products: IProduct[] = [
   {
     id: '3',
     brandId: '3',
-    name: 'Puma',
+    brandName: 'Puma',
     like: false,
     price: 100,
+    vatPrice: 125,
     type: 'shoes',
-    title: 'Adidas Sportswear Fleece',
+    name: 'Adidas Sportswear Fleece',
     url: 'https://images.unsplash.com/photo-1612722432474-b971cdcea546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80',
     description:
       "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
@@ -405,11 +410,12 @@ export const products: IProduct[] = [
   {
     id: '4',
     brandId: '4',
-    name: 'Gucci',
+    brandName: 'Gucci',
     price: 100,
+    vatPrice: 125,
     type: 'Veston Man',
     like: false,
-    title: 'Gucci Sportswear Club Fleece',
+    name: 'Gucci Sportswear Club Fleece',
     url: 'https://cf.shopee.sg/file/0a96a3f84dc488099d74e8107742b6e9',
     description:
       "Gucci is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
@@ -479,11 +485,12 @@ export const products: IProduct[] = [
   {
     id: '5',
     brandId: '4',
-    name: 'Gucci',
+    brandName: 'Gucci',
     price: 100,
+    vatPrice: 125,
     type: 'shoes',
     like: true,
-    title: 'Fila Sportswear Club Fleece',
+    name: 'Fila Sportswear Club Fleece',
     url: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=708&q=80',
     description:
       "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
@@ -559,11 +566,12 @@ export const products: IProduct[] = [
   {
     id: '6',
     brandId: '5',
-    name: 'Puma',
+    brandName: 'Puma',
     price: 100,
+    vatPrice: 125,
     type: 'Unisex AMOUR',
     like: false,
-    title: 'Puma Unisex AMOUR Sneakers',
+    name: 'Puma Unisex AMOUR Sneakers',
     url: 'https://cf.shopee.vn/file/4d29fe1b7c914aa25feca4c6f6612a54',
     description:
       "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
@@ -633,11 +641,12 @@ export const products: IProduct[] = [
   {
     id: '7',
     brandId: '4',
-    name: 'Guci',
+    brandName: 'Guci',
     price: 100,
+    vatPrice: 125,
     type: 'Jean Close',
     like: false,
-    title: 'Jean  Body Close',
+    name: 'Jean  Body Close',
     url: 'https://cf.shopee.vn/file/93a89076e2c97e74f9bf0fbe401b4e97',
     description:
       "Guci is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",
@@ -707,11 +716,12 @@ export const products: IProduct[] = [
   {
     id: '9',
     brandId: '1',
-    name: 'Nike',
+    brandName: 'Nike',
     price: 180,
+    vatPrice: 125,
     type: 'Sport shoes',
     like: true,
-    title: 'Nike air max 97 golf shoes',
+    name: 'Nike air max 97 golf shoes',
     url: 'https://cf.shopee.vn/file/594942fd13ccef2379723095b3c05881',
     description:
       "Nike is a multinational corporation headquartered in Novi, Florida. It is the world's largest sports brand, with revenues in excess of $1.5 billion. The company was founded in 1908 by American football star Bill Belichick and retired quarterback Jack Nicklaus. Nike's products include apparel, shoes, equipment, and accessories. Nike also owns and operates the majority of the world's sporting goods brands, including Adidas, Puma, and Fila.",

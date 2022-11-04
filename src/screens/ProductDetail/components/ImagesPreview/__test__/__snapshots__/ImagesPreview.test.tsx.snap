@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product detail Images review should render correctly 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    Object {
+      "flexGrow": 1,
+    }
+  }
+  horizontal={true}
+  showsHorizontalScrollIndicator={false}
+  style={
+    Array [
+      Object {},
+    ]
+  }
+>
+  <View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        height={77}
+        mRight={10}
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "https://images.unsplash.com/photo-1618212158973-5e36714e374b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 77,
+              "marginRight": 10,
+              "resizeMode": "cover",
+              "width": 77,
+            },
+          ]
+        }
+        width={77}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        height={77}
+        mRight={10}
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "https://images.unsplash.com/photo-1516826957135-700dedea698c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 77,
+              "marginRight": 10,
+              "resizeMode": "cover",
+              "width": 77,
+            },
+          ]
+        }
+        width={77}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        height={77}
+        mRight={10}
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 77,
+              "marginRight": 10,
+              "resizeMode": "cover",
+              "width": 77,
+            },
+          ]
+        }
+        width={77}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        height={77}
+        mRight={10}
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 77,
+              "marginRight": 10,
+              "resizeMode": "cover",
+              "width": 77,
+            },
+          ]
+        }
+        width={77}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        height={77}
+        mRight={10}
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "https://images.unsplash.com/photo-1612462768418-d844d50931d2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 77,
+              "marginRight": 10,
+              "resizeMode": "cover",
+              "width": 77,
+            },
+          ]
+        }
+        width={77}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {},
+        ]
+      }
+    >
+      <Image
+        height={77}
+        mRight={10}
+        resizeMode="cover"
+        source={
+          Object {
+            "uri": "https://images.unsplash.com/photo-1613418035472-424391ded253?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=898&q=80",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "height": 77,
+              "marginRight": 10,
+              "resizeMode": "cover",
+              "width": 77,
+            },
+          ]
+        }
+        width={77}
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;
