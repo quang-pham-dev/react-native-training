@@ -10,7 +10,7 @@ import {
   SIGN_IN,
   SIGN_IN_FAILED,
   SIGN_IN_SUCCESS,
-} from '@contexts/auth/actions/auth'
+} from '@contexts/auth/action/auth'
 
 // Components
 import LoadingIndicator from '@components/LoadingIndicator'

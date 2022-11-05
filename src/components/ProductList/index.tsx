@@ -1,7 +1,8 @@
 import React, {memo, useCallback, useRef} from 'react'
+import {FlatList} from 'react-native'
+
 // LIBS
 import isEqual from 'react-fast-compare'
-import {FlatList} from 'react-native-gesture-handler'
 // import {FlashList} from '@shopify/flash-list'
 
 // Components

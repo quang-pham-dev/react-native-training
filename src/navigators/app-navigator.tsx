@@ -12,7 +12,7 @@ import {
   INITIALIZE,
   INITIALIZE_FAILED,
   INITIALIZE_SUCCESS,
-} from '@contexts/auth/actions/auth'
+} from '@contexts/auth/action/auth'
 
 // Services
 import {get} from '@services'

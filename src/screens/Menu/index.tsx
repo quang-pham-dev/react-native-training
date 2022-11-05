@@ -19,7 +19,7 @@ import {
   SIGN_OUT,
   SIGN_OUT_FAILED,
   SIGN_OUT_SUCCESS,
-} from '@contexts/auth/actions/auth'
+} from '@contexts/auth/action/auth'
 
 // Constants
 import {AUTH_DATA, PARAGRAPH_TYPE, STACKS_NAMES} from '@constants'

@@ -4,7 +4,6 @@ exports[`Product Card List Component Should render correctly 1`] = `
 <RCTScrollView
   ListEmptyComponent={[Function]}
   ListFooterComponent={[Function]}
-  collapsable={false}
   contentInsetAdjustmentBehavior="always"
   data={
     Array [
@@ -660,15 +659,11 @@ exports[`Product Card List Component Should render correctly 1`] = `
   }
   getItem={[Function]}
   getItemCount={[Function]}
-  handlerTag={1}
-  handlerType="NativeViewGestureHandler"
   initialNumToRender={6}
   keyExtractor={[Function]}
   onContentSizeChange={[Function]}
   onEndReached={[Function]}
   onEndReachedThreshold={0.5}
-  onGestureHandlerEvent={[Function]}
-  onGestureHandlerStateChange={[Function]}
   onLayout={[Function]}
   onMomentumScrollBegin={[Function]}
   onMomentumScrollEnd={[Function]}
@@ -677,21 +672,10 @@ exports[`Product Card List Component Should render correctly 1`] = `
   onScrollEndDrag={[Function]}
   removeClippedSubviews={false}
   renderItem={[Function]}
-  renderScrollComponent={[Function]}
   scrollEventThrottle={16}
   showsVerticalScrollIndicator={false}
   stickyHeaderIndices={Array []}
   viewabilityConfigCallbackPairs={Array []}
-  waitFor={
-    Array [
-      Object {
-        "current": null,
-      },
-      Object {
-        "current": null,
-      },
-    ]
-  }
 >
   <View>
     <View

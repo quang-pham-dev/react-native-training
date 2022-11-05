@@ -1,7 +1,7 @@
 import React, {createContext, Dispatch, useContext, useReducer} from 'react'
 
 // Context Reducer
-import authenticationReducer, {InitialAuthState} from './reducers/auth'
+import authenticationReducer, {InitialAuthState} from './reducer/auth'
 
 // Types
 import {AuthState} from '@state-types'
