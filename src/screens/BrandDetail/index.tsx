@@ -69,18 +69,7 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
           <IconStyled width={s(45)} height={s(45)} source={Icons.back} />
         </TouchableOpacity>
       ),
-
-      headerRight: () => (
-        <TouchableOpacity onPress={handlePressCart}>
-          <IconStyled width={s(45)} height={s(45)} source={Icons.cart} />
-        </TouchableOpacity>
-      ),
-    })
-  }, [handleBackArrow, handlePressCart, navigation])
-
-  return (
-    <LayoutStyled.Main>
-      <FlexStyled.CenterHorizontal pTop={vs(45)} pBottom={vs(25)}>
+      headerTitle: () => (
         <ViewStyled.Custom
           w={s(70)}
           h={s(45)}
@@ -97,12 +86,19 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
             }}
             resizeMode="cover"
           />
-          {/* <Header logoUrl={currentBrand[0]?.url} navigation={navigation} /> */}
         </ViewStyled.Custom>
-      </FlexStyled.CenterHorizontal>
-      {/* end header */}
+      ),
+      headerRight: () => (
+        <TouchableOpacity onPress={handlePressCart}>
+          <IconStyled width={s(45)} height={s(45)} source={Icons.cart} />
+        </TouchableOpacity>
+      ),
+    })
+  }, [handleBackArrow, handlePressCart, navigation])
 
-      <FlexStyled.Default flex={1} pBottom={vs(Metrics.padding.extraLarger)}>
+  return (
+    <LayoutStyled.Main pTop={vs(115)} pBottom={vs(Metrics.padding.extraLarger)}>
+      <>
         <FlexStyled.FlexSpaceBetweenCenter
           pBottom={vs(Metrics.padding.mediumPlus)}>
           <FlexStyled.Default>
@@ -142,7 +138,7 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
           onLoadMoreProduct={handleLoadMoreProduct}
         />
         {/* end Product List */}
-      </FlexStyled.Default>
+      </>
     </LayoutStyled.Main>
   )
 }

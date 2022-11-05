@@ -7,6 +7,11 @@ exports[`Brand List Component Should render correctly 1`] = `
   <RCTScrollView
     ListEmptyComponent={[Function]}
     ListFooterComponent={[Function]}
+    ListFooterComponentStyle={
+      Object {
+        "alignSelf": "center",
+      }
+    }
     applyWindowCorrection={[Function]}
     canChangeSize={true}
     contentContainerStyle={
@@ -123,6 +128,9 @@ exports[`Brand List Component Should render correctly 1`] = `
         "props": Object {
           "ListEmptyComponent": [Function],
           "ListFooterComponent": [Function],
+          "ListFooterComponentStyle": Object {
+            "alignSelf": "center",
+          },
           "data": Array [
             Object {
               "id": "0",

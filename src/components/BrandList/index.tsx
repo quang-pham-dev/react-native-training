@@ -43,20 +43,20 @@ const BrandList = ({onPressBrandCard, brands}: BrandsListProps) => {
   const renderFooterComponent = () => <LoadingIndicator />
 
   return (
-    <>
-      <FlashList
-        horizontal
-        data={brands}
-        estimatedItemSize={50}
-        renderItem={renderBrandCard}
-        keyExtractor={brand => brand.id}
-        showsHorizontalScrollIndicator={false}
-        ListEmptyComponent={renderEmptyList}
-        ListFooterComponent={renderFooterComponent}
-        onEndReached={handleLoadMoreBrands}
-        onEndReachedThreshold={0.5}
-      />
-    </>
+    <FlashList
+      horizontal
+      data={brands}
+      estimatedItemSize={50}
+      renderItem={renderBrandCard}
+      keyExtractor={brand => brand.id}
+      showsHorizontalScrollIndicator={false}
+      ListEmptyComponent={renderEmptyList}
+      ListFooterComponent={renderFooterComponent}
+      // eslint-disable-next-line react-native/no-inline-styles
+      ListFooterComponentStyle={{alignSelf: 'center'}}
+      onEndReached={handleLoadMoreBrands}
+      onEndReachedThreshold={0.5}
+    />
   )
 }
 
