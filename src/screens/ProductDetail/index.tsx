@@ -1,5 +1,5 @@
 import React, {useCallback, useLayoutEffect} from 'react'
-import {ScrollView, TouchableOpacity, View} from 'react-native'
+import {TouchableOpacity} from 'react-native'
 
 // Libs
 import {s} from 'react-native-size-matters/extend'
@@ -8,19 +8,20 @@ import {s} from 'react-native-size-matters/extend'
 import {NavigationPropsType} from '@navigators/app-navigator'
 
 // Components
-import {Button, BtnType} from '@components/Button'
+import {BtnType, Button} from '@components/Button'
 import Description from './components/Description'
 import ImagesPreview from './components/ImagesPreview'
 import Information from './components/Information'
-import ProductSize from './components/Sizes'
 import Reviews from './components/Reviews'
+import Sizes from './components/Sizes'
 import TotalPrice from './components/TotalPrice'
 
 // Style
+import FlexStyled from '@components/Flex/Flex.styles'
 import IconStyled from '@components/Icon/Icon.styles'
 import {Image} from '@components/Image/Image.styles'
-import FlexStyled from '@components/Flex/Flex.styles'
 import LayoutStyled from '@components/Layout/Layout.styles'
+import ViewStyled from '@components/View/View.styles'
 
 // Constants
 import {products} from '@constants'
@@ -65,16 +66,14 @@ const ProductDetail = ({navigation}: ProductDetailProps) => {
   }, [handleBackArrow, handlePressCart, navigation])
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
+    <ViewStyled.ScrollViewWrapper showsVerticalScrollIndicator={false}>
       <>
-        <View>
-          <Image.Normal
-            height={s(Metrics.screenHeight * 0.5)}
-            source={{
-              uri: products[0].url,
-            }}
-          />
-        </View>
+        <Image.Normal
+          height={s(Metrics.screenHeight * 0.5)}
+          source={{
+            uri: products[0].url,
+          }}
+        />
         <LayoutStyled.Main>
           {/* product detail information */}
           <Information
@@ -89,7 +88,7 @@ const ProductDetail = ({navigation}: ProductDetailProps) => {
           {/* end product detail images reviews */}
 
           {/* product detail size */}
-          <ProductSize sizes={products[0].sizes} />
+          <Sizes sizes={products[0].sizes} />
           {/* end product detail size */}
 
           {/* product detail description */}
@@ -116,7 +115,7 @@ const ProductDetail = ({navigation}: ProductDetailProps) => {
         </FlexStyled.FlexEnd>
         {/* end footer block */}
       </>
-    </ScrollView>
+    </ViewStyled.ScrollViewWrapper>
   )
 }
 

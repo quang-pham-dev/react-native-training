@@ -2,27 +2,35 @@
 
 exports[`Product detail Screen should render correctly 1`] = `
 <RCTScrollView
+  contentContainerStyle={
+    Object {
+      "flexGrow": 1,
+    }
+  }
   showsVerticalScrollIndicator={false}
+  style={
+    Array [
+      Object {},
+    ]
+  }
 >
   <View>
-    <View>
-      <Image
-        height={406}
-        source={
+    <Image
+      height={406}
+      source={
+        Object {
+          "uri": "https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
+        }
+      }
+      style={
+        Array [
           Object {
-            "uri": "https://images.unsplash.com/photo-1618212179058-8fc73c26668d?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774",
-          }
-        }
-        style={
-          Array [
-            Object {
-              "height": 406,
-              "width": "100%",
-            },
-          ]
-        }
-      />
-    </View>
+            "height": 406,
+            "width": "100%",
+          },
+        ]
+      }
+    />
     <View
       style={
         Array [
