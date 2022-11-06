@@ -14,8 +14,10 @@ exports[`Brand Card Component Should render correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
+      "alignItems": "center",
       "backgroundColor": "#F5F6FA",
       "borderRadius": 10,
+      "height": 50,
       "justifyContent": "center",
       "marginRight": 10,
       "opacity": 1,
@@ -37,22 +39,23 @@ exports[`Brand Card Component Should render correctly 1`] = `
       style={
         Array [
           Object {
+            "alignItems": "center",
             "backgroundColor": "#FFFFFF",
             "borderRadius": 10,
+            "height": 40,
+            "justifyContent": "center",
             "marginLeft": 5,
             "marginRight": 10,
             "marginVertical": 5,
-            "paddingBottom": 6,
-            "paddingLeft": 6,
-            "paddingRight": 6,
-            "paddingTop": 6,
+            "paddingHorizontal": 6,
+            "paddingVertical": 6,
+            "width": 40,
           },
         ]
       }
     >
       <Image
         alignSelf="center"
-        height={40}
         resizeMode="contain"
         source={
           Object {
@@ -63,13 +66,12 @@ exports[`Brand Card Component Should render correctly 1`] = `
           Array [
             Object {
               "alignSelf": "center",
-              "height": 40,
+              "height": "100%",
               "resizeMode": "contain",
-              "width": 40,
+              "width": "100%",
             },
           ]
         }
-        width={40}
       />
     </View>
     <Text

@@ -2,7 +2,6 @@ import React, {memo, useCallback} from 'react'
 
 // LIBS
 import isEqual from 'react-fast-compare'
-import {s} from 'react-native-size-matters/extend'
 
 // Types
 import {BrandCardProps} from '@model-types'
@@ -29,8 +28,6 @@ const BrandCard = ({brand, onPressBrandCard}: BrandCardProps) => {
         <ImageWrapperStyled>
           <Image.Normal
             alignSelf="center"
-            height={s(40)}
-            width={s(40)}
             source={{
               uri: url,
             }}

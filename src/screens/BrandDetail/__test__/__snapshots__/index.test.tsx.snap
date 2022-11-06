@@ -956,7 +956,9 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
                 ]
               }
               type="productNameAndType"
-            />
+            >
+              Fila Sportswear Club Fleece
+            </Text>
             <View
               mBottom={5}
               style={
@@ -1114,7 +1116,9 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
                 ]
               }
               type="productNameAndType"
-            />
+            >
+              Nike Sportswear Club Fleece
+            </Text>
             <View
               mBottom={5}
               style={
@@ -1290,7 +1294,9 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
                 ]
               }
               type="productNameAndType"
-            />
+            >
+              Nike Sportswear Club Fleece
+            </Text>
             <View
               mBottom={5}
               style={
@@ -1448,7 +1454,9 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
                 ]
               }
               type="productNameAndType"
-            />
+            >
+              Adidas Sportswear Fleece
+            </Text>
             <View
               mBottom={5}
               style={
@@ -1624,7 +1632,9 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
                 ]
               }
               type="productNameAndType"
-            />
+            >
+              Gucci Sportswear Club Fleece
+            </Text>
             <View
               mBottom={5}
               style={
@@ -1782,7 +1792,9 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
                 ]
               }
               type="productNameAndType"
-            />
+            >
+              Fila Sportswear Club Fleece
+            </Text>
             <View
               mBottom={5}
               style={
@@ -1958,7 +1970,9 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
                 ]
               }
               type="productNameAndType"
-            />
+            >
+              Puma Unisex AMOUR Sneakers
+            </Text>
             <View
               mBottom={5}
               style={
@@ -2116,7 +2130,9 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
                 ]
               }
               type="productNameAndType"
-            />
+            >
+              Jean  Body Close
+            </Text>
             <View
               mBottom={5}
               style={
@@ -2292,7 +2308,9 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
                 ]
               }
               type="productNameAndType"
-            />
+            >
+              Nike air max 97 golf shoes
+            </Text>
             <View
               mBottom={5}
               style={
