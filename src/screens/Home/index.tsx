@@ -1,40 +1,63 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useCallback, useLayoutEffect, useRef} from 'react'
-
-// Styles
-import LayoutStyled from '@components/Layout/Layout.styles'
-import PStyled from '@components/Paragraph/P.styles'
-
-// Constants
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+} from 'react'
 import {
-  brands,
-  HEADING_TYPE,
-  PARAGRAPH_TYPE,
-  products,
-  SCREEN_NAMES,
-} from '@constants'
-
-// Types
-import {NavigationPropsType} from '@navigators/app-navigator'
-import {
+  Alert,
   Animated,
   NativeScrollEvent,
   NativeSyntheticEvent,
   TouchableOpacity,
 } from 'react-native'
 
+// Libs
+import {s, vs} from 'react-native-size-matters/extend'
+import {DrawerActions} from '@react-navigation/native'
+
+// Navigation
+import {NavigationPropsType} from '@navigators/app-navigator'
+
+// Contexts
+import {
+  GET_BRANDS,
+  GET_BRANDS_FAILED,
+  GET_BRANDS_SUCCESS,
+} from '@contexts/brand/action/brand'
+import {useBrandContext} from '@contexts/brand/BrandContext'
+import {useProductContext} from '@contexts/product/ProductContext'
+import {
+  GET_PRODUCTS,
+  GET_PRODUCTS_FAILED,
+  GET_PRODUCTS_SUCCESS,
+} from '@contexts/product/action/product'
 import {useAuthContext} from '@contexts/auth/AuthContext'
-import ViewStyled from '@components/View/View.styles'
-import {vs} from 'react-native-size-matters'
-import HeadingStyled from '@components/Heading/Heading.styles'
-import {Icons, Metrics} from '@themes'
+
+// Apis
+import {brandService, productsService} from '@apis'
+
+// Styles
+import LayoutStyled from '@components/Layout/Layout.styles'
+import PStyled from '@components/Paragraph/P.styles'
 import SearchBar from '@components/SearchBar'
 import FlexStyled from '@components/Flex/Flex.styles'
 import BrandList from '@components/BrandList'
 import ProductList from '@components/ProductList'
 import IconStyled from '@components/Icon/Icon.styles'
-import {DrawerActions} from '@react-navigation/native'
-import {s} from 'react-native-size-matters/extend'
+import HeadingStyled from '@components/Heading/Heading.styles'
+import ViewStyled from '@components/View/View.styles'
+
+// Constants
+import {HEADING_TYPE, isIOS, PARAGRAPH_TYPE, SCREEN_NAMES} from '@constants'
+
+// Types
+import {IProduct} from '@model-types'
+
+// Themes
+import {Icons, Metrics} from '@themes'
 
 type HomeScreenProps = {
   navigation: NavigationPropsType
@@ -42,19 +65,33 @@ type HomeScreenProps = {
 
 const Home = ({navigation}: HomeScreenProps) => {
   const {state: authState} = useAuthContext()
+  const {state: brandState, dispatch: brandDispatch} = useBrandContext()
+  const {state: productState, dispatch: productDispatch} = useProductContext()
 
   const {currentUser} = authState || {}
+  const {brands, limit: brandsLimit} = brandState || {}
+  const {products, limit, searchValue} = productState || {}
 
+  // master data render products list
+  const productsMasterData = useMemo(
+    () =>
+      searchValue
+        ? products.filter((product: IProduct) =>
+            product.name.toLowerCase().includes(searchValue.toLowerCase()),
+          )
+        : products,
+    [searchValue, products],
+  )
   // animation values
   const animatedValue = useRef(new Animated.Value(0)).current
 
-  // Animation for the search bar
+  //  Animation for the search bar
   const SearchBarAnimation = {
     transform: [
       {
         translateY: animatedValue.interpolate({
           inputRange: [0, 50],
-          outputRange: [0, -145],
+          outputRange: [0, isIOS() ? vs(-135) : vs(-175)],
           extrapolate: 'clamp',
         }),
       },
@@ -75,7 +112,7 @@ const Home = ({navigation}: HomeScreenProps) => {
     ],
   }
 
-  // Animation for the header title
+  //  Animation for the header title
   const headerTitleAnimation = {
     transform: [
       {
@@ -100,7 +137,7 @@ const Home = ({navigation}: HomeScreenProps) => {
     }),
   }
 
-  // Animation for the brands card list
+  //  Animation for the brands card list
   const brandsAnimation = {
     transform: [
       {
@@ -118,7 +155,7 @@ const Home = ({navigation}: HomeScreenProps) => {
     }),
   }
 
-  // Animation for the products list
+  //  Animation for the products list
   const productListAnimation = {
     transform: [
       {
@@ -158,7 +195,7 @@ const Home = ({navigation}: HomeScreenProps) => {
     })
   }, [handleBackArrow, handlePressCart, navigation])
 
-  // Handle Animation on scroll Product list then sticky header
+  //  Handle Animation on scroll Product list then sticky header
   const handleScrollProductsList = useCallback(
     (event: NativeSyntheticEvent<NativeScrollEvent>) => {
       const {contentOffset} = event.nativeEvent
@@ -177,31 +214,88 @@ const Home = ({navigation}: HomeScreenProps) => {
   const handleLoadMoreBrand = () => {}
   const handlePressBrandCard = useCallback(
     (id: string) => {
-      navigation.navigate(SCREEN_NAMES.BRAND_DETAIL, '1'), console.log(id)
+      navigation.navigate(SCREEN_NAMES.BRAND_DETAIL, id)
     },
 
     [],
   )
-  const handlePressProductCard = () => {
-    console.log('handlePressProductCard')
-  }
+  //  handle action navigate to Product Detail Screen when press card product
+  const handlePressProductCard = useCallback((id: string) => {
+    navigation.navigate(SCREEN_NAMES.PRODUCT_DETAIL, id)
+  }, [])
   const handleLoadMoreProduct = () => {}
   const handlePressLikeProduct = () => {}
 
+  useEffect(() => {
+    //    GET BRANDS
+    let isCancelled = false
+    ;(async function getBrands(): Promise<void> {
+      brandDispatch({type: GET_BRANDS})
+      try {
+        const response = await brandService.getBrands(brandsLimit)
+        if (!isCancelled) {
+          const {data, pagination} = response.data || {}
+          const {_limit, _totalRows} = pagination || {}
+
+          brandDispatch({
+            type: GET_BRANDS_SUCCESS,
+            payload: {
+              data: {
+                brands: data,
+              },
+              totalRowsOfBrands: _totalRows,
+              limit: _limit,
+            },
+          })
+        }
+      } catch (error: any) {
+        if (!isCancelled) {
+          brandDispatch({
+            type: GET_BRANDS_FAILED,
+            payload: error,
+          })
+        }
+        Alert.alert('Error', error.message)
+      }
+    })()
+    ;(async function getProducts(): Promise<void> {
+      productDispatch({type: GET_PRODUCTS})
+
+      try {
+        const response = await productsService.getProducts(limit)
+        if (!isCancelled) {
+          const {data, pagination} = response.data || {}
+          const {_limit, _totalRows} = pagination || {}
+          productDispatch({
+            type: GET_PRODUCTS_SUCCESS,
+            payload: {
+              data: {
+                products: data,
+              },
+              totalRows: _totalRows,
+              limit: _limit,
+            },
+          })
+        }
+      } catch (error: any) {
+        if (!isCancelled) {
+          productDispatch({
+            type: GET_PRODUCTS_FAILED,
+            payload: error,
+          })
+        }
+        Alert.alert('Error', error.message)
+      }
+    })()
+
+    // cleanup
+    return () => {
+      isCancelled = true
+    }
+  }, [])
+
   return (
-    <LayoutStyled.Main pTop={vs(90)}>
-      {/* <Animated.View style={headerIconAnimation}>
-        <ViewStyled.Custom bgColor="red">
-          <FlexStyled.FlexSpaceBetween>
-            <TouchableOpacity onPress={handleOpenMenu}>
-              <IconStyled source={Icons.menu} />
-            </TouchableOpacity>
-
-            <IconStyled source={Icons.cart} />
-          </FlexStyled.FlexSpaceBetween>
-        </ViewStyled.Custom>
-      </Animated.View> */}
-
+    <LayoutStyled.Main pTop={vs(110)}>
       <Animated.View style={headerTitleAnimation}>
         <ViewStyled.Custom>
           <FlexStyled.RowCenterHorizontal>
@@ -221,37 +315,37 @@ const Home = ({navigation}: HomeScreenProps) => {
         </ViewStyled.Custom>
       </Animated.View>
 
-      <Animated.View style={SearchBarAnimation}>
-        <ViewStyled.Custom pTop={vs(Metrics.padding.mediumPlus)}>
-          <SearchBar onSubmitEditing={() => {}} />
-        </ViewStyled.Custom>
-      </Animated.View>
-
-      <Animated.View style={brandsAnimation}>
-        <ViewStyled.Custom pTop={vs(Metrics.padding.mediumPlus)}>
-          <FlexStyled.FlexSpaceBetween pBottom={vs(Metrics.padding.medium)}>
-            <PStyled.Base>Choose Brand</PStyled.Base>
-            <PStyled.Base>View All</PStyled.Base>
-          </FlexStyled.FlexSpaceBetween>
-
-          <ViewStyled.Custom w={Metrics.screenWidth}>
-            <BrandList
-              brands={brands}
-              onPressBrandCard={handlePressBrandCard}
-              onLoadMoreBrand={handleLoadMoreBrand}
-            />
+      <ViewStyled.Custom pBottom={vs(Metrics.screenHeight * 0.35)}>
+        <Animated.View style={SearchBarAnimation}>
+          <ViewStyled.Custom pTop={vs(Metrics.padding.mediumPlus)}>
+            <SearchBar onSubmitEditing={() => {}} />
           </ViewStyled.Custom>
-        </ViewStyled.Custom>
-      </Animated.View>
+        </Animated.View>
 
-      <ViewStyled.Custom flex={1}>
+        <Animated.View style={brandsAnimation}>
+          <ViewStyled.Custom pTop={vs(Metrics.padding.mediumPlus)}>
+            <FlexStyled.FlexSpaceBetween pBottom={vs(Metrics.padding.medium)}>
+              <PStyled.Base>Choose Brand</PStyled.Base>
+              <PStyled.Base>View All</PStyled.Base>
+            </FlexStyled.FlexSpaceBetween>
+
+            <ViewStyled.Custom w={Metrics.screenWidth}>
+              <BrandList
+                brands={brands}
+                onPressBrandCard={handlePressBrandCard}
+                onLoadMoreBrand={handleLoadMoreBrand}
+              />
+            </ViewStyled.Custom>
+          </ViewStyled.Custom>
+        </Animated.View>
+
         <Animated.View style={productListAnimation}>
           <FlexStyled.FlexSpaceBetween pVertical={vs(Metrics.padding.medium)}>
             <PStyled.Base>New Arrival</PStyled.Base>
             <PStyled.Base>View All</PStyled.Base>
           </FlexStyled.FlexSpaceBetween>
           <ProductList
-            products={products}
+            products={productsMasterData}
             onPressProductCard={handlePressProductCard}
             onLoadMoreProduct={handleLoadMoreProduct}
             onPressLikeProduct={handlePressLikeProduct}
