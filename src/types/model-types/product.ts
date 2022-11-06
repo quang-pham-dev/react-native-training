@@ -23,7 +23,7 @@ export interface IProduct {
   brandId: string
   price: number
   vatPrice: number
-  name?: string
+  name: string
   brandName: string
   type: string
   url: string

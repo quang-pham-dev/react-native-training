@@ -28,7 +28,7 @@ const ProductCard = ({
   onPressProductCard,
   onPressLikeProduct,
 }: IProductCardProps) => {
-  const {url, like, title, type, price} = product || {}
+  const {url, like, name, type, price} = product || {}
 
   // handle action press product card with id
   const handlePressCardProduct = useCallback(() => {
@@ -63,7 +63,7 @@ const ProductCard = ({
       </ImageWrapperStyled>
 
       <PStyled.Base type={PARAGRAPH_TYPE.PRODUCT_NAME_AND_TYPE}>
-        {title}
+        {name}
       </PStyled.Base>
       <ViewStyled.Custom mBottom={Metrics.margin.tiny}>
         <PStyled.Base type={PARAGRAPH_TYPE.PRODUCT_NAME_AND_TYPE}>
