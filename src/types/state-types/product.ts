@@ -4,6 +4,7 @@ export interface ProductsState {
   isLoading: boolean
   isProcessing: boolean
   error: string | null
+  product: any
   products: IProduct[]
   productsByBrandId: IProduct[]
   totalRows: number

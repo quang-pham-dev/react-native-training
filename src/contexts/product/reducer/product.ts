@@ -23,7 +23,7 @@ import {PRODUCT_PAGINATION} from '@constants'
 // Types
 import {ProductsAction, ProductsState} from '@state-types'
 
-export const InitialProductsState: ProductsState = {
+export const InitialProductState: ProductsState = {
   isLoading: false,
   isProcessing: true,
   error: null,
@@ -33,10 +33,11 @@ export const InitialProductsState: ProductsState = {
   totalRowsByBrandId: 0,
   searchValue: '',
   limit: PRODUCT_PAGINATION.PRODUCT_LIMIT,
+  product: {},
 }
 
 const productsReducer = (
-  state: typeof InitialProductsState,
+  state: typeof InitialProductState,
   action: ProductsAction,
 ) => {
   switch (action.type) {
@@ -71,12 +72,11 @@ const productsReducer = (
       }
 
     case GET_PRODUCT_SUCCESS:
-      const {product} = action.payload?.data
       return {
         ...state,
         type: action.type,
         isProcessing: false,
-        product,
+        product: action.payload?.data?.product,
       }
 
     case GET_PRODUCTS_BY_BRAND_ID_SUCCESS:

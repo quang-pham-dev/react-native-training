@@ -2210,21 +2210,7 @@ exports[`Product Card List Component Should render correctly 1`] = `
     </View>
     <View
       onLayout={[Function]}
-    >
-      <View
-        style={
-          Array [
-            Object {
-              "width": "100%",
-            },
-          ]
-        }
-      >
-        <ActivityIndicator
-          color="#3D93F8"
-        />
-      </View>
-    </View>
+    />
   </View>
 </RCTScrollView>
 `;

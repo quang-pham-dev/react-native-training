@@ -3,7 +3,9 @@ import {FlatList} from 'react-native'
 
 // LIBS
 import isEqual from 'react-fast-compare'
-// import {FlashList} from '@shopify/flash-list'
+
+// Contexts
+import {useProductContext} from '@contexts/product/ProductContext'
 
 // Components
 import ProductCard from '@components/ProductCard'
@@ -23,10 +25,43 @@ const ProductsList = ({
   products,
   onPressLikeProduct,
   onScroll,
+  onLoadMoreProducts,
 }: ProductListProps) => {
   const listRef = useRef<FlatList<IProduct> | null>(null)
+
+  const {state: productState} = useProductContext()
+
+  const {
+    isLoading,
+    totalRows,
+    productsByBrandId,
+    totalRowsByBrandId,
+    products: allProduct,
+  } = productState || {}
+
   // handle action load more products
-  const handleLoadMoreProducts = () => {}
+  const handleLoadMoreProducts = () => {
+    let cacheEndReached = null
+    let productList = []
+    let totalProduct = 0
+
+    if (totalRows > totalRowsByBrandId) {
+      productList = allProduct
+      totalProduct = totalRows
+
+      productList?.length < totalProduct &&
+        (cacheEndReached = onLoadMoreProducts)
+    }
+    if (totalRowsByBrandId <= totalRows) {
+      productList = productsByBrandId
+      totalProduct = totalRowsByBrandId
+
+      productList?.length < totalProduct &&
+        (cacheEndReached = onLoadMoreProducts)
+    }
+
+    return cacheEndReached
+  }
 
   // handle action when press product card with id
   const handlePressProductCard = useCallback(
@@ -59,7 +94,7 @@ const ProductsList = ({
   )
 
   // handle render Footer component
-  const renderFooterComponent = () => <LoadingIndicator />
+  const renderFooterComponent = () => (isLoading ? <LoadingIndicator /> : null)
 
   return (
     <FlatList

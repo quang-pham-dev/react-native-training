@@ -21,7 +21,7 @@ type InformationProps = {
   price?: number
 }
 
-const Information = ({name, type, price}: InformationProps) => {
+const Information = ({name, type, price = 0}: InformationProps) => {
   return (
     <ViewStyled.Custom pVertical={vs(Metrics.padding.medium)}>
       <FlexStyled.FlexSpaceBetween pBottom={vs(8)}>

@@ -26,13 +26,15 @@ const getProducts = async (limit: number): Promise<ProductResponse> => {
 }
 
 // get product by id
-const getProductById = async (id: string): Promise<ProductResponse> => {
+const getProductById = async (
+  id: string | undefined,
+): Promise<ProductResponse> => {
   return await http.get(`${ENDPOINTS.PRODUCT.GET_PRODUCTS}?id=${id}`)
 }
 
 // get product by brand id
 const getProductsByBrandId = async (
-  id: string,
+  id: string | undefined,
   limit: number,
 ): Promise<ProductResponse> => {
   return await http.get(

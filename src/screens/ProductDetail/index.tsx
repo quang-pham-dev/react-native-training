@@ -1,5 +1,5 @@
-import React, {useCallback, useLayoutEffect} from 'react'
-import {TouchableOpacity} from 'react-native'
+import React, {useCallback, useEffect, useLayoutEffect} from 'react'
+import {Alert, TouchableOpacity} from 'react-native'
 
 // Libs
 import {s} from 'react-native-size-matters/extend'
@@ -23,11 +23,16 @@ import {Image} from '@components/Image/Image.styles'
 import LayoutStyled from '@components/Layout/Layout.styles'
 import ViewStyled from '@components/View/View.styles'
 
-// Constants
-import {products} from '@constants'
-
 // Themes
 import {Icons, Metrics} from '@themes'
+import {useProductContext} from '@contexts/product/ProductContext'
+import {
+  GET_PRODUCT,
+  GET_PRODUCT_FAILED,
+  GET_PRODUCT_SUCCESS,
+} from '@contexts/product/action/product'
+import {productsService} from '@apis'
+import LoadingIndicator from '@components/LoadingIndicator'
 
 type ProductDetailProps = {
   navigation: NavigationPropsType
@@ -38,7 +43,25 @@ type ProductDetailProps = {
   }
 }
 
-const ProductDetail = ({navigation}: ProductDetailProps) => {
+const ProductDetail = ({navigation, route}: ProductDetailProps) => {
+  const {id} = route?.params || {}
+  const {state: productState, dispatch: productDispatch} = useProductContext()
+
+  const {product, isProcessing} = productState || {}
+  const {
+    url,
+    name,
+    price,
+    vatPrice,
+    type,
+    description,
+    imagesPreview,
+    sizes,
+    reviewers,
+    comment,
+    rating,
+  } = product[0] || product
+
   // handle action press button add to cart
   const handlePressAddToCartIcon = useCallback(() => {}, [])
 
@@ -65,56 +88,87 @@ const ProductDetail = ({navigation}: ProductDetailProps) => {
     })
   }, [handleBackArrow, handlePressCart, navigation])
 
+  useEffect(() => {
+    // Get product by id
+    let isCancelled = false
+    ;(async function getProductById(): Promise<void> {
+      productDispatch({type: GET_PRODUCT})
+      try {
+        const response = await productsService.getProductById(id)
+        if (!isCancelled) {
+          productDispatch({
+            type: GET_PRODUCT_SUCCESS,
+            payload: {
+              data: {
+                product: response?.data,
+              },
+            },
+          })
+        }
+      } catch (error: any) {
+        if (!isCancelled) {
+          productDispatch({
+            type: GET_PRODUCT_FAILED,
+            payload: error,
+          })
+        }
+        Alert.alert('Error', error.message)
+      }
+    })()
+
+    // clean up
+    return () => {
+      isCancelled = true
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <ViewStyled.ScrollViewWrapper showsVerticalScrollIndicator={false}>
-      <>
-        <Image.Normal
-          height={s(Metrics.screenHeight * 0.5)}
-          source={{
-            uri: products[0].url,
-          }}
-        />
-        <LayoutStyled.Main>
-          {/* product detail information */}
-          <Information
-            name={products[0].name}
-            type={products[0].type}
-            price={products[0].price}
+      {isProcessing ? (
+        <LoadingIndicator />
+      ) : (
+        <>
+          <Image.Normal
+            height={s(Metrics.screenHeight * 0.5)}
+            source={{
+              uri: url,
+            }}
           />
-          {/* end product detail information */}
+          <LayoutStyled.Main>
+            {/* product detail information */}
+            <Information name={name} type={type} price={price} />
+            {/* end product detail information */}
 
-          {/* product detail images reviews */}
-          <ImagesPreview imagesPreview={products[0].imagesPreview} />
-          {/* end product detail images reviews */}
+            {/* product detail images reviews */}
+            <ImagesPreview imagesPreview={imagesPreview} />
+            {/* end product detail images reviews */}
 
-          {/* product detail size */}
-          <Sizes sizes={products[0].sizes} />
-          {/* end product detail size */}
+            {/* product detail size */}
+            <Sizes sizes={sizes} />
+            {/* end product detail size */}
 
-          {/* product detail description */}
-          <Description description={products[0].description} />
-          {/* end product detail description */}
+            {/* product detail description */}
+            <Description description={description} />
+            {/* end product detail description */}
 
-          {/* product detail Review */}
-          <Reviews
-            reviewers={products[0].reviewers}
-            comment={products[0].comment}
-            rating={products[0].rating}
-          />
-          {/* end product Review  */}
+            {/* product detail Review */}
+            <Reviews reviewers={reviewers} comment={comment} rating={rating} />
+            {/* end product Review  */}
 
-          <TotalPrice vatPrice={products[0].vatPrice} />
-        </LayoutStyled.Main>
+            <TotalPrice vatPrice={vatPrice} />
+          </LayoutStyled.Main>
 
-        <FlexStyled.FlexEnd>
-          <Button
-            type={BtnType.BOTTOM}
-            onPress={handlePressAddToCartIcon}
-            label="Add to Cart"
-          />
-        </FlexStyled.FlexEnd>
-        {/* end footer block */}
-      </>
+          <FlexStyled.FlexEnd>
+            <Button
+              type={BtnType.BOTTOM}
+              onPress={handlePressAddToCartIcon}
+              label="Add to Cart"
+            />
+          </FlexStyled.FlexEnd>
+          {/* end footer block */}
+        </>
+      )}
     </ViewStyled.ScrollViewWrapper>
   )
 }

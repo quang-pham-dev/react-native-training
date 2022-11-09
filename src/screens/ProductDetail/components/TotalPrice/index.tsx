@@ -20,7 +20,7 @@ type TotalPriceProps = {
   vatPrice: number
 }
 
-const TotalPrice = ({vatPrice}: TotalPriceProps) => (
+const TotalPrice = ({vatPrice = 0}: TotalPriceProps) => (
   <ViewStyled.Custom pVertical={Metrics.padding.mediumPlus}>
     <FlexStyled.FlexSpaceBetweenCenter>
       <FlexStyled.RowCenterHorizontal>

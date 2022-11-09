@@ -1,7 +1,7 @@
 import React, {createContext, Dispatch, useContext, useReducer} from 'react'
 
 // Context Reducer
-import productsReducer, {InitialProductsState} from './reducer/product'
+import productsReducer, {InitialProductState} from './reducer/product'
 
 // Types
 import {ProductsState} from '@state-types'
@@ -12,7 +12,7 @@ type ProductsContext = {
 }
 
 export const ProductsContext = createContext<ProductsContext>({
-  state: InitialProductsState,
+  state: InitialProductState,
   dispatch: () => null,
 })
 
@@ -23,7 +23,7 @@ export const ProductContextProvider = ({
 }): JSX.Element => {
   const [state, dispatch] = useReducer<any>(
     productsReducer,
-    InitialProductsState,
+    InitialProductState,
   )
 
   return (
