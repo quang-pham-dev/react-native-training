@@ -26,6 +26,9 @@ import {
   GET_BRANDS,
   GET_BRANDS_FAILED,
   GET_BRANDS_SUCCESS,
+  LOAD_MORE_BRANDS,
+  LOAD_MORE_BRANDS_FAILED,
+  LOAD_MORE_BRANDS_SUCCESS,
 } from '@contexts/brand/action/brand'
 import {useBrandContext} from '@contexts/brand/BrandContext'
 import {useProductContext} from '@contexts/product/ProductContext'
@@ -33,6 +36,9 @@ import {
   GET_PRODUCTS,
   GET_PRODUCTS_FAILED,
   GET_PRODUCTS_SUCCESS,
+  LOAD_MORE_PRODUCTS,
+  LOAD_MORE_PRODUCTS_FAILED,
+  LOAD_MORE_PRODUCTS_SUCCESS,
 } from '@contexts/product/action/product'
 import {useAuthContext} from '@contexts/auth/AuthContext'
 
@@ -51,7 +57,14 @@ import HeadingStyled from '@components/Heading/Heading.styles'
 import ViewStyled from '@components/View/View.styles'
 
 // Constants
-import {HEADING_TYPE, isIOS, PARAGRAPH_TYPE, SCREEN_NAMES} from '@constants'
+import {
+  BRAND_PAGINATION,
+  HEADING_TYPE,
+  isIOS,
+  PARAGRAPH_TYPE,
+  PRODUCT_PAGINATION,
+  SCREEN_NAMES,
+} from '@constants'
 
 // Types
 import {IProduct} from '@model-types'
@@ -211,20 +224,76 @@ const Home = ({navigation}: HomeScreenProps) => {
     [animatedValue],
   )
 
-  const handleLoadMoreBrand = () => {}
-  const handlePressBrandCard = useCallback(
-    (id: string) => {
-      navigation.navigate(SCREEN_NAMES.BRAND_DETAIL, id)
-    },
+  // handle Load More Brands
+  const handleLoadMoreBrands = useCallback(async () => {
+    brandDispatch({type: LOAD_MORE_BRANDS})
 
+    try {
+      const response = await brandService.getBrands(
+        brandsLimit + BRAND_PAGINATION.BRAND_LIMIT,
+      )
+      const {data, pagination} = response.data || {}
+      const {_limit} = pagination || {}
+      brandDispatch({
+        type: LOAD_MORE_BRANDS_SUCCESS,
+        payload: {
+          data: {
+            brands: data,
+          },
+          limit: _limit,
+        },
+      })
+    } catch (error: any) {
+      brandDispatch({
+        type: LOAD_MORE_BRANDS_FAILED,
+
+        payload: error,
+      })
+
+      Alert.alert('Error', error.message)
+    }
+  }, [brandsLimit])
+
+  // handle Load More Products
+  const handleLoadMoreProducts = useCallback(async () => {
+    productDispatch({type: LOAD_MORE_PRODUCTS})
+
+    try {
+      const response = await productsService.getProducts(
+        limit + PRODUCT_PAGINATION.PRODUCT_LIMIT,
+      )
+      const {data, pagination} = response.data || {}
+      const {_limit} = pagination || {}
+      productDispatch({
+        type: LOAD_MORE_PRODUCTS_SUCCESS,
+        payload: {
+          data: {
+            products: data,
+          },
+          limit: _limit,
+        },
+      })
+    } catch (error: any) {
+      productDispatch({
+        type: LOAD_MORE_PRODUCTS_FAILED,
+        payload: error,
+      })
+
+      Alert.alert('Error', error.message)
+    }
+  }, [limit])
+
+  const handlePressLikeProduct = () => {}
+
+  const handlePressBrandCard = useCallback(
+    (id: string) => navigation.navigate(SCREEN_NAMES.BRAND_DETAIL, {id}),
     [],
   )
   //  handle action navigate to Product Detail Screen when press card product
-  const handlePressProductCard = useCallback((id: string) => {
-    navigation.navigate(SCREEN_NAMES.PRODUCT_DETAIL, id)
-  }, [])
-  const handleLoadMoreProduct = () => {}
-  const handlePressLikeProduct = () => {}
+  const handlePressProductCard = useCallback(
+    (id: string) => navigation.navigate(SCREEN_NAMES.PRODUCT_DETAIL, {id}),
+    [],
+  )
 
   useEffect(() => {
     //    GET BRANDS
@@ -333,7 +402,7 @@ const Home = ({navigation}: HomeScreenProps) => {
               <BrandList
                 brands={brands}
                 onPressBrandCard={handlePressBrandCard}
-                onLoadMoreBrand={handleLoadMoreBrand}
+                onLoadMoreBrands={handleLoadMoreBrands}
               />
             </ViewStyled.Custom>
           </ViewStyled.Custom>
@@ -347,7 +416,7 @@ const Home = ({navigation}: HomeScreenProps) => {
           <ProductList
             products={productsMasterData}
             onPressProductCard={handlePressProductCard}
-            onLoadMoreProduct={handleLoadMoreProduct}
+            onLoadMoreProducts={handleLoadMoreProducts}
             onPressLikeProduct={handlePressLikeProduct}
             onScroll={handleScrollProductsList}
           />
