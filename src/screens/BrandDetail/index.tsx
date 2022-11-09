@@ -1,5 +1,5 @@
-import React, {useCallback, useLayoutEffect, useMemo} from 'react'
-import {TouchableOpacity} from 'react-native'
+import React, {useCallback, useEffect, useLayoutEffect, useMemo} from 'react'
+import {Alert, TouchableOpacity} from 'react-native'
 
 // LIBS
 import {vs, s} from 'react-native-size-matters/extend'
@@ -11,7 +11,7 @@ import {NavigationPropsType} from '@navigators/app-navigator'
 import ProductList from '@components/ProductList'
 
 // Constants
-import {brands, PARAGRAPH_TYPE, products} from '@constants'
+import {PARAGRAPH_TYPE, PRODUCT_PAGINATION, SCREEN_NAMES} from '@constants'
 
 // Styles
 import FlexStyled from '@components/Flex/Flex.styles'
@@ -26,12 +26,23 @@ import {IBrand} from '@model-types'
 
 // Themes
 import {Colors, Icons, Metrics} from '@themes'
+import {useBrandContext} from '@contexts/brand/BrandContext'
+import {useProductContext} from '@contexts/product/ProductContext'
+import {
+  GET_PRODUCTS_BY_BRAND_ID,
+  GET_PRODUCTS_BY_BRAND_ID_FAILED,
+  GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
+} from '@contexts/product/action/product'
+import {productsService} from '@apis'
 
 type BrandDetailProps = {
   navigation: NavigationPropsType
   route?: {
     params?: {
-      id: string
+      id?: string
     }
   }
 }
@@ -39,21 +50,59 @@ type BrandDetailProps = {
 const BrandDetail = ({navigation, route}: BrandDetailProps) => {
   const {id} = route?.params || {}
 
+  const {state: brandState} = useBrandContext()
+
+  const {state: productState, dispatch: productDispatch} = useProductContext()
+
+  const {brands} = brandState || {}
+
+  const {productsByBrandId, isProcessing, limit, totalRowsByBrandId} =
+    productState || {}
+
   // Get current brand
   const currentBrand = useMemo(
     () => brands.filter((brand: IBrand) => brand.id === id),
-    [id],
+    [brands, id],
   )
-
-  console.log(currentBrand)
 
   // Handle like product
   const handlePressLikeProduct = useCallback(() => {}, [])
 
   // Handle action navigate to Product Detail Screen
-  const handlePressProductCard = useCallback(() => {}, [])
+  const handlePressProductCard = useCallback(
+    (productId: string) =>
+      navigation.navigate(SCREEN_NAMES.PRODUCT_DETAIL, {id: productId}),
+    [navigation],
+  )
+  // Handle load more products
+  const handleLoadMoreProducts = useCallback(async () => {
+    productDispatch({type: LOAD_MORE_PRODUCTS_BY_BRAND_ID})
 
-  const handleLoadMoreProduct = useCallback(() => {}, [])
+    try {
+      const response = await productsService.getProductsByBrandId(
+        id,
+        limit + PRODUCT_PAGINATION.PRODUCT_LIMIT,
+      )
+      const {data, pagination} = response.data || {}
+      const {_limit} = pagination || {}
+      productDispatch({
+        type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
+        payload: {
+          data: {
+            productsByBrandId: data,
+          },
+          limit: _limit,
+        },
+      })
+    } catch (error: any) {
+      productDispatch({
+        type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
+        payload: error,
+      })
+
+      Alert.alert('Error', error.message)
+    }
+  }, [id, limit, productDispatch])
 
   const handleBackArrow = useCallback(() => {
     navigation.goBack()
@@ -82,9 +131,9 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
             height={s(25)}
             width={s(50)}
             source={{
-              uri: 'https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png',
+              uri: currentBrand[0]?.url,
             }}
-            resizeMode="cover"
+            resizeMode="contain"
           />
         </ViewStyled.Custom>
       ),
@@ -94,7 +143,50 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
         </TouchableOpacity>
       ),
     })
-  }, [handleBackArrow, handlePressCart, navigation])
+  }, [currentBrand, handleBackArrow, handlePressCart, navigation])
+
+  useEffect(() => {
+    // Get products by brand id
+    let isCancelled = false
+    ;(async function getProductsByBrandId(): Promise<void> {
+      productDispatch({type: GET_PRODUCTS_BY_BRAND_ID})
+
+      try {
+        const response = await productsService.getProductsByBrandId(
+          id,
+          PRODUCT_PAGINATION.PRODUCT_LIMIT,
+        )
+
+        if (!isCancelled) {
+          const {data, pagination} = response?.data || {}
+          const {_limit, _totalRows} = pagination || {}
+          productDispatch({
+            type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
+            payload: {
+              data: {
+                productsByBrandId: data,
+              },
+              limit: _limit,
+              totalRowsByBrandId: _totalRows,
+            },
+          })
+        }
+      } catch (error: any) {
+        if (!isCancelled) {
+          productDispatch({
+            type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
+            payload: error,
+          })
+        }
+        Alert.alert('Error', error.message)
+      }
+    })()
+
+    return () => {
+      isCancelled = true
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <LayoutStyled.Main pTop={vs(115)} pBottom={vs(Metrics.padding.extraLarger)}>
@@ -102,10 +194,9 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
         <FlexStyled.FlexSpaceBetweenCenter
           pBottom={vs(Metrics.padding.mediumPlus)}>
           <FlexStyled.Default>
-            <PStyled.Base
-              type={
-                PARAGRAPH_TYPE.BRAND_DETAIL_ITEM_COUNT
-              }>{`${10} Items`}</PStyled.Base>
+            <PStyled.Base type={PARAGRAPH_TYPE.BRAND_DETAIL_ITEM_COUNT}>{`${
+              isProcessing ? 0 : totalRowsByBrandId
+            } Items`}</PStyled.Base>
 
             <PStyled.Base
               type={PARAGRAPH_TYPE.BRAND_DETAIL_TITLE}
@@ -132,10 +223,10 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
         {/* end content header */}
 
         <ProductList
-          products={products}
+          products={productsByBrandId}
           onPressLikeProduct={handlePressLikeProduct}
           onPressProductCard={handlePressProductCard}
-          onLoadMoreProduct={handleLoadMoreProduct}
+          onLoadMoreProducts={handleLoadMoreProducts}
         />
         {/* end Product List */}
       </>

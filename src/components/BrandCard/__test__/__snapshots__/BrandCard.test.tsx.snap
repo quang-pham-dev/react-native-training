@@ -14,11 +14,9 @@ exports[`Brand Card Component Should render correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Object {
-      "alignItems": "center",
       "backgroundColor": "#F5F6FA",
       "borderRadius": 10,
       "height": 50,
-      "justifyContent": "center",
       "marginRight": 10,
       "opacity": 1,
       "paddingRight": 15,

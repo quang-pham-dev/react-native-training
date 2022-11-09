@@ -1,8 +1,11 @@
 import React, {memo, useCallback} from 'react'
+import {FlatList} from 'react-native'
 
 // LIBS
 import isEqual from 'react-fast-compare'
-import {FlashList} from '@shopify/flash-list'
+
+// Contexts
+import {useBrandContext} from '@contexts/brand/BrandContext'
 
 // Components
 import BrandCard from '@components/BrandCard'
@@ -17,7 +20,14 @@ import {BrandCardListProps, BrandsListProps} from '@model-types'
 // Styles
 import PStyled from '@components/Paragraph/P.styles'
 
-const BrandList = ({onPressBrandCard, brands}: BrandsListProps) => {
+const BrandList = ({
+  onPressBrandCard,
+  brands,
+  onLoadMoreBrands,
+}: BrandsListProps) => {
+  const {state: brandState} = useBrandContext()
+
+  const {totalRowsOfBrands, isLoading} = brandState || {}
   // handle action when press card brand with id
   const handlePressBrandCard = useCallback(
     (id: string) => {
@@ -27,7 +37,12 @@ const BrandList = ({onPressBrandCard, brands}: BrandsListProps) => {
   )
 
   // handle action load more brands
-  const handleLoadMoreBrands = () => {}
+  const handleLoadMoreBrands = () => {
+    let cacheEndReached = null
+    brands?.length < totalRowsOfBrands && (cacheEndReached = onLoadMoreBrands)
+
+    return cacheEndReached
+  }
 
   // handle render Card component
   const renderBrandCard = ({item}: {item: BrandCardListProps}) => (
@@ -40,13 +55,13 @@ const BrandList = ({onPressBrandCard, brands}: BrandsListProps) => {
   )
 
   // handle render Footer component
-  const renderFooterComponent = () => <LoadingIndicator />
+  const renderFooterComponent = () => (isLoading ? <LoadingIndicator /> : null)
 
   return (
-    <FlashList
+    <FlatList
       horizontal
       data={brands}
-      estimatedItemSize={50}
+      initialNumToRender={6}
       renderItem={renderBrandCard}
       keyExtractor={brand => brand.id}
       showsHorizontalScrollIndicator={false}

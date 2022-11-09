@@ -1,356 +1,578 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Brand List Component Should render correctly 1`] = `
-<View
-  style={Object {}}
+<RCTScrollView
+  ListEmptyComponent={[Function]}
+  ListFooterComponent={[Function]}
+  ListFooterComponentStyle={
+    Object {
+      "alignSelf": "center",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "id": "0",
+        "name": "Nike",
+        "url": "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
+      },
+      Object {
+        "id": "1",
+        "name": "Adidas",
+        "url": "https://1000logos.net/wp-content/uploads/2016/10/Adidas-logo.png",
+      },
+      Object {
+        "id": "2",
+        "name": "Fila",
+        "url": "https://1000logos.net/wp-content/uploads/2021/05/Fila-logo.png",
+      },
+      Object {
+        "id": "3",
+        "name": "Puma",
+        "url": "https://1000logos.net/wp-content/uploads/2021/04/Puma-logo.png",
+      },
+      Object {
+        "id": "4",
+        "name": "Gucci",
+        "url": "https://1000logos.net/wp-content/uploads/2017/01/Gucci-Logo.png",
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  horizontal={true}
+  initialNumToRender={6}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onEndReached={[Function]}
+  onEndReachedThreshold={0.5}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  showsHorizontalScrollIndicator={false}
+  stickyHeaderIndices={Array []}
+  viewabilityConfigCallbackPairs={Array []}
 >
-  <RCTScrollView
-    ListEmptyComponent={[Function]}
-    ListFooterComponent={[Function]}
-    ListFooterComponentStyle={
-      Object {
-        "alignSelf": "center",
-      }
-    }
-    applyWindowCorrection={[Function]}
-    canChangeSize={true}
-    contentContainerStyle={
-      Object {
-        "backgroundColor": undefined,
-        "minHeight": 1,
-        "minWidth": 1,
-      }
-    }
-    contentHeight={0}
-    contentWidth={0}
-    data={
-      Array [
-        Object {
-          "id": "0",
-          "name": "Nike",
-          "url": "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
-        },
-        Object {
-          "id": "1",
-          "name": "Adidas",
-          "url": "https://1000logos.net/wp-content/uploads/2016/10/Adidas-logo.png",
-        },
-        Object {
-          "id": "2",
-          "name": "Fila",
-          "url": "https://1000logos.net/wp-content/uploads/2021/05/Fila-logo.png",
-        },
-        Object {
-          "id": "3",
-          "name": "Puma",
-          "url": "https://1000logos.net/wp-content/uploads/2021/04/Puma-logo.png",
-        },
-        Object {
-          "id": "4",
-          "name": "Gucci",
-          "url": "https://1000logos.net/wp-content/uploads/2017/01/Gucci-Logo.png",
-        },
-      ]
-    }
-    dataProvider={
-      DataProvider {
-        "_data": Array [
-          Object {
-            "id": "0",
-            "name": "Nike",
-            "url": "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
-          },
-          Object {
-            "id": "1",
-            "name": "Adidas",
-            "url": "https://1000logos.net/wp-content/uploads/2016/10/Adidas-logo.png",
-          },
-          Object {
-            "id": "2",
-            "name": "Fila",
-            "url": "https://1000logos.net/wp-content/uploads/2021/05/Fila-logo.png",
-          },
-          Object {
-            "id": "3",
-            "name": "Puma",
-            "url": "https://1000logos.net/wp-content/uploads/2021/04/Puma-logo.png",
-          },
-          Object {
-            "id": "4",
-            "name": "Gucci",
-            "url": "https://1000logos.net/wp-content/uploads/2017/01/Gucci-Logo.png",
-          },
-        ],
-        "_firstIndexToProcess": 0,
-        "_hasStableIds": true,
-        "_requiresDataChangeHandling": false,
-        "_size": 5,
-        "getStableId": [Function],
-        "rowHasChanged": [Function],
-      }
-    }
-    disableRecycling={false}
-    estimatedItemSize={50}
-    extendedState={Object {}}
-    externalScrollView={[Function]}
-    finalRenderAheadOffset={250}
-    forceNonDeterministicRendering={true}
-    horizontal={true}
-    initialOffset={0}
-    initialRenderIndex={0}
-    isHorizontal={true}
-    keyExtractor={[Function]}
-    layoutProvider={
-      GridLayoutProviderWithProps {
-        "_acceptableRelayoutDelta": 1,
-        "_getHeightOrWidth": [Function],
-        "_getLayoutTypeForIndex": [Function],
-        "_getSpan": [Function],
-        "_maxSpan": 1,
-        "_setLayoutForType": [Function],
-        "_tempDim": Object {
-          "height": 0,
-          "width": 0,
-        },
-        "averageWindow": AverageWindow {
-          "currentAverage": 50,
-          "currentCount": 1,
-          "inputValues": Array [
-            50,
-          ],
-          "nextIndex": 1,
-        },
-        "defaultEstimatedItemSize": 100,
-        "layoutObject": Object {
-          "size": undefined,
-          "span": undefined,
-        },
-        "props": Object {
-          "ListEmptyComponent": [Function],
-          "ListFooterComponent": [Function],
-          "ListFooterComponentStyle": Object {
-            "alignSelf": "center",
-          },
-          "data": Array [
-            Object {
-              "id": "0",
-              "name": "Nike",
-              "url": "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
-            },
-            Object {
-              "id": "1",
-              "name": "Adidas",
-              "url": "https://1000logos.net/wp-content/uploads/2016/10/Adidas-logo.png",
-            },
-            Object {
-              "id": "2",
-              "name": "Fila",
-              "url": "https://1000logos.net/wp-content/uploads/2021/05/Fila-logo.png",
-            },
-            Object {
-              "id": "3",
-              "name": "Puma",
-              "url": "https://1000logos.net/wp-content/uploads/2021/04/Puma-logo.png",
-            },
-            Object {
-              "id": "4",
-              "name": "Gucci",
-              "url": "https://1000logos.net/wp-content/uploads/2017/01/Gucci-Logo.png",
-            },
-          ],
-          "estimatedItemSize": 50,
-          "horizontal": true,
-          "keyExtractor": [Function],
-          "numColumns": 1,
-          "onEndReached": [Function],
-          "onEndReachedThreshold": 0.5,
-          "renderItem": [Function],
-          "showsHorizontalScrollIndicator": false,
-        },
-        "shouldRefreshWithAnchoring": true,
-      }
-    }
-    maxRenderAhead={750}
-    numColumns={1}
-    onEndReached={[Function]}
-    onEndReachedThreshold={0}
-    onEndReachedThresholdRelative={0.5}
-    onItemLayout={[Function]}
-    onLayout={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onSizeChanged={[Function]}
-    onVisibleIndicesChanged={[Function]}
-    removeClippedSubviews={false}
-    renderAheadOffset={0}
-    renderAheadStep={250}
-    renderContentContainer={[Function]}
-    renderItem={[Function]}
-    renderItemContainer={[Function]}
-    rowRenderer={[Function]}
-    scrollEventThrottle={16}
-    scrollThrottle={16}
-    scrollViewProps={
-      Object {
-        "contentContainerStyle": Object {
-          "backgroundColor": undefined,
-          "minHeight": 1,
-          "minWidth": 1,
-        },
-        "onLayout": [Function],
-        "onScrollBeginDrag": [Function],
-        "refreshControl": undefined,
-        "style": Object {
-          "minHeight": 1,
-          "minWidth": 1,
-        },
-      }
-    }
-    showsHorizontalScrollIndicator={false}
-    style={
-      Object {
-        "minHeight": 1,
-        "minWidth": 1,
-      }
-    }
-    suppressBoundedSizeException={true}
-    windowCorrectionConfig={
-      Object {
-        "applyToInitialOffset": true,
-        "applyToItemScroll": true,
-        "value": Object {
-          "endCorrection": 0,
-          "startCorrection": 0,
-          "windowShift": -0,
-        },
-      }
-    }
-  >
-    <View>
-      <View
-        style={
+  <View>
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
           Object {
             "flexDirection": "row",
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 50,
+            "marginRight": 10,
+            "opacity": 1,
+            "paddingRight": 15,
           }
         }
       >
-        <AutoLayoutView
-          enableInstrumentation={false}
-          horizontal={true}
-          onBlankAreaEvent={[Function]}
-          onLayout={[Function]}
-          renderAheadOffset={0}
-          scrollOffset={0}
-          style={
-            Object {
-              "height": 0,
-              "width": 0,
-            }
-          }
-          windowSize={0}
-        />
         <View
-          pointerEvents="none"
           style={
-            Object {
-              "opacity": 0,
-            }
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
           }
         >
           <View
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#F5F6FA",
-                "borderRadius": 10,
-                "height": 50,
-                "justifyContent": "center",
-                "marginRight": 10,
-                "opacity": 1,
-                "paddingRight": 15,
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "justifyContent": "center",
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "paddingHorizontal": 6,
+                  "paddingVertical": 6,
+                  "width": 40,
+                },
+              ]
             }
           >
-            <View
+            <Image
+              alignSelf="center"
+              resizeMode="contain"
+              source={
+                Object {
+                  "uri": "https://1000logos.net/wp-content/uploads/2021/11/Nike-Logo.png",
+                }
+              }
               style={
                 Array [
                   Object {
-                    "alignItems": "center",
-                    "flexDirection": "row",
+                    "alignSelf": "center",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
                   },
                 ]
               }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "#FFFFFF",
-                      "borderRadius": 10,
-                      "height": 40,
-                      "justifyContent": "center",
-                      "marginLeft": 5,
-                      "marginRight": 10,
-                      "marginVertical": 5,
-                      "paddingHorizontal": 6,
-                      "paddingVertical": 6,
-                      "width": 40,
-                    },
-                  ]
-                }
-              >
-                <Image
-                  alignSelf="center"
-                  resizeMode="contain"
-                  source={
-                    Object {
-                      "uri": "https://1000logos.net/wp-content/uploads/2016/10/Adidas-logo.png",
-                    }
-                  }
-                  style={
-                    Array [
-                      Object {
-                        "alignSelf": "center",
-                        "height": "100%",
-                        "resizeMode": "contain",
-                        "width": "100%",
-                      },
-                    ]
-                  }
-                />
-              </View>
-              <Text
-                style={
-                  Array [
-                    Object {
-                      "color": "#1D1E20",
-                      "fontFamily": "Inter-Medium",
-                      "fontSize": 15,
-                      "lineHeight": 16.5,
-                      "textAlign": "left",
-                    },
-                  ]
-                }
-                type="brand"
-              >
-                Adidas
-              </Text>
-            </View>
+            />
           </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 16.5,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            type="brand"
+          >
+            Nike
+          </Text>
         </View>
       </View>
     </View>
-  </RCTScrollView>
-</View>
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 50,
+            "marginRight": 10,
+            "opacity": 1,
+            "paddingRight": 15,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "justifyContent": "center",
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "paddingHorizontal": 6,
+                  "paddingVertical": 6,
+                  "width": 40,
+                },
+              ]
+            }
+          >
+            <Image
+              alignSelf="center"
+              resizeMode="contain"
+              source={
+                Object {
+                  "uri": "https://1000logos.net/wp-content/uploads/2016/10/Adidas-logo.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "alignSelf": "center",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  },
+                ]
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 16.5,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            type="brand"
+          >
+            Adidas
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 50,
+            "marginRight": 10,
+            "opacity": 1,
+            "paddingRight": 15,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "justifyContent": "center",
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "paddingHorizontal": 6,
+                  "paddingVertical": 6,
+                  "width": 40,
+                },
+              ]
+            }
+          >
+            <Image
+              alignSelf="center"
+              resizeMode="contain"
+              source={
+                Object {
+                  "uri": "https://1000logos.net/wp-content/uploads/2021/05/Fila-logo.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "alignSelf": "center",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  },
+                ]
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 16.5,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            type="brand"
+          >
+            Fila
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 50,
+            "marginRight": 10,
+            "opacity": 1,
+            "paddingRight": 15,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "justifyContent": "center",
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "paddingHorizontal": 6,
+                  "paddingVertical": 6,
+                  "width": 40,
+                },
+              ]
+            }
+          >
+            <Image
+              alignSelf="center"
+              resizeMode="contain"
+              source={
+                Object {
+                  "uri": "https://1000logos.net/wp-content/uploads/2021/04/Puma-logo.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "alignSelf": "center",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  },
+                ]
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 16.5,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            type="brand"
+          >
+            Puma
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#F5F6FA",
+            "borderRadius": 10,
+            "height": 50,
+            "marginRight": 10,
+            "opacity": 1,
+            "paddingRight": 15,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 10,
+                  "height": 40,
+                  "justifyContent": "center",
+                  "marginLeft": 5,
+                  "marginRight": 10,
+                  "marginVertical": 5,
+                  "paddingHorizontal": 6,
+                  "paddingVertical": 6,
+                  "width": 40,
+                },
+              ]
+            }
+          >
+            <Image
+              alignSelf="center"
+              resizeMode="contain"
+              source={
+                Object {
+                  "uri": "https://1000logos.net/wp-content/uploads/2017/01/Gucci-Logo.png",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "alignSelf": "center",
+                    "height": "100%",
+                    "resizeMode": "contain",
+                    "width": "100%",
+                  },
+                ]
+              }
+            />
+          </View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#1D1E20",
+                  "fontFamily": "Inter-Medium",
+                  "fontSize": 15,
+                  "lineHeight": 16.5,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            type="brand"
+          >
+            Gucci
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      style={
+        Object {
+          "alignSelf": "center",
+        }
+      }
+    />
+  </View>
+</RCTScrollView>
 `;

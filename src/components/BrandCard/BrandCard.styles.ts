@@ -6,8 +6,6 @@ import {Colors, Metrics} from '@themes'
 
 export const BrandCardWrapperStyled = styled.TouchableOpacity`
   height: ${s(50)}px;
-  justify-content: center;
-  align-items: center;
   margin-right: ${Metrics.margin.small}px;
   background-color: ${Colors.palette.lightGray};
   border-radius: ${Metrics.borderRadius.base}px;

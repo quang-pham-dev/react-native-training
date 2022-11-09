@@ -17,7 +17,7 @@ storiesOf('Brand List', module)
         <BrandList
           brands={brands}
           onPressBrandCard={action('clicked')}
-          onLoadMoreBrand={action('clicked')}
+          onLoadMoreBrands={action('clicked')}
         />
       </UseCase>
     </Story>
