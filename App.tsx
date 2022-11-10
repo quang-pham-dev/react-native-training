@@ -22,7 +22,7 @@ import {
 import SplashScreen from 'react-native-splash-screen'
 
 // Contexts
-import {AuthContextProvider} from '@contexts/auth/AuthContext'
+import {AuthContextProvider} from '@contexts'
 
 // Navigator
 import AppNavigator from '@navigators/app-navigator'

@@ -11,27 +11,29 @@ import {
   // SIGN_OUT
   SIGN_OUT,
   SIGN_OUT_SUCCESS,
-} from '@contexts/auth/action/auth'
+} from '@store'
+import {AuthActions, AuthState} from '@types/state-types/auth'
 
 // Types
-import {AuthAction, AuthState} from '@state-types'
+// import {AuthAction, AuthState} from '@state-types'
 
 export const InitialAuthState: AuthState = {
+  currentUser: null,
+  access_token: null,
+  type: '',
   isLoading: false,
   isAuthenticated: false,
   error: null,
-  currentUser: undefined,
 }
 
-const authenticationReducer = (
-  state: typeof InitialAuthState,
-  action: AuthAction,
-) => {
+export const authenticationReducer = (
+  state: AuthState = InitialAuthState,
+  action: AuthActions,
+): AuthState => {
   switch (action.type) {
     case INITIALIZE:
       return {
         ...state,
-        isInitialized: false,
         isLoading: false,
       }
 
@@ -46,8 +48,6 @@ const authenticationReducer = (
       return {
         ...state,
         isLoading: false,
-        type: action.type,
-        isInitialized: true,
         isAuthenticated: Boolean(action.payload?.access_token),
         currentUser: action.payload?.user,
       }
@@ -55,7 +55,6 @@ const authenticationReducer = (
     case SIGN_IN_SUCCESS:
       return {
         ...state,
-        type: action.type,
         isLoading: false,
         isAuthenticated: true,
         access_token: action.payload?.access_token,
@@ -65,7 +64,6 @@ const authenticationReducer = (
     case SIGN_OUT_SUCCESS:
       return {
         ...state,
-        type: action.type,
         isLoading: false,
         isAuthenticated: false,
         access_token: null,
@@ -77,9 +75,8 @@ const authenticationReducer = (
     case SIGN_OUT_FAILED:
       return {
         ...state,
-        type: action.type,
         isLoading: false,
-        error: action.error,
+        error: action.payload.error,
       }
 
     default:
@@ -88,5 +85,3 @@ const authenticationReducer = (
       }
   }
 }
-
-export default authenticationReducer
