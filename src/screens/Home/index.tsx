@@ -21,7 +21,7 @@ import {DrawerActions} from '@react-navigation/native'
 // Navigation
 import {NavigationPropsType} from '@navigators/app-navigator'
 
-// Contexts
+// Store
 import {
   GET_BRANDS,
   GET_BRANDS_FAILED,
@@ -29,18 +29,16 @@ import {
   LOAD_MORE_BRANDS,
   LOAD_MORE_BRANDS_FAILED,
   LOAD_MORE_BRANDS_SUCCESS,
-} from '@contexts/brand/action/brand'
-import {useBrandContext} from '@contexts/brand/BrandContext'
-import {useProductContext} from '@contexts/product/ProductContext'
-import {
   GET_PRODUCTS,
   GET_PRODUCTS_FAILED,
   GET_PRODUCTS_SUCCESS,
   LOAD_MORE_PRODUCTS,
   LOAD_MORE_PRODUCTS_FAILED,
   LOAD_MORE_PRODUCTS_SUCCESS,
-} from '@contexts/product/action/product'
-import {useAuthContext} from '@contexts/auth/AuthContext'
+} from '@store'
+
+// Contexts
+import {useAuthContext, useBrandContext, useProductContext} from '@contexts'
 
 // Apis
 import {brandService, productsService} from '@apis'
@@ -68,6 +66,7 @@ import {
 
 // Types
 import {IProduct} from '@model-types'
+import {IDataError} from '@state-types/error'
 
 // Themes
 import {Icons, Metrics} from '@themes'
@@ -83,7 +82,7 @@ const Home = ({navigation}: HomeScreenProps) => {
 
   const {currentUser} = authState || {}
   const {brands, limit: brandsLimit} = brandState || {}
-  const {products, limit, searchValue} = productState || {}
+  const {products, limit: productLimit, searchValue} = productState || {}
 
   // master data render products list
   const productsMasterData = useMemo(
@@ -191,23 +190,6 @@ const Home = ({navigation}: HomeScreenProps) => {
     navigation.dispatch(DrawerActions.openDrawer())
   }
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerBackVisible: false,
-      headerLeft: () => (
-        <TouchableOpacity onPress={handleOpenMenu}>
-          <IconStyled width={s(45)} height={s(45)} source={Icons.menu} />
-        </TouchableOpacity>
-      ),
-
-      headerRight: () => (
-        <TouchableOpacity onPress={handlePressCart}>
-          <IconStyled width={s(45)} height={s(45)} source={Icons.cart} />
-        </TouchableOpacity>
-      ),
-    })
-  }, [handleBackArrow, handlePressCart, navigation])
-
   //  Handle Animation on scroll Product list then sticky header
   const handleScrollProductsList = useCallback(
     (event: NativeSyntheticEvent<NativeScrollEvent>) => {
@@ -237,9 +219,7 @@ const Home = ({navigation}: HomeScreenProps) => {
       brandDispatch({
         type: LOAD_MORE_BRANDS_SUCCESS,
         payload: {
-          data: {
-            brands: data,
-          },
+          brands: data,
           limit: _limit,
         },
       })
@@ -260,16 +240,14 @@ const Home = ({navigation}: HomeScreenProps) => {
 
     try {
       const response = await productsService.getProducts(
-        limit + PRODUCT_PAGINATION.PRODUCT_LIMIT,
+        productLimit + PRODUCT_PAGINATION.PRODUCT_LIMIT,
       )
       const {data, pagination} = response.data || {}
       const {_limit} = pagination || {}
       productDispatch({
         type: LOAD_MORE_PRODUCTS_SUCCESS,
         payload: {
-          data: {
-            products: data,
-          },
+          products: data,
           limit: _limit,
         },
       })
@@ -281,7 +259,7 @@ const Home = ({navigation}: HomeScreenProps) => {
 
       Alert.alert('Error', error.message)
     }
-  }, [limit])
+  }, [productLimit])
 
   const handlePressLikeProduct = () => {}
 
@@ -294,6 +272,23 @@ const Home = ({navigation}: HomeScreenProps) => {
     (id: string) => navigation.navigate(SCREEN_NAMES.PRODUCT_DETAIL, {id}),
     [],
   )
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerBackVisible: false,
+      headerLeft: () => (
+        <TouchableOpacity onPress={handleOpenMenu}>
+          <IconStyled width={s(45)} height={s(45)} source={Icons.menu} />
+        </TouchableOpacity>
+      ),
+
+      headerRight: () => (
+        <TouchableOpacity onPress={handlePressCart}>
+          <IconStyled width={s(45)} height={s(45)} source={Icons.cart} />
+        </TouchableOpacity>
+      ),
+    })
+  }, [handleBackArrow, handlePressCart, navigation])
 
   useEffect(() => {
     //    GET BRANDS
@@ -309,51 +304,50 @@ const Home = ({navigation}: HomeScreenProps) => {
           brandDispatch({
             type: GET_BRANDS_SUCCESS,
             payload: {
-              data: {
-                brands: data,
-              },
+              brands: data,
               totalRowsOfBrands: _totalRows,
               limit: _limit,
             },
           })
         }
-      } catch (error: any) {
+      } catch (error) {
         if (!isCancelled) {
           brandDispatch({
             type: GET_BRANDS_FAILED,
-            payload: error,
+            payload: error as IDataError,
           })
         }
-        Alert.alert('Error', error.message)
+        Alert.alert('Error', (error as IDataError).error)
       }
     })()
+
+    // GET_PRODUCTS
     ;(async function getProducts(): Promise<void> {
       productDispatch({type: GET_PRODUCTS})
 
       try {
-        const response = await productsService.getProducts(limit)
+        const response = await productsService.getProducts(productLimit)
         if (!isCancelled) {
           const {data, pagination} = response.data || {}
           const {_limit, _totalRows} = pagination || {}
+
           productDispatch({
             type: GET_PRODUCTS_SUCCESS,
             payload: {
-              data: {
-                products: data,
-              },
+              products: data,
               totalRows: _totalRows,
               limit: _limit,
             },
           })
         }
-      } catch (error: any) {
+      } catch (error) {
         if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCTS_FAILED,
-            payload: error,
+            payload: error as IDataError,
           })
         }
-        Alert.alert('Error', error.message)
+        Alert.alert('Error', (error as IDataError).error)
       }
     })()
 
