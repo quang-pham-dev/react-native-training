@@ -14,12 +14,10 @@ import Switch from '@components/Switch'
 import DrawerItem from '@screens/Menu/components'
 
 // Context
-import {useAuthContext} from '@contexts/auth/AuthContext'
-import {
-  SIGN_OUT,
-  SIGN_OUT_FAILED,
-  SIGN_OUT_SUCCESS,
-} from '@contexts/auth/action/auth'
+import {useAuthContext} from '@contexts'
+
+// Store
+import {SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS} from '@store'
 
 // Constants
 import {AUTH_DATA, PARAGRAPH_TYPE, STACKS_NAMES} from '@constants'
@@ -30,17 +28,20 @@ import {Colors, Icons, Metrics} from '@themes'
 // Styles
 import IconStyled from '@components/Icon/Icon.styles'
 import PStyled from '@components/Paragraph/P.styles'
+import LayoutStyled from '@components/Layout/Layout.styles'
+import ViewStyled from '@components/View/View.styles'
+import {s, vs} from 'react-native-size-matters/extend'
+import FlexStyled from '@components/Flex/Flex.styles'
+import {Image} from '@components/Image/Image.styles'
 
 // Api
 import {authService} from '@apis'
 
 // Services
 import {remove} from '@services'
-import LayoutStyled from '@components/Layout/Layout.styles'
-import ViewStyled from '@components/View/View.styles'
-import {s, vs} from 'react-native-size-matters/extend'
-import FlexStyled from '@components/Flex/Flex.styles'
-import {Image} from '@components/Image/Image.styles'
+
+// Types
+import {IDataError} from '@state-types/error'
 
 export interface ISideMenuPros {
   navigation: DrawerNavigationHelpers
@@ -74,9 +75,9 @@ const Menu = ({navigation}: ISideMenuPros) => {
             dispatch({
               type: SIGN_OUT_SUCCESS,
             })
-          } catch (error: any) {
-            dispatch({type: SIGN_OUT_FAILED, payload: error})
-            Alert.alert('Error', error.message)
+          } catch (error) {
+            dispatch({type: SIGN_OUT_FAILED, payload: error as IDataError})
+            Alert.alert('Error', (error as IDataError).error)
           }
         },
       },
