@@ -3,6 +3,8 @@ import styled from 'styled-components/native'
 
 // Services
 import {convertToPx, getType} from '@services'
+
+// Themes
 import {Fonts, Colors} from '@themes'
 
 export interface ParagraphStyledProps {

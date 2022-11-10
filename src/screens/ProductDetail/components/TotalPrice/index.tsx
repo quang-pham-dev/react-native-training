@@ -8,8 +8,6 @@ import FlexStyled from '@components/Flex/Flex.styles'
 import PStyled from '@components/Paragraph/P.styles'
 import ViewStyled from '@components/View/View.styles'
 
-// Types
-
 // Themes
 import {Metrics} from '@themes'
 

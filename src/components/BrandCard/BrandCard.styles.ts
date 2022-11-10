@@ -1,4 +1,6 @@
 import styled from 'styled-components/native'
+
+// Libs
 import {s} from 'react-native-size-matters/extend'
 
 // Themes

@@ -1,7 +1,10 @@
 import styled from 'styled-components/native'
 
-import {Fonts, Colors} from '@themes'
+// Styles
 import FlexStyled from '@components/Flex/Flex.styles'
+
+// Themes
+import {Fonts, Colors} from '@themes'
 
 interface IconWrapperProps {
   mRight?: number

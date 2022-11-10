@@ -1,6 +1,8 @@
+// Libs
 import {DefaultTheme} from '@react-navigation/native'
 
-import {Colors} from './Colors'
+// Themes
+import {Colors} from '@themes'
 
 const NavigationTheme = {
   ...DefaultTheme,

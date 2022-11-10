@@ -1,10 +1,13 @@
 import React from 'react'
+
+// Libs
 import {render} from '@testing-library/react-native'
 
 // Styled
 import {Image} from '../Image.styles'
 
-import {Images} from '@themes/Images'
+// Themes
+import {Images} from '@themes'
 
 const props = {
   source: Images.splash,

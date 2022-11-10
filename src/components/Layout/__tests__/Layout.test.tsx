@@ -1,10 +1,14 @@
 import React from 'react'
+
+// Libs
 import {render} from '@testing-library/react-native'
 
+// Styles
 import LayoutStyled from '../Layout.styles'
 import HeadingStyled from '@components/Heading/Heading.styles'
 
-import {HEADING_TYPE} from '@constants/type'
+// Constants
+import {HEADING_TYPE} from '@constants'
 
 describe('Layout', () => {
   test('should render Main correctly correctly', () => {

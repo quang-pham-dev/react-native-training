@@ -5,7 +5,7 @@ import {
   LOAD_MORE_BRANDS,
   LOAD_MORE_BRANDS_SUCCESS,
   LOAD_MORE_BRANDS_FAILED,
-} from '@store'
+} from './action'
 
 // Constants
 import {BRAND_PAGINATION} from '@constants'

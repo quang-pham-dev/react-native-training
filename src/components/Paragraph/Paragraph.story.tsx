@@ -1,8 +1,10 @@
 // Libs
 import * as React from 'react'
-import {View} from 'react-native'
+
+// Storybook
 import {storiesOf} from '@storybook/react-native'
 import {select, text} from '@storybook/addon-knobs'
+import {StoryScreen, Story, UseCase} from '../../../storybook/views'
 
 // Themes
 import {Colors} from '@themes'
@@ -10,7 +12,7 @@ import {Colors} from '@themes'
 // Constants
 import {PARAGRAPH_TYPE} from '@constants'
 
-import {StoryScreen, Story, UseCase} from '../../../storybook/views'
+// Styles
 import PStyled from './P.styles'
 
 declare let module: NodeModule
@@ -36,11 +38,9 @@ storiesOf('Paragraph', module)
   .add('Paragraph with text align center', () => (
     <Story>
       <UseCase bgColor={Colors.palette.white} text="Paragraph align center">
-        <View>
-          <PStyled.Center type={select('type', typesOption, typesOption[2])}>
-            {text('paragraph', 'Text align center')}
-          </PStyled.Center>
-        </View>
+        <PStyled.Center type={select('type', typesOption, typesOption[2])}>
+          {text('paragraph', 'Text align center')}
+        </PStyled.Center>
       </UseCase>
     </Story>
   ))

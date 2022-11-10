@@ -1,7 +1,10 @@
 import React from 'react'
+
+// Storybook
 import {storiesOf} from '@storybook/react-native'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
 
+// Components
 import LessMoreText from './index'
 
 declare let module: NodeModule

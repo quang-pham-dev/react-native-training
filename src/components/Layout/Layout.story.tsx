@@ -1,8 +1,10 @@
 import * as React from 'react'
+import {StyleSheet} from 'react-native'
+
+// Storybook
 import {storiesOf} from '@storybook/react-native'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
 import {number, text} from '@storybook/addon-knobs'
-import {StyleSheet} from 'react-native'
 
 // styled
 import LayoutStyled from '../Layout/Layout.styles'

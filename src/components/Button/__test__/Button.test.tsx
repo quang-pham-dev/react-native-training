@@ -1,5 +1,9 @@
 import React from 'react'
+
+// Libs
 import {fireEvent, render} from '@testing-library/react-native'
+
+// Components
 import {Button, SocialButton, BtnType} from '@components/Button'
 
 const props = {

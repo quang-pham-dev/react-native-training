@@ -1,9 +1,13 @@
 import React from 'react'
+
+// Libs
 import {render} from '@testing-library/react-native'
 
+// Styles
 import HeadingStyled from '../Heading.styles'
 
-import {HEADING_TYPE} from '@constants/type'
+// Constants
+import {HEADING_TYPE} from '@constants'
 
 describe('Heading', () => {
   test('should render Default type correctly', () => {

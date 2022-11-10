@@ -1,11 +1,18 @@
 import * as React from 'react'
+
+// Storybook
 import {storiesOf} from '@storybook/react-native'
 import {select} from '@storybook/addon-knobs'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
+
+// Styles
 import IconStyled from './Icon.styles'
-import {Icons} from '@themes/Images'
-import Metrics from '@themes/Metrics'
-import {SIZE} from '@constants/type'
+
+// Themes
+import {Icons, Metrics} from '@themes'
+
+// Constants
+import {SIZE} from '@constants'
 
 const transformOptions = [
   Metrics.rotate.left,

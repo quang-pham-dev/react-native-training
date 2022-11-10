@@ -1,11 +1,10 @@
 import React, {createContext, Dispatch, useContext, useReducer} from 'react'
 
-// Context Reducer
-// import authenticationReducer, {InitialAuthState} from './reducer/auth'
+// Store
 import {authenticationReducer, InitialAuthState} from '@store'
 
 // Types
-import {AuthState} from '@state-types'
+import {AuthState} from '@state-types/auth'
 
 type AuthContext = {
   state: AuthState

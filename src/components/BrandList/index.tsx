@@ -15,10 +15,16 @@ import LoadingIndicator from '@components/LoadingIndicator'
 import {BRANDS_EMPTY_RESULT} from '@constants'
 
 // Types
-import {BrandsListProps, IBrand} from '@model-types'
+import {IBrand} from '@model-types'
 
 // Styles
 import PStyled from '@components/Paragraph/P.styles'
+
+type BrandsListProps = {
+  brands: IBrand[]
+  onPressBrandCard: (id: string) => void
+  onLoadMoreBrands: () => void
+}
 
 const BrandList = ({
   onPressBrandCard,

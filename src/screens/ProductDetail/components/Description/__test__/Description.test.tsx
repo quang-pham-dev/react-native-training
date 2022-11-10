@@ -1,4 +1,3 @@
-import {product} from '@constants'
 import React from 'react'
 
 // LIBS
@@ -7,7 +6,8 @@ import renderer from 'react-test-renderer'
 // Components
 import Description from '@screens/ProductDetail/components/Description'
 
-// Mock data
+// Constants
+import {product} from '@constants'
 
 const props = {
   description: product.description,

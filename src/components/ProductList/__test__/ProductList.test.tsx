@@ -6,13 +6,8 @@ import {render} from '@testing-library/react-native'
 // Components
 import ProductsList from '@components/ProductList'
 
-// Mocks
-import {products} from '@constants/dataMock'
-
 // Constants
-import {PRODUCTS_EMPTY_RESULT} from '@constants'
-
-// Utils
+import {products, PRODUCTS_EMPTY_RESULT} from '@constants'
 
 describe('Product Card List Component', () => {
   const props = {

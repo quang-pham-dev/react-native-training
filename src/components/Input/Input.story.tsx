@@ -1,11 +1,16 @@
 import React from 'react'
+
+// StoryBook
 import {storiesOf} from '@storybook/react-native'
 import {action} from '@storybook/addon-actions'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
 import {text} from '@storybook/addon-knobs'
 
-import {Icons} from '@themes'
+// Components
 import Input, {InputType} from './index'
+
+// Themes
+import {Icons} from '@themes'
 
 declare let module: NodeModule
 

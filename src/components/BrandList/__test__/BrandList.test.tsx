@@ -15,6 +15,7 @@ import {BRANDS_EMPTY_RESULT} from '@constants'
 describe('Brand List Component', () => {
   const props = {
     onPressBrandCard: jest.fn(),
+    onLoadMoreBrands: jest.fn(),
     brands: brands,
   }
 

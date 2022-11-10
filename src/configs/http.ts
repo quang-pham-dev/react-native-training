@@ -1,4 +1,3 @@
-// import {create} from 'apisauce'
 import axios from 'axios'
 
 // import Config from 'react-native-config'

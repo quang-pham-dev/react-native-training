@@ -1,6 +1,10 @@
 import * as React from 'react'
+
+// StoryBook
 import {storiesOf} from '@storybook/react-native'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
+
+// Styles
 import FlexStyled from './Flex.styles'
 import ViewStyled from '../View/View.styles'
 

@@ -1,8 +1,10 @@
 import * as React from 'react'
-import {storiesOf} from '@storybook/react-native'
 
+// Storybook
+import {storiesOf} from '@storybook/react-native'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
 
+// Components
 import Switch from './index'
 
 declare let module: NodeModule

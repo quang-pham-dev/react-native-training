@@ -1,11 +1,15 @@
 import React from 'react'
+
+// Storybook
 import {action} from '@storybook/addon-actions'
 import {storiesOf} from '@storybook/react-native'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
 
-import {products} from '@constants'
-
+// Components
 import ProductList from './index'
+
+// Constants
+import {products} from '@constants'
 
 declare let module: NodeModule
 

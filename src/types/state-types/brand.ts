@@ -13,7 +13,7 @@ export interface BrandState {
   isLoading: boolean
   isProcessing: boolean
   error: string | null
-  brands?: IBrand[]
+  brands: IBrand[]
   totalRowsOfBrands: number
   limit: number
 }

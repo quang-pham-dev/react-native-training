@@ -4,7 +4,7 @@ import React, {createContext, Dispatch, useContext, useReducer} from 'react'
 import {InitialBrandState, brandReducer} from '@store'
 
 // Types
-import {BrandState} from '@state-types'
+import {BrandState} from '@state-types/brand'
 
 type BrandContext = {
   state: BrandState

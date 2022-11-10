@@ -1,8 +1,12 @@
 import * as React from 'react'
+
+// Libs
 import {storiesOf} from '@storybook/react-native'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
-import HeadingStyled from './Heading.styles'
 import {select, text} from '@storybook/addon-knobs'
+
+// Styles
+import HeadingStyled from './Heading.styles'
 
 declare let module: NodeModule
 

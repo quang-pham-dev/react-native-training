@@ -1,11 +1,18 @@
 import React from 'react'
+
+// StoryBook
 import {storiesOf} from '@storybook/react-native'
 import {select, text} from '@storybook/addon-knobs'
 import {action} from '@storybook/addon-actions'
-
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
+
+// Components
 import {Button, SocialButton, BtnType} from './index'
+
+// Themes
 import {Colors, Icons, Metrics} from '@themes'
+
+// Styles
 import ViewStyled from '@components/View/View.styles'
 
 const typesOption = Object.values(BtnType)

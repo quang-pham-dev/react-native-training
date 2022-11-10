@@ -1,10 +1,14 @@
 import React from 'react'
+
+// Libs
 import {render} from '@testing-library/react-native'
 
+// Styles
 import HeadingStyled from '@components/Heading/Heading.styles'
-import {HEADING_TYPE} from '@constants/type'
-
 import ViewStyled from '../View.styles'
+
+// Constants
+import {HEADING_TYPE} from '@constants'
 
 describe('ViewStyled', () => {
   test('should render default correctly', () => {

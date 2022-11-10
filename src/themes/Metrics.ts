@@ -2,9 +2,11 @@
 import {Dimensions} from 'react-native'
 import {mvs} from 'react-native-size-matters/extend'
 
+// Constants
 import {VERTICAL_SCALE_FACTOR} from '@constants'
-import {Colors} from './Colors'
-import {Fonts} from './Fonts'
+
+// Themes
+import {Colors, Fonts} from '@themes'
 
 const {width, height} = Dimensions.get('window')
 const screenWidth = width < height ? width : height

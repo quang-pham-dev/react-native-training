@@ -1,8 +1,13 @@
 import React from 'react'
+
+// Libs
 import {render} from '@testing-library/react-native'
 
+// Styles
 import IconStyled from '../Icon.styles'
-import {Icons} from '@themes/Images'
+
+// Themes
+import {Icons} from '@themes'
 
 const props = {
   type: 'tiny',

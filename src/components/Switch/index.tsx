@@ -1,4 +1,6 @@
 import React, {useCallback} from 'react'
+
+// Libs
 import {Switch as SwitchLIB} from 'react-native-switch'
 
 // Themes

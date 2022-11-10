@@ -4,11 +4,10 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 
 // Components
-
-import {product} from '@constants'
 import Reviews from '../index'
 
 // Mock data
+import {product} from '@constants'
 
 const props = {
   comment: product.comment,

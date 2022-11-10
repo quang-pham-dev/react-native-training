@@ -1,10 +1,14 @@
 import React from 'react'
+
+// Storybook
 import {action} from '@storybook/addon-actions'
 import {storiesOf} from '@storybook/react-native'
+import {StoryScreen, Story, UseCase} from '../../../storybook/views'
 
+// Components
 import BrandCard from './index'
 
-import {StoryScreen, Story, UseCase} from '../../../storybook/views'
+// Constants
 import {brand} from '@constants/dataMock'
 
 declare let module: NodeModule

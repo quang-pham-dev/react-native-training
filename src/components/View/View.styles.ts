@@ -2,8 +2,7 @@
 import styled from 'styled-components/native'
 
 // services
-import {convertToPx} from '@services/format'
-import {isExits} from '@services/helpers'
+import {convertToPx, isExits} from '@services'
 
 // themes
 import {Metrics, Colors} from '@themes'

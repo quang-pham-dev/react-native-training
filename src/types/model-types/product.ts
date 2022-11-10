@@ -17,7 +17,6 @@ export interface ImageReviewerProps {
   image: string
 }
 
-// TODO: using Pick for use case override
 export interface IProduct {
   id: string
   brandId: string

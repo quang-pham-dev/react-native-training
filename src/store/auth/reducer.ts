@@ -11,11 +11,10 @@ import {
   // SIGN_OUT
   SIGN_OUT,
   SIGN_OUT_SUCCESS,
-} from '@store'
-import {AuthActions, AuthState} from '@types/state-types/auth'
+} from './action'
 
 // Types
-// import {AuthAction, AuthState} from '@state-types'
+import {AuthActions, AuthState} from '@state-types/auth'
 
 export const InitialAuthState: AuthState = {
   currentUser: null,

@@ -1,10 +1,15 @@
 import * as React from 'react'
+
+// Storybook
 import {storiesOf} from '@storybook/react-native'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
 import {number, text} from '@storybook/addon-knobs'
 
+// Styles
 import ViewStyled from './View.styles'
 import PStyled from '@components/Paragraph/P.styles'
+
+// Constants
 import {PARAGRAPH_TYPE} from '@constants'
 
 storiesOf('View', module)

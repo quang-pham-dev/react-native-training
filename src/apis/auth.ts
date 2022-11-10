@@ -1,5 +1,3 @@
-// import {ApiErrorResponse, ApiOkResponse, ApiResponse} from 'apisauce'
-
 // API
 import {http} from '@configs'
 
@@ -10,12 +8,7 @@ import {remove} from '@services'
 import {AUTH_DATA, ENDPOINTS} from '@constants'
 
 // Types
-import {IUser} from '@model-types'
-
-export interface UserResponse {
-  access_token: string
-  user: IUser
-}
+import {UserResponse} from '@model-types'
 
 interface AuthResponse {
   data: UserResponse

@@ -35,6 +35,8 @@ import {GET_PRODUCT, GET_PRODUCT_FAILED, GET_PRODUCT_SUCCESS} from '@store'
 
 // Api
 import {productsService} from '@apis'
+
+// Types
 import {IDataError} from '@state-types/error'
 
 type ProductDetailProps = {

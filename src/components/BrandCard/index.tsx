@@ -4,7 +4,7 @@ import React, {memo, useCallback} from 'react'
 import isEqual from 'react-fast-compare'
 
 // Types
-import {BrandCardProps} from '@model-types'
+import {IBrand} from '@model-types'
 
 // Styles
 import {BrandCardWrapperStyled, ImageWrapperStyled} from './BrandCard.styles'
@@ -14,6 +14,11 @@ import FlexStyled from '@components/Flex/Flex.styles'
 
 // Constants
 import {PARAGRAPH_TYPE} from '@constants'
+
+type BrandCardProps = {
+  brand: IBrand
+  onPressBrandCard: (id: string) => void
+}
 
 const BrandCard = ({brand, onPressBrandCard}: BrandCardProps) => {
   const {id, name, url} = brand || {}

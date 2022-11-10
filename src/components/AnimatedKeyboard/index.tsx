@@ -1,10 +1,12 @@
 import React, {PropsWithChildren} from 'react'
 
+// Libs
 import Animated, {
   useAnimatedKeyboard,
   useAnimatedStyle,
 } from 'react-native-reanimated'
 
+// styles
 import ViewStyled from '@components/View/View.styles'
 
 const AnimatedKeyboard = ({children}: PropsWithChildren) => {

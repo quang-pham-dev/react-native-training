@@ -1,8 +1,14 @@
 import * as React from 'react'
+
+// Storybook
 import {storiesOf} from '@storybook/react-native'
 import {StoryScreen, Story, UseCase} from '../../../storybook/views'
-import LoadingIndicator, {LoadingSize} from './index'
 import {select} from '@storybook/addon-knobs'
+
+// Components
+import LoadingIndicator, {LoadingSize} from './index'
+
+// Themes
 import {Colors} from '@themes'
 
 declare let module: NodeModule

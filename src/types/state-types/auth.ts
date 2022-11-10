@@ -1,5 +1,4 @@
-import {UserResponse} from '@apis'
-import {IUser} from '@model-types'
+import {IUser, UserResponse} from '@model-types'
 import {
   INITIALIZE,
   INITIALIZE_SUCCESS,

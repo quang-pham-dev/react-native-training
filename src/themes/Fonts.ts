@@ -1,5 +1,7 @@
+// Libs
 import {mvs} from 'react-native-size-matters/extend'
 
+// Constants
 import {VERTICAL_SCALE_FACTOR} from '@constants'
 
 export const Fonts = {
@@ -29,7 +31,6 @@ export const Fonts = {
     interRegular: 'Inter-Regular',
     interMedium: 'Inter-Medium',
     interSemiBold: 'Inter-SemiBold',
-    interBold: 'Inter-Bold',
   },
 
   letterSpacing: {

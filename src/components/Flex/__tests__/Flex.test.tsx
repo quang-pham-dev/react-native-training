@@ -1,6 +1,9 @@
 import React from 'react'
+
+// Libs
 import {render} from '@testing-library/react-native'
 
+// Styles
 import FlexStyled from '../Flex.styles'
 
 describe('Flex', () => {

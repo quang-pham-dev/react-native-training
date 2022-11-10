@@ -15,7 +15,7 @@ import {
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
   SEARCH_PRODUCTS_VALUE,
-} from '@store'
+} from './action'
 
 // Constants
 import {PRODUCT_PAGINATION} from '@constants'
