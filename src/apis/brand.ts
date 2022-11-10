@@ -9,7 +9,7 @@ import {IBrand} from '@model-types'
 
 export interface BrandResponse {
   data: {
-    data: IBrand[]
+    data?: IBrand[]
     pagination: {
       _page?: number
       _totalRows?: number

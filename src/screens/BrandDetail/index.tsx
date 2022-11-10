@@ -7,11 +7,27 @@ import {vs, s} from 'react-native-size-matters/extend'
 // Navigator
 import {NavigationPropsType} from '@navigators/app-navigator'
 
+// Store
+import {
+  GET_PRODUCTS_BY_BRAND_ID,
+  GET_PRODUCTS_BY_BRAND_ID_FAILED,
+  GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
+  LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
+} from '@store'
+
+// Contexts
+import {useBrandContext, useProductContext} from '@contexts'
+
 // Components
 import ProductList from '@components/ProductList'
 
 // Constants
 import {PARAGRAPH_TYPE, PRODUCT_PAGINATION, SCREEN_NAMES} from '@constants'
+
+// Api
+import {productsService} from '@apis'
 
 // Styles
 import FlexStyled from '@components/Flex/Flex.styles'
@@ -23,20 +39,10 @@ import LayoutStyled from '@components/Layout/Layout.styles'
 
 // Types
 import {IBrand} from '@model-types'
+import {IDataError} from '@state-types/error'
 
 // Themes
 import {Colors, Icons, Metrics} from '@themes'
-import {useBrandContext} from '@contexts/brand/BrandContext'
-import {useProductContext} from '@contexts/product/ProductContext'
-import {
-  GET_PRODUCTS_BY_BRAND_ID,
-  GET_PRODUCTS_BY_BRAND_ID_FAILED,
-  GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
-  LOAD_MORE_PRODUCTS_BY_BRAND_ID,
-  LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
-  LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
-} from '@contexts/product/action/product'
-import {productsService} from '@apis'
 
 type BrandDetailProps = {
   navigation: NavigationPropsType
@@ -88,19 +94,16 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
       productDispatch({
         type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
         payload: {
-          data: {
-            productsByBrandId: data,
-          },
+          productsByBrandId: data,
           limit: _limit,
         },
       })
-    } catch (error: any) {
+    } catch (error) {
       productDispatch({
         type: LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
-        payload: error,
+        payload: error as IDataError,
       })
-
-      Alert.alert('Error', error.message)
+      Alert.alert('Error', (error as IDataError).error)
     }
   }, [id, limit, productDispatch])
 
@@ -163,9 +166,7 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
           productDispatch({
             type: GET_PRODUCTS_BY_BRAND_ID_SUCCESS,
             payload: {
-              data: {
-                productsByBrandId: data,
-              },
+              productsByBrandId: data,
               limit: _limit,
               totalRowsByBrandId: _totalRows,
             },
@@ -175,10 +176,10 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
         if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCTS_BY_BRAND_ID_FAILED,
-            payload: error,
+            payload: error as IDataError,
           })
         }
-        Alert.alert('Error', error.message)
+        Alert.alert('Error', (error as IDataError).error)
       }
     })()
 

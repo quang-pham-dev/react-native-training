@@ -15,7 +15,7 @@ import LoadingIndicator from '@components/LoadingIndicator'
 import {BRANDS_EMPTY_RESULT} from '@constants'
 
 // Types
-import {BrandCardListProps, BrandsListProps} from '@model-types'
+import {BrandsListProps, IBrand} from '@model-types'
 
 // Styles
 import PStyled from '@components/Paragraph/P.styles'
@@ -45,7 +45,7 @@ const BrandList = ({
   }
 
   // handle render Card component
-  const renderBrandCard = ({item}: {item: BrandCardListProps}) => (
+  const renderBrandCard = ({item}: {item: IBrand}) => (
     <BrandCard brand={item} onPressBrandCard={handlePressBrandCard} />
   )
 
@@ -69,7 +69,7 @@ const BrandList = ({
       ListFooterComponent={renderFooterComponent}
       // eslint-disable-next-line react-native/no-inline-styles
       ListFooterComponentStyle={{alignSelf: 'center'}}
-      onEndReached={handleLoadMoreBrands}
+      onEndReached={handleLoadMoreBrands()}
       onEndReachedThreshold={0.5}
     />
   )

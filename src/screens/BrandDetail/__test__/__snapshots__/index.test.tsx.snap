@@ -154,14 +154,13 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
   <RCTScrollView
     ListEmptyComponent={[Function]}
     ListFooterComponent={[Function]}
-    contentInsetAdjustmentBehavior="always"
     data={Array []}
     getItem={[Function]}
     getItemCount={[Function]}
     initialNumToRender={6}
     keyExtractor={[Function]}
     onContentSizeChange={[Function]}
-    onEndReached={[Function]}
+    onEndReached={null}
     onEndReachedThreshold={0.5}
     onLayout={[Function]}
     onMomentumScrollBegin={[Function]}
