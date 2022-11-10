@@ -1,7 +1,7 @@
 import React, {createContext, Dispatch, useContext, useReducer} from 'react'
 
-// Context Reducer
-import productsReducer, {InitialProductState} from './reducer/product'
+// Store
+import {InitialProductState, productsReducer} from '@store'
 
 // Types
 import {ProductsState} from '@state-types'

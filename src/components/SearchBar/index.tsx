@@ -3,18 +3,25 @@ import React, {useCallback} from 'react'
 // LIBS
 import {s} from 'react-native-size-matters/extend'
 
+// Contexts
+import {useProductContext} from '@contexts'
+
 // Styles
 import IconStyled from '@components/Icon/Icon.styles'
-import {Icons} from '@themes'
+import FlexStyled from '@components/Flex/Flex.styles'
 import {
   IconWrapperStyled,
   InputFiledStyled,
   SearchBarWrapperStyled,
 } from './SearchBar.styles'
-import FlexStyled from '@components/Flex/Flex.styles'
+
+// Themes
+import {Icons} from '@themes'
+
+// Store
+import {SEARCH_PRODUCTS_VALUE} from '@store'
 
 type SearchBarProps = {
-  value?: string
   autoFocus?: boolean
   onSubmitEditing: () => void
   onChangeText?: (text: string) => void
@@ -22,10 +29,20 @@ type SearchBarProps = {
 
 const SearchBar = ({autoFocus, onSubmitEditing}: SearchBarProps) => {
   const [valueState, setValueState] = React.useState<string>('')
+  const {dispatch} = useProductContext()
 
-  const handleTextChange = useCallback((text: string) => {
-    setValueState(text)
-  }, [])
+  const handleTextChange = useCallback(
+    (text: string) => {
+      setValueState(text)
+      dispatch({
+        type: SEARCH_PRODUCTS_VALUE,
+        payload: {
+          searchValue: text,
+        },
+      })
+    },
+    [dispatch],
+  )
 
   const handleSubmitEditing = useCallback(() => {
     onSubmitEditing()

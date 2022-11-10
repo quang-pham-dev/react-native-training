@@ -7,12 +7,10 @@ import OnboardingNavigator from './onboarding-navigator'
 import HomeNavigator from './home-navigator'
 
 // Contexts
-import {useAuthContext} from '@contexts/auth/AuthContext'
-import {
-  INITIALIZE,
-  INITIALIZE_FAILED,
-  INITIALIZE_SUCCESS,
-} from '@contexts/auth/action/auth'
+import {useAuthContext} from '@contexts'
+
+// Store
+import {INITIALIZE, INITIALIZE_FAILED, INITIALIZE_SUCCESS} from '@store'
 
 // Services
 import {get} from '@services'
@@ -27,19 +25,11 @@ export type NavigatorParamList = {
   GetStarted: undefined
   Login: undefined
   Home: undefined
-  BrandDetail: {
-    route?: {
-      params?: {
-        id: string
-      }
-    }
+  BrandDetail?: {
+    id: string
   }
-  ProductDetail: {
-    route?: {
-      params?: {
-        id: string
-      }
-    }
+  ProductDetail?: {
+    id: string
   }
   // 🔥 Your screens go here
 }

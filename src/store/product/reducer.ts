@@ -15,13 +15,13 @@ import {
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS,
   LOAD_MORE_PRODUCTS_BY_BRAND_ID_FAILED,
   SEARCH_PRODUCTS_VALUE,
-} from '@contexts/product/action/product'
+} from '@store'
 
 // Constants
 import {PRODUCT_PAGINATION} from '@constants'
 
 // Types
-import {ProductsAction, ProductsState} from '@state-types'
+import {ProductActions, ProductsState} from '@state-types/product'
 
 export const InitialProductState: ProductsState = {
   isLoading: false,
@@ -36,10 +36,10 @@ export const InitialProductState: ProductsState = {
   product: {},
 }
 
-const productsReducer = (
-  state: typeof InitialProductState,
-  action: ProductsAction,
-) => {
+export const productsReducer = (
+  state: ProductsState = InitialProductState,
+  action: ProductActions,
+): ProductsState => {
   switch (action.type) {
     case GET_PRODUCTS:
     case GET_PRODUCT:
@@ -55,36 +55,27 @@ const productsReducer = (
         isLoading: true,
       }
 
-    case SEARCH_PRODUCTS_VALUE:
+    case GET_PRODUCT_SUCCESS:
       return {
         ...state,
-        searchValue: action.searchValue,
+        isProcessing: false,
+        product: action.payload?.product,
       }
 
     case GET_PRODUCTS_SUCCESS:
       return {
         ...state,
-        type: action.type,
         isProcessing: false,
-        products: action.payload?.data?.products,
+        products: action.payload?.products,
         limit: action.payload?.limit,
         totalRows: action.payload?.totalRows,
-      }
-
-    case GET_PRODUCT_SUCCESS:
-      return {
-        ...state,
-        type: action.type,
-        isProcessing: false,
-        product: action.payload?.data?.product,
       }
 
     case GET_PRODUCTS_BY_BRAND_ID_SUCCESS:
       return {
         ...state,
-        type: action.type,
         isProcessing: false,
-        productsByBrandId: action.payload?.data?.productsByBrandId,
+        productsByBrandId: action.payload?.productsByBrandId,
         limit: action.payload?.limit,
         totalRowsByBrandId: action.payload?.totalRowsByBrandId,
       }
@@ -92,19 +83,23 @@ const productsReducer = (
     case LOAD_MORE_PRODUCTS_SUCCESS:
       return {
         ...state,
-        type: action.type,
         isLoading: false,
-        products: action.payload?.data?.products,
+        products: action.payload?.products,
         limit: action.payload?.limit,
       }
 
     case LOAD_MORE_PRODUCTS_BY_BRAND_ID_SUCCESS:
       return {
         ...state,
-        type: action.type,
         isLoading: false,
-        productsByBrandId: action.payload?.data?.productsByBrandId,
+        productsByBrandId: action.payload?.productsByBrandId,
         limit: action.payload?.limit,
+      }
+
+    case SEARCH_PRODUCTS_VALUE:
+      return {
+        ...state,
+        searchValue: action.payload?.searchValue,
       }
 
     case GET_PRODUCTS_FAILED:
@@ -116,8 +111,7 @@ const productsReducer = (
         ...state,
         isProcessing: false,
         isLoading: false,
-        type: action.type,
-        error: action.error,
+        error: action.payload.error,
       }
 
     default:
@@ -126,5 +120,3 @@ const productsReducer = (
       }
   }
 }
-
-export default productsReducer

@@ -9,6 +9,7 @@ import {NavigationPropsType} from '@navigators/app-navigator'
 
 // Components
 import {BtnType, Button} from '@components/Button'
+import LoadingIndicator from '@components/LoadingIndicator'
 import Description from './components/Description'
 import ImagesPreview from './components/ImagesPreview'
 import Information from './components/Information'
@@ -25,14 +26,16 @@ import ViewStyled from '@components/View/View.styles'
 
 // Themes
 import {Icons, Metrics} from '@themes'
-import {useProductContext} from '@contexts/product/ProductContext'
-import {
-  GET_PRODUCT,
-  GET_PRODUCT_FAILED,
-  GET_PRODUCT_SUCCESS,
-} from '@contexts/product/action/product'
+
+// Contexts
+import {useProductContext} from '@contexts'
+
+// Store
+import {GET_PRODUCT, GET_PRODUCT_FAILED, GET_PRODUCT_SUCCESS} from '@store'
+
+// Api
 import {productsService} from '@apis'
-import LoadingIndicator from '@components/LoadingIndicator'
+import {IDataError} from '@state-types/error'
 
 type ProductDetailProps = {
   navigation: NavigationPropsType
@@ -95,13 +98,12 @@ const ProductDetail = ({navigation, route}: ProductDetailProps) => {
       productDispatch({type: GET_PRODUCT})
       try {
         const response = await productsService.getProductById(id)
+        const productById = response.data || {}
         if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCT_SUCCESS,
             payload: {
-              data: {
-                product: response?.data,
-              },
+              product: productById,
             },
           })
         }
@@ -109,10 +111,10 @@ const ProductDetail = ({navigation, route}: ProductDetailProps) => {
         if (!isCancelled) {
           productDispatch({
             type: GET_PRODUCT_FAILED,
-            payload: error,
+            payload: error as IDataError,
           })
         }
-        Alert.alert('Error', error.message)
+        Alert.alert('Error', (error as IDataError).error)
       }
     })()
 

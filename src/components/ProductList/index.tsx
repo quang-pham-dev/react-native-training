@@ -103,14 +103,13 @@ const ProductsList = ({
       data={products}
       // eslint-disable-next-line react-native/no-inline-styles
       columnWrapperStyle={{justifyContent: 'space-between'}}
-      contentInsetAdjustmentBehavior="always"
       initialNumToRender={6}
       renderItem={renderProductCard}
       keyExtractor={product => product.id}
       showsVerticalScrollIndicator={false}
       ListEmptyComponent={renderEmptyList}
       ListFooterComponent={renderFooterComponent}
-      onEndReached={handleLoadMoreProducts}
+      onEndReached={handleLoadMoreProducts()}
       onEndReachedThreshold={0.5}
       onScroll={onScroll}
       scrollEventThrottle={16}

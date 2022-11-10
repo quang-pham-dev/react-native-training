@@ -13,8 +13,7 @@ import {SCREEN_NAMES} from '@constants'
 import {Colors} from '@themes'
 
 // Contexts
-import {BrandsContextProvider} from '@contexts/brand/BrandContext'
-import {ProductContextProvider} from '@contexts/product/ProductContext'
+import {BrandsContextProvider, ProductContextProvider} from '@contexts'
 
 const HomeStack = () => (
   <BrandsContextProvider>

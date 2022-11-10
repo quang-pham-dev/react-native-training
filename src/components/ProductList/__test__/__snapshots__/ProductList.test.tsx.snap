@@ -4,7 +4,6 @@ exports[`Product Card List Component Should render correctly 1`] = `
 <RCTScrollView
   ListEmptyComponent={[Function]}
   ListFooterComponent={[Function]}
-  contentInsetAdjustmentBehavior="always"
   data={
     Array [
       Object {
@@ -662,7 +661,7 @@ exports[`Product Card List Component Should render correctly 1`] = `
   initialNumToRender={6}
   keyExtractor={[Function]}
   onContentSizeChange={[Function]}
-  onEndReached={[Function]}
+  onEndReached={null}
   onEndReachedThreshold={0.5}
   onLayout={[Function]}
   onMomentumScrollBegin={[Function]}
