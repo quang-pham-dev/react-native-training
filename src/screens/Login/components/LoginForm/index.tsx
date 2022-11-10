@@ -7,11 +7,12 @@ import {yupResolver} from '@hookform/resolvers/yup/dist/yup'
 import {vs} from 'react-native-size-matters/extend'
 
 // Contexts
-import {useAuthContext} from '@contexts/auth/AuthContext'
+import {useAuthContext} from '@contexts'
 
 // Components
 import Input, {InputType} from '@components/Input'
 import Switch from '@components/Switch'
+import {BtnType, Button} from '@components/Button'
 
 // Themes
 import {Icons, Metrics} from '@themes'
@@ -23,8 +24,9 @@ import FlexStyled from '@components/Flex/Flex.styles'
 
 // Types
 import {LoginCredentials} from '@model-types'
+
+// Constants
 import {PARAGRAPH_TYPE} from '@constants'
-import {BtnType, Button} from '@components/Button'
 
 // initial values
 const loginFormInit: LoginCredentials = {

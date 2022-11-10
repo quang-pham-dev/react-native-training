@@ -5,12 +5,10 @@ import {Alert, TouchableOpacity} from 'react-native'
 import {s, vs} from 'react-native-size-matters/extend'
 
 // Contexts
-import {useAuthContext} from '@contexts/auth/AuthContext'
-import {
-  SIGN_IN,
-  SIGN_IN_FAILED,
-  SIGN_IN_SUCCESS,
-} from '@contexts/auth/action/auth'
+import {useAuthContext} from '@contexts'
+
+// Store
+import {SIGN_IN, SIGN_IN_FAILED, SIGN_IN_SUCCESS} from '@store'
 
 // Components
 import LoadingIndicator from '@components/LoadingIndicator'
@@ -33,6 +31,7 @@ import {Icons, Metrics} from '@themes'
 
 // Types
 import {LoginCredentials} from '@model-types'
+import {IDataError} from '@state-types/error'
 
 // Api
 import {authService} from '@apis'
@@ -76,11 +75,12 @@ const Login = ({navigation}: LoginProps) => {
           },
         })
       }
-    } catch (error: any) {
-      dispatch({type: SIGN_IN_FAILED, payload: error})
-      error?.response?.data
-        ? Alert.alert(error.response.data.message)
-        : Alert.alert('Login failed', error.message)
+    } catch (error) {
+      dispatch({
+        type: SIGN_IN_FAILED,
+        payload: error as IDataError,
+      })
+      Alert.alert('Error', (error as IDataError).error)
     }
   }
   const handleBackArrow = useCallback(() => {
