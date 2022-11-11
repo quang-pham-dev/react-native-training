@@ -173,7 +173,7 @@ const Home = ({navigation}: HomeScreenProps) => {
       {
         translateY: animatedValue.interpolate({
           inputRange: [0, 50],
-          outputRange: [0, -270],
+          outputRange: [0, -260],
           extrapolate: 'clamp',
         }),
       },
@@ -378,7 +378,7 @@ const Home = ({navigation}: HomeScreenProps) => {
         </ViewStyled.Custom>
       </Animated.View>
 
-      <ViewStyled.Custom pBottom={vs(Metrics.screenHeight * 0.35)}>
+      <ViewStyled.Custom pBottom={vs(Metrics.screenHeight * 0.3)}>
         <Animated.View style={SearchBarAnimation}>
           <ViewStyled.Custom pTop={vs(Metrics.padding.mediumPlus)}>
             <SearchBar onSubmitEditing={() => {}} />
