@@ -2,7 +2,7 @@
 import {DefaultTheme} from '@react-navigation/native'
 
 // Themes
-import {Colors} from '@themes'
+import {Colors} from './Colors'
 
 const NavigationTheme = {
   ...DefaultTheme,

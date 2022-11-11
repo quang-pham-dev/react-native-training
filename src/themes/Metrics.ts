@@ -6,7 +6,8 @@ import {mvs} from 'react-native-size-matters/extend'
 import {VERTICAL_SCALE_FACTOR} from '@constants'
 
 // Themes
-import {Colors, Fonts} from '@themes'
+import {Colors} from './Colors'
+import {Fonts} from './Fonts'
 
 const {width, height} = Dimensions.get('window')
 const screenWidth = width < height ? width : height
