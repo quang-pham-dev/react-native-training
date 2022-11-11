@@ -2,10 +2,6 @@
   "migIndex": 1,
   "data": [
     {
-      "path": "src/assets/fonts/Inter-Bold.ttf",
-      "sha1": "f20a8379025481abf1e48ecff21476b7bdf250e6"
-    },
-    {
       "path": "src/assets/fonts/Inter-Medium.ttf",
       "sha1": "f2e3f4b0c02fc2c0c3223aa0d5e4dfc32a266b45"
     },
