@@ -30,6 +30,7 @@ exports[`Product Card Component Should render correctly 1`] = `
           "borderRadius": 15,
           "marginBottom": 5,
           "overflow": "hidden",
+          "width": 160,
         },
       ]
     }
