@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-// import Config from 'react-native-config'
+import Config from 'react-native-config'
 
 const http = axios.create({
-  baseURL: 'http://localhost:3000',
-  //   baseURL: Config.API_BASE_URL,
+  //   baseURL: 'http://localhost:3000',
+  baseURL: Config.API_BASE_URL,
   headers: {
     'Content-Type': 'application/json;charset=utf-8',
   },

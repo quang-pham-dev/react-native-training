@@ -7,8 +7,8 @@
  *
  * @format
  */
-import React, {useEffect} from 'react'
-import {Alert, StatusBar} from 'react-native'
+import React, {useEffect, useState} from 'react'
+import {Alert, AppState, StatusBar} from 'react-native'
 
 // Libs
 import {
@@ -37,6 +37,9 @@ import {
 // StorybookUIRoot
 import {ToggleStorybook} from './storybook/toggle-storybook'
 
+// Debugging
+import {connectToDevTools} from 'react-devtools-core'
+
 setJSExceptionHandler((error: Error, isFatal: boolean) => {
   Alert.alert(
     'Unexpected Error Occurred',
@@ -53,10 +56,44 @@ setNativeExceptionHandler((exceptionString: string) => {
   ])
 }, false)
 
+if (__DEV__) {
+  require('react-native-performance-flipper-reporter').setupDefaultFlipperReporter()
+
+  connectToDevTools({
+    host: 'localhost',
+    port: 8097,
+  })
+}
+
+enum AppStateEvent {
+  CHANGE = 'change',
+  MEMORY_WARNING = 'memoryWarning',
+  BLUR = 'blur',
+  FOCUS = 'focus',
+}
+
 const App = () => {
+  const [isMemoryWarning, setMemoryWarning] = useState(false)
+
   useEffect(() => {
+    // listening state app
+    const appStateListener = AppState.addEventListener(
+      AppStateEvent.MEMORY_WARNING,
+      () => {
+        setMemoryWarning(true)
+      },
+    )
+
     SplashScreen.hide()
+    // Clean up
+    return () => {
+      appStateListener?.remove()
+    }
   }, [])
+
+  if (isMemoryWarning) {
+    Alert.alert('Warning!', 'Device running leak memory!')
+  }
 
   return (
     <ToggleStorybook>
