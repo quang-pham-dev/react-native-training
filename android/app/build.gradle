@@ -137,6 +137,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
+        multiDexEnabled true
         applicationId "com.elaza"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -278,7 +279,7 @@ dependencies {
     }
     implementation "androidx.appcompat:appcompat:1.4.2"
     implementation "androidx.appcompat:appcompat-resources:1.4.2"
-
+    implementation "androidx.multidex:multidex:2.0.1"
     // Fix build release failure with Fliper
     // debugImplementation 'com.facebook.flipper:flipper:0.174.0'
     // debugImplementation 'com.facebook.soloader:soloader:0.10.4'
