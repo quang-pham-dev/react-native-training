@@ -73,18 +73,42 @@ Array [
           underlineColorAndroid="transparent"
           value=""
         />
-        <Image
-          source={
-            Object {
-              "testUri": "../../../src/assets/icons/filledProfile.png",
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+        >
+          <Text
+            allowFontScaling={false}
+            selectable={false}
+            style={
+              Array [
+                Object {
+                  "color": "#8F959E",
+                  "fontSize": 20,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Ionicons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
             }
-          }
-          style={
-            Array [
-              Object {},
-            ]
-          }
-        />
+          >
+            
+          </Text>
+        </View>
       </View>
     </View>
     <View
@@ -175,18 +199,27 @@ Array [
               }
             }
           >
-            <Image
-              source={
-                Object {
-                  "testUri": "../../../src/assets/icons/eye-off.png",
-                }
-              }
+            <Text
+              allowFontScaling={false}
+              selectable={false}
               style={
                 Array [
+                  Object {
+                    "color": "#8F959E",
+                    "fontSize": 20,
+                  },
+                  undefined,
+                  Object {
+                    "fontFamily": "Feather",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
                   Object {},
                 ]
               }
-            />
+            >
+              
+            </Text>
           </View>
         </View>
       </View>

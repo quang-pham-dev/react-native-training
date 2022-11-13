@@ -120,20 +120,27 @@ exports[`Brand detail Screen Brand detail Screen Should render correctly 1`] = `
             }
           }
         >
-          <Image
-            h={24}
-            source={
-              Object {
-                "testUri": "../../../src/assets/icons/heart.webp",
-              }
-            }
+          <Text
+            allowFontScaling={false}
+            selectable={false}
             style={
               Array [
+                Object {
+                  "color": "black",
+                  "fontSize": 24,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "Material Design Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
                 Object {},
               ]
             }
-            w={24}
-          />
+          >
+            󰒿
+          </Text>
         </View>
         <Text
           mLeft={5}

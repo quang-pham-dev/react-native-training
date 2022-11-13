@@ -3,6 +3,7 @@ import {Alert, TouchableOpacity} from 'react-native'
 
 // LIBS
 import {vs, s} from 'react-native-size-matters/extend'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 // Navigator
 import {NavigationPropsType} from '@navigators/app-navigator'
@@ -215,7 +216,7 @@ const BrandDetail = ({navigation, route}: BrandDetailProps) => {
             pVertical={vs(Metrics.padding.custom)}>
             <FlexStyled.RowCenter>
               <TouchableOpacity>
-                <IconStyled w={s(24)} h={s(24)} source={Icons.heart} />
+                <Icon name="sort-variant" size={24} color="black" />
               </TouchableOpacity>
               <PStyled.Base mLeft={s(Metrics.margin.tiny)}>Sort</PStyled.Base>
             </FlexStyled.RowCenter>

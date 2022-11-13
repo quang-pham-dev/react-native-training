@@ -5,6 +5,7 @@ import {useForm, Controller, SubmitHandler} from 'react-hook-form'
 import * as Yup from 'yup'
 import {yupResolver} from '@hookform/resolvers/yup/dist/yup'
 import {vs} from 'react-native-size-matters/extend'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 // Contexts
 import {useAuthContext} from '@contexts'
@@ -15,7 +16,7 @@ import Switch from '@components/Switch'
 import {BtnType, Button} from '@components/Button'
 
 // Themes
-import {Icons, Metrics} from '@themes'
+import {Colors, Metrics} from '@themes'
 
 // Styles
 import ViewStyled from '@components/View/View.styles'
@@ -80,7 +81,9 @@ const LoginForm = ({onSubmit}: ILoginFormProps) => {
             <Input
               label="Username"
               placeholder="Enter your username"
-              icon={Icons.filledProfile}
+              icon={
+                <Icon name="person" size={20} color={Colors.palette.gray} />
+              }
               value={value}
               type={InputType.NORMAL}
               onChange={(val: string) => onChange(val)}

@@ -1,20 +1,20 @@
 import React, {memo, useCallback, useState} from 'react'
 import {
-  ImageSourcePropType,
   NativeSyntheticEvent,
+  Pressable,
   TextInputChangeEventData,
 } from 'react-native'
 
 // LIBS
 import isEqual from 'react-fast-compare'
+import Icon from 'react-native-vector-icons/Feather'
 
 // Styles
-import IconStyled from '@components/Icon/Icon.styles'
 import FlexStyled from '@components/Flex/Flex.styles'
 import InputStyled from './Input.styles'
 
 // Themes
-import {Icons} from '@themes'
+import {Colors} from '@themes'
 
 export enum InputType {
   NORMAL = 'normal',
@@ -45,7 +45,7 @@ type InputProps = {
   value: string
   label?: string
   placeholder?: string
-  icon?: ImageSourcePropType
+  icon?: React.ReactNode
   keyboardType?: KeyboardType
   autoFocus?: boolean
   onBlur?: () => void
@@ -107,10 +107,14 @@ const Input = ({
         />
         {isPassword && (
           <InputStyled.IconEyeWrapper onPress={handleTogglePassword}>
-            <IconStyled source={showPassword ? Icons.eyeFill : Icons.eyeOff} />
+            {showPassword ? (
+              <Icon name="eye-off" size={20} color={Colors.palette.gray} />
+            ) : (
+              <Icon name="eye" size={20} color={Colors.palette.gray} />
+            )}
           </InputStyled.IconEyeWrapper>
         )}
-        {icon && <IconStyled source={icon} />}
+        {icon && <Pressable>{icon}</Pressable>}
       </InputStyled.Wrapper>
     </FlexStyled.Default>
   )
