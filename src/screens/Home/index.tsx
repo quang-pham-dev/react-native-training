@@ -103,7 +103,7 @@ const Home = ({navigation}: HomeScreenProps) => {
       {
         translateY: animatedValue.interpolate({
           inputRange: [0, 50],
-          outputRange: [0, isIOS() ? vs(-135) : vs(-175)],
+          outputRange: [0, isIOS() ? vs(-230) : vs(-280)],
           extrapolate: 'clamp',
         }),
       },
@@ -124,8 +124,8 @@ const Home = ({navigation}: HomeScreenProps) => {
     ],
   }
 
-  //  Animation for the header title
-  const headerTitleAnimation = {
+  //  Animation for the header
+  const headerAnimation = {
     transform: [
       {
         translateX: animatedValue.interpolate({
@@ -173,7 +173,7 @@ const Home = ({navigation}: HomeScreenProps) => {
       {
         translateY: animatedValue.interpolate({
           inputRange: [0, 50],
-          outputRange: [0, -260],
+          outputRange: [0, -300],
           extrapolate: 'clamp',
         }),
       },
@@ -277,15 +277,19 @@ const Home = ({navigation}: HomeScreenProps) => {
     navigation.setOptions({
       headerBackVisible: false,
       headerLeft: () => (
-        <TouchableOpacity onPress={handleOpenMenu}>
-          <IconStyled width={s(45)} height={s(45)} source={Icons.menu} />
-        </TouchableOpacity>
+        <Animated.View style={headerAnimation}>
+          <TouchableOpacity onPress={handleOpenMenu}>
+            <IconStyled width={s(45)} height={s(45)} source={Icons.menu} />
+          </TouchableOpacity>
+        </Animated.View>
       ),
 
       headerRight: () => (
-        <TouchableOpacity onPress={handlePressCart}>
-          <IconStyled width={s(45)} height={s(45)} source={Icons.cart} />
-        </TouchableOpacity>
+        <Animated.View style={headerAnimation}>
+          <TouchableOpacity onPress={handlePressCart}>
+            <IconStyled width={s(45)} height={s(45)} source={Icons.cart} />
+          </TouchableOpacity>
+        </Animated.View>
       ),
     })
   }, [handleBackArrow, handlePressCart, navigation])
@@ -359,7 +363,7 @@ const Home = ({navigation}: HomeScreenProps) => {
 
   return (
     <LayoutStyled.Main pTop={vs(110)}>
-      <Animated.View style={headerTitleAnimation}>
+      <Animated.View style={headerAnimation}>
         <ViewStyled.Custom>
           <FlexStyled.RowCenterHorizontal>
             <HeadingStyled
@@ -378,7 +382,7 @@ const Home = ({navigation}: HomeScreenProps) => {
         </ViewStyled.Custom>
       </Animated.View>
 
-      <ViewStyled.Custom pBottom={vs(Metrics.screenHeight * 0.3)}>
+      <ViewStyled.Custom pBottom={vs(Metrics.screenHeight * 0.2)}>
         <Animated.View style={SearchBarAnimation}>
           <ViewStyled.Custom pTop={vs(Metrics.padding.mediumPlus)}>
             <SearchBar onSubmitEditing={() => {}} />
