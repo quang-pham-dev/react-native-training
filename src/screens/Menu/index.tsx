@@ -20,7 +20,7 @@ import {useAuthContext} from '@contexts'
 import {SIGN_OUT, SIGN_OUT_FAILED, SIGN_OUT_SUCCESS} from '@store'
 
 // Constants
-import {AUTH_DATA, PARAGRAPH_TYPE, STACKS_NAMES} from '@constants'
+import {AUTH_DATA, PARAGRAPH_TYPE, SCREEN_NAMES, STACKS_NAMES} from '@constants'
 
 // Themes
 import {Colors, Icons, Metrics} from '@themes'
@@ -102,6 +102,10 @@ const Menu = ({navigation}: ISideMenuPros) => {
   // handle action navigate to Wallet screen
   const handlePressWalletIcon = useCallback(() => {
     navigation.navigate(STACKS_NAMES.WALLET_STACK)
+  }, [])
+
+  const handlePressNotificationIcon = useCallback(() => {
+    navigation.navigate(SCREEN_NAMES.NOTIFICATIONS)
   }, [])
 
   // Drawer List Item
@@ -197,6 +201,11 @@ const Menu = ({navigation}: ISideMenuPros) => {
           />
         ))}
         {/* End Main Drawer Menu */}
+        <ViewStyled.Custom pTop={vs(20)}>
+          <TouchableOpacity onPress={handlePressNotificationIcon}>
+            <PStyled.Base>{'🔔     Notifications'}</PStyled.Base>
+          </TouchableOpacity>
+        </ViewStyled.Custom>
         {/* end main */}
 
         <ViewStyled.Custom pTop={vs(220)}>

@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services'
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
 
 import com.android.build.OutputFile
@@ -218,12 +219,12 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
-        release {
-            storeFile file('Elaza.keystore')
-            storePassword 'Elaza@123'
-            keyAlias 'Elaza-v1'
-            keyPassword 'Elaza@123'
-        }
+        // release {
+        //     storeFile file('Elaza.keystore')
+        //     storePassword 'Elaza@123'
+        //     keyAlias 'Elaza-v1'
+        //     keyPassword 'Elaza@123'
+        // }
     }
     buildTypes {
         debug {
@@ -232,7 +233,7 @@ android {
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
-            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -275,11 +276,20 @@ dependencies {
     debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.flipper'
     }
+    implementation "androidx.appcompat:appcompat:1.4.2"
+    implementation "androidx.appcompat:appcompat-resources:1.4.2"
 
-    debugImplementation 'com.facebook.flipper:flipper:0.174.0'
-    debugImplementation 'com.facebook.soloader:soloader:0.10.4'
+    // Fix build release failure with Fliper
+    // debugImplementation 'com.facebook.flipper:flipper:0.174.0'
+    // debugImplementation 'com.facebook.soloader:soloader:0.10.4'
 
-    releaseImplementation 'com.facebook.flipper:flipper-noop:0.174.0'
+    // releaseImplementation 'com.facebook.flipper:flipper-noop:0.174.0'
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:31.0.0')
+    implementation 'com.google.firebase:firebase-analytics:17.3.0'
+    implementation project(':react-native-push-notification')
+
 
     if (enableHermes) {
         //noinspection GradleDynamicVersion

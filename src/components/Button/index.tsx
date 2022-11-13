@@ -1,5 +1,5 @@
 import React from 'react'
-import {ImageSourcePropType} from 'react-native'
+import {GestureResponderEvent, ImageSourcePropType} from 'react-native'
 
 // LIBS
 import {s} from 'react-native-size-matters/extend'
@@ -70,7 +70,7 @@ type SocialButtonProps = {
   label: string
   type: BtnType
   disabled?: boolean
-  onPress: () => void
+  onPress?: ((event: GestureResponderEvent) => void) | undefined
   bgColor?: string
   isLoading?: boolean
   icon?: ImageSourcePropType

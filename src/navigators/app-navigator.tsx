@@ -1,7 +1,10 @@
-import React, {useEffect} from 'react'
+import React, {createRef, useEffect} from 'react'
 
 // Libs
-import {NavigationContainer} from '@react-navigation/native'
+import {
+  NavigationContainer,
+  NavigationContainerRef,
+} from '@react-navigation/native'
 import {NativeStackNavigationProp} from '@react-navigation/native-stack'
 
 // Navigator
@@ -23,6 +26,10 @@ import {NavigationTheme} from '@themes'
 // Constants
 import {AUTH_DATA} from '@constants'
 
+// Configs
+import '@services/push-notifications'
+import {useNotificationHook} from '@hooks/usePushLocalNotification'
+
 export type NavigatorParamList = {
   GetStarted: undefined
   Login: undefined
@@ -42,7 +49,9 @@ export type NavigationPropsType = NativeStackNavigationProp<NavigatorParamList>
 const AppNavigator = () => {
   // get status authenticated from context
   const {state, dispatch} = useAuthContext()
+  const {initialize} = useNotificationHook()
 
+  const navigationRef = createRef<NavigationContainerRef<any>>()
   const {isAuthenticated} = state || {}
 
   // check authenticated state
@@ -68,6 +77,7 @@ const AppNavigator = () => {
   }
 
   useEffect(() => {
+    initialize(navigationRef)
     getAuth()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

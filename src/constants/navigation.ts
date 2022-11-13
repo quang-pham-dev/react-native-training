@@ -9,6 +9,7 @@ export enum SCREEN_NAMES {
   MENU = 'Menu',
   BRAND_DETAIL = 'BrandDetail',
   PRODUCT_DETAIL = 'ProductDetail',
+  NOTIFICATIONS = 'Notifications',
 }
 
 export enum STACKS_NAMES {

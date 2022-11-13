@@ -4,7 +4,7 @@ import React from 'react'
 import {Stack} from '@navigators'
 
 // Screens
-import {Home, BrandDetail, ProductDetail} from '@screens'
+import {Home, BrandDetail, ProductDetail, Notifications} from '@screens'
 
 // Constants
 import {SCREEN_NAMES} from '@constants'
@@ -40,6 +40,10 @@ const HomeStack = () => (
         <Stack.Screen
           name={SCREEN_NAMES.PRODUCT_DETAIL}
           component={ProductDetail}
+        />
+        <Stack.Screen
+          name={SCREEN_NAMES.NOTIFICATIONS}
+          component={Notifications}
         />
       </Stack.Navigator>
     </ProductContextProvider>
